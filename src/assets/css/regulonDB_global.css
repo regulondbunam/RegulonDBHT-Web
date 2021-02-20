@@ -1,0 +1,257 @@
+/*
+This is a css for regulonDB Browser site, 
+it contains the definition of global styles titles, paragraphs, font, color palette among others.
+
+Ver: 0.0.26
+*/
+
+/*elements HTML*/
+
+/*Variables*/
+
+/*color palette*/
+:root {
+  --color-blue1: #1f3d4e;
+  --color-blue2: #32617d;
+  --color-blue3: #3d779b;
+  --color-blue4: #72a7c7;
+  --color-blue5: #cadce7;
+  --color-grey1: #373737;
+  --color-grey2: #666666;
+  --color-grey3: #999999;
+  --color-grey3A: #99999999;
+  --color-grey4: #d5d5d7;
+  --color-grey5: #f4f5f5;
+  --color-rest: #ffffff;
+  --color-accentA: #c93a1d;
+  --color-accentAA: #c93a1d99;
+  --color-accentB: #cc9900;
+  --color-postit: #fff8a6;
+}
+/*font family */
+:root {
+  --fontFamily-principal: Arial, sans-serif;
+  --fontFamily-cita: "Times New Roman", Times;
+  --fontFamily-sequence: "Courier New", Courier, monospace;
+}
+
+/*all site*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 1%;
+  background-color: var(--color-rest);
+  font-family: var(--fontFamily-principal);
+  margin: 0px;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+/* Layout Site*/
+section {
+  padding: 0% 0% 0% 0% !important;
+}
+
+article {
+  float: left;
+  padding: 0% 0% 2% 10%;
+  width: 80%;
+}
+
+.articleHome {
+  padding: 0% 0% 0% 0% !important;
+}
+
+aside {
+  float: left;
+  width: 20%;
+}
+
+/*Titles*/
+
+:root {
+  --color-title: var(--color-blue2);
+  --color-subtitle: var(--color-grey2);
+  --font-title: var(--fontFamily-principal);
+  --fontStyle-title: normal;
+  --fontWeight: bold;
+  --lineHeight-title: normal;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: var(--font-title);
+  font-style: var(--fontStyle-title);
+  font-weight: var(--fontWeight);
+  line-height: var(--fontWeight);
+  color: var(--color-grey1);
+}
+
+.h1-cover {
+  font-size: 24px;
+  font-family: var(--font-title);
+  font-style: var(--fontStyle-title);
+  font-weight: var(--fontWeight);
+  line-height: var(--fontWeight);
+  color: var(--color-grey1);
+}
+
+h2 {
+  font-size: 20px;
+  font-family: var(--font-title);
+  font-style: var(--fontStyle-title);
+  font-weight: var(--fontWeight);
+  line-height: var(--fontWeight);
+  color: var(--color-subtitle);
+}
+
+h3 {
+  font-size: 18px;
+  font-family: var(--font-title);
+  font-style: var(--fontStyle-title);
+  font-weight: var(--fontWeight);
+  line-height: var(--fontWeight);
+  color: var(--color-subtitle);
+}
+h3 {
+  font-size: 18px;
+  font-family: var(--font-title);
+  font-style: var(--fontStyle-title);
+  font-weight: var(--fontWeight);
+  line-height: var(--fontWeight);
+  color: var(--color-subtitle);
+}
+
+/* p */
+
+p {
+  font-family: var(--fontFamily-principal);
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
+  color: var(--color-grey2);
+  font-weight: normal;
+  margin: 0;
+}
+
+:root {
+  --a-fontFamily: var(--fontFamily-principal);
+  --a-fontSize: 14px;
+  --a-fontStyle: normal;
+  --a-fontWeight: normal;
+  --a-line: normal;
+  --a-colorS: var(--color-blue4);
+}
+
+.aBase {
+  font-family: var(--a-fontFamily);
+  font-style: var(--a-fontStyle);
+  font-weight: var(--a-fontWeight);
+  line-height: var(--a-line);
+  text-decoration: underline;
+  color: var(--a-colorS);
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px solid #000000;
+}
+
+.aAccent {
+  color: var(--color-accentB) !important;
+}
+
+a {
+  font-family: var(--a-fontFamily);
+  font-size: var(--a-fontSize);
+  font-style: var(--a-fontStyle);
+  font-weight: var(--a-fontWeight);
+  line-height: var(--a-line);
+  color: var(--a-colorS);
+  cursor: pointer;
+}
+
+a:link {
+  font-family: var(--fontFamily-principal);
+  color: var(--color-blue4);
+}
+
+a:visited {
+  font-family: var(--fontFamily-principal);
+  color: var(--color-blue4);
+}
+
+/*TABLES*/
+
+.tableContent-th-title {
+  color: #666666;
+  border-bottom: 1px solid #72a7c7;
+  text-align: inherit;
+}
+
+.tableContent-th-subtitle {
+  color: #999999;
+  text-align: inherit;
+}
+
+.tableContent_td_content {
+  border-bottom: 1px solid #999999;
+  text-align: inherit;
+}
+
+table {
+  width: 100%;
+  font-family: arial, sans-serif;
+  color: rgb(39, 39, 39);
+  border-collapse: collapse;
+}
+
+td,
+th {
+  font-size: 14px;
+  text-align: left;
+  color: var(--color-grey2);
+  padding: 2px;
+}
+
+td {
+  vertical-align: top;
+}
+
+/*tr:nth-child(even) {
+	background-color: var(--color-grey5);
+  }*/
+
+.trClickable:hover {
+  background-color: var(--color-grey5);
+  cursor: pointer;
+}
+/*Body div*/
+
+.bodyDiv {
+  padding: 3% 10% 5% 10%;
+}
+
+/*Features*/
+
+.sequence {
+  font-family: var(--fontFamily-sequence);
+  font-size: 16px;
+}
+
+.citation {
+  font-family: var(--fontFamily-cita);
+  font-size: 10px;
+}
+
+.divA:hover {
+  cursor: pointer;
+  -webkit-box-shadow: inset 2px 3px 13px 1px var(--color-blue4);
+  -moz-box-shadow: inset 2px 3px 13px 1px var(--color-blue4);
+  box-shadow: inset 2px 3px 13px 1px var(--color-blue4);
+}
+
+/* s */

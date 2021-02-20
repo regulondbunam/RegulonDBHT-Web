@@ -1,0 +1,130 @@
+#SubHeader{
+    width: 100%;
+    min-height: 70px;
+    max-height: 70px;
+    background: #f7f7f7;
+    position: static;
+    color: #345E7D;
+}
+
+#SubHeader h1{
+    padding: 0px;
+    padding-top: 7px;
+    margin-top: 0px;
+    text-align: center;
+    position: static;
+}
+
+#SubHeader p{
+    color: black;
+    text-align: left;
+    position: static;
+    font-size: 12px;
+    padding: 0px;
+    padding-top: 7px;
+    margin-top: 0px;
+}
+
+#body{
+    text-align: justify;
+    margin: 0 auto;
+    width: 1033px;
+}
+
+
+.center{
+    width: 60%;
+    margin: 0px auto;
+}
+  
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+#sidebar{
+    max-width: 20%;
+}
+
+#subtittle{
+    border-bottom: 1px black solid;
+}
+
+#subtittle label{
+    font-size: 30px;
+    color: black;
+
+}
+
+.panel{
+    height: 350px;
+    width: 330px;
+    float: inline-start;
+    background: #D5E2EA;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-align: center;
+    color: #838D93;
+    
+    float: left;
+}
+
+.panel p{
+    padding-top: 50px;
+    font-size: 36px;
+    text-align: center;
+}
+
+
+.panel:hover{
+    background: #32617D;
+    color: #f7f7f7;
+}
+
+
+#BodyBuilder{
+    text-align: left;
+}
+
+#TextBox-Builder{
+    width: 67%;
+    height: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 1px #5d6366;
+    border: 0px auto;
+}
+
+#Search{
+    background: #C93A1D;
+    color: white;
+    height: 25px;
+    width: 120px;
+    border: 0px;
+    float: right;
+}
+
+
+#Agregar{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 0px;
+    background: #345E7D;
+    color: white;
+    font-size: 20px;
+}
+
+#Agregar:hover{
+    box-shadow: 100px #5d6366;
+    background: #214f70;
+}
+
+.DropDown{
+    background: #32617D;
+    color: white;
+    height: 25px;
+    width: 120px;
+    border: 0px;
+    margin: 5px;
+}
