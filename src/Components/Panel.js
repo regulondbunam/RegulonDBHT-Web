@@ -14,6 +14,8 @@ class Panel extends Component {
         this.props.actualizarDescripcion();
     }
 
+    
+
     render() {
 
         return (
