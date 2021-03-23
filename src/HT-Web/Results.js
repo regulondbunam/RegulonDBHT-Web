@@ -14,10 +14,10 @@ class Results extends Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <div id="SubHeaderS">
                     <h1>Results</h1>
-                    <textarea value={this.state.value} className="TextAreaH" />
+                    <input type="text" className="TextAreaH" />
 
                 </div>
                 <div >
@@ -26,7 +26,7 @@ class Results extends Component {
 
                 
 
-                <section id="body">
+                <section id="bodyResult">
 
                     <div className="distribute-left">
                         <button className="button">Save</button>
@@ -34,14 +34,8 @@ class Results extends Component {
                     </div>
 
                     <div>
-                        <h2># Results</h2>
+                        <p className="numero-result">10 results</p>
                         <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
-                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="2"/>
-                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="3"/>
-                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="4"/>
-                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="5"/>
-                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="6"/>
-            
                     </div>
 
                     <div className="distribute">

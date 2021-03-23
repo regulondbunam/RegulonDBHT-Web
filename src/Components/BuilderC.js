@@ -8,24 +8,14 @@ import { NavLink } from "react-router-dom";
 
 
 class BuilderC extends Component {
-
-
-    consulta = React.createRef();
-
-    recirbirConsulta = (e) => {
-        e.preventDefault();
-        this.props.consulta = this.consulta;
-        this.props.enviarConsulta(this.props.consulta)
-    }
-
     
 
     render() {
         return (
-            <form onChange={this.recirbirConsulta}>
+            <form>
                 <section className="distribute">
                     <button className="DropDown">All Fields</button>
-                    <input type="text" className='TextArea' ref={this.consulta}/>
+                    <input type="text" className='TextArea'/>
                     <button className="DropDown">AND</button>
                 </section>
                 <div className="rigth">

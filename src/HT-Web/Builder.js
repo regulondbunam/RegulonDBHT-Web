@@ -8,16 +8,7 @@ import BuilderC from '../Components/BuilderC.js';
 
 class Builder extends Component {
 
-    state = {
-        Consulta: null
-    }
-
-    recibirConsulta = (consulta) => {
-        this.setState({
-            Consulta: consulta
-        });
-    }
-
+   
 
     render() {
         return (
@@ -38,7 +29,7 @@ class Builder extends Component {
                         </div>
                         <div id="QueryBox">
                             <h2>Query Box</h2>
-                            <textarea className="TextAreaBig">{this.state.Consulta}</textarea>
+                            <textarea className="TextAreaBig">consulta</textarea>
                         </div>
                         <div className="box">
                             <h3>Builder</h3>
