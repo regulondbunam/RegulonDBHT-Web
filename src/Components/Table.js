@@ -11,10 +11,46 @@ class Table extends Component {
                 <div id="MetaData">
                     <table className="Table">
                         {console.log("hola perra")}
-                        <caption className="TableTittle">Sample ID</caption>
+                        <caption className="TableTittle">{this.props.tittle}</caption>
                         <tbody>
-                            <tr className="CFilaA">
-                                <td>TITTLE:</td>
+                            <tr className="FilaA">
+                                <td>Lorem ipsum dolor sit amet:</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
+                            </tr>
+                            <tr className="FilaB">
+                                <td>Lorem ipsum dolor sit amet:</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
+                            </tr>
+                            <tr className="FilaA">
+                                <td>Lorem ipsum dolor sit amet:</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
+                            </tr>
+                            <tr className="FilaB">
+                                <td>Lorem ipsum dolor sit amet:</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
+                            </tr>
+                            <tr className="FilaA">
+                                <td>Lorem ipsum dolor sit amet:</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
+                            </tr>
+                            <tr className="FilaB">
+                                <td>Lorem ipsum dolor sit amet:</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
+                            </tr>
+                            <tr className="FilaA">
+                                <td>Lorem ipsum dolor sit amet:</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
+                            </tr>
+                            <tr className="FilaB">
+                                <td>Lorem ipsum dolor sit amet:</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
+                            </tr>
+                            <tr className="FilaA">
+                                <td>Lorem ipsum dolor sit amet:</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
+                            </tr>
+                            <tr className="FilaB">
+                                <td>Lorem ipsum dolor sit amet:</td>
                                 <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</td>
                             </tr>
                         </tbody>

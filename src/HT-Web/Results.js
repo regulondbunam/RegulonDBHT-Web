@@ -36,6 +36,15 @@ class Results extends Component {
                     <div>
                         <p className="numero-result">10 results</p>
                         <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
+                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
+                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
+                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
+                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
+                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
+                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
+                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
+                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
+                        <Result  Match="Author: Collado Vides" GeoSampleID="00000" Tittle="Lorem ipsun dolor sit" GrowthCondition="3+" PMID="1111" numero="1"/>
                     </div>
 
                     <div className="distribute">
