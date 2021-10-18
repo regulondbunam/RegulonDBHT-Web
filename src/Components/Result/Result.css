@@ -1,0 +1,46 @@
+.result{
+    margin: 20px;
+    border-bottom: 1px solid rgb(245, 242, 242);
+}
+
+.lateral{
+    width: 20%;
+    padding: 0px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.checkbox{
+    width: 15px;
+    height: 15px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 7px;
+}
+
+.ligaResult{
+    margin: 0px;
+    color: #32617D;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.principal{
+    width: 80%;
+    height: 10px;
+    padding: 0px;
+    
+}
+
+.match{
+    color: black;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.extra{
+    color: rgb(119, 118, 118);
+    margin: 0px;
+    font-size: 14px;
+}
+

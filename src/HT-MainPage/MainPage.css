@@ -1,0 +1,29 @@
+
+.SubHeader{
+    height: 100px;
+    width: 100%;
+    border: 1px solid #F4F6F5;
+    background-color: #F4F6F5;
+}
+
+.SubHeader h1{
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+    color: #32617D;
+}
+
+.Body{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.CollectionsBreakdown{
+     border: none;
+}
+
+.CollectionsDescriptionBreakdown{
+    text-align: justify;
+}
+

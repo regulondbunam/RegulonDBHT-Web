@@ -1,0 +1,87 @@
+.SubHeader{
+    width: 100%;
+    min-width: 900px;
+    height: 100px;
+    background: #f7f7f7;
+    color: #345E7D;
+    display: flex;
+    justify-content:center;
+    padding-bottom: 0px;
+    margin: auto;
+}
+
+.SubHeader h1{
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+    color: #32617D;
+}
+
+.TextArea{
+    width: 30%;
+    min-width: 400px;
+    height: 25px;
+    margin: 15px;
+    margin-top: 33px;
+    color: #838D93;
+    resize: none;
+    text-align: justify;
+}
+
+.depth{
+    width: 50%;
+    text-align: left;
+    position: static;
+}
+
+.depth p{
+    color: black;
+    font-size: 16px;
+    padding: 0px;
+    padding-top: 7px;
+    margin-top: 0px;
+}
+
+.Body{
+    width: 80%;
+    min-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.QueryActionButtons{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.Button{
+    background: #32617D;
+    color: white;
+    height: 25px;
+    width: 120px;
+    border: 0px;
+    margin: 5px;
+}
+
+.AccendButton{
+    background: #C93A1D;
+    color: white;
+    height: 25px;
+    width: 120px;
+    border: 0px;
+    margin: 5px;
+}
+
+.ResultsActionButtons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Resultsquantity{
+    font-size: 16px;
+    color: rgb(119, 118, 118);
+    font-style: italic;
+    margin-left: 20px;
+}
