@@ -1,0 +1,348 @@
+#SubHeader{
+    width: 100%;
+    min-height: 70px;
+    max-height: 70px;
+    background: #f7f7f7;
+    position: static;
+    color: #345E7D;
+}
+
+#SubHeader h1{
+    padding: 0px;
+    padding-top: 7px;
+    margin-top: 0px;
+    text-align: center;
+    position: static;
+}
+
+#SubHeaderS{
+    width: 100%;
+    min-height: 70px;
+    max-height: 70px;
+    background: #f7f7f7;
+    color: #345E7D;
+    display: flex;
+    justify-content:center;
+}
+
+#SubHeaderS h1{
+    padding: 0px;
+    padding-top: 7px;
+    margin-top: 0px;
+}
+
+#SubHeader p{
+    color: black;
+    text-align: left;
+    position: static;
+    font-size: 12px;
+    padding: 0px;
+    padding-top: 7px;
+    margin-top: 0px;
+}
+.profundidad{
+    color: black;
+    text-align: left;
+    position: static;
+    font-size: 12px;
+    padding: 0px;
+    padding-top: 7px;
+    margin-top: 0px;
+}
+
+#body{
+    text-align: justify;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 1254px;
+}
+
+#bodyResult{
+    text-align: justify;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 1080px;
+}
+
+
+
+
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+#sidebar{
+    max-width: 20%;
+}
+
+#subtittle{
+    border-bottom: 1px black solid;
+}
+
+#subtittle label{
+    font-size: 30px;
+    color: black;
+}
+
+.panel{
+    height: 350px;
+    min-width: 330px;
+    background: #D5E2EA;
+    margin: 10px;
+    margin-left: 45px;
+    margin-right: 45px;
+    color: #838D93;
+    float: left;
+    border: 0px;
+    padding-left: 33px;
+    padding-bottom: 30px;
+}
+
+.panelDisabled{
+    height: 350px;
+    min-width: 330px;
+    background: #D5E2EA;
+    margin: 10px;
+    margin-left: 45px;
+    margin-right: 45px;
+    color: #838D93;
+    float: left;
+    border: 0px;
+    padding-left: 33px;
+    padding-bottom: 30px;
+}
+
+.panel p{
+    padding-top: 0px;
+    font-size: 36px;
+    text-align: center;
+    
+}
+
+.panelDisabled p{
+    padding-top: 0px;
+    font-size: 36px;
+    text-align: center;
+}
+
+
+.panel:hover{
+    background: #32617D;
+    color: #f7f7f7;
+    cursor: pointer;
+}
+
+
+.distribute{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.distribute p{
+    margin-right: 30px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.distribute-left{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.distribute-left-Result{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+    margin-top:1px black ;
+}
+
+
+.Search{
+    background: #C93A1D;
+    color: white;
+    height: 25px;
+    width: 120px;
+    border: 0px;
+    margin: 0px;
+}
+
+
+.Agregar{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 0px;
+    background: #345E7D;
+    color: white;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.Agregar:hover{
+    box-shadow: 100px #5d6366;
+    background: #214f70;
+}
+
+.DropDown{
+    background: #32617D;
+    color: white;
+    height: 25px;
+    width: 120px;
+    border: 0px;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.TextAreaBig{
+    width: 100%;
+    height: 100px;
+    color: #838D93;
+    margin: 0px;
+    resize: none;
+}
+
+
+.TextArea{
+    width: 80%;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #838D93;
+    resize: none;
+}
+
+.TextAreaH{
+    width: 30%;
+    height: 25px;
+    margin: 15px;
+    color: #838D93;
+    resize: none;
+    text-align: justify;
+}
+
+.rigth{
+    float: right;
+}
+
+
+.salto{
+    height: 40px;
+    background: white;
+}
+
+.button{
+    background: #32617D;
+    color: white;
+    height: 25px;
+    width: 120px;
+    border: 0px;
+    margin: 5px;
+}
+
+.red-button{
+    background: #C93A1D;
+    color: white;
+    height: 25px;
+    width: 120px;
+    border: 0px;
+    margin: 5px;
+}
+
+
+.liga{
+    margin: 5px;
+    color: #838D93;
+    text-align: center;
+}
+
+
+
+.Table{
+    width: 100%;
+}
+
+.TableTittle{
+    text-align: left;
+    color: white;
+    background: #32617D;
+    padding: 3px;
+    width: 1254px;
+}
+
+.FilaA{
+    text-align: left;
+    color: black;
+    background: white;
+    padding: 3px;
+}
+
+.FilaB{
+    text-align: left;
+    color: black;
+    background: #F4F5F5;
+    padding: 3px;
+}
+
+
+
+.result{
+    margin: 20px;
+    border-bottom: 1px solid rgb(245, 242, 242);
+}
+
+
+.checkbox{
+    width: 15px;
+    height: 15px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 7px;
+}
+
+
+.lateral{
+    width: 20%;
+    padding: 0px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.principal{
+    width: 80%;
+    height: 10px;
+    padding: 0px;
+    
+}
+
+
+.ligaResult{
+    margin: 0px;
+    color: #32617D;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.match{
+    color: black;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.extra{
+    color: rgb(119, 118, 118);
+    margin: 0px;
+    font-size: 14px;
+}
+
+.numero-result{
+    font-size: 16px;
+    color: rgb(119, 118, 118);
+    font-style: italic;
+    margin-left: 20px;
+}
