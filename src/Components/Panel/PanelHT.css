@@ -1,8 +1,8 @@
 .Panel{
-    height: 240px;
+    height: 282px;
     width: 370px;
     background: #D5E2EA;
-    margin: 45px;
+    margin: 0px;
     border: 1px solid #D5E2EA;
     position: relative;
     transition: transform 400ms ease;
@@ -14,12 +14,25 @@
 }
 
 .PanelBody{
-    margin: 0px;
-    text-align: center;
-    border: 0px solid black;
+    /*flexbox*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #838D93;
     font-size: 38px;
     white-space: pre;
+    
+
+    /* margin: 0px;
+    
+    border: 0px solid black;
+    color: #838D93;
+    font-size: 38px;
+    white-space: pre; */
+}
+
+.PanelBody p{
+    text-align: center;
 }
 
 

@@ -21,9 +21,21 @@
 
 .CollectionsBreakdown{
      border: none;
+     border-bottom: 1px solid black;
 }
 
 .CollectionsDescriptionBreakdown{
     text-align: justify;
+}
+
+.PanelGridContainer{
+    margin-top: 25px;
+    margin-left: 140px;
+    margin-bottom: 50px;
+    
+    width: 340px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
 }
 
