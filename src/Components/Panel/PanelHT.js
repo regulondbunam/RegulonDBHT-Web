@@ -8,7 +8,9 @@ class PanelHT extends React.Component{
         return(
             <div className="Panel">
                 <a href="#">
-                    <div className="PanelBody">{this.props.tittle}</div>
+                    <div className="PanelBody">
+                        <p>{this.props.tittle}</p>
+                    </div>
                 </a>
             </div>
         );

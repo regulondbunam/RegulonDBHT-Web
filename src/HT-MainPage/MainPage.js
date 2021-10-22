@@ -22,7 +22,7 @@ class MainPage extends React.Component {
                 <div className="Body">
                     <div className="CollectionsBreakdown">
                         <div className="">
-                            <div className="">
+                            <div className="PanelGridContainer">
                                 {
                                     Data.ht_data.main_page.paneles.map((panel) => {
                                         return (
