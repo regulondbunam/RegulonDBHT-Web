@@ -12,7 +12,7 @@ import HtBuilder from './HT-Builder/HtBuilder.js'
 
 ReactDOM.render(
   <React.StrictMode>
-    <HtBuilder/>
+    <MainPage/>
   </React.StrictMode>,
   document.getElementById('root')
 );
