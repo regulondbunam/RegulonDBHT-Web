@@ -18,6 +18,9 @@ class MainPage extends React.Component {
             <div>
                 <div className="SubHeader">
                     <h1>High Throughput Collection</h1>
+                    fas
+                </div>
+                <div>
                 </div>
                 <div className="Body">
                     <div className="CollectionsBreakdown">
