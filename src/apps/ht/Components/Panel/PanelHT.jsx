@@ -7,7 +7,7 @@ export default function PanelHT(panel) {
 
         <Link to={`/${panel.url}`}>
             <div className={Style.Panel}>
-                {panel.tittle}
+                {panel.title}
             </div>
         </Link>
 

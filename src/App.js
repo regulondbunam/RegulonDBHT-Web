@@ -11,7 +11,7 @@ function App() {
       <HelmetProvider>
         <BrowserRouter>
             <Switch>
-                <Route path={["/:collection","/"]}>
+                <Route path={["/:collection/:query","/:collection","/"]}>
                     <HT />
                 </Route>
             </Switch>

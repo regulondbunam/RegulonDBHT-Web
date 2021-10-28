@@ -1,17 +1,15 @@
 
 import React, { Component } from 'react';
-import './QueryBox.css'
+import Style from './QueryBox.module.css'
 
 
 class QueryBox extends Component {
     render() {
         return (
-            <div>
                 <div>
                     <h2>Query Box</h2>
-                    <input type="text" className="QueryArea" />
+                    <input id="query_area" type="text" className={Style.QueryArea} />
                 </div>
-            </div>
         );
     }
 } export default QueryBox;
