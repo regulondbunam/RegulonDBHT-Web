@@ -7,8 +7,8 @@ class QueryBox extends Component {
     render() {
         return (
                 <div>
-                    <h2>Query Box</h2>
-                    <input id="query_area" type="text" className={Style.QueryArea} />
+                    <h3>Query Box</h3>
+                    <input style={{marginLeft: "5%"}} id="query_area" type="text" className={Style.QueryArea} />
                 </div>
         );
     }

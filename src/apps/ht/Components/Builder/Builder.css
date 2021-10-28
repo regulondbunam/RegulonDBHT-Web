@@ -1,36 +1,4 @@
-.Body{
-    width: 1600px;
-}
 
-.BuilderBody h3{
-    font-size: 20px;
-    padding: 0px;
-    margin-top: 15px;
-    margin-left: 5px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-.Button{
-    background: #32617D;
-    color: white;
-    height: 30px;
-    width: 120px;
-    border: 0px;
-    margin: 5px;
-    padding: 0px;
-}
-
-.AccendButton{
-    background: #C93A1D;
-    color: white;
-    height: 30px;
-    width: 120px;
-    border: 0px;
-    margin: 5px;
-    margin-right: 12px;
-    display: inline-block;
-}
 
 .TextArea{
     width: 80%;
