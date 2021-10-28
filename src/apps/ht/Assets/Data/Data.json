@@ -1,0 +1,50 @@
+{
+    "ht_data": {
+        "main_page": {
+            "main_page_subTitle": "High Thoughput Collection",
+            "main_page_descripcion": "hover the mouse over the panel for more information",
+            "paneles": [
+                {
+                    "id" : "GeneExpression_Experiments_Collection",
+                    "url" : "GeneExpression_Experiments_Collection",
+                    "title": "GeneExpression Experiments Collection",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.."
+                },
+                {
+                    "id" : "GeneExpression_Normalized_Collection",
+                    "url" : "GeneExpression_Normalized_Collection",
+                    "title": "GeneExpression Normalized Collection",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.."
+                },
+                {
+                    "id" : "GeneExpression_contrast_from_authors_analysis_Collection",
+                    "url" : "GeneExpression_contrast_from_authors_analysis_Collection",
+                    "title": "GeneExpression contrast from authors analysis Collection",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.."
+                },
+                {
+                    "id" : "Binding_Sites_Experiments_Collection",
+                    "url" : "Binding_Sites_Experiments_Collection",
+                    "title": "Binding Sites Experiments Collection",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.."
+                },
+                {
+                    "id" : "TSS_Experiments_Collection",
+                    "url" : "TSS_Experiments_Collection",
+                    "title": "TSS Experiments Collection",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.."
+                },
+                {
+                    "id" : "TUs_Experiments_Collection",
+                    "url" : "TUs_Experiments_Collection",
+                    "title": "TUs Experiments Collection",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.."
+                }
+            ]
+        },
+        "builder_page": {
+            "title":"Query Builder",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.."
+        } 
+    }
+}

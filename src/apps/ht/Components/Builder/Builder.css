@@ -1,0 +1,34 @@
+
+
+.TextArea{
+    width: 80%;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #838D93;
+    resize: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.IndexList{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.IndexList p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 62px;
+}
+
+.SearchButton{
+    width: 100%;
+    height: auto;
+    text-align: right;
+}
