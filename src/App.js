@@ -8,15 +8,15 @@ import HT from "./apps/ht/ht";
 
 function App() {
   return (
-      <HelmetProvider>
-        <BrowserRouter>
-            <Switch>
-                <Route path={["/:collection/:query","/:collection","/"]}>
-                    <HT />
-                </Route>
-            </Switch>
-        </BrowserRouter>
-      </HelmetProvider>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Switch>
+          <Route path={["/:collection/dataset/:id_dataset","/:collection/query/:query", "/:collection", "/"]}>
+            <HT />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 };
 
