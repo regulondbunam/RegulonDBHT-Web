@@ -1,9 +1,45 @@
-import React from 'react'
+import React, { useMemo } from 'react'
+import { Link } from 'react-router-dom';
 import Style from './basicInfo.module.css'
 
 export default function BasicInfo({ data }) {
 
-    
+    let informations = useMemo(() => {
+        let inf = []
+        //inf.push({title:"",data:""});
+        //datasetType
+        inf.push({ title: "Dataset Type", data: data?.datasetType });
+        //sourceSerie
+        /*
+        {
+            "sourceID": null,
+            "sourceName": "GEO",
+            "title": "ArcA",
+            "platformID": "GPL8387",
+            "platformTitle": null,
+            "strategy": "ChIP-chip",
+            "method": null,
+            "__typename": "SourceSerie"
+        } */
+        inf.push({ title: "Platform", data: data?.sourceSerie?.platformTitle });
+        inf.push({ title: "Platform ID", data: data?.sourceSerie?.platformID });
+        inf.push({ title: "Source Serie", data: data?.sourceSerie?.title });
+        inf.push({ title: "Source Name", data: data?.sourceSerie?.sourceName });
+        inf.push({ title: "Source ID", data: data?.sourceSerie?.sourceID });
+        inf.push({ title: "Strategy", data: data?.sourceSerie?.strategy });
+
+        return inf
+    }, [data])
+
+    //linkedDataset
+    let id;
+    let controlId;
+    if (data?.linkedDataset?.controlId) {
+        controlId = data?.linkedDataset?.controlId
+    }
+    if (data?.linkedDataset?.experimentId) {
+        id = data?.linkedDataset?.experimentId
+    }
 
     return (
         <div>
@@ -11,57 +47,55 @@ export default function BasicInfo({ data }) {
             <table style={{ borderLeft: "1px solid #000000" }}>
                 <thead className="table_content">
                     <tr>
-                        <th colSpan="3">
+                        <th>
                             <p style={{ fontSize: "22px" }} className="p_accent">{data?.sample?.title}</p>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colSpan="3">
-                            <p style={{ fontSize: "12px" }} className="p_accent">Type</p>
-                            <p className="p_accent">
+                        <td>
+                            <div className={Style.gridContainer} >
                                 {
-                                    data?.linkedDataset?.datasetType
-                                        ? data?.linkedDataset?.datasetType
-                                        : " - - -"
+                                    informations.map((e, i) => {
+                                        return <BitInfo key={`${i}-${e.title}`} title={e.title} data={e.data} />
+                                    })
                                 }
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colSpan="3">
-                            <div className={Style.gridContainer}>
-
                             </div>
                         </td>
                     </tr>
-                    <tr>
-
-                        <td>
-                            <p style={{ fontSize: "12px" }} className="p_accent">Strategy</p>
-                            <p className="p_accent">
-                                {
-                                    data?.sourceSerie?.strategy
-                                        ? data?.sourceSerie?.strategy
-                                        : " - - -"
-                                }
-                            </p>
-                        </td>
-                        <td>
-                            <p style={{ fontSize: "12px" }} className="p_accent">Method</p>
-                            <p className="p_accent">
-                                {
-                                    data?.sourceSerie?.method
-                                        ? data?.sourceSerie?.method
-                                        : " - - -"
-                                }
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-
-                    </tr>
+                    {
+                        data?.linkedDataset?.controlId
+                            ? <tr>
+                                <td>
+                                    <p style={{ fontSize: "12px" }} className="p_accent">
+                                        Control ID
+                                    </p>
+                                    {
+                                        controlId.map((e, i) => {
+                                            return <Link to={`#`} style={{marginRight: "10px"}} key={`${i}-${e}`} >{e}</Link>
+                                        })
+                                    }
+                                </td>
+                            </tr>
+                            : null
+                    }
+                    {
+                        data?.linkedDataset?.experimentId
+                            ? <tr>
+                                <td>
+                                    <p style={{ fontSize: "12px" }} className="p_accent">
+                                        Experimental ID
+                                    </p>
+                                    {
+                                        id.map((e, i) => {
+                                            return <Link to={`#`} style={{marginRight: "10px"}} key={`${i}-${e}`} >{e}</Link>
+                                        })
+                                    }
+                                </td>
+                            </tr>
+                            : null
+                    }
                 </tbody>
             </table>
 
@@ -69,7 +103,7 @@ export default function BasicInfo({ data }) {
     )
 }
 
-function BitInfo(title, data) {
+function BitInfo({ title, data }) {
     if (!data) {
         return null
     }
@@ -78,7 +112,7 @@ function BitInfo(title, data) {
             <p style={{ fontSize: "12px" }} className="p_accent">
                 {title}
             </p>
-            <p className="p_accent">
+            <p>
                 {data}
             </p>
         </div>
