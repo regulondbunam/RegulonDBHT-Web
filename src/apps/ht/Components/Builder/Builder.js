@@ -10,7 +10,7 @@ class Builder extends Component {
                     <h3 >Builder</h3>
                     <button >All Fields</button>
                     <input type="text" className="TextArea" />
-                    <button class="iconButton" ><i class='bx bx-plus-circle'></i></button>
+                    <button className="iconButton" ><i className='bx bx-plus-circle'></i></button>
                     <button >AND</button>
                 </div>
                 <div className="IndexList">
