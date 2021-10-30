@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import { Link } from 'react-router-dom';
 import Style from './basicInfo.module.css'
+import PublicationInfo from './publicationInfo';
 
 export default function BasicInfo({ data }) {
 
@@ -44,7 +45,7 @@ export default function BasicInfo({ data }) {
     return (
         <div>
             <p style={{ fontSize: "12px" }}>ID: {data?.datasetID}</p>
-            <table style={{ borderLeft: "1px solid #000000" }}>
+            <table>
                 <thead className="table_content">
                     <tr>
                         <th>
@@ -68,8 +69,8 @@ export default function BasicInfo({ data }) {
                         data?.linkedDataset?.controlId
                             ? <tr>
                                 <td>
-                                    <p style={{ fontSize: "12px" }} className="p_accent">
-                                        Control ID
+                                    <p style={{ fontSize: "12px", float: "left", marginRight: "5px"}} className="p_accent">
+                                        Control ID:
                                     </p>
                                     {
                                         controlId.map((e, i) => {
@@ -84,8 +85,8 @@ export default function BasicInfo({ data }) {
                         data?.linkedDataset?.experimentId
                             ? <tr>
                                 <td>
-                                    <p style={{ fontSize: "12px" }} className="p_accent">
-                                        Experimental ID
+                                    <p style={{ fontSize: "12px", float: "left", marginRight: "5px"}} className="p_accent">
+                                        Experimental ID:
                                     </p>
                                     {
                                         id.map((e, i) => {
@@ -98,7 +99,9 @@ export default function BasicInfo({ data }) {
                     }
                 </tbody>
             </table>
-
+            <div>
+                <PublicationInfo publication={data?.publication} />
+            </div>
         </div>
     )
 }

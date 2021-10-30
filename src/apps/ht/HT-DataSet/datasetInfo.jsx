@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import GetInfoDataset from '../webServices/dataset/dataset_info'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import BasicInfo from './components/basicInfo'
+import TfInfo from './components/tfInfo'
 
 export default function DatasetInfo({ id_dataset }) {
     const [_data, set_data] = useState()
@@ -9,7 +10,7 @@ export default function DatasetInfo({ id_dataset }) {
 
     useEffect(() => {
         let title = "Loading ..."
-        if(_data){
+        if (_data) {
             title = _data?.sample?.title
             console.log(_data)
         }
@@ -37,7 +38,7 @@ export default function DatasetInfo({ id_dataset }) {
                 COVER.dispatchEvent(COVER_REACTION);
             }
         }
-    }, [_state,_data])
+    }, [_state, _data])
     return (
         <article>
             {
@@ -56,17 +57,22 @@ export default function DatasetInfo({ id_dataset }) {
     )
 }
 
-function Body({data}) {
+function Body({ data }) {
 
-    return(
+    return (
         <div>
             <h2>
-                DATASET INFORMATION
+                DATASET
             </h2>
-            <div style={{marginLeft: "5%"}}>
+            <div style={{ marginLeft: "5%" }}>
                 <BasicInfo data={data} />
             </div>
+            <h2>TRANSCRIPTION FACTOR</h2>
+            <div style={{ marginLeft: "5%" }}>
+                <TfInfo data={data} />
+            </div>
+
         </div>
     )
-    
+
 }
