@@ -3,6 +3,7 @@ import GetInfoDataset from '../webServices/dataset/dataset_info'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import BasicInfo from './components/basicInfo'
 import TfInfo from './components/tfInfo'
+import GrowthConditions from './components/growthConditions'
 
 export default function DatasetInfo({ id_dataset }) {
     const [_data, set_data] = useState()
@@ -71,7 +72,12 @@ function Body({ data }) {
             <div style={{ marginLeft: "5%" }}>
                 <TfInfo data={data} />
             </div>
-
+            <h2>
+                GROWTH CONDITION
+            </h2>
+            <div style={{ marginLeft: "5%" }}>
+                <GrowthConditions growthCondition={data?.growthConditions} />
+            </div>
         </div>
     )
 
