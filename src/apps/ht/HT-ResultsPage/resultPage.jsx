@@ -1,39 +1,160 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import GetResultsDataset from '../webServices/dataset/dataset_results'
-import {SpinnerCircle} from '../../../components/ui-components/ui_components'
+import { SpinnerCircle } from '../../../components/ui-components/ui_components'
+import Mark from '../../../components/ui-components/web/components/utiles/MarkStr'
+import { Link } from 'react-router-dom'
 
 export default function ResultPage({
-    query
+  query
 }) {
-    const [_data, set_data] = useState()
-    const [_state, set_state] = useState()
+  const [_data, set_data] = useState()
+  const [_state, set_state] = useState()
 
-    useEffect(() => {
-        const COVER = document.getElementById("title-cover-ht")
-        if (COVER) {
-          const COVER_REACTION = new CustomEvent('coverR', {
-            bubbles: true,
-            detail: {
-              state: _state,
-            }
-          });
-          COVER.dispatchEvent(COVER_REACTION);
+  const dataStr = useMemo(() => {
+    let str = []
+    let strQuery = query
+    strQuery = strQuery.replaceAll("AND", "#")
+    strQuery = strQuery.replaceAll("OR", "#")
+    strQuery = strQuery.split("#")
+    strQuery.map((e) => {
+      e = e.replaceAll(`"`,"")
+      e = e.replaceAll(`]`,"")
+      e = e.replaceAll("\\","")
+      e = e.split(`[`)
+      str.push({key:e[0],location:e[1]})
+      return null
+    })
+    console.log(str)
+    return str
+  }, [query])
+
+  useEffect(() => {
+    const COVER = document.getElementById("title-cover-ht")
+    if (COVER) {
+      const COVER_REACTION = new CustomEvent('coverR', {
+        bubbles: true,
+        detail: {
+          state: _state,
         }
-      }, [_state])
+      });
+      COVER.dispatchEvent(COVER_REACTION);
+    }
+  }, [_state])
 
-    return (
-        <article>
-            <h2>Results of:</h2>
-            <p>{query}</p>
+  return (
+    <article>
+      <h2>Results of:</h2>
+      <p>{query}</p>
+      {
+        !_data
+          ? <div><GetResultsDataset
+            ht_query={query}
+            resoultsData={(data) => { set_data(data) }}
+            status={(state) => { set_state(state) }}
+          />
             {
-                !_data
-                ?<GetResultsDataset
-                ht_query={query}
-                resoultsData={(data)=>{set_data(data)}}
-                status={(state)=>{set_state(state)}}
-                />
-                :<SpinnerCircle />
+              _state === "error"
+                ? <p>Query Error: Falied to read query, please check your query </p>
+                : <SpinnerCircle />
             }
-        </article>
+
+          </div>
+          : <Results data={_data} dataStr={dataStr} />
+      }
+    </article>
+  )
+}
+
+function Results({ data = [], dataStr = [] }) {
+  console.log(data[3])
+  if (!data) {
+    return (
+      <div>
+        ERROR QUERY!
+      </div>
     )
+  }
+  if (data.length === 0) {
+    return (
+      <div>
+        No match Results!
+      </div>
+    )
+  }
+  return (
+    <div>
+      <p>{data.length} Results</p>
+      {
+        data
+        ?<div>
+          {
+            data.map(ds=>{
+              return (
+                <div key={`ds_id_${ds?.datasetID}`}>
+                  ID: {ds?.datasetID}
+                  {
+                    dataStr
+                    ?<div>
+                      {
+                        dataStr.map((str,i)=>{
+                          return (
+                            <div key={`str_${ds?.datasetID}_${i}_${str?.location}`}>
+                              
+                              <Link style={{fontSize:"22px"}} to={`/s/dataset/${ds?.datasetID}`}> {ds?.sample?.title} </Link>
+                              <p dangerouslySetInnerHTML={{__html: FormatData(ds, str?.key, str?.location)}} />
+                            </div>
+                          )
+                        })
+                      }
+                    </div>
+                    :null
+                  }
+                </div>
+              )
+            })
+          }
+        </div>
+        :null
+      }
+    </div>
+  )
+}
+
+function FormatData(data, keyWord, location) {
+  let locations = location.split(".")
+  if (!keyWord || !location || locations.length < 1 || !data) {
+      return "---"
+  }
+  let MachText = "---"
+  //console.log(data)
+  try {
+    let dataMatch = data
+    for (let index = 0; index < locations.length; index++) {
+      const key = locations[index];
+      dataMatch = dataMatch[key]
+      if (index === locations.length - 1) {
+        if(dataMatch.length){
+            if (Array.isArray(dataMatch)) {
+              MachText = dataMatch.map(t=>{
+                return t
+              }).join(", ")
+            }else{
+                MachText = dataMatch
+            }
+        } 
+    }
+    }
+    let rx = new RegExp(`${keyWord.toLowerCase() }`)
+            if (rx.test(MachText.toLowerCase() )) {
+              MachText = `
+              key: ${keyWord} found in ${location}, <br/>
+              ${Mark(keyWord,MachText)}
+              `
+            }else{
+              MachText = ""
+            }
+  } catch (error) {
+      console.error(error)
+  }
+  return MachText
 }

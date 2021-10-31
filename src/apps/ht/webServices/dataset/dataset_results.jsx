@@ -10,79 +10,88 @@ import { gql } from "@apollo/client";
 
 
 function query(ht_query) {
-    return gql`
-    {
-        getDatasetsFromSearch(advancedSearch: "${ht_query}") {
-          datasetID
-          publication {
-            pmid
-            doi
-            authors
-            title
-            date
-            pmcid
-          }
-          objectTested {
+  try{return gql`
+  {
+      getDatasetsFromSearch(advancedSearch: "${ht_query}") {
+        datasetID
+        publication {
+          pmid
+          doi
+          authors
+          title
+          date
+          pmcid
+        }
+        objectTested {
+          _id
+          name
+          synonyms
+          genes {
             _id
             name
-            synonyms
-            genes {
-              _id
-              name
-              distanceTo
-            }
-            summary
-            activeConformations
-            externalCrossReferences {
-              externalCrossReferenceId
-              externalCrossReferenceName
-              objectId
-              url
-            }
+            distanceTo
           }
-          sourceSerie {
-            sourceID
-            sourceName
-            title
-            platformID
-            platformTitle
-            strategy
-            method
-          }
-          sample {
-            experimentId
-            controlId
-            title
-          }
-          linkedDataset {
-            controlId
-            experimentId
-            datasetType
-          }
-          referenceGenome
-          datasetType
-          temporalDatasetID
-          growthConditions {
-            organism
-            geneticBackground
-            medium
-            aeration
-            temperature
-            ph
-            pressure
-            opticalDensity
-            growthPhase
-            growthRate
-            vesselType
-            aerationSpeed
-          }
-          releaseDataControl {
-            date
-            version
+          summary
+          activeConformations
+          externalCrossReferences {
+            externalCrossReferenceId
+            externalCrossReferenceName
+            objectId
+            url
           }
         }
+        sourceSerie {
+          sourceID
+          sourceName
+          title
+          platformID
+          platformTitle
+          strategy
+          method
+        }
+        sample {
+          experimentId
+          controlId
+          title
+        }
+        linkedDataset {
+          controlId
+          experimentId
+          datasetType
+        }
+        referenceGenome
+        datasetType
+        temporalDatasetID
+        growthConditions {
+          organism
+          geneticBackground
+          medium
+          aeration
+          temperature
+          ph
+          pressure
+          opticalDensity
+          growthPhase
+          growthRate
+          vesselType
+          aerationSpeed
+        }
+        releaseDataControl {
+          date
+          version
+        }
       }
-        `
+    }
+      `
+  }catch(error){
+    console.log(error)
+  }
+  return gql`{
+    getDatasetsFromSearch(advancedSearch: "a[]") {
+      datasetID
+    }
+  }`
+    
 }
 
 const GetResultsDataset = ({
