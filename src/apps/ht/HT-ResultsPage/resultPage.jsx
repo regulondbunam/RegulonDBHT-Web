@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 import GetResultsDataset from '../webServices/dataset/dataset_results'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import Mark from '../../../components/ui-components/web/components/utiles/MarkStr'
-import { Link } from 'react-router-dom'
+import PanelResult from './panelResult'
 
 export default function ResultPage({
   query
@@ -91,17 +91,19 @@ function Results({ data = [], dataStr = [] }) {
             data.map(ds=>{
               return (
                 <div key={`ds_id_${ds?.datasetID}`}>
-                  ID: {ds?.datasetID}
                   {
                     dataStr
                     ?<div>
                       {
                         dataStr.map((str,i)=>{
+                          let matchText = FormatData(ds, str?.key, str?.location)
                           return (
                             <div key={`str_${ds?.datasetID}_${i}_${str?.location}`}>
-                              
-                              <Link style={{fontSize:"22px"}} to={`/s/dataset/${ds?.datasetID}`}> {ds?.sample?.title} </Link>
-                              <p dangerouslySetInnerHTML={{__html: FormatData(ds, str?.key, str?.location)}} />
+                              {
+                                matchText
+                                ?<PanelResult str={str} ds={ds} matchText={matchText} />
+                                :null
+                              }
                             </div>
                           )
                         })
@@ -147,11 +149,10 @@ function FormatData(data, keyWord, location) {
     let rx = new RegExp(`${keyWord.toLowerCase() }`)
             if (rx.test(MachText.toLowerCase() )) {
               MachText = `
-              key: ${keyWord} found in ${location}, <br/>
               ${Mark(keyWord,MachText)}
               `
             }else{
-              MachText = ""
+              MachText = undefined
             }
   } catch (error) {
       console.error(error)
