@@ -4,6 +4,7 @@ import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import BasicInfo from './components/basicInfo'
 import TfInfo from './components/tfInfo'
 import GrowthConditions from './components/growthConditions'
+import Viewer from './igv/viewer'
 
 export default function DatasetInfo({ id_dataset }) {
     const [_data, set_data] = useState()
@@ -78,6 +79,10 @@ function Body({ data }) {
             <div style={{ marginLeft: "5%" }}>
                 <GrowthConditions growthCondition={data?.growthConditions} />
             </div>
+            <h2>
+                GENOME VIEWER
+            </h2>
+            <Viewer />
         </div>
     )
 
