@@ -14,9 +14,16 @@
     color: white !important; 
 }
 
+.title{
+    color: #3c596b;
+}
+
+.title:hover{
+    color: white;
+}
+
 .matchText{
-    font-size: 20px;
-    color: #32617D ; 
+    font-size: 16px;
 }
 
 .matchText:hover{

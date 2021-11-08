@@ -17,14 +17,14 @@ export default function ResultPage({
     strQuery = strQuery.replaceAll("OR", "#")
     strQuery = strQuery.split("#")
     strQuery.map((e) => {
-      e = e.replaceAll(`"`,"")
-      e = e.replaceAll(`]`,"")
-      e = e.replaceAll("\\","")
+      e = e.replaceAll(`"`, "")
+      e = e.replaceAll(`]`, "")
+      e = e.replaceAll("\\", "")
       e = e.split(`[`)
-      str.push({key:e[0],location:e[1]})
+      str.push({ key: e[0], location: e[1] })
       return null
     })
-    console.log(str)
+    //console.log(str)
     return str
   }, [query])
 
@@ -66,7 +66,28 @@ export default function ResultPage({
 }
 
 function Results({ data = [], dataStr = [] }) {
-  console.log(data[3])
+
+  const results = useMemo(() => {
+    let results = []
+    data.forEach(result => {
+      let match = []
+      dataStr.forEach(mstr => {
+        let matchText = FormatData(result, mstr?.key, mstr?.location)
+        if (matchText) {
+          match.push({
+            matchText: matchText,
+            key: mstr?.key,
+            location: mstr.location
+          })
+        }
+      });
+      result._match = match
+      results.push(result)
+    });
+    return results
+  }, [data, dataStr])
+
+  //console.log(data)
   if (!data) {
     return (
       <div>
@@ -85,38 +106,19 @@ function Results({ data = [], dataStr = [] }) {
     <div>
       <p>{data.length} Results</p>
       {
-        data
-        ?<div>
-          {
-            data.map(ds=>{
-              return (
-                <div key={`ds_id_${ds?.datasetID}`}>
-                  {
-                    dataStr
-                    ?<div>
-                      {
-                        dataStr.map((str,i)=>{
-                          let matchText = FormatData(ds, str?.key, str?.location)
-                          return (
-                            <div key={`str_${ds?.datasetID}_${i}_${str?.location}`}>
-                              {
-                                matchText
-                                ?<PanelResult str={str} ds={ds} matchText={matchText} />
-                                :null
-                              }
-                            </div>
-                          )
-                        })
-                      }
-                    </div>
-                    :null
-                  }
-                </div>
-              )
-            })
-          }
-        </div>
-        :null
+        results
+          ? <div>
+            {
+              results.map(ds => {
+                return (
+                  <div key={`ds_id_${ds?.datasetID}`}>
+                    <PanelResult ds={ds} match_data={ds?._match} />
+                  </div>
+                )
+              })
+            }
+          </div>
+          : null
       }
     </div>
   )
@@ -125,7 +127,7 @@ function Results({ data = [], dataStr = [] }) {
 function FormatData(data, keyWord, location) {
   let locations = location.split(".")
   if (!keyWord || !location || locations.length < 1 || !data) {
-      return "---"
+    return "---"
   }
   let MachText = "---"
   //console.log(data)
@@ -135,27 +137,27 @@ function FormatData(data, keyWord, location) {
       const key = locations[index];
       dataMatch = dataMatch[key]
       if (index === locations.length - 1) {
-        if(dataMatch.length){
-            if (Array.isArray(dataMatch)) {
-              MachText = dataMatch.map(t=>{
-                return t
-              }).join(", ")
-            }else{
-                MachText = dataMatch
-            }
-        } 
+        if (dataMatch.length) {
+          if (Array.isArray(dataMatch)) {
+            MachText = dataMatch.map(t => {
+              return t
+            }).join(", ")
+          } else {
+            MachText = dataMatch
+          }
+        }
+      }
     }
-    }
-    let rx = new RegExp(`${keyWord.toLowerCase() }`)
-            if (rx.test(MachText.toLowerCase() )) {
-              MachText = `
-              ${Mark(keyWord,MachText)}
+    let rx = new RegExp(`${keyWord.toLowerCase()}`)
+    if (rx.test(MachText.toLowerCase())) {
+      MachText = `
+              ${Mark(keyWord, MachText)}
               `
-            }else{
-              MachText = undefined
-            }
+    } else {
+      MachText = undefined
+    }
   } catch (error) {
-      console.error(error)
+    console.error(error)
   }
   return MachText
 }
