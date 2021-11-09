@@ -4,7 +4,7 @@ import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import BasicInfo from './components/basicInfo'
 import TfInfo from './components/tfInfo'
 import GrowthConditions from './components/growthConditions'
-import Viewer from './igv/viewer'
+import {Viewer} from './igv/viewer'
 import CONF from '../config/ht_conf_enus.json'
 
 const conf = CONF?.pages?.dataset_page
@@ -17,7 +17,7 @@ export default function DatasetInfo({ id_dataset }) {
         let title = "Loading ..."
         if (_data) {
             title = _data?.sample?.title
-            console.log(_data)
+            //console.log(_data)
         }
         const COVER = document.getElementById("title-cover-ht")
         if (COVER) {

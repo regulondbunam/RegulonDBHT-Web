@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react';
 import igv from "igv"
-import {genoma} from "./genome/genome"
+import {genomaE} from "./genome/genome"
 //
 
-export default function IGVtest() {
+export function Viewer() {
 
     useEffect(() => {
         var options =
         {
-            genome: genoma,
+            genome: genomaE,
         };
-        var igvDiv = document.getElementById("igv-div");
+        var igvDiv = document.getElementById("igv-divK");
         if (igvDiv) {
             igv.createBrowser(igvDiv, options)
                 .then(function (browser) {
-                    console.log("Created IGV browser");
+                    //console.log("hola");
                 })
             
         }
     })
 
-    return <div id="igv-div" />
+    return <div id="igv-divK" />
 }

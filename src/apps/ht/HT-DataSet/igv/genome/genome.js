@@ -1,16 +1,34 @@
-export const genoma = {
-    "id": "Ecoli K12",
-    "name": "Ecoli K12",
-    "fastaURL": "/media/raw/e_coli_k12.fa",
-    "indexURL": "/media/raw/e_coli_k12.fa.fai",
+export const genomaE = {
+  "id": "Ecoli",
+  "name": "Ecoli",
+  "fastaURL": "/media/raw/e_coli_k12.fna",
+  "indexURL": "/media/raw/e_coli_k12.fna.fai",
+  "order": 1000000,
+  "tracks": [
+    {
+      "name": "DS00020_pikes",
+      "url": "/media/raw/DS00020_peaks.bed",
+      "displayMode": "EXPANDED",
+      "nameField": "gene",
+      "height": 150
+    }
+  ]
+}
+/**
+ * export const genoma = {
+    "id": "Sars-CoV-2_ASM985889v3",
+    "name": "Sars-CoV-2 (ASM985889v3)",
+    "fastaURL": "/media/raw/sars_seq.fna",
+    "indexURL": "/media/raw/sars_seq_index.fna.fai",
     "order": 1000000,
     "tracks": [
       {
         "name": "Annotations",
-        "url": "/media/raw/DS00020_sites.fasta",
+        "url": "/media/raw/sars_relSeq.gff",
         "displayMode": "EXPANDED",
-        "nameField": "sites",
+        "nameField": "gene",
         "height": 150
       }
     ]
   }
+ */
