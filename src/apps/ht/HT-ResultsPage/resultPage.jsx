@@ -3,6 +3,9 @@ import GetResultsDataset from '../webServices/dataset/dataset_results'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import Mark from '../../../components/ui-components/web/components/utiles/MarkStr'
 import PanelResult from './panelResult'
+import CONF from '../config/ht_conf_enus.json'
+
+const conf = CONF?.pages?.result_page
 
 export default function ResultPage({
   query
@@ -43,7 +46,8 @@ export default function ResultPage({
 
   return (
     <article>
-      <h2>Results of:</h2>
+      <h2 dangerouslySetInnerHTML={{ __html: conf?.title}} />
+      <p dangerouslySetInnerHTML={{__html: conf?.description}} />
       <p>{query}</p>
       {
         !_data

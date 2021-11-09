@@ -5,6 +5,9 @@ import BasicInfo from './components/basicInfo'
 import TfInfo from './components/tfInfo'
 import GrowthConditions from './components/growthConditions'
 import Viewer from './igv/viewer'
+import CONF from '../config/ht_conf_enus.json'
+
+const conf = CONF?.pages?.dataset_page
 
 export default function DatasetInfo({ id_dataset }) {
     const [_data, set_data] = useState()
@@ -60,28 +63,29 @@ export default function DatasetInfo({ id_dataset }) {
 }
 
 function Body({ data }) {
-
+    const section = conf?.sections
     return (
         <div>
-            <h2>
-                DATASET
-            </h2>
+            <p dangerouslySetInnerHTML={{__html: conf?.description}} />
+            <h2 dangerouslySetInnerHTML={{__html: section?.dataset_info?.title}} />
+            <p dangerouslySetInnerHTML={{__html: section?.dataset_info?.description}} />
             <div style={{ marginLeft: "5%" }}>
                 <BasicInfo data={data} />
             </div>
-            <h2>TRANSCRIPTION FACTOR</h2>
+            <h2 dangerouslySetInnerHTML={{__html: section?.dataset_tf?.title}} />
+            <p dangerouslySetInnerHTML={{__html: section?.dataset_tf?.description}} />
             <div style={{ marginLeft: "5%" }}>
                 <TfInfo data={data} />
             </div>
-            <h2>
-                GROWTH CONDITION
-            </h2>
+            <h2 dangerouslySetInnerHTML={{__html: section?.dataset_growthc?.title}} />
+            <p dangerouslySetInnerHTML={{__html: section?.dataset_growthc?.description}} />
             <div style={{ marginLeft: "5%" }}>
                 <GrowthConditions growthCondition={data?.growthConditions} />
             </div>
-            <h2>
-                GENOME VIEWER
-            </h2>
+            <h2 dangerouslySetInnerHTML={{__html: section?.dataset_author_data?.title}} />
+            <p dangerouslySetInnerHTML={{__html: section?.dataset_author_data?.description}} />
+            <h2 dangerouslySetInnerHTML={{__html: section?.dataset_igv?.title}} />
+            <p dangerouslySetInnerHTML={{__html: section?.dataset_igv?.description}} />
             <Viewer />
         </div>
     )

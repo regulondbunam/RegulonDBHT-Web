@@ -1,16 +1,14 @@
 import React from 'react';
 import Style from "./MainPage.module.css"
-import Data from '../Assets/Data/Data.json';
-
-//Componets
+import Conf from '../config/ht_conf_enus.json'
 import PanelHT from '../Components/Panel/PanelHT';
 
-const des = Data.ht_data.main_page.main_page_descripcion
+const conf = Conf?.pages?.main_page
 
 class MainPage extends React.Component {
 
     state = {
-        descripcion: des
+        descripcion: conf?.descripcionç
     }
 
     render() {
@@ -25,14 +23,14 @@ class MainPage extends React.Component {
                 <br />
                 <div className={Style.gridContainer}>
                     {
-                        Data.ht_data.main_page.paneles.map((panel) => {
+                        conf?.collection.map((panel) => {
                             return (
                                 <div className={Style.gridItem} key={panel.id}
                                     onMouseEnter={()=>{
                                         this.setState({descripcion: panel?.description})
                                     }}
                                     onMouseLeave={()=>{
-                                        this.setState({descripcion: des})
+                                        this.setState({descripcion: conf?.descripcion})
                                     }}
                                 >
                                     {PanelHT(panel)}

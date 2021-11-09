@@ -1,0 +1,60 @@
+{
+    "_json_description": "Json para la configuracion de textos estaticos, de la aplicacion ht",
+    "_json_version": "0.2.0",
+    "pages": {
+        "main_page": {
+            "title": "High Thoughput Collection",
+            "descripcion": "hover the mouse over the panel for more information",
+            "_collection_coments": "El elemento 'collection' es un arreglo donde se pueden declarar las colecciones, cuidar que el identificador sea diferente. ",
+            "collection": [
+                {
+                    "id" : "DS-001",
+                    "url" : "url (nombre corto de la coleccion)",
+                    "title": "Nombre de la coleccion",
+                    "description": "descripcion",
+                    "enable": true
+                },
+                {
+                    "id" : "DS-002",
+                    "url" : "url (nombre corto de la coleccion)",
+                    "title": "Nombre de la coleccion",
+                    "description": "descripcion",
+                    "enable": true
+                }
+            ]
+        },
+        "builder_page": {
+            "title":"Query Builder",
+            "description":""
+        },
+        "result_page":{
+            "title": "Results of",
+            "description": ""
+        },
+        "dataset_page":{
+            "description": "descripcion",
+            "sections":{
+                "dataset_info":{
+                    "title": "DATASET",
+                    "description": ""
+                },
+                "dataset_tf":{
+                    "title": "TRANSCRIPTION FACTOR",
+                    "description": ""
+                },
+                "dataset_growthc":{
+                    "title": "GROWTH CONDITION",
+                    "description": ""
+                },
+                "dataset_author_data":{
+                    "title": "AUTHOR DATA",
+                    "description": ""
+                },
+                "dataset_igv":{
+                    "title": "GENOME VIEWER",
+                    "description": ""
+                }
+            }
+        }
+    }
+}
