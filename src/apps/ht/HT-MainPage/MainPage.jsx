@@ -24,6 +24,20 @@ class MainPage extends React.Component {
                 <div className={Style.gridContainer}>
                     {
                         conf?.collection.map((panel) => {
+                            if (panel?.enable) {
+                                return (
+                                    <div className={Style.gridItem} key={panel.id}
+                                        onMouseEnter={()=>{
+                                            this.setState({descripcion: panel?.description})
+                                        }}
+                                        onMouseLeave={()=>{
+                                            this.setState({descripcion: conf?.descripcion})
+                                        }}
+                                    >
+                                        {PanelHT(panel)}
+                                    </div>
+                                )
+                            }
                             return (
                                 <div className={Style.gridItem} key={panel.id}
                                     onMouseEnter={()=>{
@@ -33,7 +47,7 @@ class MainPage extends React.Component {
                                         this.setState({descripcion: conf?.descripcion})
                                     }}
                                 >
-                                    {PanelHT(panel)}
+                                    {PanelHT(panel,false)}
                                 </div>
                             )
                         })

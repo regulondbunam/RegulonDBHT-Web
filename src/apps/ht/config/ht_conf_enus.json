@@ -19,7 +19,7 @@
                     "url" : "url (nombre corto de la coleccion)",
                     "title": "Nombre de la coleccion",
                     "description": "descripcion",
-                    "enable": true
+                    "enable": false
                 }
             ]
         },
