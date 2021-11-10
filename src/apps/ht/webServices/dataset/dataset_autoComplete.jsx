@@ -13,7 +13,7 @@ function query(keyWord) {
     return gql`
     {
         getDatasetsFromSearch(advancedSearch: "${keyWord}") {
-          datasetID
+          _id
           publication {
             pmid
             doi
@@ -61,7 +61,7 @@ function query(keyWord) {
           }
           referenceGenome
           datasetType
-          temporalDatasetID
+          temporalID
           growthConditions {
             organism
             geneticBackground
@@ -123,7 +123,7 @@ function FormatData(data, keyWord, location) {
         return []
     }
     let suggest = []
-    //console.log(data)
+    console.log(data)
     try {
         let result = [];
         data.map(d => {
@@ -157,13 +157,16 @@ function FormatData(data, keyWord, location) {
         console.error(error)
     }
     return suggest
+
+
+    console.log(data);
 }
 
 // eslint-disable-next-line no-unused-vars
 const a = `
 {
     getDatasetsFromSearch(advancedSearch: "j[publication.authors]") {
-      datasetID
+      _id
       publication {
         pmid
         doi
@@ -211,7 +214,7 @@ const a = `
       }
       referenceGenome
       datasetType
-      temporalDatasetID
+      temporalID
       growthConditions {
         organism
         geneticBackground

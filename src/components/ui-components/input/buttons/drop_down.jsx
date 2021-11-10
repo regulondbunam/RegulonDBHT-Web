@@ -73,11 +73,13 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Button from "./button";
 import Styles from "./Buttons.module.css";
+/*import { valueToObjectRepresentation } from "@apollo/client/utilities";*/
 
 const arrowDown = "keyboard_arrow_down";
 const arrowUp = "keyboard_arrow_up";
 
 const DropDown = ({
+  parentCallBack,
   accent = false,
   arrayOptions = [],
   className = "",
@@ -129,10 +131,10 @@ const DropDown = ({
               style={{ marginBottom: "2px", width: "100%" }}
               onClick={() => {
                 setOption({ index: index, option: value });
+                setLabel(value);
+                parentCallBack(value);
                 setDisplay(false);
-                if (isLabelUpdate) {
-                  setLabel(value);
-                }
+                
               }}
             >
               {value}
