@@ -13,7 +13,7 @@ function query(keyWord) {
     return gql`
     {
         getDatasetsFromSearch(advancedSearch: "${keyWord}") {
-          datasetID
+          _id
           publication {
             pmid
             doi
@@ -61,7 +61,7 @@ function query(keyWord) {
           }
           referenceGenome
           datasetType
-          temporalDatasetID
+          temporalID
           growthConditions {
             organism
             geneticBackground

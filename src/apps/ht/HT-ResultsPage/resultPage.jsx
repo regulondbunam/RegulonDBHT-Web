@@ -115,7 +115,7 @@ function Results({ data = [], dataStr = [] }) {
             {
               results.map(ds => {
                 return (
-                  <div key={`ds_id_${ds?.datasetID}`}>
+                  <div key={`ds_id_${ds?._id}`}>
                     <PanelResult ds={ds} match_data={ds?._match} />
                   </div>
                 )

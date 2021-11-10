@@ -12,8 +12,8 @@ import { gql } from "@apollo/client";
 function query(id_dataset) {
     return gql`
     {
-        getDatasetsFromSearch(advancedSearch: "${id_dataset}[datasetID]") {
-          datasetID
+        getDatasetsFromSearch(advancedSearch: "${id_dataset}[_id]") {
+          _id
           publication {
             pmid
             doi
@@ -61,7 +61,7 @@ function query(id_dataset) {
           }
           referenceGenome
           datasetType
-          temporalDatasetID
+          temporalID
           growthConditions {
             organism
             geneticBackground

@@ -23,15 +23,15 @@ export default function PanelResult({ ds, match_data }) {
         inf.push({ title: "AERATION SPEED", data: growthCondition?.aerationSpeed });
         return inf;
     }, [growthCondition])
-    console.log(ds)
+    //console.log(ds)
     return (
 
         <div className={Style.Panel}
             onMouseEnter={() => { set_display(true) }}
             onMouseLeave={() => { set_display(false) }}
         >
-            On dataset with ID: {ds?.datasetID}
-            <Link to={`/s/dataset/${ds?.datasetID}`}>
+            On dataset with ID: {ds?._id}
+            <Link to={`/s/dataset/${ds?._id}`}>
                 <h2 className={Style.title}>
                     {ds?.sample?.title}
                 </h2>

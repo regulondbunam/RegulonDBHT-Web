@@ -13,7 +13,7 @@ function query(ht_query) {
   try{return gql`
   {
       getDatasetsFromSearch(advancedSearch: "${ht_query}") {
-        datasetID
+        _id
         publication {
           pmid
           doi
@@ -61,7 +61,7 @@ function query(ht_query) {
         }
         referenceGenome
         datasetType
-        temporalDatasetID
+        temporalID
         growthConditions {
           organism
           geneticBackground

@@ -44,7 +44,7 @@ export default function BasicInfo({ data }) {
 
     return (
         <div>
-            <p style={{ fontSize: "12px" }}>ID: {data?.datasetID}</p>
+            <p style={{ fontSize: "12px" }}>ID: {data?._id}</p>
             <table>
                 <thead className="table_content">
                     <tr>
