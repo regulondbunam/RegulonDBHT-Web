@@ -7,6 +7,7 @@ import GrowthConditions from './components/growthConditions'
 import { Viewer } from './igv/viewer'
 import CONF from '../config/ht_conf_enus.json'
 import Tabs from './components/tabs'
+import Related from '../relatedTool/related'
 
 const conf = CONF?.pages?.dataset_page
 
@@ -46,26 +47,47 @@ export default function DatasetInfo({ id_dataset }) {
         }
     }, [_state, _data])
     return (
-        <article>
-            {
-                !_data
-                    ? <div>
-                        <SpinnerCircle />
-                        <GetInfoDataset id_dataset={id_dataset}
-                            status={(state) => { set_state(state) }}
-                            resoultsData={(data) => { set_data(data) }}
-                        />
-                    </div>
-                    : <Body data={_data} />
-            }
-
-        </article>
+        <div>
+            <article>
+                {
+                    !_data
+                        ? <div>
+                            <SpinnerCircle />
+                            <GetInfoDataset id_dataset={id_dataset}
+                                status={(state) => { set_state(state) }}
+                                resoultsData={(data) => { set_data(data) }}
+                            />
+                        </div>
+                        : <Body data={_data} />
+                }
+            </article>
+            <aside>
+                <Related />
+            </aside>
+        </div>
     )
 }
 
 function Body({ data }) {
     const section = conf?.sections
     console.log(data)
+
+    useEffect(() => {
+        const RELATED = document.getElementById("related_ht")
+        if (RELATED && data) {
+            const REL_REACTION = new CustomEvent('upR', {
+                bubbles: true,
+                detail: {
+                    linkedDataset: data?.linkedDataset,
+                    pmid: data?.publication?.pmid,
+                    doi: data?.publication?.doi,
+                    externalLinks: data?.objectTested?.externalCrossReferences
+                }
+            });
+            RELATED.dispatchEvent(REL_REACTION);
+        }
+    }, [data])
+
     return (
         <div>
             {
