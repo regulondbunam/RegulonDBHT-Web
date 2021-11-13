@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Peaks from './peaks'
 import TFBS from './tfbs'
 
 export default function NormData({ id_dataset }) {
@@ -33,9 +34,15 @@ export default function NormData({ id_dataset }) {
                 :null
             }
             {
+                _select === "PEAKS"
+                ?<Peaks id_dataset={id_dataset} />
+                :null
+            }
+            {
                 _select === "TFBS and PEAKS"
                 ?<div>
                     <TFBS id_dataset={id_dataset} />
+                    <Peaks id_dataset={id_dataset} />
                 </div>
                 :null
             }
