@@ -1,0 +1,35 @@
+import React, { useState } from 'react'
+import TFBS from './tfbs'
+
+export default function NormData({ id_dataset }) {
+
+    const [_select, set_select] = useState("TFBS")
+
+
+    if (!id_dataset) {
+        return null
+    }
+    return (
+        <div>
+            <div className="dropdown">
+                <button>{_select}</button>
+                <div className="dropdown-content">
+                    <button
+                        onClick={() => { set_select("TFBS") }}
+                    >TFBS</button>
+                    <button
+                        onClick={() => { set_select("PEAKS") }}
+                    >PEAKS</button>
+                    <button
+                        onClick={() => { set_select("TFBS and PEAKS") }}
+                    >ALL</button>
+                </div>
+            </div>
+            {
+                _select === "TFBS"
+                ?<TFBS id_dataset={id_dataset} />
+                :null
+            }
+        </div>
+    )
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import NormData from '../../HT-NormalizedData/normData'
 import Summary from './summary'
 import Style from './tabs.module.css'
 
@@ -35,6 +36,8 @@ export default function Tabs({ id_dataset, data }) {
                     ? <div className={Style.tabcontent}>
                         <h3>Sumary</h3>
                         <Summary data={data} />
+                        <h3>Data</h3>
+                        <NormData id_dataset={id_dataset} />
                     </div>
                     : null
             }
