@@ -112,7 +112,7 @@ function DisplayTFBS({data = []}) {
                         <td>
                             {item?.sequence
                                 ?<MKSequenceClass 
-                                    id_drawPlace={`${item?.chrLeftPosition}_${item?.chrRightPosition}_${item?.sequence}`} 
+                                    id_drawPlace={`${item?.chrLeftPosition}_${item?.chrRightPosition}_${item?.sequence}_${toStrand(item?.strand)}`} 
                                     sequence={item?.sequence} />
                                 :null
                             }
@@ -212,3 +212,9 @@ function DisplayTFBS({data = []}) {
     )
 }
 
+function toStrand(strand) {
+    if (strand === "+") {
+        return strand.replace("+","forward")
+    }
+    return strand.replace("-","reverse")
+}
