@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import GetTFBS from '../webServices/tfbs/tfbs_dataset'
+import { MKSequenceClass } from './mkSequence'
 
 export default function TFBS({ id_dataset }) {
     const [_data, set_data] = useState()
@@ -8,7 +9,7 @@ export default function TFBS({ id_dataset }) {
 
     //console.log(_data)
     return (
-        <div>
+        <div >
             {
                 _state !== "done"
                     ? <GetTFBS id_dataset={id_dataset}
@@ -39,7 +40,8 @@ function Headtfbs({ tfbs }) {
     return (
         <thead>
             <tr>
-                <th style={{textAlign: 'end'}} colSpan="6">
+                <th style={{textAlign: 'end'}} colSpan="7">
+                   { /* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a href="#">download complete file</a>
                 </th>
             </tr>
@@ -48,6 +50,7 @@ function Headtfbs({ tfbs }) {
                 <th>START</th>
                 <th>SEQUENCE</th>
                 <th>END</th>
+                <th>STRAND</th>
                 <th>SCORE</th>
                 <th>Closest Genes</th>
             </tr>
@@ -93,7 +96,7 @@ function DisplayTFBS({data = []}) {
                             return gene?.name
                         }).join(", ")
                     }
-                    return <tr key={`tfbs_${item?._id}`}>
+                    return <tr style={{height: "25px"}} key={`tfbs_${item?._id}`}>
                         <td>
                             {item?.name
                                 ?item?.name
@@ -108,7 +111,9 @@ function DisplayTFBS({data = []}) {
                         </td>
                         <td>
                             {item?.sequence
-                                ?item?.sequence
+                                ?<MKSequenceClass 
+                                    id_drawPlace={`${item?.chrLeftPosition}_${item?.chrRightPosition}_${item?.sequence}`} 
+                                    sequence={item?.sequence} />
                                 :null
                             }
                         </td>
@@ -125,6 +130,13 @@ function DisplayTFBS({data = []}) {
                             }
                         </td>
                         <td>
+                            {
+                                item?.strand
+                                ?item?.strand
+                                :""
+                            }
+                        </td>
+                        <td>
                             {item?.closestGenes
                                 ?genes
                                 :null
@@ -134,7 +146,7 @@ function DisplayTFBS({data = []}) {
                 })
             }
             <tr>
-                <td colSpan="6" >
+                <td colSpan="7" >
                     <input style={{width:"100%"}} type="range" name="pagSelection"
                         id="input_range_current_page_tfbs01"
                         min="0" max={_totalP} 
@@ -145,7 +157,7 @@ function DisplayTFBS({data = []}) {
                 </td>
             </tr>
             <tr>
-                <td colSpan="6">
+                <td colSpan="7">
                     <table>
                         <tbody>
                             <tr>
@@ -199,3 +211,4 @@ function DisplayTFBS({data = []}) {
         </tbody>
     )
 }
+

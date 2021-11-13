@@ -12,7 +12,9 @@ export default function NormData({ id_dataset }) {
     return (
         <div>
             <div className="dropdown">
-                <button>{_select}</button>
+                <label htmlFor="buttonSelect_norm">Select data view</label>
+                <br />
+                <button id="buttonSelect_norm">{_select}</button>
                 <div className="dropdown-content">
                     <button
                         onClick={() => { set_select("TFBS") }}
@@ -28,6 +30,13 @@ export default function NormData({ id_dataset }) {
             {
                 _select === "TFBS"
                 ?<TFBS id_dataset={id_dataset} />
+                :null
+            }
+            {
+                _select === "TFBS and PEAKS"
+                ?<div>
+                    <TFBS id_dataset={id_dataset} />
+                </div>
                 :null
             }
         </div>
