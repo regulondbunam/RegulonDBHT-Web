@@ -57,10 +57,10 @@ function HeadPeaks({ Peaks }) {
 
 function DisplayPeaks({data = []}) {
     const [_page, set_page] = useState(0)
+    const [items, setItems] = useState(10)
     const _totalP = parseInt(data.length/10,10)
     const [_items, set_items] = useState([])
     useEffect(() => {
-        const items = 10
         let itemSelection = []
         for(let i = 0; i < items; i++) {
             let sec = (_page * 10 + i)
@@ -76,14 +76,74 @@ function DisplayPeaks({data = []}) {
         if(inputNumber){
             inputNumber.value = _page
         }
-        let inputRange = document.getElementById("input_range_current_page_Peaks01")
-        if(inputRange){
-            inputRange.value = _page
+        let inputNumberA = document.getElementById("input_current_page_Peaks02")
+        if(inputNumberA){
+            inputNumberA.value = _page
         }
         
-    },[data,_items,_page])
+    },[data,_items,items,_page])
     return (
         <tbody>
+            <tr>
+                <td colSpan="7">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label>
+                                        Show in list:
+                                        <select value={items} onChange={(e) => {
+                                            set_items([])
+                                            setItems(parseInt(e.target.value))
+                                            
+                                        }}>
+                                            <option value="10">10</option>
+                                            <option value="50">50</option>
+                                            <option value={data.length}>ALL ({data.length})</option>
+                                        </select>
+                                    </label>
+                                </td>
+                                {
+                                    data.length === items
+                                        ? null
+                                        : <td>
+                                            <label htmlFor="input_current_page_tfbs02">
+                                                Current Page:
+                                            </label>
+                                            <input type="number"
+                                                id="input_current_page_tfbs02"
+                                                min="1"
+                                                max={_totalP}
+                                                name="currentPage"
+                                                onChange={(e) => {
+                                                    set_items([]); set_page(e.target.value);
+                                                }}
+                                            />
+                                        </td>
+                                }
+                                {
+                                    data.length === items
+                                        ? null
+                                        : <td>
+                                            <button className="aBase"
+                                                onClick={() => { set_items([]); set_page(1) }}
+                                            >First page</button>
+                                        </td>
+                                }
+                                {
+                                    data.length === items
+                                        ? null
+                                        : <td>
+                                            <button className="aBase"
+                                                onClick={() => { set_items([]); set_page(_totalP); }}
+                                            >Last page</button>
+                                        </td>
+                                }
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
             {
                 _items.map(item=>{
                     const cloGenes = item?.closestGenes
@@ -128,67 +188,63 @@ function DisplayPeaks({data = []}) {
                 })
             }
             <tr>
-                <td colSpan="7" >
-                    <input style={{width:"100%"}} type="range" name="pagSelection"
-                        id="input_range_current_page_Peaks01"
-                        min="0" max={_totalP} 
-                        onChange={(e) =>{
-                            set_items([]);set_page(e.target.value)
-                        }}
-                    />
-                </td>
-            </tr>
-            <tr>
                 <td colSpan="7">
                     <table>
                         <tbody>
                             <tr>
                                 <td>
-                                    <button className="aBase" 
-                                        onClick={() => { set_items([]);set_page(0) }}
-                                    >First page</button>
-                                </td>
-                                <td>
-                                    <button className="aBase"
-                                        onClick={() => { 
-                                            if (_page>0) {
-                                                set_items([]);set_page(parseInt(_page)-1);
-                                            }
-                                         }}
-                                    >Prev page</button>
-                                </td>
-                                <td>
-                                    <label htmlFor="input_current_page_Peaks01">
-                                        Current Page 
+                                    <label>
+                                        Show in list:
+                                        <select value={items} onChange={(e) => {
+                                            set_items([])
+                                            setItems(parseInt(e.target.value))
+                                        }}>
+                                            <option value="10">10</option>
+                                            <option value="50">50</option>
+                                            <option value={data.length}>ALL ({data.length})</option>
+                                        </select>
                                     </label>
-                                    <input type="number" 
-                                    id="input_current_page_Peaks01"
-                                    min="0"
-                                    max={_totalP}
-                                    name="currentPage" 
-                                    onChange={(e) =>{
-                                        set_items([]);set_page(e.target.value);
-                                    }}
-                                    />
                                 </td>
-                                <td>
-                                    <button className="aBase"
-                                        onClick={() => { 
-                                            if (_page<_totalP) {
-                                                set_items([]);set_page(parseInt(_page)+1);
-                                            }
-                                         }}
-                                    >Next page</button>
-                                </td>
-                                <td>
-                                    <button className="aBase" 
-                                        onClick={() => { set_items([]);set_page(_totalP); }}
-                                    >Last page</button>
-                                </td>
+                                {
+                                    data.length === items
+                                        ? null
+                                        : <td>
+                                            <label htmlFor="input_current_page_tfbs01">
+                                                Current Page:
+                                            </label>
+                                            <input type="number"
+                                                id="input_current_page_tfbs01"
+                                                min="1"
+                                                max={_totalP}
+                                                name="currentPage"
+                                                onChange={(e) => {
+                                                    set_items([]); set_page(e.target.value);
+                                                }}
+                                            />
+                                        </td>
+                                }
+                                {
+                                    data.length === items
+                                        ? null
+                                        : <td>
+                                            <button className="aBase"
+                                                onClick={() => { set_items([]); set_page(1) }}
+                                            >First page</button>
+                                        </td>
+                                }
+                                {
+                                    data.length === items
+                                        ? null
+                                        : <td>
+                                            <button className="aBase"
+                                                onClick={() => { set_items([]); set_page(_totalP); }}
+                                            >Last page</button>
+                                        </td>
+                                }
                             </tr>
                         </tbody>
                     </table>
-                </td>            
+                </td>
             </tr>
         </tbody>
     )

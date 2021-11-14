@@ -12,39 +12,33 @@ export default function NormData({ id_dataset }) {
     }
     return (
         <div>
-            <div className="dropdown">
-                <label htmlFor="buttonSelect_norm">Select data view</label>
-                <br />
-                <button id="buttonSelect_norm">{_select}</button>
-                <div className="dropdown-content">
-                    <button
-                        onClick={() => { set_select("TFBS") }}
-                    >TFBS</button>
-                    <button
-                        onClick={() => { set_select("PEAKS") }}
-                    >PEAKS</button>
-                    <button
-                        onClick={() => { set_select("TFBS and PEAKS") }}
-                    >ALL</button>
-                </div>
-            </div>
+            <label>
+                Select data view: 
+                <select onChange={(e) => {
+                    set_select(e.target.value)
+                }}>
+                    <option value="TFBS">TFBS</option>
+                    <option value="PEAKS">PEAKS</option>
+                    <option value="TFBS and PEAKS" >TFBS and PEAKS</option>
+                </select>
+            </label>
             {
                 _select === "TFBS"
-                ?<TFBS id_dataset={id_dataset} />
-                :null
+                    ? <TFBS id_dataset={id_dataset} />
+                    : null
             }
             {
                 _select === "PEAKS"
-                ?<Peaks id_dataset={id_dataset} />
-                :null
+                    ? <Peaks id_dataset={id_dataset} />
+                    : null
             }
             {
                 _select === "TFBS and PEAKS"
-                ?<div>
-                    <TFBS id_dataset={id_dataset} />
-                    <Peaks id_dataset={id_dataset} />
-                </div>
-                :null
+                    ? <div>
+                        <TFBS id_dataset={id_dataset} />
+                        <Peaks id_dataset={id_dataset} />
+                    </div>
+                    : null
             }
         </div>
     )
