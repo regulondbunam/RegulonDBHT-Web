@@ -125,9 +125,6 @@ function Body({ data }) {
                 <GrowthConditions growthCondition={data?.growthConditions} />
             </div>
             <Tabs id_dataset={data?._id} data={data} />
-            <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_author_data?.title }} />
-            <p dangerouslySetInnerHTML={{ __html: section?.dataset_author_data?.description }} />
-
             <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.title }} />
             <p dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.description }} />
             <Viewer />

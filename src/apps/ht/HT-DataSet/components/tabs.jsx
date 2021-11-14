@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Authors from '../../HT-Authors/authors'
 import NormData from '../../HT-NormalizedData/normData'
 import Summary from './summary'
 import Style from './tabs.module.css'
@@ -45,6 +46,7 @@ export default function Tabs({ id_dataset, data }) {
                 _openTab === 1
                     ? <div className={Style.tabcontent}>
                         <h3>Author Report</h3>
+                        <Authors id_dataset={id_dataset} />
                     </div>
                     : null
             }
