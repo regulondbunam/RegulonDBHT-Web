@@ -73,8 +73,9 @@ export default function BasicInfo({ data }) {
                                         Control ID:
                                     </p>
                                     {
-                                        controlId.map((e, i) => {
-                                            return <Link to={`#`} style={{marginRight: "10px"}} key={`${i}-${e}`} >{e}</Link>
+                                        controlId.map((link, i) => {
+                                            return  <a style={{ marginRight: "5px"}}key={`${i}-${link}`} href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${link}`}
+                                            target="_blank" rel="noreferrer">{link}</a>
                                         })
                                     }
                                 </td>
@@ -89,8 +90,9 @@ export default function BasicInfo({ data }) {
                                         Experimental ID:
                                     </p>
                                     {
-                                        id.map((e, i) => {
-                                            return <Link to={`#`} style={{marginRight: "10px"}} key={`${i}-${e}`} >{e}</Link>
+                                        id.map((link, i) => {
+                                            return  <a style={{ marginRight: "5px"}}key={`${i}-${link}`} href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${link}`}
+                                            target="_blank" rel="noreferrer">{link}</a>
                                         })
                                     }
                                 </td>
