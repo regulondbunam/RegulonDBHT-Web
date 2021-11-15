@@ -101,7 +101,7 @@ export const Related = () => {
                                                     >
                                                         <img src="/media/img/ncbi_logo.gif" height="20px" alt="NCBI logo" />
                                                     </button>
-                                                    NCBI GEO links
+                                                    NCBI GEO links in this page
                                                 </th>
                                             </tr>
                                         </thead>

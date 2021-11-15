@@ -50,8 +50,8 @@ function Headtfbs({ tfbs }) {
                 <th>START</th>
                 <th>SEQUENCE</th>
                 <th>END</th>
-                <th>STRAND</th>
                 <th>SCORE</th>
+                <th>STRAND</th>
                 <th>Closest Genes</th>
             </tr>
         </thead>
