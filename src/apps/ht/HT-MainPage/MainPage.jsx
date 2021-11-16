@@ -18,8 +18,6 @@ class MainPage extends React.Component {
         return (
             <article>
                 <br />
-                <div dangerouslySetInnerHTML={{__html: md.render(conf?.descripcion)}} />
-                <br />
                 <div className={Style.gridContainer}>
                     {
                         conf?.collection.map((panel) => {
@@ -52,6 +50,8 @@ class MainPage extends React.Component {
                         })
                     }
                 </div>
+                <br />
+                <div dangerouslySetInnerHTML={{__html: md.render(conf?.descripcion)}} />
             </article>
         );
     }

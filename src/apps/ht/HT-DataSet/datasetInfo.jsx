@@ -128,6 +128,20 @@ function Body({ data }) {
             <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.title }} />
             <p dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.description }} />
             <Viewer />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
         </div>
     )
 

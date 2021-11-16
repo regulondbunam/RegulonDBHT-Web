@@ -60,6 +60,7 @@ function DisplayPeaks({data = []}) {
     const [items, setItems] = useState(10)
     const _totalP = parseInt(data.length/10,10)
     const [_items, set_items] = useState([])
+    console.log(data)
     useEffect(() => {
         let itemSelection = []
         for(let i = 0; i < items; i++) {

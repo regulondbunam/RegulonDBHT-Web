@@ -46,12 +46,11 @@ function Headtfbs({ tfbs }) {
                 </th>
             </tr>
             <tr>
-                <th>NAME</th>
                 <th>START</th>
-                <th>SEQUENCE</th>
                 <th>END</th>
                 <th>SCORE</th>
                 <th>STRAND</th>
+                <th>SEQUENCE</th>
                 <th>Closest Genes</th>
             </tr>
         </thead>
@@ -63,7 +62,7 @@ function DisplayTFBS({ data = [] }) {
     const [_items, set_items] = useState([])
     const [items, setItems] = useState(10)
     const _totalP = parseInt(data.length / items, 10) - 1
-
+    console.log(data)
 
     useEffect(() => {
         //
@@ -161,22 +160,8 @@ function DisplayTFBS({ data = [] }) {
                     }
                     return <tr style={{ height: "25px" }} key={`tfbs_${item?._id}`}>
                         <td>
-                            {item?.name
-                                ? item?.name
-                                : null
-                            }
-                        </td>
-                        <td>
                             {item?.chrLeftPosition
                                 ? item?.chrLeftPosition
-                                : null
-                            }
-                        </td>
-                        <td>
-                            {item?.sequence
-                                ? <MKSequenceClass
-                                    id_drawPlace={`${item?.chrLeftPosition}_${item?.chrRightPosition}_${item?.sequence}_${toStrand(item?.strand)}`}
-                                    sequence={item?.sequence} />
                                 : null
                             }
                         </td>
@@ -197,6 +182,14 @@ function DisplayTFBS({ data = [] }) {
                                 item?.strand
                                     ? item?.strand
                                     : ""
+                            }
+                        </td>
+                        <td>
+                            {item?.sequence
+                                ? <MKSequenceClass
+                                    id_drawPlace={`${item?.chrLeftPosition}_${item?.chrRightPosition}_${item?.sequence}_${toStrand(item?.strand)}`}
+                                    sequence={item?.sequence} />
+                                : null
                             }
                         </td>
                         <td>

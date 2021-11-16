@@ -9,7 +9,7 @@
             "collection": [{
                     "id": "DS-001",
                     "url": "HT_TFB",
-                    "title": "TFBinging",
+                    "title": "TFBinding",
                     "description": "descripcion",
                     "enable": true
                 },
@@ -17,6 +17,13 @@
                     "id": "DS-002",
                     "url": "HT-TUs",
                     "title": "Transcription Units",
+                    "description": "descripcion",
+                    "enable": true
+                },
+                {
+                    "id": "DS-002",
+                    "url": "HT-TTs",
+                    "title": "Transcription Terminations",
                     "description": "descripcion",
                     "enable": true
                 },
