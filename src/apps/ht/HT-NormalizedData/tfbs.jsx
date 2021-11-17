@@ -62,7 +62,7 @@ function DisplayTFBS({ data = [] }) {
     const [_items, set_items] = useState([])
     const [items, setItems] = useState(10)
     const _totalP = parseInt(data.length / items, 10) - 1
-    console.log(data)
+    //console.log(data)
 
     useEffect(() => {
         //
@@ -89,66 +89,6 @@ function DisplayTFBS({ data = [] }) {
     }, [data, _items, items, _page])
     return (
         <tbody id="tbody">
-            <tr>
-                <td colSpan="7">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <label>
-                                        Show in list:
-                                        <select value={items} onChange={(e) => {
-                                            set_items([])
-                                            setItems(parseInt(e.target.value))
-                                            
-                                        }}>
-                                            <option value="10">10</option>
-                                            <option value="50">50</option>
-                                            <option value={data.length}>ALL ({data.length})</option>
-                                        </select>
-                                    </label>
-                                </td>
-                                {
-                                    data.length === items
-                                        ? null
-                                        : <td>
-                                            <label htmlFor="input_current_page_tfbs02">
-                                                Current Page:
-                                            </label>
-                                            <input type="number"
-                                                id="input_current_page_tfbs02"
-                                                min="1"
-                                                max={_totalP}
-                                                name="currentPage"
-                                                onChange={(e) => {
-                                                    set_items([]); set_page(e.target.value);
-                                                }}
-                                            />
-                                        </td>
-                                }
-                                {
-                                    data.length === items
-                                        ? null
-                                        : <td>
-                                            <button className="aBase"
-                                                onClick={() => { set_items([]); set_page(1) }}
-                                            >First page</button>
-                                        </td>
-                                }
-                                {
-                                    data.length === items
-                                        ? null
-                                        : <td>
-                                            <button className="aBase"
-                                                onClick={() => { set_items([]); set_page(_totalP); }}
-                                            >Last page</button>
-                                        </td>
-                                }
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
             {
                 _items.map(item => {
                     const cloGenes = item?.closestGenes
@@ -194,7 +134,13 @@ function DisplayTFBS({ data = [] }) {
                         </td>
                         <td>
                             {item?.closestGenes
-                                ? genes
+                                ? <div>
+                                    {
+                                        cloGenes.map(gen=>{
+                                            return <a key={gen._id} style={{marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/gene?term=${gen._id}&organism=ECK12&format=jsp&type=gene`} target="_blank" rel="noreferrer">{gen.name}</a>
+                                        })
+                                    }
+                                </div>
                                 : null
                             }
                         </td>

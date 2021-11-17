@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Cover } from "../../../components/ui-components/ui_components";
 
 
 export const Related = () => {
@@ -50,7 +49,7 @@ export const Related = () => {
         }
     }
 
-    console.log(_linkedDataset)
+    //console.log(_linkedDataset)
     return (
         <div id={id} style={{ position: "fixed", width: "100%" }}>
             <table className="table_content" >
@@ -76,7 +75,7 @@ export const Related = () => {
                                     }
                                 }}
                             >
-                                <i style={{ fontSize: "22px" }} class='bx bx-printer' ></i>
+                                <i style={{ fontSize: "22px" }} className='bx bx-printer' ></i>
                             </button>
                             Print this page
                         </td>
