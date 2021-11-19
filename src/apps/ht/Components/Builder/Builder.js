@@ -1,272 +1,88 @@
 import React, { useState } from 'react';
-import Autocomplete from './autocomplete';
+// import Autocomplete from './autocomplete';
 import './Builder.css'
 import DropDown from 'D:/Proyectos/RegulonDB-Web-HT-Polanco/src/components/ui-components/input/buttons/drop_down.jsx'
 
 
 export default function Builder() {
-    const [_keyword, set_keyword] = useState()
-    const arreglo = ["DatasetID", "ControlID", "Authors", "PMID", "Doi", "Title", "Date", "Pmcid", "Experiment", "ContrD", "Otro"]
+    //const [_keyword, set_keyword] = useState()
     const [query, setQuery] = useState("");
+    const Metadata = [
+        "ID",//DatasetID
+        "PMID", "Doi", "Authors", "Title", "Date", "PmcId", //Publication
+        "ID - ObjectTested", "Name", "Synonymus", "Summary", "Active Conformations", "ID - Gene", "Name - Gene", "Distance to - Gene", "ID - Esternal Cros References", "Name - Esternal Cros References", "Object ID - Esternal Cros References", "URL - Esternal Cros References",//ObjecTested
+        "Source ID", "Source Name", "Plataform ID", "Plataform Title", "Title - Source Serie", "Strategy", "Method",//Source Serie
+        "Experiment ID", "Control ID - Sample", "Tile - Sample",//Sample
+        "Control ID - Linked Dataset", "Experiment ID - Linked Dataset", "Dataset Type - Linked DataSet",//Linked Dataset
+        "Reference Genome", //Referenced genome
+        "Dataset Type", //Datset Type
+        "Temporal ID", //Temporal Datset ID
+        "Date - Rekease data control", "version",//Release Dat Control  
+    ]
 
+    const metadataIdentificada = [
+        //DatasetID
+        { "value": "ID", "query": "_id" },
+        //Publication
+        { "value": "PMID", "query": "publication.pmid" },
+        { "value": "Doi", "query": "publication.doi" },
+        { "value": "Authors", "query": "publication.authors" },
+        { "value": "Title", "query": "publication.title" },
+        { "value": "Date", "query": "publication.date" },
+        { "value": "PmcId", "query": "publication.pmcid" },
+        //ObjectTested
+        { "value": "ID - ObjectTested", "query": "objectTested._id" },
+        { "value": "Name", "query": "objectTested.name" },
+        { "value": "Synonymus", "query": "objectTested.synonymus" },
+        { "value": "Summary", "query": "objectTested.summary" },
+        { "value": "Active Conformations", "query": "objectTested.activeConformations" },
+        { "value": "ID - Gene", "query": "objectTested.gene._id" },
+        { "value": "Name - Gene", "query": "objectTested.gene.Name" },
+        { "value": "Distance to - Gene", "query": "objectTested.gene.distanceTo" },
+        { "value": "ID - Esternal Cros References", "query": "objectTested.externalCrosReferenced.externalCrosReferencedId" },
+        { "value": "Name - Esternal Cros References", "query": "objectTested.externalCrosReferenced.externalCrosReferencedName" },
+        { "value": "Object ID - Esternal Cros References", "query": "objectTested.externalCrosReferenced.objectId" },
+        { "value": "URL - Esternal Cros References", "query": "objectTested.externalCrosReferenced.url" },
+        //Source Serie
+        { "value": "Source ID", "query": "sourceSerie.sourceID" },
+        { "value": "Source Name", "query": "sourceSerie.sourceName" },
+        { "value": "Plataform ID", "query": "sourceSerie.plataformID" },
+        { "value": "Plataform Title", "query": "sourceSerie.plataformTitle" },
+        { "value": "Title - Source Serie", "query": "sourceSerie.title" },
+        { "value": "Strategy", "query": "sourceSerie.strategy" },
+        { "value": "Method", "query": "sourceSerie.method" },
+        //Sample
+        { "value": "Experiment ID", "query": "sample.experimentId" },
+        { "value": "Control ID - Sample", "query": "sample.controlId" },
+        { "value": "Tile - Sample", "query": "sample.title" },
+        //Linked Dataset
+        { "value": "Control ID - Linked Dataset", "query": "linkedDatset.controlId" },
+        { "value": "Experiment ID - Linked Dataset", "query": "linkedDatset.ExperimentId" },
+        { "value": "Dataset Type - Linked Dataset", "query": "linkedDatset.datasetType" },
+        //Referenced Genome
+        { "value": "Reference Genome", "query": "referenceGenome" },
+        //Dataset type
+        { "value": "Dataset Type", "query": "datasetType" },
+        //Temporal Dataset ID
+        { "value": "Temporal ID", "query": "temporalId" },
+        //Growth Conditions
+        { "value": "Growth Conditions", "query": "Entro en condiciones de crecimento" },
+        //Release Data Control
+        { "value": "Date - Rekease data control", "query": "releaseDataControl.date" },
+        { "value": "version", "query": "releaseDataControl.version" },
+
+    ]
 
     /*Obtiene el valor seleccionado en el boton DropDown y lo clasifica de acuerdo a la metadata para crear la pequela contulta que hara funcionar el componente "Autocompletar" */
-    function identificar(value) {
-        /*Convercion de valor a minusculas*/
-        let valorMin = value;
-        valorMin.toString();
-        valorMin = valorMin.toLowerCase();
-
-        /*Clasifica value de acuerdo a la metedata */
-        switch (valorMin) {
-            /*datasetId*/
-            case "datasetid":
-                {
-                    let queryM = `${valorMin}`;
-                    setQuery(queryM);
-                    return
-                }
-
-            /*Publication*/
-            case "pmid":
-            case "doi":
-            case "authors":
-            case "title":
-            case "date":
-            case "pmcid":
-                {
-                    let queryM = `publication.${valorMin}`;
-                    setQuery(queryM);
-                    return
-                }
-            /*objectTested*/
-            case "_id":
-            case "name":
-            case "synonyms":
-            case "summary":
-                {
-
-                    let queryM = `objectTested.${valorMin}`;
-                    setQuery(queryM);
-                    return
-                }
-            case "activeConformations":
-                {
-                    let queryM = `objectTested.activeConformations`;
-                    setQuery(queryM);
-                    return
-                }
-            case "objecttested - genes - _id":
-                {
-                    let queryM = `objectTested.genes._id`;
-                    setQuery(queryM);
-                    return
-                }
-            case "objecttested - genes - name":
-                {
-                    let queryM = `objectTested.genes.name`;
-                    setQuery(queryM);
-                    return
-                }
-            case "objecttested - genes - distanceto":
-                {
-                    let queryM = `objectTested.genes.distanceTo`;
-                    setQuery(queryM);
-                    return
-                }
-            case "externalcrossreferences - externalcrossreferenceid":
-                {
-                    let queryM = `objectTested.externalcrossreferences.externalCrossReferenceId`;
-                    setQuery(queryM);
-                    return
-                }
-            case "externalcrossreferences - externalCrossReferenceName":
-                {
-                    let queryM = `objectTested.externalcrossreferences.externalCrossReferenceName`;
-                    setQuery(queryM);
-                    return
-                }
-            case "externalcrossreferences - objectId":
-                {
-                    let queryM = `objectTested.externalcrossreferences.objectId`;
-                    setQuery(queryM);
-                    return
-                }
-            case "objectTested.externalcrossreferences.url":
-                {
-                    let queryM = `objectTested.externalcrossreferences.url`;
-                    setQuery(queryM);
-                    return
-                }
-
-            /*SourceSerie*/
-            case "sourceID":
-                {
-                    let queryM = `sourceSerie.sourceID`;
-                    setQuery(queryM);
-                    return
-                }
-            case "sourceName":
-                {
-                    let queryM = `sourceSerie.sourceName`;
-                    setQuery(queryM);
-                    return
-                }
-            case "platformID":
-                {
-                    let queryM = `sourceSerie.platformID`;
-                    setQuery(queryM);
-                    return
-                }
-            case "platformTitle":
-                {
-                    let queryM = `sourceSerie.platformTitle`;
-                    setQuery(queryM);
-                    return
-                }
-            case "title - SourceSerie":
-            case "strategy":
-            case "method":
-                {
-                    let queryM = `sourceSerie.${valorMin}`;
-                    setQuery(queryM);
-                    return
-                }
-
-            /*Sample*/
-            case "experimentid":
-                {
-                    let queryM = `sample.experimentid`;
-                    setQuery(queryM);
-                    return
-                }
-            case "controlid - sample":
-                {
-                    let queryM = `sample.controlId`;
-                    setQuery(queryM);
-                    return
-                }
-            case "title - sample":
-                {
-                    let queryM = `sample.title`;
-                    setQuery(queryM);
-                    return
-                }
-            /*linkedDataset*/
-            case "controlId":
-                {
-                    let queryM = `linkedDataset.controlId`;
-                    setQuery(queryM);
-                    return
-                }
-            case "experimentId":
-                {
-                    let queryM = `linkedDataset.experimentId`;
-                    setQuery(queryM);
-                    return
-                }
-            case "datasetType":
-                {
-                    let queryM = `linkedDataset.datasetType`;
-                    setQuery(queryM);
-                    return
-                }
-
-            /*referenceGenome*/
-            case "referencegenome":
-                {
-                    let queryM = `referenceGenome`;
-                    setQuery(queryM);
-                    return
-                }
-            /*datasetType*/
-            case "datasettype":
-                {
-                    let queryM = `datasetType`;
-                    setQuery(queryM);
-                    return
-                }
-            /*temporalDatasetID*/
-            case "temporaldatasetid":
-                {
-                    let queryM = `temporalDatasetID`;
-                    setQuery(queryM);
-                    return
-                }
-            /*growthConditions*/
-            case "organism":
-            case "medium":
-            case "aeration":
-            case "temperature":
-            case "ph":
-            case "pressure":
-                {
-                    let queryM = `growthConditions.${valorMin}`;
-                    setQuery(queryM);
-                    return
-                }
-            case "geneticbackground":
-                {
-                    let queryM = `growthConditions.geneticBackground`;
-                    setQuery(queryM);
-                    return
-                }
-            case "opticaldensity":
-                {
-                    let queryM = `growthConditions.opticalDensity`;
-                    setQuery(queryM);
-                    return
-                }
-            case "growthphase":
-                {
-                    let queryM = `growthConditions.growthPhase`;
-                    setQuery(queryM);
-                    return
-                }
-            case "growthrate":
-                {
-                    let queryM = `growthConditions.growthRate}`;
-                    setQuery(queryM);
-                    return
-                }
-            case "vesseltype":
-                {
-                    let queryM = `growthConditions.vesselType`;
-                    setQuery(queryM);
-                    return
-                }
-            case "aerationspeed":
-                {
-                    let queryM = `growthConditions.aerationSpeed`;
-                    setQuery(queryM);
-                    return
-                }
-
-
-            /*releaseDataControl*/
-            case "date - releasedatacontrol":
-                    {
-                        let queryM = `releaseDataControl.date`;
-                        setQuery(queryM);
-                        return
-                    }
-            case "version":
-                {
-                    let queryM = `releaseDataControl.${valorMin}`;
-                    setQuery(queryM);
-                    return
-                }
-            default: 
-            //no hagas nada
-        }
-
+    function identificar(Value) {
+        metadataIdentificada.map((value) => {
+            if (value.value === Value) {
+                setQuery(value.query)
+            }
+            return  query
+        })
     }
-
-    function imprimir() {
-        console.log(query);
-    }
-
-
+    
 
     return (
         <div>
@@ -274,14 +90,14 @@ export default function Builder() {
                 <h3 >Builder</h3>
                 <DropDown
                     label="All Fields"
-                    arrayOptions={arreglo}
+                    arrayOptions={Metadata}
                     parentCallBack={identificar}
                 />
-                <input id="builder_text" type="text" className="TextArea" onChange={() => {
-                    imprimir();
+                <input id="builder_text" type="text" className="TextArea" /* onChange={() => {
+                    // imprimir();
                     let keyword = document.getElementById("builder_text").value
                     set_keyword(keyword)
-                }} />
+                }} */ />
                 <button className="iconButton" ><i className='bx bx-plus-circle'></i></button>
                 <button >AND</button>
             </div>
@@ -291,11 +107,11 @@ export default function Builder() {
             <div className="SearchButton">
                 <button className="accent">Search</button>
             </div>
-            <Autocomplete keyword={_keyword} location={query} />
+           {/*  <Autocomplete keyword={_keyword} location={query} /> */}
 
         </div>
     );
 }
 
 
-//
+//    

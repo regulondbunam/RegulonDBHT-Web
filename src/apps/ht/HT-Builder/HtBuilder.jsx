@@ -25,7 +25,7 @@ export default function HtBuilder() {
       });
       COVER.dispatchEvent(COVER_REACTION);
     }
-    console.log(_fields)
+    //console.log(_fields)
   }, [_state,_fields])
 
   return (
