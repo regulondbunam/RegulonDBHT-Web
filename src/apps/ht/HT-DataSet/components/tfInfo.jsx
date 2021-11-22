@@ -32,8 +32,8 @@ export default function TfInfo({ data }) {
             {
                 objTest?.genes
                     ? <p>Genes: {
-                        objTest.genes.map((gene,i) => {
-                            return <Link key={`${i}_gene_${gene._id}`} to={`#`}>{gene.name}</Link>
+                        objTest.genes.map((gen,i) => {
+                            return <a key={gen._id} style={{marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen.name}&organism=ECK12&type=All`} target="_blank" rel="noreferrer">{gen.name}</a>          
                         })
                     }</p>
                     : null

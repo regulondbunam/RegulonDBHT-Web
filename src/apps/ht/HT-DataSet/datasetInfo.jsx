@@ -95,7 +95,6 @@ function Body({ data }) {
                     ? null
                     : <h2>Error on ID</h2>
             }
-            <p dangerouslySetInnerHTML={{ __html: conf?.description }} />
             {
                 data?.sample?.title
                     ? <div>
