@@ -14,74 +14,73 @@ function query(ht_query) {
   {
       getDatasetsFromSearch(advancedSearch: "${ht_query}") {
         _id
-        publication {
-          pmid
-          doi
-          authors
-          title
-          date
-          pmcid
-        }
-        objectTested {
-          _id
-          name
-          synonyms
-          genes {
+          publication {
+            pmid
+            doi
+            authors
+            title
+            date
+            pmcid
+          }
+          objectTested {
             _id
             name
-            distanceTo
+            synonyms
+            genes {
+              _id
+              name
+            }
+            note
+            activeConformations
+            externalCrossReferences {
+              externalCrossReferenceId
+              externalCrossReferenceName
+              objectId
+              url
+            }
           }
-          summary
-          activeConformations
-          externalCrossReferences {
-            externalCrossReferenceId
-            externalCrossReferenceName
-            objectId
-            url
+          sourceSerie {
+            sourceId
+            sourceName
+            title
+            platformId
+            platformTitle
+            strategy
+            method
           }
-        }
-        sourceSerie {
-          sourceID
-          sourceName
-          title
-          platformID
-          platformTitle
-          strategy
-          method
-        }
-        sample {
-          experimentId
-          controlId
-          title
-        }
-        linkedDataset {
-          controlId
-          experimentId
+          sample {
+            experimentId
+            controlId
+            title
+          }
+          linkedDataset {
+            controlId
+            experimentId
+            datasetType
+          }
+          referenceGenome
           datasetType
-        }
-        referenceGenome
-        datasetType
-        temporalID
-        growthConditions {
-          organism
-          geneticBackground
-          medium
-          aeration
-          temperature
-          ph
-          pressure
-          opticalDensity
-          growthPhase
-          growthRate
-          vesselType
-          aerationSpeed
-        }
-        releaseDataControl {
-          date
-          version
+          temporalId
+          growthConditions {
+            organism
+            geneticBackground
+            medium
+            aeration
+            temperature
+            ph
+            pressure
+            opticalDensity
+            growthPhase
+            growthRate
+            vesselType
+            aerationSpeed
+          }
+          releaseDataControl {
+            date
+            version
+          }
         }
       }
-    }
       `
   }catch(error){
     console.log(error)

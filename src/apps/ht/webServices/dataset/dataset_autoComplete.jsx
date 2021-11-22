@@ -29,9 +29,8 @@ function query(keyWord) {
             genes {
               _id
               name
-              distanceTo
             }
-            summary
+            note
             activeConformations
             externalCrossReferences {
               externalCrossReferenceId
@@ -41,10 +40,10 @@ function query(keyWord) {
             }
           }
           sourceSerie {
-            sourceID
+            sourceId
             sourceName
             title
-            platformID
+            platformId
             platformTitle
             strategy
             method
@@ -61,7 +60,7 @@ function query(keyWord) {
           }
           referenceGenome
           datasetType
-          temporalID
+          temporalId
           growthConditions {
             organism
             geneticBackground

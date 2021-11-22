@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import Style from './basicInfo.module.css'
+import Sample from './basicInfo/sample';
 import PublicationInfo from './publicationInfo';
 
 export default function BasicInfo({ data }) {
@@ -49,10 +50,31 @@ export default function BasicInfo({ data }) {
                     <tr>
                         <th>
                             <p style={{ fontSize: "22px" }} className="p_accent">{data?.sample?.title}</p>
+                            <p style={{ fontSize: "14px" }} >Dataset Type: {data?.datasetType}</p>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
+                {
+                        data?.sample?.title
+                            ? <tr>
+                                <td>
+                                    <h3>Sample</h3>
+                                    <Sample sample={data?.sample}/>
+                                </td>
+                            </tr>
+                            : null
+                    }
+                    {
+                        data?.linkedDataset?.controlId
+                            ? <tr>
+                                <td>
+                                    <h3>Linked Dataset</h3>
+                                </td>
+                            </tr>
+                            : null
+                    }
+                   
                     <tr>
                         <td>
                             <div className={Style.gridContainer} >
@@ -68,13 +90,13 @@ export default function BasicInfo({ data }) {
                         data?.linkedDataset?.controlId
                             ? <tr>
                                 <td>
-                                    <p style={{ fontSize: "12px", float: "left", marginRight: "5px"}} className="p_accent">
+                                    <p style={{ fontSize: "12px", float: "left", marginRight: "5px" }} className="p_accent">
                                         Control ID:
                                     </p>
                                     {
                                         controlId.map((link, i) => {
-                                            return  <a style={{ marginRight: "5px"}}key={`${i}-${link}`} href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${link}`}
-                                            target="_blank" rel="noreferrer">{link}</a>
+                                            return <a style={{ marginRight: "5px" }} key={`${i}-${link}`} href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${link}`}
+                                                target="_blank" rel="noreferrer">{link}</a>
                                         })
                                     }
                                 </td>
@@ -85,13 +107,13 @@ export default function BasicInfo({ data }) {
                         data?.linkedDataset?.experimentId
                             ? <tr>
                                 <td>
-                                    <p style={{ fontSize: "12px", float: "left", marginRight: "5px"}} className="p_accent">
+                                    <p style={{ fontSize: "12px", float: "left", marginRight: "5px" }} className="p_accent">
                                         Experimental ID:
                                     </p>
                                     {
                                         id.map((link, i) => {
-                                            return  <a style={{ marginRight: "5px"}}key={`${i}-${link}`} href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${link}`}
-                                            target="_blank" rel="noreferrer">{link}</a>
+                                            return <a style={{ marginRight: "5px" }} key={`${i}-${link}`} href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${link}`}
+                                                target="_blank" rel="noreferrer">{link}</a>
                                         })
                                     }
                                 </td>
