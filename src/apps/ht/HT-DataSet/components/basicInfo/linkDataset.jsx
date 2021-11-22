@@ -1,16 +1,16 @@
 import React from 'react'
 
-export default function Sample({ sample }) {
-    const controlId = sample?.controlId;
-    const experimentId = sample?.experimentId;
-    if (!sample) {
+export default function LinkedDataset({ linkedDataset }) {
+    const controlId = linkedDataset?.controlId;
+    const experimentId = linkedDataset?.experimentId;
+    if(!linkedDataset){
         return null
     }
     return (
-        <table className="table_auto" >
+        <table className="table_auto" style={{borderLeft: '1px solid #72a7c7'}} >
             <thead>
                 <tr>
-                    <th colSpan="2" style={{borderBottom: '1px solid #72a7c7'}} >Sample</th>
+                    <th colSpan="2" style={{borderBottom: '1px solid #72a7c7'}} >Linked</th>
                 </tr>
             </thead>
             <tbody>
