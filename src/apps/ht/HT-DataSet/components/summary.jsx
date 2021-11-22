@@ -3,7 +3,8 @@ import React from 'react'
 export default function Summary({data}) {
     const sum = dataExample?.summary
     return (
-        <div>
+        <div style={{display: "none"}} >
+            <h3>Summary</h3>
             <table className="table_content">
                 <thead>
                     <tr>
@@ -11,10 +12,10 @@ export default function Summary({data}) {
                             Total of
                         </th>
                         <th>
-                            Dataset
+                            Dataset (A)
                         </th>
                         <th>
-                            RegulonDB
+                            RegulonDB (B)
                         </th>
                         <th>
                             A ∩ B
@@ -161,7 +162,7 @@ const dataExample = {
         "totalOfPeaks": {
             inDataset: "###",
             inRDBClassic: "###",
-            sharedItems: "###",
+            sharedItems: "---",
             notInRDB: "###",
             notInDataset: "###",
         },

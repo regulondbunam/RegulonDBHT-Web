@@ -35,7 +35,7 @@ export default function Tabs({ id_dataset, data }) {
             {
                 _openTab === 0
                     ? <div className={Style.tabcontent}>
-                        <h3>Sumary</h3>
+                        
                         <Summary data={data} />
                         <h3>Data</h3>
                         <NormData id_dataset={id_dataset} />

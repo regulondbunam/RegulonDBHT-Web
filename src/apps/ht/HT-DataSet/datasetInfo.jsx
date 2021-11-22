@@ -70,7 +70,7 @@ export default function DatasetInfo({ id_dataset }) {
 
 function Body({ data }) {
     const section = conf?.sections
-    //console.log(data)
+    console.log(data)
 
     useEffect(() => {
         const RELATED = document.getElementById("related_ht")
