@@ -137,7 +137,7 @@ function DisplayTFBS({ data = [] }) {
                                 ? <div>
                                     {
                                         cloGenes.map(gen=>{
-                                            return <a key={gen._id} style={{marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/gene?term=${gen._id}&organism=ECK12&format=jsp&type=gene`} target="_blank" rel="noreferrer">{gen.name}</a>
+                                        return <a key={gen._id} style={{marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gen.name}</a>
                                         })
                                     }
                                 </div>

@@ -43,12 +43,12 @@ function query(id_dataset) {
             strand
             sequence
           }
-          name
+          nameCollection
           score
           strand
           sequence
           datasetIds
-          temporalID
+          temporalId
         }
       }
       

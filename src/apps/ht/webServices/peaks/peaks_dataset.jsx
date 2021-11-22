@@ -26,7 +26,7 @@ function query(id_dataset) {
         score
         siteIds
         datasetIds
-        temporalID
+        temporalId
       }
     }
     `
