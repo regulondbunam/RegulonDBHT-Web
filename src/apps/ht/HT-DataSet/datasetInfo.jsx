@@ -78,10 +78,7 @@ function Body({ data }) {
             const REL_REACTION = new CustomEvent('upR', {
                 bubbles: true,
                 detail: {
-                    linkedDataset: data?.linkedDataset,
-                    pmid: data?.publication?.pmid,
-                    doi: data?.publication?.doi,
-                    externalLinks: data?.objectTested?.externalCrossReferences
+                    Dataset: data
                 }
             });
             RELATED.dispatchEvent(REL_REACTION);

@@ -92,12 +92,6 @@ function DisplayTFBS({ data = [] }) {
             {
                 _items.map(item => {
                     const cloGenes = item?.closestGenes
-                    let genes = ""
-                    if (cloGenes) {
-                        genes = cloGenes.map(gene => {
-                            return gene?.name
-                        }).join(", ")
-                    }
                     return <tr style={{ height: "25px" }} key={`tfbs_${item?._id}`}>
                         <td>
                             {item?.chrLeftPosition
