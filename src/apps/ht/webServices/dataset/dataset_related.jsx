@@ -21,7 +21,7 @@ function queryC(linked_control_ids = []) {
     let search = linked_control_ids.map((id) => {
         return `${id}[linkedDataset.controlId]`
     }).join(" OR ")
-    console.log(search)
+    //console.log(search)
     return gql`
     {
         getDatasetsFromSearch(advancedSearch: "${search}") {
@@ -110,5 +110,49 @@ export const GetRelatedDatasetByExperimentalId = ({
         }
 
     }, [loading, error, status, data, resoultsData, linked_experimental_ids]);
+    return (<></>);
+}
+
+function queryS(sourceId) {
+    return gql`
+    {
+        getDatasetsFromSearch(advancedSearch: "${sourceId}[sourceSerie.sourceId]") {
+          _id
+          sample {
+            title
+          }
+        }
+      }`
+}
+
+export const GetRelatedDatasetBySource = ({
+    sourceId,
+    status = () => { },
+    resoultsData = () => { },
+}) => {
+    const { data, loading, error } = useQuery(queryS(sourceId))
+    useEffect(() => {
+        if (loading) {
+            status('loading')
+        }
+        if (data) {
+            try {
+                if (data?.getDatasetsFromSearch.length > 1) {
+                    status('done')
+                } else {
+                    status("no_found")
+                }
+                resoultsData(data?.getDatasetsFromSearch)
+            } catch (error) {
+                status('error')
+                console.error(error)
+            }
+        }
+        if (error) {
+            status('error')
+            console.error(error)
+        }
+
+    }, [loading, error, status, data, resoultsData, sourceId]);
     return (<></>);
 }

@@ -8,29 +8,21 @@ export default function TFBS({ id_dataset }) {
     const [_state, set_state] = useState()
 
     //console.log(_data)
+    if (_data) {
+        return (
+            <table className="table_content"  >
+                <Headtfbs tfbs={_data[0]} />
+                <DisplayTFBS data={_data} />
+            </table>
+        )
+    }
     return (
         <div>
-            {
-                _state !== "done"
-                    ? <GetTFBS id_dataset={id_dataset}
+            <GetTFBS id_dataset={id_dataset}
                         resoultsData={(data) => { set_data(data); }}
                         status={(state) => { set_state(state) }}
                     />
-                    : null
-            }
-            {
-                _state === "loading"
-                    ? <SpinnerCircle />
-                    : null
-            }
-            {
-                !_data
-                    ? null
-                    : <table className="table_content"  >
-                        <Headtfbs tfbs={_data[0]} />
-                        <DisplayTFBS data={_data} />
-                    </table>
-            }
+            <SpinnerCircle />
         </div>
     )
 }
@@ -76,7 +68,7 @@ function DisplayTFBS({ data = [] }) {
         }
         if (_items.length === 0) {
             set_items(itemSelection)
-           // load(1)
+            // load(1)
         }
         let inputNumber = document.getElementById("input_current_page_tfbs01")
         if (inputNumber) {
@@ -130,8 +122,8 @@ function DisplayTFBS({ data = [] }) {
                             {item?.closestGenes
                                 ? <div>
                                     {
-                                        cloGenes.map(gen=>{
-                                        return <a key={gen._id} style={{marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gen.name}</a>
+                                        cloGenes.map(gen => {
+                                            return <a key={gen._id} style={{ marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gen.name}</a>
                                         })
                                     }
                                 </div>

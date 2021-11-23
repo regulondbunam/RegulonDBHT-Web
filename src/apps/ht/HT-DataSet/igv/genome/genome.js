@@ -6,7 +6,7 @@ export const genomaE = {
   "order": 1000000,
   "tracks": [
     {
-      "name": "DS00020_pikes",
+      "name": "peaks",
       "url": "/media/raw/DS00020_peaks.bed",
       "displayMode": "EXPANDED",
       "nameField": "gene",

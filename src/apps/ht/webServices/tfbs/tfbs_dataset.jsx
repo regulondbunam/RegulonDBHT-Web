@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 //import { Person } from "schema-dts";
 //import { helmetJsonLdProp } from "react-schemaorg";
 //import { Helmet } from 'react-helmet-async';
@@ -60,13 +60,16 @@ const GetTFBS = ({
     status = () => { },
     resoultsData = () => { },
 }) => {
+    const [_c, set_c] = useState(false)
     const { data, loading, error } = useQuery(query(id_dataset))
+    //console.log(data, loading, error)
     useEffect(() => {
         if (loading) {
             status('loading')
         }
-        if (data) {
+        if (data && !_c) {
             try {
+              set_c(true)
                 resoultsData(data?.getAllTFBindingOfDataset)
                 status('done')
             } catch (error) {
@@ -79,7 +82,7 @@ const GetTFBS = ({
             console.error(error)
         }
 
-    }, [loading, error, status, data, resoultsData, id_dataset]);
+    }, [loading, error, status, data, resoultsData, id_dataset, _c, set_c]);
     return (<></>);
 }
 

@@ -10,7 +10,7 @@ export default function Sample({ sample }) {
         <table className="table_auto" >
             <thead>
                 <tr>
-                    <th colSpan="2" style={{borderBottom: '1px solid #72a7c7'}} >Sample</th>
+                    <th colSpan="2" style={{borderBottom: '1px solid #72a7c7'}} >ChIP-Seq Dataset</th>
                 </tr>
             </thead>
             <tbody>

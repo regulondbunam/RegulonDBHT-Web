@@ -18,15 +18,16 @@ export const Related = () => {
             }, false);
         }
     }, [set_dataset])
-    let dataset_linked_byControlId
-    let dataset_linked_byExperimentalId
-
+    // let dataset_linked_byControlId
+    // let dataset_linked_byExperimentalId
+    let source = undefined;
     if (_dataset) {
-        const linkedDataset = _dataset?.linkedDataset
-        if(linkedDataset) {
+        //const linkedDataset = _dataset?.linkedDataset
+        source = _dataset?.sourceSerie?.sourceId
+        /*if(linkedDataset) {
             dataset_linked_byControlId = linkedDataset?.controlId
             dataset_linked_byExperimentalId = linkedDataset?.experimentId
-        }
+        }*/
     }
 
     //console.log(_linkedDataset)
@@ -60,11 +61,11 @@ export const Related = () => {
                             Print this page
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="source_related" >
                         <td>
                             {
-                                dataset_linked_byControlId
-                                    ? <DatasetLinkedByControlId linked_control_ids={dataset_linked_byControlId} />
+                                source
+                                    ? <DatasetLinkedByControlId sourceId={source} />
                                     : null
                             }
                         </td>

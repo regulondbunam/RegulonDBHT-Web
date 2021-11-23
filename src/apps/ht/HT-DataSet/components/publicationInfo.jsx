@@ -23,14 +23,12 @@ export default function PublicationInfo({publication}) {
 }
 */
     return (
-        <div style={{marginLeft: "2%"}}>
-            <p style={{ fontSize: "12px", float: "left", marginRight: "5px" }} className="p_accent">
-            PMID:
-            </p><Link to="#" >{publication?.pmid}</Link>
+        <div >
+            <p className="p_accent" style={{fontSize: "14px"}} >Publication</p>
             <div style={{marginLeft: "5%"}}>
                 {
                     publication?.title
-                    ?<p className="p_accent" >{publication?.title}</p>
+                    ?<a href={`https://pubmed.ncbi.nlm.nih.gov/${publication?.pmid}/`} className="p_accent" style={{ fontSize: "14px"}} target="_blank" rel="noreferrer">{publication?.title}</a>
                     :null
                 }
                 {
@@ -44,12 +42,17 @@ export default function PublicationInfo({publication}) {
                 }
                 {
                     publication?.pmcid
-                    ?<p>PMCID:{publication?.pmcid}</p>
+                    ?<p style={{ float: "left", marginRight: "5px" }}>PMID:{publication?.pmid}</p>
+                    :null
+                }
+                {
+                    publication?.pmcid
+                    ?<p style={{ float: "left", marginRight: "5px" }}>PMCID:{publication?.pmcid}</p>
                     :null
                 }
                 {
                     publication?.doi
-                    ?<p>DOI: <Link to="#">{publication?.doi}</Link></p>
+                    ?<p style={{ float: "left", marginRight: "5px" }} >DOI: <Link to="#">{publication?.doi}</Link></p>
                     :null
                 }
                 {

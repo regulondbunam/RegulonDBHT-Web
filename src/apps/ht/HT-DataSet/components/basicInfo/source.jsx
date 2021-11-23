@@ -19,11 +19,11 @@ export default function SourceSerie({ sourceSerie }) {
             "__typename": "SourceSerie"
         } */
         //inf.push({ title: "Platform", data: sourceSerie?.platformTitle });
-        inf.push({ title: "Platform ID", data: sourceSerie?.platformID });
-        inf.push({ title: "Source Serie", data: sourceSerie?.title });
-        inf.push({ title: "Source Name", data: sourceSerie?.sourceName });
-        inf.push({ title: "Source ID", data: sourceSerie?.sourceID });
-        inf.push({ title: "Strategy", data: sourceSerie?.strategy });
+        
+
+        inf.push({ title: "Serie id", data: sourceSerie?.sourceId });
+        // inf.push({ title: "Title", data: sourceSerie?.title });
+        // inf.push({ title: "Name", data: sourceSerie?.sourceName });
 
         return inf
     }, [sourceSerie])
@@ -34,12 +34,28 @@ export default function SourceSerie({ sourceSerie }) {
                     sourceSerie?.platformTitle
                         ? <tr>
                             <td>
-                                <p style={{ fontSize: "12px" }} className="p_accent">
-                                    Platform
-                                </p>
-                                <p>
-                                    {sourceSerie?.platformTitle}
-                                </p>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p style={{ fontSize: "12px" }} className="p_accent">
+                                                    Strategy
+                                                </p>
+                                                <p>
+                                                    {sourceSerie?.strategy}
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p style={{ fontSize: "12px" }} className="p_accent">
+                                                    Platform
+                                                </p>
+                                                <a href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${sourceSerie?.platformId}`} >
+                                                    {sourceSerie?.platformTitle}
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </td>
                         </tr>
                         : null
@@ -64,6 +80,18 @@ export default function SourceSerie({ sourceSerie }) {
 function BitInfo({ title, data }) {
     if (!data) {
         return null
+    }
+    if(title==="Serie id"){
+        return (
+            <div className={Style.gridItem}>
+                <p style={{ fontSize: "12px" }} className="p_accent">
+                    {title}
+                </p>
+                <a href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${data}`} target="_blank" rel="noreferrer">
+                    {data}
+                </a>
+            </div>
+        )
     }
     return (
         <div className={Style.gridItem}>

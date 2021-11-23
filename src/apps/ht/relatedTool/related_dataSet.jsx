@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { GetRelatedDatasetByControlId } from '../webServices/dataset/dataset_related'
+import { GetRelatedDatasetBySource} from '../webServices/dataset/dataset_related'
 
 
 export class DatasetLinkedByControlId extends React.Component {
@@ -25,14 +24,19 @@ export class DatasetLinkedByControlId extends React.Component {
             _data,
             _state
         } = this.state
-        console.log(_data)
-        return (
+        //console.log(_state)
 
+        if (_state === "no_found") {
+            let tr = document.getElementById("source_related")
+            tr.style.display = "none"
+            return null
+        }
+        return (
             <div>
                 {
                     _state !== "done"
-                        ? <GetRelatedDatasetByControlId
-                            linked_control_ids={this.props.linked_control_ids}
+                        ? <GetRelatedDatasetBySource
+                            sourceId={this.props.sourceId}
                             status={(state) => { this.setState({_state: state}) }}
                             resoultsData={(data) => {this.setState({_data: data}) }} />
                         : null
@@ -60,7 +64,7 @@ export class DatasetLinkedByControlId extends React.Component {
                                         >
                                            <i className='bx bx-glasses' ></i>
                                         </button>
-                                        Datasets related by ID CONTROL
+                                        Related dataset by serie
                                     </th>
                                 </tr>
                             </thead>
@@ -71,7 +75,7 @@ export class DatasetLinkedByControlId extends React.Component {
                                         return(
                                             <tr key={dt._id}>
                                                 <td>
-                                                    <Link to={`/s/dataset/${dt?._id}`} >{dt._id}</Link>
+                                                    <a href={`./${dt?._id}`} >{dt._id}</a>
                                                     <p>{dt?.sample?.title}</p>
                                                 </td>
                                             </tr>

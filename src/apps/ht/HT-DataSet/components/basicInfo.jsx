@@ -32,9 +32,7 @@ export default function BasicInfo({ data }) {
                                     ? <LinkedDataset linkedDataset={data?.linkedDataset} />
                                     : null
                             }
-                            <h3>Source</h3>
                             <SourceSerie sourceSerie={data?.sourceSerie} />
-                            <h3>Publication</h3>
                             <PublicationInfo publication={data?.publication} />
                         </td>
                     </tr>
