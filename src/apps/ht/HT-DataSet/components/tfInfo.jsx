@@ -47,8 +47,10 @@ export default function TfInfo({ data }) {
                 :null
             }
             {
-                objTest?.summary
-                ?<Note note={objTest?.summary} />
+                objTest?.note
+                ?<div><p>Summary</p>
+                    <Note note={objTest?.note} />
+                </div>
                 :null
             }
         </div>
