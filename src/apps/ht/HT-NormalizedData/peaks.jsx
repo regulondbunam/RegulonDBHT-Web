@@ -6,32 +6,32 @@ export default function Peaks({ id_dataset }) {
     const [_data, set_data] = useState()
     const [_state, set_state] = useState()
 
-    //console.log(_data)
-    return (
-        <div >
-            {
-                _state !== "done"
-                    ? <GetPeaks id_dataset={id_dataset}
+    switch (_state) {
+        case "done":
+            return (
+                <table className="table_content" >
+                    <HeadPeaks Peaks={_data[0]} />
+                    <DisplayPeaks data={_data} />
+                </table>
+            )
+        case "no_results":
+            return null
+        default:
+            return (
+                <div>
+                    <GetPeaks id_dataset={id_dataset}
                         resoultsData={(data) => { set_data(data); }}
                         status={(state) => { set_state(state) }}
                     />
-                    : null
-            }
-            {
-                _state === "loading"
-                    ? <SpinnerCircle />
-                    : null
-            }
-            {
-                !_data
-                    ? null
-                    : <table className="table_content" >
-                        <HeadPeaks Peaks={_data[0]} />
-                        <DisplayPeaks data={_data} />
-                    </table>
-            }
-        </div>
-    )
+                    {
+                        _state === "loading"
+                            ? <SpinnerCircle />
+                            : null
+                    }
+                </div>
+            )
+    }
+    //console.log(_data)
 }
 
 function HeadPeaks({ Peaks }) {
@@ -39,13 +39,12 @@ function HeadPeaks({ Peaks }) {
     return (
         <thead>
             <tr>
-                <th style={{textAlign: 'end'}} colSpan="7">
-                   { /* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                <th style={{ textAlign: 'end' }} colSpan="7">
+                    { /* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a href="#">download complete file</a>
                 </th>
             </tr>
             <tr>
-                <th>NAME</th>
                 <th>START</th>
                 <th>END</th>
                 <th>SCORE</th>
@@ -55,73 +54,68 @@ function HeadPeaks({ Peaks }) {
     )
 }
 
-function DisplayPeaks({data = []}) {
+function DisplayPeaks({ data = [] }) {
     const [_page, set_page] = useState(0)
     const [items, setItems] = useState(10)
-    const _totalP = parseInt(data.length/10,10)
+    const _totalP = parseInt(data.length / 10, 10)
     const [_items, set_items] = useState([])
-    console.log(data)
+    //console.log(data)
     useEffect(() => {
         let itemSelection = []
-        for(let i = 0; i < items; i++) {
+        for (let i = 0; i < items; i++) {
             let sec = (_page * 10 + i)
             if (sec < data.length) {
                 itemSelection.push(data[sec])
             }
-            
+
         }
-        if(_items.length === 0){
+        if (_items.length === 0) {
             set_items(itemSelection)
         }
         let inputNumber = document.getElementById("input_current_page_Peaks01")
-        if(inputNumber){
+        if (inputNumber) {
             inputNumber.value = _page
         }
         let inputNumberA = document.getElementById("input_current_page_Peaks02")
-        if(inputNumberA){
+        if (inputNumberA) {
             inputNumberA.value = _page
         }
-        
-    },[data,_items,items,_page])
+
+    }, [data, _items, items, _page])
     return (
         <tbody>
             {
-                _items.map(item=>{
-                    return <tr style={{height: "25px"}} key={`Peaks_${item?._id}`}>
-                        <td>
-                            {item?.name
-                                ?item?.name
-                                :null
-                            }
-                        </td>
+                _items.map(item => {
+                    return <tr style={{ height: "25px" }} key={`Peaks_${item?._id}`}>
+
                         <td>
                             {item?.peakLeftPosition
-                                ?item?.peakLeftPosition
-                                :null
+                                ? item?.peakLeftPosition
+                                : null
                             }
                         </td>
                         <td>
                             {item?.peakRightPosition
-                                ?item?.peakRightPosition
-                                :null
+                                ? item?.peakRightPosition
+                                : null
                             }
                         </td>
                         <td>
                             {item?.score
-                                ?item?.score
-                                :null
+                                ? item?.score
+                                : null
                             }
                         </td>
                         <td>
                             {item?.closestGenes
-                                ?<div>
-                                {
-                                    item?.closestGenes.map(gen=>{
-                                        return <a key={gen._id} style={{marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gen.name}</a>
-                                    })
-                                }
-                            </div>
-                                :null
+                                ? <div>
+                                    {
+                                        item?.closestGenes.map(gen => {
+                                            return <a key={gen._id} style={{ marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gen.name}</a>
+                                        })
+                                    }
+                                </div>
+                                : null
                             }
                         </td>
                     </tr>

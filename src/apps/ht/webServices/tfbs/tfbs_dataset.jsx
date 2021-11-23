@@ -60,18 +60,21 @@ const GetTFBS = ({
     status = () => { },
     resoultsData = () => { },
 }) => {
-    const [_c, set_c] = useState(false)
     const { data, loading, error } = useQuery(query(id_dataset))
     //console.log(data, loading, error)
     useEffect(() => {
         if (loading) {
             status('loading')
         }
-        if (data && !_c) {
+        if (data) {
             try {
-              set_c(true)
-                resoultsData(data?.getAllTFBindingOfDataset)
+              if(data.getAllTFBindingOfDataset.length > 0) {
                 status('done')
+              } else {
+                status('no_results')
+              }
+              resoultsData(data?.getAllTFBindingOfDataset)
+                
             } catch (error) {
                 status('error')
                 console.error(error)
@@ -82,7 +85,7 @@ const GetTFBS = ({
             console.error(error)
         }
 
-    }, [loading, error, status, data, resoultsData, id_dataset, _c, set_c]);
+    }, [loading, error, status, data, resoultsData, id_dataset]);
     return (<></>);
 }
 

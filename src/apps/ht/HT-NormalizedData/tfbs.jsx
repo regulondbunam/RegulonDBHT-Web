@@ -8,7 +8,7 @@ export default function TFBS({ id_dataset }) {
     const [_state, set_state] = useState()
 
     //console.log(_data)
-    if (_data) {
+    if (_state === "done") {
         return (
             <table className="table_content"  >
                 <Headtfbs tfbs={_data[0]} />
@@ -16,13 +16,21 @@ export default function TFBS({ id_dataset }) {
             </table>
         )
     }
+    if (_state === "no_results") {
+        return null
+    }
     return (
         <div>
             <GetTFBS id_dataset={id_dataset}
                         resoultsData={(data) => { set_data(data); }}
                         status={(state) => { set_state(state) }}
                     />
-            <SpinnerCircle />
+                    {
+                        _state === 'loading'
+                        ?<SpinnerCircle />
+                        :null
+                    }
+            
         </div>
     )
 }

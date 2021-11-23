@@ -45,7 +45,11 @@ const GetPeaks = ({
         if (data) {
             try {
                 resoultsData(data?.getAllPeaksOfDataset)
-                status('done')
+                if(data.getAllPeaksOfDataset.length > 0) {
+                    status('done')
+                  } else {
+                    status('no_results')
+                  }
             } catch (error) {
                 status('error')
                 console.error(error)
