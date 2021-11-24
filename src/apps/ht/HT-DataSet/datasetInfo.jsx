@@ -123,7 +123,7 @@ function Body({ data }) {
             <Tabs id_dataset={data?._id} data={data} />
             <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.title }} />
             <p dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.description }} />
-            <Viewer />
+            <Viewer  id_dataset={data?._id} />
             <br />
             <br />
             <br />
