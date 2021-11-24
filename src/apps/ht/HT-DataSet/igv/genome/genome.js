@@ -8,15 +8,9 @@ export function confGenome(peaksFile,sitesFile) {
     "tracks": [
       {
         "name": "Genes",
-        "url": "/media/raw/genes.bed",
+        "type": "annotation",
+        "url": "/media/raw/GeneProductSet.gff3",
         "displayMode": "EXPANDED",
-        "nameField": "Genes",
-      },
-      {
-        "name": "GeneProducsSet",
-        "url": "/media/raw/GeneProductSet.bed",
-        "displayMode": "EXPANDED",
-        "nameField": "GenesProductSet",
       },
       {
         "name": "peaks",
