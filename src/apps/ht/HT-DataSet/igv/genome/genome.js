@@ -1,4 +1,4 @@
-export function confGenome(peaksFile,sitesFile) {
+export function confGenome(peaksFile,sitesFile,tfFile) {
   return {
     "id": "Ecoli",
     "name": "Ecoli",
@@ -25,6 +25,13 @@ export function confGenome(peaksFile,sitesFile) {
         "format": "bed",
         "displayMode": "EXPANDED",
         "nameField": "sites",
+      },
+      {
+        "name": "RegulonDB TFBS",
+        "url": tfFile,
+        "format": "bed",
+        "displayMode": "EXPANDED",
+        "nameField": "RegulonDB_TFBS",
       }
     ]
   }

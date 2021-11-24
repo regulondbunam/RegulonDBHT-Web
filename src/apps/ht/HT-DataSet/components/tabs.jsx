@@ -30,7 +30,7 @@ export default function Tabs({ id_dataset, data }) {
                 <button className={""+isActive(1)}
                     id={`TAB_${id_dataset}_1`}
                     onClick={() => { open(1) }}
-                >Autor data</button>
+                >Author data</button>
             </div>
             {
                 _openTab === 0
