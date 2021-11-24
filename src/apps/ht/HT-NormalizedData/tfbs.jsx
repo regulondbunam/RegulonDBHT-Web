@@ -41,8 +41,7 @@ function Headtfbs({ tfbs }) {
         <thead>
             <tr>
                 <th style={{ textAlign: 'end' }} colSpan="7">
-                    { /* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a href="#">download complete file</a>
+                    
                 </th>
             </tr>
             <tr>
