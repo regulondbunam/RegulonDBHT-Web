@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Builder.css'
 
 
@@ -10,28 +11,49 @@ export default function Builder() {
     const [buildedQuery, setBuildedQuery] = useState()
 
     const Metadata = [
-        "hola munod",//DatasetID
-        "PMID", "Doi", "Authors", "Title", "Date", "PmcID", //Publication
-        "ID - ObjectTested", "Name - Object tested", "Synonymus", "Summary", "Active Conformations", "ID - Gene", "Name - Gene", "Distance to - Gene", "ID - Esternal Cros References", "Name - Esternal Cros References", "Object ID - Esternal Cros References", "URL - Esternal Cros References",//ObjecTested
-        "Source ID", "Source Name", "Plataform ID", "Plataform Title", "Title - Source Serie", "Strategy", "Method",//Source Serie
-        "Experiment ID", "Control ID - Sample", "Tile - Sample",//Sample
-        "Control ID - Linked Dataset", "Experiment ID - Linked Dataset", "Dataset Type - Linked DataSet",//Linked Dataset
-        "Reference Genome", //Referenced genome
-        "Dataset Type", //Datset Type
-        "Temporal ID", //Temporal Datset ID
+        "DatasetID",
+        //DatasetID
+
+        "PMID",
+        "DOI",
+        "Authors",
+        "Publication Title",
+        "Publication Date",
+        "PMCID",
+        //Publication
+
+        "RegulonDB TF ID",
+        "TF Name",
+        "TF Synonymus",
+        "TG Gene name",
+        "DBxRef Name",
+        "DBxRef ID",
+        //ObjecTested
+
+        "Serie ID",
+        "Source DBName",
+        "Platform ID",
+        "Platform Title",
+        "Serie Title",
+        "Experiment Strategy",
+        "Experiment Method",//Source Serie
+        "Experiment sample ID",
+        "Control sample ID",
+        "experient Title",//Sample
+        "Referenced genome", //Referenced genome
         "Growth Conditions",//Growth Conditions
-        "Date - Rekease data control", "version",//Release Dat Control
     ]
 
     const MetadataGC = [
         "Organism",
         "Genetic Background",
         "Medium",
+        "Medium Supplements",
         "Aeration",
         "Temperature",
         "Ph",
         "Pressure",
-        "OpticalDensity",
+        "Optical Density",
         "Growth Phase",
         "Growth Rate",
         "Vessel Type",
@@ -40,65 +62,73 @@ export default function Builder() {
 
     const metadataIdentificada = [
         //DatasetID
-        { "value": "ID", "query": "_id" },
+        { "value": "DatasetID", "query": "_id" },
         //Publication
         { "value": "PMID", "query": "publication.pmid" },
-        { "value": "Doi", "query": "publication.doi" },
+        { "value": "DOI", "query": "publication.doi" },
         { "value": "Authors", "query": "publication.authors" },
-        { "value": "Title", "query": "publication.title" },
-        { "value": "Date", "query": "publication.date" },
-        { "value": "PmcId", "query": "publication.pmcid" },
+        { "value": "Publication Title", "query": "publication.title" },
+        { "value": "Publication Date", "query": "publication.date" },
+        { "value": "PMCID", "query": "publication.pmcid" },
         //ObjectTested
-        { "value": "ID - ObjectTested", "query": "objectTested._id" },
-        { "value": "Name", "query": "objectTested.name" },
-        { "value": "Synonymus", "query": "objectTested.synonymus" },
-        { "value": "Summary", "query": "objectTested.summary" },
-        { "value": "Active Conformations", "query": "objectTested.activeConformations" },
-        { "value": "ID - Gene", "query": "objectTested.gene._id" },
-        { "value": "Name - Gene", "query": "objectTested.gene.Name" },
-        { "value": "Distance to - Gene", "query": "objectTested.gene.distanceTo" },
-        { "value": "ID - Esternal Cros References", "query": "objectTested.externalCrosReferenced.externalCrosReferencedId" },
-        { "value": "Name - Esternal Cros References", "query": "objectTested.externalCrosReferenced.externalCrosReferencedName" },
-        { "value": "Object ID - Esternal Cros References", "query": "objectTested.externalCrosReferenced.objectId" },
-        { "value": "URL - Esternal Cros References", "query": "objectTested.externalCrosReferenced.url" },
+        { "value": "RegulonDB TF ID", "query": "objectTested._id" },
+        { "value": "TF Name", "query": "objectTested.name" },
+        { "value": "TF Synonyms", "query": "objectTested.synonymus" },
+
+        { "value": "TF Gene name", "query": "objectTested.gene.Name" },
+
+
+        { "value": "DBxRef Name", "query": "objectTested.externalCrosReferenced.externalCrosReferencedName" },
+        { "value": "DBxRef ID", "query": "objectTested.externalCrosReferenced.objectId" },
+
         //Source Serie
-        { "value": "Source ID", "query": "sourceSerie.sourceID" },
-        { "value": "Source Name", "query": "sourceSerie.sourceName" },
-        { "value": "Plataform ID", "query": "sourceSerie.plataformID" },
-        { "value": "Plataform Title", "query": "sourceSerie.plataformTitle" },
-        { "value": "Title - Source Serie", "query": "sourceSerie.title" },
-        { "value": "Strategy", "query": "sourceSerie.strategy" },
-        { "value": "Method", "query": "sourceSerie.method" },
+        { "value": "Serie ID", "query": "sourceSerie.sourceID" },
+        { "value": "Source DBName", "query": "sourceSerie.sourceName" },
+        { "value": "Platform ID", "query": "sourceSerie.plataformID" },
+        { "value": "Platform Name", "query": "sourceSerie.plataformTitle" },
+        { "value": "Serie Title", "query": "sourceSerie.title" },
+        { "value": "Experiment Strategy", "query": "sourceSerie.strategy" },
+        { "value": "Experiment Method", "query": "sourceSerie.method" },
+
         //Sample
-        { "value": "Experiment ID", "query": "sample.experimentId" },
-        { "value": "Control ID - Sample", "query": "sample.controlId" },
-        { "value": "Tile - Sample", "query": "sample.title" },
-        //Linked Dataset
-        { "value": "Control ID - Linked Dataset", "query": "linkedDatset.controlId" },
-        { "value": "Experiment ID - Linked Dataset", "query": "linkedDatset.ExperimentId" },
-        { "value": "Dataset Type - Linked Dataset", "query": "linkedDatset.datasetType" },
+        { "value": "Experiment Sample ID", "query": "sample.experimentId" },
+        { "value": "Control Sample ID", "query": "sample.controlId" },
+        { "value": "Experiment Title", "query": "sample.title" },
+
         //Referenced Genome
-        { "value": "Reference Genome", "query": "referenceGenome" },
-        //Dataset type
-        { "value": "Dataset Type", "query": "datasetType" },
-        //Temporal Dataset ID
-        { "value": "Temporal ID", "query": "temporalId" },
+        { "value": "Referenced genome", "query": "referenceGenome" },
+
+
         //Growth Conditions
-        { "value": "Growth Conditions", "query": "Entro en condiciones de crecimento" },
-        //Release Data Control
-        { "value": "Date - Rekease data control", "query": "releaseDataControl.date" },
-        { "value": "version", "query": "releaseDataControl.version" },
+        { "value": "Growth Conditions", "query": "" },
+        {"value": "Organism", "query":"growthConditions.organism"},
+        {"value":"Genetic Background", "query":"growthConditions.geneticBackground"},
+        {"value":"Medium", "query":"growthConditions.medium"},
+        {"value":"Medium Supplements", "query":"growthConditions.mediumSupplements"},
+        {"value":"Aeration", "query":"growthConditions.aeration"},
+        {"value":"Temperature", "query":"growthConditions.temperature"},
+        {"value":"Ph", "query":"growthConditions.ph"},
+        {"value":"Pressure", "query":"growthConditions.pressure"},
+        {"value":"Optical Density", "query":"growthConditions.opticalDensity"},
+        {"value":"Growth Phase", "query":"growthConditions.growthPhase"},
+        {"value":"Growth Rate", "query":"growthConditions.growthRate"},
+        {"value":"Vessel Type", "query":"growthConditions.vesselType"},
+        {"value":"Aeration Speed", "query":"growthConditions.aerationSpeed"}
+
+
 
     ]
 
 
     /*Obtiene el valor seleccionado en el boton DropDown y lo clasifica de acuerdo a la metadata para crear la pequela contulta que hara funcionar el componente "Autocompletar" */
     function identificar() {
+        
         let Value = document.getElementById("metadataDD").value;
         metadataIdentificada.map((value) => {
             if (value.value === Value) {
                 if (Value !== "Growth Conditions") {
                     setQuery(value.query)
+                    /* setActivo(false) */
                 } else {
                     setTurnOff(true)
                     setActivo(true)
@@ -108,29 +138,44 @@ export default function Builder() {
         })
     }
 
+    function identificarGC() {
+        let Value = document.getElementById("metadataGC").value;
+        metadataIdentificada.map((value) => {
+            if (value.value === Value) {
+                setQuery(value.query)
+            }
+            return query
+        })
+
+    }
+
     function BuildQuery() {
         if (_keyword !== "" && query !== "") {
             let queryBox = document.getElementById("query_area");
             let operador = ""
             if (queryBox) {
-                if(BuildQuery){
+                if (BuildQuery) {
                     let op = document.getElementById("operador")
-                    if(op){
+                    if (op) {
                         operador = op.value
                     }
                 }
-                queryBox.value = `${queryBox.value } ${operador} ${_keyword}[${query}]`
+                queryBox.value = `${queryBox.value} ${operador} ${_keyword}[${query}]`
             }
-            setBuildedQuery(`${_keyword}[${query}]`);
+            if (buildedQuery) {
+                setBuildedQuery(`${buildedQuery} ${operador} ${_keyword}[${query}]`);
+            } else {
+                setBuildedQuery(`${_keyword}[${query}]`);
+            }
         } else {
             console.log("Vacio")
         }
 
     };
 
-    function imprimir() {
+    /* function imprimir() {
         console.log(buildedQuery)
-    }
+    } */
 
     return (
         <div>
@@ -139,12 +184,21 @@ export default function Builder() {
             </div>
             <div className="firstRow">
                 <div className="dropdownCont" >
-                    <select label="Nombre" className="dropDownBtn" id="metadataDD" disabled={turnOff} onClick={identificar}>
-                        <option value="" className=".dropDownBtn-content" >All fields</option>
+                    <select label="Nombre"  id="metadataDD" className="dropDownBtn" onClick={identificar} onChange={(e)=>{
+                        let value = e.target.value
+                        console.log(value)
+                        if(value === "Growth Conditions"){
+                            setActivo(true)
+                        }else{
+                            setActivo(false)
+                            setTurnOff(false)
+                        }
+                    }}>
+                        <option value="" >All fields</option>
                         {
-                            Metadata.map((data) => {
+                            Metadata.map((data, i) => {
                                 return (
-                                    <option value={data} key={data} className=".dropDownBtn-content" >{data}</option>
+                                    <option value={data} key={`${data}_${i}`}  >{data}</option>
                                 )
                             })
                         }
@@ -163,46 +217,50 @@ export default function Builder() {
                 <button className="iconButton" disabled={turnOff} onClick={BuildQuery}><i className='bx bx-plus-circle'></i></button>
                 {
                     buildedQuery
-                        ?<div className="dropdownCont" >
-                            <select label="Nombre" className="dropDownBtn" id="operador" disabled={turnOff}>
-                                <option value="AND" className=".dropDownBtn-content" >AND</option>
-                                <option value="OR" className=".dropDownBtn-content">OR</option>
-                                <option value="NOT" className=".dropDownBtn-content">NOT</option>
+                        ? <div className="dropdownCont" >
+                            <select label="Nombre"  id="operador" className="dropDownBtn" disabled={turnOff}>
+                                <option value="AND"  >AND</option>
+                                <option value="OR" >OR</option>
+                                <option value="NOT" >NOT</option>
                             </select>
-                            </div>
-                        :null
+                        </div>
+                        : null
                 }
             </div>
             <div className="IndexList">
                 <p disabled={turnOff}>Show Index</p>
             </div>
-            <div className="SearchButton" id="builder_search" >
-                <button className="accent" disabled={buildedQuery === undefined} >Search</button>
-            </div>
             <div className="secondRow">
                 {activo === true &&
                     <div >
-                        <h3>Gorwth Conditions</h3>
+                        <h3>Growth Conditions</h3>
                         <div className="container">
                             <div className="dropdownCont">
-                                <select label="Nombre" className="dropDownBtn" id="metadataDD" onClick={identificar}>
-                                    <option value="" className=".dropDownBtn-content" >All fields</option>
+                                <select label="Nombre"  id="metadataGC" className="dropDownBtn" onClick={identificarGC}>
+                                    <option value="" id="metadataGC">All fields</option>
                                     {
-                                        MetadataGC.map((data) => {
+                                        MetadataGC.map((data, i ) => {
                                             return (
-                                                <option value={data} key={data} className=".dropDownBtn-content" >{data}</option>
+                                                <option value={data} key={`${data}_${i}`}  >{data}</option>
                                             )
                                         })
                                     }
                                 </select>
                             </div>
-                            <input id="builder_GC" type="text" className="TextArea" />
+                            <input 
+                            id="builder_GC" 
+                            type="text" 
+                            className="TextArea" 
+                                onChange={() => {
+                                    let keyword = document.getElementById("builder_GC").value
+                                    set_keyword(keyword);
+                                }} />
                             <button className="iconButton" onClick={BuildQuery}><i className='bx bx-plus-circle'></i></button>
                             <div className="dropdownCont" >
-                                <select label="Nombre" className="dropDownBtn" id="operaciones">
-                                    <option value="AND" className=".dropDownBtn-content" >AND</option>
-                                    <option value="OR" className=".dropDownBtn-content">OR</option>
-                                    <option value="NOT" className=".dropDownBtn-content">NOT</option>
+                                <select label="Nombre"  className="dropDownBtn" id="operador">
+                                    <option value="AND"  >AND</option>
+                                    <option value="OR" >OR</option>
+                                    <option value="NOT" >NOT</option>
                                 </select>
                             </div>
                         </div>
@@ -210,6 +268,11 @@ export default function Builder() {
                             <p>Show Index</p>
                         </div>
                     </div>}
+            </div>
+            <div className="SearchButton" id="builder_search" >
+                <Link to={`/dataset/query/${buildedQuery} AND TFBINDING[datasetType]`}>
+                    <button className="accent" disabled={buildedQuery === undefined} >Search</button>
+                </Link>
             </div>
             {/*  <Autocomplete keyword={_keyword} location={query} /> */}
 

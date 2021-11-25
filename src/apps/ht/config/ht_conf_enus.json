@@ -18,28 +18,28 @@
                     "url": "HT-TUs",
                     "title": "Transcription Units",
                     "description": "descripcion",
-                    "enable": true
-                },
-                {
-                    "id": "DS-002",
-                    "url": "HT-TTs",
-                    "title": "Transcription Terminations",
-                    "description": "descripcion",
-                    "enable": true
+                    "enable": false
                 },
                 {
                     "id": "DS-003",
-                    "url": "HT-TSS",
-                    "title": "Transcription Start Sites",
+                    "url": "HT-TTs",
+                    "title": "Transcription Terminations",
                     "description": "descripcion",
-                    "enable": true
+                    "enable": false
                 },
                 {
                     "id": "DS-004",
+                    "url": "HT-TSS",
+                    "title": "Transcription Start Sites",
+                    "description": "descripcion",
+                    "enable": false
+                },
+                {
+                    "id": "DS-005",
                     "url": "HT-GE",
                     "title": "Gene Expression",
                     "description": "descripcion",
-                    "enable": true
+                    "enable": false
                 }
             ]
         },

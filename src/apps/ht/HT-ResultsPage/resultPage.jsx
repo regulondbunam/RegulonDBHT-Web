@@ -114,11 +114,14 @@ function Results({ data = [], dataStr = [] }) {
           ? <div>
             {
               results.map(ds => {
-                return (
-                  <div key={`ds_id_${ds?._id}`}>
-                    <PanelResult ds={ds} match_data={ds?._match} />
-                  </div>
-                )
+                if(ds?.sample?.title){
+                  return (
+                    <div key={`ds_id_${ds?._id}`}>
+                      <PanelResult ds={ds} match_data={ds?._match} />
+                    </div>
+                  )
+                }
+                return null
               })
             }
           </div>
@@ -129,6 +132,7 @@ function Results({ data = [], dataStr = [] }) {
 }
 
 function FormatData(data, keyWord, location) {
+  console.log(location)
   let locations = location.split(".")
   if (!keyWord || !location || locations.length < 1 || !data) {
     return "---"

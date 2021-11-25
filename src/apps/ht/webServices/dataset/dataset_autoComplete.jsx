@@ -99,8 +99,8 @@ const GetAutoComplete = ({
       if (data) {
 
           try {
-              //resoultsData(FormatData(data?.getDatasetsFromSearch, keyWord, location))
-              resoultsData(data?.getDatasetsFromSearch)
+              resoultsData(FormatData(data?.getDatasetsFromSearch, keyWord, location))
+              //resoultsData(data?.getDatasetsFromSearch)
               status('done')
           } catch (error) {
               status('error')
@@ -118,46 +118,46 @@ const GetAutoComplete = ({
 
 export default GetAutoComplete;
 
-// function FormatData(data, keyWord, location) {
-//   let locations = location.split(".")
-//   if (!keyWord || !location || locations.length < 1 || !data) {
-//       return []
-//   }
-//   let suggest = []
+function FormatData(data, keyWord, location) {
+  let locations = location.split(".")
+  if (!keyWord || !location || locations.length < 1 || !data) {
+      return []
+  }
+  let suggest = []
   
-//   try {
-//       let result = [];
-//       data.map(d => {
-//           let loc = d
-//           for (let index = 0; index < locations.length; index++) {
-//               const key = locations[index];
-//               loc = loc[key];
-//               console.log(loc)
-//               if (index === locations.length - 1) {
-//                   if(loc){
-//                       if (loc.length > 1) {
-//                           loc.forEach(item=>{
-//                               if (result.indexOf(item)<0) {
-//                                   result.push(item)
-//                               }
-//                           })
-//                       }else{
-//                           result.push(loc)
-//                       }
-//                   } 
-//               }
-//           }
-//           return null
-//       })
-//       let rx = new RegExp(`${keyWord.toLowerCase() }`)
-//       result.forEach(item => {
-//           if (rx.test(item.toLowerCase() )) {
-//               suggest.push(item)
-//           }
-//       });
-//   } catch (error) {
-//       console.error(error)
-//   }
-//   return suggest
+  try {
+      let result = [];
+      data.map(d => {
+          let loc = d
+          for (let index = 0; index < locations.length; index++) {
+              const key = locations[index];
+              loc = loc[key];
+              console.log(loc)
+              if (index === locations.length - 1) {
+                  if(loc){
+                      if (loc.length > 1) {
+                          loc.forEach(item=>{
+                              if (result.indexOf(item)<0) {
+                                  result.push(item)
+                              }
+                          })
+                      }else{
+                          result.push(loc)
+                      }
+                  } 
+              }
+          }
+          return null
+      })
+      let rx = new RegExp(`${keyWord.toLowerCase() }`)
+      result.forEach(item => {
+          if (rx.test(item.toLowerCase() )) {
+              suggest.push(item)
+          }
+      });
+  } catch (error) {
+      console.error(error)
+  }
+  return suggest
 
 //} te falto XD bueno bye
