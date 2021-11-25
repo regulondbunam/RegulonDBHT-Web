@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import './Builder.css'
 
 
@@ -161,7 +161,7 @@ export default function Builder() {
                         operador = op.value
                     }
                 }
-                queryBox.value = `${queryBox.value} ${operador} ${_keyword}[${query}]`
+                queryBox.value = `${queryBox.value}${operador}${_keyword}[${query}]`
             }
             if (buildedQuery) {
                 setBuildedQuery(`${buildedQuery} ${operador} ${_keyword}[${query}]`);
@@ -278,7 +278,7 @@ export default function Builder() {
             </div>
             <div className="SearchButton" id="builder_search" >
 
-                <button className="accent" disabled={(_keyword === undefined || _keyword === "") || query === undefined} onClick={() => {
+                <button className="accent" disabled={(_keyword === undefined || _keyword === "") || query === undefined} style={{ marginRight: "1%" }} onClick={() => {
                     if (buildedQuery) {
                         history.push(`/dataset/query/${buildedQuery} AND TFBINDING[datasetType]`)
                     } else {

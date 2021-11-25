@@ -2,7 +2,7 @@
 
 .TextArea{
     width: 80%;
-    height: 25px;
+    height: 32.1px;
     margin-left: 10px;
     margin-right: 10px;
     color: #838D93;
@@ -38,21 +38,23 @@
 }
 
 .firstRow {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  margin: 1%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .secondRow{
   width: auto;
   height: auto;
-  margin: auto;
+  
   margin-top: 30px;
 }
 
 .container{
   display: flex;
+  margin: 1%;
 }
 
 /* DropDwon Css */
