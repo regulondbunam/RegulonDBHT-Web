@@ -27,7 +27,7 @@ export function Viewer({ id_dataset, tf }) {
                 if (!_sitesFile) {
                     let xhr = new XMLHttpRequest();
                     xhr.onreadystatechange = process;
-                    xhr.open("GET", `${FILE_SERVER}/download/dataset/chip-seq/sites/bed/${id_dataset}`, true);
+                    xhr.open("GET", `${FILE_SERVER}/ht/download/dataset/chip-seq/sites/bed/${id_dataset}`, true);
                     xhr.send();
                     xhr.onloadend = () => {
                         if (xhr.readyState === 4) {
@@ -41,7 +41,7 @@ export function Viewer({ id_dataset, tf }) {
                     if (!_tfFile) {
                         let xhr = new XMLHttpRequest();
                         xhr.onreadystatechange = process;
-                        xhr.open("GET", `${FILE_SERVER}/regulondb_files/tf/bed/${tf}`, true);
+                        xhr.open("GET", `${FILE_SERVER}/ht/regulondb_files/tf/bed/${tf}`, true);
                         xhr.send();
                         xhr.onloadend = () => {
                             if (xhr.readyState === 4) {
@@ -54,7 +54,7 @@ export function Viewer({ id_dataset, tf }) {
                     } else {
                         let xhr = new XMLHttpRequest();
                         xhr.onreadystatechange = process;
-                        xhr.open("GET", `${FILE_SERVER}/download/dataset/chip-seq/peaks/bed/${id_dataset}`, true);
+                        xhr.open("GET", `${FILE_SERVER}/ht/download/dataset/chip-seq/peaks/bed/${id_dataset}`, true);
                         xhr.send();
                         xhr.onloadend = () => {
                             if (xhr.readyState === 4) {
