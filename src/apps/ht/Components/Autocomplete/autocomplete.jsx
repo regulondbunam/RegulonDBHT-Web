@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import GetAutoComplete from '../../webServices/dataset/dataset_autoComplete'
 
 
-export default class Autocomplete extends Component {
+ class Autocomplete extends Component {
     state = {
         sugges:[]
     }
@@ -14,8 +14,8 @@ export default class Autocomplete extends Component {
           return true
     }
 
+
     render() {
-        console.log(this.state.sugges)
         const {
             keyword,
             location
@@ -27,3 +27,6 @@ export default class Autocomplete extends Component {
         )
     }
 }
+
+export default Autocomplete
+

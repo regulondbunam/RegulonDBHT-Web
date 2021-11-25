@@ -21,7 +21,7 @@
 }
 
 .button {
-  width: auto;
+  width: 180px;
   height: 32px;
   padding-left: 30px;
   padding-right: 30px;
@@ -67,13 +67,16 @@
 }
 
 .dropBox {
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
+  display: inline-block;
   width: auto;
   height: auto;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   border: solid 1px #707070;
   background-color: #d8e4eb;
   z-index: 1;
+  text-align: left;
 }
 .dropBox:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.747);
