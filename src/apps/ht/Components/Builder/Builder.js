@@ -24,8 +24,8 @@ export default function Builder() {
 
         "RegulonDB TF ID",
         "TF Name",
-        "TF Synonymus",
-        "TG Gene name",
+        "TF Synonyms",
+        "TG Gene Name",
         "DBxRef Name",
         "DBxRef ID",
         //ObjecTested
@@ -39,7 +39,7 @@ export default function Builder() {
         "Experiment Method",//Source Serie
         "Experiment sample ID",
         "Control sample ID",
-        "experient Title",//Sample
+        "Experiment Title",//Sample
         "Referenced genome", //Referenced genome
         "Growth Conditions",//Growth Conditions
     ]
@@ -75,14 +75,14 @@ export default function Builder() {
         { "value": "TF Name", "query": "objectTested.name" },
         { "value": "TF Synonyms", "query": "objectTested.synonymus" },
 
-        { "value": "TF Gene name", "query": "objectTested.gene.Name" },
+        { "value": "TF Gene Name", "query": "objectTested.gene.Name" },
 
 
         { "value": "DBxRef Name", "query": "objectTested.externalCrosReferenced.externalCrosReferencedName" },
         { "value": "DBxRef ID", "query": "objectTested.externalCrosReferenced.objectId" },
 
         //Source Serie
-        { "value": "Serie ID", "query": "sourceSerie.sourceID" },
+        { "value": "Serie ID", "query": "sourceSerie.sourceId" },
         { "value": "Source DBName", "query": "sourceSerie.sourceName" },
         { "value": "Platform ID", "query": "sourceSerie.plataformID" },
         { "value": "Platform Name", "query": "sourceSerie.plataformTitle" },
@@ -100,7 +100,7 @@ export default function Builder() {
 
 
         //Growth Conditions
-        { "value": "Growth Conditions", "query": "" },
+        {"value": "Growth Conditions", "query": "" },
         {"value": "Organism", "query":"growthConditions.organism"},
         {"value":"Genetic Background", "query":"growthConditions.geneticBackground"},
         {"value":"Medium", "query":"growthConditions.medium"},
