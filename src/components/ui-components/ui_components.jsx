@@ -7,7 +7,7 @@ import { Button, IconButton, DropDown, Split } from "./input/Buttons";
 import { RadioButtonGroup, CheckBoxGroup } from "./input/Selectors";
 import { TextBox, TextPassword, TextArea } from "./input/Text";
 
-import { Image, Card, Modal, IntelligentTable } from "./output/output";
+import { Image, Card, Modal } from "./output/output";
 
 import { Cover } from "./web/cover/cover";
 import { Tabs } from "./web/tab/tabs";
@@ -31,6 +31,5 @@ export {
   Cover,
   Tabs,
   Modal,
-  IntelligentTable,
   SpinnerCircle
 };

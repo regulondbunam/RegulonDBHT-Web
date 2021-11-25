@@ -1,46 +1,57 @@
 import React from 'react';
 import Style from "./MainPage.module.css"
-import Data from '../Assets/Data/Data.json';
-
-//Componets
+import Conf from '../config/ht_conf_enus.json'
 import PanelHT from '../Components/Panel/PanelHT';
+import {Remarkable} from 'remarkable';
 
-const des = Data.ht_data.main_page.main_page_descripcion
+const md = new Remarkable();
+
+const conf = Conf?.pages?.main_page
 
 class MainPage extends React.Component {
 
     state = {
-        descripcion: des
+        descripcion: ""
     }
 
     render() {
         return (
             <article>
                 <br />
-                <div className="CollectionsDescriptionBreakdown">
-                    <p>
-                        {this.state.descripcion}
-                    </p>
-                </div>
-                <br />
                 <div className={Style.gridContainer}>
                     {
-                        Data.ht_data.main_page.paneles.map((panel) => {
+                        conf?.collection.map((panel) => {
+                            if (panel?.enable) {
+                                return (
+                                    <div className={Style.gridItem} key={panel.id}
+                                        onMouseEnter={()=>{
+                                            this.setState({descripcion: panel?.description})
+                                        }}
+                                        onMouseLeave={()=>{
+                                            this.setState({descripcion: conf?.descripcion})
+                                        }}
+                                    >
+                                        {PanelHT(panel)}
+                                    </div>
+                                )
+                            }
                             return (
                                 <div className={Style.gridItem} key={panel.id}
                                     onMouseEnter={()=>{
                                         this.setState({descripcion: panel?.description})
                                     }}
                                     onMouseLeave={()=>{
-                                        this.setState({descripcion: des})
+                                        this.setState({descripcion: conf?.descripcion})
                                     }}
                                 >
-                                    {PanelHT(panel)}
+                                    {PanelHT(panel,false)}
                                 </div>
                             )
                         })
                     }
                 </div>
+                <br />
+                <div dangerouslySetInnerHTML={{__html: md.render(conf?.descripcion)}} />
             </article>
         );
     }

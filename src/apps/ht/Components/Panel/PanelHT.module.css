@@ -7,6 +7,16 @@
     transition: transform 400ms ease;
 }
 
+.dPanel{
+    background: #9e9e9e;
+    color: white;
+    padding: 10%;
+    position: relative;
+    vertical-align: middle;
+    font-size: 4vh;
+    transition: transform 400ms ease;
+}
+
 .Panel:hover{
     transform: scale(1.02);
     background: #32617D;
