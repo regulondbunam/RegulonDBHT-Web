@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Builder.css'
 
 
 export default function Builder() {
-    const [_keyword, set_keyword] = useState("")
+    const [_keyword, set_keyword] = useState()
     const [activo, setActivo] = useState(false)
-    const [query, setQuery] = useState("")
+    const [query, setQuery] = useState()
     const [turnOff, setTurnOff] = useState(false)
     const [buildedQuery, setBuildedQuery] = useState()
+    const history = useHistory();
 
     const Metadata = [
         "DatasetID",
@@ -100,20 +101,20 @@ export default function Builder() {
 
 
         //Growth Conditions
-        {"value": "Growth Conditions", "query": "" },
-        {"value": "Organism", "query":"growthConditions.organism"},
-        {"value":"Genetic Background", "query":"growthConditions.geneticBackground"},
-        {"value":"Medium", "query":"growthConditions.medium"},
-        {"value":"Medium Supplements", "query":"growthConditions.mediumSupplements"},
-        {"value":"Aeration", "query":"growthConditions.aeration"},
-        {"value":"Temperature", "query":"growthConditions.temperature"},
-        {"value":"Ph", "query":"growthConditions.ph"},
-        {"value":"Pressure", "query":"growthConditions.pressure"},
-        {"value":"Optical Density", "query":"growthConditions.opticalDensity"},
-        {"value":"Growth Phase", "query":"growthConditions.growthPhase"},
-        {"value":"Growth Rate", "query":"growthConditions.growthRate"},
-        {"value":"Vessel Type", "query":"growthConditions.vesselType"},
-        {"value":"Aeration Speed", "query":"growthConditions.aerationSpeed"}
+        { "value": "Growth Conditions", "query": "" },
+        { "value": "Organism", "query": "growthConditions.organism" },
+        { "value": "Genetic Background", "query": "growthConditions.geneticBackground" },
+        { "value": "Medium", "query": "growthConditions.medium" },
+        { "value": "Medium Supplements", "query": "growthConditions.mediumSupplements" },
+        { "value": "Aeration", "query": "growthConditions.aeration" },
+        { "value": "Temperature", "query": "growthConditions.temperature" },
+        { "value": "Ph", "query": "growthConditions.ph" },
+        { "value": "Pressure", "query": "growthConditions.pressure" },
+        { "value": "Optical Density", "query": "growthConditions.opticalDensity" },
+        { "value": "Growth Phase", "query": "growthConditions.growthPhase" },
+        { "value": "Growth Rate", "query": "growthConditions.growthRate" },
+        { "value": "Vessel Type", "query": "growthConditions.vesselType" },
+        { "value": "Aeration Speed", "query": "growthConditions.aerationSpeed" }
 
 
 
@@ -122,7 +123,7 @@ export default function Builder() {
 
     /*Obtiene el valor seleccionado en el boton DropDown y lo clasifica de acuerdo a la metadata para crear la pequela contulta que hara funcionar el componente "Autocompletar" */
     function identificar() {
-        
+
         let Value = document.getElementById("metadataDD").value;
         metadataIdentificada.map((value) => {
             if (value.value === Value) {
@@ -173,6 +174,10 @@ export default function Builder() {
 
     };
 
+
+
+
+
     /* function imprimir() {
         console.log(buildedQuery)
     } */
@@ -184,12 +189,12 @@ export default function Builder() {
             </div>
             <div className="firstRow">
                 <div className="dropdownCont" >
-                    <select label="Nombre"  id="metadataDD" className="dropDownBtn" onClick={identificar} onChange={(e)=>{
+                    <select label="Nombre" id="metadataDD" className="dropDownBtn" onClick={identificar} onChange={(e) => {
                         let value = e.target.value
                         console.log(value)
-                        if(value === "Growth Conditions"){
+                        if (value === "Growth Conditions") {
                             setActivo(true)
-                        }else{
+                        } else {
                             setActivo(false)
                             setTurnOff(false)
                         }
@@ -211,6 +216,7 @@ export default function Builder() {
                     disabled={turnOff}
                     onChange={() => {
                         let keyword = document.getElementById("builder_text").value
+                        console.log(keyword)
                         set_keyword(keyword);
                     }}
                 />
@@ -218,7 +224,7 @@ export default function Builder() {
                 {
                     buildedQuery
                         ? <div className="dropdownCont" >
-                            <select label="Nombre"  id="operador" className="dropDownBtn" disabled={turnOff}>
+                            <select label="Nombre" id="operador" className="dropDownBtn" disabled={turnOff}>
                                 <option value="AND"  >AND</option>
                                 <option value="OR" >OR</option>
                                 <option value="NOT" >NOT</option>
@@ -236,10 +242,10 @@ export default function Builder() {
                         <h3>Growth Conditions</h3>
                         <div className="container">
                             <div className="dropdownCont">
-                                <select label="Nombre"  id="metadataGC" className="dropDownBtn" onClick={identificarGC}>
+                                <select label="Nombre" id="metadataGC" className="dropDownBtn" onClick={identificarGC}>
                                     <option value="" id="metadataGC">All fields</option>
                                     {
-                                        MetadataGC.map((data, i ) => {
+                                        MetadataGC.map((data, i) => {
                                             return (
                                                 <option value={data} key={`${data}_${i}`}  >{data}</option>
                                             )
@@ -247,17 +253,18 @@ export default function Builder() {
                                     }
                                 </select>
                             </div>
-                            <input 
-                            id="builder_GC" 
-                            type="text" 
-                            className="TextArea" 
+                            <input
+                                id="builder_GC"
+                                type="text"
+                                className="TextArea"
                                 onChange={() => {
                                     let keyword = document.getElementById("builder_GC").value
+                                    console.log(keyword)
                                     set_keyword(keyword);
                                 }} />
                             <button className="iconButton" onClick={BuildQuery}><i className='bx bx-plus-circle'></i></button>
                             <div className="dropdownCont" >
-                                <select label="Nombre"  className="dropDownBtn" id="operador">
+                                <select label="Nombre" className="dropDownBtn" id="operador">
                                     <option value="AND"  >AND</option>
                                     <option value="OR" >OR</option>
                                     <option value="NOT" >NOT</option>
@@ -270,11 +277,24 @@ export default function Builder() {
                     </div>}
             </div>
             <div className="SearchButton" id="builder_search" >
-                <Link to={`/dataset/query/${buildedQuery} AND TFBINDING[datasetType]`}>
-                    <button className="accent" disabled={buildedQuery === undefined} >Search</button>
-                </Link>
+
+                <button className="accent" disabled={(_keyword === undefined || _keyword === "") || query === undefined} onClick={() => {
+                    if (buildedQuery) {
+                        history.push(`/dataset/query/${buildedQuery} AND TFBINDING[datasetType]`)
+                    } else {
+                        if (activo === true) {//consultar builder de GC
+                            let keyword = document.getElementById("builder_GC").value
+                            history.push(`/dataset/query/${keyword}[${query}] AND TFBINDING[datasetType]`)
+                        } else {
+                            //Coonsultar builder normal
+                            let keyword = document.getElementById("builder_text").value
+                            history.push(`/dataset/query/${keyword}[${query}] AND TFBINDING[datasetType]`)
+                        }
+                    }
+                }}>Search</button>
             </div>
-            {/*  <Autocomplete keyword={_keyword} location={query} /> */}
+            {/*  <Autocomplete keyword={_keyword} location={query} /> */
+            /* to={`/dataset/query/${buildedQuery} AND TFBINDING[datasetType]`} */}
 
         </div>
     );

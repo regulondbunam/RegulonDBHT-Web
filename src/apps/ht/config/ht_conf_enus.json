@@ -9,7 +9,7 @@
             "collection": [{
                     "id": "DS-001",
                     "url": "HT_TFB",
-                    "title": "TFBinding",
+                    "title": "TF Binding Sites",
                     "description": "descripcion",
                     "enable": true
                 },
@@ -23,7 +23,7 @@
                 {
                     "id": "DS-003",
                     "url": "HT-TTs",
-                    "title": "Transcription Terminations",
+                    "title": "Transcription Termination Sites",
                     "description": "descripcion",
                     "enable": false
                 },
