@@ -12,7 +12,6 @@ export default function ResultPage({
 }) {
   const [_data, set_data] = useState()
   const [_state, set_state] = useState()
-
   const dataStr = useMemo(() => {
     let str = []
     let strQuery = query
@@ -132,18 +131,19 @@ function Results({ data = [], dataStr = [] }) {
 }
 
 function FormatData(data, keyWord, location) {
-  console.log(location)
+  if(!location){return "-+-"}
   let locations = location.split(".")
-  if (!keyWord || !location || locations.length < 1 || !data) {
+  if (!keyWord || locations.length === 0 || !data) {
     return "---"
   }
   let MachText = "---"
-  //console.log(data)
   try {
     let dataMatch = data
     for (let index = 0; index < locations.length; index++) {
-      const key = locations[index];
+      const key = locations[index].replaceAll(" ","");
       dataMatch = dataMatch[key]
+      console.log(key)
+      console.log(dataMatch)
       if (index === locations.length - 1) {
         if (dataMatch.length) {
           if (Array.isArray(dataMatch)) {
