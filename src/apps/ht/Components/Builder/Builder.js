@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import './Builder.css'
 
@@ -10,11 +10,22 @@ export default function Builder() {
     const [turnOff, setTurnOff] = useState(false)
     const [buildedQuery, setBuildedQuery] = useState()
     const history = useHistory();
+    
+    useEffect(() => {
+        
+        const builder = document.getElementById("builder_HT")
+        if (builder) {
+            builder.addEventListener('builderR', function (e) {
+                //console.log(`state`, e.detail)
+                setBuildedQuery(e.detail.buildedQuery)
+            }, false);
+        }
+    }, [])
 
     const Metadata = [
         //DatasetID
         "DatasetID",
-        
+
         //Publication
         "PMID",
         "DOI",
@@ -22,7 +33,7 @@ export default function Builder() {
         "Publication Title",
         "Publication Date",
         "PMCID",
-        
+
         //ObjecTested
         "RegulonDB TF ID",
         "TF Name",
@@ -30,7 +41,7 @@ export default function Builder() {
         "TF Gene Name",
         "DBxRef Name",
         "DBxRef ID",
-        
+
         //Source Serie
         "Serie ID",
         "Source DBName",
@@ -156,8 +167,11 @@ export default function Builder() {
             let queryBox = document.getElementById("query_area");
             let operador = ""
             if (queryBox) {
-                if (BuildQuery) {
+                if (buildedQuery) {
                     let op = document.getElementById("operador")
+                    if(activo){
+                        op = document.getElementById("operadorGC")
+                    }
                     if (op) {
                         operador = op.value
                     }
@@ -184,7 +198,7 @@ export default function Builder() {
     } */
 
     return (
-        <div>
+        <div id="builder_HT" >
             <div className="builderTitle">
                 <h3 >Builder</h3>
             </div>
@@ -264,13 +278,18 @@ export default function Builder() {
                                     set_keyword(keyword);
                                 }} />
                             <button className="iconButton" onClick={BuildQuery}><i className='bx bx-plus-circle'></i></button>
-                            <div className="dropdownCont" >
-                                <select label="Nombre" className="dropDownBtn" id="operador">
-                                    <option value="AND"  >AND</option>
-                                    <option value="OR" >OR</option>
-                                    <option value="NOT" >NOT</option>
-                                </select>
-                            </div>
+                            {
+                                buildedQuery
+                                    ? <div className="dropdownCont" >
+                                        <select label="Nombre" className="dropDownBtn" id="operadorGC">
+                                            <option value="AND"  >AND</option>
+                                            <option value="OR" >OR</option>
+                                            <option value="NOT" >NOT</option>
+                                        </select>
+                                    </div>
+                                    :null
+                            }
+
                         </div>
                         <div className="IndexList">
                             <p>Show Index</p>
@@ -281,9 +300,11 @@ export default function Builder() {
 
                 <button className="accent" disabled={(_keyword === undefined || _keyword === "") || query === undefined} style={{ marginRight: "1%" }} onClick={() => {
                     if (buildedQuery) {
-                        history.push(`/dataset/query/${buildedQuery} AND TFBINDING[datasetType]`)
+                        let queryBox = document.getElementById("query_area").value;
+                        history.push(`/dataset/query/${queryBox} AND TFBINDING[datasetType]`)
                     } else {
                         if (activo === true) {//consultar builder de GC
+
                             let keyword = document.getElementById("builder_GC").value
                             history.push(`/dataset/query/${keyword}[${query}] AND TFBINDING[datasetType]`)
                         } else {
