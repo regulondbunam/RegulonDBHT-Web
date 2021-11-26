@@ -75,13 +75,13 @@ export default function Builder() {
         //ObjectTested
         { "value": "RegulonDB TF ID", "query": "objectTested._id" },
         { "value": "TF Name", "query": "objectTested.name" },
-        { "value": "TF Synonyms", "query": "objectTested.synonymus" },
+        { "value": "TF Synonyms", "query": "objectTested.synonyms" },
 
-        { "value": "TF Gene Name", "query": "objectTested.gene.Name" },
+        { "value": "TF Gene Name", "query": "objectTested.gene.name" },
 
 
-        { "value": "DBxRef Name", "query": "objectTested.externalCrosReferenced.externalCrosReferencedName" },
-        { "value": "DBxRef ID", "query": "objectTested.externalCrosReferenced.objectId" },
+        { "value": "DBxRef Name", "query": "objectTested.externalCrossReferences.externalCrossReferenceName" },
+        { "value": "DBxRef ID", "query": "objectTested.externalCrossReferences.objectId" },
 
         //Source Serie
         { "value": "Serie ID", "query": "sourceSerie.sourceId" },
