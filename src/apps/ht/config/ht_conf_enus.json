@@ -1,6 +1,6 @@
 {
     "_json_description": "Json para la configuracion de textos estaticos, de la aplicacion ht",
-    "_json_version": "0.2.0",
+    "_json_version": "0.3.0",
     "pages": {
         "main_page": {
             "title": "High Thoughput Collection",
