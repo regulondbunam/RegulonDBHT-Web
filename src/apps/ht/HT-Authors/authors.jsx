@@ -32,7 +32,7 @@ export default function Authors({ id_dataset }) {
 }
 
 function AuthorTable({ data }) {
-    console.log(data)
+    //console.log(data)
     const authorData = data[0]?.tfBindingAuthorsData
     if (!authorData) {
         return null

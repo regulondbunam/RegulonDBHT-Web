@@ -1,5 +1,5 @@
 export function confGenome(peaksFile,sitesFile,tfFile) {
-  return {
+  let conf = {
     "id": "Ecoli",
     "name": "Ecoli",
     "fastaURL": "/media/raw/e_coli_k12.fna",
@@ -11,21 +11,33 @@ export function confGenome(peaksFile,sitesFile,tfFile) {
         "type": "annotation",
         "url": "/media/raw/GeneProductSet.gff3",
         "displayMode": "EXPANDED",
-      },
+      }
+    ]
+  }
+  if (peaksFile !== "undefined") {
+    conf.tracks.push(
       {
         "name": "peaks",
         "url": peaksFile,
         "displayMode": "EXPANDED",
         "format": "bed",
         "nameField": "peaks",
-      },
+      }
+    )    
+  }
+  if (sitesFile !== "undefined") {
+    conf.tracks.push(
       {
         "name": "sites",
         "url": sitesFile,
         "format": "bed",
         "displayMode": "EXPANDED",
         "nameField": "sites",
-      },
+      }
+    )    
+  }
+  if (tfFile !== "undefined") {
+    conf.tracks.push(
       {
         "name": "RegulonDB TFBS",
         "url": tfFile,
@@ -33,8 +45,9 @@ export function confGenome(peaksFile,sitesFile,tfFile) {
         "displayMode": "EXPANDED",
         "nameField": "RegulonDB_TFBS",
       }
-    ]
+    )    
   }
+  return conf
 }
 
 export const genomaE = {

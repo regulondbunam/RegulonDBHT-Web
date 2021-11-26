@@ -142,8 +142,6 @@ function FormatData(data, keyWord, location) {
     for (let index = 0; index < locations.length; index++) {
       const key = locations[index].replaceAll(" ","");
       dataMatch = dataMatch[key]
-      console.log(key)
-      console.log(dataMatch)
       if (index === locations.length - 1) {
         if (dataMatch.length) {
           if (Array.isArray(dataMatch)) {
