@@ -86,7 +86,7 @@ export default function Builder() {
         //Source Serie
         { "value": "Serie ID", "query": "sourceSerie.sourceId" },
         { "value": "Source DBName", "query": "sourceSerie.sourceName" },
-        { "value": "Platform ID", "query": "sourceSerie.plataformID" },
+        { "value": "Platform ID", "query": "sourceSerie.plataformId" },
         { "value": "Platform Title", "query": "sourceSerie.plataformTitle" },
         { "value": "Serie Title", "query": "sourceSerie.title" },
         { "value": "Experiment Strategy", "query": "sourceSerie.strategy" },
