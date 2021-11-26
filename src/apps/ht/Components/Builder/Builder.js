@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './Builder.css'
 
 
@@ -12,36 +12,37 @@ export default function Builder() {
     const history = useHistory();
 
     const Metadata = [
-        "DatasetID",
         //DatasetID
-
+        "DatasetID",
+        
+        //Publication
         "PMID",
         "DOI",
         "Authors",
         "Publication Title",
         "Publication Date",
         "PMCID",
-        //Publication
-
+        
+        //ObjecTested
         "RegulonDB TF ID",
         "TF Name",
         "TF Synonyms",
-        "TG Gene Name",
+        "TF Gene Name",
         "DBxRef Name",
         "DBxRef ID",
-        //ObjecTested
-
+        
+        //Source Serie
         "Serie ID",
         "Source DBName",
         "Platform ID",
         "Platform Title",
         "Serie Title",
         "Experiment Strategy",
-        "Experiment Method",//Source Serie
+        "Experiment Method",
         "Experiment sample ID",
         "Control sample ID",
         "Experiment Title",//Sample
-        "Referenced genome", //Referenced genome
+        "Reference genome", //Referenced genome
         "Growth Conditions",//Growth Conditions
     ]
 
@@ -86,7 +87,7 @@ export default function Builder() {
         { "value": "Serie ID", "query": "sourceSerie.sourceId" },
         { "value": "Source DBName", "query": "sourceSerie.sourceName" },
         { "value": "Platform ID", "query": "sourceSerie.plataformID" },
-        { "value": "Platform Name", "query": "sourceSerie.plataformTitle" },
+        { "value": "Platform Title", "query": "sourceSerie.plataformTitle" },
         { "value": "Serie Title", "query": "sourceSerie.title" },
         { "value": "Experiment Strategy", "query": "sourceSerie.strategy" },
         { "value": "Experiment Method", "query": "sourceSerie.method" },
@@ -97,7 +98,7 @@ export default function Builder() {
         { "value": "Experiment Title", "query": "sample.title" },
 
         //Referenced Genome
-        { "value": "Referenced genome", "query": "referenceGenome" },
+        { "value": "Reference genome", "query": "referenceGenome" },
 
 
         //Growth Conditions
