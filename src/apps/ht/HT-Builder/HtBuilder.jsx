@@ -36,7 +36,6 @@ export default function HtBuilder() {
         :null
       }
       <h2 dangerouslySetInnerHTML={{__html: des.title}} />
-      <p style={{ marginLeft: "5%" }} dangerouslySetInnerHTML={{__html: des.description}} />
       <QueryBox />
       <Builder />
     </article>
