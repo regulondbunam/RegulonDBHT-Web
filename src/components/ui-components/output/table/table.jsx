@@ -9,7 +9,6 @@ export default function Table({ dataTable }) {
     const [search, setSearch] = useState("");
     const nColumns = columnsNumber(dataTable.columns)
     const disabledColumns = DisabledColumns(dataTable.columns)
-    console.log(disabledColumns)
     const rows = dataTable.rows;
     const totalRows = rows.length;
 

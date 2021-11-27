@@ -7,7 +7,7 @@ export default class Tus extends React.Component {
 
     state = {
         _data: undefined,
-        _state: undefined
+        _state: "loading"
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -26,6 +26,7 @@ export default class Tus extends React.Component {
             _state
         } = this.state
 
+        console.log(_state)
 
         if (_state === "no_found") {
             return null
