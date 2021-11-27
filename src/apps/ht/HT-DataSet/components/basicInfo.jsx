@@ -34,7 +34,7 @@ export default function BasicInfo({ data }) {
                         <td>
                             {
                                 data?.sample?.title
-                                    ? <Sample sample={data?.sample} />
+                                    ? <Sample sample={data?.sample} strategy={data?.sourceSerie?.strategy} />
                                     : null
                             }
                             {

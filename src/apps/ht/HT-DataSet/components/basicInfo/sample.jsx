@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Sample({ sample }) {
+export default function Sample({ sample, strategy="" }) {
     let controlId = sample?.controlId;
     let experimentId = sample?.experimentId;
     if (!sample) {
@@ -20,7 +20,7 @@ export default function Sample({ sample }) {
         <table className="table_auto" >
             <thead>
                 <tr>
-                    <th colSpan="2" style={{borderBottom: '1px solid #72a7c7'}} >ChIP-Seq Dataset</th>
+                    <th colSpan="2" style={{borderBottom: '1px solid #72a7c7'}} >{strategy}</th>
                 </tr>
             </thead>
             <tbody>

@@ -38,7 +38,7 @@ export default function Tabs({ id_dataset, data }) {
                         
                         <Summary data={data} />
                         <h3>Data</h3>
-                        <NormData id_dataset={id_dataset} />
+                        <NormData id_dataset={id_dataset} datasetType={data?.datasetType} />
                     </div>
                     : null
             }
