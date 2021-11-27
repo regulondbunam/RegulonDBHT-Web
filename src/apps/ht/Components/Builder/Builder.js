@@ -298,7 +298,7 @@ export default function Builder() {
             </div>
             <div className="SearchButton" id="builder_search" >
 
-                <button className="accent" disabled={(_keyword === undefined || _keyword === "") || query === undefined} style={{ marginRight: "1%" }} onClick={() => {
+                <button className="accent" disabled={((_keyword === undefined || _keyword === "") || query === undefined) && buildedQuery === undefined} style={{ marginRight: "1%" }} onClick={() => {
                     if (buildedQuery) {
                         let queryBox = document.getElementById("query_area").value;
                         history.push(`/dataset/query/${queryBox} AND TFBINDING[datasetType]`)
