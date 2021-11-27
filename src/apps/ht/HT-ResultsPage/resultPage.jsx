@@ -113,14 +113,11 @@ function Results({ data = [], dataStr = [] }) {
           ? <div>
             {
               results.map(ds => {
-                if(ds?.sample?.title){
                   return (
                     <div key={`ds_id_${ds?._id}`}>
                       <PanelResult ds={ds} match_data={ds?._match} />
                     </div>
                   )
-                }
-                return null
               })
             }
           </div>

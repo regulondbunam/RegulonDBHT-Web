@@ -33,7 +33,11 @@ export default function PanelResult({ ds, match_data }) {
             On dataset with ID: {ds?._id}
             <Link to={`/TFBINDING/dataset/${ds?._id}`}>
                 <h2 className={Style.title}>
-                    {ds?.sample?.title}
+                    {
+                        ds?.sample?.title
+                        ?ds?.sample?.title
+                        :ds?._id
+                    }
                 </h2>
             </Link>
             {
