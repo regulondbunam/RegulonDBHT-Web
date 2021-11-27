@@ -1,9 +1,19 @@
 import React from 'react'
 
 export default function Sample({ sample }) {
-    const controlId = sample?.controlId;
-    const experimentId = sample?.experimentId;
+    let controlId = sample?.controlId;
+    let experimentId = sample?.experimentId;
     if (!sample) {
+        return null
+    }
+    if(Array.isArray(controlId) && !controlId.length){
+        controlId = undefined;
+    }
+
+    if (Array.isArray(experimentId) && !experimentId.length) {
+        experimentId = undefined;
+    }
+    if(!experimentId && !controlId) {
         return null
     }
     return (

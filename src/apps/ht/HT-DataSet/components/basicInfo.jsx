@@ -5,7 +5,17 @@ import SourceSerie from './basicInfo/source';
 import PublicationInfo from './publicationInfo';
 
 export default function BasicInfo({ data }) {
+    let title = ""
 
+    //Condicion para filtrar comentarios de Victor (curador)
+    if (data) {    
+        if (data?.sample?.title === "obtener de GEO") {
+            title = ""
+        }else{
+            title = data?.sample?.title
+        }
+        //console.log(_data)
+    }
 
     return (
         <div>
@@ -14,7 +24,7 @@ export default function BasicInfo({ data }) {
                 <thead className="table_content">
                     <tr>
                         <th>
-                            <p style={{ fontSize: "22px" }} className="p_accent">{data?.sample?.title}</p>
+                            <p style={{ fontSize: "22px" }} className="p_accent">{title}</p>
                             <p style={{ fontSize: "14px" }} >Dataset Type: {data?.datasetType}</p>
                         </th>
                     </tr>
@@ -30,6 +40,26 @@ export default function BasicInfo({ data }) {
                             {
                                 data?.linkedDataset?.controlId
                                     ? <LinkedDataset linkedDataset={data?.linkedDataset} />
+                                    : null
+                            }
+                            {
+                                data?.fivePrimeEnrichment
+                                    ? <div>
+                                        <table className="table_auto">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <p style={{ fontSize: "12px" }}className="p_accent" >
+                                                            5'_enrichment:
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <p>{data?.fivePrimeEnrichment}</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                     : null
                             }
                             <SourceSerie sourceSerie={data?.sourceSerie} />
