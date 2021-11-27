@@ -34,20 +34,29 @@ export function Viewer({ id_dataset, tf }) {
                             if (xhr.status === 200 || xhr.status === 0) {
                                 let link = saveStaticDataToFile(xhr.responseText, "sites", id_dataset, "bed");
                                 set_sitesFile(link)
+                            } else {
+                                set_sitesFile("undefined")
                             }
                         }
                     }
                 } else {
                     if (!_tfFile) {
-                        let xhr = new XMLHttpRequest();
-                        xhr.onreadystatechange = process;
-                        xhr.open("GET", `${FILE_SERVER}/regulondb_files/tf/bed/${tf}`, true);
-                        xhr.send();
-                        xhr.onloadend = () => {
-                            if (xhr.readyState === 4) {
-                                if (xhr.status === 200 || xhr.status === 0) {
-                                    let link = saveStaticDataToFile(xhr.responseText, "tf", tf, "bed");
-                                    set_tfFile(link)
+                        if (!tf) {
+                            //console.log(tf)
+                            set_tfFile("undefined")
+                        } else {
+                            let xhr = new XMLHttpRequest();
+                            xhr.onreadystatechange = process;
+                            xhr.open("GET", `${FILE_SERVER}/regulondb_files/tf/bed/${tf}`, true);
+                            xhr.send();
+                            xhr.onloadend = () => {
+                                if (xhr.readyState === 4) {
+                                    if (xhr.status === 200 || xhr.status === 0) {
+                                        let link = saveStaticDataToFile(xhr.responseText, "tf", tf, "bed");
+                                        set_tfFile(link)
+                                    } else {
+                                        set_tfFile("undefined")
+                                    }
                                 }
                             }
                         }
@@ -61,23 +70,16 @@ export function Viewer({ id_dataset, tf }) {
                                 if (xhr.status === 200 || xhr.status === 0) {
                                     let link = saveStaticDataToFile(xhr.responseText, "peaks", id_dataset, "bed");
                                     set_peaksFile(link)
+                                } else {
+                                    set_peaksFile("undefined")
                                 }
                             }
                         }
                     }
-
                 }
-
             }
-
-
-
-
-            /*
-                */
-
         }
-    })
+    },[id_dataset, _peaksFile, _sitesFile, _tfFile, tf])
 
     return <div id="igv-divK">
         {

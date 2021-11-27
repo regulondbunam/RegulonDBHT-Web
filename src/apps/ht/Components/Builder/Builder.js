@@ -206,7 +206,7 @@ export default function Builder() {
                 <div className="dropdownCont" >
                     <select label="Nombre" id="metadataDD" className="dropDownBtn" onClick={identificar} onChange={(e) => {
                         let value = e.target.value
-                        console.log(value)
+                        //console.log(value)
                         if (value === "Growth Conditions") {
                             setActivo(true)
                         } else {
@@ -231,7 +231,7 @@ export default function Builder() {
                     disabled={turnOff}
                     onChange={() => {
                         let keyword = document.getElementById("builder_text").value
-                        console.log(keyword)
+                        //console.log(keyword)
                         set_keyword(keyword);
                     }}
                 />
