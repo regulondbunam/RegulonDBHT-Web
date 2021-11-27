@@ -14,6 +14,7 @@ function query(id_dataset) {
     {
         getDatasetsFromSearch(advancedSearch: "${id_dataset}[_id]") {
           _id
+          fivePrimeEnrichment
           publication {
             pmid
             doi

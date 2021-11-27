@@ -18,7 +18,12 @@ export default function DatasetInfo({ id_dataset }) {
     useEffect(() => {
         let title = "Loading ..."
         if (_data) {
-            title = _data?.sample?.title
+            
+            if (_data?.sample?.title === "obtener de GEO") {
+                title = _data?._id
+            }else{
+                title = _data?.sample?.title
+            }
             //console.log(_data)
         }
         const COVER = document.getElementById("title-cover-ht")
@@ -93,7 +98,7 @@ function Body({ data }) {
                     : <h2>Error on ID</h2>
             }
             {
-                data?.sample?.title
+                data?._id
                     ? <div>
                         <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_info?.title }} />
                         <p dangerouslySetInnerHTML={{ __html: section?.dataset_info?.description }} />
