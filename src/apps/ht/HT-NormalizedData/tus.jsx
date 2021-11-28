@@ -70,7 +70,13 @@ function ViewData({ data }) {
         }
         for (const property in data[0]) {
             let dis = true
-            if (property === "_id" || property === "__typename") {
+            if (property === "_id" || 
+                property === "__typename" || 
+                property === "temporalId" ||
+                property === "datasetIds" ||
+                property === "phantom" ||
+                property === "pseudo"
+                ) {
                 dis = false
             }
             formatTable.columns.push({
