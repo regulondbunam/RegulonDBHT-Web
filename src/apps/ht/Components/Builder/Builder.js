@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import './Builder.css'
 
 
-export default function Builder({datasetType}) {
+export default function Builder() {
     const [_keyword, set_keyword] = useState()
     const [activo, setActivo] = useState(false)
     const [query, setQuery] = useState()
@@ -301,16 +301,16 @@ export default function Builder({datasetType}) {
                 <button className="accent" disabled={((_keyword === undefined || _keyword === "") || query === undefined) && buildedQuery === undefined} style={{ marginRight: "1%" }} onClick={() => {
                     if (buildedQuery) {
                         let queryBox = document.getElementById("query_area").value;
-                        history.push(`/dataset/query/${queryBox} AND ${datasetType}[datasetType]`)
+                        history.push(`/dataset/query/${queryBox} AND TFBINDING[datasetType]`)
                     } else {
                         if (activo === true) {//consultar builder de GC
 
                             let keyword = document.getElementById("builder_GC").value
-                            history.push(`/dataset/query/${keyword}[${query}] AND ${datasetType}[datasetType]`)
+                            history.push(`/dataset/query/${keyword}[${query}] AND TFBINDING[datasetType]`)
                         } else {
                             //Coonsultar builder normal
                             let keyword = document.getElementById("builder_text").value
-                            history.push(`/dataset/query/${keyword}[${query}] AND ${datasetType}[datasetType]`)
+                            history.push(`/dataset/query/${keyword}[${query}] AND TFBINDING[datasetType]`)
                         }
                     }
                 }}>Search</button>
