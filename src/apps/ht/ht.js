@@ -7,7 +7,7 @@ import ResultPage from './HT-ResultsPage/resultPage';
 import DataSet from './HT-DataSet/dataSet';
 
 export default function HT() {
-    const collection = useParams().collection;
+    const datasetType = useParams().datasetType;
     const query = useParams().query;
     const id_dataset = useParams().id_dataset;
 
@@ -24,17 +24,17 @@ export default function HT() {
         <div>
             <Title />
             {
-                !collection?<MainPage />:setCollection(collection,query)
+                !datasetType?<MainPage />:setdatasetType(datasetType,query)
             }
         </div>
     )
 }
 
-function setCollection(collection,query) {
+function setdatasetType(datasetType,query) {
     return (
         <div>
             {
-                !query?<HtBuilder/>:<ResultPage query={query}/>
+                !query?<HtBuilder datasetType={datasetType}/>:<ResultPage query={query}/>
             }
         </div>
     )
