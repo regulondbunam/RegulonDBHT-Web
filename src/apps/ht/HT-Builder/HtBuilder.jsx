@@ -9,7 +9,7 @@ import GetFields from '../webServices/introspection/fields';
 
 const des = Data.ht_data.builder_page
 
-export default function HtBuilder() {
+export default function HtBuilder({datasetType}) {
   const [_fields, set_fields] = useState()
   const [_state, set_state] = useState()
 
@@ -37,7 +37,7 @@ export default function HtBuilder() {
       }
       <h2 dangerouslySetInnerHTML={{__html: des.title}} />
       <QueryBox />
-      <Builder />
+      <Builder datasetType={datasetType} />
     </article>
   );
 }
