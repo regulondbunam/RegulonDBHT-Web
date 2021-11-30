@@ -1,16 +1,26 @@
 import React from 'react'
 
-export default function Sample({ sample }) {
-    const controlId = sample?.controlId;
-    const experimentId = sample?.experimentId;
+export default function Sample({ sample, strategy="" }) {
+    let controlId = sample?.controlId;
+    let experimentId = sample?.experimentId;
     if (!sample) {
+        return null
+    }
+    if(Array.isArray(controlId) && !controlId.length){
+        controlId = undefined;
+    }
+
+    if (Array.isArray(experimentId) && !experimentId.length) {
+        experimentId = undefined;
+    }
+    if(!experimentId && !controlId) {
         return null
     }
     return (
         <table className="table_auto" >
             <thead>
                 <tr>
-                    <th colSpan="2" style={{borderBottom: '1px solid #72a7c7'}} >ChIP-Seq Dataset</th>
+                    <th colSpan="2" style={{borderBottom: '1px solid #72a7c7'}} >{strategy}</th>
                 </tr>
             </thead>
             <tbody>

@@ -1,9 +1,19 @@
 import React from 'react'
 
 export default function LinkedDataset({ linkedDataset }) {
-    const controlId = linkedDataset?.controlId;
-    const experimentId = linkedDataset?.experimentId;
+    let controlId = linkedDataset?.controlId;
+    let experimentId = linkedDataset?.experimentId;
     if(!linkedDataset){
+        return null
+    }
+    if(Array.isArray(controlId) && !controlId.length){
+        controlId = undefined;
+    }
+
+    if (Array.isArray(experimentId) && !experimentId.length) {
+        experimentId = undefined;
+    }
+    if(!experimentId && !controlId) {
         return null
     }
     return (

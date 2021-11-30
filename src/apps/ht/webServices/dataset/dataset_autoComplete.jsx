@@ -14,6 +14,7 @@ function query(keyWord) {
     {
         getDatasetsFromSearch(advancedSearch: "${keyWord}") {
           _id
+          fivePrimeEnrichment
           publication {
             pmid
             doi
@@ -159,5 +160,5 @@ function FormatData(data, keyWord, location) {
       console.error(error)
   }
   return suggest
-
+}
 //} te falto XD bueno bye

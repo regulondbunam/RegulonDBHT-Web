@@ -22,6 +22,7 @@ function query(ht_query) {
             date
             pmcid
           }
+          fivePrimeEnrichment
           objectTested {
             _id
             name
