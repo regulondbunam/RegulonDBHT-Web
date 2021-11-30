@@ -5,6 +5,7 @@ import { QUERY } from './query';
 
 const Autocomplete = ({
     id,
+    datasetType,
     query,
     set_keyword = () => { },
 }) => {
@@ -28,9 +29,10 @@ const Autocomplete = ({
                         document.getElementById(`auto_warn${id}`).style.display = "none"
                         if (keyword.length > 0) {
                             setKeyword(keyword)
+                            console.log("\"" + keyword + "\"[" + query + "]"+" AND "+datasetType+"[datasetType]")
                             getSuges({
                                 variables: {
-                                    keyword: "\"" + keyword + "\"[" + query + "]"
+                                    keyword: "\"" + keyword + "\"[" + query + "]"+" AND "+datasetType+"[datasetType]"
                                 }
                             })
                         } else {

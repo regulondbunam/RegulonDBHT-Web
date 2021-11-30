@@ -4,7 +4,9 @@ import Autocomplete from "../Autocomplete/autocomplete"
 import './Builder.css'
 
 
-export default function Builder() {
+export default function Builder({
+    datasetType
+}) {
     const [_keyword, set_keyword] = useState()
     const [activo, setActivo] = useState(false)
     const [query, setQuery] = useState()
@@ -29,7 +31,7 @@ export default function Builder() {
 
         //Publication
         "PMID",
-        "DOI",
+        /* "DOI", */
         "Authors",
         "Publication Title",
         "Publication Date",
@@ -79,7 +81,7 @@ export default function Builder() {
         { "value": "DatasetID", "query": "_id" },
         //Publication
         { "value": "PMID", "query": "publication.pmid" },
-        { "value": "DOI", "query": "publication.doi" },
+        /* { "value": "DOI", "query": "publication.doi" }, */
         { "value": "Authors", "query": "publication.authors" },
         { "value": "Publication Title", "query": "publication.title" },
         { "value": "Publication Date", "query": "publication.date" },
@@ -237,22 +239,7 @@ export default function Builder() {
                             }
                         </select>
                     </div>
-                    {
-                        /**
-                         * 
-                         * <input
-                        id="builder_text"
-                        type="text"
-                        className="TextArea"
-                        disabled={turnOff}
-                        onChange={() => {
-                            let keyword = document.getElementById("builder_text").value
-                            set_keyword(keyword);
-                        }}
-                    />
-                         */
-                    }
-                    <Autocomplete id="builder_text" query={query} set_keyword={(keyword)=>{set_keyword(keyword)}} />
+                    <Autocomplete id="builder_text" datasetType={datasetType} query={query} set_keyword={(keyword)=>{set_keyword(keyword)}} />
                     <button className="iconButton" disabled={turnOff} onClick={BuildQuery}><i className='bx bx-plus-circle' disabled={(_keyword === undefined || _keyword === "") || query === undefined}></i></button>
                     {
                         buildedQuery
@@ -324,16 +311,16 @@ export default function Builder() {
                 <button className="accent" disabled={((_keyword === undefined || _keyword === "") || query === undefined) && buildedQuery === undefined} style={{ marginRight: "1%" }} onClick={() => {
                     if (buildedQuery) {
                         let queryBox = document.getElementById("query_area").value;
-                        history.push(`/dataset/query/${queryBox} AND TFBINDING[datasetType]`)
+                        history.push(`/dataset/query/${queryBox} AND ${datasetType}[datasetType]`)
                     } else {
                         if (activo === true) {//consultar builder de GC
 
                             let keyword = document.getElementById("builder_GC").value
-                            history.push(`/dataset/query/\\"${_keyword}\\"[${query}] AND TFBINDING[datasetType]`)
+                            history.push(`/dataset/query/\\"${_keyword}\\"[${query}] AND ${datasetType}[datasetType]`)
                         } else {
                             //Coonsultar builder normal
                             let keyword = document.getElementById("builder_text").value
-                            history.push(`/dataset/query/\\"${_keyword}\\"[${query}] AND TFBINDING[datasetType]`)
+                            history.push(`/dataset/query/\\"${_keyword}\\"[${query}] AND ${datasetType}[datasetType]`)
                         }
                     }
                 }}>Search</button>
