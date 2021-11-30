@@ -29,7 +29,7 @@ export default function HtBuilder() {
   }, [_state,_fields])
 
   return (
-    <article style={{minWidth: "1000px"}}>
+    <article style={{minWidth: "1000px"} }>
       {
         !_fields
         ?<GetFields field_type_name="Dataset" status={(state)=>{set_state(state)}} resoultsData={(data)=>{set_fields(data)}} />

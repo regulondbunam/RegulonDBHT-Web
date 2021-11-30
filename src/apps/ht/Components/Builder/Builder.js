@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import Autocomplete from "../Autocomplete/autocomplete"
 import './Builder.css'
 
 
@@ -10,9 +11,9 @@ export default function Builder() {
     const [turnOff, setTurnOff] = useState(false)
     const [buildedQuery, setBuildedQuery] = useState()
     const history = useHistory();
-    
+
     useEffect(() => {
-        
+
         const builder = document.getElementById("builder_HT")
         if (builder) {
             builder.addEventListener('builderR', function (e) {
@@ -135,7 +136,6 @@ export default function Builder() {
 
     /*Obtiene el valor seleccionado en el boton DropDown y lo clasifica de acuerdo a la metadata para crear la pequela contulta que hara funcionar el componente "Autocompletar" */
     function identificar() {
-
         let Value = document.getElementById("metadataDD").value;
         metadataIdentificada.map((value) => {
             if (value.value === Value) {
@@ -159,34 +159,46 @@ export default function Builder() {
             }
             return query
         })
-
+        
     }
 
     function BuildQuery() {
         if (_keyword !== "" && query !== "") {
             let queryBox = document.getElementById("query_area");
             let operador = ""
-            if (queryBox) {
-                if (buildedQuery) {
+            if (queryBox.value) { //Preguntamos si queryBox existe
+                if (buildedQuery) {//Pregutamos si buildedQuery es diferente de indefinido para saber si agregar el operador o no
                     let op = document.getElementById("operador")
-                    if(activo){
+                    if (activo) { //activo es una constamte que "activa" la opcion de GC por lo que de ser verddero hay que optener el operador del dropDown de GC
                         op = document.getElementById("operadorGC")
-                    }
-                    if (op) {
                         operador = op.value
+                        queryBox.value = `(${queryBox.value}) ${operador} ${_keyword}[${query}]`; //Armar el query con todos los datos, la existente en QueryBox, el operador y la nueva seccion armado con keyword y query
+                        setBuildedQuery(`${buildedQuery} ${operador} \\"${_keyword}\\"[${query}]`);
+                        document.getElementById("secondForm").reset();
+                        
+                    } else {
+                        if (op) { //Si activo devuelve falso simplemente se optiene el valor del operador del builder normal
+                            operador = op.value
+                            queryBox.value = `(${queryBox.value}) ${operador} ${_keyword}[${query}]`; //Armar el query con todos los datos, la existente en QueryBox, el operador y la nueva seccion armado con keyword y query
+                            setBuildedQuery(`${buildedQuery} ${operador} \\"${_keyword}\\"[${query}]`);
+                            document.getElementById("prueba").reset();
+                        }
                     }
                 }
-                queryBox.value = `${queryBox.value}${operador}${_keyword}[${query}]`
-            }
-            if (buildedQuery) {
-                setBuildedQuery(`${buildedQuery} ${operador} ${_keyword}[${query}]`);
-            } else {
-                setBuildedQuery(`${_keyword}[${query}]`);
-            }
-        } else {
-            console.log("Vacio")
-        }
+            } else {//Si llega hasta aqui se arma por primera vez el query
+                if (activo) {
+                    setBuildedQuery(`\\"${_keyword}\\"[${query}]`);
+                    queryBox.value = `\\"${_keyword}\\"[${query}]`;
+                    document.getElementById("secondForm").reset();
+                    
+                } else {
+                    setBuildedQuery(`\\"${_keyword}\\"[${query}]`);
+                    queryBox.value = `\\"${_keyword}\\"[${query}]`;
+                    document.getElementById("prueba").reset();
+                }
 
+            }
+        }
     };
 
 
@@ -199,103 +211,114 @@ export default function Builder() {
 
     return (
         <div id="builder_HT" >
-            <div className="builderTitle">
-                <h3 >Builder</h3>
-            </div>
-            <div className="firstRow">
-                <div className="dropdownCont" >
-                    <select label="Nombre" id="metadataDD" className="dropDownBtn" onClick={identificar} onChange={(e) => {
-                        let value = e.target.value
-                        //console.log(value)
-                        if (value === "Growth Conditions") {
-                            setActivo(true)
-                        } else {
-                            setActivo(false)
-                            setTurnOff(false)
-                        }
-                    }}>
-                        <option value="" >All fields</option>
-                        {
-                            Metadata.map((data, i) => {
-                                return (
-                                    <option value={data} key={`${data}_${i}`}  >{data}</option>
-                                )
-                            })
-                        }
-                    </select>
+            <form id="prueba">
+                <div className="builderTitle">
+                    <h3 >Builder</h3>
                 </div>
-                <input
-                    id="builder_text"
-                    type="text"
-                    className="TextArea"
-                    disabled={turnOff}
-                    onChange={() => {
-                        let keyword = document.getElementById("builder_text").value
-                        //console.log(keyword)
-                        set_keyword(keyword);
-                    }}
-                />
-                <button className="iconButton" disabled={turnOff} onClick={BuildQuery}><i className='bx bx-plus-circle'></i></button>
-                {
-                    buildedQuery
-                        ? <div className="dropdownCont" >
-                            <select label="Nombre" id="operador" className="dropDownBtn" disabled={turnOff}>
-                                <option value="AND"  >AND</option>
-                                <option value="OR" >OR</option>
-                                <option value="NOT" >NOT</option>
-                            </select>
-                        </div>
-                        : null
-                }
-            </div>
-            <div className="IndexList">
-                <p disabled={turnOff}>Show Index</p>
-            </div>
-            <div className="secondRow">
-                {activo === true &&
-                    <div >
-                        <h3>Growth Conditions</h3>
-                        <div className="container">
-                            <div className="dropdownCont">
-                                <select label="Nombre" id="metadataGC" className="dropDownBtn" onClick={identificarGC}>
-                                    <option value="" id="metadataGC">All fields</option>
-                                    {
-                                        MetadataGC.map((data, i) => {
-                                            return (
-                                                <option value={data} key={`${data}_${i}`}  >{data}</option>
-                                            )
-                                        })
-                                    }
+                <div className="firstRow">
+                    <div className="dropdownCont" >
+                        <select label="Nombre" id="metadataDD" className="dropDownBtn" onClick={identificar} onChange={(e) => {
+                            let value = e.target.value
+                            //console.log(value)
+                            if (value === "Growth Conditions") {
+                                setActivo(true)
+                            } else {
+                                setActivo(false)
+                                setTurnOff(false)
+                            }
+                        }}>
+                            <option value="" >All fields</option>
+                            {
+                                Metadata.map((data, i) => {
+                                    return (
+                                        <option value={data} key={`${data}_${i}`}  >{data}</option>
+                                    )
+                                })
+                            }
+                        </select>
+                    </div>
+                    {
+                        /**
+                         * 
+                         * <input
+                        id="builder_text"
+                        type="text"
+                        className="TextArea"
+                        disabled={turnOff}
+                        onChange={() => {
+                            let keyword = document.getElementById("builder_text").value
+                            set_keyword(keyword);
+                        }}
+                    />
+                         */
+                    }
+                    <Autocomplete id="builder_text" query={query} set_keyword={(keyword)=>{set_keyword(keyword)}} />
+                    <button className="iconButton" disabled={turnOff} onClick={BuildQuery}><i className='bx bx-plus-circle' disabled={(_keyword === undefined || _keyword === "") || query === undefined}></i></button>
+                    {
+                        buildedQuery
+                            ? <div className="dropdownCont" >
+                                <select label="Nombre" id="operador" className="dropDownBtn" disabled={turnOff}>
+                                    <option value="AND"  >AND</option>
+                                    <option value="OR" >OR</option>
+                                    <option value="NOT" >NOT</option>
                                 </select>
                             </div>
-                            <input
-                                id="builder_GC"
-                                type="text"
-                                className="TextArea"
-                                onChange={() => {
-                                    let keyword = document.getElementById("builder_GC").value
-                                    console.log(keyword)
-                                    set_keyword(keyword);
-                                }} />
-                            <button className="iconButton" onClick={BuildQuery}><i className='bx bx-plus-circle'></i></button>
-                            {
-                                buildedQuery
-                                    ? <div className="dropdownCont" >
-                                        <select label="Nombre" className="dropDownBtn" id="operadorGC">
-                                            <option value="AND"  >AND</option>
-                                            <option value="OR" >OR</option>
-                                            <option value="NOT" >NOT</option>
-                                        </select>
-                                    </div>
-                                    :null
-                            }
+                            : null
+                    }
+                </div>
+                <div className="IndexList">
+                    <p>Show Index</p>
+                </div>
+            </form>
+            <div className="secondRow">
+                <form id="secondForm">
+                    {activo === true &&
+                        <div >
+                            <h3>Growth Conditions</h3>
+                            <div className="container">
+                                <div className="dropdownCont">
+                                    <select label="Nombre" id="metadataGC" className="dropDownBtn" onClick={identificarGC}>
+                                        <option value="" id="metadataGC">All fields</option>
+                                        {
+                                            MetadataGC.map((data, i) => {
+                                                return (
+                                                    <option value={data} key={`${data}_${i}`}  >{data}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
+                                </div>
+                                <input
+                                    id="builder_GC"
+                                    type="text"
+                                    className="TextArea"
+                                    onChange={() => {
+                                        let keyword = document.getElementById("builder_GC").value
+                                        console.log(keyword)
+                                        set_keyword(keyword);
+                                    }} />
+                                <button className="iconButton" onClick={BuildQuery}><i className='bx bx-plus-circle'></i></button>
+                                {
+                                    buildedQuery
+                                        ? <div className="dropdownCont" >
+                                            <select label="Nombre" className="dropDownBtn" id="operadorGC">
+                                                <option value="AND"  >AND</option>
+                                                <option value="OR" >OR</option>
+                                                <option value="NOT" >NOT</option>
+                                            </select>
+                                        </div>
+                                        : null
+                                }
 
-                        </div>
-                        <div className="IndexList">
-                            <p>Show Index</p>
-                        </div>
-                    </div>}
+                            </div>
+                            <div className="IndexList">
+                                <p>Show Index</p>
+                            </div>
+                        </div>}
+                </form>
             </div>
+
+
             <div className="SearchButton" id="builder_search" >
 
                 <button className="accent" disabled={((_keyword === undefined || _keyword === "") || query === undefined) && buildedQuery === undefined} style={{ marginRight: "1%" }} onClick={() => {
@@ -306,11 +329,11 @@ export default function Builder() {
                         if (activo === true) {//consultar builder de GC
 
                             let keyword = document.getElementById("builder_GC").value
-                            history.push(`/dataset/query/${keyword}[${query}] AND TFBINDING[datasetType]`)
+                            history.push(`/dataset/query/\\"${_keyword}\\"[${query}] AND TFBINDING[datasetType]`)
                         } else {
                             //Coonsultar builder normal
                             let keyword = document.getElementById("builder_text").value
-                            history.push(`/dataset/query/${keyword}[${query}] AND TFBINDING[datasetType]`)
+                            history.push(`/dataset/query/\\"${_keyword}\\"[${query}] AND TFBINDING[datasetType]`)
                         }
                     }
                 }}>Search</button>
