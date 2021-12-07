@@ -9,7 +9,7 @@ export default function Builder({
 }) {
     const [_keyword, set_keyword] = useState()
     const [activo, setActivo] = useState(false)
-    const [query, setQuery] = useState()
+    const [query, setQuery] = useState("_id")
     const [turnOff, setTurnOff] = useState(false)
     const [buildedQuery, setBuildedQuery] = useState()
     const history = useHistory();
@@ -20,7 +20,9 @@ export default function Builder({
         if (builder) {
             builder.addEventListener('builderR', function (e) {
                 //console.log(`state`, e.detail)
-                setBuildedQuery(e.detail.buildedQuery)
+                setBuildedQuery(e.detail.buildedQuery);
+                set_keyword(e.detail._keyword);
+                setQuery(e.detail.query);
             }, false);
         }
     }, [])
@@ -161,46 +163,86 @@ export default function Builder({
             }
             return query
         })
-        
+
     }
 
     function BuildQuery() {
-        if (_keyword !== "" && query !== "") {
-            let queryBox = document.getElementById("query_area");
-            let operador = ""
-            if (queryBox.value) { //Preguntamos si queryBox existe
-                if (buildedQuery) {//Pregutamos si buildedQuery es diferente de indefinido para saber si agregar el operador o no
-                    let op = document.getElementById("operador")
-                    if (activo) { //activo es una constamte que "activa" la opcion de GC por lo que de ser verddero hay que optener el operador del dropDown de GC
-                        op = document.getElementById("operadorGC")
-                        operador = op.value
-                        queryBox.value = `(${queryBox.value}) ${operador} ${_keyword}[${query}]`; //Armar el query con todos los datos, la existente en QueryBox, el operador y la nueva seccion armado con keyword y query
-                        setBuildedQuery(`${buildedQuery} ${operador} \\"${_keyword}\\"[${query}]`);
-                        document.getElementById("secondForm").reset();
-                        
-                    } else {
-                        if (op) { //Si activo devuelve falso simplemente se optiene el valor del operador del builder normal
+
+        let DD1 = document.getElementById("metadataDD");
+        let Input1 = document.getElementById("builder_text");
+        let DD2 = document.getElementById("metadataGC");
+        let Input2 = document.getElementById("builder_GC");
+        let queryBox = document.getElementById("query_area");
+
+
+
+        if (_keyword === undefined || query === undefined || _keyword === "") {
+            alert("Serch term is required")
+        } else {
+            if (_keyword !== "" && query !== "") {
+                let operador = "";
+                if (queryBox.value) { //Preguntamos si queryBox existe
+                    if (buildedQuery) {//Pregutamos si buildedQuery es diferente de indefinido para saber si agregar el operador o no
+                        let op = document.getElementById("operador")
+                        if (activo) { //activo es una constamte que "activa" la opcion de GC por lo que de ser verddero hay que optener el operador del dropDown de GC
+                            op = document.getElementById("operadorGC")
                             operador = op.value
                             queryBox.value = `(${queryBox.value}) ${operador} ${_keyword}[${query}]`; //Armar el query con todos los datos, la existente en QueryBox, el operador y la nueva seccion armado con keyword y query
                             setBuildedQuery(`${buildedQuery} ${operador} \\"${_keyword}\\"[${query}]`);
-                            document.getElementById("prueba").reset();
+                            setQuery(undefined);
+                            set_keyword(undefined);
+
+
+                            //Resetear campos de formulario GC
+                            let OP2 = document.getElementById("operadorGC");
+                            DD2.value = "Organism";
+                            OP2.value = "AND";
+                            Input2.value = "";
+                        } else {
+                            if (op) { //Si activo devuelve falso simplemente se optiene el valor del operador del builder normal
+                                operador = op.value
+                                queryBox.value = `(${queryBox.value}) ${operador} ${_keyword}[${query}]`; //Armar el query con todos los datos, la existente en QueryBox, el operador y la nueva seccion armado con keyword y query
+                                setBuildedQuery(`${buildedQuery} ${operador} \\"${_keyword}\\"[${query}]`);
+                                setQuery(undefined);
+                                set_keyword(undefined);
+
+
+                                //Resetear campos de formulario
+                                let OP1 = document.getElementById("operador");
+                                DD1.value = "DatasetID";
+                                OP1.value = "AND";
+                                Input1.value = "";
+                            }
                         }
                     }
-                }
-            } else {//Si llega hasta aqui se arma por primera vez el query
-                if (activo) {
-                    setBuildedQuery(`\\"${_keyword}\\"[${query}]`);
-                    queryBox.value = `\\"${_keyword}\\"[${query}]`;
-                    document.getElementById("secondForm").reset();
-                    
-                } else {
-                    setBuildedQuery(`\\"${_keyword}\\"[${query}]`);
-                    queryBox.value = `\\"${_keyword}\\"[${query}]`;
-                    document.getElementById("prueba").reset();
-                }
+                } else {//Si llega hasta aqui se arma por primera vez el query
+                    if (activo) {
+                        setBuildedQuery(`\\"${_keyword}\\"[${query}]`);
+                        queryBox.value = `${_keyword}[${query}]`;
+                        setQuery(undefined);
+                        set_keyword(undefined);
 
+                        //Resetear campos de formulario
+                        DD2.value = "Organism";
+                        Input2.value = "";
+                    } else {
+                        setBuildedQuery(`\\"${_keyword}\\"[${query}]`);
+                        queryBox.value = `${_keyword}[${query}]`;
+                        setQuery(undefined);
+                        set_keyword(undefined);
+
+
+                        //Resetear campos de formulario
+                        DD1.value = "DatasetID";
+                        Input1.value = "";
+
+                    }
+
+                }
             }
         }
+
+
     };
 
 
@@ -213,7 +255,7 @@ export default function Builder({
 
     return (
         <div id="builder_HT" >
-            <form id="prueba">
+            <div id="prueba">
                 <div className="builderTitle">
                     <h3 >Builder</h3>
                 </div>
@@ -229,7 +271,6 @@ export default function Builder({
                                 setTurnOff(false)
                             }
                         }}>
-                            <option value="" >All fields</option>
                             {
                                 Metadata.map((data, i) => {
                                     return (
@@ -239,8 +280,8 @@ export default function Builder({
                             }
                         </select>
                     </div>
-                    <Autocomplete id="builder_text" datasetType={datasetType} query={query} set_keyword={(keyword)=>{set_keyword(keyword)}} />
-                    <button className="iconButton" disabled={turnOff} onClick={BuildQuery}><i className='bx bx-plus-circle' disabled={(_keyword === undefined || _keyword === "") || query === undefined}></i></button>
+                    <Autocomplete id="builder_text" datasetType={datasetType} query={query} turnOff={turnOff} set_keyword={(keyword) => { set_keyword(keyword) }} />
+                    <button className="iconButton" onClick={BuildQuery}><i className='bx bx-plus-circle'></i></button>
                     {
                         buildedQuery
                             ? <div className="dropdownCont" >
@@ -253,19 +294,18 @@ export default function Builder({
                             : null
                     }
                 </div>
-                <div className="IndexList">
+                {/* <div className="IndexList">
                     <p>Show Index</p>
-                </div>
-            </form>
+                </div> */}
+            </div>
             <div className="secondRow">
-                <form id="secondForm">
+                <div id="secondForm">
                     {activo === true &&
-                        <div >
+                        <div className="contenedorGC">
                             <h3>Growth Conditions</h3>
                             <div className="container">
                                 <div className="dropdownCont">
                                     <select label="Nombre" id="metadataGC" className="dropDownBtn" onClick={identificarGC}>
-                                        <option value="" id="metadataGC">All fields</option>
                                         {
                                             MetadataGC.map((data, i) => {
                                                 return (
@@ -275,15 +315,7 @@ export default function Builder({
                                         }
                                     </select>
                                 </div>
-                                <input
-                                    id="builder_GC"
-                                    type="text"
-                                    className="TextArea"
-                                    onChange={() => {
-                                        let keyword = document.getElementById("builder_GC").value
-                                        console.log(keyword)
-                                        set_keyword(keyword);
-                                    }} />
+                                <Autocomplete id="builder_GC" datasetType={datasetType} query={query} set_keyword={(keyword) => { set_keyword(keyword) }} />
                                 <button className="iconButton" onClick={BuildQuery}><i className='bx bx-plus-circle'></i></button>
                                 {
                                     buildedQuery
@@ -302,7 +334,7 @@ export default function Builder({
                                 <p>Show Index</p>
                             </div>
                         </div>}
-                </form>
+                </div>
             </div>
 
 
@@ -310,16 +342,16 @@ export default function Builder({
 
                 <button className="accent" disabled={((_keyword === undefined || _keyword === "") || query === undefined) && buildedQuery === undefined} style={{ marginRight: "1%" }} onClick={() => {
                     if (buildedQuery) {
-                        let queryBox = document.getElementById("query_area").value;
-                        history.push(`/dataset/query/${queryBox} AND ${datasetType}[datasetType]`)
+
+                        history.push(`/dataset/query/${buildedQuery} AND ${datasetType}[datasetType]`)
                     } else {
                         if (activo === true) {//consultar builder de GC
 
-                            let keyword = document.getElementById("builder_GC").value
+
                             history.push(`/dataset/query/\\"${_keyword}\\"[${query}] AND ${datasetType}[datasetType]`)
                         } else {
                             //Coonsultar builder normal
-                            let keyword = document.getElementById("builder_text").value
+
                             history.push(`/dataset/query/\\"${_keyword}\\"[${query}] AND ${datasetType}[datasetType]`)
                         }
                     }

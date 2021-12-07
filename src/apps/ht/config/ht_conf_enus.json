@@ -4,7 +4,7 @@
     "pages": {
         "main_page": {
             "title": "High Thoughput Collection",
-            "descripcion": "",
+            "description": "",
             "_collection_coments": "El elemento 'collection' es un arreglo donde se pueden declarar las colecciones, cuidar que el identificador sea diferente. ",
             "collection": [{
                     "id": "DS-001",

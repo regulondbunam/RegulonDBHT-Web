@@ -28,7 +28,7 @@ class MainPage extends React.Component {
                                             this.setState({descripcion: panel?.description})
                                         }}
                                         onMouseLeave={()=>{
-                                            this.setState({descripcion: conf?.descripcion})
+                                            this.setState({descripcion: conf?.description})
                                         }}
                                     >
                                         {PanelHT(panel)}
@@ -41,7 +41,7 @@ class MainPage extends React.Component {
                                         this.setState({descripcion: panel?.description})
                                     }}
                                     onMouseLeave={()=>{
-                                        this.setState({descripcion: conf?.descripcion})
+                                        this.setState({descripcion: conf?.description})
                                     }}
                                 >
                                     {PanelHT(panel,false)}
@@ -51,7 +51,7 @@ class MainPage extends React.Component {
                     }
                 </div>
                 <br />
-                <div dangerouslySetInnerHTML={{__html: md.render(conf?.descripcion)}} />
+                <div dangerouslySetInnerHTML={{__html: md.render(this.state.descripcion)}} />
             </article>
         );
     }

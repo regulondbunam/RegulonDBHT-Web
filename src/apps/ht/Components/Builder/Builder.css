@@ -1,16 +1,4 @@
 
-
-.TextArea{
-    width: 80%;
-    height: 32.1px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #838D93;
-    resize: none;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
 .IndexList{
     width: 100%;
     height: auto;
@@ -49,10 +37,11 @@
   width: 97.5%;
   height: auto;
   margin-top: 30px;
-  margin-left: 10px;
-  border: 1px solid white;
-  background: rgb(242,242,242);
-  background: linear-gradient(180deg, rgba(242,242,242,1) 0%, rgba(245,245,245,1) 1%, rgba(248,248,248,1) 4%, rgba(251,251,251,1) 10%, rgba(254,254,254,1) 22%, rgba(254,254,254,1) 96%, rgba(255,255,255,1) 100%);
+}
+
+.contenedorGC{
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .container{

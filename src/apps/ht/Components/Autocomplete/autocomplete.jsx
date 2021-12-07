@@ -7,43 +7,50 @@ const Autocomplete = ({
     id,
     datasetType,
     query,
+    turnOff,
     set_keyword = () => { },
 }) => {
     const [_keyword, setKeyword] = useState()
     const [getSuges, { loading, error, data }] = useLazyQuery(QUERY);
     const matchKeywords = filterData(data?.getDatasetsFromSearch, _keyword, query);
+    const [seeResults, setSeeResults] = useState(false);
+
     if (error) {
         console.error(error)
     }
     return (
-        <div style={{width: '100%'}}>
-            <input
-                autoComplete="off"
-                id={id}
-                type="text"
-                className="TextArea"
-                onChange={(e) => {
-                    let keyword = e.target.value;
-                    console.log()
-                    if (query) {
-                        document.getElementById(`auto_warn${id}`).style.display = "none"
-                        if (keyword.length > 0) {
-                            setKeyword(keyword)
-                            console.log("\"" + keyword + "\"[" + query + "]"+" AND "+datasetType+"[datasetType]")
-                            getSuges({
-                                variables: {
-                                    keyword: "\"" + keyword + "\"[" + query + "]"+" AND "+datasetType+"[datasetType]"
-                                }
-                            })
-                        } else {
-                            setKeyword(undefined)
-                        }
-                    } else {
-                        document.getElementById(`auto_warn${id}`).style.display = "inline"
-                    }
+        <div className={Style.input}>
+            <div>
+                <input
+                    autoComplete="off"
+                    id={id}
+                    type="text"
+                    className={Style.TextArea}
+                    disabled={turnOff}
+                    onChange={(e) => {
 
-                    set_keyword(keyword);
-                }} />
+                        let keyword = e.target.value;
+
+                        if (query) {
+                            document.getElementById(`auto_warn${id}`).style.display = "none"
+                            if (keyword.length > 0) {
+                                setKeyword(keyword)
+                                console.log("\"" + keyword + "\"[" + query + "]" + " AND " + datasetType + "[datasetType]")
+                                getSuges({
+                                    variables: {
+                                        keyword: "\"" + keyword + "\"[" + query + "]" + " AND " + datasetType + "[datasetType]"
+                                    }
+                                })
+                            } else {
+                                setKeyword(undefined)
+                            }
+                        } else {
+                            document.getElementById(`auto_warn${id}`).style.display = "inline"
+                        }
+
+                        set_keyword(keyword);
+                    }} />
+            </div>
             <div className={Style.result} >
                 {
                     matchKeywords && <ul>
@@ -51,11 +58,12 @@ const Autocomplete = ({
                             matchKeywords.map((keyword, i) => {
                                 return (
                                     <li key={`${i}_${keyword}`}
-                                    onClick={() =>{
-                                        document.getElementById(id).value = keyword
-                                        set_keyword(keyword);
-                                        setKeyword(keyword);
-                                    }}
+                                        onClick={() => {
+                                            document.getElementById(id).value = keyword
+                                            set_keyword(keyword);
+                                            setKeyword(keyword);
+
+                                        }}
                                     >
                                         {keyword}
                                     </li>
@@ -115,6 +123,8 @@ function filterData(data, keyword, location) {
         console.error(error)
     }
     return keywords
+
+
 }
 
 export default Autocomplete

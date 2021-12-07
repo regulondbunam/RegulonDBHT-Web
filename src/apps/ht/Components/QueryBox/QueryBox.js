@@ -15,24 +15,18 @@ class QueryBox extends Component {
                             const builder = document.getElementById("builder_HT")
                             console.log(queryB.length)
                             if (builder) {
-                                if(queryB.length === 0){
+                                if(queryB.length === 0 || queryB.length === undefined){
                                     const builerR = new CustomEvent('builderR', {
                                         bubbles: true,
                                         detail: {
-                                            buildedQuery: undefined
-                                        }
-                                    });
-                                    builder.dispatchEvent(builerR);
-                                }else{
-                                    const builerR = new CustomEvent('builderR', {
-                                        bubbles: true,
-                                        detail: {
-                                            buildedQuery: queryB
+                                            buildedQuery: undefined,
+                                            query: undefined,
+                                            _keyword: undefined
+                                            
                                         }
                                     });
                                     builder.dispatchEvent(builerR);
                                 }
-                                
                             }
                         }}
                     />
