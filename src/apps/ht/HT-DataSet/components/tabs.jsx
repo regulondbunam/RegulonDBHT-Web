@@ -101,7 +101,7 @@ export default function Tabs({ id_dataset, data }) {
             
             <div className={Style.tab}>
                 {
-                    loading
+                    (loading && (_peaksData || _tfbsData || _tssData || _ttsData || _tusData))
                         ? <button className={"" + isActive(0)}
                             id={`TAB_${id_dataset}_0`}
                             onClick={(event) => { open(0) }}

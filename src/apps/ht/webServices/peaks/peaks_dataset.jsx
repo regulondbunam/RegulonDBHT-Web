@@ -15,11 +15,6 @@ function query(id_dataset) {
       getAllPeaksOfDataset(datasetId: "${id_dataset}") {
         _id
         name
-        closestGenes {
-          _id
-          name
-          distanceTo
-        }
         chromosome
         peakLeftPosition
         peakRightPosition
@@ -27,6 +22,11 @@ function query(id_dataset) {
         siteIds
         datasetIds
         temporalId
+        closestGenes {
+          _id
+          name
+          distanceTo
+        }
       }
     }
     `

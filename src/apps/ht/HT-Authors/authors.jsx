@@ -2,7 +2,7 @@ import React from 'react'
 import { CsvToHtmlTable } from 'react-csv-to-table';
 
 export default function Authors({ data }) {
-    console.log(data)
+    //console.log(data)
     const authorData = data[0]?.tfBindingAuthorsData
     if (!authorData) {
         return null

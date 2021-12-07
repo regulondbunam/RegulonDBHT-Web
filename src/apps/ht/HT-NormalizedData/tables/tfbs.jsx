@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react'
-import { SpinnerCircle } from '../../../../components/ui-components/ui_components'
 import { TableI } from "../../../../components/ui-components/ui_components"
 import { MKSequenceClass } from '../mkSequence'
 
@@ -72,7 +71,7 @@ export default function TFBS({
         });
         return formatTable
     }, [data])
-    console.log(dataTable)
+    //console.log(dataTable)
     if (Array.isArray(data) && !data.length) {
         console.warn("getDatasetAllTus array data is empty")
         return null
