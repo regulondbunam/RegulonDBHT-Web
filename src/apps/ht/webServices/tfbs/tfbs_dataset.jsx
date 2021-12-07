@@ -17,16 +17,6 @@ function query(id_dataset) {
           chromosome
           chrLeftPosition
           chrRightPosition
-          closestGenes {
-            _id
-            name
-            distanceTo
-          }
-          transcriptionUnit {
-            _id
-            name
-            distanceTo
-          }
           foundClassicRIs {
             tfbsLeftPosition
             tfbsRightPosition
@@ -47,11 +37,15 @@ function query(id_dataset) {
           score
           strand
           sequence
+          closestGenes {
+            _id
+            name
+            distanceTo
+          }
           datasetIds
           temporalId
         }
       }
-      
     `
 }
 
@@ -61,7 +55,7 @@ const GetTFBS = ({
     resoultsData = () => { },
 }) => {
     const { data, loading, error } = useQuery(query(id_dataset))
-    //console.log(data, loading, error)
+    //console.log(id_dataset)
     useEffect(() => {
         if (loading) {
             status('loading')

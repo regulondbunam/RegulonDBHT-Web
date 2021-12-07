@@ -26,7 +26,7 @@ export default class Tus extends React.Component {
             _state
         } = this.state
 
-        console.log(_state)
+        //console.log(_state)
 
         if (_state === "no_found") {
             return null

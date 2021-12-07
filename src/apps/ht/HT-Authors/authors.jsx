@@ -1,38 +1,8 @@
-import React, { useState } from 'react'
-import { SpinnerCircle } from '../../../components/ui-components/ui_components'
-import GetAuthorData from '../webServices/authors/authorsData_dataset'
+import React from 'react'
 import { CsvToHtmlTable } from 'react-csv-to-table';
 
-export default function Authors({ id_dataset }) {
-
-    const [_data, set_data] = useState()
-    const [_state, set_state] = useState()
-
-
-
-    return (
-        <div>
-            {
-                _state !== "done"
-                    ? <GetAuthorData id_dataset={id_dataset} resoultsData={(data) => { set_data(data) }} status={(state) => { set_state(state) }} />
-                    : null
-            }
-            {
-                _state === "loading"
-                    ? <SpinnerCircle />
-                    : null
-            }
-            {
-                _data
-                    ? <AuthorTable data={_data} />
-                    : null
-            }
-        </div>
-    )
-}
-
-function AuthorTable({ data }) {
-    //console.log(data)
+export default function Authors({ data }) {
+    console.log(data)
     const authorData = data[0]?.tfBindingAuthorsData
     if (!authorData) {
         return null

@@ -67,7 +67,7 @@ export default function Table({ dataTable }) {
                 />
                 <tr>
                     {dataTable.columns.map((col, indx) => {
-                        if (disabledColumns[col.value]) {
+                        if (!disabledColumns[col.value]) {
                             return <th key={`thTable_${indx}`}>{col.name}</th>;
                         }
                         return null
@@ -80,7 +80,7 @@ export default function Table({ dataTable }) {
                         <tr key={`trTable_${index}`}>
 
                             {row.map((r, indx) => {
-                                if (disabledColumns[r.value]) {
+                                if (!disabledColumns[r.value]) {
                                     return <td key={`tdTable_${indx}`}>{r.data}</td>;
                                 }
                                 return null
