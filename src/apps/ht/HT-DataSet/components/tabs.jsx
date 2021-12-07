@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Authors from '../../HT-Authors/authors'
 import NormData from '../../HT-NormalizedData/normData'
 import GetAuthorData from '../../webServices/authors/authorsData_dataset'
@@ -18,10 +18,19 @@ export default function Tabs({ id_dataset, data }) {
     const [_peaksData, set_peaksData] = useState()
     const [_tusData, set_tusData] = useState()
     const [_loading, set_loading] = useState([false, false, false, true, true])
-
     let loading = (_loading[0] && _loading[1] && _loading[2] && _loading[3] && _loading[4])
 
-    //console.log(loading)
+    useEffect(() => {
+        if(loading) {
+            if(!(_peaksData || _tfbsData || _tssData || _ttsData || _tusData)){
+                set_openTab(1)
+            }
+        }
+    })
+
+    
+
+
     let tabTitle1 = ""
 
     switch (data?.datasetType) {
