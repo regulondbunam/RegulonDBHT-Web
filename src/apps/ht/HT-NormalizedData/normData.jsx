@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import PEAKS from './tables/peaks'
 import TFBS from './tables/tfbs'
+import TUS from './tables/tus'
 
-export default function NormData({ datasetType, tfbsData, tuData, peaksData, ttsData, tssData }) {
+export default function NormData({ datasetType, tfbsData, tusData, peaksData, ttsData, tssData }) {
     const [_select, set_select] = useState("TFBS")
     //console.log(tfbsData[0])
     let options = undefined
@@ -61,8 +62,8 @@ export default function NormData({ datasetType, tfbsData, tuData, peaksData, tts
                     : null
             }
             {
-                datasetType === "TUS"
-                ?null
+                (datasetType === "TUS" && tusData)
+                ?<TUS data={tusData} />
                 :null
             }
         </div>
