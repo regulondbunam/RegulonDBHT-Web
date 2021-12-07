@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { SpinnerCircle } from '../../../../components/ui-components/ui_components'
 import Authors from '../../HT-Authors/authors'
 import NormData from '../../HT-NormalizedData/normData'
 import GetAuthorData from '../../webServices/authors/authorsData_dataset'

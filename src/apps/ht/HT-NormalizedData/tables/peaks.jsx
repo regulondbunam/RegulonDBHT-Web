@@ -96,13 +96,3 @@ function linkGenes(genes = []) {
         </div>
     )
 }
-
-function toStrand(strand) {
-    if (strand === "+") {
-        return strand.replace("+", "forward")
-    }
-    if (strand === "-") {
-        return strand.replace("-", "reverse")
-    }
-    return strand.replace(strand, "wtf")
-}
