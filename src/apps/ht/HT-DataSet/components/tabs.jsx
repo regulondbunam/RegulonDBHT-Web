@@ -6,6 +6,7 @@ import GetAuthorData from '../../webServices/authors/authorsData_dataset'
 import GetPeaks from '../../webServices/peaks/peaks_dataset'
 import GetTFBS from '../../webServices/tfbs/tfbs_dataset'
 import GetTUs from '../../webServices/transUnits/tu_dataset'
+import GetTSS from '../../webServices/tss/tss_dataset'
 import Summary from './summary'
 import Style from './tabs.module.css'
 
@@ -110,6 +111,10 @@ export default function Tabs({ id_dataset, data }) {
         )
     }
 
+    if ((_datasetData === 1 && _autorData === 1) || !tabTitle1) {
+        return null
+    }
+
     return (
         <div>
             <br />
@@ -131,6 +136,17 @@ export default function Tabs({ id_dataset, data }) {
                 <GetTUs id_dataset={id_dataset} resoultsData={(data) => {
                     if (Array.isArray && data.length) {
                         set_datasetData({tusData: data})
+                    } else {
+                        set_datasetData(1)
+                    }
+                }}
+                />
+            }
+            {
+                data?.datasetType === "TSS" &&
+                <GetTSS id_dataset={id_dataset} resoultsData={(data) => {
+                    if (Array.isArray && data.length) {
+                        set_datasetData({tssData: data})
                     } else {
                         set_datasetData(1)
                     }
