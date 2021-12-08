@@ -1,11 +1,8 @@
 import React, { useMemo } from 'react'
 import { TableI } from "../../../../components/ui-components/ui_components"
-import { MKSequenceClass } from '../mkSequence'
 
-export default function TFBS({
-    data
-}) {
-
+export default function TSS({ data }) {
+    //console.log(data)
     const dataTable = useMemo(() => {
         let formatTable = {
             columns: [],
@@ -15,54 +12,60 @@ export default function TFBS({
             return null
         }
         for (const property in data[0]) {
-            //console.log(property)
             let dis = false
             let name = property
             switch (property) {
-                case "chrLeftPosition":
+                case "leftEndPosition":
                     name = "START"
                     break;
-                case "chrRightPosition":
+                case "rightEndPosition":
                     name = "END"
                     break;
-                case "score":
-                    name = "SCORE"
+                case "pos_1":
+                    name = "POS 1"
                     break;
                 case "strand":
                     name = "STRAND"
                     break;
-                case "sequence":
-                    name = "SEQUENCE"
-                    break;
                 case "closestGenes":
-                    name = "Closest Genes"
+                    name = "closest genes"
+                    break;
+                case "promoter":
+                    name = "PROMOTER"
                     break;
                 default:
                     dis = true
                     break;
             }
-
             formatTable.columns.push({
                 name: name,
                 value: property,
                 disabled: dis
             });
         }
-        data.forEach(tfbs => {
+        data.forEach(tss => {
             let row = []
-            for (const key in tfbs) {
-                if (Object.hasOwnProperty.call(tfbs, key)) {
-                    let tfbs_prop = tfbs[key];
+            for (const key in tss) {
+                if (Object.hasOwnProperty.call(tss, key)) {
+                    let tss_prop = tss[key];
+
                     if (key === "closestGenes") {
-                        tfbs_prop = linkGenes(tfbs_prop)
+                        if (Array.isArray(tss_prop) && tss_prop.length) {
+                            tss_prop = linkGenes(tss_prop)
+                        } else {
+                            tss_prop = ""
+                        }
                     }
-                    if (key === "sequence") {
-                        tfbs_prop = <MKSequenceClass
-                            id_drawPlace={`${tfbs?.chrLeftPosition}_${tfbs?.chrRightPosition}_${tfbs?.sequence}_${toStrand(tfbs?.strand)}`}
-                            sequence={tfbs?.sequence} />
+                    if (key === "promoter") {
+                        if (Array.isArray(tss_prop) && tss_prop.length) {
+                            tss_prop = linkPromoters(tss_prop)
+                        } else {
+                            tss_prop = ""
+                        }
                     }
+
                     row.push({
-                        data: tfbs_prop,
+                        data: tss_prop,
                         value: key
                     })
                 }
@@ -71,19 +74,18 @@ export default function TFBS({
         });
         return formatTable
     }, [data])
-    //console.log(dataTable)
+    console.log(dataTable)
     if (Array.isArray(data) && !data.length) {
         console.warn("getDatasetAllTus array data is empty")
         return null
     }
     return (
-        <div style={{overflow: "auto"}} >
-            <h3>TFBS DATA</h3>
+        <div style={{ overflow: "auto" }} >
+            <h3>TSS DATA</h3>
             <TableI dataTable={dataTable} />
         </div>
     )
 }
-
 
 function linkGenes(genes = []) {
     return (
@@ -97,31 +99,14 @@ function linkGenes(genes = []) {
     )
 }
 
-function toStrand(strand) {
-    if (strand === "+") {
-        return strand.replace("+", "forward")
-    }
-    if (strand === "-") {
-        return strand.replace("-", "reverse")
-    }
-    return strand.replace(strand, "wtf")
-}
-/*
-
-
-function ViewData({ data }) {
-   // console.log(data[0])
-
-    if (Array.isArray(data) && !data.length) {
-        console.warn("getDatasetAllTus array data is empty")
-        return null
-    }
+function linkPromoters(promoters = []) {
     return (
-        <div style={{overflow: "auto"}} >
-            <TableI dataTable={dataTable} />
+        <div >
+            {
+                promoters.map((promoter) => {
+                    return <a key={promoter._id} style={{ marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${promoter?.name}&organism=ECK12&type=All`} target="_blank" rel="noreferrer">{promoter?.name}</a>
+                })
+            }
         </div>
     )
 }
-
-
-*/

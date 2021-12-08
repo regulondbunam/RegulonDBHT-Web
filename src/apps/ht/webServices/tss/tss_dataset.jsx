@@ -5,41 +5,33 @@ import { gql } from "@apollo/client";
 function query(id_dataset) {
     return gql`
     {
-      getAllTTSOfDataset(datasetId: "${id_dataset}") {
-        _id
-        chromosome
-        leftEndPosition
-        rightEndPosition
-        name
-        strand
-        closestGenes {
+        getAllTSSOfDataset(datasetId: "${id_dataset}") {
           _id
-          name
-          distanceTo
-        }
-        terminator {
-          _id
-          transcriptionUnits {
+          chromosome
+          leftEndPosition
+          rightEndPosition
+          pos_1
+          strand
+          closestGenes {
             _id
             name
-            promoter {
-              _id
-              name
-              sequence
-              leftEndPosition
-              rightEndPosition
-              strand
-            }
+            distanceTo
           }
+          promoter {
+            _id
+            name
+            strand
+            pos1
+            sigma
+            confidenceLevel
+          }
+          datasetIds
         }
-        datasetIds
-        temporalId
       }
-    }
     `
 }
 
-const GetTTS = ({
+const GetTSS = ({
     id_dataset = "",
     status = () => { },
     resoultsData = () => { },
@@ -52,12 +44,12 @@ const GetTTS = ({
         }
         if (data) {
             try {
-              if(data.getAllTTSOfDataset.length > 0) {
+              if(data.getAllTSSOfDataset.length > 0) {
                 status('done')
               } else {
                 status('no_results')
               }
-              resoultsData(data?.getAllTTSOfDataset)
+              resoultsData(data?.getAllTSSOfDataset)
                 
             } catch (error) {
                 status('error')
@@ -73,4 +65,4 @@ const GetTTS = ({
     return (<></>);
 }
 
-export default GetTTS;
+export default GetTSS;

@@ -79,6 +79,7 @@ export default function PEAKS({
     }
     return (
         <div style={{ overflow: "auto" }} >
+            <h3>PEAKS DATA</h3>
             <TableI dataTable={dataTable} />
         </div>
     )
