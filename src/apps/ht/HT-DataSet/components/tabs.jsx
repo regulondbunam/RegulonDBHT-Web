@@ -103,7 +103,7 @@ export default function Tabs({ id_dataset, data }) {
                             <Suspense
                                 fallback={
                                     <div>
-                                        Looking for dataset data, please wait this may take some time
+                                        Looking for dataset autor data, please wait this may take some time
                                         <SpinnerCircle />
                                     </div>
                                 }

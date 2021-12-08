@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import { useLazyQuery } from '@apollo/client';
 import Style from "./auto.module.css"
 import { QUERY } from './query';
@@ -13,7 +13,7 @@ const Autocomplete = ({
     const [_keyword, setKeyword] = useState()
     const [getSuges, { loading, error, data }] = useLazyQuery(QUERY);
     const matchKeywords = filterData(data?.getDatasetsFromSearch, _keyword, query);
-    const [seeResults, setSeeResults] = useState(false);
+    //const [seeResults, setSeeResults] = useState(false);
 
     if (error) {
         console.error(error)
@@ -35,10 +35,10 @@ const Autocomplete = ({
                             document.getElementById(`auto_warn${id}`).style.display = "none"
                             if (keyword.length > 0) {
                                 setKeyword(keyword)
-                                console.log("\"" + keyword + "\"[" + query + "]" + " AND " + datasetType + "[datasetType]")
+                                console.log("\"" + keyword + "\"[" + query + "] AND " + datasetType + "[datasetType]")
                                 getSuges({
                                     variables: {
-                                        keyword: "\"" + keyword + "\"[" + query + "]" + " AND " + datasetType + "[datasetType]"
+                                        keyword: "\"" + keyword + "\"[" + query + "] AND " + datasetType + "[datasetType]"
                                     }
                                 })
                             } else {
