@@ -3,6 +3,7 @@ import { SpinnerCircle } from '../../../../components/ui-components/ui_component
 
 import NormData from '../../HT-NormalizedData/normData'
 import GetAuthorData from '../../webServices/authors/authorsData_dataset'
+import GetGE from '../../webServices/geneExpression/ge_dataset'
 import GetPeaks from '../../webServices/peaks/peaks_dataset'
 import GetTFBS from '../../webServices/tfbs/tfbs_dataset'
 import GetTUs from '../../webServices/transUnits/tu_dataset'
@@ -10,6 +11,7 @@ import GetTSS from '../../webServices/tss/tss_dataset'
 import GetTTS from '../../webServices/tts/tts_dataset'
 import Summary from './summary'
 import Style from './tabs.module.css'
+
 
 const AuthorData = lazy(()=> import('../../HT-Authors/authors'))
 
@@ -27,8 +29,6 @@ export default function Tabs({ id_dataset, data }) {
         }
     },[_datasetData, _autorData])
 
-
-
     let tabTitle1 = ""
     switch (data?.datasetType) {
         case "TFBINDING":
@@ -37,6 +37,7 @@ export default function Tabs({ id_dataset, data }) {
         case "TSS":
         case "TTS":
         case "TUS":
+        case "GENE_EXPRESSION":
             tabTitle1 = "Uniformized"
             break;
         default:
@@ -161,6 +162,18 @@ export default function Tabs({ id_dataset, data }) {
                 <GetTTS id_dataset={id_dataset} resoultsData={(data) => {
                     if (Array.isArray && data.length) {
                         set_datasetData({ttsData: data})
+                        //
+                    } else {
+                        set_datasetData(1)
+                    }
+                }}
+                />
+            }
+            {
+                data?.datasetType === "GENE_EXPRESSION" &&
+                <GetGE id_dataset={id_dataset} resoultsData={(data) => {
+                    if (Array.isArray && data.length) {
+                        set_datasetData({geData: data})
                         //
                     } else {
                         set_datasetData(1)
