@@ -75,13 +75,14 @@ export default function TTS({ data }) {
         });
         return formatTable
     }, [data])
-    console.log(dataTable)
+    //console.log(dataTable)
     if (Array.isArray(data) && !data.length) {
         console.warn("getDatasetAllTus array data is empty")
         return null
     }
     return (
         <div style={{ overflow: "auto" }} >
+            <h3>TTS DATA</h3>
             <TableI dataTable={dataTable} />
         </div>
     )

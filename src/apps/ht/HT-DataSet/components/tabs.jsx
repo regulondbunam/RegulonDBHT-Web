@@ -23,7 +23,7 @@ export default function Tabs({ id_dataset, data }) {
                 set_openTab(1)
             }
         }
-    })
+    },[_datasetData, _autorData])
 
 
 
