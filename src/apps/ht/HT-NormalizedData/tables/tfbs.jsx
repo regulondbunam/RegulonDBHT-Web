@@ -78,6 +78,7 @@ export default function TFBS({
     }
     return (
         <div style={{overflow: "auto"}} >
+            <h3>TFBS DATA</h3>
             <TableI dataTable={dataTable} />
         </div>
     )

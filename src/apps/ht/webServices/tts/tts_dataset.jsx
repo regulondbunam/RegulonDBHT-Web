@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from "@apollo/client";
-
+import response from "./getAllTTSofDatasetResponse.json"
 
 function query(id_dataset) {
     return gql`
@@ -48,7 +48,10 @@ const GetTFBS = ({
     status = () => { },
     resoultsData = () => { },
 }) => {
-    const { data, loading, error } = useQuery(query(id_dataset))
+  let loading = false;
+  let error = false;
+  let data = response.data;
+  //const { data, loading, error } = useQuery(query(id_dataset))
     //console.log(id_dataset)
     useEffect(() => {
         if (loading) {

@@ -3,9 +3,9 @@ import PEAKS from './tables/peaks'
 import TFBS from './tables/tfbs'
 import TUS from './tables/tus'
 
-export default function NormData({ datasetType, tfbsData, tusData, peaksData, ttsData, tssData }) {
+export default function NormData({ datasetType, datasetData }) {
     const [_select, set_select] = useState("TFBS")
-    //console.log(tfbsData[0])
+    console.log(datasetData)
     let options = undefined
 
     switch (datasetType) {
@@ -23,6 +23,8 @@ export default function NormData({ datasetType, tfbsData, tusData, peaksData, tt
 
     return (
         <div>
+            <br />
+            <br />
             {
                 options
                     ? <label>
@@ -40,30 +42,30 @@ export default function NormData({ datasetType, tfbsData, tusData, peaksData, tt
                     : null
             }
             {
-                (_select === "TFBS" && tfbsData)
-                ? <TFBS data={tfbsData} />
+                (_select === "TFBS" && datasetData?.tfbsData)
+                ? <TFBS data={datasetData?.tfbsData} />
                 : null
             }
             {
-                (_select === "PEAKS" && peaksData)
-                    ? <PEAKS data={peaksData} />
+                (_select === "PEAKS" && datasetData?.peaksData)
+                    ? <PEAKS data={datasetData?.peaksData} />
                     : null
             }
             {
                ( _select === "TFBS and PEAKS")
                     ? <div>
                         {
-                            tfbsData && <TFBS data={tfbsData} />
+                            datasetData?.tfbsData && <TFBS data={datasetData?.tfbsData} />
                         }
                         {
-                            peaksData && <PEAKS data={peaksData} />
+                            datasetData?.peaksData && <PEAKS data={datasetData?.peaksData} />
                         }
                     </div>
                     : null
             }
             {
-                (datasetType === "TUS" && tusData)
-                ?<TUS data={tusData} />
+                (datasetType === "TUS" && datasetData?.tusData)
+                ?<TUS data={datasetData?.tusData} />
                 :null
             }
         </div>
