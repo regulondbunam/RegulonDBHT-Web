@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import PEAKS from './tables/peaks'
 import TFBS from './tables/tfbs'
 import TSS from './tables/tss'
+import TTS from './tables/tts'
 import TUS from './tables/tus'
 
 
@@ -73,6 +74,11 @@ export default function NormData({ datasetType, datasetData }) {
             {
                 (datasetType === "TSS" && datasetData?.tssData)
                 ?<TSS data={datasetData?.tssData} />
+                :null
+            }
+            {
+                (datasetType === "TTS" && datasetData?.ttsData)
+                ?<TTS data={datasetData?.ttsData} />
                 :null
             }
         </div>

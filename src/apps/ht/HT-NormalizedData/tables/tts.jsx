@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import { TableI } from "../../../../components/ui-components/ui_components"
 
-export default function TSS({ data }) {
+export default function TTS({ data }) {
     //console.log(data)
     const dataTable = useMemo(() => {
         let formatTable = {
@@ -21,8 +21,8 @@ export default function TSS({ data }) {
                 case "rightEndPosition":
                     name = "END"
                     break;
-                case "pos_1":
-                    name = "POS 1"
+                case "name":
+                    name = "NAME"
                     break;
                 case "strand":
                     name = "STRAND"
@@ -30,9 +30,9 @@ export default function TSS({ data }) {
                 case "closestGenes":
                     name = "closest genes"
                     break;
-                case "promoter":
-                    name = "PROMOTER"
-                    break;
+//                case "terminator":
+//                    name = "TERMINATOR"
+//                    break;
                 default:
                     dis = true
                     break;
@@ -56,6 +56,7 @@ export default function TSS({ data }) {
                             tss_prop = ""
                         }
                     }
+                    /*
                     if (key === "promoter") {
                         if (Array.isArray(tss_prop) && tss_prop.length) {
                             tss_prop = linkPromoters(tss_prop)
@@ -63,7 +64,7 @@ export default function TSS({ data }) {
                             tss_prop = ""
                         }
                     }
-
+*/
                     row.push({
                         data: tss_prop,
                         value: key
@@ -92,18 +93,6 @@ function linkGenes(genes = []) {
             {
                 genes.map((gen) => {
                     return <a key={gen._id} style={{ marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gen.name}</a>
-                })
-            }
-        </div>
-    )
-}
-
-function linkPromoters(promoters = []) {
-    return (
-        <div >
-            {
-                promoters.map((promoter) => {
-                    return <a key={promoter._id} style={{ marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${promoter?.name}&organism=ECK12&type=All`} target="_blank" rel="noreferrer">{promoter?.name}</a>
                 })
             }
         </div>

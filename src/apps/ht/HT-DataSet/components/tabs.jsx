@@ -7,6 +7,7 @@ import GetPeaks from '../../webServices/peaks/peaks_dataset'
 import GetTFBS from '../../webServices/tfbs/tfbs_dataset'
 import GetTUs from '../../webServices/transUnits/tu_dataset'
 import GetTSS from '../../webServices/tss/tss_dataset'
+import GetTTS from '../../webServices/tts/tts_dataset'
 import Summary from './summary'
 import Style from './tabs.module.css'
 
@@ -15,23 +16,14 @@ export default function Tabs({ id_dataset, data }) {
     const [_openTab, set_openTab] = useState(0)
     const [_autorData, set_autorData] = useState()
     const [_datasetData, set_datasetData] = useState()
-    /*
-    
-    const [_ttsData, set_ttsData] = useState()
-    const [_tssData, set_tssData] = useState()
-    
-    const [_tusData, set_tusData] = useState()
-    const [_loading, set_loading] = useState([false, false, false, true, true])
-    let loading = (_loading[0] && _loading[1] && _loading[2] && _loading[3] && _loading[4])
-    /*
-        useEffect(() => {
-            if(loading) {
-                if(!(_peaksData || _tfbsData || _tssData || _ttsData || _tusData)){
-                    set_openTab(1)
-                }
+
+    useEffect(() => {
+        if((_datasetData && _autorData)) {
+            if(_datasetData === 1){
+                set_openTab(1)
             }
-        })
-    */
+        }
+    })
 
 
 
@@ -63,7 +55,11 @@ export default function Tabs({ id_dataset, data }) {
         return ""
     }
 
-    if (_datasetData && _autorData) {
+    if ((_datasetData === 1 && _autorData === 1) || !tabTitle1) {
+        return null
+    }
+
+    if ((_datasetData || _datasetData === 1) && (_autorData || _autorData === 1)) {
         return (
             <div>
                 <h2>DATA FROM DATASET</h2>
@@ -111,10 +107,6 @@ export default function Tabs({ id_dataset, data }) {
         )
     }
 
-    if ((_datasetData === 1 && _autorData === 1) || !tabTitle1) {
-        return null
-    }
-
     return (
         <div>
             <br />
@@ -147,6 +139,18 @@ export default function Tabs({ id_dataset, data }) {
                 <GetTSS id_dataset={id_dataset} resoultsData={(data) => {
                     if (Array.isArray && data.length) {
                         set_datasetData({tssData: data})
+                    } else {
+                        set_datasetData(1)
+                    }
+                }}
+                />
+            }
+            {
+                data?.datasetType === "TTS" &&
+                <GetTTS id_dataset={id_dataset} resoultsData={(data) => {
+                    if (Array.isArray && data.length) {
+                        set_datasetData({ttsData: data})
+                        //
                     } else {
                         set_datasetData(1)
                     }
