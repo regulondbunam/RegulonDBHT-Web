@@ -10,7 +10,8 @@ import { gql } from "@apollo/client";
 
 
 function query(ht_query) {
-  try{return gql`
+  try {
+    return gql`
   {
       getDatasetsFromSearch(advancedSearch: "${ht_query}") {
         _id
@@ -83,7 +84,7 @@ function query(ht_query) {
         }
       }
       `
-  }catch(error){
+  } catch (error) {
     console.log(error)
   }
   return gql`{
@@ -91,36 +92,38 @@ function query(ht_query) {
       datasetID
     }
   }`
-    
+
 }
 
 const GetResultsDataset = ({
-    ht_query = "",
-    status = () => { },
-    resoultsData = () => { },
+  ht_query = "",
+  status = () => { },
+  resoultsData = () => { },
 }) => {
-    const { data, loading, error } = useQuery(query(ht_query))
-    useEffect(() => {
-        if (loading) {
-            status('loading')
-        }
-        if (data) {
+  const { data, loading, error } = useQuery(query(ht_query))
+  useEffect(() => {
+    if (loading) {
+      status('loading')
+    }
+    if (data) {
 
-            try {
-                resoultsData(data?.getDatasetsFromSearch)
-                status('done')
-            } catch (error) {
-                status('error')
-                console.error(error)
-            }
-        }
-        if (error) {
-            status('error')
-            console.error(error)
-        }
+      try {
+        resoultsData(data?.getDatasetsFromSearch)
+        status('done')
+      } catch (error) {
+        resoultsData(undefined)
+        status('error')
+        console.error(error)
+      }
+    }
+    if (error) {
+      resoultsData(undefined)
+      status('error')
+      console.error(error)
+    }
 
-    }, [loading, error, status, data, resoultsData, ht_query]);
-    return (<></>);
+  }, [loading, error, status, data, resoultsData, ht_query]);
+  return (<></>);
 }
 
 export default GetResultsDataset;

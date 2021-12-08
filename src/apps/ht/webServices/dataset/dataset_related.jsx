@@ -48,11 +48,13 @@ export const GetRelatedDatasetByControlId = ({
                 resoultsData(data?.getDatasetsFromSearch)
                 status('done')
             } catch (error) {
+                resoultsData(undefined)
                 status('error')
                 console.error(error)
             }
         }
         if (error) {
+            resoultsData(undefined)
             status('error')
             console.error(error)
         }

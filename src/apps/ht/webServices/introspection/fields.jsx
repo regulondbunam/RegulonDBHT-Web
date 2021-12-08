@@ -31,33 +31,35 @@ const query = gql`
     `
 
 const GetFields = ({
-    status = () => { },
-    resoultsData = () => { },
+  status = () => { },
+  resoultsData = () => { },
 }) => {
-    const [_res, set_res] = useState(false);
-    const { data, loading, error } = useQuery(query)
-    useEffect(() => {
-        if (loading) {
-            status('loading')
-        }
-        if (data && !_res) {
-            set_res(true)
-            try {
-                resoultsData(data)
-                status('done')
-            } catch (error) {
-                status('error')
-                console.error(error)
-            }
-        }
-        if (error) {
-            status('error')
-            console.log(error)
-        }
+  const [_res, set_res] = useState(false);
+  const { data, loading, error } = useQuery(query)
+  useEffect(() => {
+    if (loading) {
+      status('loading')
+    }
+    if (data && !_res) {
+      set_res(true)
+      try {
+        resoultsData(data)
+        status('done')
+      } catch (error) {
+        resoultsData(undefined)
+        status('error')
+        console.error(error)
+      }
+    }
+    if (error) {
+      resoultsData(undefined)
+      status('error')
+      console.log(error)
+    }
 
-    }, [loading, error, status, data, _res, resoultsData]);
-    if (error) { console.log(error) }
-    return (<></>);
+  }, [loading, error, status, data, _res, resoultsData]);
+  if (error) { console.log(error) }
+  return (<></>);
 }
 
 export default GetFields;

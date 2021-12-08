@@ -10,7 +10,7 @@ import { gql } from "@apollo/client";
 
 
 function query(id_dataset) {
-    return gql`
+  return gql`
     {
         getAllTransUnitsOfDataset(datasetId: "${id_dataset}") {
           _id
@@ -36,36 +36,38 @@ function query(id_dataset) {
 }
 
 const GetTUs = ({
-    id_dataset = "",
-    status = () => { },
-    resoultsData = () => { },
+  id_dataset = "",
+  status = () => { },
+  resoultsData = () => { },
 }) => {
-    const { data, loading, error } = useQuery(query(id_dataset))
-    useEffect(() => {
-        if (loading) {
-            status('loading')
+  const { data, loading, error } = useQuery(query(id_dataset))
+  useEffect(() => {
+    if (loading) {
+      status('loading')
+    }
+    if (data) {
+      try {
+        if (!data.getAllTransUnitsOfDataset.length) {
+          status('no_results')
+        } else {
+          status('done')
         }
-        if (data) {
-            try {
-              if( !data.getAllTransUnitsOfDataset.length) {
-                status('no_results')
-              } else {
-                status('done')
-              }
-              resoultsData(data?.getAllTransUnitsOfDataset)
-                
-            } catch (error) {
-                status('error')
-                console.error(error)
-            }
-        }
-        if (error) {
-            status('error')
-            console.error(error)
-        }
+        resoultsData(data?.getAllTransUnitsOfDataset)
 
-    }, [loading, error, status, data, resoultsData, id_dataset]);
-    return (<></>);
+      } catch (error) {
+        resoultsData(undefined)
+        status('error')
+        console.error(error)
+      }
+    }
+    if (error) {
+      resoultsData(undefined)
+      status('error')
+      console.error(error)
+    }
+
+  }, [loading, error, status, data, resoultsData, id_dataset]);
+  return (<></>);
 }
 
 export default GetTUs;

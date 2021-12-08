@@ -10,7 +10,7 @@ import { gql } from "@apollo/client";
 
 
 function query(id_dataset) {
-    return gql`
+  return gql`
     {
       getAllPeaksOfDataset(datasetId: "${id_dataset}") {
         _id
@@ -33,35 +33,37 @@ function query(id_dataset) {
 }
 
 const GetPeaks = ({
-    id_dataset = "",
-    status = () => { },
-    resoultsData = () => { },
+  id_dataset = "",
+  status = () => { },
+  resoultsData = () => { },
 }) => {
-    const { data, loading, error } = useQuery(query(id_dataset))
-    useEffect(() => {
-        if (loading) {
-            status('loading')
+  const { data, loading, error } = useQuery(query(id_dataset))
+  useEffect(() => {
+    if (loading) {
+      status('loading')
+    }
+    if (data) {
+      try {
+        resoultsData(data?.getAllPeaksOfDataset)
+        if (data.getAllPeaksOfDataset.length > 0) {
+          status('done')
+        } else {
+          status('no_results')
         }
-        if (data) {
-            try {
-                resoultsData(data?.getAllPeaksOfDataset)
-                if(data.getAllPeaksOfDataset.length > 0) {
-                    status('done')
-                  } else {
-                    status('no_results')
-                  }
-            } catch (error) {
-                status('error')
-                console.error(error)
-            }
-        }
-        if (error) {
-            status('error')
-            console.error(error)
-        }
+      } catch (error) {
+        resoultsData(undefined)
+        status('error')
+        console.error(error)
+      }
+    }
+    if (error) {
+      resoultsData(undefined)
+      status('error')
+      console.error(error)
+    }
 
-    }, [loading, error, status, data, resoultsData, id_dataset]);
-    return (<></>);
+  }, [loading, error, status, data, resoultsData, id_dataset]);
+  return (<></>);
 }
 
 export default GetPeaks;
