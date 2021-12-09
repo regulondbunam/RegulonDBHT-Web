@@ -8,6 +8,7 @@ import { Viewer } from './igv/viewer'
 import CONF from '../config/ht_conf_enus.json'
 import Tabs from './components/tabs'
 import Related from '../relatedTool/related'
+import NLPGC from '../HT-NLPGrowthCondition/nlpgc'
 
 const conf = CONF?.pages?.dataset_page
 
@@ -128,12 +129,13 @@ function Body({ data }) {
                     </div>
                 </div>
             }
-
+            <NLPGC id_dataset={data?._id} />
             <Tabs id_dataset={data?._id} data={data} />
             <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.title }} />
             <p dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.description }} />
             <Viewer id_dataset={data?._id} tf={data?.objectTested?.name} />
             <br />
+            
             <br />
             <br />
         </div>
