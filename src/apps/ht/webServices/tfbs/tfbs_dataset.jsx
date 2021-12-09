@@ -10,7 +10,7 @@ import { gql } from "@apollo/client";
 
 
 function query(id_dataset) {
-    return gql`
+  return gql`
     {
         getAllTFBindingOfDataset(datasetId: "${id_dataset}") {
           _id
@@ -50,37 +50,39 @@ function query(id_dataset) {
 }
 
 const GetTFBS = ({
-    id_dataset = "",
-    status = () => { },
-    resoultsData = () => { },
+  id_dataset = "",
+  status = () => { },
+  resoultsData = () => { },
 }) => {
-    const { data, loading, error } = useQuery(query(id_dataset))
-    //console.log(id_dataset)
-    useEffect(() => {
-        if (loading) {
-            status('loading')
+  const { data, loading, error } = useQuery(query(id_dataset))
+  //console.log(id_dataset)
+  useEffect(() => {
+    if (loading) {
+      status('loading')
+    }
+    if (data) {
+      try {
+        if (data.getAllTFBindingOfDataset.length > 0) {
+          status('done')
+        } else {
+          status('no_results')
         }
-        if (data) {
-            try {
-              if(data.getAllTFBindingOfDataset.length > 0) {
-                status('done')
-              } else {
-                status('no_results')
-              }
-              resoultsData(data?.getAllTFBindingOfDataset)
-                
-            } catch (error) {
-                status('error')
-                console.error(error)
-            }
-        }
-        if (error) {
-            status('error')
-            console.error(error)
-        }
+        resoultsData(data?.getAllTFBindingOfDataset)
 
-    }, [loading, error, status, data, resoultsData, id_dataset]);
-    return (<></>);
+      } catch (error) {
+        resoultsData(undefined)
+        status('error')
+        console.error(error)
+      }
+    }
+    if (error) {
+      resoultsData(undefined)
+      status('error')
+      console.error(error)
+    }
+
+  }, [loading, error, status, data, resoultsData, id_dataset]);
+  return (<></>);
 }
 
 export default GetTFBS;

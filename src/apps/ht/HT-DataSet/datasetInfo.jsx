@@ -8,6 +8,7 @@ import { Viewer } from './igv/viewer'
 import CONF from '../config/ht_conf_enus.json'
 import Tabs from './components/tabs'
 import Related from '../relatedTool/related'
+import NLPGC from '../HT-NLPGrowthCondition/nlpgc'
 
 const conf = CONF?.pages?.dataset_page
 
@@ -18,10 +19,10 @@ export default function DatasetInfo({ id_dataset }) {
     useEffect(() => {
         let title = "Loading ..."
         if (_data) {
-            
+
             if (_data?.sample?.title === "obtener de GEO") {
                 title = _data?._id
-            }else{
+            } else {
                 title = _data?.sample?.title
             }
             //console.log(_data)
@@ -119,17 +120,22 @@ function Body({ data }) {
                     </div>
                     : null
             }
-
-            <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_growthc?.title }} />
-            <p dangerouslySetInnerHTML={{ __html: section?.dataset_growthc?.description }} />
-            <div style={{ marginLeft: "5%" }}>
-                <GrowthConditions growthCondition={data?.growthConditions} />
-            </div>
+            {
+                data?.growthConditions &&
+                <div><h2 dangerouslySetInnerHTML={{ __html: section?.dataset_growthc?.title }} />
+                    <p dangerouslySetInnerHTML={{ __html: section?.dataset_growthc?.description }} />
+                    <div style={{ marginLeft: "5%" }}>
+                        <GrowthConditions growthCondition={data?.growthConditions} />
+                    </div>
+                </div>
+            }
+            <NLPGC id_dataset={data?._id} />
             <Tabs id_dataset={data?._id} data={data} />
             <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.title }} />
             <p dangerouslySetInnerHTML={{ __html: section?.dataset_igv?.description }} />
-            <Viewer  id_dataset={data?._id} tf={data?.objectTested?.name} />
+            <Viewer id_dataset={data?._id} tf={data?.objectTested?.name} />
             <br />
+            
             <br />
             <br />
         </div>

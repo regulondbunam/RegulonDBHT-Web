@@ -1,15 +1,15 @@
 import React from 'react'
-import { GetRelatedDatasetBySource} from '../webServices/dataset/dataset_related'
+import { GetRelatedDatasetBySource } from '../webServices/dataset/dataset_related'
 
 
 export class DatasetLinkedByControlId extends React.Component {
 
-    state={
+    state = {
         _data: undefined,
         _state: undefined
     }
 
-    shouldComponentUpdate(nextProps, nextState){
+    shouldComponentUpdate(nextProps, nextState) {
         if (this.state._state === nextState._state) {
             return false
         }
@@ -37,8 +37,8 @@ export class DatasetLinkedByControlId extends React.Component {
                     _state !== "done"
                         ? <GetRelatedDatasetBySource
                             sourceId={this.props.sourceId}
-                            status={(state) => { this.setState({_state: state}) }}
-                            resoultsData={(data) => {this.setState({_data: data}) }} />
+                            status={(state) => { this.setState({ _state: state }) }}
+                            resoultsData={(data) => { this.setState({ _data: data }) }} />
                         : null
                 }
                 {
@@ -48,47 +48,54 @@ export class DatasetLinkedByControlId extends React.Component {
                 }
                 {
                     _data
-                        ? <table>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <button className="iconButton"
-                                            onClick={() => {
-                                                let links = document.getElementById("control_links")
-                                                if (links.style.display === "none") {
-                                                    links.style.display = "contents"
-                                                } else {
-                                                    links.style.display = "none"
-                                                }
-                                            }}
-                                        >
-                                           <i className='bx bx-glasses' ></i>
-                                        </button>
-                                        Related dataset by serie
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody id="control_links" style={{ display: 'none' }}>
-                                {
-                                    _data.map(dt=>{
-                                        
-                                        return(
-                                            <tr key={dt._id}>
-                                                <td>
-                                                    <a href={`./${dt?._id}`} >{dt._id}</a>
-                                                    <p>{dt?.sample?.title}</p>
-                                                </td>
-                                            </tr>
-                                        )
-                                    })
-                                }
-                            </tbody>
-                        </table>
+                        ? <div  style={{ overflow: "auto", maxHeight: "350px"}}>
+                            <div>
+                                <button className="iconButton"
+                                    onClick={() => {
+                                        let links = document.getElementById("control_links")
+                                        if (links.style.display === "none") {
+                                            links.style.display = "contents"
+                                        } else {
+                                            links.style.display = "none"
+                                        }
+                                    }}
+                                >
+                                    <i className='bx bx-glasses' ></i>
+                                </button>
+                                Related dataset by serie
+                            </div>
+                            <div id="control_links" style={{ display: 'none' }}>
+                                            <div style={{ height: "auto"}}>
+                                            {
+                                                _data.map(dt => {
+
+                                                    return (
+                                                        <div key={dt._id}>
+                                                                <a href={`./${dt?._id}`} >{dt._id}</a>
+                                                                <p>{dt?.sample?.title}</p>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                            </div>
+                                        </div>
+                        </div>
                         : null
                 }
-    
+
             </div>
         )
     }
 }
 
+/*
+<table>
+                            <tbody >
+                                <tr>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+*/

@@ -2,79 +2,77 @@ import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from "@apollo/client";
 
-
 function query(id_dataset) {
-    return gql`
+  return gql`
     {
-        getAllTFBindingOfDataset(datasetId: "${id_dataset}") {
+      getAllTTSOfDataset(datasetId: "${id_dataset}") {
+        _id
+        chromosome
+        leftEndPosition
+        rightEndPosition
+        name
+        strand
+        closestGenes {
           _id
-          chromosome
-          chrLeftPosition
-          chrRightPosition
-          foundClassicRIs {
-            tfbsLeftPosition
-            tfbsRightPosition
-            relativeGeneDistance
-            relativeTSSDistance
-            strand
-            sequence
-          }
-          foundDatasetRIs {
-            tfbsLeftPosition
-            tfbsRightPosition
-            relativeGeneDistance
-            relativeTSSDistance
-            strand
-            sequence
-          }
-          nameCollection
-          score
-          strand
-          sequence
-          closestGenes {
+          name
+          distanceTo
+        }
+        terminator {
+          _id
+          transcriptionUnits {
             _id
             name
-            distanceTo
+            promoter {
+              _id
+              name
+              sequence
+              leftEndPosition
+              rightEndPosition
+              strand
+            }
           }
-          datasetIds
-          temporalId
         }
+        datasetIds
+        temporalId
       }
+    }
     `
 }
 
-const GetTFBS = ({
-    id_dataset = "",
-    status = () => { },
-    resoultsData = () => { },
+const GetTTS = ({
+  id_dataset = "",
+  status = () => { },
+  resoultsData = () => { },
 }) => {
-    const { data, loading, error } = useQuery(query(id_dataset))
-    //console.log(id_dataset)
-    useEffect(() => {
-        if (loading) {
-            status('loading')
+  const { data, loading, error } = useQuery(query(id_dataset))
+  //console.log(id_dataset)
+  useEffect(() => {
+    if (loading) {
+      status('loading')
+    }
+    if (data) {
+      try {
+        if (data.getAllTTSOfDataset.length > 0) {
+          status('done')
+        } else {
+          status('no_results')
         }
-        if (data) {
-            try {
-              if(data.getAllTFBindingOfDataset.length > 0) {
-                status('done')
-              } else {
-                status('no_results')
-              }
-              resoultsData(data?.getAllTFBindingOfDataset)
-                
-            } catch (error) {
-                status('error')
-                console.error(error)
-            }
-        }
-        if (error) {
-            status('error')
-            console.error(error)
-        }
+        resoultsData(data?.getAllTTSOfDataset)
 
-    }, [loading, error, status, data, resoultsData, id_dataset]);
-    return (<></>);
+      } catch (error) {
+        resoultsData(undefined)
+        status('error')
+        console.error(error)
+      }
+    }
+    if (error) {
+      resoultsData(undefined)
+      status('error')
+      console.error(error)
+    }
+
+  }, [loading, error, status, data, resoultsData, id_dataset]);
+  return (<></>);
 }
 
-export default GetTFBS;
+export default GetTTS;

@@ -2,8 +2,8 @@ import React from 'react'
 import { CsvToHtmlTable } from 'react-csv-to-table';
 
 export default function Authors({ data }) {
-    //console.log(data)
-    const authorData = data[0]?.tfBindingAuthorsData
+    console.log(data)
+    const authorData = data[0]?.authorsData
     if (!authorData) {
         return null
     }
@@ -13,7 +13,7 @@ export default function Authors({ data }) {
         let coment = authorData.substring(start, end)
         coment = coment.replace("# ","")
         let document = authorData.substring(end, authorData.length)
-        let link = saveStaticDataToFile(document, data[0]?._id)
+        let link = saveStaticDataToFile(authorData, data[0]?._id)
         return (
             <div>
                 <button

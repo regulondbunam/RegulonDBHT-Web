@@ -105,12 +105,14 @@ const GetAutoComplete = ({
               status('done')
           } catch (error) {
               status('error')
+              resoultsData(undefined)
               console.error(error)
           }
       }
       if (error) {
           status('error')
-          //console.error(error)
+          resoultsData(undefined)
+          console.error(error)
       }
 
   }, [loading, error, status, data, resoultsData, keyWord, location]);

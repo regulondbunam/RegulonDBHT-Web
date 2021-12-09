@@ -1,58 +1,55 @@
 import React, { useEffect } from 'react';
-//import { Person } from "schema-dts";
-//import { helmetJsonLdProp } from "react-schemaorg";
-//import { Helmet } from 'react-helmet-async';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from "@apollo/client";
-//import {CITATIONS_FIELDS} from "../fragments/fragments"
-
-//const RegulonGeneOntologyItem = ``
-
 
 function query(id_dataset) {
   return gql`
     {
-        getAllTransUnitsOfDataset(datasetId: "${id_dataset}") {
+        getAllTSSOfDataset(datasetId: "${id_dataset}") {
           _id
           chromosome
           leftEndPosition
           rightEndPosition
-          name
+          pos_1
           strand
-          length
-          termType
-          genes {
+          closestGenes {
             _id
             name
-            bnumber
+            distanceTo
           }
-          phantom
-          pseudo
+          promoter {
+            _id
+            name
+            strand
+            pos1
+            sigma
+            confidenceLevel
+          }
           datasetIds
-          temporalId
         }
       }
     `
 }
 
-const GetTUs = ({
+const GetTSS = ({
   id_dataset = "",
   status = () => { },
   resoultsData = () => { },
 }) => {
   const { data, loading, error } = useQuery(query(id_dataset))
+  //console.log(id_dataset)
   useEffect(() => {
     if (loading) {
       status('loading')
     }
     if (data) {
       try {
-        if (!data.getAllTransUnitsOfDataset.length) {
-          status('no_results')
-        } else {
+        if (data.getAllTSSOfDataset.length > 0) {
           status('done')
+        } else {
+          status('no_results')
         }
-        resoultsData(data?.getAllTransUnitsOfDataset)
+        resoultsData(data?.getAllTSSOfDataset)
 
       } catch (error) {
         resoultsData(undefined)
@@ -70,4 +67,4 @@ const GetTUs = ({
   return (<></>);
 }
 
-export default GetTUs;
+export default GetTSS;

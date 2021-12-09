@@ -10,59 +10,58 @@ import { gql } from "@apollo/client";
 
 
 function query(id_dataset) {
-    return gql`
+  return gql`
     {
         getDatasetsFromSearch(advancedSearch: "${id_dataset}[_id]") {
           _id
-          fivePrimeEnrichment
-          publication {
-            pmid
-            doi
-            authors
-            title
-            date
-            pmcid
-          }
-          objectTested {
-            _id
-            name
-            synonyms
-            genes {
-              _id
-              name
-            }
-            note
-            activeConformations
-            externalCrossReferences {
-              externalCrossReferenceId
-              externalCrossReferenceName
-              objectId
-              url
-            }
-          }
-          sourceSerie {
-            sourceId
-            sourceName
-            title
-            platformId
-            platformTitle
-            strategy
-            method
-          }
-          sample {
-            experimentId
-            controlId
-            title
-          }
-          linkedDataset {
-            controlId
-            experimentId
-            datasetType
-          }
-          referenceGenome
-          datasetType
-          temporalId
-          growthConditions {
+    publication {
+      pmid
+      doi
+      authors
+      title
+      date
+      pmcid
+    }
+    objectTested {
+      _id
+      name
+      synonyms
+      genes {
+        _id
+        name
+      }
+      note
+      activeConformations
+      externalCrossReferences {
+        externalCrossReferenceId
+        externalCrossReferenceName
+        objectId
+        url
+      }
+    }
+    sourceSerie {
+      sourceId
+      sourceName
+      title
+      platformId
+      platformTitle
+      strategy
+      method
+    }
+    sample {
+      experimentId
+      controlId
+      title
+    }
+    linkedDataset {
+      controlId
+      experimentId
+      datasetType
+    }
+    referenceGenome
+    datasetType
+    temporalId
+    growthConditions {
             organism
             geneticBackground
             medium
@@ -76,41 +75,48 @@ function query(id_dataset) {
             vesselType
             aerationSpeed
           }
-          releaseDataControl {
-            date
-            version
-          }
+    releaseDataControl{
+      date
+      version
+    }
+    assemblyGenomeId
+    fivePrimeEnrichment
+    nlpGrowthConditionsId
+    geneExpressionFiltered
+    experimentCondition
         }
       }
         `
 }
 
 const GetInfoDataset = ({
-    id_dataset = "",
-    status = () => { },
-    resoultsData = () => { },
+  id_dataset = "",
+  status = () => { },
+  resoultsData = () => { },
 }) => {
-    const { data, loading, error } = useQuery(query(id_dataset))
-    useEffect(() => {
-        if (loading) {
-            status('loading')
-        }
-        if (data) {
-            try {
-                resoultsData(data?.getDatasetsFromSearch[0])
-                status('done')
-            } catch (error) {
-                status('error')
-                console.error(error)
-            }
-        }
-        if (error) {
-            status('error')
-            console.error(error)
-        }
+  const { data, loading, error } = useQuery(query(id_dataset))
+  useEffect(() => {
+    if (loading) {
+      status('loading')
+    }
+    if (data) {
+      try {
+        resoultsData(data?.getDatasetsFromSearch[0])
+        status('done')
+      } catch (error) {
+        resoultsData(undefined)
+        status('error')
+        console.error(error)
+      }
+    }
+    if (error) {
+      resoultsData(undefined)
+      status('error')
+      console.error(error)
+    }
 
-    }, [loading, error, status, data, resoultsData, id_dataset]);
-    return (<></>);
+  }, [loading, error, status, data, resoultsData, id_dataset]);
+  return (<></>);
 }
 
 export default GetInfoDataset;

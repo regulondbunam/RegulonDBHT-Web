@@ -51,11 +51,15 @@ export default function Table({ dataTable }) {
     return (
         <table className="table_content">
             <thead>
-                <tr>
+                {
+                    /**
+                     * <tr>
                     <th>
                         <input type="text" placeholder="Search" onChange={onSearchChange} />
                     </th>
                 </tr>
+                     */
+                }
                 <PageControl
                     nColumns={nColumns}
                     prevPage={prevPage}

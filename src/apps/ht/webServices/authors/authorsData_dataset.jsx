@@ -15,7 +15,7 @@ function query(id_dataset) {
         getAuthorsDataOfDataset(datasetId:"${id_dataset}"){
           _id
           datasetIds
-          tfBindingAuthorsData
+          authorsData
         }
       }
     `
@@ -36,11 +36,13 @@ const GetAuthorData = ({
                 resoultsData(data?.getAuthorsDataOfDataset)
                 status('done')
             } catch (error) {
+                resoultsData(undefined)
                 status('error')
                 console.error(error)
             }
         }
         if (error) {
+            resoultsData(undefined)
             status('error')
             console.error(error)
         }
