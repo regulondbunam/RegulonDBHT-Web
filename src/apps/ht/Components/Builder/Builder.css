@@ -23,18 +23,19 @@
 
 .builderTitle {
     margin-top: 30px;
+    padding-bottom: 0px;
 }
 
 .firstRow {
   margin: 1%;
-  margin-top: 10px;
+  margin-top: -10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .secondRow{
-  width: 97.5%;
+  width: 100%;
   height: auto;
   margin-top: 30px;
 }
@@ -47,6 +48,14 @@
 .container{
   display: flex;
   margin: 1%;
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.button{
+  margin-right: 15px;
+  width: 65px;
 }
 
 /* DropDwon Css */
@@ -108,24 +117,3 @@
   text-align: left;
   text-align-last: left;
 }
-
-/* 
-.iconButton {
-  width: 32px;
-  height: 32px;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-
-  font-size: 2vw;
-  color: white;
-}
-.iconButton:hover {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-} */
-

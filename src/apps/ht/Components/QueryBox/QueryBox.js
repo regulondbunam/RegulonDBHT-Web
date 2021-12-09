@@ -13,16 +13,15 @@ class QueryBox extends Component {
                         onChange={(e) => {
                             let queryB = e.target.value
                             const builder = document.getElementById("builder_HT")
-                            console.log(queryB.length)
+                            //console.log(queryB.length)
                             if (builder) {
-                                if(queryB.length === 0 || queryB.length === undefined){
+                                if (queryB.length === 0 || queryB.length === undefined) {
                                     const builerR = new CustomEvent('builderR', {
                                         bubbles: true,
                                         detail: {
                                             buildedQuery: undefined,
                                             query: undefined,
                                             _keyword: undefined
-                                            
                                         }
                                     });
                                     builder.dispatchEvent(builerR);

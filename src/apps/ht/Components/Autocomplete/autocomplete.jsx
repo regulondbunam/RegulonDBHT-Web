@@ -20,7 +20,7 @@ const Autocomplete = ({
     }
     return (
         <div className={Style.input}>
-            <div>
+            <div className={Style.inputR}>
                 <input
                     autoComplete="off"
                     id={id}
@@ -35,7 +35,7 @@ const Autocomplete = ({
                             document.getElementById(`auto_warn${id}`).style.display = "none"
                             if (keyword.length > 0) {
                                 setKeyword(keyword)
-                                console.log("\"" + keyword + "\"[" + query + "]" + " AND " + datasetType + "[datasetType]")
+                                /* console.log("\"" + keyword + "\"[" + query + "]" + " AND " + datasetType + "[datasetType]") */
                                 getSuges({
                                     variables: {
                                         keyword: "\"" + keyword + "\"[" + query + "]" + " AND " + datasetType + "[datasetType]"
@@ -61,8 +61,7 @@ const Autocomplete = ({
                                         onClick={() => {
                                             document.getElementById(id).value = keyword
                                             set_keyword(keyword);
-                                            setKeyword(keyword);
-
+                                            setKeyword(undefined);
                                         }}
                                     >
                                         {keyword}
