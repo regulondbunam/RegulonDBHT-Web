@@ -14,55 +14,54 @@ function query(id_dataset) {
     {
         getDatasetsFromSearch(advancedSearch: "${id_dataset}[_id]") {
           _id
-          fivePrimeEnrichment
-          publication {
-            pmid
-            doi
-            authors
-            title
-            date
-            pmcid
-          }
-          objectTested {
-            _id
-            name
-            synonyms
-            genes {
-              _id
-              name
-            }
-            note
-            activeConformations
-            externalCrossReferences {
-              externalCrossReferenceId
-              externalCrossReferenceName
-              objectId
-              url
-            }
-          }
-          sourceSerie {
-            sourceId
-            sourceName
-            title
-            platformId
-            platformTitle
-            strategy
-            method
-          }
-          sample {
-            experimentId
-            controlId
-            title
-          }
-          linkedDataset {
-            controlId
-            experimentId
-            datasetType
-          }
-          referenceGenome
-          datasetType
-          temporalId
-          growthConditions {
+    publication {
+      pmid
+      doi
+      authors
+      title
+      date
+      pmcid
+    }
+    objectTested {
+      _id
+      name
+      synonyms
+      genes {
+        _id
+        name
+      }
+      note
+      activeConformations
+      externalCrossReferences {
+        externalCrossReferenceId
+        externalCrossReferenceName
+        objectId
+        url
+      }
+    }
+    sourceSerie {
+      sourceId
+      sourceName
+      title
+      platformId
+      platformTitle
+      strategy
+      method
+    }
+    sample {
+      experimentId
+      controlId
+      title
+    }
+    linkedDataset {
+      controlId
+      experimentId
+      datasetType
+    }
+    referenceGenome
+    datasetType
+    temporalId
+    growthConditions {
             organism
             geneticBackground
             medium
@@ -76,10 +75,15 @@ function query(id_dataset) {
             vesselType
             aerationSpeed
           }
-          releaseDataControl {
-            date
-            version
-          }
+    releaseDataControl{
+      date
+      version
+    }
+    assemblyGenomeId
+    fivePrimeEnrichment
+    nlpGrowthConditionsId
+    geneExpressionFiltered
+    experimentCondition
         }
       }
         `
