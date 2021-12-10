@@ -12,6 +12,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
     let _tfFile = undefined;
     let _TSfile = undefined;
     let _TTfile = undefined;
+    let _TUfile = undefined;
     let show = true;
 
     switch (datasetType) {
@@ -20,9 +21,10 @@ export function Viewer({ id_dataset, tf, datasetType }) {
             _sitesFile = `/media/raw/ht_collections_web/BS/${id_dataset}_sites.gff3`
             break;
         case "TUS":
-            if(tf){
+            if(tf !== null){
                 _tfFile = `/media/raw/RegulonDBFiles/TF_bed/${tf}.bed`
             }
+            _TUfile = `/media/raw/ht_collections_web/TU/${id_dataset}.gff3`
             break;
         case "TSS":
             _TSfile = `/media/raw/ht_collections_web/TS/${id_dataset}.gff3`
@@ -42,7 +44,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
         var igvDiv = document.getElementById("igv-divK");
         if (igvDiv && id_dataset) {
             igv.createBrowser(igvDiv, {
-                genome: confGenome(_peaksFile, _sitesFile, _tfFile, _TSfile, _TTfile)
+                genome: confGenome(_peaksFile, _sitesFile, _tfFile, _TSfile, _TTfile, _TUfile)
             })
                 .then(function (browser) {
                     //console.log("hola");
@@ -112,7 +114,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
             }
             */
         }
-    }, [id_dataset, _peaksFile, _sitesFile, _tfFile,_TTfile,_TSfile])
+    }, [id_dataset, _peaksFile, _sitesFile, _tfFile,_TTfile,_TSfile, _TUfile])
 
     if(!show){
         return null
