@@ -1,4 +1,4 @@
-export function confGenome(peaksFile,sitesFile,tfFile) {
+export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile) {
   let conf = {
     "id": "Ecoli",
     "name": "Ecoli",
@@ -20,7 +20,6 @@ export function confGenome(peaksFile,sitesFile,tfFile) {
         "name": "peaks",
         "url": peaksFile,
         "displayMode": "EXPANDED",
-        "format": "bed",
         "nameField": "peaks",
       }
     )    
@@ -30,7 +29,6 @@ export function confGenome(peaksFile,sitesFile,tfFile) {
       {
         "name": "sites",
         "url": sitesFile,
-        "format": "bed",
         "displayMode": "EXPANDED",
         "nameField": "sites",
       }
@@ -41,9 +39,28 @@ export function confGenome(peaksFile,sitesFile,tfFile) {
       {
         "name": "RegulonDB TFBS",
         "url": tfFile,
-        "format": "bed",
         "displayMode": "EXPANDED",
         "nameField": "RegulonDB_TFBS",
+      }
+    )    
+  }
+  if (ttFile !== "undefined") {
+    conf.tracks.push(
+      {
+        "name": "ttFile",
+        "url": ttFile,
+        "displayMode": "EXPANDED",
+        "nameField": "TT",
+      }
+    )    
+  }
+  if (tsFile !== "undefined") {
+    conf.tracks.push(
+      {
+        "name": "tsFile",
+        "url": tsFile,
+        "displayMode": "EXPANDED",
+        "nameField": "TS",
       }
     )    
   }
