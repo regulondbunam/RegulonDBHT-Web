@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import GetNLPGC from '../webServices/nlpGrowthCondition/nlpgc_dataset'
-import Style from './growthC.module.css'
 
 export default function NLPGC({ id_dataset }) {
     const [_data, set_data] = useState()
