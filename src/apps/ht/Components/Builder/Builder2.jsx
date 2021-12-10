@@ -71,8 +71,6 @@ export default function Builder2({
     const [query, setQuery] = useState("_id")
     const history = useHistory();
 
-    let GENE_EXPRESSION = "GENE_EXPRESSION"
-
     useEffect(() => {
 
         const builder = document.getElementById("builder_HT")
@@ -89,26 +87,30 @@ export default function Builder2({
         let queryBox = document.getElementById("query_area");
         let operador
         let term
-        if(turnOff){
-            operador  = document.getElementById("operadorGC")
+        if (turnOff) {
+            operador = document.getElementById("operadorGC")
             ruta = document.getElementById("metadataGC").value;
-            term  = document.getElementById("builder_GC").value;
-        }else{
+            term = document.getElementById("builder_GC").value;
+        } else {
             ruta = document.getElementById("metadataDD").value;
-            operador  = document.getElementById("operador")
-            term  = document.getElementById("builder_text").value;
+            operador = document.getElementById("operador")
+            term = document.getElementById("builder_text").value;
         }
-        if(!term || term === "" || !ruta ){
+        let coma = term.split(';');
+        if (coma.length > 1) {
+            term = coma[0] + ""
+        }
+        if (!term || term === "" || !ruta) {
             alert("Search term is required")
             return null
         }
-        if(operador){
+        if (operador) {
             operador = operador.value
-        }else{
+        } else {
             operador = ""
         }
         let query = `${operador}'${term}'[${ruta}]`
-        if(queryBox){
+        if (queryBox) {
             queryBox.value = `${buildedQuery}${query}`
             setBuildedQuery(`${buildedQuery}${query}`)
         }
@@ -136,16 +138,16 @@ export default function Builder2({
                 Input1.value = "";
                 queryBox.value = "";
             }
-        }else {
+        } else {
             if (turnOff) {
                 Input2.value = "";
                 DD2.selectedIndex = 0
-            } else{
+            } else {
                 Input1.value = "";
                 DD1.selectedIndex = 0
             }
         }
-        
+
 
     }
 
@@ -168,7 +170,7 @@ export default function Builder2({
                         }}>
                             {
                                 META_DATA.map((data, i) => {
-                                    if(datasetType === "GENE_EXPRESSION" && data?.query === "gc"){
+                                    if (datasetType === "GENE_EXPRESSION" && data?.query === "gc") {
                                         return null
                                     }
                                     return (
@@ -199,7 +201,7 @@ export default function Builder2({
                         <h3>Growth Conditions</h3>
                         <div className="container">
                             <div className="dropdownCont">
-                                <select label="Nombre" id="metadataGC" className="dropDownBtn" onChange={(e)=>{
+                                <select label="Nombre" id="metadataGC" className="dropDownBtn" onChange={(e) => {
                                     //console.log(e.target.value)
                                     setQuery(e.target.value)
                                 }}>
@@ -242,7 +244,7 @@ export default function Builder2({
                             history.push(`/dataset/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
                         } else {
                             //Coonsultar builder normal
-                            history.push(`/dataset/query/'${fixQuery(`'${_keyword}'`)}'[${query}] AND ${datasetType}[datasetType]`)
+                            history.push(`/dataset/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
                         }
                     }
                 }}>Search</button>
@@ -253,14 +255,11 @@ export default function Builder2({
 
 function fixQuery(query) {
     //parche :( 
-    let coma = query.split(';');
-    if(coma.length > 1){
-        query = coma[0]+"'"
-    }
+
 
     let brokeQueryArray = query.split('');
     let fixedQueryArray = [];
-    
+
     //let especialCharacterArray = ["%", "_", "-", ";", ".", "/"];
     // String.remplace("","")
     let negativeCharacterArray = [",", "`", "~", "!", "@", "#", "$", "^", "&", "*", "+", "=", ":", ">", "<", ",", "?", "{", "}", "%"]
