@@ -71,6 +71,8 @@ export default function Builder2({
     const [query, setQuery] = useState("_id")
     const history = useHistory();
 
+    let GENE_EXPRESSION = "GENE_EXPRESSION"
+
     useEffect(() => {
 
         const builder = document.getElementById("builder_HT")
@@ -83,14 +85,16 @@ export default function Builder2({
     }, [])
 
     function BuildQuery() {
-        let ruta = document.getElementById("metadataDD").value;
+        let ruta
         let queryBox = document.getElementById("query_area");
         let operador
         let term
         if(turnOff){
             operador  = document.getElementById("operadorGC")
+            ruta = document.getElementById("metadataGC").value;
             term  = document.getElementById("builder_GC").value;
         }else{
+            ruta = document.getElementById("metadataDD").value;
             operador  = document.getElementById("operador")
             term  = document.getElementById("builder_text").value;
         }
@@ -105,8 +109,8 @@ export default function Builder2({
         }
         let query = `${operador}'${term}'[${ruta}]`
         if(queryBox){
-            queryBox.value = query
-            setBuildedQuery(`${buildedQuery} ${query}`)
+            queryBox.value = `${buildedQuery}${query}`
+            setBuildedQuery(`${buildedQuery}${query}`)
         }
     }
 
@@ -164,6 +168,9 @@ export default function Builder2({
                         }}>
                             {
                                 META_DATA.map((data, i) => {
+                                    if(datasetType === "GENE_EXPRESSION" && data?.query === "gc"){
+                                        return null
+                                    }
                                     return (
                                         <option value={data?.query} key={`${data}_${i}`}>{data?.value}</option>
                                     )
@@ -193,6 +200,7 @@ export default function Builder2({
                         <div className="container">
                             <div className="dropdownCont">
                                 <select label="Nombre" id="metadataGC" className="dropDownBtn" onChange={(e)=>{
+                                    //console.log(e.target.value)
                                     setQuery(e.target.value)
                                 }}>
                                     {
@@ -244,8 +252,15 @@ export default function Builder2({
 }
 
 function fixQuery(query) {
+    //parche :( 
+    let coma = query.split(';');
+    if(coma.length > 1){
+        query = coma[0]+"'"
+    }
+
     let brokeQueryArray = query.split('');
     let fixedQueryArray = [];
+    
     //let especialCharacterArray = ["%", "_", "-", ";", ".", "/"];
     // String.remplace("","")
     let negativeCharacterArray = [",", "`", "~", "!", "@", "#", "$", "^", "&", "*", "+", "=", ":", ">", "<", ",", "?", "{", "}", "%"]

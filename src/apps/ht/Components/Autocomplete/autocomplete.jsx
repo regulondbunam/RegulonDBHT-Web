@@ -81,6 +81,7 @@ const Autocomplete = ({
 }
 
 function filterData(data, keyword, location) {
+    console.log(data)
     if (!location || !keyword || !data) { return undefined }
     let locations = location.split(".")
     if (Array.isArray(data) && !data.length) {
@@ -108,12 +109,17 @@ function filterData(data, keyword, location) {
                             }
                         });
                     } else {
-                        let text = _dataset
-                        if (rx.test(_dataset.toLowerCase())) {
-                            if (!keywords.find(el => el === text)) {
-                                keywords.push(_dataset)
+                        try {
+                            let text = _dataset
+                            if (rx.test(_dataset.toLowerCase())) {
+                                if (!keywords.find(el => el === text)) {
+                                    keywords.push(_dataset)
+                                }
                             }
+                        } catch (error) {
+                            console.error(error)
                         }
+
                     }
                 }
             }

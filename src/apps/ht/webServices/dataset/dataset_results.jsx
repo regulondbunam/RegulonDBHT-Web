@@ -67,6 +67,7 @@ function query(ht_query) {
             organism
             geneticBackground
             medium
+            mediumSupplements
             aeration
             temperature
             ph

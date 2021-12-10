@@ -65,6 +65,7 @@ function query(id_dataset) {
             organism
             geneticBackground
             medium
+            mediumSupplements
             aeration
             temperature
             ph

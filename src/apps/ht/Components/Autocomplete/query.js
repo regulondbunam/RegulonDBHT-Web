@@ -56,6 +56,7 @@ export const QUERY = gql`
         organism
         geneticBackground
         medium
+        mediumSupplements
         aeration
         temperature
         ph

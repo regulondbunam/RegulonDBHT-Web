@@ -9,6 +9,7 @@ export default function GrowthConditions({growthCondition}) {
         inf.push({title:"ORGANISM",data: growthCondition?.organism});
         inf.push({title: "GENETIC BACKGROUND",data: growthCondition?.geneticBackground});
         inf.push({title: "MEDIUM",data: growthCondition?.medium});
+        inf.push({title: "MEDIUM SUPPLEMENTS",data: growthCondition?.mediumSupplements});
         //MEDIUM SUPPLEMENTS ?
         inf.push({title: "AERATIOM",data: growthCondition?.aeration});
         inf.push({title: "TEMPERATURE",data: growthCondition?.temperature});
