@@ -46,7 +46,7 @@ function ViewNLPGC({ data }) {
     return (
         <div>
             <h2>NLP Growth Conditions</h2>
-            <div style={{marginLeft: "5%" }} >
+            <div style={{ marginLeft: "5%" }} >
                 {
                     informations
                         ? informations.map((gc, i) => {
@@ -60,39 +60,51 @@ function ViewNLPGC({ data }) {
 }
 
 function BitInfo({ title, data }) {
-    if(Array.isArray(data) && !data.length){
+    if (Array.isArray(data) && !data.length) {
         return null
     }
     return (
-        <div>
-            <h3>
-                {title}
-            </h3>
-            <div style={{marginLeft: "5%" }} className={Style.gridContainer} >
-                {
-                    data.map((d, i) => {
-                        return <BoxData key={`box_${title}_${i}`} data={d} />
-                    })
-                }
-            </div>
-        </div>
-
+            <table className="table_content" style={{width: '70%'}} >
+                <thead>
+                    <tr>
+                        <th colSpan="3">
+                            {title}
+                        </th>
+                    </tr>
+                    <tr>
+                            <td style={{ fontSize: "12px", textAlign: "center" }} >Value</td>
+                            <td style={{ fontSize: "12px", textAlign: "center" }} >Score</td>
+                            <td style={{ fontSize: "12px", textAlign: "center" }} >Phrase</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        data.map((d, i) => {
+                            return <BoxData key={`box_${title}_${i}`} data={d} />
+                        })
+                    }
+                </tbody>
+            </table>
     )
 }
 
 function BoxData({ data }) {
     return (
-        <div className={Style.gridItem}>
-            <p style={{ fontSize: "12px", textAlign: "center" }} className="p_accent">
+        <tr>
+            <td style={{ fontSize: "12px", textAlign: "center" }} className="p_accent">
                 {data?.value}
-            </p>
-            <p style={{ fontSize: "10px", textAlign: "center" }}>
-                {`score: ${data?.score}`}
-            </p>
-            <p style={{ fontSize: "12px", textAlign: "center" }}>
+            </td>
+            {
+                data?.score
+                    ? <td style={{ fontSize: "10px", textAlign: "center" }}>
+                        {`score: ${data?.score}`}
+                    </td>
+                    : <td></td>
+            }
+            <td style={{ fontSize: "12px", textAlign: "center" }}>
                 {data?.associatedPhrase}
-            </p>
-        </div>
+            </td>
+        </tr>
     )
 }
 
