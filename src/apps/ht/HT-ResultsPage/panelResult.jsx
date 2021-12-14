@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 export default function PanelResult({ ds, match_data }) {
     const growthCondition = ds?.growthConditions
+    const tf = ds?.objectTested
+    //console.log(tf)
     const [_display, set_display] = useState(false)
     let gc = useMemo(() => {
         let inf = []
@@ -56,10 +58,16 @@ export default function PanelResult({ ds, match_data }) {
                     </div>
                     : null
             }
-            <b>Growth Conditions:</b>
+            {
+                tf?._id && <div>
+                    <b>Transcrption Factor: </b><br />
+                    {tf?.name}
+                </div>
+            }
             {
                 gc
                     ? <div>
+                        <b>Growth Conditions:</b><br />
                         {
                             _display
                                 ? <div className={Style.gridContainer}>
