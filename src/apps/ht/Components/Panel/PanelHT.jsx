@@ -13,14 +13,13 @@ export default function PanelHT(panel, description, enabled = true) {
     }
     return (
         <div className={Style.Panel}>
+            <Link to={`/${panel.url}`}>
             <h2 style={{fontSize: "5vh"}} >
             {panel.title}
             </h2>
+            </Link>
             <div>
                 <ModalHT id={panel?.id} title={panel.title} md_data={panel?.description} />
-                <Link to={`/${panel.url}`}>
-                <button className="accent" >Query Builder</button>
-                </Link>
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ export default function ModalHT({ title = "modal", md_data, footer = "", id }) {
 
     return (
         <>
-            <button
+            <button className="aBase"
                 onClick={() => {
                     let modal = document.getElementById(`modal_${title}_${id}`);
                     if (modal) {

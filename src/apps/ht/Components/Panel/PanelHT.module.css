@@ -2,7 +2,6 @@
     background: #D5E2EA;
     padding: 3%;
     position: relative;
-    
     transition: transform 400ms ease;
 }
 
@@ -14,4 +13,12 @@
     vertical-align: middle;
     font-size: 4vh;
     transition: transform 400ms ease;
+}
+
+.Panel:hover{
+    background: #32617d;
+}
+
+.Panel:hover h2{
+    color: white
 }
