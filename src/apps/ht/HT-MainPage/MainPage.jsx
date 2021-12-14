@@ -21,37 +21,16 @@ class MainPage extends React.Component {
                 <div className={Style.gridContainer}>
                     {
                         conf?.collection.map((panel) => {
-                            if (panel?.enable) {
                                 return (
                                     <div className={Style.gridItem} key={panel.id}
-                                        onMouseEnter={()=>{
-                                            this.setState({descripcion: panel?.description})
-                                        }}
-                                        onMouseLeave={()=>{
-                                            this.setState({descripcion: conf?.description})
-                                        }}
                                     >
-                                        {PanelHT(panel)}
+                                        {PanelHT(panel,panel?.description,panel?.enable)}
                                     </div>
                                 )
-                            }
-                            return (
-                                <div className={Style.gridItem} key={panel.id}
-                                    onMouseEnter={()=>{
-                                        this.setState({descripcion: panel?.description})
-                                    }}
-                                    onMouseLeave={()=>{
-                                        this.setState({descripcion: conf?.description})
-                                    }}
-                                >
-                                    {PanelHT(panel,false)}
-                                </div>
-                            )
                         })
                     }
                 </div>
                 <br />
-                <div dangerouslySetInnerHTML={{__html: md.render(this.state.descripcion)}} />
             </article>
         );
     }
