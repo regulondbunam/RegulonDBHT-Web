@@ -1,48 +1,49 @@
-import React, {useState, useEffect} from 'react'
-import GsCcTreeMenu from './gs_cc_raw_me/gs_cc_tree_menu';
+import conf from "./conf.json"
 
-const GsCcRawME = () => {
+const mainPage = conf.main_page;
+const queryBuilderPage = conf.queryBuilder_page
 
-  const [ data, setData ] = useState("");
 
-  useEffect(()=>{
-    if(data===""){
-      try{
-        fetch('https://raw.githubusercontent.com/regulondbunam/Component-Repository/ui-components/MenuElements.json')
-      .then(response => response.json())
-      .then(json => setData(json))
-      }catch(e){
-        console.error(e)
+function getRaw(url) {
+  return new Promise(function(resolve,reject) {
+    fetch(url).then((response) => {
+      if(response.ok){
+        response.blob().then(function(blob) {
+          resolve(blob)
+        });
+      }else{
+        console.error("Failed to fetch on get "+url)
+        reject(undefined)
       }
-    }else{
-    }
-  }, [data]);
-
-  function getEnlace(value) {
-    const body = document.getElementById("gs_cc_raw_012")
-    if(body){
-      const event = new CustomEvent('updateBody', { detail: {url: value} });
-      body.dispatchEvent(event);
-    }
-    
-
-    //alert(value)
-  }
-
-  return (
-    <div>
-    <h1></h1>
-      {
-        data==="" ? '' :
-          <GsCcTreeMenu 
-            dataMenu={data}
-            onSelect={(value) => {
-              getEnlace(value);
-            }}
-          />
-      }
-    </div>
-  )
+    }).catch((error) => {
+      reject(undefined)
+      console.error("Failed to fetch",error)
+    })
+  })
 }
 
-export default GsCcRawME
+export async function getConfOf(page,fun = ()=>{}) {
+  let url, conf = undefined;
+  switch (page) {
+    case "main_page":
+      url = mainPage.conf
+      break;
+    case "queryBuilder_page":
+      url = queryBuilderPage.conf
+      break;
+    default:
+      console.error("parameter page is not supported")
+      break;
+  }
+  if(url){
+    conf = JSON.parse(await (await getRaw(url)).text())
+    fun(conf)
+  }
+}
+
+export async function getMD(url,fun = ()=>{}) {
+  if(url){
+    let mdData = await (await getRaw(url)).text()
+    fun(mdData)
+  }
+}
