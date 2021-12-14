@@ -6,7 +6,7 @@
         "comment_help": ""
     },
     "builder": {
-        "demo": "",
+        "demo": "'FNR'[objectTested.name]",
         "tooltips": {
             "dropdown_fields": "",
             "inputText": "",
