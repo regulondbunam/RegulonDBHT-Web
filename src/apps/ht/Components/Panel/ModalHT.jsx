@@ -21,8 +21,7 @@ export default function ModalHT({ title = "modal", md_data, footer = "", id }) {
                         modal.style.display = "block";
                     }
                 }}
-            >
-                Read more</button>
+            >Read more</button>
             <div id={`modal_${title}_${id}`} onClick={() => { hide() }} className={Style.modal}>
                 <div className={Style.modal_content}>
                     <div className={Style.modal_header}>
