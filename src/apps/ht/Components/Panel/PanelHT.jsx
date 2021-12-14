@@ -16,14 +16,17 @@ export default function PanelHT(panel, description, enabled = true) {
             {panel.title}
             <div>
                 <ModalHT title={panel.title} md_data={description} />
-                <button >View all datasets</button>
+                
+                <Link to={`/${panel.url}`}>
                 <button className="accent" >Query Builder</button>
+                </Link>
             </div>
         </div>
     )
 }
 
 /*
+<button >View all datasets</button>
  <Link to={`/${panel.url}`}>
             <div className={Style.Panel}>
                 {panel.title}
