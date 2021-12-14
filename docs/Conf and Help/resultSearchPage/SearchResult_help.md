@@ -1,0 +1,1 @@
+Documento de ayuda general de la pagina result search de HT

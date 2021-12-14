@@ -1,0 +1,43 @@
+{
+    "_version": "0.1",
+    "_descripcion": "Json para la configuracion del texto estatico de la pagina principal de HT",
+    "title": "High Thoughput Collection",
+    "description": "",
+    "collection": [
+        {
+            "id": "DS-TFBS-001",
+            "url": "TFBINDING",
+            "title": "TF Binding Sites",
+            "tooltip": "",
+            "enable": true
+        },
+        {
+            "id": "DS-TUS-002",
+            "url": "TUS",
+            "title": "Transcription Units",
+            "tooltip": "",
+            "enable": true
+        },
+        {
+            "id": "DS-TTS-003",
+            "url": "TTS",
+            "title": "Transcription Termination Sites",
+            "tooltip": "",
+            "enable": true
+        },
+        {
+            "id": "DS-TSS-004",
+            "url": "TSS",
+            "title": "Transcription Start Sites",
+            "tooltip": "",
+            "enable": true
+        },
+        {
+            "id": "DS-GE-005",
+            "url": "GENE_EXPRESSION",
+            "title": "Gene Expression",
+            "tooltip": "",
+            "enable": true
+        }
+    ]
+}
