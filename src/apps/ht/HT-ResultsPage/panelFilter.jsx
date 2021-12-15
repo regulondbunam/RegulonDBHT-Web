@@ -11,6 +11,7 @@ export default class Filter extends Component {
             authors: [],
             eStrategy: []
         },
+        isClean: true,
         selectDatasets: [],
         view_IDs: false,
         view_Authors: false,
@@ -45,6 +46,13 @@ export default class Filter extends Component {
                 }
 
             }
+            if(this.state.isClean){
+                this.setState({isClean: false})
+            }
+        }
+        console.log(this.state.selectDatasets)
+        if(this.state.selectDatasets.length === 0 && !this.state.isClean){
+            this._cleanFilter()
         }
     }
 
@@ -67,7 +75,8 @@ export default class Filter extends Component {
                 authors: [],
                 eStrategy: []
             },
-            selectDatasets: []
+            selectDatasets: [],
+            isClean: true
         })
     }
 
