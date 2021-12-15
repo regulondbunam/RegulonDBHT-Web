@@ -10,22 +10,26 @@ export default function PanelResult({ ds, match_data }) {
     let gc = useMemo(() => {
         let inf = []
         //inf.push({title:"",data:""});
-        inf.push({ title: "ORGANISM", data: growthCondition?.organism });
-        inf.push({ title: "GENETIC BACKGROUND", data: growthCondition?.geneticBackground });
-        inf.push({ title: "MEDIUM", data: growthCondition?.medium });
+        
+        growthCondition?.organism && inf.push({ title: "ORGANISM", data: growthCondition?.organism });
+        growthCondition?.geneticBackground && inf.push({ title: "GENETIC BACKGROUND", data: growthCondition?.geneticBackground });
+        growthCondition?.medium && inf.push({ title: "MEDIUM", data: growthCondition?.medium });
         //MEDIUM SUPPLEMENTS ?
-        inf.push({ title: "AERATIOM", data: growthCondition?.aeration });
-        inf.push({ title: "TEMPERATURE", data: growthCondition?.temperature });
-        inf.push({ title: "PH", data: growthCondition?.ph });
-        inf.push({ title: "PRESSURE", data: growthCondition?.pressure });
-        inf.push({ title: "OPTICAL DENSITY", data: growthCondition?.opticalDensity });
-        inf.push({ title: "GROWTH PHASE", data: growthCondition?.growthPhase });
-        inf.push({ title: "GROWTH RATE", data: growthCondition?.growthRate });
-        inf.push({ title: "VESSEL TYPE", data: growthCondition?.vesselType });
-        inf.push({ title: "AERATION SPEED", data: growthCondition?.aerationSpeed });
+        growthCondition?.aeration && inf.push({ title: "AERATIOM", data: growthCondition?.aeration });
+        growthCondition?.temperature && inf.push({ title: "TEMPERATURE", data: growthCondition?.temperature });
+        growthCondition?.ph && inf.push({ title: "PH", data: growthCondition?.ph });
+        growthCondition?.pressure && inf.push({ title: "PRESSURE", data: growthCondition?.pressure });
+        growthCondition?.opticalDensity && inf.push({ title: "OPTICAL DENSITY", data: growthCondition?.opticalDensity });
+        growthCondition?.growthPhase && inf.push({ title: "GROWTH PHASE", data: growthCondition?.growthPhase });
+        growthCondition?.growthRate && inf.push({ title: "GROWTH RATE", data: growthCondition?.growthRate });
+        growthCondition?.vesselType && inf.push({ title: "VESSEL TYPE", data: growthCondition?.vesselType });
+        growthCondition?.aerationSpeed && inf.push({ title: "AERATION SPEED", data: growthCondition?.aerationSpeed });
+        if(inf.length === 0 ) {return undefined;}
         return inf;
     }, [growthCondition])
-    //console.log(ds)
+
+
+    //console.log(gc)
     return (
 
         <div className={Style.Panel}

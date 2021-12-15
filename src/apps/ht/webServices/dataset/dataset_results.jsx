@@ -109,7 +109,7 @@ const GetResultsDataset = ({
     if (data) {
 
       try {
-        console.log(data)
+        //console.log(data)
         resoultsData(clean(data?.getDatasetsFromSearch))
         status('done')
       } catch (error) {
