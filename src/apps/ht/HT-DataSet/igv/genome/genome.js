@@ -1,4 +1,4 @@
-export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
+export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile, geFile) {
   let conf = {
     "id": "Ecoli",
     "name": "Ecoli",
@@ -14,6 +14,15 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
         "displayMode": "EXPANDED",
       }
     ]
+  }
+  if (geFile) {
+    conf.tracks.push(
+      {
+        "name": "ge",
+        "url": geFile,
+        "nameField": "ge",
+      }
+    )    
   }
   if (peaksFile) {
     conf.tracks.push(

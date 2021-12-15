@@ -13,8 +13,9 @@ export function Viewer({ id_dataset, tf, datasetType }) {
     let _TSfile = undefined;
     let _TTfile = undefined;
     let _TUfile = undefined;
+    let _GEfile = undefined;
     let show = true;
-
+    
     switch (datasetType) {
         case "TFBINDING":
             _peaksFile = `/media/raw/ht_collections_web/BS/${id_dataset}_peaks.gff3`
@@ -33,12 +34,15 @@ export function Viewer({ id_dataset, tf, datasetType }) {
         case "TTS":
             _TTfile = `/media/raw/ht_collections_web/TTS/${id_dataset}.gff3`
             break;
+        case "GENE_EXPRESSION":
+            _GEfile = `/media/raw/ht_collections_web/GE/gene_example2.bedgraph`
+            break;
         default:
             show = false;
             break;
     }
 
-    let notTracks = !_peaksFile || !_sitesFile || !_tfFile || !_TSfile || !_TTfile || !_TUfile
+    let notTracks = !_peaksFile || !_sitesFile || !_tfFile || !_TSfile || !_TTfile || !_TUfile || !_GEfile
 
     useEffect(() => {
 
@@ -46,7 +50,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
 
         if (igvDiv && id_dataset) {
             igv.createBrowser(igvDiv, {
-                genome: confGenome(_peaksFile, _sitesFile, _tfFile, _TSfile, _TTfile, _TUfile)
+                genome: confGenome(_peaksFile, _sitesFile, _tfFile, _TSfile, _TTfile, _TUfile, _GEfile)
             })
                 .then(function (browser) {
                     //console.log("hola");
@@ -116,7 +120,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
             }
             */
         }
-    }, [id_dataset, _peaksFile, _sitesFile, _tfFile, _TTfile, _TSfile, _TUfile, notTracks])
+    }, [id_dataset, _peaksFile, _sitesFile, _tfFile, _TTfile, _TSfile, _TUfile, notTracks, _GEfile])
 
     if (!show) {
         return null
