@@ -6,7 +6,7 @@ const queryBuilderPage = conf.queryBuilder_page
 
 function getRaw(url) {
   return new Promise(function(resolve,reject) {
-    fetch(url).then((response) => {
+    fetch(url,{cache: 'no-cache'}).then((response) => {
       if(response.ok){
         response.blob().then(function(blob) {
           resolve(blob)
