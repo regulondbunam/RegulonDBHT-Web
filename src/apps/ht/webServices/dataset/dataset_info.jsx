@@ -102,7 +102,7 @@ const GetInfoDataset = ({
     }
     if (data) {
       try {
-        resoultsData(data?.getDatasetsFromSearch[0])
+        resoultsData(clean(data?.getDatasetsFromSearch[0]))
         status('done')
       } catch (error) {
         resoultsData(undefined)
@@ -118,6 +118,13 @@ const GetInfoDataset = ({
 
   }, [loading, error, status, data, resoultsData, id_dataset]);
   return (<></>);
+}
+
+function clean(data = {}){
+  if(data?.sample?.title === '-'){
+    data.sample.title = undefined;
+  }
+  return data
 }
 
 export default GetInfoDataset;

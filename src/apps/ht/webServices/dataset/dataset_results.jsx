@@ -109,7 +109,8 @@ const GetResultsDataset = ({
     if (data) {
 
       try {
-        resoultsData(data?.getDatasetsFromSearch)
+        console.log(data)
+        resoultsData(clean(data?.getDatasetsFromSearch))
         status('done')
       } catch (error) {
         resoultsData(undefined)
@@ -125,6 +126,15 @@ const GetResultsDataset = ({
 
   }, [loading, error, status, data, resoultsData, ht_query]);
   return (<></>);
+}
+
+function clean(arrayData){
+  arrayData.forEach((data,i) => {
+    if(data?.sample?.title === '-'){
+      arrayData[i].sample.title = undefined;
+    }
+  });
+  return arrayData
 }
 
 export default GetResultsDataset;

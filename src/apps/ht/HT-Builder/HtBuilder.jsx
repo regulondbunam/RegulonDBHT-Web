@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Data from '../Assets/Data/Data.json';
 
 //Components
-import Builder from '../Components/Builder/Builder.js'
+//import Builder from '../Components/Builder/Builder.js'
 import Builder2 from '../Components/Builder/Builder2.jsx'
 import QueryBox from '../Components/QueryBox/QueryBox';
 import GetFields from '../webServices/introspection/fields';
