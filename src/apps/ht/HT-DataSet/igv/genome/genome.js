@@ -51,7 +51,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
   if (ttFile) {
     conf.tracks.push(
       {
-        "name": "ttFile",
+        "name": "TTS Dataset",
         "url": ttFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
@@ -62,7 +62,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
   if (tsFile) {
     conf.tracks.push(
       {
-        "name": "tsFile",
+        "name": "TSS Dataset",
         "url": tsFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
@@ -73,7 +73,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
   if (tuFile) {
     conf.tracks.push(
       {
-        "name": "tuFile",
+        "name": "TUS Dataset",
         "url": tuFile,
         "format": "gff3",
         "displayMode": "EXPANDED",

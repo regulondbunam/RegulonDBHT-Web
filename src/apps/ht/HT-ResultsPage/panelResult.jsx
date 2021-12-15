@@ -29,6 +29,13 @@ export default function PanelResult({ ds, match_data }) {
     }, [growthCondition])
 
 
+    let title = ds?.sample?.title
+    if(!title){
+        title = ds?.objectTested?.name
+        if(!title){
+            title = ds?._id
+        }
+    }
     //console.log(gc)
     return (
 
@@ -40,9 +47,7 @@ export default function PanelResult({ ds, match_data }) {
             <Link to={`/TFBINDING/dataset/${ds?._id}`}>
                 <h2 className={Style.title}>
                     {
-                        ds?.sample?.title
-                        ?ds?.sample?.title
-                        :ds?._id
+                        title
                     }
                 </h2>
             </Link>
@@ -64,14 +69,14 @@ export default function PanelResult({ ds, match_data }) {
             }
             {
                 tf?._id && <div>
-                    <b>Transcrption Factor: </b>
+                    <b>Transcription Factor: </b>
                     {tf?.name}
                 </div>
             }
             {
                 gc
                     ? <div>
-                        <b>Growth Conditions:</b><br />
+                        <b>Growth Condition:</b><br />
                         {
                             _display
                                 ? <div className={Style.gridContainer}>

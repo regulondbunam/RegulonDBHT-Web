@@ -3,6 +3,7 @@ import Style from "./filter.module.css"
 import Authors from './filters/authors'
 import EStrategy from './filters/eStrategy'
 import GConditions from './filters/gConditions'
+import TFS from './filters/tf'
 
 
 export default class Filter extends Component {
@@ -12,7 +13,8 @@ export default class Filter extends Component {
             ids: [],
             authors: [],
             eStrategy: [],
-            gConditions: []
+            gConditions: [],
+            tfs : []
         },
         isClean: true,
         selectDatasets: [],
@@ -20,6 +22,7 @@ export default class Filter extends Component {
         view_Authors: false,
         view_Estrategy: false,
         view_gConditions: false,
+        view_tfs: false
     }
 
     cleanSelectDataset = (selectDatasets) => {
@@ -78,7 +81,8 @@ export default class Filter extends Component {
                 ids: [],
                 authors: [],
                 eStrategy: [],
-                gConditions: []
+                gConditions: [],
+                tfs : []
             },
             selectDatasets: [],
             isClean: true
@@ -87,7 +91,7 @@ export default class Filter extends Component {
 
     render() {
         const { data } = this.props
-        const { selectDatasets, view_IDs, filterData, view_Authors, view_Estrategy, view_gConditions } = this.state
+        const { selectDatasets, view_IDs, view_tfs, filterData, view_Authors, view_Estrategy, view_gConditions } = this.state
         //const fields = Object.keys(data[0])
         console.log(data[0]);
 
@@ -112,6 +116,10 @@ export default class Filter extends Component {
                 <ButtonFilter view={view_gConditions} label="Growth Conditions" fun={(view) => { this.setState({ view_gConditions: view }) }} />
                 {
                     view_gConditions && <GConditions data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                }
+                <ButtonFilter view={view_tfs} label="Transcription Factor" fun={(view) => { this.setState({ view_tfs: view }) }} />
+                {
+                    view_tfs && <TFS data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
                 }
             </div>
         )
