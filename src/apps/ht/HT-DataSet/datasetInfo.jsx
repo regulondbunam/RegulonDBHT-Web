@@ -111,7 +111,7 @@ function Body({ data }) {
                     : null
             }
             {
-                data?.objectTested?._id
+                data?.objectTested?._id || data.objectTested?.name
                     ? <div>
                         <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_tf?.title }} />
                         <p dangerouslySetInnerHTML={{ __html: section?.dataset_tf?.description }} />

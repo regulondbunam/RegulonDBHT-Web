@@ -1,37 +1,45 @@
 import React from 'react'
 import Style from "../filter.module.css"
 
-export default function EStrategy({ data, filterData, set_filterData, selectDatasets, set_selectedDataset }) {
-    let eStrategy = filterData.eStrategy
-    let _eStrategy = {}
+export default function GConditions({ data, filterData, set_filterData, selectDatasets, set_selectedDataset }) {
+    let gConditions = filterData.gConditions
+    let _gConditions = {}
     for (let dtset of data) {
-        let eS = dtset.sourceSerie?.strategy.replace(" ","")
-        if (_eStrategy[eS]) {
-            _eStrategy[eS].push(dtset._id)
-        } else {
-            _eStrategy[eS] = [dtset._id]
+        let gcs = dtset.growthConditions
+        if (gcs) {
+            Object.keys(gcs).forEach((gc) => {
+                if (gcs[gc] !== null) {
+                    let label = `${gc}-${gcs[gc]}`
+                    if (_gConditions[label]) {
+                        _gConditions[label].push(dtset._id)
+                    } else {
+                        _gConditions[label] = [dtset._id]
+                    }
+                }
+
+            })
         }
     }
-    console.log(_eStrategy)
+    console.log(gConditions)
     return (
         <div className={Style.filedContent} >
             <table className="table_content">
                 <thead>
                     {
-                        Object.keys(_eStrategy).map((strategy, i) => {
-                            let ids = _eStrategy[strategy]
+                        Object.keys(_gConditions).map((strategy, i) => {
+                            let ids = _gConditions[strategy]
                             return (
                                 <tr key={`ids_filter_${i}_${strategy}`}>
                                     <th>
                                         <input type="checkbox" name={`CB_${strategy}`} id={`CB_author_${strategy}`}
                                             value={strategy}
-                                            checked={eStrategy.find(element => element === strategy) ? true : false}
+                                            checked={gConditions.find(element => element === strategy) ? true : false}
                                             onChange={(e) => {
                                                 if (e.target.checked) {
                                                     for (let id of ids) {
                                                         selectDatasets.push(id)
                                                     }
-                                                    eStrategy.push(strategy);
+                                                    gConditions.push(strategy);
                                                 } else {
                                                     let inx
                                                     for (let id of ids) {
@@ -40,12 +48,12 @@ export default function EStrategy({ data, filterData, set_filterData, selectData
                                                             selectDatasets.splice(inx, 1);
                                                         }
                                                     }
-                                                    inx = eStrategy.indexOf(strategy);
+                                                    inx = gConditions.indexOf(strategy);
                                                     if (inx > -1) {
-                                                        eStrategy.splice(inx, 1);
+                                                        gConditions.splice(inx, 1);
                                                     }
                                                 }
-                                                filterData.eStrategy = eStrategy
+                                                filterData.gConditions = gConditions
                                                 set_filterData(filterData)
                                                 set_selectedDataset(selectDatasets)
                                             }}

@@ -64,7 +64,7 @@ export default function PanelResult({ ds, match_data }) {
             }
             {
                 tf?._id && <div>
-                    <b>Transcrption Factor: </b><br />
+                    <b>Transcrption Factor: </b>
                     {tf?.name}
                 </div>
             }
