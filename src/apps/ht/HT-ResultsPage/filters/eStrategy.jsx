@@ -5,12 +5,16 @@ export default function EStrategy({ data, filterData, set_filterData, selectData
     let eStrategy = filterData.eStrategy
     let _eStrategy = {}
     for (let dtset of data) {
-        let eS = dtset.sourceSerie?.strategy.replace(" ","")
+        let eS = dtset.sourceSerie?.strategy
+        if(eS){
+        eS.replace(" ","")
         if (_eStrategy[eS]) {
             _eStrategy[eS].push(dtset._id)
         } else {
             _eStrategy[eS] = [dtset._id]
         }
+        }
+        
     }
     console.log(_eStrategy)
     return (

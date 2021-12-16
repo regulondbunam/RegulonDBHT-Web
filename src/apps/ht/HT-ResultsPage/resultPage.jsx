@@ -10,7 +10,8 @@ import Filter from './panelFilter'
 const conf = CONF?.pages?.result_page
 
 export default function ResultPage({
-  query
+  query,
+  datasetType
 }) {
   const [_data, set_data] = useState()
   const [_state, set_state] = useState()
@@ -54,7 +55,7 @@ export default function ResultPage({
         {
           _data &&
           <div className={Style.filter}>
-            <Filter data={_data} />
+            <Filter data={_data} datasetType={datasetType} />
           </div>
         }
         <div className={Style.result} >

@@ -14,7 +14,7 @@ export default class Filter extends Component {
             authors: [],
             eStrategy: [],
             gConditions: [],
-            tfs : []
+            tfs: []
         },
         isClean: true,
         selectDatasets: [],
@@ -27,14 +27,14 @@ export default class Filter extends Component {
 
     cleanSelectDataset = (selectDatasets) => {
         let newS = []
-        for(let dt of selectDatasets) {
-            if(!newS.find(e=>e===dt)){
+        for (let dt of selectDatasets) {
+            if (!newS.find(e => e === dt)) {
                 newS.push(dt)
             }
         }
         return newS
     }
-    
+
     componentDidUpdate(prevState) {
         const N_RESULTS = document.getElementById("n_result")
         //console.log(PANEL)
@@ -53,12 +53,12 @@ export default class Filter extends Component {
                 }
 
             }
-            if(this.state.isClean){
-                this.setState({isClean: false})
+            if (this.state.isClean) {
+                this.setState({ isClean: false })
             }
         }
         console.log(this.state.selectDatasets)
-        if(this.state.selectDatasets.length === 0 && !this.state.isClean){
+        if (this.state.selectDatasets.length === 0 && !this.state.isClean) {
             this._cleanFilter()
         }
     }
@@ -82,7 +82,7 @@ export default class Filter extends Component {
                 authors: [],
                 eStrategy: [],
                 gConditions: [],
-                tfs : []
+                tfs: []
             },
             selectDatasets: [],
             isClean: true
@@ -90,10 +90,25 @@ export default class Filter extends Component {
     }
 
     render() {
-        const { data } = this.props
+        const { data, datasetType } = this.props
         const { selectDatasets, view_IDs, view_tfs, filterData, view_Authors, view_Estrategy, view_gConditions } = this.state
         //const fields = Object.keys(data[0])
         console.log(data[0]);
+        let f_id = true
+        let f_tfs = true
+        let f_a = true
+        let f_eS = true
+        let f_gC = true
+        switch (datasetType) {
+            case "GENE_EXPRESSION":
+                f_eS = false
+                f_gC = false
+                f_tfs = false
+                break;
+
+            default:
+                break;
+        }
 
         return (
             <div>
@@ -101,25 +116,43 @@ export default class Filter extends Component {
                 <button onClick={this._cleanFilter} >Clean Filter  <i className='bx bx-trash'></i></button>
                 <br />
                 <br />
-                <ButtonFilter view={view_IDs} label="Dataset IDs  " fun={(view) => { this.setState({ view_IDs: view }) }} />
                 {
-                    view_IDs && <Ids data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                    f_id && <><ButtonFilter view={view_IDs} label="Dataset IDs  " fun={(view) => { this.setState({ view_IDs: view }) }} />
+                        {
+                            view_IDs && <Ids data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                        }</>
                 }
-                <ButtonFilter view={view_Authors} label="Authors  " fun={(view) => { this.setState({ view_Authors: view }) }} />
                 {
-                    view_Authors && <Authors data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                    f_a && <>
+                        <ButtonFilter view={view_Authors} label="Authors  " fun={(view) => { this.setState({ view_Authors: view }) }} />
+                        {
+                            view_Authors && <Authors data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                        }
+                    </>
                 }
-                <ButtonFilter view={view_Estrategy} label="Experiment Strategy" fun={(view) => { this.setState({ view_Estrategy: view }) }} />
                 {
-                    view_Estrategy && <EStrategy data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                    f_eS && <>
+                        <ButtonFilter view={view_Estrategy} label="Experiment Strategy" fun={(view) => { this.setState({ view_Estrategy: view }) }} />
+                        {
+                            view_Estrategy && <EStrategy data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                        }
+                    </>
                 }
-                <ButtonFilter view={view_gConditions} label="Growth Conditions" fun={(view) => { this.setState({ view_gConditions: view }) }} />
                 {
-                    view_gConditions && <GConditions data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                    f_gC && <>
+                        <ButtonFilter view={view_gConditions} label="Growth Conditions" fun={(view) => { this.setState({ view_gConditions: view }) }} />
+                        {
+                            view_gConditions && <GConditions data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                        }
+                    </>
                 }
-                <ButtonFilter view={view_tfs} label="Transcription Factor" fun={(view) => { this.setState({ view_tfs: view }) }} />
                 {
-                    view_tfs && <TFS data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                    f_tfs && <>
+                        <ButtonFilter view={view_tfs} label="Transcription Factor" fun={(view) => { this.setState({ view_tfs: view }) }} />
+                        {
+                            view_tfs && <TFS data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                        }
+                    </>
                 }
             </div>
         )

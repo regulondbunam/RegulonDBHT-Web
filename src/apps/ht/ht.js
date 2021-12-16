@@ -34,7 +34,7 @@ function setdatasetType(datasetType,query) {
     return (
         <div>
             {
-                !query?<HtBuilder datasetType={datasetType}/>:<ResultPage query={query}/>
+                !query?<HtBuilder datasetType={datasetType}/>:<ResultPage datasetType={datasetType} query={query}/>
             }
         </div>
     )
