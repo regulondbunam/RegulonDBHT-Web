@@ -35,7 +35,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
             _TTfile = `/media/raw/ht_collections_web/TTS/${id_dataset}.gff3`
             break;
         case "GENE_EXPRESSION":
-            _GEfile = `/media/raw/ht_collections_web/GE/gene_example2.bedgraph`
+            _GEfile = `/media/raw/ht_collections_web/GE/${id_dataset}.bedgraph`
             break;
         default:
             show = false;

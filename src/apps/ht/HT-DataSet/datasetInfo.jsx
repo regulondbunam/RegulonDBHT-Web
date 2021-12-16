@@ -133,7 +133,7 @@ function Body({ data }) {
             <NLPGC id_dataset={data?._id} />
             <Tabs id_dataset={data?._id} data={data} />
             {
-                data?.datasetType !== "GENE_EXPRESSION" && data?.sourceSerie?.strategy !== "ChIP-exo"
+            data?.sourceSerie?.strategy !== "ChIP-exo"
                 ?<Viewer id_dataset={data?._id} tf={data?.objectTested?.name} datasetType={data?.datasetType} />
                 :null
             }
