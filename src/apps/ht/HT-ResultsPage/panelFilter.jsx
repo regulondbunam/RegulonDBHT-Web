@@ -99,13 +99,16 @@ export default class Filter extends Component {
         let f_a = true
         let f_eS = true
         let f_gC = true
+        let f_nlpgC = true
         switch (datasetType) {
             case "GENE_EXPRESSION":
                 f_eS = false
                 f_gC = false
                 f_tfs = false
                 break;
-
+            case "TFBINDING":
+                f_nlpgC = false
+                break;
             default:
                 break;
         }
@@ -123,6 +126,14 @@ export default class Filter extends Component {
                         }</>
                 }
                 {
+                    f_gC && <>
+                        <ButtonFilter view={view_gConditions} label="Growth Conditions" fun={(view) => { this.setState({ view_gConditions: view }) }} />
+                        {
+                            view_gConditions && <GConditions data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
+                        }
+                    </>
+                }
+                {
                     f_a && <>
                         <ButtonFilter view={view_Authors} label="Authors  " fun={(view) => { this.setState({ view_Authors: view }) }} />
                         {
@@ -135,14 +146,6 @@ export default class Filter extends Component {
                         <ButtonFilter view={view_Estrategy} label="Experiment Strategy" fun={(view) => { this.setState({ view_Estrategy: view }) }} />
                         {
                             view_Estrategy && <EStrategy data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
-                        }
-                    </>
-                }
-                {
-                    f_gC && <>
-                        <ButtonFilter view={view_gConditions} label="Growth Conditions" fun={(view) => { this.setState({ view_gConditions: view }) }} />
-                        {
-                            view_gConditions && <GConditions data={data} selectDatasets={selectDatasets} set_selectedDataset={(setDataset) => { this.setState({ selectDatasets: setDataset }) }} filterData={filterData} set_filterData={(filterData) => { this.setState({ filterData: filterData }) }} />
                         }
                     </>
                 }

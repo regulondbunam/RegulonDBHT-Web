@@ -7,7 +7,7 @@ export default function EStrategy({ data, filterData, set_filterData, selectData
     for (let dtset of data) {
         let eS = dtset.sourceSerie?.strategy
         if(eS){
-        eS.replace(" ","")
+        eS = eS.replace(" ","")
         if (_eStrategy[eS]) {
             _eStrategy[eS].push(dtset._id)
         } else {
