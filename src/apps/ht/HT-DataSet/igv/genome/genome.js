@@ -20,7 +20,7 @@ export function confGenome({
       {
         "name": "Genes",
         "type": "annotation",
-        "url": "/media/raw/GeneProductSet.gff3",
+        "url": "/media/raw/ht_collections_web_v3/regulondb/GeneProductSet.gff3",
         "format": "gff3",
         "displayMode": "EXPANDED",
       }
