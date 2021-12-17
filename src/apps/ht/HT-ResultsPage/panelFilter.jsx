@@ -109,10 +109,18 @@ export default class Filter extends Component {
             case "TFBINDING":
                 f_nlpgC = false
                 break;
+            case "TSS":
+                f_tfs = false
+                f_eS = false
+                break;
+            case "TTS":
+                f_tfs = false
+                f_eS = false
+                break;
             default:
                 break;
         }
-
+        console.log(datasetType)
         return (
             <div>
                 <p className="p_accent"> Filters </p>

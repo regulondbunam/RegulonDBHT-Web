@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 export default function PanelResult({ ds, match_data }) {
     const growthCondition = ds?.growthConditions
     const tf = ds?.objectTested
-    //console.log(tf)
+    const eS = ds?.sourceSerie?.strategy
+    console.log(ds)
     const [_display, set_display] = useState(false)
     let gc = useMemo(() => {
         let inf = []
@@ -67,12 +68,14 @@ export default function PanelResult({ ds, match_data }) {
                     </div>
                     : null
             }
+            <div>
             {
-                tf?._id && <div>
-                    <b>Transcription Factor: </b>
-                    {tf?.name}
-                </div>
+                tf?.name && <b>{`Transcription Factor: ${tf?.name}`}<br /></b>
             }
+            {
+                eS && <b>{`Experiment Strategy: ${eS}`}</b>
+            }
+            </div>
             {
                 gc
                     ? <div>
