@@ -132,11 +132,7 @@ function Body({ data }) {
             }
             <NLPGC id_dataset={data?._id} />
             <Tabs id_dataset={data?._id} data={data} />
-            {
-            data?.sourceSerie?.strategy !== "ChIP-exo"
-                ?<Viewer id_dataset={data?._id} tf={data?.objectTested?.name} datasetType={data?.datasetType} />
-                :null
-            }
+            
             
             <br />
             
@@ -147,3 +143,10 @@ function Body({ data }) {
 
 }
  //<Tabs id_dataset={data?._id} data={data} />
+ /**
+  * {
+            data?.sourceSerie?.strategy !== "ChIP-exo"
+                ?<Viewer id_dataset={data?._id} tf={data?.objectTested?.name} datasetType={data?.datasetType} />
+                :null
+            }
+  */
