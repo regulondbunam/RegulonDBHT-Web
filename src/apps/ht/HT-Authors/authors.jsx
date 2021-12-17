@@ -8,11 +8,9 @@ export default function Authors({ data }) {
         return null
     }
     try {
-        let start = authorData.indexOf("#")
-        let end = authorData.indexOf("\n")
-        let coment = authorData.substring(start, end)
-        coment = coment.replace("# ","")
-        let document = authorData.substring(end, authorData.length)
+        let dt = getComments(authorData)
+        let coment = dt.comment
+        let document = dt.document
         let link = saveStaticDataToFile(authorData, data[0]?._id)
         return (
             <div>
@@ -20,7 +18,7 @@ export default function Authors({ data }) {
                     onClick={() => { window.location = link }}
                 >Download File</button>
                 <div style={{ overflow: "auto", height: "500px" }} >
-                    <p>{coment}</p>
+                    <p dangerouslySetInnerHTML={{ __html: coment }}></p>
                     <CsvToHtmlTable
                         data={document}
                         tableClassName="table_content"
@@ -33,6 +31,28 @@ export default function Authors({ data }) {
         return null
     }
 
+}
+
+function getComments(authorData) {
+    let comment = "" 
+    let document = authorData
+    let start = authorData.indexOf("#")
+    let flag = 0
+    while (start !== -1) {
+        let end = document.indexOf("\n")
+        if (start > end) {
+            console.warn("error format document author")
+            document = document.replace("\n","")
+        } else {
+            comment += "<br/>"+document.substring(start, end)
+            document = document.substring(end, document.length)
+        }
+        start = document.indexOf("#")
+        if (flag > 5) { break; }
+        flag++
+    }
+
+    return { comment: comment, document: document }
 }
 
 function saveStaticDataToFile(str, name) {
