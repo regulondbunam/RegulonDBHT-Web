@@ -6,7 +6,9 @@ export function confGenome({
   tsFile,
   ttFile,
   tuFile,
-  geFile
+  geFile,
+  promoter,
+  terminator
 }) {
   let conf = {
     "id": "Ecoli",
@@ -33,6 +35,18 @@ export function confGenome({
       }
     )    
   }
+  console.log(tfFile)
+  if (tfFile) {
+    conf.tracks.push(
+      {
+        "name": "RegulonDB TFBS",
+        "url": tfFile,
+        "format": "bed",
+        "displayMode": "EXPANDED",
+        "nameField": "RegulonDB_TFBS",
+      }
+    )    
+  }
   if (peaksFile) {
     conf.tracks.push(
       {
@@ -55,14 +69,14 @@ export function confGenome({
       }
     )    
   }
-  if (tfFile) {
+  if (terminator) {
     conf.tracks.push(
       {
-        "name": "RegulonDB TFBS",
-        "url": tfFile,
-        "format": "bed",
+        "name": `TerminatorSet`,
+        "url": terminator,
+        "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "RegulonDB_TFBS",
+        "nameField": `TerminatorSet`,
       }
     )    
   }
@@ -74,6 +88,17 @@ export function confGenome({
         "format": "gff3",
         "displayMode": "EXPANDED",
         "nameField": `${id_dataset} dataset`,
+      }
+    )    
+  }
+  if (promoter) {
+    conf.tracks.push(
+      {
+        "name": `PromoterSet`,
+        "url": promoter,
+        "format": "gff3",
+        "displayMode": "EXPANDED",
+        "nameField": `PromoterSet`,
       }
     )    
   }

@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import igv from "igv"
 import { confGenome } from "./genome/genome"
 //import { SpinnerCircle } from '../../../../components/ui-components/ui_components';
-//
-
 //const FILE_SERVER = process.env.REACT_APP_FILE_SERVICE
 
 export function Viewer({ id_dataset, tf, datasetType }) {
@@ -23,18 +21,19 @@ export function Viewer({ id_dataset, tf, datasetType }) {
         case "TFBINDING":
             _peaksFile = `/media/raw/ht_collections_web_${version}/BS/${id_dataset}_peaks.gff3`
             _sitesFile = `/media/raw/ht_collections_web_${version}/BS/${id_dataset}_sites.gff3`
-            break;
-        case "TUS":
             if (tf !== null) {
-
                 _tfFile = `/media/raw/RegulonDBFiles/TF_bed/${tf}.bed`
             }
+            break;
+        case "TUS":
             _tuFile = `/media/raw/ht_collections_web_${version}/TU/${id_dataset}.gff3`
             break;
         case "TSS":
+            _promoter = `/media/raw/ht_collections_web_${version}/regulondb/PromoterSet.gff3`
             _tsFile = `/media/raw/ht_collections_web_${version}/TSS/${id_dataset}.gff3`
             break;
         case "TTS":
+            _terminator = `/media/raw/ht_collections_web_${version}/regulondb/TerminatorSet.gff3`
             _ttFile = `/media/raw/ht_collections_web_${version}/TTS/${id_dataset}.gff3`
             break;
         case "GENE_EXPRESSION":
@@ -61,78 +60,16 @@ export function Viewer({ id_dataset, tf, datasetType }) {
                     tsFile: _tsFile,
                     ttFile: _ttFile,
                     tuFile: _tuFile,
-                    geFile: _geFile
+                    geFile: _geFile,
+                    promoter: _promoter,
+                    terminator: _terminator
                 })
             })
                 .then(function (browser) {
                     //console.log("hola");
                 })
-            /*
-            if (_peaksFile) {
-                igv.createBrowser(igvDiv, {
-                    genome: confGenome(_peaksFile, _sitesFile, _tfFile)
-                })
-                    .then(function (browser) {
-                        //console.log("hola");
-                    })
-            } else {
-                if (!_sitesFile) {
-                    let xhr = new XMLHttpRequest();
-                    xhr.onreadystatechange = process;
-                    xhr.open("GET", `${FILE_SERVER}/download/dataset/chip-seq/sites/bed/${id_dataset}`, true);
-                    xhr.send();
-                    xhr.onloadend = () => {
-                        if (xhr.readyState === 4) {
-                            if (xhr.status === 200 || xhr.status === 0) {
-                                let link = saveStaticDataToFile(xhr.responseText, "sites", id_dataset, "bed");
-                                set_sitesFile(link)
-                            } else {
-                                set_sitesFile("undefined")
-                            }
-                        }
-                    }
-                } else {
-                    if (!_tfFile) {
-                        if (!tf) {
-                            //console.log(tf)
-                            set_tfFile("undefined")
-                        } else {
-                            let xhr = new XMLHttpRequest();
-                            xhr.onreadystatechange = process;
-                            xhr.open("GET", `${FILE_SERVER}/regulondb_files/tf/bed/${tf}`, true);
-                            xhr.send();
-                            xhr.onloadend = () => {
-                                if (xhr.readyState === 4) {
-                                    if (xhr.status === 200 || xhr.status === 0) {
-                                        let link = saveStaticDataToFile(xhr.responseText, "tf", tf, "bed");
-                                        set_tfFile(link)
-                                    } else {
-                                        set_tfFile("undefined")
-                                    }
-                                }
-                            }
-                        }
-                    } else {
-                        let xhr = new XMLHttpRequest();
-                        xhr.onreadystatechange = process;
-                        xhr.open("GET", `${FILE_SERVER}/download/dataset/chip-seq/peaks/bed/${id_dataset}`, true);
-                        xhr.send();
-                        xhr.onloadend = () => {
-                            if (xhr.readyState === 4) {
-                                if (xhr.status === 200 || xhr.status === 0) {
-                                    let link = saveStaticDataToFile(xhr.responseText, "peaks", id_dataset, "bed");
-                                    set_peaksFile(link)
-                                } else {
-                                    set_peaksFile("undefined")
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            */
         }
-    }, [id_dataset, _peaksFile, _sitesFile, _tfFile, _ttFile, _tsFile, _tuFile, notTracks, _geFile])
+    }, [id_dataset, _peaksFile, _sitesFile, _tfFile, _ttFile, _tsFile, _tuFile, notTracks, _geFile, _promoter, _terminator])
 
     if (!show) {
         return null
@@ -156,3 +93,68 @@ function saveStaticDataToFile(str, type, name, extension) {
     return window.URL.createObjectURL(blob);
 }
 */
+
+/*
+           if (_peaksFile) {
+               igv.createBrowser(igvDiv, {
+                   genome: confGenome(_peaksFile, _sitesFile, _tfFile)
+               })
+                   .then(function (browser) {
+                       //console.log("hola");
+                   })
+           } else {
+               if (!_sitesFile) {
+                   let xhr = new XMLHttpRequest();
+                   xhr.onreadystatechange = process;
+                   xhr.open("GET", `${FILE_SERVER}/download/dataset/chip-seq/sites/bed/${id_dataset}`, true);
+                   xhr.send();
+                   xhr.onloadend = () => {
+                       if (xhr.readyState === 4) {
+                           if (xhr.status === 200 || xhr.status === 0) {
+                               let link = saveStaticDataToFile(xhr.responseText, "sites", id_dataset, "bed");
+                               set_sitesFile(link)
+                           } else {
+                               set_sitesFile("undefined")
+                           }
+                       }
+                   }
+               } else {
+                   if (!_tfFile) {
+                       if (!tf) {
+                           //console.log(tf)
+                           set_tfFile("undefined")
+                       } else {
+                           let xhr = new XMLHttpRequest();
+                           xhr.onreadystatechange = process;
+                           xhr.open("GET", `${FILE_SERVER}/regulondb_files/tf/bed/${tf}`, true);
+                           xhr.send();
+                           xhr.onloadend = () => {
+                               if (xhr.readyState === 4) {
+                                   if (xhr.status === 200 || xhr.status === 0) {
+                                       let link = saveStaticDataToFile(xhr.responseText, "tf", tf, "bed");
+                                       set_tfFile(link)
+                                   } else {
+                                       set_tfFile("undefined")
+                                   }
+                               }
+                           }
+                       }
+                   } else {
+                       let xhr = new XMLHttpRequest();
+                       xhr.onreadystatechange = process;
+                       xhr.open("GET", `${FILE_SERVER}/download/dataset/chip-seq/peaks/bed/${id_dataset}`, true);
+                       xhr.send();
+                       xhr.onloadend = () => {
+                           if (xhr.readyState === 4) {
+                               if (xhr.status === 200 || xhr.status === 0) {
+                                   let link = saveStaticDataToFile(xhr.responseText, "peaks", id_dataset, "bed");
+                                   set_peaksFile(link)
+                               } else {
+                                   set_peaksFile("undefined")
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+           */

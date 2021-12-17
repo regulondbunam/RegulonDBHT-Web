@@ -30,7 +30,7 @@ export default function PanelResult({ ds, match_data }) {
 
 
     let title = ds?.sample?.title
-    if(!title){
+    if(!title ||  title === "obtener de GEO"){
         title = ds?.objectTested?.name
         if(!title){
             title = ds?._id
