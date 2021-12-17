@@ -16,7 +16,7 @@ export default function EStrategy({ data, filterData, set_filterData, selectData
         }
         
     }
-    console.log(_eStrategy)
+    // console.log(_eStrategy)
     return (
         <div className={Style.filedContent} >
             <table className="table_content">

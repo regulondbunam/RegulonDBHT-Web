@@ -1,8 +1,26 @@
 import React from 'react'
 import Style from "../filter.module.css"
 
+/*
+organism: String
+geneticBackground: String
+medium: String
+aeration: String
+temperature: String
+ph: String
+pressure: String
+opticalDensity: String
+growthPhase: String
+growthRate: String
+vesselType: String
+aerationSpeed: String
+mediumSupplements: String
+otherTerms: [String]
+*/
+
 export default function GConditions({ data, filterData, set_filterData, selectDatasets, set_selectedDataset }) {
     let gConditions = filterData.gConditions
+    let groupGC = [] 
     let _gConditions = {}
     for (let dtset of data) {
         let gcs = dtset.growthConditions
@@ -20,7 +38,7 @@ export default function GConditions({ data, filterData, set_filterData, selectDa
             })
         }
     }
-    console.log(gConditions)
+    //console.log(gConditions)
     return (
         <div className={Style.filedContent} >
             <table className="table_content">

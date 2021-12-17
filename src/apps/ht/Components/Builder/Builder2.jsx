@@ -262,6 +262,7 @@ function fixQuery(query) {
 
     //let especialCharacterArray = ["%", "_", "-", ";", ".", "/"];
     // String.remplace("","")
+    //Caracteres aceptados por el modulo % + , - . / : ; = _ ~| '' comillas simples  \"\" comillas dobles escapeadas
     let negativeCharacterArray = [",", "`", "~", "!", "@", "#", "$", "^", "&", "*", "+", "=", ":", ">", "<", ",", "?", "{", "}", "%"]
     for (let i = 0; i < brokeQueryArray.length; i++) {
         if (brokeQueryArray[i] !== "(") {

@@ -57,7 +57,7 @@ export default class Filter extends Component {
                 this.setState({ isClean: false })
             }
         }
-        console.log(this.state.selectDatasets)
+        //console.log(this.state.selectDatasets)
         if (this.state.selectDatasets.length === 0 && !this.state.isClean) {
             this._cleanFilter()
         }
@@ -93,7 +93,7 @@ export default class Filter extends Component {
         const { data, datasetType } = this.props
         const { selectDatasets, view_IDs, view_tfs, filterData, view_Authors, view_Estrategy, view_gConditions } = this.state
         //const fields = Object.keys(data[0])
-        console.log(data[0]);
+        //console.log(data[0]);
         let f_id = true
         let f_tfs = true
         let f_a = true
