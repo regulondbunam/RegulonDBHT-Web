@@ -7,42 +7,45 @@ import { confGenome } from "./genome/genome"
 //const FILE_SERVER = process.env.REACT_APP_FILE_SERVICE
 
 export function Viewer({ id_dataset, tf, datasetType }) {
+    const version = "v3"
     let _peaksFile = undefined;
     let _sitesFile = undefined;
+    let _promoter = undefined;
+    let _terminator = undefined;
     let _tfFile = undefined;
-    let _TSfile = undefined;
-    let _TTfile = undefined;
-    let _TUfile = undefined;
-    let _GEfile = undefined;
+    let _tsFile = undefined;
+    let _ttFile = undefined;
+    let _tuFile = undefined;
+    let _geFile = undefined;
     let show = true;
-    
+
     switch (datasetType) {
         case "TFBINDING":
-            _peaksFile = `/media/raw/ht_collections_web/BS/${id_dataset}_peaks.gff3`
-            _sitesFile = `/media/raw/ht_collections_web/BS/${id_dataset}_sites.gff3`
+            _peaksFile = `/media/raw/ht_collections_web_${version}/BS/${id_dataset}_peaks.gff3`
+            _sitesFile = `/media/raw/ht_collections_web_${version}/BS/${id_dataset}_sites.gff3`
             break;
         case "TUS":
             if (tf !== null) {
 
                 _tfFile = `/media/raw/RegulonDBFiles/TF_bed/${tf}.bed`
             }
-            _TUfile = `/media/raw/ht_collections_web/TU/${id_dataset}.gff3`
+            _tuFile = `/media/raw/ht_collections_web_${version}/TU/${id_dataset}.gff3`
             break;
         case "TSS":
-            _TSfile = `/media/raw/ht_collections_web/TSS/${id_dataset}.gff3`
+            _tsFile = `/media/raw/ht_collections_web_${version}/TSS/${id_dataset}.gff3`
             break;
         case "TTS":
-            _TTfile = `/media/raw/ht_collections_web/TTS/${id_dataset}.gff3`
+            _ttFile = `/media/raw/ht_collections_web_${version}/TTS/${id_dataset}.gff3`
             break;
         case "GENE_EXPRESSION":
-            _GEfile = `/media/raw/ht_collections_web/GE/${id_dataset}.bedgraph`
+            _geFile = `/media/raw/ht_collections_web_${version}/GE/${id_dataset}.bedgraph`
             break;
         default:
             show = false;
             break;
     }
 
-    let notTracks = !_peaksFile || !_sitesFile || !_tfFile || !_TSfile || !_TTfile || !_TUfile || !_GEfile
+    let notTracks = !_peaksFile || !_sitesFile || !_tfFile || !_tsFile || !_ttFile || !_tuFile || !_geFile
 
     useEffect(() => {
 
@@ -50,7 +53,16 @@ export function Viewer({ id_dataset, tf, datasetType }) {
 
         if (igvDiv && id_dataset) {
             igv.createBrowser(igvDiv, {
-                genome: confGenome(_peaksFile, _sitesFile, _tfFile, _TSfile, _TTfile, _TUfile, _GEfile)
+                genome: confGenome({
+                    id_dataset: id_dataset,
+                    peaksFile: _peaksFile,
+                    sitesFile: _sitesFile,
+                    tfFile: _tfFile,
+                    tsFile: _tsFile,
+                    ttFile: _ttFile,
+                    tuFile: _tuFile,
+                    geFile: _geFile
+                })
             })
                 .then(function (browser) {
                     //console.log("hola");
@@ -120,7 +132,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
             }
             */
         }
-    }, [id_dataset, _peaksFile, _sitesFile, _tfFile, _TTfile, _TSfile, _TUfile, notTracks, _GEfile])
+    }, [id_dataset, _peaksFile, _sitesFile, _tfFile, _ttFile, _tsFile, _tuFile, notTracks, _geFile])
 
     if (!show) {
         return null

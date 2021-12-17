@@ -1,4 +1,13 @@
-export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile, geFile) {
+export function confGenome({
+  id_dataset,
+  peaksFile,
+  sitesFile,
+  tfFile,
+  tsFile,
+  ttFile,
+  tuFile,
+  geFile
+}) {
   let conf = {
     "id": "Ecoli",
     "name": "Ecoli",
@@ -18,31 +27,31 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile, g
   if (geFile) {
     conf.tracks.push(
       {
-        "name": "ge",
+        "name": `${id_dataset} dataset`,
         "url": geFile,
-        "nameField": "ge",
+        "nameField": `${id_dataset} dataset`,
       }
     )    
   }
   if (peaksFile) {
     conf.tracks.push(
       {
-        "name": "peaks",
+        "name": `${id_dataset} peaks`,
         "url": peaksFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "peaks",
+        "nameField": `${id_dataset} peaks`,
       }
     )    
   }
   if (sitesFile) {
     conf.tracks.push(
       {
-        "name": "sites",
+        "name": `${id_dataset} sites`,
         "url": sitesFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "sites",
+        "nameField": `${id_dataset} sites`,
       }
     )    
   }
@@ -60,33 +69,33 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile, g
   if (ttFile) {
     conf.tracks.push(
       {
-        "name": "TTS Dataset",
+        "name": `${id_dataset} dataset`,
         "url": ttFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "TT",
+        "nameField": `${id_dataset} dataset`,
       }
     )    
   }
   if (tsFile) {
     conf.tracks.push(
       {
-        "name": "TSS Dataset",
+        "name": `${id_dataset} dataset`,
         "url": tsFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "TS",
+        "nameField": `${id_dataset} dataset`,
       }
     )    
   }
   if (tuFile) {
     conf.tracks.push(
       {
-        "name": "TUS Dataset",
+        "name": `${id_dataset} dataset`,
         "url": tuFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "TU",
+        "nameField": `${id_dataset} dataset`,
       }
     )    
   }
