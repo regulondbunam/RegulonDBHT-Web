@@ -1,0 +1,9 @@
+NC_000913.3	RegulonDB	binding_site	1078914	1078933		-	.	name=BasR;ActiveConformation=BasR-Phosphorylated;RegulatedTUName=putA;PromoterName=putAp;TFBSCenterPosition=2.5;Sequence=2.5
+NC_000913.3	RegulonDB	binding_site	1103425	1103444		-	.	name=BasR;ActiveConformation=BasR-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp1;TFBSCenterPosition=-90.5;Sequence=-90.5
+NC_000913.3	RegulonDB	binding_site	1103425	1103444		-	.	name=BasR;ActiveConformation=BasR-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp3;TFBSCenterPosition=-90.5;Sequence=-90.5
+NC_000913.3	RegulonDB	binding_site	1638940	1638959		-	.	name=BasR;ActiveConformation=BasR-Phosphorylated;RegulatedTUName=cspI;PromoterName=cspIp;TFBSCenterPosition=-137.5;Sequence=-137.5
+NC_000913.3	RegulonDB	binding_site	3169726	3169745		+	.	name=BasR;ActiveConformation=BasR-Phosphorylated;RegulatedTUName=qseBC;PromoterName=qseBp2;TFBSCenterPosition=-13.5;Sequence=-13.5
+NC_000913.3	RegulonDB	binding_site	3348359	3348378		+	.	name=BasR;ActiveConformation=BasR-Phosphorylated;RegulatedTUName=yrbL;PromoterName=yrbLp;TFBSCenterPosition=-52.5;Sequence=-52.5
+NC_000913.3	RegulonDB	binding_site	4256417	4256436		+	.	name=BasR;ActiveConformation=BasR-Phosphorylated;RegulatedTUName=dgkA;PromoterName=dgkAp1;TFBSCenterPosition=-30.5;Sequence=-30.5
+NC_000913.3	RegulonDB	binding_site	4540616	4540635		+	.	name=BasR;ActiveConformation=BasR-Phosphorylated;RegulatedTUName=fimB;PromoterName=fimBp2;TFBSCenterPosition=-41.5;Sequence=-41.5
+NC_000913.3	RegulonDB	binding_site	481179	481198		-	.	name=BasR;ActiveConformation=BasR-Phosphorylated;RegulatedTUName=tomB-hha;PromoterName=tomBp1;TFBSCenterPosition=-394.5;Sequence=-394.5

@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	1933095	1933115		-	.	name=KdgR;ActiveConformation=KdgR;RegulatedTUName=eda;PromoterName=edap1;TFBSCenterPosition=5;Sequence=5
+NC_000913.3	RegulonDB	binding_site	1934779	1934799		-	.	name=KdgR;ActiveConformation=KdgR;RegulatedTUName=edd-eda;PromoterName=eddp1;TFBSCenterPosition=-76;Sequence=-76

@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	4073662	4073687		-	.	name=CsqR;ActiveConformation=CsqR;RegulatedTUName=yihUTS;PromoterName=yihUp5;TFBSCenterPosition=-11;Sequence=-11
+NC_000913.3	RegulonDB	binding_site	4073662	4073687		+	.	name=CsqR;ActiveConformation=CsqR;RegulatedTUName=yihV-csqR;PromoterName=yihVp1;TFBSCenterPosition=-38;Sequence=-38
+NC_000913.3	RegulonDB	binding_site				+	.	name=CsqR;ActiveConformation=CsqR;RegulatedTUName=yihW;PromoterName=csqRp;TFBSCenterPosition=;Sequence=

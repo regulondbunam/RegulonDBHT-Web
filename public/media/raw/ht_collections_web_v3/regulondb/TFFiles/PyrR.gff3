@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	3712091	3712101		-	.	name=PyrR;ActiveConformation=PyrR-BTS;RegulatedTUName=yhjX;PromoterName=yhjXp;TFBSCenterPosition=-52.5;Sequence=-52.5
+NC_000913.3	RegulonDB	binding_site	3712112	3712122		-	.	name=PyrR;ActiveConformation=PyrR-BTS;RegulatedTUName=yhjX;PromoterName=yhjXp;TFBSCenterPosition=-73.5;Sequence=-73.5

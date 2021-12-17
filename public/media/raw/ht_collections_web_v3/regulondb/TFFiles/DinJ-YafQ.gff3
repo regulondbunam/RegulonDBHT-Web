@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	246519	246535		-	.	name=DinJ-YafQ;ActiveConformation=DinJ-YafQ;RegulatedTUName=dinJ-yafQ;PromoterName=dinJp;TFBSCenterPosition=89.5;Sequence=89.5
+NC_000913.3	RegulonDB	binding_site	657096	657112		+	.	name=DinJ-YafQ;ActiveConformation=DinJ-YafQ;RegulatedTUName=cspE;PromoterName=cspEp1;TFBSCenterPosition=-43.5;Sequence=-43.5

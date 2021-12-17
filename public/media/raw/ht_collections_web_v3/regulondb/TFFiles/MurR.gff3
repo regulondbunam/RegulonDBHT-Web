@@ -1,0 +1,10 @@
+NC_000913.3	RegulonDB	binding_site	2545682	2545697		+	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murQP;PromoterName=murQp1;TFBSCenterPosition=-44;Sequence=-44
+NC_000913.3	RegulonDB	binding_site	2545682	2545697		+	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murQP;PromoterName=murQp2;TFBSCenterPosition=-52;Sequence=-52
+NC_000913.3	RegulonDB	binding_site	2545682	2545697		+	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murQP;PromoterName=murQp;TFBSCenterPosition=-44;Sequence=-44
+NC_000913.3	RegulonDB	binding_site	2545714	2545729		+	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murQP;PromoterName=murQp1;TFBSCenterPosition=-12;Sequence=-12
+NC_000913.3	RegulonDB	binding_site	2545714	2545729		+	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murQP;PromoterName=murQp2;TFBSCenterPosition=-20;Sequence=-20
+NC_000913.3	RegulonDB	binding_site	2545714	2545729		+	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murQP;PromoterName=murQp;TFBSCenterPosition=-12;Sequence=-12
+NC_000913.3	RegulonDB	binding_site	2545911	2545925		-	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murR;PromoterName=murRp;TFBSCenterPosition=-125;Sequence=-125
+NC_000913.3	RegulonDB	binding_site	2545911	2545925		-	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murR;PromoterName=murRp;TFBSCenterPosition=-125;Sequence=-125
+NC_000913.3	RegulonDB	binding_site	2545911	2545925		-	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murR;PromoterName=murRp2;TFBSCenterPosition=-125;Sequence=-125
+NC_000913.3	RegulonDB	binding_site	2545911	2545925		-	.	name=MurR;ActiveConformation=MurR;RegulatedTUName=murR;PromoterName=murRp2;TFBSCenterPosition=-125;Sequence=-125

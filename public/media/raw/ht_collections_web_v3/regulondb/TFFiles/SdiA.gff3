@@ -1,0 +1,12 @@
+NC_000913.3	RegulonDB	binding_site	102695	102712		+	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=ftsQAZ;PromoterName=ftsQp1;TFBSCenterPosition=-163.5;Sequence=-163.5
+NC_000913.3	RegulonDB	binding_site	102695	102712		+	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=ftsQAZ;PromoterName=ftsQp;TFBSCenterPosition=-163.5;Sequence=-163.5
+NC_000913.3	RegulonDB	binding_site	102697	102714		+	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=ftsQAZ;PromoterName=ftsQp1;TFBSCenterPosition=-161.5;Sequence=-161.5
+NC_000913.3	RegulonDB	binding_site	102697	102714		+	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=ftsQ;PromoterName=ftsQp2;TFBSCenterPosition=-36.5;Sequence=-36.5
+NC_000913.3	RegulonDB	binding_site	102697	102714		+	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=ftsQAZ;PromoterName=ftsQp;TFBSCenterPosition=-161.5;Sequence=-161.5
+NC_000913.3	RegulonDB	binding_site	102843	102860		+	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=ftsQAZ;PromoterName=ftsQp1;TFBSCenterPosition=-15.5;Sequence=-15.5
+NC_000913.3	RegulonDB	binding_site	102843	102860		+	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=ftsQAZ;PromoterName=ftsQp;TFBSCenterPosition=-15.5;Sequence=-15.5
+NC_000913.3	RegulonDB	binding_site	1792132	1792149		-	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=ydiV;PromoterName=ydiVp;TFBSCenterPosition=-53;Sequence=-53
+NC_000913.3	RegulonDB	binding_site				-	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=gadW;PromoterName=gadWp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=rmf;PromoterName=rmfp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=rsd;PromoterName=rsdp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=SdiA;ActiveConformation=SdiA;RegulatedTUName=gadY;PromoterName=gadYp;TFBSCenterPosition=;Sequence=

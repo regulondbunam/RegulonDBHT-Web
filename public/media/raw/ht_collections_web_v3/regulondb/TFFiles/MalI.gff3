@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	1699210	1699227		-	.	name=MalI;ActiveConformation=MalI;RegulatedTUName=malI;PromoterName=malIp;TFBSCenterPosition=10.5;Sequence=10.5
+NC_000913.3	RegulonDB	binding_site	1699288	1699305		+	.	name=MalI;ActiveConformation=MalI;RegulatedTUName=malXY;PromoterName=malXp;TFBSCenterPosition=-16.5;Sequence=-16.5

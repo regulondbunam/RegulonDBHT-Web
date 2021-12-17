@@ -1,0 +1,11 @@
+NC_000913.3	RegulonDB	binding_site	4097504	4097520		-	.	name=RhaS;ActiveConformation=RhaS-L-rhamnose;RegulatedTUName=rhaBAD;PromoterName=rhaBp;TFBSCenterPosition=-40;Sequence=-40
+NC_000913.3	RegulonDB	binding_site	4097537	4097553		-	.	name=RhaS;ActiveConformation=RhaS-L-rhamnose;RegulatedTUName=rhaBAD;PromoterName=rhaBp;TFBSCenterPosition=-73;Sequence=-73
+NC_000913.3	RegulonDB	binding_site	4097629	4097645		+	.	name=RhaS;ActiveConformation=RhaS-L-rhamnose;RegulatedTUName=rhaSR;PromoterName=rhaSp;TFBSCenterPosition=-74;Sequence=-74
+NC_000913.3	RegulonDB	binding_site	4097629	4097645		+	.	name=RhaS;ActiveConformation=RhaS-L-rhamnose;RegulatedTUName=rhaSR;PromoterName=rhaSp2;TFBSCenterPosition=-74;Sequence=-74
+NC_000913.3	RegulonDB	binding_site	4097663	4097679		+	.	name=RhaS;ActiveConformation=RhaS-L-rhamnose;RegulatedTUName=rhaSR;PromoterName=rhaSp;TFBSCenterPosition=-40;Sequence=-40
+NC_000913.3	RegulonDB	binding_site	4097663	4097679		+	.	name=RhaS;ActiveConformation=RhaS-L-rhamnose;RegulatedTUName=rhaSR;PromoterName=rhaSp2;TFBSCenterPosition=-40;Sequence=-40
+NC_000913.3	RegulonDB	binding_site	4098617	4098634		+	.	name=RhaS;ActiveConformation=RhaS;RegulatedTUName=rhaSR;PromoterName=rhaSp;TFBSCenterPosition=915;Sequence=915
+NC_000913.3	RegulonDB	binding_site	4098617	4098634		+	.	name=RhaS;ActiveConformation=RhaS;RegulatedTUName=rhaSR;PromoterName=rhaSp2;TFBSCenterPosition=915;Sequence=915
+NC_000913.3	RegulonDB	binding_site	4100599	4100615		-	.	name=RhaS;ActiveConformation=RhaS-L-rhamnose;RegulatedTUName=rhaT;PromoterName=rhaTp;TFBSCenterPosition=-41;Sequence=-41
+NC_000913.3	RegulonDB	binding_site	4100632	4100648		-	.	name=RhaS;ActiveConformation=RhaS-L-rhamnose;RegulatedTUName=rhaT;PromoterName=rhaTp;TFBSCenterPosition=-74;Sequence=-74
+NC_000913.3	RegulonDB	binding_site	4101057	4101073		-	.	name=RhaS;ActiveConformation=RhaS;RegulatedTUName=rhaT;PromoterName=rhaTp;TFBSCenterPosition=-499;Sequence=-499

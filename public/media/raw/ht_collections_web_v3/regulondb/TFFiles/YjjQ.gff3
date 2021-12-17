@@ -1,0 +1,7 @@
+NC_000913.3	RegulonDB	binding_site	1050711	1050725		-	.	name=YjjQ;ActiveConformation=YjjQ;RegulatedTUName=gfcA;PromoterName=gfcAp;TFBSCenterPosition=-16;Sequence=-16
+NC_000913.3	RegulonDB	binding_site	1050744	1050758		-	.	name=YjjQ;ActiveConformation=YjjQ;RegulatedTUName=gfcA;PromoterName=gfcAp;TFBSCenterPosition=-49;Sequence=-49
+NC_000913.3	RegulonDB	binding_site	1335077	1335091		+	.	name=YjjQ;ActiveConformation=YjjQ;RegulatedTUName=ymiA-yciX;PromoterName=ymiAp;TFBSCenterPosition=-6;Sequence=-6
+NC_000913.3	RegulonDB	binding_site	1978378	1978392		-	.	name=YjjQ;ActiveConformation=YjjQ;RegulatedTUName=flhDC;PromoterName=flhDp;TFBSCenterPosition=11;Sequence=11
+NC_000913.3	RegulonDB	binding_site	2312887	2312901		-	.	name=YjjQ;ActiveConformation=YjjQ;RegulatedTUName=ompC;PromoterName=ompCp1;TFBSCenterPosition=-64;Sequence=-64
+NC_000913.3	RegulonDB	binding_site	2741752	2741766		+	.	name=YjjQ;ActiveConformation=YjjQ;RegulatedTUName=yfiR-dgcN-yfiB;PromoterName=yfiRp;TFBSCenterPosition=-65;Sequence=-65
+NC_000913.3	RegulonDB	binding_site	819852	819866		+	.	name=YjjQ;ActiveConformation=YjjQ;RegulatedTUName=ybhL;PromoterName=ybhLp;TFBSCenterPosition=2;Sequence=2

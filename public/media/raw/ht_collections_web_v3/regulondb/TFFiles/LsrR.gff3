@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	1601261	1601290		-	.	name=LsrR;ActiveConformation=LsrR;RegulatedTUName=lsrRK;PromoterName=lsrRp;TFBSCenterPosition=-18.5;Sequence=-18.5
+NC_000913.3	RegulonDB	binding_site	1601456	1601485		+	.	name=LsrR;ActiveConformation=LsrR;RegulatedTUName=lsrACDBFG-tam;PromoterName=lsrAp;TFBSCenterPosition=11.5;Sequence=11.5

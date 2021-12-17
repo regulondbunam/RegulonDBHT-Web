@@ -1,0 +1,22 @@
+NC_000913.3	RegulonDB	binding_site	1842219	1842238		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=gdhA;PromoterName=gdhAp1;TFBSCenterPosition=-79.5;Sequence=-79.5
+NC_000913.3	RegulonDB	binding_site	1842239	1842258		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=gdhA;PromoterName=gdhAp1;TFBSCenterPosition=-59.5;Sequence=-59.5
+NC_000913.3	RegulonDB	binding_site	2248613	2248632		-	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=lysP;PromoterName=lysPp;TFBSCenterPosition=-62.5;Sequence=-62.5
+NC_000913.3	RegulonDB	binding_site	2248633	2248652		-	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=lysP;PromoterName=lysPp;TFBSCenterPosition=-82.5;Sequence=-82.5
+NC_000913.3	RegulonDB	binding_site	2344411	2344430		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=nrdAB-yfaE;PromoterName=nrdAp;TFBSCenterPosition=-334.5;Sequence=-334.5
+NC_000913.3	RegulonDB	binding_site	2344464	2344483		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=nrdAB-yfaE;PromoterName=nrdAp;TFBSCenterPosition=-281.5;Sequence=-281.5
+NC_000913.3	RegulonDB	binding_site	2344501	2344520		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=nrdAB-yfaE;PromoterName=nrdAp;TFBSCenterPosition=-244.5;Sequence=-244.5
+NC_000913.3	RegulonDB	binding_site	2344527	2344546		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=nrdAB-yfaE;PromoterName=nrdAp;TFBSCenterPosition=-218.5;Sequence=-218.5
+NC_000913.3	RegulonDB	binding_site	2344555	2344574		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=nrdAB-yfaE;PromoterName=nrdAp;TFBSCenterPosition=-190.5;Sequence=-190.5
+NC_000913.3	RegulonDB	binding_site	2344582	2344601		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=nrdAB-yfaE;PromoterName=nrdAp;TFBSCenterPosition=-163.5;Sequence=-163.5
+NC_000913.3	RegulonDB	binding_site	28252	28271		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=dapB;PromoterName=dapBp1;TFBSCenterPosition=-81.5;Sequence=-81.5
+NC_000913.3	RegulonDB	binding_site	28272	28291		+	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=dapB;PromoterName=dapBp1;TFBSCenterPosition=-61.5;Sequence=-61.5
+NC_000913.3	RegulonDB	binding_site	3059684	3059704		+	.	name=ArgP;ActiveConformation=ArgP-arginine;RegulatedTUName=argP;PromoterName=argPp;TFBSCenterPosition=-36.5;Sequence=-36.5
+NC_000913.3	RegulonDB	binding_site	3059704	3059723		+	.	name=ArgP;ActiveConformation=ArgP-arginine;RegulatedTUName=argP;PromoterName=argPp;TFBSCenterPosition=-16.5;Sequence=-16.5
+NC_000913.3	RegulonDB	binding_site	3068860	3068879		-	.	name=ArgP;ActiveConformation=ArgP-arginine;RegulatedTUName=argO;PromoterName=argOp;TFBSCenterPosition=-33.5;Sequence=-33.5
+NC_000913.3	RegulonDB	binding_site	3068880	3068900		-	.	name=ArgP;ActiveConformation=ArgP-arginine;RegulatedTUName=argO;PromoterName=argOp;TFBSCenterPosition=-53.5;Sequence=-53.5
+NC_000913.3	RegulonDB	binding_site	3883733	3883752		-	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=dnaAN-recF;PromoterName=dnaAp1;TFBSCenterPosition=219.5;Sequence=219.5
+NC_000913.3	RegulonDB	binding_site	3884001	3884020		-	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=dnaAN-recF;PromoterName=dnaAp1;TFBSCenterPosition=-49.5;Sequence=-49.5
+NC_000913.3	RegulonDB	binding_site	3884021	3884040		-	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=dnaAN-recF;PromoterName=dnaAp1;TFBSCenterPosition=-69.5;Sequence=-69.5
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=lysA;PromoterName=lysAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=dapD;PromoterName=dapDp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArgP;ActiveConformation=ArgP;RegulatedTUName=lysC;PromoterName=lysCp1;TFBSCenterPosition=;Sequence=

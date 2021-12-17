@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	2911363	2911388		-	.	name=MazE;ActiveConformation=MazE;RegulatedTUName=mazEFG;PromoterName=mazEp2;TFBSCenterPosition=-20;Sequence=-20
+NC_000913.3	RegulonDB	binding_site	2911363	2911388		-	.	name=MazE;ActiveConformation=MazE;RegulatedTUName=mazEFG;PromoterName=mazEp1;TFBSCenterPosition=-7;Sequence=-7
+NC_000913.3	RegulonDB	binding_site	2911376	2911403		-	.	name=MazE;ActiveConformation=MazE;RegulatedTUName=mazEFG;PromoterName=mazEp2;TFBSCenterPosition=-34;Sequence=-34
+NC_000913.3	RegulonDB	binding_site	2911376	2911403		-	.	name=MazE;ActiveConformation=MazE;RegulatedTUName=mazEFG;PromoterName=mazEp1;TFBSCenterPosition=-21;Sequence=-21
+NC_000913.3	RegulonDB	binding_site	2911362	2911389		-	.	name=MazE-MazF;ActiveConformation=MazE-MazF;RegulatedTUName=mazEFG;PromoterName=mazEp2;TFBSCenterPosition=-20;Sequence=-20
+NC_000913.3	RegulonDB	binding_site	2911362	2911389		-	.	name=MazE-MazF;ActiveConformation=MazE-MazF;RegulatedTUName=mazEFG;PromoterName=mazEp1;TFBSCenterPosition=-7;Sequence=-7
+NC_000913.3	RegulonDB	binding_site	2911376	2911403		-	.	name=MazE-MazF;ActiveConformation=MazE-MazF;RegulatedTUName=mazEFG;PromoterName=mazEp1;TFBSCenterPosition=-21;Sequence=-21
+NC_000913.3	RegulonDB	binding_site	2911376	2911403		-	.	name=MazE-MazF;ActiveConformation=MazE-MazF;RegulatedTUName=mazEFG;PromoterName=mazEp2;TFBSCenterPosition=-34;Sequence=-34

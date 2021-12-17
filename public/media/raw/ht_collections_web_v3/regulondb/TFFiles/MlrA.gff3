@@ -1,0 +1,6 @@
+NC_000913.3	RegulonDB	binding_site	1103457	1103491		-	.	name=MlrA;ActiveConformation=MlrA;RegulatedTUName=csgDEFG;PromoterName=csgDp1;TFBSCenterPosition=-129.5;Sequence=-129.5
+NC_000913.3	RegulonDB	binding_site	1103457	1103491		-	.	name=MlrA;ActiveConformation=MlrA;RegulatedTUName=csgDEFG;PromoterName=csgDp3;TFBSCenterPosition=-129.5;Sequence=-129.5
+NC_000913.3	RegulonDB	binding_site	3333585	3333619		-	.	name=MlrA;ActiveConformation=MlrA;RegulatedTUName=rplU-rpmA;PromoterName=rplUp;TFBSCenterPosition=-85.5;Sequence=-85.5
+NC_000913.3	RegulonDB	binding_site	3333585	3333619		-	.	name=MlrA;ActiveConformation=MlrA;RegulatedTUName=rplU-rpmA-yhbE-obgE;PromoterName=rplUp;TFBSCenterPosition=-85.5;Sequence=-85.5
+NC_000913.3	RegulonDB	binding_site	3336987	3337021		-	.	name=MlrA;ActiveConformation=MlrA;RegulatedTUName=ibaG;PromoterName=ibaGp2;TFBSCenterPosition=-117.5;Sequence=-117.5
+NC_000913.3	RegulonDB	binding_site	4362148	4362182		-	.	name=MlrA;ActiveConformation=MlrA;RegulatedTUName=cadC;PromoterName=cadCp;TFBSCenterPosition=-201.5;Sequence=-201.5

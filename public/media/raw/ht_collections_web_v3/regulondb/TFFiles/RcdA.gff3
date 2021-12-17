@@ -1,0 +1,14 @@
+NC_000913.3	RegulonDB	binding_site	1020896	1020906		-	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=sulA;PromoterName=sulAp;TFBSCenterPosition=47.5;Sequence=47.5
+NC_000913.3	RegulonDB	binding_site	1020910	1020920		-	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=sulA;PromoterName=sulAp;TFBSCenterPosition=33.5;Sequence=33.5
+NC_000913.3	RegulonDB	binding_site	1103638	1103648		-	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=csgDEFG;PromoterName=csgDp1;TFBSCenterPosition=-298.5;Sequence=-298.5
+NC_000913.3	RegulonDB	binding_site	1103638	1103648		-	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=csgDEFG;PromoterName=csgDp3;TFBSCenterPosition=-298.5;Sequence=-298.5
+NC_000913.3	RegulonDB	binding_site	1215713	1215723		-	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=bluF;PromoterName=bluFp;TFBSCenterPosition=-211.5;Sequence=-211.5
+NC_000913.3	RegulonDB	binding_site	1215724	1215734		-	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=bluF;PromoterName=bluFp;TFBSCenterPosition=-222.5;Sequence=-222.5
+NC_000913.3	RegulonDB	binding_site	1671254	1671264		+	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=asr;PromoterName=asrp;TFBSCenterPosition=-68.5;Sequence=-68.5
+NC_000913.3	RegulonDB	binding_site	1671254	1671264		+	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=asr;PromoterName=asrp2;TFBSCenterPosition=-68.5;Sequence=-68.5
+NC_000913.3	RegulonDB	binding_site	1671264	1671274		+	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=asr;PromoterName=asrp;TFBSCenterPosition=-58.5;Sequence=-58.5
+NC_000913.3	RegulonDB	binding_site	1671264	1671274		+	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=asr;PromoterName=asrp2;TFBSCenterPosition=-58.5;Sequence=-58.5
+NC_000913.3	RegulonDB	binding_site	293111	293121		-	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=yagK;PromoterName=yagKp6;TFBSCenterPosition=3.5;Sequence=3.5
+NC_000913.3	RegulonDB	binding_site				-	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=ydeI;PromoterName=ydeIp5;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=rsd;PromoterName=rsdp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=RcdA;ActiveConformation=RcdA;RegulatedTUName=rmf;PromoterName=rmfp;TFBSCenterPosition=;Sequence=

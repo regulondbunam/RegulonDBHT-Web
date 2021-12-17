@@ -1,0 +1,13 @@
+NC_000913.3	RegulonDB	binding_site	3532607	3532624		+	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=pck;PromoterName=pckp;TFBSCenterPosition=-64;Sequence=-64
+NC_000913.3	RegulonDB	binding_site	3532658	3532675		+	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=pck;PromoterName=pckp;TFBSCenterPosition=-13;Sequence=-13
+NC_000913.3	RegulonDB	binding_site	3683596	3683612		-	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=dctA;PromoterName=dctAp;TFBSCenterPosition=-106;Sequence=-106
+NC_000913.3	RegulonDB	binding_site	4349124	4349140		-	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=dcuB-fumB;PromoterName=dcuBp2;TFBSCenterPosition=-41;Sequence=-41
+NC_000913.3	RegulonDB	binding_site	4349146	4349162		-	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=dcuB-fumB;PromoterName=dcuBp2;TFBSCenterPosition=-63;Sequence=-63
+NC_000913.3	RegulonDB	binding_site	4368499	4368516		-	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=aspA-dcuA;PromoterName=aspAp;TFBSCenterPosition=-75;Sequence=-75
+NC_000913.3	RegulonDB	binding_site	4368499	4368516		-	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=aspA;PromoterName=aspAp;TFBSCenterPosition=-75;Sequence=-75
+NC_000913.3	RegulonDB	binding_site	4368585	4368602		-	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=aspA-dcuA;PromoterName=aspAp;TFBSCenterPosition=-161;Sequence=-161
+NC_000913.3	RegulonDB	binding_site	4368585	4368602		-	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=aspA;PromoterName=aspAp;TFBSCenterPosition=-161;Sequence=-161
+NC_000913.3	RegulonDB	binding_site	4382508	4382524		-	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=frdABCD;PromoterName=frdAp;TFBSCenterPosition=-104;Sequence=-104
+NC_000913.3	RegulonDB	binding_site	4382508	4382524		-	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=frdABCD;PromoterName=frdAp2;TFBSCenterPosition=-104;Sequence=-104
+NC_000913.3	RegulonDB	binding_site	652066	652083		+	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=dpiBA;PromoterName=dpiBp2;TFBSCenterPosition=-98;Sequence=-98
+NC_000913.3	RegulonDB	binding_site	652127	652144		+	.	name=DcuR;ActiveConformation=DcuR-P;RegulatedTUName=dpiBA;PromoterName=dpiBp2;TFBSCenterPosition=-37;Sequence=-37

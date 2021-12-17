@@ -1,0 +1,9 @@
+NC_000913.3	RegulonDB	binding_site	1074120	1074138		+	.	name=RutR;ActiveConformation=RutR;RegulatedTUName=rutR;PromoterName=rutRp2;TFBSCenterPosition=16.5;Sequence=16.5
+NC_000913.3	RegulonDB	binding_site	1074120	1074138		-	.	name=RutR;ActiveConformation=RutR;RegulatedTUName=rutABCDEFG;PromoterName=rutAp;TFBSCenterPosition=-102.5;Sequence=-102.5
+NC_000913.3	RegulonDB	binding_site	1725993	1726009		+	.	name=RutR;ActiveConformation=RutR;RegulatedTUName=nemRA;PromoterName=nemRp;TFBSCenterPosition=-20.5;Sequence=-20.5
+NC_000913.3	RegulonDB	binding_site	1725993	1726009		+	.	name=RutR;ActiveConformation=RutR;RegulatedTUName=nemRA-gloA;PromoterName=nemRp;TFBSCenterPosition=-20.5;Sequence=-20.5
+NC_000913.3	RegulonDB	binding_site	29359	29375		+	.	name=RutR;ActiveConformation=RutR;RegulatedTUName=carAB;PromoterName=carAp1;TFBSCenterPosition=-184;Sequence=-184
+NC_000913.3	RegulonDB	binding_site	3666654	3666674		-	.	name=RutR;ActiveConformation=RutR;RegulatedTUName=gadX;PromoterName=gadXp;TFBSCenterPosition=-824.5;Sequence=-824.5
+NC_000913.3	RegulonDB	binding_site	3666654	3666674		-	.	name=RutR;ActiveConformation=RutR;RegulatedTUName=gadXW;PromoterName=gadXp;TFBSCenterPosition=-824.5;Sequence=-824.5
+NC_000913.3	RegulonDB	binding_site	624548	624564		-	.	name=RutR;ActiveConformation=RutR;RegulatedTUName=fepB;PromoterName=fepBp;TFBSCenterPosition=172.5;Sequence=172.5
+NC_000913.3	RegulonDB	binding_site				-	.	name=RutR;ActiveConformation=RutR;RegulatedTUName=pdeR;PromoterName=pdeRp;TFBSCenterPosition=;Sequence=

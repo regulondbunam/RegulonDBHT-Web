@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	2038870	2038886		+	.	name=CusR;ActiveConformation=CusR-P<sup>asp</sup>;RegulatedTUName=hiuH;PromoterName=hiuHp;TFBSCenterPosition=38.5;Sequence=38.5
+NC_000913.3	RegulonDB	binding_site	451577	451593		-	.	name=CusR;ActiveConformation=CusR-P<sup>asp</sup>;RegulatedTUName=cyoABCDE;PromoterName=cyoAp;TFBSCenterPosition=69.5;Sequence=69.5
+NC_000913.3	RegulonDB	binding_site	595512	595528		+	.	name=CusR;ActiveConformation=CusR-P<sup>asp</sup>;RegulatedTUName=cusCFBA;PromoterName=cusCp;TFBSCenterPosition=-53.5;Sequence=-53.5
+NC_000913.3	RegulonDB	binding_site	595512	595528		-	.	name=CusR;ActiveConformation=CusR-P<sup>asp</sup>;RegulatedTUName=cusRS;PromoterName=cusRp;TFBSCenterPosition=-57.5;Sequence=-57.5

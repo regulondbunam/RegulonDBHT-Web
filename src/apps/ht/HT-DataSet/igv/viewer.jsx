@@ -22,7 +22,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
             _peaksFile = `/media/raw/ht_collections_web_${version}/BS/${id_dataset}_peaks.gff3`
             _sitesFile = `/media/raw/ht_collections_web_${version}/BS/${id_dataset}_sites.gff3`
             if (tf !== null) {
-                _tfFile = `/media/raw/RegulonDBFiles/TF_bed/${tf}.bed`
+                _tfFile = `/media/raw/ht_collections_web_v3/regulondb/TFFiles/${tf}.gff3`
             }
             break;
         case "TUS":

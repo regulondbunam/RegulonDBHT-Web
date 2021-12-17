@@ -1,0 +1,142 @@
+NC_000913.3	RegulonDB	binding_site	1031910	1031924		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp;TFBSCenterPosition=-67;Sequence=-67
+NC_000913.3	RegulonDB	binding_site	1031910	1031924		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp2;TFBSCenterPosition=-67;Sequence=-67
+NC_000913.3	RegulonDB	binding_site	1031966	1031988		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp;TFBSCenterPosition=-7.5;Sequence=-7.5
+NC_000913.3	RegulonDB	binding_site	1031966	1031988		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp2;TFBSCenterPosition=-7.5;Sequence=-7.5
+NC_000913.3	RegulonDB	binding_site	1074116	1074130		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=rutABCDEFG;PromoterName=rutAp;TFBSCenterPosition=-97;Sequence=-97
+NC_000913.3	RegulonDB	binding_site	1157674	1157688		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ptsG;PromoterName=ptsGp1;TFBSCenterPosition=-85;Sequence=-85
+NC_000913.3	RegulonDB	binding_site	1157711	1157725		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ptsG;PromoterName=ptsGp1;TFBSCenterPosition=-48;Sequence=-48
+NC_000913.3	RegulonDB	binding_site	1157760	1157774		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ptsG;PromoterName=ptsGp1;TFBSCenterPosition=2;Sequence=2
+NC_000913.3	RegulonDB	binding_site	1165928	1165942		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ndh;PromoterName=ndhp;TFBSCenterPosition=-57;Sequence=-57
+NC_000913.3	RegulonDB	binding_site	1166020	1166034		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ndh;PromoterName=ndhp;TFBSCenterPosition=36;Sequence=36
+NC_000913.3	RegulonDB	binding_site	1166036	1166050		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ndh;PromoterName=ndhp;TFBSCenterPosition=52;Sequence=52
+NC_000913.3	RegulonDB	binding_site	1166041	1166055		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ndh;PromoterName=ndhp;TFBSCenterPosition=57;Sequence=57
+NC_000913.3	RegulonDB	binding_site	1166050	1166064		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ndh;PromoterName=ndhp;TFBSCenterPosition=66;Sequence=66
+NC_000913.3	RegulonDB	binding_site	1166052	1166066		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ndh;PromoterName=ndhp;TFBSCenterPosition=68;Sequence=68
+NC_000913.3	RegulonDB	binding_site	1194998	1195013		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=icd;PromoterName=icdAp1;TFBSCenterPosition=-3;Sequence=-3
+NC_000913.3	RegulonDB	binding_site	1195016	1195031		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=icd;PromoterName=icdAp1;TFBSCenterPosition=16;Sequence=16
+NC_000913.3	RegulonDB	binding_site	1212099	1212113		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=iraM;PromoterName=iraMp;TFBSCenterPosition=-16.5;Sequence=-16.5
+NC_000913.3	RegulonDB	binding_site	1212253	1212267		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=iraM;PromoterName=iraMp;TFBSCenterPosition=-170.5;Sequence=-170.5
+NC_000913.3	RegulonDB	binding_site	127683	127697		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=lpdA;PromoterName=lpdAp;TFBSCenterPosition=-27;Sequence=-27
+NC_000913.3	RegulonDB	binding_site	127692	127706		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=lpdA;PromoterName=lpdAp;TFBSCenterPosition=-18;Sequence=-18
+NC_000913.3	RegulonDB	binding_site	131342	131356		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=acnB;PromoterName=acnBp;TFBSCenterPosition=-170;Sequence=-170
+NC_000913.3	RegulonDB	binding_site	131369	131383		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=acnB;PromoterName=acnBp;TFBSCenterPosition=-143;Sequence=-143
+NC_000913.3	RegulonDB	binding_site	131373	131387		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=acnB;PromoterName=acnBp;TFBSCenterPosition=-139;Sequence=-139
+NC_000913.3	RegulonDB	binding_site	131393	131407		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=acnB;PromoterName=acnBp;TFBSCenterPosition=-119;Sequence=-119
+NC_000913.3	RegulonDB	binding_site	1313983	1314001		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ompW;PromoterName=ompWp;TFBSCenterPosition=1.5;Sequence=1.5
+NC_000913.3	RegulonDB	binding_site	131399	131413		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=acnB;PromoterName=acnBp;TFBSCenterPosition=-113;Sequence=-113
+NC_000913.3	RegulonDB	binding_site	131455	131469		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=acnB;PromoterName=acnBp;TFBSCenterPosition=-57;Sequence=-57
+NC_000913.3	RegulonDB	binding_site	131464	131478		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=acnB;PromoterName=acnBp;TFBSCenterPosition=-48;Sequence=-48
+NC_000913.3	RegulonDB	binding_site	1335740	1335754		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=acnA;PromoterName=acnAp2;TFBSCenterPosition=-34;Sequence=-34
+NC_000913.3	RegulonDB	binding_site	1361126	1361140		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=puuAP;PromoterName=puuAp;TFBSCenterPosition=-165;Sequence=-165
+NC_000913.3	RegulonDB	binding_site	1361126	1361140		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=puuDRCBE;PromoterName=puuDp;TFBSCenterPosition=82;Sequence=82
+NC_000913.3	RegulonDB	binding_site	1388859	1388873		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=tpx;PromoterName=tpxp;TFBSCenterPosition=-22;Sequence=-22
+NC_000913.3	RegulonDB	binding_site	1488026	1488040		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=aldA;PromoterName=aldAp;TFBSCenterPosition=-157;Sequence=-157
+NC_000913.3	RegulonDB	binding_site	1488046	1488060		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=aldA;PromoterName=aldAp;TFBSCenterPosition=-137;Sequence=-137
+NC_000913.3	RegulonDB	binding_site	1488178	1488192		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=aldA;PromoterName=aldAp;TFBSCenterPosition=-5;Sequence=-5
+NC_000913.3	RegulonDB	binding_site	1488184	1488198		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=aldA;PromoterName=aldAp;TFBSCenterPosition=2;Sequence=2
+NC_000913.3	RegulonDB	binding_site	1488195	1488209		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=aldA;PromoterName=aldAp;TFBSCenterPosition=13;Sequence=13
+NC_000913.3	RegulonDB	binding_site	1616963	1616977		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ydeA;PromoterName=ydeAp;TFBSCenterPosition=16;Sequence=16
+NC_000913.3	RegulonDB	binding_site	1889807	1889821		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fadD-sroD;PromoterName=fadDp;TFBSCenterPosition=-7;Sequence=-7
+NC_000913.3	RegulonDB	binding_site	2405263	2405277		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=nuoABCEFGHIJKLMN;PromoterName=nuoAp2;TFBSCenterPosition=-108;Sequence=-108
+NC_000913.3	RegulonDB	binding_site	243385	243399		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fadE;PromoterName=fadEp;TFBSCenterPosition=15;Sequence=15
+NC_000913.3	RegulonDB	binding_site	2460521	2460535		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fadIJ;PromoterName=fadIp;TFBSCenterPosition=-17;Sequence=-17
+NC_000913.3	RegulonDB	binding_site	2461160	2461174		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fadL;PromoterName=fadLp;TFBSCenterPosition=-38;Sequence=-38
+NC_000913.3	RegulonDB	binding_site	2716598	2716612		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=grcA;PromoterName=grcAp1;TFBSCenterPosition=-82;Sequence=-82
+NC_000913.3	RegulonDB	binding_site	2716615	2716629		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=grcA;PromoterName=grcAp1;TFBSCenterPosition=-99;Sequence=-99
+NC_000913.3	RegulonDB	binding_site	2868088	2868102		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=rpoS;PromoterName=rpoSp;TFBSCenterPosition=24;Sequence=24
+NC_000913.3	RegulonDB	binding_site	2868175	2868189		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=rpoS;PromoterName=rpoSp;TFBSCenterPosition=-64;Sequence=-64
+NC_000913.3	RegulonDB	binding_site	3128173	3128187		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=glcDEFGBA;PromoterName=glcDp;TFBSCenterPosition=-104;Sequence=-104
+NC_000913.3	RegulonDB	binding_site	3128180	3128194		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=glcDEFGBA;PromoterName=glcDp;TFBSCenterPosition=-111;Sequence=-111
+NC_000913.3	RegulonDB	binding_site	3146413	3146427		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=hybOABCDEFG;PromoterName=hybOp1;TFBSCenterPosition=-57;Sequence=-57
+NC_000913.3	RegulonDB	binding_site	3231635	3231649		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fadH;PromoterName=fadHp;TFBSCenterPosition=19;Sequence=19
+NC_000913.3	RegulonDB	binding_site	329360	329374		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=betIBA;PromoterName=betIp;TFBSCenterPosition=-6;Sequence=-6
+NC_000913.3	RegulonDB	binding_site	329416	329430		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=betT;PromoterName=betTp;TFBSCenterPosition=3;Sequence=3
+NC_000913.3	RegulonDB	binding_site	329428	329442		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=betIBA;PromoterName=betIp;TFBSCenterPosition=-74;Sequence=-74
+NC_000913.3	RegulonDB	binding_site	329428	329442		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=betT;PromoterName=betTp;TFBSCenterPosition=15;Sequence=15
+NC_000913.3	RegulonDB	binding_site	3350541	3350555		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=arcZ;PromoterName=arcZp;TFBSCenterPosition=-29;Sequence=-29
+NC_000913.3	RegulonDB	binding_site	3384280	3384294		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=mdh;PromoterName=mdhp1;TFBSCenterPosition=27;Sequence=27
+NC_000913.3	RegulonDB	binding_site	3777264	3777278		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=lldPRD;PromoterName=lldPp;TFBSCenterPosition=-18;Sequence=-18
+NC_000913.3	RegulonDB	binding_site	3777291	3777305		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=lldPRD;PromoterName=lldPp;TFBSCenterPosition=10;Sequence=10
+NC_000913.3	RegulonDB	binding_site	4031035	4031049		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fadBA;PromoterName=fadBp;TFBSCenterPosition=-29;Sequence=-29
+NC_000913.3	RegulonDB	binding_site	4100714	4100728		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sodA;PromoterName=sodAp;TFBSCenterPosition=-38;Sequence=-38
+NC_000913.3	RegulonDB	binding_site	4100715	4100729		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=rhaT;PromoterName=rhaTp;TFBSCenterPosition=-156;Sequence=-156
+NC_000913.3	RegulonDB	binding_site	4100731	4100745		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sodA;PromoterName=sodAp;TFBSCenterPosition=-21;Sequence=-21
+NC_000913.3	RegulonDB	binding_site	4100732	4100746		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=rhaT;PromoterName=rhaTp;TFBSCenterPosition=-173;Sequence=-173
+NC_000913.3	RegulonDB	binding_site	4100742	4100756		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sodA;PromoterName=sodAp;TFBSCenterPosition=-10;Sequence=-10
+NC_000913.3	RegulonDB	binding_site	4100743	4100757		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=rhaT;PromoterName=rhaTp;TFBSCenterPosition=-184;Sequence=-184
+NC_000913.3	RegulonDB	binding_site	41981	41995		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=caiTABCDE;PromoterName=caiTp;TFBSCenterPosition=50;Sequence=50
+NC_000913.3	RegulonDB	binding_site	42003	42017		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=caiTABCDE;PromoterName=caiTp;TFBSCenterPosition=28;Sequence=28
+NC_000913.3	RegulonDB	binding_site	42121	42135		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=caiTABCDE;PromoterName=caiTp;TFBSCenterPosition=-91;Sequence=-91
+NC_000913.3	RegulonDB	binding_site	42131	42145		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=caiTABCDE;PromoterName=caiTp;TFBSCenterPosition=-101;Sequence=-101
+NC_000913.3	RegulonDB	binding_site	4273931	4273945		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp3;TFBSCenterPosition=-72.5;Sequence=-72.5
+NC_000913.3	RegulonDB	binding_site	4273931	4273945		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=uvrA;PromoterName=uvrAp;TFBSCenterPosition=-2.5;Sequence=-2.5
+NC_000913.3	RegulonDB	binding_site	4273931	4273945		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp2;TFBSCenterPosition=-141.5;Sequence=-141.5
+NC_000913.3	RegulonDB	binding_site	4273931	4273945		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp1;TFBSCenterPosition=-153.5;Sequence=-153.5
+NC_000913.3	RegulonDB	binding_site	4273994	4274008		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp3;TFBSCenterPosition=-9.5;Sequence=-9.5
+NC_000913.3	RegulonDB	binding_site	4273994	4274008		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=uvrA;PromoterName=uvrAp;TFBSCenterPosition=-65.5;Sequence=-65.5
+NC_000913.3	RegulonDB	binding_site	4273994	4274008		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp2;TFBSCenterPosition=-78.5;Sequence=-78.5
+NC_000913.3	RegulonDB	binding_site	4273994	4274008		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp1;TFBSCenterPosition=-90.5;Sequence=-90.5
+NC_000913.3	RegulonDB	binding_site	4274034	4274048		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp3;TFBSCenterPosition=31.5;Sequence=31.5
+NC_000913.3	RegulonDB	binding_site	4274034	4274048		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=uvrA;PromoterName=uvrAp;TFBSCenterPosition=-105.5;Sequence=-105.5
+NC_000913.3	RegulonDB	binding_site	4274034	4274048		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp2;TFBSCenterPosition=-38.5;Sequence=-38.5
+NC_000913.3	RegulonDB	binding_site	4274034	4274048		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp1;TFBSCenterPosition=-50.5;Sequence=-50.5
+NC_000913.3	RegulonDB	binding_site	4274077	4274091		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp3;TFBSCenterPosition=74.5;Sequence=74.5
+NC_000913.3	RegulonDB	binding_site	4274077	4274091		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=uvrA;PromoterName=uvrAp;TFBSCenterPosition=-148.5;Sequence=-148.5
+NC_000913.3	RegulonDB	binding_site	4274077	4274091		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp2;TFBSCenterPosition=5.5;Sequence=5.5
+NC_000913.3	RegulonDB	binding_site	4274077	4274091		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ssb;PromoterName=ssbp1;TFBSCenterPosition=-7.5;Sequence=-7.5
+NC_000913.3	RegulonDB	binding_site	4360278	4360292		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cadBA;PromoterName=cadBp;TFBSCenterPosition=-179;Sequence=-179
+NC_000913.3	RegulonDB	binding_site	4466440	4466454		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=treBC;PromoterName=treBp;TFBSCenterPosition=-237;Sequence=-237
+NC_000913.3	RegulonDB	binding_site	451846	451860		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cyoABCDE;PromoterName=cyoAp;TFBSCenterPosition=-200;Sequence=-200
+NC_000913.3	RegulonDB	binding_site	583454	583464		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=appY;PromoterName=appYp2;TFBSCenterPosition=-197;Sequence=-197
+NC_000913.3	RegulonDB	binding_site	636615	636629		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ybdN;PromoterName=ybdNp;TFBSCenterPosition=64.5;Sequence=64.5
+NC_000913.3	RegulonDB	binding_site	651884	651894		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=citCDEFXG;PromoterName=citCp1;TFBSCenterPosition=64.5;Sequence=64.5
+NC_000913.3	RegulonDB	binding_site	651884	651894		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=dpiBA;PromoterName=dpiBp;TFBSCenterPosition=-95.5;Sequence=-95.5
+NC_000913.3	RegulonDB	binding_site	656416	656430		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=dcuC;PromoterName=dcuCp;TFBSCenterPosition=-340;Sequence=-340
+NC_000913.3	RegulonDB	binding_site	754740	754754		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sdhCDAB-sucABCD-sdhX;PromoterName=sdhCp;TFBSCenterPosition=-211;Sequence=-211
+NC_000913.3	RegulonDB	binding_site	754807	754821		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=gltA;PromoterName=gltAp1;TFBSCenterPosition=-47;Sequence=-47
+NC_000913.3	RegulonDB	binding_site	754814	754828		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sdhCDAB-sucABCD-sdhX;PromoterName=sdhCp;TFBSCenterPosition=-137;Sequence=-137
+NC_000913.3	RegulonDB	binding_site	754919	754933		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sdhCDAB-sucABCD-sdhX;PromoterName=sdhCp;TFBSCenterPosition=-32;Sequence=-32
+NC_000913.3	RegulonDB	binding_site	754924	754938		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sdhCDAB-sucABCD-sdhX;PromoterName=sdhCp;TFBSCenterPosition=-27;Sequence=-27
+NC_000913.3	RegulonDB	binding_site	755207	755221		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sdhCDAB-sucABCD-sdhX;PromoterName=sdhCp;TFBSCenterPosition=257;Sequence=257
+NC_000913.3	RegulonDB	binding_site	770848	770862		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cydAB;PromoterName=cydAp1;TFBSCenterPosition=-315;Sequence=-315
+NC_000913.3	RegulonDB	binding_site	770859	770873		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cydAB;PromoterName=cydAp1;TFBSCenterPosition=-304;Sequence=-304
+NC_000913.3	RegulonDB	binding_site	770870	770884		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cydAB;PromoterName=cydAp1;TFBSCenterPosition=-293;Sequence=-293
+NC_000913.3	RegulonDB	binding_site	771079	771093		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cydAB;PromoterName=cydAp1;TFBSCenterPosition=-84;Sequence=-84
+NC_000913.3	RegulonDB	binding_site	771199	771213		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cydAB;PromoterName=cydAp2;TFBSCenterPosition=-77.5;Sequence=-77.5
+NC_000913.3	RegulonDB	binding_site	771297	771311		+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cydAB;PromoterName=cydAp1;TFBSCenterPosition=135;Sequence=135
+NC_000913.3	RegulonDB	binding_site	866524	866538		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=moeAB;PromoterName=moeAp;TFBSCenterPosition=-137;Sequence=-137
+NC_000913.3	RegulonDB	binding_site	931068	931083		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cydDC;PromoterName=cydDp;TFBSCenterPosition=-44;Sequence=-44
+NC_000913.3	RegulonDB	binding_site	954492	954506		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=focA-pflB;PromoterName=focAp1;TFBSCenterPosition=-6;Sequence=-6
+NC_000913.3	RegulonDB	binding_site	954492	954506		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=focA-pflB;PromoterName=focAp2;TFBSCenterPosition=5;Sequence=5
+NC_000913.3	RegulonDB	binding_site	954600	954614		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=focA-pflB;PromoterName=focAp1;TFBSCenterPosition=-114;Sequence=-114
+NC_000913.3	RegulonDB	binding_site	954737	954751		-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=focA-pflB;PromoterName=focAp1;TFBSCenterPosition=-251;Sequence=-251
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=glpABC;PromoterName=glpABCp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=rpsJ-rplCDWB-rpsS-rplV-rpsC-rplP-rpmC-rpsQ;PromoterName=rpsJp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=hemA-prfA-prmC;PromoterName=hemAp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fumA;PromoterName=fumAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fumAC;PromoterName=fumAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=dctA;PromoterName=dctAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=aceEF;PromoterName=aceEp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cydAB;PromoterName=cydAp4;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=aceBAK;PromoterName=aceBp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=gadE;PromoterName=gadEp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=oppABCDF;PromoterName=oppAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fnr;PromoterName=fnrp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=appCBA-yccB;PromoterName=appCp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=cydAB;PromoterName=cydAp3;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fumC;PromoterName=fumCp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=fumB;PromoterName=fumBp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=xylR;PromoterName=xylRp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=gadE;PromoterName=gadEp3;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=glpD;PromoterName=glpDp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ackA;PromoterName=ackAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=gadAX;PromoterName=gadAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sucABCD;PromoterName=sucAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=sucAB;PromoterName=sucAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=ubiCA;PromoterName=ubiCp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=gatYZABCD;PromoterName=gatYp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=rmf;PromoterName=rmfp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=rsd;PromoterName=rsdp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=appCBA-yccB;PromoterName=appCp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=gadAX;PromoterName=gadAp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=ArcA;ActiveConformation=ArcA-Phosphorylated;RegulatedTUName=aceEF;PromoterName=aceEp2;TFBSCenterPosition=;Sequence=

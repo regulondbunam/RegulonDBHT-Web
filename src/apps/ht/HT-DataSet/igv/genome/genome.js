@@ -41,7 +41,6 @@ export function confGenome({
       {
         "name": "RegulonDB TFBS",
         "url": tfFile,
-        "format": "bed",
         "displayMode": "EXPANDED",
         "nameField": "RegulonDB_TFBS",
       }

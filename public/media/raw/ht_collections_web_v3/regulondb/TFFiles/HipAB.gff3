@@ -1,0 +1,5 @@
+NC_000913.3	RegulonDB	binding_site	1592463	1592482		-	.	name=HipAB;ActiveConformation=HipAB;RegulatedTUName=hipBA;PromoterName=hipBp;TFBSCenterPosition=10.5;Sequence=10.5
+NC_000913.3	RegulonDB	binding_site	1592491	1592511		-	.	name=HipAB;ActiveConformation=HipAB;RegulatedTUName=hipBA;PromoterName=hipBp;TFBSCenterPosition=-18.5;Sequence=-18.5
+NC_000913.3	RegulonDB	binding_site	1592530	1592549		-	.	name=HipAB;ActiveConformation=HipAB;RegulatedTUName=hipBA;PromoterName=hipBp;TFBSCenterPosition=-57.5;Sequence=-57.5
+NC_000913.3	RegulonDB	binding_site	1592558	1592577		-	.	name=HipAB;ActiveConformation=HipAB;RegulatedTUName=hipBA;PromoterName=hipBp;TFBSCenterPosition=-85.5;Sequence=-85.5
+NC_000913.3	RegulonDB	binding_site	2913809	2913842		-	.	name=HipAB;ActiveConformation=HipAB;RegulatedTUName=relA-mazEF;PromoterName=relAp1;TFBSCenterPosition=5;Sequence=5

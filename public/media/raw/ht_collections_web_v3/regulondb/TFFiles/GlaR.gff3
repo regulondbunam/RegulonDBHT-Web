@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	2788889	2788902		+	.	name=GlaR;ActiveConformation=GlaR;RegulatedTUName=csiD-ygaF-gabDTP;PromoterName=csiDp;TFBSCenterPosition=-32;Sequence=-32
+NC_000913.3	RegulonDB	binding_site	2788908	2788921		+	.	name=GlaR;ActiveConformation=GlaR;RegulatedTUName=csiD-ygaF-gabDTP;PromoterName=csiDp;TFBSCenterPosition=-13;Sequence=-13

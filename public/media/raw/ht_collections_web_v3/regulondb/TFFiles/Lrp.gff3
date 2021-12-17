@@ -1,0 +1,191 @@
+NC_000913.3	RegulonDB	binding_site	1237252	1237266		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=-250;Sequence=-250
+NC_000913.3	RegulonDB	binding_site	1237252	1237266		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=-279;Sequence=-279
+NC_000913.3	RegulonDB	binding_site	1237252	1237266		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=-266;Sequence=-266
+NC_000913.3	RegulonDB	binding_site	1237277	1237291		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=-225;Sequence=-225
+NC_000913.3	RegulonDB	binding_site	1237277	1237291		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=-254;Sequence=-254
+NC_000913.3	RegulonDB	binding_site	1237277	1237291		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=-241;Sequence=-241
+NC_000913.3	RegulonDB	binding_site	1237325	1237339		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=-177;Sequence=-177
+NC_000913.3	RegulonDB	binding_site	1237325	1237339		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=-206;Sequence=-206
+NC_000913.3	RegulonDB	binding_site	1237325	1237339		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=-193;Sequence=-193
+NC_000913.3	RegulonDB	binding_site	1237356	1237370		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=-146;Sequence=-146
+NC_000913.3	RegulonDB	binding_site	1237356	1237370		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=-175;Sequence=-175
+NC_000913.3	RegulonDB	binding_site	1237356	1237370		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=-162;Sequence=-162
+NC_000913.3	RegulonDB	binding_site	1237382	1237396		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=-120;Sequence=-120
+NC_000913.3	RegulonDB	binding_site	1237382	1237396		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=-149;Sequence=-149
+NC_000913.3	RegulonDB	binding_site	1237382	1237396		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=-136;Sequence=-136
+NC_000913.3	RegulonDB	binding_site	1237412	1237426		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=-90;Sequence=-90
+NC_000913.3	RegulonDB	binding_site	1237412	1237426		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=-119;Sequence=-119
+NC_000913.3	RegulonDB	binding_site	1237412	1237426		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=-106;Sequence=-106
+NC_000913.3	RegulonDB	binding_site	1237450	1237464		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=-52;Sequence=-52
+NC_000913.3	RegulonDB	binding_site	1237450	1237464		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=-81;Sequence=-81
+NC_000913.3	RegulonDB	binding_site	1237450	1237464		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=-68;Sequence=-68
+NC_000913.3	RegulonDB	binding_site	1237495	1237509		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=-7;Sequence=-7
+NC_000913.3	RegulonDB	binding_site	1237495	1237509		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=-36;Sequence=-36
+NC_000913.3	RegulonDB	binding_site	1237495	1237509		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=-23;Sequence=-23
+NC_000913.3	RegulonDB	binding_site	1237527	1237541		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=26;Sequence=26
+NC_000913.3	RegulonDB	binding_site	1237527	1237541		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=-4;Sequence=-4
+NC_000913.3	RegulonDB	binding_site	1237527	1237541		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=10;Sequence=10
+NC_000913.3	RegulonDB	binding_site	1237574	1237588		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=73;Sequence=73
+NC_000913.3	RegulonDB	binding_site	1237574	1237588		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=44;Sequence=44
+NC_000913.3	RegulonDB	binding_site	1237574	1237588		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=57;Sequence=57
+NC_000913.3	RegulonDB	binding_site	1237596	1237610		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp1;TFBSCenterPosition=95;Sequence=95
+NC_000913.3	RegulonDB	binding_site	1237596	1237610		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp3;TFBSCenterPosition=66;Sequence=66
+NC_000913.3	RegulonDB	binding_site	1237596	1237610		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=dadAX;PromoterName=dadAp2;TFBSCenterPosition=79;Sequence=79
+NC_000913.3	RegulonDB	binding_site	1298412	1298427		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=adhE;PromoterName=adhEp1;TFBSCenterPosition=-6;Sequence=-6
+NC_000913.3	RegulonDB	binding_site	1298412	1298427		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=adhE;PromoterName=adhEp;TFBSCenterPosition=-6;Sequence=-6
+NC_000913.3	RegulonDB	binding_site	1298472	1298485		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=adhE;PromoterName=adhEp1;TFBSCenterPosition=-65;Sequence=-65
+NC_000913.3	RegulonDB	binding_site	1298472	1298485		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=adhE;PromoterName=adhEp;TFBSCenterPosition=-65;Sequence=-65
+NC_000913.3	RegulonDB	binding_site	1298563	1298578		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=adhE;PromoterName=adhEp1;TFBSCenterPosition=-157;Sequence=-157
+NC_000913.3	RegulonDB	binding_site	1298563	1298578		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=adhE;PromoterName=adhEp;TFBSCenterPosition=-157;Sequence=-157
+NC_000913.3	RegulonDB	binding_site	1299260	1299274		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=oppABCDF;PromoterName=oppAp;TFBSCenterPosition=-1818;Sequence=-1818
+NC_000913.3	RegulonDB	binding_site	1556537	1556551		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=osmC;PromoterName=osmCp1;TFBSCenterPosition=-52;Sequence=-52
+NC_000913.3	RegulonDB	binding_site	1556537	1556551		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=osmC;PromoterName=osmCp2;TFBSCenterPosition=-62;Sequence=-62
+NC_000913.3	RegulonDB	binding_site	1880764	1880775		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=leuE;PromoterName=leuEp;TFBSCenterPosition=31.5;Sequence=31.5
+NC_000913.3	RegulonDB	binding_site	1880801	1880812		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=leuE;PromoterName=leuEp;TFBSCenterPosition=-6.5;Sequence=-6.5
+NC_000913.3	RegulonDB	binding_site	1880835	1880846		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=leuE;PromoterName=leuEp;TFBSCenterPosition=-40.5;Sequence=-40.5
+NC_000913.3	RegulonDB	binding_site	1880868	1880879		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=leuE;PromoterName=leuEp;TFBSCenterPosition=-73.5;Sequence=-73.5
+NC_000913.3	RegulonDB	binding_site	2255164	2255175		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=yeiL;PromoterName=yeiLp;TFBSCenterPosition=-120;Sequence=-120
+NC_000913.3	RegulonDB	binding_site	2308679	2308690		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=yojI;PromoterName=yojIp;TFBSCenterPosition=-43.5;Sequence=-43.5
+NC_000913.3	RegulonDB	binding_site	2308690	2308701		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=yojI;PromoterName=yojIp;TFBSCenterPosition=-54.5;Sequence=-54.5
+NC_000913.3	RegulonDB	binding_site	2308830	2308841		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=yojI;PromoterName=yojIp;TFBSCenterPosition=-194.5;Sequence=-194.5
+NC_000913.3	RegulonDB	binding_site	2308876	2308887		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=yojI;PromoterName=yojIp;TFBSCenterPosition=-240.5;Sequence=-240.5
+NC_000913.3	RegulonDB	binding_site	2308940	2308951		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=yojI;PromoterName=yojIp;TFBSCenterPosition=-304.5;Sequence=-304.5
+NC_000913.3	RegulonDB	binding_site	2309048	2309059		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=yojI;PromoterName=yojIp;TFBSCenterPosition=-412.5;Sequence=-412.5
+NC_000913.3	RegulonDB	binding_site	2312738	2312752		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp1;TFBSCenterPosition=86;Sequence=86
+NC_000913.3	RegulonDB	binding_site	2312738	2312752		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp2;TFBSCenterPosition=120;Sequence=120
+NC_000913.3	RegulonDB	binding_site	2312738	2312752		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp3;TFBSCenterPosition=143;Sequence=143
+NC_000913.3	RegulonDB	binding_site	2312759	2312773		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp2;TFBSCenterPosition=98.5;Sequence=98.5
+NC_000913.3	RegulonDB	binding_site	2312759	2312773		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp3;TFBSCenterPosition=121.5;Sequence=121.5
+NC_000913.3	RegulonDB	binding_site	2312761	2312772		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=ompC;PromoterName=ompCp1;TFBSCenterPosition=64.5;Sequence=64.5
+NC_000913.3	RegulonDB	binding_site	2312822	2312836		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp1;TFBSCenterPosition=2;Sequence=2
+NC_000913.3	RegulonDB	binding_site	2312822	2312836		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp2;TFBSCenterPosition=36;Sequence=36
+NC_000913.3	RegulonDB	binding_site	2312822	2312836		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp3;TFBSCenterPosition=59;Sequence=59
+NC_000913.3	RegulonDB	binding_site	2312852	2312866		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp1;TFBSCenterPosition=-29.5;Sequence=-29.5
+NC_000913.3	RegulonDB	binding_site	2312852	2312866		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp2;TFBSCenterPosition=5.5;Sequence=5.5
+NC_000913.3	RegulonDB	binding_site	2312853	2312867		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp3;TFBSCenterPosition=28;Sequence=28
+NC_000913.3	RegulonDB	binding_site	2313031	2313045		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp2;TFBSCenterPosition=-174;Sequence=-174
+NC_000913.3	RegulonDB	binding_site	2313031	2313045		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp3;TFBSCenterPosition=-151;Sequence=-151
+NC_000913.3	RegulonDB	binding_site	2313103	2313117		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp1;TFBSCenterPosition=-280.5;Sequence=-280.5
+NC_000913.3	RegulonDB	binding_site	2313103	2313117		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp2;TFBSCenterPosition=-246.5;Sequence=-246.5
+NC_000913.3	RegulonDB	binding_site	2313103	2313117		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=micF;PromoterName=micFp;TFBSCenterPosition=27.5;Sequence=27.5
+NC_000913.3	RegulonDB	binding_site	2313103	2313117		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp3;TFBSCenterPosition=-223.5;Sequence=-223.5
+NC_000913.3	RegulonDB	binding_site	2313103	2313117		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=micF;PromoterName=micFp2;TFBSCenterPosition=27.5;Sequence=27.5
+NC_000913.3	RegulonDB	binding_site	2313134	2313148		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp1;TFBSCenterPosition=-311.5;Sequence=-311.5
+NC_000913.3	RegulonDB	binding_site	2313134	2313148		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp2;TFBSCenterPosition=-277.5;Sequence=-277.5
+NC_000913.3	RegulonDB	binding_site	2313134	2313148		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=micF;PromoterName=micFp;TFBSCenterPosition=58.5;Sequence=58.5
+NC_000913.3	RegulonDB	binding_site	2313134	2313148		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp3;TFBSCenterPosition=-254.5;Sequence=-254.5
+NC_000913.3	RegulonDB	binding_site	2313134	2313148		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=micF;PromoterName=micFp2;TFBSCenterPosition=58.5;Sequence=58.5
+NC_000913.3	RegulonDB	binding_site	2313163	2313177		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp1;TFBSCenterPosition=-340.5;Sequence=-340.5
+NC_000913.3	RegulonDB	binding_site	2313163	2313177		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp2;TFBSCenterPosition=-306.5;Sequence=-306.5
+NC_000913.3	RegulonDB	binding_site	2313163	2313177		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=micF;PromoterName=micFp;TFBSCenterPosition=87.5;Sequence=87.5
+NC_000913.3	RegulonDB	binding_site	2313163	2313177		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp3;TFBSCenterPosition=-283.5;Sequence=-283.5
+NC_000913.3	RegulonDB	binding_site	2313163	2313177		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=micF;PromoterName=micFp2;TFBSCenterPosition=87.5;Sequence=87.5
+NC_000913.3	RegulonDB	binding_site	2313199	2313213		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp1;TFBSCenterPosition=-376;Sequence=-376
+NC_000913.3	RegulonDB	binding_site	2313199	2313213		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp2;TFBSCenterPosition=-342;Sequence=-342
+NC_000913.3	RegulonDB	binding_site	2313199	2313213		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ompC;PromoterName=ompCp3;TFBSCenterPosition=-319;Sequence=-319
+NC_000913.3	RegulonDB	binding_site	2313199	2313210		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=micF;PromoterName=micFp;TFBSCenterPosition=122;Sequence=122
+NC_000913.3	RegulonDB	binding_site	2313199	2313210		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=micF;PromoterName=micFp2;TFBSCenterPosition=122;Sequence=122
+NC_000913.3	RegulonDB	binding_site	2798636	2798650		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=stpA;PromoterName=stpAp1;TFBSCenterPosition=-107;Sequence=-107
+NC_000913.3	RegulonDB	binding_site	2799019	2799034		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=stpA;PromoterName=stpAp1;TFBSCenterPosition=-490;Sequence=-490
+NC_000913.3	RegulonDB	binding_site	2799019	2799034		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=alaE;PromoterName=alaEp;TFBSCenterPosition=-58;Sequence=-58
+NC_000913.3	RegulonDB	binding_site	2799068	2799083		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=stpA;PromoterName=stpAp1;TFBSCenterPosition=-539;Sequence=-539
+NC_000913.3	RegulonDB	binding_site	2799068	2799083		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=alaE;PromoterName=alaEp;TFBSCenterPosition=-9;Sequence=-9
+NC_000913.3	RegulonDB	binding_site	3050926	3050940		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=gcvTHP;PromoterName=gcvTp;TFBSCenterPosition=-161;Sequence=-161
+NC_000913.3	RegulonDB	binding_site	3068873	3068889		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=argO;PromoterName=argOp;TFBSCenterPosition=-44.5;Sequence=-44.5
+NC_000913.3	RegulonDB	binding_site	3068894	3068910		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=argO;PromoterName=argOp;TFBSCenterPosition=-65.5;Sequence=-65.5
+NC_000913.3	RegulonDB	binding_site	3068918	3068934		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=argO;PromoterName=argOp;TFBSCenterPosition=-89.5;Sequence=-89.5
+NC_000913.3	RegulonDB	binding_site	3354256	3354270		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=gltBDF;PromoterName=gltBp;TFBSCenterPosition=-246;Sequence=-246
+NC_000913.3	RegulonDB	binding_site	3354256	3354270		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=gltBDF;PromoterName=gltBp2;TFBSCenterPosition=-246;Sequence=-246
+NC_000913.3	RegulonDB	binding_site	3354287	3354301		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=gltBDF;PromoterName=gltBp;TFBSCenterPosition=-215;Sequence=-215
+NC_000913.3	RegulonDB	binding_site	3354287	3354301		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=gltBDF;PromoterName=gltBp2;TFBSCenterPosition=-215;Sequence=-215
+NC_000913.3	RegulonDB	binding_site	3354350	3354364		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=gltBDF;PromoterName=gltBp;TFBSCenterPosition=-152;Sequence=-152
+NC_000913.3	RegulonDB	binding_site	3354350	3354364		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=gltBDF;PromoterName=gltBp2;TFBSCenterPosition=-152;Sequence=-152
+NC_000913.3	RegulonDB	binding_site	3354394	3354409		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=gltBDF;PromoterName=gltBp;TFBSCenterPosition=-108;Sequence=-108
+NC_000913.3	RegulonDB	binding_site	3354394	3354409		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=gltBDF;PromoterName=gltBp2;TFBSCenterPosition=-108;Sequence=-108
+NC_000913.3	RegulonDB	binding_site	3599883	3599894		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=livJ;PromoterName=livJp;TFBSCenterPosition=-127;Sequence=-127
+NC_000913.3	RegulonDB	binding_site	3656802	3656817		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp;TFBSCenterPosition=-18;Sequence=-18
+NC_000913.3	RegulonDB	binding_site	3656802	3656817		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp2;TFBSCenterPosition=-18;Sequence=-18
+NC_000913.3	RegulonDB	binding_site	3656839	3656854		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp;TFBSCenterPosition=-55;Sequence=-55
+NC_000913.3	RegulonDB	binding_site	3656839	3656854		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp2;TFBSCenterPosition=-55;Sequence=-55
+NC_000913.3	RegulonDB	binding_site	3656848	3656863		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp;TFBSCenterPosition=-64;Sequence=-64
+NC_000913.3	RegulonDB	binding_site	3656848	3656863		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp2;TFBSCenterPosition=-64;Sequence=-64
+NC_000913.3	RegulonDB	binding_site	3656881	3656896		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp;TFBSCenterPosition=-97;Sequence=-97
+NC_000913.3	RegulonDB	binding_site	3656881	3656896		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp2;TFBSCenterPosition=-97;Sequence=-97
+NC_000913.3	RegulonDB	binding_site	3656900	3656915		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp;TFBSCenterPosition=-116;Sequence=-116
+NC_000913.3	RegulonDB	binding_site	3656900	3656915		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp2;TFBSCenterPosition=-116;Sequence=-116
+NC_000913.3	RegulonDB	binding_site	3656943	3656958		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp;TFBSCenterPosition=-159;Sequence=-159
+NC_000913.3	RegulonDB	binding_site	3656943	3656958		-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp2;TFBSCenterPosition=-159;Sequence=-159
+NC_000913.3	RegulonDB	binding_site	3792636	3792650		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=kbl-tdh;PromoterName=kblp;TFBSCenterPosition=-66.5;Sequence=-66.5
+NC_000913.3	RegulonDB	binding_site	3792647	3792661		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=kbl-tdh;PromoterName=kblp;TFBSCenterPosition=-77;Sequence=-77
+NC_000913.3	RegulonDB	binding_site	3950451	3950462		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=ilvLXG_1G_2MEDA;PromoterName=ilvLp2;TFBSCenterPosition=167.5;Sequence=167.5
+NC_000913.3	RegulonDB	binding_site	3950451	3950462		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=ilvL;PromoterName=ilvLp2;TFBSCenterPosition=167.5;Sequence=167.5
+NC_000913.3	RegulonDB	binding_site	3950482	3950496		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvLXG_1G_2MEDA;PromoterName=ilvLp2;TFBSCenterPosition=200;Sequence=200
+NC_000913.3	RegulonDB	binding_site	3950482	3950496		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvL;PromoterName=ilvLp2;TFBSCenterPosition=200;Sequence=200
+NC_000913.3	RegulonDB	binding_site	3950514	3950528		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvLXG_1G_2MEDA;PromoterName=ilvLp2;TFBSCenterPosition=232;Sequence=232
+NC_000913.3	RegulonDB	binding_site	3950514	3950528		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvL;PromoterName=ilvLp2;TFBSCenterPosition=232;Sequence=232
+NC_000913.3	RegulonDB	binding_site	4035160	4035171		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsA-ileT-alaT-rrlA-rrfA;PromoterName=rrsAp1;TFBSCenterPosition=-73;Sequence=-73
+NC_000913.3	RegulonDB	binding_site	4035160	4035171		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsA-ileT-alaT-rrlA-rrfA;PromoterName=rrsAp;TFBSCenterPosition=-73;Sequence=-73
+NC_000913.3	RegulonDB	binding_site	4035180	4035191		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsA-ileT-alaT-rrlA-rrfA;PromoterName=rrsAp1;TFBSCenterPosition=-53;Sequence=-53
+NC_000913.3	RegulonDB	binding_site	4035180	4035191		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsA-ileT-alaT-rrlA-rrfA;PromoterName=rrsAp;TFBSCenterPosition=-53;Sequence=-53
+NC_000913.3	RegulonDB	binding_site	4166308	4166319		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsB-gltT-rrlB-rrfB;PromoterName=rrsBp1;TFBSCenterPosition=-53;Sequence=-53
+NC_000913.3	RegulonDB	binding_site	4166308	4166319		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsB-gltT-rrlB-rrfB;PromoterName=rrsBp;TFBSCenterPosition=-53;Sequence=-53
+NC_000913.3	RegulonDB	binding_site	4166435	4166446		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsB-gltT-rrlB-rrfB;PromoterName=rrsBp1;TFBSCenterPosition=75;Sequence=75
+NC_000913.3	RegulonDB	binding_site	4166435	4166446		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsB-gltT-rrlB-rrfB;PromoterName=rrsBp;TFBSCenterPosition=75;Sequence=75
+NC_000913.3	RegulonDB	binding_site	4166629	4166640		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsB-gltT-rrlB-rrfB;PromoterName=rrsBp1;TFBSCenterPosition=269;Sequence=269
+NC_000913.3	RegulonDB	binding_site	4166629	4166640		+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsB-gltT-rrlB-rrfB;PromoterName=rrsBp;TFBSCenterPosition=269;Sequence=269
+NC_000913.3	RegulonDB	binding_site	4354856	4354870		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=lysU;PromoterName=lysUp1;TFBSCenterPosition=-58;Sequence=-58
+NC_000913.3	RegulonDB	binding_site	4470995	4471009		-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ridA;PromoterName=ridAp;TFBSCenterPosition=-56;Sequence=-56
+NC_000913.3	RegulonDB	binding_site	4542859	4542873		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=fimAICDFGH;PromoterName=fimAp;TFBSCenterPosition=173;Sequence=173
+NC_000913.3	RegulonDB	binding_site	4542890	4542904		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=fimAICDFGH;PromoterName=fimAp;TFBSCenterPosition=204;Sequence=204
+NC_000913.3	RegulonDB	binding_site	4542921	4542935		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=fimAICDFGH;PromoterName=fimAp;TFBSCenterPosition=235;Sequence=235
+NC_000913.3	RegulonDB	binding_site	4610960	4610974		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=osmY;PromoterName=osmYp;TFBSCenterPosition=-186;Sequence=-186
+NC_000913.3	RegulonDB	binding_site	4610960	4610974		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=osmY;PromoterName=osmYp2;TFBSCenterPosition=-186;Sequence=-186
+NC_000913.3	RegulonDB	binding_site	4610997	4611011		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=osmY;PromoterName=osmYp;TFBSCenterPosition=-149;Sequence=-149
+NC_000913.3	RegulonDB	binding_site	4610997	4611011		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=osmY;PromoterName=osmYp2;TFBSCenterPosition=-149;Sequence=-149
+NC_000913.3	RegulonDB	binding_site	85341	85355		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIHp1;TFBSCenterPosition=-252;Sequence=-252
+NC_000913.3	RegulonDB	binding_site	85341	85355		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIp2;TFBSCenterPosition=-192;Sequence=-192
+NC_000913.3	RegulonDB	binding_site	85372	85386		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIHp1;TFBSCenterPosition=-221;Sequence=-221
+NC_000913.3	RegulonDB	binding_site	85372	85386		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIp2;TFBSCenterPosition=-161;Sequence=-161
+NC_000913.3	RegulonDB	binding_site	85453	85467		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIHp1;TFBSCenterPosition=-140;Sequence=-140
+NC_000913.3	RegulonDB	binding_site	85453	85467		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIp2;TFBSCenterPosition=-80;Sequence=-80
+NC_000913.3	RegulonDB	binding_site	85488	85502		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIHp1;TFBSCenterPosition=-105;Sequence=-105
+NC_000913.3	RegulonDB	binding_site	85488	85502		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIp2;TFBSCenterPosition=-45;Sequence=-45
+NC_000913.3	RegulonDB	binding_site	85517	85531		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIHp1;TFBSCenterPosition=-76;Sequence=-76
+NC_000913.3	RegulonDB	binding_site	85517	85531		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIp2;TFBSCenterPosition=-16;Sequence=-16
+NC_000913.3	RegulonDB	binding_site	85537	85551		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIHp1;TFBSCenterPosition=-56;Sequence=-56
+NC_000913.3	RegulonDB	binding_site	85537	85551		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ilvIH;PromoterName=ilvIp2;TFBSCenterPosition=5;Sequence=5
+NC_000913.3	RegulonDB	binding_site	932265	932279		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=lrp;PromoterName=lrpp;TFBSCenterPosition=-56;Sequence=-56
+NC_000913.3	RegulonDB	binding_site	932328	932343		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=lrp;PromoterName=lrpp;TFBSCenterPosition=8;Sequence=8
+NC_000913.3	RegulonDB	binding_site	932351	932368		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=lrp;PromoterName=lrpp;TFBSCenterPosition=32;Sequence=32
+NC_000913.3	RegulonDB	binding_site	932369	932383		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=lrp;PromoterName=lrpp;TFBSCenterPosition=49;Sequence=49
+NC_000913.3	RegulonDB	binding_site	957454	957468		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=serC;PromoterName=serCp;TFBSCenterPosition=-134;Sequence=-134
+NC_000913.3	RegulonDB	binding_site	957454	957468		+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=serC-aroA;PromoterName=serCp;TFBSCenterPosition=-134;Sequence=-134
+NC_000913.3	RegulonDB	binding_site				-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=lysP;PromoterName=lysPp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ssrS-ygfA;PromoterName=ssrSp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ssrS;PromoterName=ssrSp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=aidB;PromoterName=aidBp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=sdaA;PromoterName=sdaAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=livKHMGF;PromoterName=livKp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ssrS-ygfA;PromoterName=ssrSp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ssrS;PromoterName=ssrSp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=fimE;PromoterName=fimEp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=cadBA;PromoterName=cadBp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=serA;PromoterName=serAp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=malT;PromoterName=malTp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ssrS;PromoterName=ssrSp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=ssrS-ygfA;PromoterName=ssrSp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp;RegulatedTUName=aidB;PromoterName=aidBp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsD-ileU-alaU-rrlD-rrfD-thrV-rrfF;PromoterName=rrsDp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=alaA;PromoterName=alaAp9;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=avtA;PromoterName=avtAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsE-gltV-rrlE-rrfE;PromoterName=rrsEp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=serA;PromoterName=serAp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=csiD-ygaF-gabDTP;PromoterName=csiDp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsG-gltW-rrlG-rrfG;PromoterName=rrsGp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsH-ileV-alaV-rrlH-rrfH;PromoterName=rrsHp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsC-gltU-rrlC-rrfC;PromoterName=rrsCp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsG-gltW-rrlG-rrfG;PromoterName=rrsGp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsH-ileV-alaV-rrlH-rrfH;PromoterName=rrsHp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsE-gltV-rrlE-rrfE;PromoterName=rrsEp3;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsD-ileU-alaU-rrlD-rrfD-thrV-rrfF;PromoterName=rrsDp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Lrp;ActiveConformation=Lrp-leucine;RegulatedTUName=rrsC-gltU-rrlC-rrfC;PromoterName=rrsCp;TFBSCenterPosition=;Sequence=

@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	3216512	3216531		-	.	name=NfeR;ActiveConformation=NfeR;RegulatedTUName=nfeF;PromoterName=yqjHp;TFBSCenterPosition=18;Sequence=18
+NC_000913.3	RegulonDB	binding_site	3216731	3216762		+	.	name=NfeR;ActiveConformation=NfeR;RegulatedTUName=yqjI;PromoterName=yqjIp;TFBSCenterPosition=-7;Sequence=-7

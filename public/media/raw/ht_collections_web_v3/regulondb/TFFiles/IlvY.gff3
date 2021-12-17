@@ -1,0 +1,6 @@
+NC_000913.3	RegulonDB	binding_site	3957843	3957860		-	.	name=IlvY;ActiveConformation=IlvY;RegulatedTUName=ilvY;PromoterName=ilvYp1;TFBSCenterPosition=17;Sequence=17
+NC_000913.3	RegulonDB	binding_site	3957843	3957860		-	.	name=IlvY;ActiveConformation=IlvY;RegulatedTUName=ilvY;PromoterName=ilvYp2;TFBSCenterPosition=17;Sequence=17
+NC_000913.3	RegulonDB	binding_site	3957843	3957860		+	.	name=IlvY;ActiveConformation=IlvY-(<i>S</i>)-2-acetolactate;RegulatedTUName=ilvC;PromoterName=ilvCp;TFBSCenterPosition=-61;Sequence=-61
+NC_000913.3	RegulonDB	binding_site	3957874	3957891		-	.	name=IlvY;ActiveConformation=IlvY;RegulatedTUName=ilvY;PromoterName=ilvYp1;TFBSCenterPosition=-15;Sequence=-15
+NC_000913.3	RegulonDB	binding_site	3957874	3957891		-	.	name=IlvY;ActiveConformation=IlvY;RegulatedTUName=ilvY;PromoterName=ilvYp2;TFBSCenterPosition=-15;Sequence=-15
+NC_000913.3	RegulonDB	binding_site	3957874	3957891		+	.	name=IlvY;ActiveConformation=IlvY-(<i>S</i>)-2-acetolactate;RegulatedTUName=ilvC;PromoterName=ilvCp;TFBSCenterPosition=-30;Sequence=-30

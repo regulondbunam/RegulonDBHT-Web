@@ -1,0 +1,9 @@
+NC_000913.3	RegulonDB	binding_site	2691457	2691474		-	.	name=GlrR;ActiveConformation=GlrR-P<sup>asp56</sup>;RegulatedTUName=glmY;PromoterName=glmYp1;TFBSCenterPosition=-125.5;Sequence=-125.5
+NC_000913.3	RegulonDB	binding_site	2691520	2691537		-	.	name=GlrR;ActiveConformation=GlrR-P<sup>asp56</sup>;RegulatedTUName=glmY;PromoterName=glmYp1;TFBSCenterPosition=-188.5;Sequence=-188.5
+NC_000913.3	RegulonDB	binding_site	2691553	2691570		-	.	name=GlrR;ActiveConformation=GlrR-P<sup>asp56</sup>;RegulatedTUName=glmY;PromoterName=glmYp1;TFBSCenterPosition=-221.5;Sequence=-221.5
+NC_000913.3	RegulonDB	binding_site	2710357	2710374		-	.	name=GlrR;ActiveConformation=GlrR-P<sup>asp56</sup>;RegulatedTUName=rpoE-rseABC;PromoterName=rpoEp2b;TFBSCenterPosition=-26.5;Sequence=-26.5
+NC_000913.3	RegulonDB	binding_site	2710357	2710374		-	.	name=GlrR;ActiveConformation=GlrR-P<sup>asp56</sup>;RegulatedTUName=rpoE-rseABC;PromoterName=rseDp;TFBSCenterPosition=-26.5;Sequence=-26.5
+NC_000913.3	RegulonDB	binding_site	2710396	2710413		-	.	name=GlrR;ActiveConformation=GlrR-P<sup>asp56</sup>;RegulatedTUName=rpoE-rseABC;PromoterName=rpoEp2b;TFBSCenterPosition=-65.5;Sequence=-65.5
+NC_000913.3	RegulonDB	binding_site	2710396	2710413		-	.	name=GlrR;ActiveConformation=GlrR-P<sup>asp56</sup>;RegulatedTUName=rpoE-rseABC;PromoterName=rseDp;TFBSCenterPosition=-65.5;Sequence=-65.5
+NC_000913.3	RegulonDB	binding_site	2710420	2710440		-	.	name=GlrR;ActiveConformation=GlrR-P<sup>asp56</sup>;RegulatedTUName=rpoE-rseABC;PromoterName=rpoEp2b;TFBSCenterPosition=-90.5;Sequence=-90.5
+NC_000913.3	RegulonDB	binding_site	2710420	2710440		-	.	name=GlrR;ActiveConformation=GlrR-P<sup>asp56</sup>;RegulatedTUName=rpoE-rseABC;PromoterName=rseDp;TFBSCenterPosition=-90.5;Sequence=-90.5

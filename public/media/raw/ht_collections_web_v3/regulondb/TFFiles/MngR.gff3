@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	765890	765911		-	.	name=MngR;ActiveConformation=MngR;RegulatedTUName=mngR;PromoterName=mngRp;TFBSCenterPosition=26.5;Sequence=26.5
+NC_000913.3	RegulonDB	binding_site	765890	765911		+	.	name=MngR;ActiveConformation=MngR;RegulatedTUName=mngAB;PromoterName=mngAp;TFBSCenterPosition=90.5;Sequence=90.5
+NC_000913.3	RegulonDB	binding_site	765934	765955		-	.	name=MngR;ActiveConformation=MngR;RegulatedTUName=mngR;PromoterName=mngRp;TFBSCenterPosition=-18.5;Sequence=-18.5
+NC_000913.3	RegulonDB	binding_site	765934	765955		+	.	name=MngR;ActiveConformation=MngR;RegulatedTUName=mngAB;PromoterName=mngAp;TFBSCenterPosition=134.5;Sequence=134.5

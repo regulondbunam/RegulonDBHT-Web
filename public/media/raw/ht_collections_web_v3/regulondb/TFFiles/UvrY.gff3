@@ -1,0 +1,5 @@
+NC_000913.3	RegulonDB	binding_site	2924698	2924716		-	.	name=UvrY;ActiveConformation=UvrY-Phosphorylated;RegulatedTUName=csrB;PromoterName=csrBp;TFBSCenterPosition=-183;Sequence=-183
+NC_000913.3	RegulonDB	binding_site	4050868	4050886		+	.	name=UvrY;ActiveConformation=UvrY-Phosphorylated;RegulatedTUName=csrC;PromoterName=csrCp;TFBSCenterPosition=-159;Sequence=-159
+NC_000913.3	RegulonDB	binding_site				-	.	name=UvrY;ActiveConformation=UvrY-Phosphorylated;RegulatedTUName=luxS;PromoterName=luxSp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=UvrY;ActiveConformation=UvrY-Phosphorylated;RegulatedTUName=uhpT;PromoterName=uhpTp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=UvrY;ActiveConformation=UvrY-Phosphorylated;RegulatedTUName=ydeP;PromoterName=ydePp;TFBSCenterPosition=;Sequence=

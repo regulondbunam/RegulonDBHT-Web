@@ -1,0 +1,10 @@
+NC_000913.3	RegulonDB	binding_site	2942624	2942638		+	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvB;PromoterName=gcvBp;TFBSCenterPosition=-65;Sequence=-65
+NC_000913.3	RegulonDB	binding_site	2942624	2942638		-	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvA;PromoterName=gcvAp;TFBSCenterPosition=9;Sequence=9
+NC_000913.3	RegulonDB	binding_site	2942646	2942660		-	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvA;PromoterName=gcvAp;TFBSCenterPosition=-14;Sequence=-14
+NC_000913.3	RegulonDB	binding_site	2942646	2942660		+	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvB;PromoterName=gcvBp;TFBSCenterPosition=-43;Sequence=-43
+NC_000913.3	RegulonDB	binding_site	3050809	3050823		-	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvTHP;PromoterName=gcvTp;TFBSCenterPosition=-44;Sequence=-44
+NC_000913.3	RegulonDB	binding_site	3050831	3050845		-	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvTHP;PromoterName=gcvTp;TFBSCenterPosition=-66;Sequence=-66
+NC_000913.3	RegulonDB	binding_site	3050991	3051005		-	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvTHP;PromoterName=gcvTp;TFBSCenterPosition=-226;Sequence=-226
+NC_000913.3	RegulonDB	binding_site	3050991	3051005		-	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvTHP;PromoterName=gcvTp;TFBSCenterPosition=-226;Sequence=-226
+NC_000913.3	RegulonDB	binding_site	3051023	3051037		-	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvTHP;PromoterName=gcvTp;TFBSCenterPosition=-258;Sequence=-258
+NC_000913.3	RegulonDB	binding_site	3051023	3051037		-	.	name=GcvA;ActiveConformation=GcvA;RegulatedTUName=gcvTHP;PromoterName=gcvTp;TFBSCenterPosition=-258;Sequence=-258

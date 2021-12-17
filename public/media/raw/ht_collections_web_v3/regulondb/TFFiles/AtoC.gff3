@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	2323264	2323283		+	.	name=AtoC;ActiveConformation=AtoC-P;RegulatedTUName=atoDAEB;PromoterName=atoDp;TFBSCenterPosition=-138.5;Sequence=-138.5
+NC_000913.3	RegulonDB	binding_site	2323283	2323302		+	.	name=AtoC;ActiveConformation=AtoC-P;RegulatedTUName=atoDAEB;PromoterName=atoDp;TFBSCenterPosition=-119.5;Sequence=-119.5

@@ -1,0 +1,7 @@
+NC_000913.3	RegulonDB	binding_site	3667660	3667680		-	.	name=GadE-RcsB;ActiveConformation=GadE-RcsB;RegulatedTUName=gadAX;PromoterName=gadAp;TFBSCenterPosition=-62.5;Sequence=-62.5
+NC_000913.3	RegulonDB	binding_site	3667660	3667680		-	.	name=GadE-RcsB;ActiveConformation=GadE-RcsB;RegulatedTUName=gadAX;PromoterName=gadAp2;TFBSCenterPosition=-62.5;Sequence=-62.5
+NC_000913.3	RegulonDB	binding_site				+	.	name=GadE-RcsB;ActiveConformation=GadE-RcsB;RegulatedTUName=yhiM;PromoterName=yhiMp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=GadE-RcsB;ActiveConformation=GadE-RcsB;RegulatedTUName=cadBA;PromoterName=cadBp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=GadE-RcsB;ActiveConformation=GadE-RcsB;RegulatedTUName=slp-dctR;PromoterName=slpp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=GadE-RcsB;ActiveConformation=GadE-RcsB;RegulatedTUName=adiC;PromoterName=adiCp7;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=GadE-RcsB;ActiveConformation=GadE-RcsB;RegulatedTUName=aslB;PromoterName=aslBp;TFBSCenterPosition=;Sequence=

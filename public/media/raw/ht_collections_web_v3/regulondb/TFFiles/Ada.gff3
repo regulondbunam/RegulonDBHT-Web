@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	2147589	2147613		-	.	name=Ada;ActiveConformation=Ada;RegulatedTUName=alkA;PromoterName=alkAp;TFBSCenterPosition=-41.5;Sequence=-41.5
+NC_000913.3	RegulonDB	binding_site	2147589	2147613		-	.	name=Ada;ActiveConformation=Ada;RegulatedTUName=alkA;PromoterName=alkAp2;TFBSCenterPosition=-41.5;Sequence=-41.5
+NC_000913.3	RegulonDB	binding_site	2310454	2310478		-	.	name=Ada;ActiveConformation=Ada;RegulatedTUName=ada-alkB;PromoterName=adap;TFBSCenterPosition=-38.5;Sequence=-38.5
+NC_000913.3	RegulonDB	binding_site	2310454	2310478		-	.	name=Ada;ActiveConformation=Ada;RegulatedTUName=ada-alkB;PromoterName=adap2;TFBSCenterPosition=-38.5;Sequence=-38.5
+NC_000913.3	RegulonDB	binding_site	2310474	2310498		-	.	name=Ada;ActiveConformation=Ada;RegulatedTUName=ada-alkB;PromoterName=adap;TFBSCenterPosition=-58.5;Sequence=-58.5
+NC_000913.3	RegulonDB	binding_site	2310474	2310498		-	.	name=Ada;ActiveConformation=Ada;RegulatedTUName=ada-alkB;PromoterName=adap2;TFBSCenterPosition=-58.5;Sequence=-58.5
+NC_000913.3	RegulonDB	binding_site	4414182	4414206		+	.	name=Ada;ActiveConformation=Ada;RegulatedTUName=aidB;PromoterName=aidBp;TFBSCenterPosition=-53.5;Sequence=-53.5
+NC_000913.3	RegulonDB	binding_site	4414182	4414206		+	.	name=Ada;ActiveConformation=Ada;RegulatedTUName=aidB;PromoterName=aidBp2;TFBSCenterPosition=-53.5;Sequence=-53.5

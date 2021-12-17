@@ -1,0 +1,19 @@
+NC_000913.3	RegulonDB	binding_site	1230377	1230376		-	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=hlyE;PromoterName=hlyEp;TFBSCenterPosition=90.5;Sequence=90.5
+NC_000913.3	RegulonDB	binding_site	1230391	1230390		-	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=hlyE;PromoterName=hlyEp;TFBSCenterPosition=76.5;Sequence=76.5
+NC_000913.3	RegulonDB	binding_site	1230406	1230405		-	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=hlyE;PromoterName=hlyEp;TFBSCenterPosition=61.5;Sequence=61.5
+NC_000913.3	RegulonDB	binding_site	1230415	1230414		-	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=hlyE;PromoterName=hlyEp;TFBSCenterPosition=52.5;Sequence=52.5
+NC_000913.3	RegulonDB	binding_site	1230511	1230510		-	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=hlyE;PromoterName=hlyEp;TFBSCenterPosition=-44.5;Sequence=-44.5
+NC_000913.3	RegulonDB	binding_site	1230522	1230521		-	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=hlyE;PromoterName=hlyEp;TFBSCenterPosition=-55.5;Sequence=-55.5
+NC_000913.3	RegulonDB	binding_site	1453688	1453687		+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=paaABCDEFGHIJK;PromoterName=paaAp;TFBSCenterPosition=-177.5;Sequence=-177.5
+NC_000913.3	RegulonDB	binding_site	1453791	1453790		+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=paaABCDEFGHIJK;PromoterName=paaAp;TFBSCenterPosition=-74.5;Sequence=-74.5
+NC_000913.3	RegulonDB	binding_site	1453846	1453845		+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=paaABCDEFGHIJK;PromoterName=paaAp;TFBSCenterPosition=-19.5;Sequence=-19.5
+NC_000913.3	RegulonDB	binding_site	2884239	2884238		-	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=casABCDE12;PromoterName=casAp;TFBSCenterPosition=81.5;Sequence=81.5
+NC_000913.3	RegulonDB	binding_site	3455478	3455477		+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=gspCDEFGHIJKLMO;PromoterName=gspCp2;TFBSCenterPosition=-49.5;Sequence=-49.5
+NC_000913.3	RegulonDB	binding_site	4518345	4518344		-	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=fecIR;PromoterName=fecIp;TFBSCenterPosition=-62.5;Sequence=-62.5
+NC_000913.3	RegulonDB	binding_site	656417	656416		+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=pagP;PromoterName=pagPp;TFBSCenterPosition=-109.5;Sequence=-109.5
+NC_000913.3	RegulonDB	binding_site	656431	656444		+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=pagP;PromoterName=pagPp;TFBSCenterPosition=-89;Sequence=-89
+NC_000913.3	RegulonDB	binding_site	656510	656523		+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=pagP;PromoterName=pagPp;TFBSCenterPosition=-10;Sequence=-10
+NC_000913.3	RegulonDB	binding_site	84063	84062		+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=leuO;PromoterName=leuOp;TFBSCenterPosition=-125.5;Sequence=-125.5
+NC_000913.3	RegulonDB	binding_site	84071	84070		+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=leuO;PromoterName=leuOp;TFBSCenterPosition=-117.5;Sequence=-117.5
+NC_000913.3	RegulonDB	binding_site				-	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=rsd;PromoterName=rsdp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=SlyA;ActiveConformation=SlyA;RegulatedTUName=rmf;PromoterName=rmfp;TFBSCenterPosition=;Sequence=

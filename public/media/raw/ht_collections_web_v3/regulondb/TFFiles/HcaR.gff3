@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	2668934	2668946		-	.	name=HcaR;ActiveConformation=HcaR;RegulatedTUName=hcaR;PromoterName=hcaRp;TFBSCenterPosition=25;Sequence=25
+NC_000913.3	RegulonDB	binding_site	2668934	2668946		+	.	name=HcaR;ActiveConformation=HcaR-HCA;RegulatedTUName=hcaEFCBD;PromoterName=hcaEp;TFBSCenterPosition=-42;Sequence=-42

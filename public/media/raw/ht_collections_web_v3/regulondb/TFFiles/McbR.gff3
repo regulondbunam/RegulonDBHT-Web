@@ -1,0 +1,7 @@
+NC_000913.3	RegulonDB	binding_site	1316149	1316170		-	.	name=McbR;ActiveConformation=McbR;RegulatedTUName=yciGFE;PromoterName=yciGp;TFBSCenterPosition=-67.5;Sequence=-67.5
+NC_000913.3	RegulonDB	binding_site	1316149	1316170		-	.	name=McbR;ActiveConformation=McbR;RegulatedTUName=yciG;PromoterName=yciGp;TFBSCenterPosition=-67.5;Sequence=-67.5
+NC_000913.3	RegulonDB	binding_site	1316170	1316191		-	.	name=McbR;ActiveConformation=McbR;RegulatedTUName=yciGFE;PromoterName=yciGp;TFBSCenterPosition=-88.5;Sequence=-88.5
+NC_000913.3	RegulonDB	binding_site	1316170	1316191		-	.	name=McbR;ActiveConformation=McbR;RegulatedTUName=yciG;PromoterName=yciGp;TFBSCenterPosition=-88.5;Sequence=-88.5
+NC_000913.3	RegulonDB	binding_site				-	.	name=McbR;ActiveConformation=McbR;RegulatedTUName=mcbA;PromoterName=mcbAp5;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=McbR;ActiveConformation=McbR;RegulatedTUName=rsd;PromoterName=rsdp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=McbR;ActiveConformation=McbR;RegulatedTUName=rmf;PromoterName=rmfp;TFBSCenterPosition=;Sequence=

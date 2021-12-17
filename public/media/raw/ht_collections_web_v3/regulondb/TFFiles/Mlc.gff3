@@ -1,0 +1,10 @@
+NC_000913.3	RegulonDB	binding_site	1157580	1157602		+	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=ptsG;PromoterName=ptsGp2;TFBSCenterPosition=-35;Sequence=-35
+NC_000913.3	RegulonDB	binding_site	1157749	1157771		+	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=ptsG;PromoterName=ptsGp1;TFBSCenterPosition=-6;Sequence=-6
+NC_000913.3	RegulonDB	binding_site	1668577	1668599		-	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=mlc;PromoterName=mlcp1;TFBSCenterPosition=16;Sequence=16
+NC_000913.3	RegulonDB	binding_site	1668577	1668599		-	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=mlc-ynfK;PromoterName=mlcp2;TFBSCenterPosition=4;Sequence=4
+NC_000913.3	RegulonDB	binding_site	1668577	1668599		-	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=mlc-ynfK;PromoterName=mlcp;TFBSCenterPosition=4;Sequence=4
+NC_000913.3	RegulonDB	binding_site	1901843	1901865		+	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=manXYZ;PromoterName=manXp;TFBSCenterPosition=-79;Sequence=-79
+NC_000913.3	RegulonDB	binding_site	1901909	1901931		+	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=manXYZ;PromoterName=manXp;TFBSCenterPosition=-13;Sequence=-13
+NC_000913.3	RegulonDB	binding_site	2533502	2533524		+	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=ptsHI-crr;PromoterName=ptsHp4;TFBSCenterPosition=13;Sequence=13
+NC_000913.3	RegulonDB	binding_site	2533502	2533524		+	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=ptsHI-crr;PromoterName=ptsHp;TFBSCenterPosition=13;Sequence=13
+NC_000913.3	RegulonDB	binding_site	3553024	3553046		+	.	name=Mlc;ActiveConformation=Mlc;RegulatedTUName=malT;PromoterName=malTp;TFBSCenterPosition=12;Sequence=12
