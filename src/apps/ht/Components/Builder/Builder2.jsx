@@ -17,13 +17,9 @@ const META_DATA = [
     { "value": "RegulonDB TF ID", "query": "objectTested._id" },
     { "value": "TF Name", "query": "objectTested.name" },
     { "value": "TF Synonyms", "query": "objectTested.synonyms" },
-
     { "value": "TF Gene Name", "query": "objectTested.gene.name" },
-
-
     { "value": "DBxRef Name", "query": "objectTested.externalCrossReferences.externalCrossReferenceName" },
     { "value": "DBxRef ID", "query": "objectTested.externalCrossReferences.objectId" },
-
     //Source Serie
     { "value": "Serie ID", "query": "sourceSerie.sourceId" },
     { "value": "Source DBName", "query": "sourceSerie.sourceName" },
@@ -32,16 +28,12 @@ const META_DATA = [
     { "value": "Serie Title", "query": "sourceSerie.title" },
     { "value": "Experiment Strategy", "query": "sourceSerie.strategy" },
     { "value": "Experiment Method", "query": "sourceSerie.method" },
-
     //Sample
     { "value": "Experiment Sample ID", "query": "sample.experimentId" },
     { "value": "Control Sample ID", "query": "sample.controlId" },
     { "value": "Experiment Title", "query": "sample.title" },
-
     //Referenced Genome
     { "value": "Reference genome", "query": "referenceGenome" },
-
-
     //Growth Conditions
     { "value": "Growth Conditions", "query": "gc" },
 ]
@@ -60,6 +52,42 @@ const META_GC = [
     { "value": "Growth Rate", "query": "growthConditions.growthRate" },
     { "value": "Vessel Type", "query": "growthConditions.vesselType" },
     { "value": "Aeration Speed", "query": "growthConditions.aerationSpeed" }
+]
+
+const META_NLPG = [
+    { "value": "NLPG ID", "query": "_id" },
+    //Organism
+    { "value": "Organism value", "query": "organism.value" },
+    //Genetic Background
+    { "value": "GB value", "query": "geneticBackground.value" },
+    //Medium
+    { "value": "Medium value", "query": "medium.value" },
+    //Aeration
+    { "value": "Aeration value", "query": "aeration.value" },
+    //Temperature
+    { "value": "Temperature value", "query": "temperature.value" },
+    //PH
+    { "value": "PH value", "query": "ph.value" },
+    //Pressure
+    { "value": "Pressure value", "query": "pressure.value" },
+    //Optical density
+    { "value": "Optical density value", "query": "opticalDensity.value" },
+    //Pressure
+    { "value": "Optical density value", "query": "opticalDensity.value" },
+    //Growth phase
+    { "value": "Growth phase value", "query": "growthPhase.value" },
+    //Growth rate
+    { "value": "Growth rate value", "query": "growthRate.value" },
+    //Vessel type
+    { "value": "Vessel type value", "query": "vesselType.value" },
+    //Aeratio speed
+    { "value": "Aeration Speed value", "query": "aerationSpeed.value" },
+    //Medium supplements
+    { "value": "Medium supplements value", "query": "mediumSupplements.value" },
+    //DatasetID
+    { "value": "Dataset ID", "query": "datasetIds" },
+    //TemporalID
+    { "value": "temporal ID", "query": "temporalId" },
 ]
 
 export default function Builder2({
@@ -173,9 +201,19 @@ export default function Builder2({
                                     if (datasetType === "GENE_EXPRESSION" && data?.query === "gc") {
                                         return null
                                     }
-                                    return (
-                                        <option value={data?.query} key={`${data}_${i}`}>{data?.value}</option>
-                                    )
+                                    if (datasetType === "TFBINDING") {
+                                        return (
+                                            <option value={data?.query} key={`${data}_${i}`}>{data?.value}</option>
+                                        )
+                                    } else {
+                                        if (data?.value !== "RegulonDB TF ID" && data?.value !== "TF Name" && data?.value !== "TF Synonyms" && data?.value !== "TF Gene Name") {
+                                            return (
+                                                <option value={data?.query} key={`${data}_${i}`}>{data?.value}</option>
+                                            )
+                                        } else {
+                                          return
+                                        }
+                                    }
                                 })
                             }
                         </select>
@@ -255,8 +293,9 @@ export default function Builder2({
 
 function fixQuery(query) {
     //parche :( 
-
-
+    /* if(query === "E. coliK12 W3110, accession number NC_007779"){
+        query = "E. coli";
+    } */
     let brokeQueryArray = query.split('');
     let fixedQueryArray = [];
 
@@ -281,6 +320,11 @@ function fixQuery(query) {
                         ubi = t - 1;
                 }
                 i = ubi;
+            } else {
+                if (brokeQueryArray[i] === '\\\\') {
+
+                }
+
             }
         }
 
