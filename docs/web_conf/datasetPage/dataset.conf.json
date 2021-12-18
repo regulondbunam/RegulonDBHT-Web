@@ -1,0 +1,23 @@
+{
+    "_version": "0.1",
+    "sections": {
+        "info": {
+            "title": "DATASET"
+        },
+        "objectTested": {
+            "title": "TRANSCRIPTION FACTOR"
+        },
+        "growthConditions": {
+            "title": "GROWTH CONDITION"
+        },
+        "nlpGrowthConditionsId":{
+            "title": "NLP GROWTH CONDITION"
+        },
+        "data": {
+            "title": "DATA FROM DATASET"
+        },
+        "igv":{
+            "title": "GENOME VIEWER"
+        }
+    }
+}

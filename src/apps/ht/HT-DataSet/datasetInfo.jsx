@@ -77,6 +77,7 @@ export default function DatasetInfo({ id_dataset }) {
 function Body({ data }) {
     const section = conf?.sections
     console.log(data)
+    const version = data?.releaseDataControl?.version
 
     useEffect(() => {
         const RELATED = document.getElementById("related_ht")
@@ -132,7 +133,9 @@ function Body({ data }) {
             <NLPGC id_dataset={data?._id} />
             <Tabs id_dataset={data?._id} data={data} />
             {
-                data?.datasetType !== "GENE_EXPRESSION" && <Viewer id_dataset={data?._id} tf={data?.objectTested?.name} datasetType={data?.datasetType} />
+                data?.datasetType !== "GENE_EXPRESSION" && data?.sourceSerie?.strategy !== "ChIP-exo" && version === "0.0.3"
+                ?<Viewer id_dataset={data?._id} tf={data?.objectTested?.name} datasetType={data?.datasetType} />
+                :null
             }
             
             <br />

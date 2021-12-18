@@ -4,7 +4,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
     "name": "Ecoli",
     "fastaURL": "/media/raw/e_coli_k12.fna",
     "indexURL": "/media/raw/e_coli_k12.fna.fai",
-    "order": 1000000,
+    "order": 1000,
     "tracks": [
       {
         "name": "Genes",
@@ -15,7 +15,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
       }
     ]
   }
-  if (peaksFile !== "undefined") {
+  if (peaksFile) {
     conf.tracks.push(
       {
         "name": "peaks",
@@ -26,7 +26,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
       }
     )    
   }
-  if (sitesFile !== "undefined") {
+  if (sitesFile) {
     conf.tracks.push(
       {
         "name": "sites",
@@ -37,7 +37,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
       }
     )    
   }
-  if (tfFile !== "undefined") {
+  if (tfFile) {
     conf.tracks.push(
       {
         "name": "RegulonDB TFBS",
@@ -48,7 +48,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
       }
     )    
   }
-  if (ttFile !== "undefined") {
+  if (ttFile) {
     conf.tracks.push(
       {
         "name": "ttFile",
@@ -59,7 +59,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
       }
     )    
   }
-  if (tsFile !== "undefined") {
+  if (tsFile) {
     conf.tracks.push(
       {
         "name": "tsFile",
@@ -70,7 +70,7 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
       }
     )    
   }
-  if (tuFile !== "undefined") {
+  if (tuFile) {
     conf.tracks.push(
       {
         "name": "tuFile",
@@ -81,12 +81,10 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
       }
     )    
   }
+  //console.log(conf)
   return conf
 }
 
-export const genomaE = {
-
-}
 /**
  * export const genoma = {
     "id": "Sars-CoV-2_ASM985889v3",

@@ -1,0 +1,19 @@
+{
+    "_version": "0.1",
+    "_descripcion": "Este JSON permite la configuracion del texto estatico que se presenta en la pagina de query builder de HT",
+    "queryBox": {
+        "example": "",
+        "comment_help": ""
+    },
+    "builder": {
+        "demo": "'FNR'[objectTested.name]",
+        "tooltips": {
+            "dropdown_fields": "",
+            "inputText": "",
+            "button_add":"",
+            "drupdown_logicOperator": "",
+            "dropdown_growthCondition": "",
+            "inputText_growthContion": ""
+        }
+    }
+}

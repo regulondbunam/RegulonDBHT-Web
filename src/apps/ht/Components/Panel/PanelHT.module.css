@@ -1,9 +1,7 @@
 .Panel{
     background: #D5E2EA;
-    padding: 10%;
+    padding: 3%;
     position: relative;
-    vertical-align: middle;
-    font-size: 4vh;
     transition: transform 400ms ease;
 }
 
@@ -18,7 +16,9 @@
 }
 
 .Panel:hover{
-    transform: scale(1.02);
-    background: #32617D;
-    color: white !important; 
+    background: #32617d;
+}
+
+.Panel:hover h2{
+    color: white
 }
