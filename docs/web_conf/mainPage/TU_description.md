@@ -12,7 +12,9 @@ Original data separated by growth conditions.
 
 **2. Uniformization** 
 
-TUs were collected from 3 curated publications, and processed to produce uniform bed-like dataset files with the following fields:\n\n - __chromosome:__ NC_000913.3 
+TUs were collected from 3 curated publications, and processed to produce uniform bed-like dataset files with the following fields:
+
+- __chromosome:__ NC_000913.3 
 - __start:__ Left genomic position
 - __stop:__ Right genomic position
 - __id:__ Unique TU ID
