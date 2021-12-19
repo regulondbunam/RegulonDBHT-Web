@@ -2,7 +2,9 @@
 
 **Summary**
 
-This collection contains 5 datasets.\n\n **Creation of the collection**
+This collection contains 5 datasets.
+
+**Creation of the collection**
 
 **1. Annotation**
 
