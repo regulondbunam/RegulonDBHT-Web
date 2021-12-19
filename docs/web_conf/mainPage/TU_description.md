@@ -2,4 +2,27 @@
 
 **Summary**
 
-This collection contains 5 datasets.\n\n **Creation of the collection**\n\n **1. Annotation** \n\n Original data separated by growth conditions.\n\n **2. Uniformization** \n\n TUs were collected from 3 curated publications, and processed to produce uniform bed-like dataset files with the following fields:\n\n - __chromosome:__ NC_000913.3 \n- __start:__ Left genomic position \n - __stop:__ Right genomic position\n - __id:__ Unique TU ID\n - __length:__ TU length\n - __strand:__ TU strand reported by authors\n - __term_type:__ depending on methodology\n - __gene_number:__ number of genes entirely contained in TU\n - __genes:__ bnumbers of genes entirely contained in TU\n - __pseudo:__ 1 if TU contains pseudo genes, else 0\n - __phantom:__ 1 if TU contains phantom genes, else 0\n\n When the original data was reported to have coordinates from the NC_000913.2 version of the genome, they were converted to the latest version NC_000913.3 using the online converter provided by biocyc: https://biocyc.org/ECOLI/map-seq-coords-form?chromosome=COLI-K12 \n\n The genes reported in those datasets may differ from the genes originally reported by the authors. Here, we decided to include only the genes which are entirely contained in the TU coordinates, and exclude the others. \n
+This collection contains 5 datasets.\n\n **Creation of the collection**
+
+**1. Annotation**
+
+Original data separated by growth conditions.
+
+**2. Uniformization** 
+
+TUs were collected from 3 curated publications, and processed to produce uniform bed-like dataset files with the following fields:\n\n - __chromosome:__ NC_000913.3 
+- __start:__ Left genomic position
+- __stop:__ Right genomic position
+- __id:__ Unique TU ID
+- __length:__ TU length
+- __strand:__ TU strand reported by authors
+- __term_type:__ depending on methodology
+- __gene_number:__ number of genes entirely contained in TU
+- __genes:__ bnumbers of genes entirely contained in TU
+- __pseudo:__ 1 if TU contains pseudo genes, else 0
+- __phantom:__ 1 if TU contains phantom genes, else 0
+
+
+When the original data was reported to have coordinates from the NC_000913.2 version of the genome, they were converted to the latest version NC_000913.3 using the online converter provided by biocyc: https://biocyc.org/ECOLI/map-seq-coords-form?chromosome=COLI-K12 
+
+The genes reported in those datasets may differ from the genes originally reported by the authors. Here, we decided to include only the genes which are entirely contained in the TU coordinates, and exclude the others. \n
