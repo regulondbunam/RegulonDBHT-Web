@@ -136,7 +136,7 @@ function Body({ data }) {
             
             <br />
             {
-            data?.sourceSerie?.strategy === "ChIP-exo"
+            data?.sourceSerie?.strategy !== "ChIP-exo"
                 ?<Viewer id_dataset={data?._id} tf={data?.objectTested?.name} datasetType={data?.datasetType} />
                 :null
             }
