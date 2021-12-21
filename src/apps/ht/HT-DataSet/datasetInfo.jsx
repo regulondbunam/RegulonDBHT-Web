@@ -135,11 +135,14 @@ function Body({ data }) {
             
             
             <br />
+            <div id="igv-view" >  
             {
+                
             data?.sourceSerie?.strategy !== "ChIP-exo"
                 ?<Viewer id_dataset={data?._id} tf={data?.objectTested?.name} datasetType={data?.datasetType} />
                 :null
             }
+            </div>
             <br />
             <br />
         </div>

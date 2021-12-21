@@ -25,6 +25,10 @@ export default function Tabs({ id_dataset, data }) {
         if((_datasetData && _autorData)) {
             if(_datasetData === 1){
                 set_openTab(1)
+                let igv_view = document.getElementById("igv-view");
+                if(igv_view){
+                    igv_view.style.display = "none"
+                }
             }
         }
     },[_datasetData, _autorData])
