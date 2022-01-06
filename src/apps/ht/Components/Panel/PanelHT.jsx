@@ -27,7 +27,7 @@ export default class PanelHT extends React.Component {
         }
         return (
             <div className={Style.Panel}>
-                <Link to={`/${panel.url}`}>
+                <Link to={`/${panel.url}/query`}>
                 <h2 style={{fontSize: "5vh"}} >
                 {panel.title}
                 </h2>
