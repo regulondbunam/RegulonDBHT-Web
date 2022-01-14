@@ -32,7 +32,7 @@ export default class PanelHT extends React.Component {
                 <div>
                     <ModalHT id={panel?.id} title={panel.title} md_data={this.state._mdData} />
                 </div>
-                <Link to={`/${panel.url}/query`}>
+                <Link to={`/${panel.url}/`}>
                 <h2 style={{fontSize: "5vh"}} >
                 {panel.title}
                 </h2>
@@ -54,7 +54,7 @@ export default class PanelHT extends React.Component {
                     </Link>
                     </div>
                 }
-                <Link style={{marginRight: "10px"}} to={`/${panel.url}/`}>
+                <Link style={{marginRight: "10px"}} to={`/${panel.url}/query`}>
                     <button>Query Builder</button>
                 </Link>
                 
