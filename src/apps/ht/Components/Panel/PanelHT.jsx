@@ -18,6 +18,7 @@ export default class PanelHT extends React.Component {
 
     render() {
         const { panel } = this.props
+        console.log(panel);
         if (!panel.enable) {
             return (
                 <div className={Style.dPanel}>
@@ -25,16 +26,39 @@ export default class PanelHT extends React.Component {
                 </div>
             )
         }
+        //TFBINDING
         return (
             <div className={Style.Panel}>
+                <div>
+                    <ModalHT id={panel?.id} title={panel.title} md_data={this.state._mdData} />
+                </div>
                 <Link to={`/${panel.url}/query`}>
                 <h2 style={{fontSize: "5vh"}} >
                 {panel.title}
                 </h2>
                 </Link>
-                <div>
-                    <ModalHT id={panel?.id} title={panel.title} md_data={this.state._mdData} />
-                </div>
+                {
+                    panel.url==='TFBINDING'
+                    &&<div style={{marginBottom: "10px"}}>
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChiP-seq`}>
+                    ChiP-seq
+                    </Link>
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChiP-exo`}>
+                    ChiP-exo
+                    </Link>
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/gSELEX-chip`}>
+                    gSELEX-chip
+                    </Link>
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/DAP`}>
+                    DAP
+                    </Link>
+                    </div>
+                }
+                <Link style={{marginRight: "10px"}} to={`/${panel.url}/`}>
+                    <button>Query Builder</button>
+                </Link>
+                
+                
             </div>
         )
     }
