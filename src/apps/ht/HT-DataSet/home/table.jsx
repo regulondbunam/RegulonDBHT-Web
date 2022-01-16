@@ -1,56 +1,12 @@
 import React, { useMemo } from 'react'
-import styled from 'styled-components'
-import { useTable, useBlockLayout, useGlobalFilter, useAsyncDebounce, useResizeColumns } from 'react-table'
+import GlobalFilter from './tableComponents/GlobalFilter'
+import { useTable, useBlockLayout, useGlobalFilter, useResizeColumns } from 'react-table'
 import { FixedSizeList } from 'react-window'
 import scrollbarWidth from './scrollbarWidth'
+import { Link } from 'react-router-dom'
+import {TableStyles} from "./styledComponents"
 
-const Styles = styled.div`
-  padding: 1rem;
-
-  .table {
-    display: inline-block;
-    border-spacing: 0;
-    border: 1px solid black;
-
-    .tr {
-      :last-child {
-        .td {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    .th,
-    .td {
-      margin: 0;
-      padding: 0.5rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-      .resizer {
-        display: inline-block;
-        background: blue;
-        width: 10px;
-        height: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transform: translateX(50%);
-        z-index: 1;
-        ${'' /* prevents from scrolling while dragging on touch devices */}
-        touch-action:none;
-
-        &.isResizing {
-          background: red;
-        }
-      }
-      :last-child {
-        border-right: 1px solid black;
-      }
-    }
-  }
-`
-
-function Table({ columns, data }) {
+function Table({ columns,datasetType, data }) {
     // Use the state and functions returned from useTable to build your UI
     const defaultColumn = React.useMemo(
         () => ({
@@ -87,7 +43,9 @@ function Table({ columns, data }) {
         ({ index, style }) => {
             const row = rows[index]
             prepareRow(row)
+            //console.log(row)
             return (
+                <Link to={`/${datasetType}/dataset/${row.cells[0].value}`} >
                 <div
                     {...row.getRowProps({
                         style,
@@ -102,21 +60,24 @@ function Table({ columns, data }) {
                         )
                     })}
                 </div>
+                </Link>
             )
         },
-        [prepareRow, rows]
+        [prepareRow, rows, datasetType]
     )
 
     // Render the UI for your table
     return (
-        <div {...getTableProps()} className="table">
-            <div className="th" >
+        <div>
+            <div >
                 <GlobalFilter
                     preGlobalFilteredRows={preGlobalFilteredRows}
                     globalFilter={state.globalFilter}
                     setGlobalFilter={setGlobalFilter}
                 />
             </div>
+            <TableStyles>
+            <div {...getTableProps()} className="table">
             <div>
                 {headerGroups.map(headerGroup => (
                     <div {...headerGroup.getHeaderGroupProps()} className="tr">
@@ -146,6 +107,9 @@ function Table({ columns, data }) {
                 </FixedSizeList>
             </div>
         </div>
+            </TableStyles>
+        </div>
+        
     )
 }
 
@@ -161,8 +125,12 @@ export function DatasetTable({ datasets, datasetType }) {
                         accessor: "_id"
                     },
                     {
-                        Header: "Title",
+                        Header: "Dataset",
                         accessor: "_title"
+                    },
+                    {
+                        Header: "Strategy",
+                        accessor: "_strategy"
                     }
                 ]
                 data = datasets.map(dataset => {
@@ -175,7 +143,8 @@ export function DatasetTable({ datasets, datasetType }) {
                     }
                     return {
                         _id: dataset?._id,
-                        _title: title
+                        _title: title,
+                        _strategy: dataset?.sourceSerie?.strategy
                     }
                 })
                 break;
@@ -188,7 +157,6 @@ export function DatasetTable({ datasets, datasetType }) {
                     {
                         Header: "Title",
                         accessor: "_title",
-                        filter: 'fuzzyText',
                     }
                 ]
                 data = datasets.map(dataset => {
@@ -203,38 +171,6 @@ export function DatasetTable({ datasets, datasetType }) {
     }, [datasets, datasetType])
 
     return (
-        <Styles>
-            <Table columns={tableFormat.columns} data={tableFormat.data} />
-        </Styles>
-    )
-}
-
-function GlobalFilter({
-    preGlobalFilteredRows,
-    globalFilter,
-    setGlobalFilter,
-}) {
-    const count = preGlobalFilteredRows.length
-    const [value, setValue] = React.useState(globalFilter)
-    const onChange = useAsyncDebounce(value => {
-        setGlobalFilter(value || undefined)
-    }, 200)
-
-    return (
-        <span>
-            Search:{' '}
-            <input
-                value={value || ""}
-                onChange={e => {
-                    setValue(e.target.value);
-                    onChange(e.target.value);
-                }}
-                placeholder={`${count} records...`}
-                style={{
-                    fontSize: '1.1rem',
-                    border: '0',
-                }}
-            />
-        </span>
+            <Table columns={tableFormat.columns} datasetType={datasetType} data={tableFormat.data} />
     )
 }

@@ -40,11 +40,11 @@ export default class PanelHT extends React.Component {
                 {
                     panel.url==='TFBINDING'
                     &&<div style={{marginBottom: "10px"}}>
-                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChiP-seq`}>
-                    ChiP-seq
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChIP-seq`}>
+                    ChIP-seq
                     </Link>
-                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChiP-exo`}>
-                    ChiP-exo
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChIP-exo`}>
+                    ChIP-exo
                     </Link>
                     <Link style={{marginRight: "10px"}} to={`/${panel.url}/gSELEX-chip`}>
                     gSELEX-chip

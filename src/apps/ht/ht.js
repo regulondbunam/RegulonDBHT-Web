@@ -24,7 +24,7 @@ export default function HT() {
         return(
             <div>
                 <Title />
-                <DataSet id_dataset={info} datasetType={datasetType} />
+                <DataSet datasetType={datasetType} id_dataset={info} experimentType={site} />
             </div>
         )
     }

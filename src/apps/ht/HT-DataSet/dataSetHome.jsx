@@ -1,13 +1,27 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import GetResultsDataset from '../webServices/dataset/dataset_results'
 import { DatasetTable } from './home/table'
 
 
-export default function DataSetHome({ datasetType }) {
+export default function DataSetHome({ datasetType, experimentType }) {
     const [_data, set_data] = useState()
     const [_state, set_state] = useState()
-    const query = `${datasetType}[datasetType]`
+    let query = `${datasetType}[datasetType]`
+    let subtitle = ""
+    switch (datasetType) {
+        case "TFBINDING":
+            subtitle = "TF Binding Sites"
+            if (experimentType) {
+                query = `'${experimentType}'[sourceSerie.strategy] AND TFBINDING[datasetType]`
+            }
+            break;
+
+        default:
+            query = undefined
+            break;
+    }
 
     useEffect(() => {
         const COVER = document.getElementById("title-cover-ht")
@@ -22,9 +36,17 @@ export default function DataSetHome({ datasetType }) {
         }
     }, [_state])
 
+    if (!query) {
+        return (
+            <article>
+                <h2>unknow dataset type: {datasetType}</h2>
+            </article>
+        )
+    }
+
     return (
-        <div>
-            <h2>Datasets</h2>
+        <article>
+            <h2>{subtitle}</h2>
             {
                 !_data &&
                 <GetResultsDataset
@@ -39,6 +61,15 @@ export default function DataSetHome({ datasetType }) {
             {
                 _data && <DatasetTable datasets={_data} datasetType={datasetType} />
             }
-        </div>
+            <p>
+                Do you need to make a more specific search?
+            </p>
+            <Link to={`/${datasetType}/query`}>
+                <button>
+                    Use the Query Builder
+                </button>
+            </Link>
+
+        </article>
     )
 }
