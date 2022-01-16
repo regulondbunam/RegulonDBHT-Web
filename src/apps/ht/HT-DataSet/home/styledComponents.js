@@ -6,10 +6,8 @@ export const TableStyles = styled.div`
   .table {
     display: inline-block;
     border-spacing: 0;
-    border: 1px solid black;
 
     .tr {
-        background-color: #cadce7;
         :hover{
             color: white;
             background-color: #72a7c7;
@@ -22,16 +20,19 @@ export const TableStyles = styled.div`
     }
 
     .th{
-        color: white;
-        background-color: #32617d;
-        padding: 0.5rem;
+      font-size: 14px;
+      text-align: center;
+      color: #666666;
+      font-weight: bold;
+      border-bottom: 2px solid #3d779b;
+      padding: 2px;
         .resizer {
             display: inline-block;
-            background: white;
+            background: #3d779b;
             width: 5px;
             height: 100%;
             position: absolute;
-            right: 3px;
+            right: 0px;
             top: 0;
             transform: translateX(50%);
             z-index: 1;
@@ -46,10 +47,11 @@ export const TableStyles = styled.div`
     .td {
       margin: 0;
       padding: 0.5rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
+      border-bottom: 1px solid #3d779b;
+      border-right: 1px solid #3d779b;
+      color: #666666;
       :last-child {
-        border-right: 1px solid black;
+        border-right: 1px solid #3d779b;
       }
     }
   }
