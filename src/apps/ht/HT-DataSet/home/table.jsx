@@ -4,9 +4,9 @@ import { useTable, useBlockLayout, useGlobalFilter, useResizeColumns } from 'rea
 import { FixedSizeList } from 'react-window'
 import scrollbarWidth from './scrollbarWidth'
 import { Link } from 'react-router-dom'
-import {TableStyles} from "./styledComponents"
+import { TableStyles } from "./styledComponents"
 
-function Table({ columns,datasetType, data }) {
+function Table({ columns, datasetType, data }) {
     // Use the state and functions returned from useTable to build your UI
     const defaultColumn = React.useMemo(
         () => ({
@@ -46,20 +46,20 @@ function Table({ columns,datasetType, data }) {
             //console.log(row)
             return (
                 <Link to={`/${datasetType}/dataset/${row.cells[0].value}`} >
-                <div
-                    {...row.getRowProps({
-                        style,
-                    })}
-                    className="tr"
-                >
-                    {row.cells.map(cell => {
-                        return (
-                            <div {...cell.getCellProps()} className="td">
-                                {cell.render('Cell')}
-                            </div>
-                        )
-                    })}
-                </div>
+                    <div
+                        {...row.getRowProps({
+                            style,
+                        })}
+                        className="tr"
+                    >
+                        {row.cells.map(cell => {
+                            return (
+                                <div {...cell.getCellProps()} className="td">
+                                    {cell.render('Cell')}
+                                </div>
+                            )
+                        })}
+                    </div>
                 </Link>
             )
         },
@@ -77,39 +77,39 @@ function Table({ columns,datasetType, data }) {
                 />
             </div>
             <TableStyles>
-            <div {...getTableProps()} className="table">
-            <div>
-                {headerGroups.map(headerGroup => (
-                    <div {...headerGroup.getHeaderGroupProps()} className="tr">
-                        {headerGroup.headers.map(column => (
-                            <div {...column.getHeaderProps()} className="th">
-                                {column.render('Header')}
-                                <div
-                                    {...column.getResizerProps()}
-                                    className={`resizer ${column.isResizing ? 'isResizing' : ''
-                                        }`}
-                                />
-                            </div>
+                <div {...getTableProps()} className="table">
+                    <div>
+                        {headerGroups.map(headerGroup => (
+                            <div {...headerGroup.getHeaderGroupProps()} className="tr">
+                                {headerGroup.headers.map(column => (
+                                    <div {...column.getHeaderProps()} className="th">
+                                        {column.render('Header')}
+                                        <div
+                                            {...column.getResizerProps()}
+                                            className={`resizer ${column.isResizing ? 'isResizing' : ''
+                                                }`}
+                                        />
+                                    </div>
 
+                                ))}
+                            </div>
                         ))}
                     </div>
-                ))}
-            </div>
 
-            <div {...getTableBodyProps()}>
-                <FixedSizeList
-                    height={500}
-                    itemCount={rows.length}
-                    itemSize={40}
-                    width={totalColumnsWidth + scrollBarSize}
-                >
-                    {RenderRow}
-                </FixedSizeList>
-            </div>
-        </div>
+                    <div {...getTableBodyProps()}>
+                        <FixedSizeList
+                            height={500}
+                            itemCount={rows.length}
+                            itemSize={40}
+                            width={totalColumnsWidth + scrollBarSize}
+                        >
+                            {RenderRow}
+                        </FixedSizeList>
+                    </div>
+                </div>
             </TableStyles>
         </div>
-        
+
     )
 }
 
@@ -131,6 +131,122 @@ export function DatasetTable({ datasets, datasetType }) {
                     {
                         Header: "Strategy",
                         accessor: "_strategy"
+                    }
+                ]
+                data = datasets.map(dataset => {
+                    let title = dataset?.sample?.title
+                    if (!title) {
+                        title = dataset?.objectTested?.name
+                        if (!title) {
+                            title = dataset?._id
+                        }
+                    }
+                    return {
+                        _id: dataset?._id,
+                        _title: title,
+                        _strategy: dataset?.sourceSerie?.strategy
+                    }
+                })
+                break;
+            case "TUS":
+                columns = [
+                    {
+                        Header: "ID",
+                        accessor: "_id"
+                    },
+                    {
+                        Header: "Dataset",
+                        accessor: "_title"
+                    },
+                    {
+                        Header: "Strategy",
+                        accessor: "_strategy"
+                    }
+                ]
+                data = datasets.map(dataset => {
+                    let title = dataset?.sample?.title
+                    if (!title) {
+                        title = dataset?.objectTested?.name
+                        if (!title) {
+                            title = dataset?._id
+                        }
+                    }
+                    return {
+                        _id: dataset?._id,
+                        _title: title,
+                        _strategy: dataset?.sourceSerie?.strategy
+                    }
+                })
+                break;
+            case "TTS":
+                columns = [
+                    {
+                        Header: "ID",
+                        accessor: "_id"
+                    },
+                    {
+                        Header: "Dataset",
+                        accessor: "_title"
+                    },
+                    {
+                        Header: "Strategy",
+                        accessor: "_strategy"
+                    }
+                ]
+                data = datasets.map(dataset => {
+                    let title = dataset?.sample?.title
+                    if (!title) {
+                        title = dataset?.objectTested?.name
+                        if (!title) {
+                            title = dataset?._id
+                        }
+                    }
+                    return {
+                        _id: dataset?._id,
+                        _title: title,
+                        _strategy: dataset?.sourceSerie?.strategy
+                    }
+                })
+                break;
+            case "TSS":
+                columns = [
+                    {
+                        Header: "ID",
+                        accessor: "_id"
+                    },
+                    {
+                        Header: "Dataset",
+                        accessor: "_title"
+                    },
+                    {
+                        Header: "Strategy",
+                        accessor: "_strategy"
+                    }
+                ]
+                data = datasets.map(dataset => {
+                    let title = dataset?.sample?.title
+                    if (!title) {
+                        title = dataset?.objectTested?.name
+                        if (!title) {
+                            title = dataset?._id
+                        }
+                    }
+                    return {
+                        _id: dataset?._id,
+                        _title: title,
+                        _strategy: dataset?.sourceSerie?.strategy
+                    }
+                })
+                break;
+            case "GENE_EXPRESSION":
+                columns = [
+                    {
+                        Header: "ID",
+                        accessor: "_id"
+                    },
+                    {
+                        Header: "Dataset",
+                        accessor: "_title"
                     }
                 ]
                 data = datasets.map(dataset => {
@@ -171,6 +287,6 @@ export function DatasetTable({ datasets, datasetType }) {
     }, [datasets, datasetType])
 
     return (
-            <Table columns={tableFormat.columns} datasetType={datasetType} data={tableFormat.data} />
+        <Table columns={tableFormat.columns} datasetType={datasetType} data={tableFormat.data} />
     )
 }

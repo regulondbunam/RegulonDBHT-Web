@@ -17,7 +17,18 @@ export default function DataSetHome({ datasetType, experimentType }) {
                 query = `'${experimentType}'[sourceSerie.strategy] AND TFBINDING[datasetType]`
             }
             break;
-
+        case "TUS":
+            subtitle = "Transcription Units"
+            break;
+        case "TTS":
+            subtitle = "Transcription Termination Sites"
+            break;
+        case "TSS":
+            subtitle = "Transcription Start Sites"
+            break;
+        case "GENE_EXPRESSION":
+            subtitle = "Gene Expression"
+            break;
         default:
             query = undefined
             break;

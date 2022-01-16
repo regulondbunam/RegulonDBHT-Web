@@ -13,7 +13,7 @@ export default function GlobalFilter({
 
     return (
         <span>
-            Search:
+            Search in {count} datasets:
             <br />
             <input
                 value={value || ""}

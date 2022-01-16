@@ -14,6 +14,27 @@ export default function HtBuilder({datasetType}) {
   const [_fields, set_fields] = useState()
   const [_state, set_state] = useState()
 
+  let subtitle = ""
+  switch (datasetType) {
+    case "TFBINDING":
+        subtitle = "TF Binding Sites"
+        break;
+    case "TUS":
+        subtitle = "Transcription Units"
+        break;
+    case "TTS":
+        subtitle = "Transcription Termination Sites"
+        break;
+    case "TSS":
+        subtitle = "Transcription Start Sites"
+        break;
+    case "GENE_EXPRESSION":
+        subtitle = "Gene Expression"
+        break;
+    default:
+        subtitle = ""
+        break;
+}
 
   useEffect(() => {
     const COVER = document.getElementById("title-cover-ht")
@@ -36,7 +57,7 @@ export default function HtBuilder({datasetType}) {
         ?<GetFields field_type_name="Dataset" status={(state)=>{set_state(state)}} resoultsData={(data)=>{set_fields(data)}} />
         :null
       }
-      <h2 dangerouslySetInnerHTML={{__html: des.title}} />
+      <h2 dangerouslySetInnerHTML={{__html: `${subtitle}<br/>${des.title}`}} />
       <QueryBox />
       
       <Builder2 datasetType={datasetType} />
