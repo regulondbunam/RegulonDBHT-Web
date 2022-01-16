@@ -125,7 +125,7 @@ export function DatasetTable({ datasets, datasetType }) {
                         accessor: "_id"
                     },
                     {
-                        Header: "Dataset",
+                        Header: "Sample Title | TF ",
                         accessor: "_title"
                     },
                     {
@@ -134,10 +134,16 @@ export function DatasetTable({ datasets, datasetType }) {
                     }
                 ]
                 data = datasets.map(dataset => {
+                    let tf = dataset?.objectTested?.name
                     let title = dataset?.sample?.title
-                    if (!title) {
-                        title = dataset?.objectTested?.name
-                        if (!title) {
+                    if(title){
+                        if(tf){
+                            title = `${title} | ${tf} `
+                        }
+                    }else{
+                        if(tf){
+                            title = `| ${tf} `
+                        }else{
                             title = dataset?._id
                         }
                     }
