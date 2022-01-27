@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react'
+import React, { useState, useEffect } from 'react'
 import { SpinnerCircle } from '../../../../components/ui-components/ui_components'
 
 import NormData from '../../HT-NormalizedData/normData'
@@ -11,9 +11,7 @@ import GetTSS from '../../webServices/tss/tss_dataset'
 import GetTTS from '../../webServices/tts/tts_dataset'
 import Summary from './summary'
 import Style from './tabs.module.css'
-
-
-const AuthorData = lazy(()=> import('../../HT-Authors/authors'))
+import AuthorData from '../../HT-Authors/authors'
 
 
 export default function Tabs({ id_dataset, data }) {
@@ -105,16 +103,7 @@ export default function Tabs({ id_dataset, data }) {
                     _openTab === 1
                         ? <div className={Style.tabcontent}>
                             <h3>Author Report</h3>
-                            <Suspense
-                                fallback={
-                                    <div>
-                                        Looking for dataset autor data, please wait this may take some time
-                                        <SpinnerCircle />
-                                    </div>
-                                }
-                            >
                                 <AuthorData id_dataset={id_dataset} data={_autorData} />
-                            </Suspense>
                         </div>
                         : null
                 }

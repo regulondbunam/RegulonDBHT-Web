@@ -1,58 +1,59 @@
-import React from 'react'
-import { CsvToHtmlTable } from 'react-csv-to-table';
+import React, { useEffect, useState } from 'react'
+import { SpinnerCircle } from '../../../components/ui-components/ui_components';
+import { AuthorTable } from './table';
 
-export default function Authors({ data }) {
+export default function Authors({ data, id_dataset }) {
     //console.log(data)
+    const [_tableData, set_tableData] = useState();
+
+    useEffect(() => {
+        if (!_tableData) {
+            try {
+                //REACT_APP_PROSSES_SERVICE
+                fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/authorData/jsonTable`)
+                .then(response => response.json())
+                .then(data => set_tableData(data))
+                .catch(error => {
+                    console.error(error)
+                    set_tableData({error: error})
+                });
+            } catch (error) {
+                console.error(error)
+                set_tableData({error: error})
+            }
+            
+        }
+    }, [_tableData, id_dataset]);
+
+    console.log(_tableData);
+
     const authorData = data[0]?.authorsData
     if (!authorData) {
         return null
     }
     try {
-        let dt = getComments(authorData)
-        let coment = dt.comment
-        let document = dt.document
         let link = saveStaticDataToFile(authorData, data[0]?._id)
         return (
             <div>
                 <button
                     onClick={() => { window.location = link }}
                 >Download File</button>
-                <div style={{ overflow: "auto", height: "500px" }} >
-                    <p dangerouslySetInnerHTML={{ __html: coment }}></p>
-                    <CsvToHtmlTable
-                        data={document}
-                        tableClassName="table_content"
-                        csvDelimiter=","
-                    />
-                </div>
+                {
+                    _tableData ?
+                    <div>
+                        <p>
+                            {_tableData?.comments}
+                        </p>
+                        <AuthorTable tableData={_tableData} />
+                    </div>
+                    :<SpinnerCircle />
+                }
             </div>
         )
     } catch (error) {
         return null
     }
 
-}
-
-function getComments(authorData) {
-    let comment = "" 
-    let document = authorData
-    let start = authorData.indexOf("#")
-    let flag = 0
-    while (start !== -1) {
-        let end = document.indexOf("\n")
-        if (start > end) {
-            console.warn("error format document author")
-            document = document.replace("\n","")
-        } else {
-            comment += "<br/>"+document.substring(start, end)
-            document = document.substring(end, document.length)
-        }
-        start = document.indexOf("#")
-        if (flag > 5) { break; }
-        flag++
-    }
-
-    return { comment: comment, document: document }
 }
 
 function saveStaticDataToFile(str, name) {
