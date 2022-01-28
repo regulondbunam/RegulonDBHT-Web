@@ -14,10 +14,8 @@
 }
 .scrollThumb{
     position: relative;
-    top: 0px;
     background-color: #3d779b;
     border-radius: 50px 50px 50px 50px;
-    height: 30px;
     width: 10px;
 }
 

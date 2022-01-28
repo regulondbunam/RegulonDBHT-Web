@@ -42,20 +42,34 @@ function Table({ columns, data, id_dataset }) {
         useGlobalFilter,
         useResizeColumns
     )
+    
+    const itemSize = 30
+    const itemScroll = 500/preGlobalFilteredRows.length
+    const itemsView = 500/itemSize
+    const thumbHeight = itemsView * itemScroll
+    let listRef = React.createRef();
 
     const RenderRow = React.useCallback(
         ({ index, style }) => {
             const row = rows[index]
             prepareRow(row)
-            //console.log(row)
+            let max = 0;
+            //let min = 0
             return (
                 <div
                     {...row.getRowProps({
                         style,
                     })}
-                    className="tr"
                 >
                     {row.cells.map(cell => {
+                        if(max<cell.row.index){
+                            max = cell.row.index
+                            let thumb = document.getElementById("scrollThumb")
+                            if (thumb) {
+                                thumb.style.top = `${itemScroll*max}px`
+                            }
+                        }
+                       
                         return (
                             <div {...cell.getCellProps()} className="td">
                                 {cell.render('Cell')}
@@ -65,7 +79,7 @@ function Table({ columns, data, id_dataset }) {
                 </div>
             )
         },
-        [prepareRow, rows]
+        [prepareRow, rows, itemScroll]
     )
 
 
@@ -108,17 +122,23 @@ function Table({ columns, data, id_dataset }) {
                             <FixedSizeList
                                 height={500}
                                 itemCount={rows.length}
-                                itemSize={40}
+                                itemSize={itemSize}
                                 width={totalColumnsWidth + scrollBarSize}
                                 className={Style.bodyTableAuthor}
+                                ref={listRef}
                             >
                                 {RenderRow}
                             </FixedSizeList>
                         </div>
                     </div>
                 </TableStyles>
-                <div className={Style.scrollIndicator} >
-                    <div className={Style.scrollThumb} ></div>
+                <div className={Style.scrollIndicator} id="scrollIndicator_author" onClick={e=>{
+                    let ind = e.target
+                    ind = ind.getBoundingClientRect()
+                    let sel = (e.clientY-ind.top)*preGlobalFilteredRows.length/500
+                    listRef.current.scrollToItem(sel)
+                }} >
+                    <div className={Style.scrollThumb} id='scrollThumb' style={{height: `${thumbHeight}px`}} ></div>
                 </div>
             </div>
 
