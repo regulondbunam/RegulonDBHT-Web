@@ -1,16 +1,20 @@
 import styled from 'styled-components'
 
 export const TableStyles = styled.div`
-  padding: 1rem;
+
+  overflow: auto;
+
 
   .table {
     display: inline-block;
     border-spacing: 0;
 
+    
+
     .tr {
         :hover{
             color: white;
-            background-color: #72a7c7;
+            background-color: #cadce7;
         }
       :last-child {
         .td {
@@ -22,7 +26,8 @@ export const TableStyles = styled.div`
     .th{
       font-size: 14px;
       text-align: center;
-      color: #666666;
+      background-color: #32617d;
+      color: #FFFFFF;
       font-weight: bold;
       border-bottom: 2px solid #3d779b;
       padding: 2px;
@@ -35,10 +40,8 @@ export const TableStyles = styled.div`
             right: 0px;
             top: 0;
             transform: translateX(50%);
-            z-index: 1;
             ${'' /* prevents from scrolling while dragging on touch devices */}
             touch-action:none;
-    
             &.isResizing {
               background: #c93a1d;
             }

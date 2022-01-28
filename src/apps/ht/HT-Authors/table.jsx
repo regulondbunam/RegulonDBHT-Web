@@ -83,38 +83,45 @@ function Table({ columns, data, id_dataset }) {
                     setGlobalFilter={setGlobalFilter}
                 />
             </div>
-            <TableStyles>
-                <div {...getTableProps()} className="table">
-                    <div>
-                        {headerGroups.map(headerGroup => (
-                            <div {...headerGroup.getHeaderGroupProps()} className="tr">
-                                {headerGroup.headers.map(column => (
-                                    <div {...column.getHeaderProps()} className="th">
-                                        {column.render('Header')}
-                                        <div
-                                            {...column.getResizerProps()}
-                                            className={`resizer ${column.isResizing ? 'isResizing' : ''
-                                                }`}
-                                        />
-                                    </div>
+            <div style={{ display: "grid", gridTemplateColumns: "auto 10px"}} >
+                <TableStyles className={Style.window_table}>
+                    <div {...getTableProps()} className="table">
+                        <div>
+                            {headerGroups.map(headerGroup => (
+                                <div {...headerGroup.getHeaderGroupProps()} className="tr">
+                                    {headerGroup.headers.map(column => (
+                                        <div {...column.getHeaderProps()} className="th">
+                                            {column.render('Header')}
+                                            <div
+                                                {...column.getResizerProps()}
+                                                className={`resizer ${column.isResizing ? 'isResizing' : ''
+                                                    }`}
+                                            />
+                                        </div>
 
-                                ))}
-                            </div>
-                        ))}
-                    </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
 
-                    <div {...getTableBodyProps()}>
-                        <FixedSizeList
-                            height={500}
-                            itemCount={rows.length}
-                            itemSize={40}
-                            width={totalColumnsWidth + scrollBarSize}
-                        >
-                            {RenderRow}
-                        </FixedSizeList>
+                        <div {...getTableBodyProps()} >
+                            <FixedSizeList
+                                height={500}
+                                itemCount={rows.length}
+                                itemSize={40}
+                                width={totalColumnsWidth + scrollBarSize}
+                                className={Style.bodyTableAuthor}
+                            >
+                                {RenderRow}
+                            </FixedSizeList>
+                        </div>
                     </div>
+                </TableStyles>
+                <div className={Style.scrollIndicator} >
+                    <div className={Style.scrollThumb} ></div>
                 </div>
-            </TableStyles>
+            </div>
+
         </div>
 
     )
@@ -135,7 +142,7 @@ export function AuthorTable({ tableData, id_dataset }) {
                 <p style={{ padding: "0 10px 5px 15px" }} > {tableData?.comments}</p>
             </div>
             <div className={Style.author_row} >
-                <Table columns={tableData.columns} data={tableData.data} id_dataset={id_dataset}/>
+                <Table columns={tableData.columns} data={tableData.data} id_dataset={id_dataset} />
             </div >
             <br />
         </div>
