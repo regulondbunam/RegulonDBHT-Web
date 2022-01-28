@@ -13,15 +13,19 @@ export default function GlobalFilter({
 
     return (
         <span>
-            Search in {count} elements:
-            <br />
+            <div style={{display: "grid", gridTemplateColumns: "21px auto"}} >
+            <i className='bx bx-search-alt' style={{textAlign: "center",fontSize: "21px"}}></i>
             <input
                 value={value || ""}
+                placeholder={`Search in ${count} elements:`}
+                style={{width: "100%"}}
                 onChange={e => {
                     setValue(e.target.value);
                     onChange(e.target.value);
                 }}
             />
+            </div>
+            
         </span>
     )
 }

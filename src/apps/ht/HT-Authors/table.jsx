@@ -4,12 +4,13 @@ import { useTable, useBlockLayout, useGlobalFilter, useResizeColumns } from 'rea
 import { FixedSizeList } from 'react-window'
 import scrollbarWidth from './scrollbarWidth'
 import { TableStyles } from "./styledComponents"
+import Style from './table.module.css'
 
 function Table({ columns, data }) {
     // Use the state and functions returned from useTable to build your UI
     const defaultColumn = React.useMemo(
         () => ({
-            minWidth: 100,
+            minWidth: 10,
             width: 150,
             maxWidth: 1000,
         }),
@@ -44,20 +45,20 @@ function Table({ columns, data }) {
             prepareRow(row)
             //console.log(row)
             return (
-                    <div
-                        {...row.getRowProps({
-                            style,
-                        })}
-                        className="tr"
-                    >
-                        {row.cells.map(cell => {
-                            return (
-                                <div {...cell.getCellProps()} className="td">
-                                    {cell.render('Cell')}
-                                </div>
-                            )
-                        })}
-                    </div>
+                <div
+                    {...row.getRowProps({
+                        style,
+                    })}
+                    className="tr"
+                >
+                    {row.cells.map(cell => {
+                        return (
+                            <div {...cell.getCellProps()} className="td">
+                                {cell.render('Cell')}
+                            </div>
+                        )
+                    })}
+                </div>
             )
         },
         [prepareRow, rows]
@@ -66,7 +67,7 @@ function Table({ columns, data }) {
     // Render the UI for your table
     return (
         <div>
-            <div >
+            <div className={Style.author_row}  >
                 <GlobalFilter
                     preGlobalFilteredRows={preGlobalFilteredRows}
                     globalFilter={state.globalFilter}
@@ -111,18 +112,24 @@ function Table({ columns, data }) {
 }
 
 export function AuthorTable({ tableData }) {
-    console.log(tableData?.comments)
+    //console.log(tableData?.comments)
+    if (!tableData?.data) {
+        return <p>Error process author data</p>
+    }
     return (
-       <div>
-           {
-               tableData?.data
-               ?<div>
-                   <p></p>
-                   <Table columns={tableData.columns} data={tableData.data} />
-               </div>
-               :<p>Error prosess author data</p>
-           }
-            
-       </div>
+        <div>
+            <div className={Style.author_row} >
+                <h3 style={{ margin: "0", paddingLeft: "10px" }}  >Author Report</h3>
+            </div>
+            <div className={Style.author_row} >
+                <h4 style={{ margin: "0", paddingLeft: "10px" }}  >author's comments:</h4>
+                <p style={{ padding: "0 10px 5px 15px" }} > {tableData?.comments}</p>
+            </div>
+            <div className={Style.author_row} >
+                <Table columns={tableData.columns} data={tableData.data} />
+            </div >
+            <br />
+        </div>
+
     )
 }

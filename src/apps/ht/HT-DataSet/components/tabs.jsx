@@ -102,7 +102,6 @@ export default function Tabs({ id_dataset, data }) {
                 {
                     _openTab === 1
                         ? <div className={Style.tabcontent}>
-                            <h3>Author Report</h3>
                                 <AuthorData id_dataset={id_dataset} data={_autorData} />
                         </div>
                         : null
