@@ -10,6 +10,9 @@ import { ColumnSelector } from './tableComponents/ColumnSelector'
 
 function Table({ columns, data, id_dataset }) {
     // Use the state and functions returned from useTable to build your UI
+    // eslint-disable-next-line no-unused-vars
+    const [_nRows, set_nRows] = React.useState(20);
+
     const defaultColumn = React.useMemo(
         () => ({
             minWidth: 10,
@@ -42,19 +45,20 @@ function Table({ columns, data, id_dataset }) {
         useGlobalFilter,
         useResizeColumns
     )
-    
+
     const itemSize = 30
-    const itemScroll = 500/preGlobalFilteredRows.length
-    const itemsView = 500/itemSize
-    const thumbHeight = itemsView * itemScroll
+    const heightTable = _nRows * itemSize
+    const itemScroll = heightTable / rows.length
+    const itemsView = heightTable / itemSize
+    let thumbHeight = itemsView * itemScroll
+    if (thumbHeight > heightTable) thumbHeight = 0
     let listRef = React.createRef();
 
     const RenderRow = React.useCallback(
         ({ index, style }) => {
+
             const row = rows[index]
             prepareRow(row)
-            let max = 0;
-            //let min = 0
             return (
                 <div
                     {...row.getRowProps({
@@ -62,14 +66,6 @@ function Table({ columns, data, id_dataset }) {
                     })}
                 >
                     {row.cells.map(cell => {
-                        if(max<cell.row.index){
-                            max = cell.row.index
-                            let thumb = document.getElementById("scrollThumb")
-                            if (thumb) {
-                                thumb.style.top = `${itemScroll*max}px`
-                            }
-                        }
-                       
                         return (
                             <div {...cell.getCellProps()} className="td">
                                 {cell.render('Cell')}
@@ -79,10 +75,8 @@ function Table({ columns, data, id_dataset }) {
                 </div>
             )
         },
-        [prepareRow, rows, itemScroll]
+        [prepareRow, rows]
     )
-
-
 
     // Render the UI for your table
     return (
@@ -97,7 +91,7 @@ function Table({ columns, data, id_dataset }) {
                     setGlobalFilter={setGlobalFilter}
                 />
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "auto 10px"}} >
+            <div style={{ display: "grid", gridTemplateColumns: "auto 10px" }} >
                 <TableStyles className={Style.window_table}>
                     <div {...getTableProps()} className="table">
                         <div>
@@ -120,25 +114,44 @@ function Table({ columns, data, id_dataset }) {
 
                         <div {...getTableBodyProps()} >
                             <FixedSizeList
-                                height={500}
+                                height={heightTable}
                                 itemCount={rows.length}
                                 itemSize={itemSize}
                                 width={totalColumnsWidth + scrollBarSize}
                                 className={Style.bodyTableAuthor}
                                 ref={listRef}
+                                onItemsRendered={({
+                                    overscanStartIndex,
+                                    overscanStopIndex,
+                                    visibleStartIndex,
+                                    visibleStopIndex
+                                }) => {
+                                    let thumb = document.getElementById("scrollThumb")
+                                    if (thumb) {
+                                        if ((itemScroll * visibleStartIndex) > heightTable) {
+                                            thumb.style.top = `${heightTable}px`
+                                        } else {
+                                            thumb.style.top = `${itemScroll * visibleStartIndex}px`
+                                        }
+
+                                    }
+                                }}
                             >
                                 {RenderRow}
                             </FixedSizeList>
                         </div>
                     </div>
                 </TableStyles>
-                <div className={Style.scrollIndicator} id="scrollIndicator_author" onClick={e=>{
-                    let ind = e.target
-                    ind = ind.getBoundingClientRect()
-                    let sel = (e.clientY-ind.top)*preGlobalFilteredRows.length/500
-                    listRef.current.scrollToItem(sel)
-                }} >
-                    <div className={Style.scrollThumb} id='scrollThumb' style={{height: `${thumbHeight}px`}} ></div>
+                <div className={Style.scrollIndicator} id="scrollIndicator_author"
+                    style={{ height: `${heightTable}px` }}
+                    onClick={e => {
+                        let ind = e.target
+                        ind = ind.getBoundingClientRect()
+                        let sel = (e.clientY - ind.top) * (rows.length/heightTable)
+                        console.log(sel);
+                        listRef.current.scrollToItem(sel)
+                    }} >
+                    <div className={Style.scrollThumb} id='scrollThumb' style={{ height: `${thumbHeight}px` }} ></div>
                 </div>
             </div>
 
