@@ -107,6 +107,7 @@ export default class Filter extends Component {
                 f_tfs = false
                 break;
             case "TFBINDING":
+                // eslint-disable-next-line no-unused-vars
                 f_nlpgC = false
                 break;
             case "TSS":

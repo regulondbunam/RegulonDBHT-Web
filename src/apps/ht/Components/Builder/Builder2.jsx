@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Autocomplete from "../Autocomplete/autocomplete"
@@ -54,6 +55,7 @@ const META_GC = [
     { "value": "Aeration Speed", "query": "growthConditions.aerationSpeed" }
 ]
 
+// eslint-disable-next-line no-unused-vars
 const META_NLPG = [
     { "value": "NLPG ID", "query": "_id" },
     //Organism

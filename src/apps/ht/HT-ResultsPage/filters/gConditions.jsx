@@ -20,7 +20,7 @@ otherTerms: [String]
 
 export default function GConditions({ data, filterData, set_filterData, selectDatasets, set_selectedDataset }) {
     let gConditions = filterData.gConditions
-    let groupGC = [] 
+    //let groupGC = [] 
     let _gConditions = {}
     for (let dtset of data) {
         let gcs = dtset.growthConditions
