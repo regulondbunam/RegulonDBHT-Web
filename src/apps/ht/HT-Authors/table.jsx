@@ -121,10 +121,7 @@ function Table({ columns, data, id_dataset }) {
                                 className={Style.bodyTableAuthor}
                                 ref={listRef}
                                 onItemsRendered={({
-                                    overscanStartIndex,
-                                    overscanStopIndex,
                                     visibleStartIndex,
-                                    visibleStopIndex
                                 }) => {
                                     let thumb = document.getElementById("scrollThumb")
                                     if (thumb) {
