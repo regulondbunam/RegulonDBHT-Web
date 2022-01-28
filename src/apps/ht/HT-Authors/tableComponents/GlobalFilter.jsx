@@ -14,11 +14,18 @@ export default function GlobalFilter({
     return (
         <span>
             <div style={{display: "grid", gridTemplateColumns: "21px auto"}} >
-            <i className='bx bx-search-alt' style={{textAlign: "center",fontSize: "21px"}}></i>
+            <i className='bx bx-search-alt' 
+                style={{textAlign: "center",fontSize: "21px"}}
+                onClick={()=>{
+                    let ipt = document.getElementById("input_global_search_authorTable");
+                    if(ipt)ipt.focus();
+                }}
+            />
             <input
                 value={value || ""}
-                placeholder={`Search in ${count} elements:`}
-                style={{width: "100%"}}
+                id="input_global_search_authorTable"
+                placeholder={`Global search in ${count} elements:`}
+                style={{width: "100%", border: "0px"}}
                 onChange={e => {
                     setValue(e.target.value);
                     onChange(e.target.value);

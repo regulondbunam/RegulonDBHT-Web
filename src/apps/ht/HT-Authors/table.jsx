@@ -5,8 +5,10 @@ import { FixedSizeList } from 'react-window'
 import scrollbarWidth from './scrollbarWidth'
 import { TableStyles } from "./styledComponents"
 import Style from './table.module.css'
+import { ColumnSelector } from './tableComponents/ColumnSelector'
 
-function Table({ columns, data }) {
+
+function Table({ columns, data, id_dataset }) {
     // Use the state and functions returned from useTable to build your UI
     const defaultColumn = React.useMemo(
         () => ({
@@ -27,7 +29,9 @@ function Table({ columns, data }) {
         state,
         preGlobalFilteredRows,
         prepareRow,
-        setGlobalFilter
+        setGlobalFilter,
+        allColumns,
+        getToggleHideAllColumnsProps,
     } = useTable(
         {
             columns,
@@ -64,9 +68,14 @@ function Table({ columns, data }) {
         [prepareRow, rows]
     )
 
+
+
     // Render the UI for your table
     return (
         <div>
+            <div className={Style.author_row}  >
+                <ColumnSelector getToggleHideAllColumnsProps={getToggleHideAllColumnsProps} allColumns={allColumns} id_dataset={id_dataset} />
+            </div>
             <div className={Style.author_row}  >
                 <GlobalFilter
                     preGlobalFilteredRows={preGlobalFilteredRows}
@@ -111,7 +120,7 @@ function Table({ columns, data }) {
     )
 }
 
-export function AuthorTable({ tableData }) {
+export function AuthorTable({ tableData, id_dataset }) {
     //console.log(tableData?.comments)
     if (!tableData?.data) {
         return <p>Error process author data</p>
@@ -126,7 +135,7 @@ export function AuthorTable({ tableData }) {
                 <p style={{ padding: "0 10px 5px 15px" }} > {tableData?.comments}</p>
             </div>
             <div className={Style.author_row} >
-                <Table columns={tableData.columns} data={tableData.data} />
+                <Table columns={tableData.columns} data={tableData.data} id_dataset={id_dataset}/>
             </div >
             <br />
         </div>

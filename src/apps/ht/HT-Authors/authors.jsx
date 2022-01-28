@@ -33,11 +33,9 @@ export default function Authors({ id_dataset }) {
     try {
         return (
             <div>
-
-                <a href={`${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/authorData/cvs`}>Download File</a>
                 {
                     _tableData 
-                    ?<AuthorTable tableData={_tableData} />
+                    ?<AuthorTable tableData={_tableData} id_dataset={id_dataset} />
                     : <SpinnerCircle />
                 }
             </div>
