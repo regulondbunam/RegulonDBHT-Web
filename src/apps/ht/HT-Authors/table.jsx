@@ -1,6 +1,6 @@
 import React from 'react'
 import GlobalFilter from './tableComponents/GlobalFilter'
-import { useTable, useBlockLayout, useGlobalFilter, useResizeColumns } from 'react-table'
+import { useTable, useBlockLayout, useGlobalFilter, useResizeColumns, useSortBy } from 'react-table'
 import { FixedSizeList } from 'react-window'
 import scrollbarWidth from './scrollbarWidth'
 import { TableStyles } from "./styledComponents"
@@ -41,8 +41,10 @@ function Table({ columns, data, id_dataset }) {
             data,
             defaultColumn,
         },
+
         useBlockLayout,
         useGlobalFilter,
+        useSortBy,
         useResizeColumns
     )
 
@@ -98,13 +100,20 @@ function Table({ columns, data, id_dataset }) {
                             {headerGroups.map(headerGroup => (
                                 <div {...headerGroup.getHeaderGroupProps()} className="tr">
                                     {headerGroup.headers.map(column => (
-                                        <div {...column.getHeaderProps()} className="th">
+                                        <div {...column.getHeaderProps(column.getSortByToggleProps())} className="th" >
                                             {column.render('Header')}
                                             <div
                                                 {...column.getResizerProps()}
                                                 className={`resizer ${column.isResizing ? 'isResizing' : ''
                                                     }`}
                                             />
+                                            <div>
+                                                {column.isSorted
+                                                    ? column.isSortedDesc
+                                                        ? <i className='bx bx-sort-a-z' />
+                                                        : <i className='bx bx-sort-z-a' />
+                                                    : <i className='bx bx-sort-alt-2'/>}
+                                            </div>
                                         </div>
 
                                     ))}
@@ -144,7 +153,7 @@ function Table({ columns, data, id_dataset }) {
                     onClick={e => {
                         let ind = e.target
                         ind = ind.getBoundingClientRect()
-                        let sel = (e.clientY - ind.top) * (rows.length/heightTable)
+                        let sel = (e.clientY - ind.top) * (rows.length / heightTable)
                         console.log(sel);
                         listRef.current.scrollToItem(sel)
                     }} >
