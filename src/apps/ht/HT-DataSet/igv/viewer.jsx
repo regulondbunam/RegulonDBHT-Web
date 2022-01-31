@@ -19,8 +19,8 @@ export function Viewer({ id_dataset, tf, datasetType }) {
 
     switch (datasetType) {
         case "TFBINDING":
-            _peaksFile = `/media/raw/ht_collections_web_${version}/BS/${id_dataset}_peaks.gff3`
-            _sitesFile = `/media/raw/ht_collections_web_${version}/BS/${id_dataset}_sites.gff3`
+            _peaksFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/RHTECOLIBSD00411/peaksData/gff3`
+            _sitesFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/sitesData/gff3`
             if (tf !== null) {
                 _tfFile = `/media/raw/ht_collections_web_v3/regulondb/TFFiles/${tf}.gff3`
             }
