@@ -121,7 +121,7 @@ export default class Filter extends Component {
             default:
                 break;
         }
-        console.log(datasetType)
+        //console.log(datasetType)
         return (
             <div>
                 <p className="p_accent"> Filters </p>

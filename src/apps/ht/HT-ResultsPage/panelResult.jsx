@@ -6,7 +6,7 @@ export default function PanelResult({ ds, match_data }) {
     const growthCondition = ds?.growthConditions
     const tf = ds?.objectTested
     const eS = ds?.sourceSerie?.strategy
-    console.log(ds)
+    //console.log(ds)
     const [_display, set_display] = useState(false)
     let gc = useMemo(() => {
         let inf = []
