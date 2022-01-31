@@ -18,7 +18,6 @@ export default class PanelHT extends React.Component {
 
     render() {
         const { panel } = this.props
-        console.log(panel);
         if (!panel.enable) {
             return (
                 <div className={Style.dPanel}>

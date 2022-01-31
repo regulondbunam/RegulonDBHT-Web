@@ -35,7 +35,6 @@ export function confGenome({
       }
     )    
   }
-  console.log(tfFile)
   if (tfFile) {
     conf.tracks.push(
       {

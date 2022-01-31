@@ -76,7 +76,6 @@ export default function DatasetInfo({ id_dataset }) {
 
 function Body({ data }) {
     const section = conf?.sections
-    console.log(data)
     //const version = data?.releaseDataControl?.version
 
     useEffect(() => {
