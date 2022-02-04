@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 
 export default function PanelResult({ ds, match_data }) {
     const growthCondition = ds?.growthConditions
-    const tf = ds?.objectTested
+    const tf = ds?.objectsTested.map((tf)=>{
+        return tf?.name
+    }).join(" ")
     const eS = ds?.sourceSerie?.strategy
-    //console.log(ds)
+    console.log(tf)
     const [_display, set_display] = useState(false)
     let gc = useMemo(() => {
         let inf = []
@@ -32,7 +34,7 @@ export default function PanelResult({ ds, match_data }) {
 
     let title = ds?.sample?.title
     if(!title ||  title === "obtener de GEO"){
-        title = ds?.objectTested?.name
+        title = tf
         if(!title){
             title = ds?._id
         }

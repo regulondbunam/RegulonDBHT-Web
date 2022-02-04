@@ -2,21 +2,18 @@ import React from 'react'
 import Style from "../filter.module.css"
 
 export default function TFS({ data, filterData, set_filterData, selectDatasets, set_selectedDataset }) {
-    //objectTested.name
     let tfs = filterData.tfs
     let _tfs = {}
-    for (let dtset of data) {
-        let tfName = dtset.objectTested.name
-        if (tfName) {
-        if (_tfs[tfName]) {
-            _tfs[tfName].push(dtset._id)
-        } else {
-            _tfs[tfName] = [dtset._id]
+    for(let dataset of data){
+        let _id = dataset._id
+        for(let obj of dataset.objectsTested){
+            if (_tfs[obj?.name]) {
+                _tfs[obj?.name].push(_id)
+            } else {
+                _tfs[obj?.name] = [_id]
+            }
         }
-        }
-        
     }
-    console.log(_tfs)
     return (
         <div className={Style.filedContent} >
             <table className="table_content">

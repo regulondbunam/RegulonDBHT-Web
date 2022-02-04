@@ -4,13 +4,14 @@ import Style from "../filter.module.css"
 export default function Authors({ data, filterData, set_filterData, selectDatasets, set_selectedDataset }) {
     let authorsSelect = filterData.authors
     let _authors = {}
-    for (let dtset of data) {
-        let authors = dtset?.publication?.authors
-        for (let author of authors) {
-            if (_authors[author]) {
-                _authors[author].push(dtset._id)
-            } else {
-                _authors[author] = [dtset._id]
+    for (let dataset of data) {
+        for( let publication of dataset?.publications){
+            for(let author of publication.authors){
+                if (_authors[author]) {
+                    _authors[author].push(dataset._id)
+                } else {
+                    _authors[author] = [dataset._id]
+                }
             }
         }
     }

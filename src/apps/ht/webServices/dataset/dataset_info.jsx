@@ -1,44 +1,97 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from "@apollo/client";
-import { query } from './buildQuery';
 
-const queryI = gql`
-{
-  dataset: __type(name: "Dataset") {
-    fields {
-      name
-    }
-  }
-}
+function query(id_dataset) {
+    return gql`
+        {
+            getDatasetsFromSearch(advancedSearch: "${id_dataset}[_id]") {
+              _id
+                publications {
+                  pmid
+                  doi
+                  authors
+                  title
+                  date
+                  pmcid
+                }
+                fivePrimeEnrichment
+                objectsTested {
+                  _id
+                  name
+                  synonyms
+                  genes {
+                    _id
+                    name
+                  }
+                  note
+                  activeConformations
+                  externalCrossReferences {
+                    externalCrossReferenceId
+                    externalCrossReferenceName
+                    objectId
+                    url
+                  }
+                }
+                sourceSerie {
+                  series{
+                    sourceId
+                    sourceName
+                  }
+                  platform{
+                    _id
+                    source
+                    title
+                  }
+                  title
+                  strategy
+                  method
+                }
+                sample {
+                  experimentId
+                  controlId
+                  title
+                }
+                linkedDataset {
+                  controlId
+                  experimentId
+                  datasetType
+                }
+                referenceGenome
+                datasetType
+                temporalId
+                growthConditions {
+                  organism
+                  geneticBackground
+                  medium
+                  mediumSupplements
+                  aeration
+                  temperature
+                  ph
+                  pressure
+                  opticalDensity
+                  growthPhase
+                  growthRate
+                  vesselType
+                  aerationSpeed
+                }
+                releaseDataControl {
+                  date
+                  version
+                }
+              }
+        }
     `
+}
+
+
 
 const GetInfoDataset = ({
   id_dataset = "",
   status = () => { },
   resoultsData = () => { },
 }) => {
-  const { data, error } = useQuery(queryI)
-  if (error) {
-    console.error(error)
-  }
-  if (data) {
-    return <InfoDataset id_dataset={id_dataset} status={(state)=>{status(state)}} resoultsData={(data)=>{resoultsData(data)}} fields={data?.dataset?.fields}  />
-  }
-  return (<></>);
-}
-
-const InfoDataset = ({
-  id_dataset = "",
-  status = () => { },
-  resoultsData = () => { },
-  fields = []
-}) => {
-  fields = fields.map(f =>{
-    return f.name
-  })
-  console.log(fields)
-  const { data, loading, error } = useQuery(query(id_dataset,fields))
+  const { data, loading, error } = useQuery(query(id_dataset))
   useEffect(() => {
     if (loading) {
       status('loading')

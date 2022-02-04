@@ -12,10 +12,10 @@ import { gql } from "@apollo/client";
 function query(ht_query) {
   try {
     return gql`
-  {
+    {
       getDatasetsFromSearch(advancedSearch: "${ht_query}") {
         _id
-          publication {
+          publications {
             pmid
             doi
             authors
@@ -24,7 +24,7 @@ function query(ht_query) {
             pmcid
           }
           fivePrimeEnrichment
-          objectTested {
+          objectsTested {
             _id
             name
             synonyms
@@ -42,11 +42,16 @@ function query(ht_query) {
             }
           }
           sourceSerie {
-            sourceId
-            sourceName
+            series{
+              sourceId
+              sourceName
+            }
+            platform{
+              _id
+              source
+              title
+            }
             title
-            platformId
-            platformTitle
             strategy
             method
           }
