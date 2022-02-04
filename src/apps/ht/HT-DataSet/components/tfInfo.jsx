@@ -2,8 +2,7 @@ import React from 'react'
 import ExternalRef from './externalRef'
 import Note from './note'
 
-export default function TfInfo({ data }) {
-    const objTest = data?.objectTested
+export default function TfInfo({ objTest }) {
     let synonyms = objTest?.synonyms
     let genes = objTest?.genes
     let externalCrossReferences = objTest?.externalCrossReferences

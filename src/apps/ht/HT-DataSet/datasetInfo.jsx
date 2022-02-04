@@ -90,14 +90,9 @@ function Body({ data }) {
             RELATED.dispatchEvent(REL_REACTION);
         }
     }, [data])
-
+    console.log(data);
     return (
         <div>
-            {
-                data?._id
-                    ? null
-                    : <h2>Error on ID</h2>
-            }
             {
                 data?._id
                     ? <div>
@@ -110,15 +105,19 @@ function Body({ data }) {
                     : null
             }
             {
-                data?.objectTested?._id || data.objectTested?.name
-                    ? <div>
-                        <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_tf?.title }} />
-                        <p dangerouslySetInnerHTML={{ __html: section?.dataset_tf?.description }} />
-                        <div style={{ marginLeft: "5%" }}>
-                            <TfInfo data={data} />
-                        </div>
+                data?.objectsTested.length > 1 
+                ?<h2>TRANSCRIPTIONS FACTOR</h2>
+                :<h2 dangerouslySetInnerHTML={{ __html: section?.dataset_tf?.title }} />
+            }
+            {
+                data?.objectsTested.map((objTest,ind)=>{
+                    return <div key={`objTest_${ind}`}>
+                    
+                    <div style={{ marginLeft: "5%" }}>
+                        <TfInfo objTest={objTest} />
                     </div>
-                    : null
+                </div>
+                })
             }
             {
                 data?.growthConditions &&
