@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react'
 
 export default function Tabs({ id_dataset, data }) {
     const [_openTab, set_openTab] = useState(0)
-    const [_autorData, set_autorData] = useState()
-    const [_datasetData, set_datasetData] = useState()
+
 
     useEffect(() => {
         if((_datasetData && _autorData)) {

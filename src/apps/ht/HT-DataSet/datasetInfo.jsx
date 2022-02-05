@@ -9,6 +9,7 @@ import CONF from '../config/ht_conf_enus.json'
 import Tabs from './components/tabs'
 import Related from '../relatedTool/related'
 import NLPGC from '../HT-NLPGrowthCondition/nlpgc'
+import ObjectsTested from './components/objectsTested'
 
 const conf = CONF?.pages?.dataset_page
 
@@ -104,21 +105,7 @@ function Body({ data }) {
                     </div>
                     : null
             }
-            {
-                data?.objectsTested.length > 1 
-                ?<h2>TRANSCRIPTIONS FACTOR</h2>
-                :<h2 dangerouslySetInnerHTML={{ __html: section?.dataset_tf?.title }} />
-            }
-            {
-                data?.objectsTested.map((objTest,ind)=>{
-                    return <div key={`objTest_${ind}`}>
-                    
-                    <div style={{ marginLeft: "5%" }}>
-                        <TfInfo objTest={objTest} />
-                    </div>
-                </div>
-                })
-            }
+            <ObjectsTested objectsTested={data?.objectsTested} />
             {
                 data?.growthConditions &&
                 <div><h2 dangerouslySetInnerHTML={{ __html: section?.dataset_growthc?.title }} />
