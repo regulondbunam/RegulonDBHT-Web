@@ -16,12 +16,12 @@
 .cellInfoB{
     text-align: center;
     font-size: 14px;
-    -webkit-box-shadow: inset 0px 3px 7px 0px #3d779b; 
-    box-shadow: inset 0px 3px 7px 0px #3d779b;
+    background-color: #3D779B;
 }
 .rowInfo{
-    -webkit-box-shadow: inset 0px -3px 7px 0px #3d779b; 
-    box-shadow: inset 0px -3px 7px 0px #3d779b;
+    color: white;
+    -webkit-box-shadow: inset 0px 0px 11px 2px #3d779b; 
+    box-shadow: inset 0px 0px 11px 2px #3d779b;
 }
 
 .cell{

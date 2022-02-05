@@ -74,7 +74,6 @@ class Table extends Component {
                 <tbody>
                     {
                         data.map((d, i) => {
-                            console.log(d._info);
                             const objTest = d._info
                             let isInfo = _info[d._id]
                             return (
@@ -95,7 +94,12 @@ class Table extends Component {
                                                 console.log(n);
                                                 this.setState({ _info: n })
                                             }} >
-                                            <i className='bx bxs-chevron-down' />
+                                                {
+                                                    isInfo
+                                                    ?<i style={{color: "#FFFFFF"}} className='bx bxs-chevron-up' />
+                                                    :<i className='bx bxs-chevron-down' />
+                                                }
+                                            
                                         </td>
                                     </tr>
                                     {

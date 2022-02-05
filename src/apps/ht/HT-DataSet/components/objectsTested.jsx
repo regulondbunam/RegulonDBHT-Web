@@ -15,7 +15,15 @@ export default function ObjectsTested({
           ? <h2>TRANSCRIPTIONS FACTOR</h2>
           : <h2>TRANSCRIPTION FACTOR</h2>
       }
-      {
+      <div style={{marginLeft: "5%"}} >
+      <SummaryObj objectsTested={objectsTested} />
+      </div>
+    </div>
+  )
+}
+
+/**
+ * {
         objectsTested.length > 1
         && <div>
           <select name="select" onChange={(e)=>{
@@ -26,9 +34,4 @@ export default function ObjectsTested({
           </select>
         </div>
       }
-
- <SummaryObj objectsTested={objectsTested} />
-
-    </div>
-  )
-}
+ */
