@@ -5,7 +5,7 @@ export default function SourceSerie({ sourceSerie }) {
     let informations = useMemo(() => {
         let inf = []
 
-        sourceSerie?.sourceId && inf.push({ title: "Serie id", data: sourceSerie?.sourceId });
+        sourceSerie?.series.length > 0 && inf.push({ title: "Serie id", data: sourceSerie?.series.map(s => { return s.sourceId }).join(" ") });
         sourceSerie?.title && inf.push({ title: "Title", data: sourceSerie?.title });
         sourceSerie?.name && inf.push({ title: "Name", data: sourceSerie?.sourceName });
 
@@ -30,13 +30,13 @@ export default function SourceSerie({ sourceSerie }) {
                                                 </p>
                                             </td>
                                             {
-                                                sourceSerie?.platformId &&
+                                                sourceSerie?.platform?._id &&
                                                 <td>
                                                     <p style={{ fontSize: "12px" }} className="p_accent">
                                                         Platform
                                                     </p>
-                                                    <a href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${sourceSerie?.platformId}`} >
-                                                        {sourceSerie?.platformTitle}
+                                                    <a href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${sourceSerie?.platform?._id}`} >
+                                                        {sourceSerie?.platform?.title}
                                                     </a>
                                                 </td>
                                             }

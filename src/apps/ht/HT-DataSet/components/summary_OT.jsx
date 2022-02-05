@@ -85,13 +85,11 @@ class Table extends Component {
                                             onClick={() => {
 
                                                 let n = _info
-                                                console.log(n);
                                                 if (!isInfo) {
                                                     _info[d._id] = true
                                                 } else {
                                                     _info[d._id] = false
                                                 }
-                                                console.log(n);
                                                 this.setState({ _info: n })
                                             }} >
                                                 {

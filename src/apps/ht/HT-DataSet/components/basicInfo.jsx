@@ -7,14 +7,16 @@ import PublicationInfo from './publicationInfo';
 export default function BasicInfo({ data }) {
     let title = ""
 
-    //Condicion para filtrar comentarios de Victor (curador)
-    if (data) {    
+    //Condicion para filtrar comentarios de Victor (curador) saludos n.n
+    if (data) {
         if (data?.sample?.title === "obtener de GEO") {
             title = ""
-        }else{
+        } else {
             title = data?.sample?.title
         }
         //console.log(_data)
+    } else {
+        return <></>
     }
 
     return (
@@ -49,7 +51,7 @@ export default function BasicInfo({ data }) {
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <p style={{ fontSize: "12px" }}className="p_accent" >
+                                                        <p style={{ fontSize: "12px" }} className="p_accent" >
                                                             5'_enrichment:
                                                         </p>
                                                     </td>
@@ -63,7 +65,13 @@ export default function BasicInfo({ data }) {
                                     : null
                             }
                             <SourceSerie sourceSerie={data?.sourceSerie} />
-                            <PublicationInfo publication={data?.publication} />
+                            {
+                                data?.publications.length > 0 &&
+                                data.publications.map((publication, i) => {
+                                    return <PublicationInfo key={`publication_${data?._id}_${i}`} publication={publication} />
+                                })
+                            }
+
                         </td>
                     </tr>
                 </tbody>
