@@ -2,7 +2,7 @@ export function confGenome({
   id_dataset,
   peaksFile,
   sitesFile,
-  tfFile,
+  tfFiles,
   tsFile,
   ttFile,
   tuFile,
@@ -35,15 +35,18 @@ export function confGenome({
       }
     )    
   }
-  if (tfFile) {
-    conf.tracks.push(
-      {
-        "name": "RegulonDB TFBS",
-        "url": tfFile,
-        "displayMode": "EXPANDED",
-        "nameField": "RegulonDB_TFBS",
-      }
-    )    
+  if (tfFiles) {
+    tfFiles.forEach(tf => {
+      conf.tracks.push(
+        {
+          "name": `RegulonDB TFBS: ${tf.name}`,
+          "url": tf.url,
+          "displayMode": "EXPANDED",
+          "nameField": `RegulonDB TFBS: ${tf.name}`
+        }
+      )  
+    });
+      
   }
   if (peaksFile) {
     conf.tracks.push(

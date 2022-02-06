@@ -124,7 +124,7 @@ function Body({ data }) {
             {
                 
             data?.sourceSerie?.strategy !== "ChIP-exo"
-                ?<Viewer id_dataset={data?._id} tf={data?.objectTested?.name} datasetType={data?.datasetType} />
+                ?<Viewer id_dataset={data?._id} tfs={data?.objectsTested} datasetType={data?.datasetType} />
                 :null
             }
             </div>

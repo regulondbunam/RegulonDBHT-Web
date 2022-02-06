@@ -4,25 +4,30 @@ import { confGenome } from "./genome/genome"
 //import { SpinnerCircle } from '../../../../components/ui-components/ui_components';
 //const FILE_SERVER = process.env.REACT_APP_FILE_SERVICE
 
-export function Viewer({ id_dataset, tf, datasetType }) {
+export function Viewer({ id_dataset, tfs, datasetType }) {
     const version = "v3"
     let _peaksFile = undefined;
     let _sitesFile = undefined;
     let _promoter = undefined;
     let _terminator = undefined;
-    let _tfFile = undefined;
+    let _tfFiles = undefined;
     let _tsFile = undefined;
     let _ttFile = undefined;
     let _tuFile = undefined;
     let _geFile = undefined;
     let show = true;
-
     switch (datasetType) {
         case "TFBINDING":
-            _peaksFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/RHTECOLIBSD00411/peaksData/gff3`
+            _peaksFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/peaksData/gff3`
             _sitesFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/sitesData/gff3`
-            if (tf !== null) {
-                _tfFile = `/media/raw/ht_collections_web_v3/regulondb/TFFiles/${tf}.gff3`
+            if(tfs.length>0){
+                _tfFiles = []
+                tfs.forEach(tf => {
+                    _tfFiles.push({
+                        "name": tf.name,
+                        "url": `/media/raw/ht_collections_web_v3/regulondb/TFFiles/${tf.name}.gff3`
+                    })
+                });
             }
             break;
         case "TUS":
@@ -44,7 +49,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
             break;
     }
 
-    let notTracks = !_peaksFile || !_sitesFile || !_tfFile || !_tsFile || !_ttFile || !_tuFile || !_geFile
+    let notTracks = !_peaksFile || !_sitesFile || !_tfFiles || !_tsFile || !_ttFile || !_tuFile || !_geFile
 
     useEffect(() => {
 
@@ -56,7 +61,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
                     id_dataset: id_dataset,
                     peaksFile: _peaksFile,
                     sitesFile: _sitesFile,
-                    tfFile: _tfFile,
+                    tfFiles: _tfFiles,
                     tsFile: _tsFile,
                     ttFile: _ttFile,
                     tuFile: _tuFile,
@@ -69,7 +74,7 @@ export function Viewer({ id_dataset, tf, datasetType }) {
                     //console.log("hola");
                 })
         }
-    }, [id_dataset, _peaksFile, _sitesFile, _tfFile, _ttFile, _tsFile, _tuFile, notTracks, _geFile, _promoter, _terminator])
+    }, [id_dataset, _peaksFile, _sitesFile, _tfFiles, _ttFile, _tsFile, _tuFile, notTracks, _geFile, _promoter, _terminator])
 
     if (!show) {
         return null
