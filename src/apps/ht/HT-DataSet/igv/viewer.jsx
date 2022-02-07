@@ -31,15 +31,15 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
             }
             break;
         case "TUS":
-            _tuFile = `/media/raw/ht_collections_web_${version}/TU/${id_dataset}.gff3`
+            _tuFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/tus/gff3`
             break;
         case "TSS":
             _promoter = `/media/raw/ht_collections_web_${version}/regulondb/PromoterSet.gff3`
-            _tsFile = `/media/raw/ht_collections_web_${version}/TSS/${id_dataset}.gff3`
+            _tsFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/tss/gff3`
             break;
         case "TTS":
             _terminator = `/media/raw/ht_collections_web_${version}/regulondb/TerminatorSet.gff3`
-            _ttFile = `/media/raw/ht_collections_web_${version}/TTS/${id_dataset}.gff3`
+            _ttFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/tts/gff3`
             break;
         case "GENE_EXPRESSION":
             _geFile = `/media/raw/ht_collections_web_${version}/GE/${id_dataset}.bedgraph`

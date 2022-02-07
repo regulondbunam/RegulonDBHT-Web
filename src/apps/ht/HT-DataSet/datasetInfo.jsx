@@ -106,7 +106,7 @@ function Body({ data }) {
                     : null
             }
             {
-                data?.objectsTested.length > 0 && <ObjectsTested objectsTested={data?.objectsTested} />
+                data?.datasetType === "TFBINDING" && <ObjectsTested objectsTested={data?.objectsTested} />
             }
             {
                 data?.growthConditions &&
