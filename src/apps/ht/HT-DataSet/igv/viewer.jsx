@@ -18,8 +18,8 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
     let show = true;
     switch (datasetType) {
         case "TFBINDING":
-            _peaksFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/peaksData/gff3`
-            _sitesFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/sitesData/gff3`
+            _peaksFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/peaks/gff3`
+            _sitesFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/sites/gff3`
             if(tfs.length>0){
                 _tfFiles = []
                 tfs.forEach(tf => {

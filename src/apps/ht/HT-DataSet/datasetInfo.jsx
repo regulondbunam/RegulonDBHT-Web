@@ -105,7 +105,9 @@ function Body({ data }) {
                     </div>
                     : null
             }
-            <ObjectsTested objectsTested={data?.objectsTested} />
+            {
+                data?.objectsTested.length > 0 && <ObjectsTested objectsTested={data?.objectsTested} />
+            }
             {
                 data?.growthConditions &&
                 <div><h2 dangerouslySetInnerHTML={{ __html: section?.dataset_growthc?.title }} />
@@ -117,16 +119,14 @@ function Body({ data }) {
             }
             <NLPGC id_dataset={data?._id} />
             <Tabs id_dataset={data?._id} data={data} />
-            
-            
             <br />
-            <div id="igv-view" >  
-            {
-                
-            data?.sourceSerie?.strategy !== "ChIP-exo"
-                ?<Viewer id_dataset={data?._id} tfs={data?.objectsTested} datasetType={data?.datasetType} />
-                :null
-            }
+            <div id="igv-view" >
+                {
+
+                    data?.sourceSerie?.strategy !== "ChIP-exo"
+                        ? <Viewer id_dataset={data?._id} tfs={data?.objectsTested} datasetType={data?.datasetType} />
+                        : null
+                }
             </div>
             <br />
             <br />
@@ -135,6 +135,6 @@ function Body({ data }) {
 
 }
  //<Tabs id_dataset={data?._id} data={data} />
- /**
-  * 
-  */
+/**
+ * 
+ */

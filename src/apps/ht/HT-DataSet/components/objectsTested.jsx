@@ -5,7 +5,7 @@ export default function ObjectsTested({
   objectsTested = []
 }) {
 
-  const [_view, set_view] = useState(0);
+  //const [_view, set_view] = useState(0);
 
 
   return (
