@@ -22,7 +22,7 @@ export default function ModalHT({ title = "modal", md_data, footer = "", id }) {
                     }
                 }}
             >Read more</button>
-            <div id={`modal_${title}_${id}`} onClick={() => { hide() }} className={Style.modal}>
+            <div id={`modal_${title}_${id}`}  className={Style.modal}>
                 <div className={Style.modal_content}>
                     <div className={Style.modal_header}>
                         <span onClick={() => { hide() }}
@@ -32,8 +32,8 @@ export default function ModalHT({ title = "modal", md_data, footer = "", id }) {
                     <div className={Style.modal_body}>
                         <div dangerouslySetInnerHTML={{ __html: md.render(md_data) }} />
                     </div>
-                    <div className={Style.modal_footer}>
-                        {footer}
+                    <div onClick={() => { hide() }} className={Style.modal_footer}>
+                        <button className="accent" > EXIT </button>
                     </div>
                 </div>
             </div>

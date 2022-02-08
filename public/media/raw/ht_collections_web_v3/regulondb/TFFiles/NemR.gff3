@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	1725993	1726009		+	.	name=NemR;ActiveConformation=NemR;RegulatedTUName=nemRA;PromoterName=nemRp;TFBSCenterPosition=-20.5;Sequence=-20.5
+NC_000913.3	RegulonDB	binding_site	1725993	1726009		+	.	name=NemR;ActiveConformation=NemR;RegulatedTUName=nemRA-gloA;PromoterName=nemRp;TFBSCenterPosition=-20.5;Sequence=-20.5

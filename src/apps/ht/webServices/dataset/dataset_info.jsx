@@ -1,94 +1,90 @@
 import React, { useEffect } from 'react';
-//import { Person } from "schema-dts";
-//import { helmetJsonLdProp } from "react-schemaorg";
-//import { Helmet } from 'react-helmet-async';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from "@apollo/client";
-//import {CITATIONS_FIELDS} from "../fragments/fragments"
-
-//const RegulonGeneOntologyItem = ``
-
 
 function query(id_dataset) {
-  return gql`
-    {
-        getDatasetsFromSearch(advancedSearch: "${id_dataset}[_id]") {
-          _id
-    publication {
-      pmid
-      doi
-      authors
-      title
-      date
-      pmcid
-    }
-    objectTested {
-      _id
-      name
-      synonyms
-      genes {
-        _id
-        name
-      }
-      note
-      activeConformations
-      externalCrossReferences {
-        externalCrossReferenceId
-        externalCrossReferenceName
-        objectId
-        url
-      }
-    }
-    sourceSerie {
-      sourceId
-      sourceName
-      title
-      platformId
-      platformTitle
-      strategy
-      method
-    }
-    sample {
-      experimentId
-      controlId
-      title
-    }
-    linkedDataset {
-      controlId
-      experimentId
-      datasetType
-    }
-    referenceGenome
-    datasetType
-    temporalId
-    growthConditions {
-            organism
-            geneticBackground
-            medium
-            mediumSupplements
-            aeration
-            temperature
-            ph
-            pressure
-            opticalDensity
-            growthPhase
-            growthRate
-            vesselType
-            aerationSpeed
-          }
-    releaseDataControl{
-      date
-      version
-    }
-    assemblyGenomeId
-    fivePrimeEnrichment
-    nlpGrowthConditionsId
-    geneExpressionFiltered
-    experimentCondition
+    return gql`
+        {
+            getDatasetsFromSearch(advancedSearch: "${id_dataset}[_id]") {
+              _id
+                publications {
+                  pmid
+                  doi
+                  authors
+                  title
+                  date
+                  pmcid
+                }
+                fivePrimeEnrichment
+                objectsTested {
+                  _id
+                  name
+                  synonyms
+                  genes {
+                    _id
+                    name
+                  }
+                  note
+                  activeConformations
+                  externalCrossReferences {
+                    externalCrossReferenceId
+                    externalCrossReferenceName
+                    objectId
+                    url
+                  }
+                }
+                sourceSerie {
+                  series{
+                    sourceId
+                    sourceName
+                  }
+                  platform{
+                    _id
+                    source
+                    title
+                  }
+                  title
+                  strategy
+                  method
+                }
+                sample {
+                  experimentId
+                  controlId
+                  title
+                }
+                linkedDataset {
+                  controlId
+                  experimentId
+                  datasetType
+                }
+                referenceGenome
+                datasetType
+                temporalId
+                growthConditions {
+                  organism
+                  geneticBackground
+                  medium
+                  mediumSupplements
+                  aeration
+                  temperature
+                  ph
+                  pressure
+                  opticalDensity
+                  growthPhase
+                  growthRate
+                  vesselType
+                  aerationSpeed
+                }
+                releaseDataControl {
+                  date
+                  version
+                }
+              }
         }
-      }
-        `
+    `
 }
+
+
 
 const GetInfoDataset = ({
   id_dataset = "",
@@ -102,7 +98,7 @@ const GetInfoDataset = ({
     }
     if (data) {
       try {
-        resoultsData(data?.getDatasetsFromSearch[0])
+        resoultsData(clean(data?.getDatasetsFromSearch[0]))
         status('done')
       } catch (error) {
         resoultsData(undefined)
@@ -118,6 +114,13 @@ const GetInfoDataset = ({
 
   }, [loading, error, status, data, resoultsData, id_dataset]);
   return (<></>);
+}
+
+function clean(data = {}){
+  if(data?.sample?.title === '-'){
+    data.sample.title = undefined;
+  }
+  return data
 }
 
 export default GetInfoDataset;

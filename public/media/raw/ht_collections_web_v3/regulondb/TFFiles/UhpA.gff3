@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	3847230	3847249		-	.	name=UhpA;ActiveConformation=UhpA-P<sup>asp</sup>;RegulatedTUName=uhpT;PromoterName=uhpTp;TFBSCenterPosition=-41.5;Sequence=-41.5
+NC_000913.3	RegulonDB	binding_site	3847253	3847272		-	.	name=UhpA;ActiveConformation=UhpA-P<sup>asp</sup>;RegulatedTUName=uhpT;PromoterName=uhpTp;TFBSCenterPosition=-64.5;Sequence=-64.5

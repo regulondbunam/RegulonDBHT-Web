@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	2498550	2498583		-	.	name=SgrR;ActiveConformation=SgrR;RegulatedTUName=alaC;PromoterName=alaCp;TFBSCenterPosition=-167.5;Sequence=-167.5
+NC_000913.3	RegulonDB	binding_site	77297	77330		+	.	name=SgrR;ActiveConformation=SgrR;RegulatedTUName=sgrST-setA;PromoterName=sgrSp;TFBSCenterPosition=-53.5;Sequence=-53.5
+NC_000913.3	RegulonDB	binding_site	77297	77330		-	.	name=SgrR;ActiveConformation=SgrR;RegulatedTUName=sgrR-sroA-thiBPQ;PromoterName=sgrRp;TFBSCenterPosition=25.5;Sequence=25.5
+NC_000913.3	RegulonDB	binding_site	77297	77330		+	.	name=SgrR;ActiveConformation=SgrR;RegulatedTUName=sgrST-setA;PromoterName=sgrSp2;TFBSCenterPosition=-53.5;Sequence=-53.5

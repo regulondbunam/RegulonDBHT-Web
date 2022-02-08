@@ -9,7 +9,7 @@ import TUS from './tables/tus'
 
 export default function NormData({ datasetType, datasetData }) {
     const [_select, set_select] = useState("TFBS")
-    console.log(datasetData)
+    //console.log(datasetData)
     let options = undefined
 
     switch (datasetType) {

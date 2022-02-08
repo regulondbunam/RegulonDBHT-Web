@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	4215258	4215264		+	.	name=IclR;ActiveConformation=IclR-pyruvate;RegulatedTUName=aceBAK;PromoterName=aceBp;TFBSCenterPosition=-141;Sequence=-141
+NC_000913.3	RegulonDB	binding_site	4215268	4215274		+	.	name=IclR;ActiveConformation=IclR-pyruvate;RegulatedTUName=aceBAK;PromoterName=aceBp;TFBSCenterPosition=-131;Sequence=-131
+NC_000913.3	RegulonDB	binding_site	4215277	4215283		+	.	name=IclR;ActiveConformation=IclR-pyruvate;RegulatedTUName=aceBAK;PromoterName=aceBp;TFBSCenterPosition=-122;Sequence=-122
+NC_000913.3	RegulonDB	binding_site	4215295	4215301		+	.	name=IclR;ActiveConformation=IclR-pyruvate;RegulatedTUName=aceBAK;PromoterName=aceBp;TFBSCenterPosition=-104;Sequence=-104
+NC_000913.3	RegulonDB	binding_site	4215346	4215352		+	.	name=IclR;ActiveConformation=IclR-pyruvate;RegulatedTUName=aceBAK;PromoterName=aceBp;TFBSCenterPosition=-53;Sequence=-53
+NC_000913.3	RegulonDB	binding_site	4215357	4215372		+	.	name=IclR;ActiveConformation=IclR-pyruvate;RegulatedTUName=aceBAK;PromoterName=aceBp;TFBSCenterPosition=-38;Sequence=-38
+NC_000913.3	RegulonDB	binding_site	4215373	4215379		+	.	name=IclR;ActiveConformation=IclR-pyruvate;RegulatedTUName=aceBAK;PromoterName=aceBp;TFBSCenterPosition=-26;Sequence=-26
+NC_000913.3	RegulonDB	binding_site	4223652	4223667		-	.	name=IclR;ActiveConformation=IclR-pyruvate;RegulatedTUName=iclR;PromoterName=iclRp;TFBSCenterPosition=-7;Sequence=-7

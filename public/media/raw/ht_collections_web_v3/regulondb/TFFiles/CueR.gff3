@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	137011	137029		+	.	name=CueR;ActiveConformation=CueR-Cu<SUP>+</SUP>;RegulatedTUName=cueO;PromoterName=cueOp;TFBSCenterPosition=-25;Sequence=-25
+NC_000913.3	RegulonDB	binding_site	511427	511445		-	.	name=CueR;ActiveConformation=CueR-Cu<SUP>+</SUP>;RegulatedTUName=copA;PromoterName=copAp;TFBSCenterPosition=-25;Sequence=-25
+NC_000913.3	RegulonDB	binding_site	817019	817037		+	.	name=CueR;ActiveConformation=CueR-Cu<SUP>+</SUP>;RegulatedTUName=moaABCDE;PromoterName=moaAp1;TFBSCenterPosition=202;Sequence=202

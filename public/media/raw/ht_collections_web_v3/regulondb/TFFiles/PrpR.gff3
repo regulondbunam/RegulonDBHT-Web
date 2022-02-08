@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	348487	348510		-	.	name=PrpR;ActiveConformation=PrpR-(2<i>S</i>,3<i>S</i>)-2-methylcitrate;RegulatedTUName=prpR;PromoterName=prpRp;TFBSCenterPosition=-27.5;Sequence=-27.5
+NC_000913.3	RegulonDB	binding_site	348487	348510		+	.	name=PrpR;ActiveConformation=PrpR-(2<i>S</i>,3<i>S</i>)-2-methylcitrate;RegulatedTUName=prpBCDE;PromoterName=prpBp;TFBSCenterPosition=-147.5;Sequence=-147.5
+NC_000913.3	RegulonDB	binding_site	348521	348544		-	.	name=PrpR;ActiveConformation=PrpR-(2<i>S</i>,3<i>S</i>)-2-methylcitrate;RegulatedTUName=prpR;PromoterName=prpRp;TFBSCenterPosition=-61.5;Sequence=-61.5
+NC_000913.3	RegulonDB	binding_site	348521	348544		+	.	name=PrpR;ActiveConformation=PrpR-(2<i>S</i>,3<i>S</i>)-2-methylcitrate;RegulatedTUName=prpBCDE;PromoterName=prpBp;TFBSCenterPosition=-113.5;Sequence=-113.5

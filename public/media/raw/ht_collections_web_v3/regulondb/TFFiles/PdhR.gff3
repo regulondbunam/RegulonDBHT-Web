@@ -1,0 +1,10 @@
+NC_000913.3	RegulonDB	binding_site	1165949	1165965		+	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=ndh;PromoterName=ndhp;TFBSCenterPosition=-35;Sequence=-35
+NC_000913.3	RegulonDB	binding_site	122044	122060		+	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=pdhR-aceEF-lpdA;PromoterName=pdhRp;TFBSCenterPosition=19;Sequence=19
+NC_000913.3	RegulonDB	binding_site	122044	122060		+	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=pdhR-aceEF-lpdA;PromoterName=pdhRp2;TFBSCenterPosition=19;Sequence=19
+NC_000913.3	RegulonDB	binding_site	175078	175094		-	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=hemL;PromoterName=hemLp;TFBSCenterPosition=-165;Sequence=-165
+NC_000913.3	RegulonDB	binding_site	2716499	2716515		-	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=grcA;PromoterName=grcAp1;TFBSCenterPosition=17;Sequence=17
+NC_000913.3	RegulonDB	binding_site	3128124	3128140		-	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=glcDEFGBA;PromoterName=glcDp;TFBSCenterPosition=-56;Sequence=-56
+NC_000913.3	RegulonDB	binding_site	4516740	4516756		-	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=fecABCDE;PromoterName=fecAp;TFBSCenterPosition=-21;Sequence=-21
+NC_000913.3	RegulonDB	binding_site	451822	451838		-	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=cyoABCDE;PromoterName=cyoAp;TFBSCenterPosition=-177;Sequence=-177
+NC_000913.3	RegulonDB	binding_site	480964	480980		-	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=tomB-hha;PromoterName=tomBp1;TFBSCenterPosition=-178;Sequence=-178
+NC_000913.3	RegulonDB	binding_site	89546	89562		+	.	name=PdhR;ActiveConformation=PdhR;RegulatedTUName=mraZW-ftsLI-murEF-mraY-murD-ftsW-murGC-ddlB-ftsQAZ-lpxC;PromoterName=mraZp;TFBSCenterPosition=-42;Sequence=-42

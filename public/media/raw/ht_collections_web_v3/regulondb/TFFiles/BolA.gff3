@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	3401317	3401324		-	.	name=BolA;ActiveConformation=BolA-phosphate;RegulatedTUName=mreBCD;PromoterName=mreBp1;TFBSCenterPosition=-191.5;Sequence=-191.5
+NC_000913.3	RegulonDB	binding_site	3401317	3401324		-	.	name=BolA;ActiveConformation=BolA-phosphate;RegulatedTUName=mreB;PromoterName=mreBp1;TFBSCenterPosition=-191.5;Sequence=-191.5
+NC_000913.3	RegulonDB	binding_site				+	.	name=BolA;ActiveConformation=BolA-phosphate;RegulatedTUName=dacC;PromoterName=dacCp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=BolA;ActiveConformation=BolA-phosphate;RegulatedTUName=ampC;PromoterName=ampCp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=BolA;ActiveConformation=BolA-phosphate;RegulatedTUName=csgA;PromoterName=csgAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=BolA;ActiveConformation=BolA-phosphate;RegulatedTUName=dacC;PromoterName=dacCp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=BolA;ActiveConformation=BolA-phosphate;RegulatedTUName=csgDEFG;PromoterName=csgDp3;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=BolA;ActiveConformation=BolA-phosphate;RegulatedTUName=ampC;PromoterName=ampCp;TFBSCenterPosition=;Sequence=

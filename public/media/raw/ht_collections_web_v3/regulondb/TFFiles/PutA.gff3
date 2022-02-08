@@ -1,0 +1,5 @@
+NC_000913.3	RegulonDB	binding_site	1078909	1078914		-	.	name=PutA;ActiveConformation=PutA;RegulatedTUName=putA;PromoterName=putAp;TFBSCenterPosition=14.5;Sequence=14.5
+NC_000913.3	RegulonDB	binding_site	1078944	1078949		-	.	name=PutA;ActiveConformation=PutA;RegulatedTUName=putA;PromoterName=putAp;TFBSCenterPosition=-21.5;Sequence=-21.5
+NC_000913.3	RegulonDB	binding_site	1078954	1078959		-	.	name=PutA;ActiveConformation=PutA;RegulatedTUName=putA;PromoterName=putAp;TFBSCenterPosition=-31.5;Sequence=-31.5
+NC_000913.3	RegulonDB	binding_site	1079084	1079089		+	.	name=PutA;ActiveConformation=PutA;RegulatedTUName=putP;PromoterName=putPp1;TFBSCenterPosition=-81.5;Sequence=-81.5
+NC_000913.3	RegulonDB	binding_site	1079111	1079116		+	.	name=PutA;ActiveConformation=PutA;RegulatedTUName=putP;PromoterName=putPp1;TFBSCenterPosition=-54.5;Sequence=-54.5

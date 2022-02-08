@@ -1,0 +1,15 @@
+NC_000913.3	RegulonDB	binding_site	1031930	1031954		+	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp;TFBSCenterPosition=-42;Sequence=-42
+NC_000913.3	RegulonDB	binding_site	1031930	1031954		+	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp2;TFBSCenterPosition=-42;Sequence=-42
+NC_000913.3	RegulonDB	binding_site	1031933	1031957		+	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp;TFBSCenterPosition=-39;Sequence=-39
+NC_000913.3	RegulonDB	binding_site	1031933	1031957		+	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp2;TFBSCenterPosition=-39;Sequence=-39
+NC_000913.3	RegulonDB	binding_site	1764448	1764472		-	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=sufABCDSE;PromoterName=sufAp;TFBSCenterPosition=-42.5;Sequence=-42.5
+NC_000913.3	RegulonDB	binding_site	1764510	1764534		-	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=sufABCDSE;PromoterName=sufAp;TFBSCenterPosition=-104.5;Sequence=-104.5
+NC_000913.3	RegulonDB	binding_site	1764551	1764575		-	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=sufABCDSE;PromoterName=sufAp;TFBSCenterPosition=-145.5;Sequence=-145.5
+NC_000913.3	RegulonDB	binding_site	176521	176545		+	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=erpA;PromoterName=erpAp;TFBSCenterPosition=-28;Sequence=-28
+NC_000913.3	RegulonDB	binding_site	1791286	1791310		-	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=ydiU;PromoterName=ydiUp;TFBSCenterPosition=-44;Sequence=-44
+NC_000913.3	RegulonDB	binding_site	2303677	2303701		-	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=napFDAGHBC;PromoterName=napFp3;TFBSCenterPosition=7;Sequence=7
+NC_000913.3	RegulonDB	binding_site	2662215	2662239		-	.	name=IscR;ActiveConformation=IscR-2Fe-2S;RegulatedTUName=iscRSUA;PromoterName=iscRp;TFBSCenterPosition=-28;Sequence=-28
+NC_000913.3	RegulonDB	binding_site	2662240	2662264		-	.	name=IscR;ActiveConformation=IscR-2Fe-2S;RegulatedTUName=iscRSUA;PromoterName=iscRp;TFBSCenterPosition=-53;Sequence=-53
+NC_000913.3	RegulonDB	binding_site	2765852	2765876		+	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=rnlAB;PromoterName=rnlAp2;TFBSCenterPosition=-29.5;Sequence=-29.5
+NC_000913.3	RegulonDB	binding_site	3545587	3545611		+	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=nfuA;PromoterName=nfuAp1;TFBSCenterPosition=4;Sequence=4
+NC_000913.3	RegulonDB	binding_site				+	.	name=IscR;ActiveConformation=IscR;RegulatedTUName=nrdHIEF;PromoterName=nrdHp;TFBSCenterPosition=;Sequence=

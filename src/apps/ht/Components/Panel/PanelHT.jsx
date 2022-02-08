@@ -2,27 +2,65 @@ import React from 'react';
 import Style from './PanelHT.module.css'
 import { Link } from 'react-router-dom';
 import ModalHT from './ModalHT';
+import { getMD } from '../../doc/fetchDOC';
 
-export default function PanelHT(panel, description, enabled = true) {
-    if (!enabled) {
+export default class PanelHT extends React.Component {
+
+    state = {
+        _mdData : undefined
+    }
+
+    componentDidMount() {
+        getMD(this.props.panel.url_rawDescription,(md_data)=>{
+            this.setState({_mdData: md_data});
+        })
+    }
+
+    render() {
+        const { panel } = this.props
+        if (!panel.enable) {
+            return (
+                <div className={Style.dPanel}>
+                    {panel.title}
+                </div>
+            )
+        }
+        //TFBINDING
         return (
-            <div className={Style.dPanel}>
+            <div className={Style.Panel}>
+                <div>
+                    <ModalHT id={panel?.id} title={panel.title} md_data={this.state._mdData} />
+                </div>
+                <Link to={`/${panel.url}/`}>
+                <h2 style={{fontSize: "5vh"}} >
                 {panel.title}
+                </h2>
+                </Link>
+                {
+                    panel.url==='TFBINDING'
+                    &&<div style={{marginBottom: "10px"}}>
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChIP-seq`}>
+                    ChIP-seq
+                    </Link>
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChIP-exo`}>
+                    ChIP-exo
+                    </Link>
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/gSELEX-chip`}>
+                    gSELEX-chip
+                    </Link>
+                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/DAP`}>
+                    DAP
+                    </Link>
+                    </div>
+                }
+                <Link style={{marginRight: "10px"}} to={`/${panel.url}/query`}>
+                    <button>Query Builder</button>
+                </Link>
+                
+                
             </div>
         )
     }
-    return (
-        <div className={Style.Panel}>
-            <Link to={`/${panel.url}`}>
-            <h2 style={{fontSize: "5vh"}} >
-            {panel.title}
-            </h2>
-            </Link>
-            <div>
-                <ModalHT id={panel?.id} title={panel.title} md_data={panel?.description} />
-            </div>
-        </div>
-    )
 }
 
 /*

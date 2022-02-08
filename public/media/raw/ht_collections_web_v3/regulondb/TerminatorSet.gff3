@@ -1,0 +1,366 @@
+NC_000913.3	RegulonDB	transcription_termination_site	274	310	.	+	.	name=thrL;Type=rho-independent;Reference=287010;Sequence=ggaaacacagAAAAAAGCCCGCACCTGACAGTGCGGGCTTTTTTTTTcgaccaaagg
+NC_000913.3	RegulonDB	transcription_termination_site	5032	5086	.	+	.	name=thrLABC;Type=rho-independent;Reference=11522828 30247625;Sequence=atctattcatTATCTCAATCAGGCCGGGTTTGCTTTTATGCAGCCCGGCTTTTTTATGAAGAAATtatggagaaa
+NC_000913.3	RegulonDB	transcription_termination_site	9199	9226	.	+	.	name=talB;Type=rho-independent;Reference=7592346;Sequence=taatcattctTAGCGTGACCGGGAAGTCGGTCACGCTAcctcttctga
+NC_000913.3	RegulonDB	transcription_termination_site	20771	20784	.	-	.	name=rpsT,rpsT;Type=rho-independent;Reference=2429258;Sequence=cataaaaaaaCCCGCTTGCGCGGGctttttcaca
+NC_000913.3	RegulonDB	transcription_termination_site	27252	27279	.	+	.	name=ileS-lspA-fkpB-ispH,ileS-lspA-fkpB-ispH,ileS-lspA-fkpB-ispH,lsp-fkpB-ispH,ribF-ileS-lspA-fkpB-ispH;Type=rho-independent;Reference=2011499;Sequence=aagttatgcgAAAATGCCGGTCTTGTTACCGGCATTTTttatggagaa
+NC_000913.3	RegulonDB	transcription_termination_site	29248	29272	.	+	.	name=dapB,dapB;Type=rho-independent;Reference=6094578;Sequence=tattgattatAAAGGGCTTTAATTTTTGGCCCTTTtatttttggt
+NC_000913.3	RegulonDB	transcription_termination_site	34087	34120	.	+	.	name=carAB,carAB;Type=rho-independent;Reference=6308632 6377309;Sequence=atcgaataacTAATACGGTTCTCTGATGAGGACCGTTTTTTTTTgcccattaag
+NC_000913.3	RegulonDB	transcription_termination_site	65800	65821	.	-	.	name=araBAD;Type=rho-independent;Reference=3549454;Sequence=ccatcaaaaaACCAGGCTTGAGTATAGCCTGGtttcgtttga
+NC_000913.3	RegulonDB	transcription_termination_site	83574	83603	.	-	.	name=leuL;Type=rho-independent;Reference=6171647;Sequence=ttcgggcataAAAAAACCCGCGCAATGGCGCGGGTTTTTTgtttgactgc
+NC_000913.3	RegulonDB	transcription_termination_site	107501	107544	.	+	.	name=lpxC;Type=rho-independent;Reference=2824434;Sequence=gtataaaattCGACTGGCAAATCTGGCACTCTCTCCGGCCAGGTGAACCAGTCGtttttttttg
+NC_000913.3	RegulonDB	transcription_termination_site	120144	120168	.	-	.	name=aroP,aroP;Type=rho-independent;Reference=2408019;Sequence=aaagattattGCCCTCACCCTGTACGGGTGAGGGCgtagagagat
+NC_000913.3	RegulonDB	transcription_termination_site	127590	127619	.	+	.	name=aceEF,aceEF;Type=rho-independent;Reference=9868788;Sequence=tgatgtaagtAAAAGAGCCGGCCCAACGGCCGGCTTTTTTctggtaatct
+NC_000913.3	RegulonDB	transcription_termination_site	129366	129394	.	+	.	name=lpdA,pdhR-aceEF-lpdA,pdhR-aceEF-lpdA;Type=rho-independent;Reference=3897791;Sequence=tccggcaattAAAAAAGCGGCTAACCACGCCGCTTTTTTtacgtctgca
+NC_000913.3	RegulonDB	transcription_termination_site	134249	134272	.	+	.	name=acnB;Type=rho-independent;Reference=25092924;Sequence=acgacacaatGCCCGGTGAATGAGATTCCCGGGCatttttttat
+NC_000913.3	RegulonDB	transcription_termination_site	134756	134783	.	-	.	name=speD,yacC-speED;Type=rho-independent;Reference=;Sequence=agtaaataaaTCTGGCGGAGCCTGGGAGCTCCGCCAGAgccgttaaac
+NC_000913.3	RegulonDB	transcription_termination_site	138801	138816	.	-	.	name=gcd,gcd;Type=rho-independent;Reference=8419307;Sequence=tccggcatgaACAACGCGCACGTTGTcagcaatctg
+NC_000913.3	RegulonDB	transcription_termination_site	185090	185111	.	-	.	name=dapD;Type=rho-independent;Reference=6094577;Sequence=tgcaaaaaaaTCGGGCAGCGTCGTGCTGCCCGtgtgcatact
+NC_000913.3	RegulonDB	transcription_termination_site	191721	191738	.	+	.	name=rpsB-tsf;Type=rho-independent;Reference=6272196;Sequence=atcaaaaaggAGCCGCCTGAGGGCGGCTtctttttgtg
+NC_000913.3	RegulonDB	transcription_termination_site	193442	193498	.	+	.	name=frr;Type=rho-independent;Reference=1860827;Sequence=tcttgaacgaCAAAAACGCCGCTCAGTAGATCCTTGCGGATCGGCTGGCGGCGTTTTGCTTTTTATTctgtctcaac
+NC_000913.3	RegulonDB	transcription_termination_site	217020	217051	.	-	.	name=proS;Type=rho-independent;Reference=1688424;Sequence=caatccatgtAAAAAAAGGGCCCTGAAATTCAGGACCCTTTCtggcatcagc
+NC_000913.3	RegulonDB	transcription_termination_site	228998	229052	.	+	.	name=aspU;Type=rho-independent;Reference=11522828 30247625;Sequence=tcccgtccgtTCCGCCACTTATTAAGAAGCCTCGAGTTAACGCTCGAGGTTTTTTTTCGTCTGTAtatctattat
+NC_000913.3	RegulonDB	transcription_termination_site	237031	237067	.	+	.	name=aspV;Type=rho-independent;Reference=12824337 19706412 3023634;Sequence=aaaatgagttCAGAGAGCCGCAAGATTTTTAATTTTGCGGTTTTTTTgtatttgaat
+NC_000913.3	RegulonDB	transcription_termination_site	256442	256474	.	+	.	name=gpt;Type=rho-independent;Reference=6397401;Sequence=ctaatcttttCAACGCCTGGCACTGCCGGGCGTTGTTCTTTTTaacttcaggc
+NC_000913.3	RegulonDB	transcription_termination_site	360253	360278	.	+	.	name=cynTS;Type=rho-independent;Reference=3049588;Sequence=ttacccgcaaAGTGCGCTGCTGCTTAGCAGCGCACTgcttggtggg
+NC_000913.3	RegulonDB	transcription_termination_site	361140	361179	.	-	.	name=lacYA,lacZYA,lacZYA,lacZYA,lacZYA;Type=rho-independent;Reference=3901000;Sequence=gggtcaaagaGGCATGATGCGACGCTTGTTCCTGCGCTTTGTTCATGCCGgatgcggcta
+NC_000913.3	RegulonDB	transcription_termination_site	361212	361236	.	both	.	name=cynTSX,lacYA,lacZYA,lacZYA,lacZYA,lacZYA;Type=rho-independent;Reference=3049588;Sequence=gaacttgtagGCCTGATAAGCGCAGCGTATCAGGCaatttttata
+NC_000913.3	RegulonDB	transcription_termination_site	404786	404824	.	-	.	name=proC;Type=rho-independent;Reference=6296787;Sequence=agcaaagaaaGCCGGACGTAACCGCACCGAAGTGGCGGCCTGACGTCCGgcgaaagtca
+NC_000913.3	RegulonDB	transcription_termination_site	419191	419245	.	+	.	name=phoBR;Type=rho-independent;Reference=11522828 30247625;Sequence=ttaatccgccTTTGTCATCTTTTATTGCCATAAGCCAGTCGATGCTGGCTTATTTTCTTTGCAGTcaaaatacgg
+NC_000913.3	RegulonDB	transcription_termination_site	424486	424508	.	+	.	name=malZ;Type=rho-independent;Reference=1918057;Sequence=ccgtttaacaCGTTCTGGATGAAATCCATATCGcgatagcgca
+NC_000913.3	RegulonDB	transcription_termination_site	424530	424553	.	+	.	name=malZ;Type=rho-independent;Reference=1918057;Sequence=cagccactgcTCTGACCACAAGTAATTGTTCAGAttgataaaac
+NC_000913.3	RegulonDB	transcription_termination_site	427756	427786	.	+	.	name=tgt-yajC;Type=rho-independent;Reference=7507921;Sequence=gctgttcagaTCACTGGTGCGCGCGGAGTCGCCGCCAGTGAgcaaacgctg
+NC_000913.3	RegulonDB	transcription_termination_site	431096	431122	.	-	.	name=tsx,tsx;Type=rho-independent;Reference=2265760;Sequence=taacaatcagAAATGCCGGGAATAAATCCCGGCATTTtcataatcag
+NC_000913.3	RegulonDB	transcription_termination_site	453557	453576	.	-	.	name=yajG;Type=rho-independent;Reference=8231804;Sequence=ggcgtctacaGGCCCGGCTTGCACCGGGCCagagggcaga
+NC_000913.3	RegulonDB	transcription_termination_site	454844	454865	.	+	.	name=bolA,bolA,bolA;Type=rho-independent;Reference=2684651;Sequence=gattttatgaAAAACGGCCTGCGGGCCGTTTTgttttgtctg
+NC_000913.3	RegulonDB	transcription_termination_site	458731	458755	.	+	.	name=clpPX,clpPX,clpPX;Type=rho-independent;Reference=8226770;Sequence=agttaaccaaAAAGGGGGGATTTTATCTCCCCTTTaatttttcct
+NC_000913.3	RegulonDB	transcription_termination_site	461730	461742	.	+	.	name=hupB,hupB,hupB,hupB;Type=rho-independent;Reference=2187099;Sequence=ctaagcgttgTCCCCAGTGGGGAtgtgacgaag
+NC_000913.3	RegulonDB	transcription_termination_site	461759	461778	.	+	.	name=hupB,hupB,hupB,hupB;Type=rho-independent;Reference=2187099;Sequence=gaagttcaagGGCGCATCTACTGATGTGCCttttttattt
+NC_000913.3	RegulonDB	transcription_termination_site	474263	474301	.	+	.	name=glnK-amtB;Type=rho-independent;Reference=8843440;Sequence=caagcactgcAAAAAACAGCCGGACGGTTTTCACCTCCGGCTATTTTTTtaattgtgat
+NC_000913.3	RegulonDB	transcription_termination_site	496998	497029	.	+	.	name=htpG,htpG;Type=rho-independent;Reference=3299380;Sequence=ttcctgatgtAATGCCGGATGACCTTCGTGTCATCCGGCATTtttcttttca
+NC_000913.3	RegulonDB	transcription_termination_site	498945	498980	.	-	.	name=aes;Type=rho-independent;Reference=9401025;Sequence=aaaaatatgaATATATTCCGGCGCTTAATGCCACGCCGGAACATATcgaaatgatg
+NC_000913.3	RegulonDB	transcription_termination_site	507260	507287	.	+	.	name=chiX;Type=rho-independent;Reference=19426207;Sequence=ctctttgacgGGCCAATAGCGATATTGGCCATTTTTTTagcgcaacat
+NC_000913.3	RegulonDB	transcription_termination_site	603377	603409	.	+	.	name=pheP;Type=rho-independent;Reference=1711024;Sequence=caaccatccgAAACCGCTCTCATCCATTCGATGAGAGCGGTTTttttaattac
+NC_000913.3	RegulonDB	transcription_termination_site	632046	632091	.	+	.	name=cstA,cstA,cstA;Type=rho-independent;Reference=1848300;Sequence=ttagtgcccaGGGTTCCCTCTCACCCTAACCCTCTCCCCGGTGGGGCGAGGGGACTgaccgagcgc
+NC_000913.3	RegulonDB	transcription_termination_site	696392	696429	.	-	.	name=glnW-metU-glnVX,metT-leuW-glnUW-metU-glnVX;Type=rho-independent;Reference=12824337 19706412 2419743;Sequence=aatgaacgcaGAAAAGCAAAAAGCTCGCCGAAGCGAGCTTTTTTAATGtggctggggt
+NC_000913.3	RegulonDB	transcription_termination_site	705939	705965	.	+	.	name=nagE;Type=rho-independent;Reference=3284790;Sequence=caacaatgacAAGCGGTGGAGATCTTCTCTGCCGCTTtttttttcat
+NC_000913.3	RegulonDB	transcription_termination_site	707954	707978	.	+	.	name=glnS,glnS,glnS;Type=rho-independent;Reference=6086662;Sequence=caaacaatccAAAACGCCGCGTTCAGCGGCGTTTTttctgctttt
+NC_000913.3	RegulonDB	transcription_termination_site	710118	710134	.	-	.	name=fldA-uof-fur,fur,fur,uof-fur;Type=rho-independent;Reference=2993806;Sequence=aacaaataagTGAGAGCTGTAACTCTCgcttttctta
+NC_000913.3	RegulonDB	transcription_termination_site	710162	710180	.	-	.	name=fldA-uof-fur,fur,fur,uof-fur;Type=rho-independent;Reference=;Sequence=tgcataaaaaAGCCAACCCGCAGGTTGGCttttctcgtt
+NC_000913.3	RegulonDB	transcription_termination_site	715211	715242	.	+	.	name=seqA-pgm;Type=rho-independent;Reference=8083177;Sequence=acatttaataAAAAAAGGGCGGTCGCAAGATCGCCCTTTTTTacgtatgaca
+NC_000913.3	RegulonDB	transcription_termination_site	753126	753163	.	-	.	name=gltA,gltA;Type=rho-independent;Reference=6380576;Sequence=ttaggcatatAAAAATCAACCCGCCATATGAACGGCGGGTTAAAATATttacaactta
+NC_000913.3	RegulonDB	transcription_termination_site	758444	758450	.	+	.	name=sdhDAB;Type=rho-dependent;Reference=3897791;Sequence=tcgcatcaggCAACCAGtgccggatgc
+NC_000913.3	RegulonDB	transcription_termination_site	762959	762966	.	+	.	name=sucAB;Type=rho-dependent;Reference=3897791;Sequence=aagcgatacgAAATATTCggtctacggt
+NC_000913.3	RegulonDB	transcription_termination_site	765104	765158	.	-	.	name=mngR;Type=rho-independent;Reference=11522828 30247625;Sequence=atggcgaaggGCTGTCGGTTTCGACATGGTTGGCCATCGTATGATGGCCTTTTTTGTGCTTATCGcgatgatttt
+NC_000913.3	RegulonDB	transcription_termination_site	781653	781687	.	+	.	name=lysQ;Type=rho-independent;Reference=12824337 19706412;Sequence=cgacccaccaATGTAAAAAAGCGCCCTAAAGGCGCTTTTTTGCTAtctgcgatac
+NC_000913.3	RegulonDB	transcription_termination_site	781809	781843	.	+	.	name=lysQ;Type=rho-independent;Reference=12824337 19706412;Sequence=cgacccaccaATGTAAAAAAGCGCCCTAAAGGCGCTTTTTTGCTAttcaggcatc
+NC_000913.3	RegulonDB	transcription_termination_site	786795	786821	.	+	.	name=aroG;Type=rho-independent;Reference=1970563 6125934;Sequence=tagcaacaaaAAAGCCGACTCACTTGCAGTCGGCTTTctcattttaa
+NC_000913.3	RegulonDB	transcription_termination_site	787689	787766	.	-	.	name=galETKM,galETKM;Type=rho-dependent;Reference=;Sequence=ccatagcgaaAATAGTGGCGCAGTGTAAGGTTGTTGTGAATATTGAGTTGCAAATATGTCGGTGTTTGCTGGTGATTTGAACAATATGagataaagcc
+NC_000913.3	RegulonDB	transcription_termination_site	787763	787768	.	-	.	name=galETKM,galETKM;Type=rho-dependent;Reference=18374359;Sequence=atttgaacaaTATGAGataaagccct
+NC_000913.3	RegulonDB	transcription_termination_site	787767	787790	.	-	.	name=galETKM;Type=rho-independent;Reference=30782818;Sequence=gaacaatatgAGATAAAGCCCTCATGACGAGGGCgtaacattac
+NC_000913.3	RegulonDB	transcription_termination_site	788615	788741	.	-	.	name=galETK,galETK;Type=rho-dependent;Reference=18374359;Sequence=ttggcataacGACCAATAGAGGCCCCCAGAAACGCGGCCTGATCCTGATAGCATTCCGGGCTGGCACAGCCGAGCAGCGCCTCGCGGACGCTGCCATCGGAAAGCGGAATACGGGCGGAAAGTAAAGTCGCACCCCAgtccatcagc
+NC_000913.3	RegulonDB	transcription_termination_site	789840	789918	.	-	.	name=galET,galET;Type=rho-dependent;Reference=18374359;Sequence=ataatcaatcGCGCAGGGCAGAACGAAACCGTCGTTGTAGTCGGTGTGTTCACCAATCAAATTCACGCGGCCAGGCGCCTGAATGGTGTgagtggcagg
+NC_000913.3	RegulonDB	transcription_termination_site	789952	789977	.	-	.	name=galET,galET;Type=rho-dependent;Reference=18374359;Sequence=ttggcaaacaGAGATTGTGTTTTTTCTTTCAGACTCatttcttaca
+NC_000913.3	RegulonDB	transcription_termination_site	790312	790425	.	-	.	name=galE,galE;Type=rho-dependent;Reference=18374359;Sequence=cgtaaaacgtGGGCTTTGGGCAGCAGTAGCGTTTCGAACGGCCAGGCAGCCCAGTAAGGCACGACGGCTAACCAGTGTTCGGTTTCGACAACGGTACGGCTACCGTCTGCCAGCTCGCGCTGAAcataatccac
+NC_000913.3	RegulonDB	transcription_termination_site	790823	790962	.	-	.	name=galE,galE;Type=rho-dependent;Reference=18374359;Sequence=aagtcccggtGTAATCGGGGTTTTTATCGCCTGTCACCCGCACATTACCTGCGCAGAGGAAGCAATCTGGATCGTGCGCAGGTAACACCTGTTTGGCTGGCGTTTCCTGCGCCCCCTGCCAGGGGCGCTTAGCGCGGTGCGGTGAAACCAgaatccattg
+NC_000913.3	RegulonDB	transcription_termination_site	850982	851009	.	+	.	name=ompX,yliM-ompX;Type=rho-independent;Reference=7836315;Sequence=tggtgatataAAAAATCCGCCTCTCGGGGCGGATTTTTgtttttaagg
+NC_000913.3	RegulonDB	transcription_termination_site	884910	884938	.	+	.	name=cmr,cmr;Type=rho-independent;Reference=8655497;Sequence=gggtaaaaaaATGCCTGACTGCTTTGTGCGATCAGGCATtctcgaatta
+NC_000913.3	RegulonDB	transcription_termination_site	899648	899665	.	-	.	name=artJ;Type=rho-dependent;Reference=8801422;Sequence=agcaataaaaAAGCCGCATGTGCGGCTTcagattgctg
+NC_000913.3	RegulonDB	transcription_termination_site	900695	900725	.	-	.	name=artPIQM,artPIQM,artPIQM,artPIQM;Type=rho-dependent;Reference=8801422;Sequence=tgaaataaaaAAGACGGACAACTTAGTGGGTTGTCCGTCTTcattataaga
+NC_000913.3	RegulonDB	transcription_termination_site	925843	925871	.	-	.	name=serW,serW;Type=rho-independent;Reference=12824337 19706412 7518257;Sequence=ataaaatgcgAAAAAAAAGCTCGCACTTTCGTACGAGCTcttctttaaa
+NC_000913.3	RegulonDB	transcription_termination_site	926162	926186	.	-	.	name=infA,infA;Type=rho-independent;Reference=1909328;Sequence=tcacaaaataAAAAGGCCGGTTAAACCGACCTTTTactcgttctt
+NC_000913.3	RegulonDB	transcription_termination_site	931019	931061	.	-	.	name=trxB;Type=rho-independent;Reference=3288628;Sequence=tacaacggggAAAAAATAAAGGCGACCCATAGTCGCATGGTGTCGCCTTCTTTacttttgtta
+NC_000913.3	RegulonDB	transcription_termination_site	940741	940765	.	+	.	name=serS;Type=rho-independent;Reference=3029694;Sequence=ttctgaatctAAAAAGCGCCTGCGGGCGCTTTTTTtgtctccctt
+NC_000913.3	RegulonDB	transcription_termination_site	950301	950330	.	-	.	name=pflA;Type=rho-independent;Reference=2192229;Sequence=gcggaataaaAAAGCGGCAACTCAATAAAGTTGCCGCTTTacggggaaat
+NC_000913.3	RegulonDB	transcription_termination_site	951207	951266	.	-	.	name=focA-pflB,focA-pflB,focA-pflB,pflB,pflB,pflB,pflB,pflB;Type=rho-independent;Reference=2651404;Sequence=tcgcgctaaaAAAGGCCCCACTTTCGTGGAGCCTTTATTGTACGCTTTTTACTGTACGATTTCAGTCAAAtctaattaca
+NC_000913.3	RegulonDB	transcription_termination_site	963662	963716	.	+	.	name=cmk-rpsA;Type=rho-independent;Reference=11522828 30247625;Sequence=cagctaaaggCGAGTAATTCTCTGACTCTTCGGGATTTTTATTCCGAAGTTTGTTGAGTTTACTTgacagattgc
+NC_000913.3	RegulonDB	transcription_termination_site	964119	964173	.	+	.	name=ihfB,ihfB,rpsA-ihfB,rpsA-ihfB;Type=rho-independent;Reference=11522828 30247625;Sequence=ttaagtttttTACTCAAACTTGAACGAGAGAAAAGCACCTGTCGGGTGCTTTTTTCATTTCTCTAatctggaact
+NC_000913.3	RegulonDB	transcription_termination_site	985831	985885	.	-	.	name=ompF,ompF;Type=rho-independent;Reference=11522828 30247625;Sequence=gattgctctgGAAGGTATAAAAAAAACAGGACCAAAGTCCTGTTTTTTCGGCATTTAACAAAGAGgtgtgctatt
+NC_000913.3	RegulonDB	transcription_termination_site	987392	987438	.	-	.	name=asnS;Type=rho-independent;Reference=11522828 30247625;Sequence=aaattgtgctATTAGCTAAGAAAAAACTAATCCGCAATAAGAATGCGGATTAGTTTTtgcgcgtaaa
+NC_000913.3	RegulonDB	transcription_termination_site	1015900	1015924	.	+	.	name=rmf;Type=rho-independent;Reference=15743942;Sequence=tctttaaaaaGAAACCTCCGCATTGCGGAGGTTTCgccttttgat
+NC_000913.3	RegulonDB	transcription_termination_site	1030701	1030755	.	-	.	name=yccA;Type=rho-independent;Reference=11522828 30247625;Sequence=ctggcggcagTGTAACAAAAAACAAAGCCCCGCATAAAGCGAGGCTATGAAAGTGTTAGCGGGTGagattaatcg
+NC_000913.3	RegulonDB	transcription_termination_site	1031551	1031574	.	-	.	name=serT;Type=rho-independent;Reference=2419743 6376117;Sequence=ggtcattaagCAAATATAACGCCCTGAGAATTTCgacaggcaaa
+NC_000913.3	RegulonDB	transcription_termination_site	1031590	1031617	.	-	.	name=serT;Type=rho-independent;Reference=12824337 19706412 2419743 6376117;Sequence=gcaaaagaaaAAGGGGTTAGCATTTAGCTAACCCCTTAtcttatttgg
+NC_000913.3	RegulonDB	transcription_termination_site	1037608	1037634	.	+	.	name=hyaABCDEF,hyaABCDEF;Type=rho-independent;Reference=2180913;Sequence=ccgacgtaaaAAGACGGTAAGTATCGCTTTCAGTCTTatgaatatcg
+NC_000913.3	RegulonDB	transcription_termination_site	1066833	1066857	.	+	.	name=agp;Type=rho-independent;Reference=2153660;Sequence=ataacagaaaACTCCCCCGCGAGAAGCGGGGGAGTcgctggttaa
+NC_000913.3	RegulonDB	transcription_termination_site	1080794	1080838	.	+	.	name=putP,putP,putP,putP,putP;Type=rho-independent;Reference=3302614;Sequence=gctccgccgtCACGGTTGCAGGAAAGCTAAGGGACTTAGCCTGCGGCGGTTTTGTttggcttcag
+NC_000913.3	RegulonDB	transcription_termination_site	1086071	1086095	.	+	.	name=phoH,phoH;Type=rho-independent;Reference=8444794;Sequence=gttatcggtgCAGAGCCCGGGCGAACCGGGCTTTGttttgggtgt
+NC_000913.3	RegulonDB	transcription_termination_site	1096979	1097018	.	-	.	name=serX;Type=rho-independent;Reference=12824337 19706412;Sequence=gtgcaatataCGAAAAAAAAGCCCGTACTTTCGTACGAGCTCTTCTTTAAatatggcggt
+NC_000913.3	RegulonDB	transcription_termination_site	1097160	1097199	.	-	.	name=serX;Type=rho-independent;Reference=12824337 19706412;Sequence=gtgcaatacaCGAAAAAAAAGCCCGTACTTTCGTACGAGCTCTTCTTTAAatatggcggt
+NC_000913.3	RegulonDB	transcription_termination_site	1097341	1097380	.	-	.	name=serX;Type=rho-independent;Reference=12824337 19706412;Sequence=gtgcaatataCGAAAAAAAAGCCCGTACTTTCGTACGAGCTCTTCTTTAAatatggcggt
+NC_000913.3	RegulonDB	transcription_termination_site	1097522	1097561	.	-	.	name=serX;Type=rho-independent;Reference=12824337 19706412;Sequence=gtgcaatataCGAAAAAAAAGCCCGTACTTTCGTACGAGCTCTTCTTTAAatatggcggt
+NC_000913.3	RegulonDB	transcription_termination_site	1113532	1113560	.	+	.	name=mdoGH,mdoGH,mdoGH;Type=rho-independent;Reference=7934824;Sequence=acgagccaatAAAAATACCGGCGTTATGCCGGTATTTTTttacgaaaga
+NC_000913.3	RegulonDB	transcription_termination_site	1122675	1122729	.	-	.	name=yceB;Type=rho-independent;Reference=11522828 30247625;Sequence=acgttttcctTTGCACGAAAAATAAAGGGCGCGAATGCGCCCTCGTGATTAATCAGTAAATGGAAtgacaatttc
+NC_000913.3	RegulonDB	transcription_termination_site	1146728	1146752	.	+	.	name=sraB;Type=rho-independent;Reference=11448770;Sequence=aattattggcAAAAGGCAACCACAGGCTGCCTTTTtctttgactc
+NC_000913.3	RegulonDB	transcription_termination_site	1151860	1151887	.	+	.	name=acpP;Type=rho-independent;Reference=1556094;Sequence=aagtgaacatCTCCAGGCGGTCGTTCGACCGCCTGAGTtttatctttt
+NC_000913.3	RegulonDB	transcription_termination_site	1159325	1159346	.	-	.	name=fhuE;Type=rho-independent;Reference=2162465;Sequence=tggggagactAAGGCAGCCAGATGGCTGCCTTttttacaggt
+NC_000913.3	RegulonDB	transcription_termination_site	1235677	1235698	.	+	.	name=fadR,fadR;Type=rho-independent;Reference=2843809;Sequence=tttaaagagcAAACCCCTCAAACGAGGGGTTTtttgttgttt
+NC_000913.3	RegulonDB	transcription_termination_site	1260895	1260909	.	-	.	name=lolB-ispE-prs,prs;Type=rho-independent;Reference=3009477;Sequence=agacaaaaaaACCCGCCGCAGCGGGtctttgagcc
+NC_000913.3	RegulonDB	transcription_termination_site	1269039	1269067	.	+	.	name=kdsA,ychQA-kdsA;Type=rho-independent;Reference=3039295;Sequence=cttgaaaaatAAAGTATTAGCGTTCTGCGTTAAGACTTTtttcatgggt
+NC_000913.3	RegulonDB	transcription_termination_site	1286525	1286579	.	+	.	name=narGHJI;Type=rho-independent;Reference=11522828 30247625;Sequence=gctcgtcactAAGCGAATTTTAGTTCACATAGACCCTGCTTCGGCGGGGTTTTTTTATGGGCACGgtgcggggtg
+NC_000913.3	RegulonDB	transcription_termination_site	1287009	1287033	.	-	.	name=tyrTV-tpr,tyrV-tpr;Type=rho-dependent;Reference=7034960;Sequence=ccttccccgcATGGGCAGAATATTTGATTGCGGATtcgcttgaga
+NC_000913.3	RegulonDB	transcription_termination_site	1292461	1292485	.	-	.	name=hns;Type=rho-independent;Reference=22843842;Sequence=cggacaataaAAAATCCCGCCGCTGGCGGGATTTTaagcaagtgc
+NC_000913.3	RegulonDB	transcription_termination_site	1311815	1311846	.	+	.	name=tonB;Type=rho-independent;Reference=6310567;Sequence=gtaagcagaaAGTCAAAAGCCTCCGACCGGAGGCTTTTGACTattactcaac
+NC_000913.3	RegulonDB	transcription_termination_site	1312261	1312300	.	-	.	name=yciCB;Type=rho-independent;Reference=3058546;Sequence=aaaccgacttAAAAGGAAAATCACAGGCGCGATGCTACTATGATTTTCCTgaggagaaca
+NC_000913.3	RegulonDB	transcription_termination_site	1314668	1314698	.	-	.	name=yciE,yciGFE;Type=rho-independent;Reference=3058546;Sequence=attccgcacaAAAACGACCCCGTAATATACGGGGTCAATAAggacatggta
+NC_000913.3	RegulonDB	transcription_termination_site	1315785	1315815	.	-	.	name=yciG;Type=rho-independent;Reference=3058546;Sequence=ttctccagtgAAATCACTGCGAGCCATACGGCCCGCAGATGcaattatctt
+NC_000913.3	RegulonDB	transcription_termination_site	1316383	1316408	.	-	.	name=trpLEDCBA;Type=rho-independent;Reference=3058546;Sequence=aaagaaagttAAAATGCCGCCAGCGGAACTGGCGGCtgtgggatta
+NC_000913.3	RegulonDB	transcription_termination_site	1322975	1322995	.	-	.	name=trpL;Type=rho-independent;Reference=7038627;Sequence=ttcaaaaaaaAGCCCGCTCATTAGGCGGGCTgggtatctga
+NC_000913.3	RegulonDB	transcription_termination_site	1334845	1334874	.	+	.	name=cysB;Type=rho-independent;Reference=3032952;Sequence=tgcgttatttTCGGCACCTTTTATGTAGCGAAGGTGCCGGaatatattct
+NC_000913.3	RegulonDB	transcription_termination_site	1338512	1338548	.	-	.	name=ribA,ribA;Type=rho-independent;Reference=8320220;Sequence=agtaacaactATTTGCTTGCCGGTTATTTTGCTTCCGGCAAGCAAATgaattacaca
+NC_000913.3	RegulonDB	transcription_termination_site	1346942	1346968	.	-	.	name=rnb,rnb;Type=rho-independent;Reference=8932710;Sequence=ggggaaataaACGGCCCATCCATGAGGAATGGGCCGTgaaaggagat
+NC_000913.3	RegulonDB	transcription_termination_site	1366818	1366913	.	-	.	name=pspF,pspF,pspF;Type=rho-independent;Reference=8606168;Sequence=gcgattaataGCCCAACGCAATAATGTCTGATGCGCTGCGCTTATCAGGCCTGCAAACGACGTATTGATTATGTATGCCGAATAAAGCATTCACGCCGCATCCGGCaagttgtatt
+NC_000913.3	RegulonDB	transcription_termination_site	1388267	1388301	.	+	.	name=tyrR;Type=rho-independent;Reference=3001057;Sequence=agtaagcgcgAATATGCCTGATGGTGCAACACCATCAGGCATATTaaattatgct
+NC_000913.3	RegulonDB	transcription_termination_site	1405662	1405693	.	+	.	name=abgR;Type=rho-independent;Reference=22289118;Sequence=ctgcataaaaAAATAGAGTCTGTCGACATCCGCCAGACTCTAcagtacacac
+NC_000913.3	RegulonDB	transcription_termination_site	1409217	1409249	.	+	.	name=fnrS;Type=rho-independent;Reference=20075074;Sequence=aattgattcgTACGACGCCGACTTTGATGAGTCGGCTTTTTTTtgcctgttat
+NC_000913.3	RegulonDB	transcription_termination_site	1413702	1413724	.	+	.	name=ralA;Type=rho-independent;Reference=24748661;Sequence=tagtaggagtGCCACCTTCCTTTTCAATAGTGGcggtaatttt
+NC_000913.3	RegulonDB	transcription_termination_site	1449037	1449063	.	+	.	name=feaB;Type=rho-independent;Reference=9109378;Sequence=gctcataagtAAAAAACGGCACCTGGTGCCGTTTTTTtgtctgaaac
+NC_000913.3	RegulonDB	transcription_termination_site	1563276	1563301	.	-	.	name=dosCP;Type=rho-independent;Reference=9751644;Sequence=aaatcacagtATTTAAGTGACAGTGTCACGTTAAATgaaaacccgc
+NC_000913.3	RegulonDB	transcription_termination_site	1568904	1568930	.	-	.	name=gadBC,gadBC,gadC;Type=rho-independent;Reference=10383761;Sequence=aagcacgaaaAAGGGAGCGATGAATTATCGCTCCCTTgtcttataac
+NC_000913.3	RegulonDB	transcription_termination_site	1622766	1622799	.	+	.	name=mgtS;Type=rho-independent;Reference=19889087;Sequence=ccctcacctaACCGGCCCCTTGTTACAGTTGTGTACAAGGGGCCtgatttttat
+NC_000913.3	RegulonDB	transcription_termination_site	1622817	1622874	.	-	.	name=mgrR;Type=rho-independent;Reference=19889087;Sequence=tatgacggcgAAAAAAAACCGCCAGTAAACCGGCGGTGAATGCTTGCATGGATAGATTTGTGTTTTGCttttacgcta
+NC_000913.3	RegulonDB	transcription_termination_site	1645034	1645049	.	-	.	name=relBE-hokD;Type=rho-independent;Reference=2990907;Sequence=aaaaacaaaaACCCGCCGAAGCGGGTtaagtgcggg
+NC_000913.3	RegulonDB	transcription_termination_site	1671703	1671720	.	+	.	name=asr,asr;Type=rho-independent;Reference=10094685;Sequence=cagtaatgctGGCGCGCCCCCTCGCGCCtgaaaattac
+NC_000913.3	RegulonDB	transcription_termination_site	1686705	1686725	.	-	.	name=fumA;Type=rho-independent;Reference=6328431;Sequence=gccatgtaaaAAAACCGCCCCGAAGGGCGGCtctgtttatt
+NC_000913.3	RegulonDB	transcription_termination_site	1698136	1698163	.	-	.	name=malI;Type=rho-independent;Reference=2670898;Sequence=accaggtataGCAGATAAAGAGAGGATTATTTCGCTGCaatgagccgg
+NC_000913.3	RegulonDB	transcription_termination_site	1733711	1733740	.	+	.	name=lhr,rnt-lhr;Type=rho-independent;Reference=7559321;Sequence=tagagaaaggACTGACGGATGCCCGTTCGCATCCGTCAGTattgcaggac
+NC_000913.3	RegulonDB	transcription_termination_site	1736082	1736114	.	+	.	name=sodB;Type=rho-independent;Reference=2447093;Sequence=ttgtcagcaaCTGTAACGCAGAAGGTTATCCTTCTGCGTTTTTgtttaattag
+NC_000913.3	RegulonDB	transcription_termination_site	1789487	1789510	.	+	.	name=aroH,aroH;Type=rho-independent;Reference=1677907;Sequence=tctgaatgcgTGCCCATTCCTGACGGAATGGGCAtttctgcgca
+NC_000913.3	RegulonDB	transcription_termination_site	1795216	1795239	.	-	.	name=ihfA,pheMST-ihfA;Type=rho-independent;Reference=2991205;Sequence=agtgaaaagaAAAAAGGCCGCAGAGCGGCCTTTTtagttagatc
+NC_000913.3	RegulonDB	transcription_termination_site	1799161	1799176	.	-	.	name=pheM,rplT-pheM;Type=rho-independent;Reference=6317865;Sequence=tacaaaaaaaGCCTCCACTGGGAGGCtttcaggcgc
+NC_000913.3	RegulonDB	transcription_termination_site	1799363	1799382	.	-	.	name=infC-rpmI-rplT,rplT,rpmI-rplT;Type=rho-independent;Reference=6317865;Sequence=gaaacgaaaaGAGGGAGACTAGCTCCCTCTttcaactggc
+NC_000913.3	RegulonDB	transcription_termination_site	1800035	1800091	.	-	.	name=infC,thrS-infC;Type=rho-independent;Reference=11522828 30247625;Sequence=taataaacgaAACAAAGGCGAACAAAGCCTGTGAAGCCCGAAGGCTCCACAGACAGTGCTACTTGAAggccttactg
+NC_000913.3	RegulonDB	transcription_termination_site	1816258	1816282	.	+	.	name=katE;Type=rho-independent;Reference=1987146;Sequence=aaacacgtagGCCTGATAAGCGAAGCGCATCAGGCagttttgcgt
+NC_000913.3	RegulonDB	transcription_termination_site	1821865	1821886	.	-	.	name=osmE,osmE;Type=rho-independent;Reference=7565114;Sequence=aggccaaaaaAAACCGGCGCAATGGCCGGTTTccgttgttac
+NC_000913.3	RegulonDB	transcription_termination_site	1825057	1825126	.	-	.	name=spy;Type=rho-independent;Reference=9068658;Sequence=ttgagaagagAAAAGAAAACCGCCGATCCTGTCCACCGCATTACTGCAAGGTAGTGGACAAGACCGGCGGTCTTAAGTTTtttggctgaa
+NC_000913.3	RegulonDB	transcription_termination_site	1844932	1844954	.	-	.	name=selD-topB,ydjA-selD-topB;Type=rho-independent;Reference=2553698;Sequence=aaaaaatatcCAACGAATTTTCTTGATCCGCTGgatatttcag
+NC_000913.3	RegulonDB	transcription_termination_site	1844937	1844959	.	-	.	name=selD-topB;Type=rho-independent;Reference=2553698;Sequence=atatccaacgAATTTTCTTGATCCGCTGGATATttcagaatat
+NC_000913.3	RegulonDB	transcription_termination_site	1850701	1850738	.	+	.	name=sppA;Type=rho-independent;Reference=3522590;Sequence=taagtcttgtACTGAGTGGCCGACAGATCGTCGGCCACATTATTTTTTacgtcgacga
+NC_000913.3	RegulonDB	transcription_termination_site	1888017	1888043	.	-	.	name=fadD-sroD;Type=rho-independent;Reference=2681190;Sequence=gtgggcgtcaAAAAAAACGCCGGATTAACCGGCGTCTgacgactgac
+NC_000913.3	RegulonDB	transcription_termination_site	1898307	1898331	.	+	.	name=sdaA;Type=rho-independent;Reference=2504697;Sequence=tacttcttacTCGCCCATCTGCAACGGATGGGCGAatttataccc
+NC_000913.3	RegulonDB	transcription_termination_site	1911652	1911679	.	-	.	name=htpX;Type=rho-independent;Reference=1826904;Sequence=gggcataaaaAAAGCGCGTCGATCAGGACGCGCTTTTTagtatttact
+NC_000913.3	RegulonDB	transcription_termination_site	1932085	1932105	.	-	.	name=eda,eda,eda,edd-eda;Type=rho-independent;Reference=1624451;Sequence=gctacaaaaaTGCCCGATCCTCGATCGGGCAttttgacttt
+NC_000913.3	RegulonDB	transcription_termination_site	1944219	1944248	.	-	.	name=ruvAB,ruvAB;Type=rho-independent;Reference=;Sequence=gaacacatttGTCGGATGCGGCGCGAGCGCCTTATCCGACctacggttcg
+NC_000913.3	RegulonDB	transcription_termination_site	1944273	1944303	.	-	.	name=ruvAB,ruvAB;Type=rho-independent;Reference=2842314;Sequence=ctctggtagtCCTGGTAAGACGCGAACAGCGTCGCATCAGGcatattgcca
+NC_000913.3	RegulonDB	transcription_termination_site	1946815	1946854	.	-	.	name=nudB-yebC-ruvC,ruvC,yebC-ruvC;Type=rho-independent;Reference=1885548;Sequence=tgcggagggaGTGGAAACGCCTCAGCCGGAACTGACCGAGGCGGTATAACttaacgcagt
+NC_000913.3	RegulonDB	transcription_termination_site	1948662	1948693	.	-	.	name=aspS,aspS;Type=rho-independent;Reference=1885548;Sequence=ccttcgctcaTCCCATTCACATAGTTATCTATGCTCATGGGAgttcactcag
+NC_000913.3	RegulonDB	transcription_termination_site	1958447	1958473	.	-	.	name=yecM-cutC;Type=rho-independent;Reference=7635807;Sequence=ggataaaaaaAGGCCCCTGTTGAAATTGCAGGGGCCTggtacgagca
+NC_000913.3	RegulonDB	transcription_termination_site	1961817	1961843	.	+	.	name=argS;Type=rho-independent;Reference=2668891;Sequence=tgagagtgaaGCCTGATCAGGGTTAGCCGATCAGGCTtttttattgc
+NC_000913.3	RegulonDB	transcription_termination_site	1972771	1972825	.	-	.	name=motAB-cheAW;Type=rho-independent;Reference=11522828 30247625;Sequence=acccgccgcgAAATTGAAATAAAAAACCCGATGCGCAGATCATCGGGTTCATTTCAATTGAGGAAatcgggagaa
+NC_000913.3	RegulonDB	transcription_termination_site	1977200	1977254	.	-	.	name=flhDC,flhDC;Type=rho-independent;Reference=11522828 30247625;Sequence=ttaacgcgcgATTGGGGCAAAAAAAAGCAGCGGTACGTCGTTACCGCTGCTGGAATGTTGCGCCTcaccgtatca
+NC_000913.3	RegulonDB	transcription_termination_site	1980096	1980126	.	-	.	name=otsA,otsBA,otsBA;Type=rho-independent;Reference=8045430;Sequence=aatcacagttTCTTTTCGCGAGCATCCTGCTCGGCGAAAAGagttattgcc
+NC_000913.3	RegulonDB	transcription_termination_site	1991745	1991778	.	-	.	name=glyW-cysT-leuZ;Type=rho-independent;Reference=12824337 19706412;Sequence=aagttgcaggCACAAAAAAACCACCCGAAGGTGGTTTCACGACActgcttattg
+NC_000913.3	RegulonDB	transcription_termination_site	1996034	1996088	.	+	.	name=yecF;Type=rho-independent;Reference=11522828 30247625;Sequence=acaagcctacCGTCAGTAATATAAAACCGGCTGATAGCGTGCCTTTCAGCCGGTTTTTGCATCTGgcacgcagga
+NC_000913.3	RegulonDB	transcription_termination_site	1997022	1997050	.	+	.	name=sdsN,sdsN;Type=rho-independent;Reference=27166377;Sequence=aaatggcgtcCAGCCCCGACAGGTGAATCGTCGGGGCTGattttttctt
+NC_000913.3	RegulonDB	transcription_termination_site	1999541	1999571	.	-	.	name=fliAZY,fliAZY,tcyJ;Type=rho-independent;Reference=8550423;Sequence=acgcgtaaatAAAAAAGGCGCTAGTGAAAGCGCCCTTTTTTgtcattatgc
+NC_000913.3	RegulonDB	transcription_termination_site	2006111	2006165	.	+	.	name=fliDST;Type=rho-independent;Reference=1527488;Sequence=cgaataatccGATTACGGCTACGCTTCTAATGTTCCCCTTGAATGGAGTCGAAGAATGCGTAATCccacgctgtt
+NC_000913.3	RegulonDB	transcription_termination_site	2007642	2007674	.	+	.	name=amyA;Type=rho-independent;Reference=1400215;Sequence=gaggtgatttAAATTCATCCCCGGCGGCAAGCCGGGGAGATTTcattacggca
+NC_000913.3	RegulonDB	transcription_termination_site	2033715	2033731	.	+	.	name=rseX;Type=rho-independent;Reference=16513633;Sequence=tattttttggGCCGGCATGATGCCGGCttttttttat
+NC_000913.3	RegulonDB	transcription_termination_site	2044704	2044750	.	+	.	name=asnT;Type=rho-independent;Reference=12824337 19706412;Sequence=cgggtttttaACATCTTAAGCGCCCTCGACCTTTATGGTTGAGGGCGTTTTGCTATGaacgccatca
+NC_000913.3	RegulonDB	transcription_termination_site	2057926	2057974	.	-	.	name=asnW;Type=rho-independent;Reference=12824337 19706412;Sequence=gaaacacagaAATCAAAAAACCCGGTCACTTTTTTACAAGGTAACCGGGTAAAAATAATttttattttt
+NC_000913.3	RegulonDB	transcription_termination_site	2059930	2059966	.	+	.	name=asnU;Type=rho-independent;Reference=12824337 19706412;Sequence=ggagccaaatTCCTGAAAAGCCCGCTTTTATAGCGGGATTTTTGCTAtatctgataa
+NC_000913.3	RegulonDB	transcription_termination_site	2071478	2071511	.	+	.	name=isrC-flu;Type=rho-independent;Reference=24837285;Sequence=ccctttacctGCCGGTATCCACGTTTGTGGGTACCGGCTTTTTTattcaccctc
+NC_000913.3	RegulonDB	transcription_termination_site	2081341	2081369	.	-	.	name=dacD;Type=rho-independent;Reference=8709849;Sequence=tgattatgcgAGCAGACTCGCACTCCTGCCAGTCTGCTGcaaaagaaag
+NC_000913.3	RegulonDB	transcription_termination_site	2090108	2090140	.	+	.	name=hisL;Type=rho-independent;Reference=360215;Sequence=aacgcatgagAAAGCCCCCGGAAGATCACCTTCCGGGGGCTTTtttattgcgc
+NC_000913.3	RegulonDB	transcription_termination_site	2167162	2167200	.	+	.	name=cyaR,cyaR,cyaR;Type=rho-independent;Reference=18978044;Sequence=gaaccacctcCTTAGCCTGTGTAATCTCCCTTACACGGGCTTATTTTTTacgcgtaata
+NC_000913.3	RegulonDB	transcription_termination_site	2192993	2193034	.	-	.	name=mrp;Type=rho-independent;Reference=2259334;Sequence=gcggcaaaaaCTAATACACCGCATCAATGTAACATCTCTGCGGTGTATGAAGaataaccaga
+NC_000913.3	RegulonDB	transcription_termination_site	2196343	2196366	.	+	.	name=metG,metG;Type=rho-independent;Reference=2259334;Sequence=atcccccttcAAGGCGCTGCATCGACAGCGCCTTttctttataa
+NC_000913.3	RegulonDB	transcription_termination_site	2219660	2219682	.	-	.	name=bglX;Type=rho-independent;Reference=8757730;Sequence=ccggcctacaAAGGGCGCAAACGTCGCGCCCTTactaaagcat
+NC_000913.3	RegulonDB	transcription_termination_site	2223961	2223987	.	+	.	name=dld;Type=rho-independent;Reference=6386470;Sequence=gccgtctgccCCGCCGCCGCCATTTGGGCGGCTTTTTgttttttata
+NC_000913.3	RegulonDB	transcription_termination_site	2282824	2282836	.	+	.	name=;Type=rho-independent;Reference=25749694;Sequence=ttgtaaaaaaCCCCGCTCCGGCGgggttttttg
+NC_000913.3	RegulonDB	transcription_termination_site	2286295	2286331	.	+	.	name=proL;Type=rho-independent;Reference=12824337 19706412;Sequence=ccaaaaatccCAAGAAAAAACCAACCCTTACGGTTGGTTTTTTTATAtctgcaatta
+NC_000913.3	RegulonDB	transcription_termination_site	2311610	2311624	.	-	.	name=ompC,ompC,ompC;Type=rho-independent;Reference=6304064;Sequence=caatgaaaaaAGGGCCCGCAGGCCCtttgttcgat
+NC_000913.3	RegulonDB	transcription_termination_site	2356723	2356752	.	+	.	name=glpABC;Type=rho-independent;Reference=3286606;Sequence=ctcctttctgATGCCCGGTAAGCATGTGGTTACCGGGCATttttgcgtac
+NC_000913.3	RegulonDB	transcription_termination_site	2390005	2390023	.	-	.	name=nuoABCEFGHIJKLMN,nuoABCEFGHIJKLMN,nuoMN;Type=rho-independent;Reference=7690854;Sequence=ttcagaaaaaCCGCCGAGCATGTCGGCGGctttctgact
+NC_000913.3	RegulonDB	transcription_termination_site	2428030	2428048	.	-	.	name=cvpA-purF-ubiX,cvpA-purF-ubiX,ubiX;Type=rho-independent;Reference=3040734;Sequence=ggttgcaaaaTTGCCCTGAAACAGGGCAAcagcggagtt
+NC_000913.3	RegulonDB	transcription_termination_site	2430850	2430904	.	-	.	name=folC-dedD;Type=rho-independent;Reference=11522828 30247625;Sequence=atttccttccCGCGCATCAATAAAAATGGCGCTGAAAAAATATTCAACGCCATCGACTTTTTATGcctttgcggc
+NC_000913.3	RegulonDB	transcription_termination_site	2432963	2433017	.	-	.	name=accD;Type=rho-independent;Reference=11522828 30247625;Sequence=gattcgttacGGTGAGAATAGCAAAAGGGCAGAGCCAGTGGCCCTGCCCTTATCAGTTATCAGGCctcaggttcc
+NC_000913.3	RegulonDB	transcription_termination_site	2440283	2440310	.	-	.	name=fabB;Type=rho-independent;Reference=3076376;Sequence=caatgatgtgAAAAAGGGAACCATCAGGTTCCCTTTTGcgttagtgcc
+NC_000913.3	RegulonDB	transcription_termination_site	2508424	2508447	.	-	.	name=glk,glk,glk,glk;Type=rho-independent;Reference=9023215;Sequence=tttaaaagatTATCGGGAGAGTTACCTCCCGATAtaaaaggaag
+NC_000913.3	RegulonDB	transcription_termination_site	2518002	2518041	.	-	.	name=alaWX;Type=rho-independent;Reference=12824337 19706412;Sequence=caaaaagcagAGACAAAAAACCCCCGCTTTGCAGCGAGGGTTGGAAATTTggtggagcta
+NC_000913.3	RegulonDB	transcription_termination_site	2519208	2519242	.	-	.	name=gltX,gltX,gltX;Type=rho-independent;Reference=3015933;Sequence=cagcataaatAAAAAACGGCAGGATATTATCTCCTGCCGTTTATCtttttacacg
+NC_000913.3	RegulonDB	transcription_termination_site	2521334	2521358	.	-	.	name=xapR,xapR;Type=rho-independent;Reference=2201776;Sequence=caccaatgtaAAAAAGCGCCCTAAAGGCGCTTTTTtactatctgc
+NC_000913.3	RegulonDB	transcription_termination_site	2521485	2521519	.	+	.	name=valUXY-lysV;Type=rho-independent;Reference=12824337 19706412;Sequence=cgacccaccaATGTAAAAAAGCGCCCTAAAGGCGCTTTTTTGCTAtctgcgattt
+NC_000913.3	RegulonDB	transcription_termination_site	2521489	2521515	.	-	.	name=xapR,xapR;Type=rho-independent;Reference=2201776;Sequence=ccaccaatgtAAAAAAGCGCCCTAAAGGCGCTTTTTTgctatctgcg
+NC_000913.3	RegulonDB	transcription_termination_site	2522698	2522720	.	-	.	name=xapAB,xapAB,xapB,xapB;Type=rho-independent;Reference=;Sequence=tatcataaaaGCAGCTCTGAAGAGCAGAGCCGCgaatcctttt
+NC_000913.3	RegulonDB	transcription_termination_site	2533409	2533424	.	+	.	name=cysK,cysK;Type=rho-independent;Reference=3290198;Sequence=gcgtaaaaaaGCACCTTTTTAGGTGCttttttgtgg
+NC_000913.3	RegulonDB	transcription_termination_site	2536363	2536380	.	+	.	name=crr,crr,ptsHI-crr,ptsHI-crr,ptsHI-crr,ptsHI-crr,ptsHI-crr,ptsHI-crr;Type=rho-independent;Reference=2457575;Sequence=cagtgaaaaaTGGCGCCCATCGGCGCCAtttttttatg
+NC_000913.3	RegulonDB	transcription_termination_site	2597803	2597824	.	-	.	name=bamC,dapA-nlpB;Type=rho-independent;Reference=1885529;Sequence=atcagaaaaaAGGGCCGGATGATTCCAGCCCTgtatttttac
+NC_000913.3	RegulonDB	transcription_termination_site	2630906	2630933	.	-	.	name=guaBA;Type=rho-independent;Reference=3894345;Sequence=ttgaagataaAAAACCCTCTGTAGTAACAGAGGGTTTTgttcattcat
+NC_000913.3	RegulonDB	transcription_termination_site	2656506	2656530	.	-	.	name=hscBA-fdx-iscX;Type=rho-independent;Reference=1317854;Sequence=cgcagccaacGCATCTGCGGCGTGAAGCATGACGCggaaattatt
+NC_000913.3	RegulonDB	transcription_termination_site	2684075	2684093	.	-	.	name=glyA;Type=rho-independent;Reference=6300791;Sequence=taacgtagaaAGGCTTCCCGAAGGAAGCCttgatgatca
+NC_000913.3	RegulonDB	transcription_termination_site	2691157	2691185	.	-	.	name=glmY,glmY;Type=rho-independent;Reference=17854828;Sequence=gttcagatacAACAAAGCCGGGAATTACCCGGCTTTGTTatggaataag
+NC_000913.3	RegulonDB	transcription_termination_site	2731557	2731611	.	-	.	name=clpB,clpB;Type=rho-independent;Reference=11522828 30247625;Sequence=ttttccgtctAACTTATAGACAAAAACGAGCCCCGAAGGGCTCGTTTTATCATTTACTGGACGGCgacaatccgg
+NC_000913.3	RegulonDB	transcription_termination_site	2737498	2737552	.	+	.	name=raiAZ;Type=rho-independent;Reference=11522828 30247625;Sequence=aagagtagtcCTTTATATTGAGTGTATCGCCAACGCGCCTTCGGGCGCGTTTTTTGTTGACAGCGtgaaaacagt
+NC_000913.3	RegulonDB	transcription_termination_site	2738912	2738940	.	both	.	name=aroF-tyrA,pheLA;Type=rho-independent;Reference=6396419;Sequence=ctgatgaaaaGGTGCCGGATGATGTGAATCATCCGGCACtggattatta
+NC_000913.3	RegulonDB	transcription_termination_site	2744115	2744169	.	both	.	name=rpsP-rimM-trmD-rplS,yfiR-dgcN-yfiB;Type=rho-independent;Reference=11522828 30247625;Sequence=taaaacaccaGCAAACAGATAAAAAAGGGCCAGCCAATTGGCCAGCCCTTCTTAACAGGATGTCGcttaagcgaa
+NC_000913.3	RegulonDB	transcription_termination_site	2746209	2746241	.	-	.	name=ffh;Type=rho-independent;Reference=2478711;Sequence=gtgaataaaaCAACCGGACCCCATCGAGGAACGGAGTCCGGTGtcatattaaa
+NC_000913.3	RegulonDB	transcription_termination_site	2822670	2822687	.	-	.	name=recA;Type=rho-independent;Reference=12547390;Sequence=aaaagcaaaaGGGCCGCAGATGCGACCCttgtgtatca
+NC_000913.3	RegulonDB	transcription_termination_site	2842477	2842501	.	-	.	name=hycABCDEFGHI;Type=rho-independent;Reference=7851435;Sequence=aaccatgaagGCCCGATAAGCGCAGCGCATCGGGCaatttagcat
+NC_000913.3	RegulonDB	transcription_termination_site	2854304	2854321	.	+	.	name=hypABCDE,hypBCDE;Type=rho-independent;Reference=1849603;Sequence=atgaccttttGCACCGCTTTGCGGTGCTttcctggaag
+NC_000913.3	RegulonDB	transcription_termination_site	2873234	2873284	.	-	.	name=cysDNC;Type=rho-independent;Reference=1316900;Sequence=cgcaaataacCAGGAGATAAAACCGACCACGGCACCAGGCAGTGACCATGTGGTTTCTTCAtcctcagtaa
+NC_000913.3	RegulonDB	transcription_termination_site	2924166	2924191	.	-	.	name=csrB;Type=rho-independent;Reference=9211896;Sequence=aataaaaaaaGGGAGCACTGTATTCACAGCGCTCCCggttcgtttc
+NC_000913.3	RegulonDB	transcription_termination_site	2947691	2947717	.	+	.	name=metZWV;Type=rho-independent;Reference=12824337 19706412 2843439;Sequence=ccaattattgAACACCCTAACGGGTGTTTTTTTGTTTctggtctccc
+NC_000913.3	RegulonDB	transcription_termination_site	2947736	2947756	.	+	.	name=metZWV;Type=rho-independent;Reference=2843439;Sequence=ccataaaaaaGCGCCATTCAGCGCCTTTTTAtcatcccctt
+NC_000913.3	RegulonDB	transcription_termination_site	2964320	2964339	.	-	.	name=lgt-thyA,thyA;Type=rho-independent;Reference=6308660;Sequence=ggtaaaaaaaCCGACGCACACTGGCGTCGGctctggcagg
+NC_000913.3	RegulonDB	transcription_termination_site	2965066	2965095	.	-	.	name=lgt;Type=rho-independent;Reference=1991715;Sequence=tctgatgaccAAAAATGGAAAGCGTTCCGGTTCCGGTACGgtcgtttttc
+NC_000913.3	RegulonDB	transcription_termination_site	3020500	3020522	.	+	.	name=ssnA;Type=rho-independent;Reference=10074077;Sequence=atgacagatgCCCTCTTCCCGCAGGGAAGAGGGttaaataagg
+NC_000913.3	RegulonDB	transcription_termination_site	3046126	3046145	.	-	.	name=gcvP,gcvTHP;Type=rho-independent;Reference=8181752;Sequence=atctgactaaAAAGGCGCCGAAGCGCCTTTagaaaatagt
+NC_000913.3	RegulonDB	transcription_termination_site	3051048	3051072	.	-	.	name=ygfB-pepP-ubiHI;Type=rho-independent;Reference=1339425;Sequence=atgaggaaaaTCTCCCGGCGAAAAAACCGGGAGATgaaagtgtga
+NC_000913.3	RegulonDB	transcription_termination_site	3056235	3056283	.	+	.	name=ssrS,ssrS,ssrS;Type=rho-dependent;Reference=21036909;Sequence=acaagaaatcCGCAAAATGATTCGGCAACGTCGTCGTGCGTTAACGCCGGAACAACAGCaggaaatggg
+NC_000913.3	RegulonDB	transcription_termination_site	3056957	3056991	.	+	.	name=sibC;Type=rho-independent;Reference=20453032;Sequence=cataacccttCTCCTTCAAGCCCTCGCTTCGGTGAGGGCTTTACCgttacagccc
+NC_000913.3	RegulonDB	transcription_termination_site	3058644	3058660	.	-	.	name=rpiA;Type=rho-independent;Reference=8366047;Sequence=atttttttaaCGGGGGAGGTTCCCCCGtcagatcatt
+NC_000913.3	RegulonDB	transcription_termination_site	3060660	3060680	.	+	.	name=argP;Type=rho-independent;Reference=2034653;Sequence=atcaaataatGCCTGATAGCACATATCAGGCgttgtcctca
+NC_000913.3	RegulonDB	transcription_termination_site	3071431	3071450	.	-	.	name=epd-pgk,epd-pgk,pgk,pgk,pgk;Type=rho-independent;Reference=16102000;Sequence=cgctgaaacaAGGGCAGGTTTCCCTGCCCTgtgatttttt
+NC_000913.3	RegulonDB	transcription_termination_site	3091089	3091112	.	+	.	name=endA,endA;Type=rho-independent;Reference=7867949;Sequence=ttaacccctaCCCCACGCGTACAACCGCGTGGGGagacgacgcg
+NC_000913.3	RegulonDB	transcription_termination_site	3091103	3091123	.	+	.	name=endA,endA;Type=rho-independent;Reference=7867949;Sequence=acgcgtacaaCCGCGTGGGGAGACGACGCGGatttttaact
+NC_000913.3	RegulonDB	transcription_termination_site	3099654	3099674	.	-	.	name=ansB,ansB;Type=rho-independent;Reference=2407723;Sequence=aagtgaaaaaGCCCCGGCACGATACCGGGGCgaggcgatta
+NC_000913.3	RegulonDB	transcription_termination_site	3110445	3110477	.	+	.	name=pheV;Type=rho-independent;Reference=12824337 19706412 3892481;Sequence=ggcaccactaATTCTTAAGAACCCGCCCACAAGGCGGGTTTTTgcttttggat
+NC_000913.3	RegulonDB	transcription_termination_site	3150552	3150576	.	-	.	name=exbBD,exbD;Type=rho-independent;Reference=2670903;Sequence=gttaaaaaaaTGCCCGGTTGTGAAAAGCAACCGGGcatcattgtg
+NC_000913.3	RegulonDB	transcription_termination_site	3184478	3184520	.	-	.	name=sroG-ribB;Type=rho-dependent;Reference=22431636;Sequence=gtaaaaaaacCTCACTAAAATTATGGTTACCAGAATCAGGGCAGTCTTAGGAGtggcggcata
+NC_000913.3	RegulonDB	transcription_termination_site	3191716	3191735	.	-	.	name=glgS,glgS;Type=rho-independent;Reference=1324388;Sequence=caaacactaaAACGGGCCATCAGGCCCGTTatatcagtgc
+NC_000913.3	RegulonDB	transcription_termination_site	3211042	3211072	.	+	.	name=rpsU;Type=rho-independent;Reference=6186393;Sequence=tgtagttgtaAGGCCGTGCTTCCGAAAGGAATGCGCGGCTTattttcgttt
+NC_000913.3	RegulonDB	transcription_termination_site	3214943	3214962	.	+	.	name=rpoD,rpoD,rpoD,rpsU-dnaG-rpoD,rpsU-dnaG-rpoD,rpsU-dnaG-rpoD;Type=rho-independent;Reference=6186393 6222240 6269063;Sequence=ctctgcacaaACGCCACCTTTTCGGTGGCGttttttatcg
+NC_000913.3	RegulonDB	transcription_termination_site	3215675	3215716	.	+	.	name=ileX;Type=rho-independent;Reference=12824337 19706412;Sequence=gggccaccagATATAGCAAAGGCTGACGAGAAATCGTCAGCCTTTTTCTTTTtatatatcag
+NC_000913.3	RegulonDB	transcription_termination_site	3269959	3269992	.	-	.	name=garPLRK-rnpB;Type=rho-independent;Reference=7489504;Sequence=ccaaaagtaaAAACCCGCCGAAGCGGGTTTTTACGTAAAACAGGtgaaactgac
+NC_000913.3	RegulonDB	transcription_termination_site	3269962	3269975	.	-	.	name=rnpB;Type=rho-independent;Reference=9175883;Sequence=aaagtaaaaaCCCGCCGAAGCGGGtttttacgta
+NC_000913.3	RegulonDB	transcription_termination_site	3270075	3270088	.	-	.	name=rnpB;Type=rho-independent;Reference=9175883;Sequence=aaagcaaaaaCCCGCCGAAGCGGGtttttacgta
+NC_000913.3	RegulonDB	transcription_termination_site	3270188	3270201	.	-	.	name=rnpB;Type=rho-independent;Reference=9175883;Sequence=aaagcaaaaaCCCGCCGAAGCGGGtttttacgta
+NC_000913.3	RegulonDB	transcription_termination_site	3308999	3309021	.	-	.	name=metY-yhbC-nusA-infB-rbfA-truB-rpsO-pnp,metY-yhbC-nusA-infB-rbfA-truB-rpsO-pnp,pnp,rpsO-pnp;Type=rho-independent;Reference=2432069;Sequence=cccggttaaaAGCCCCCCGCCGCAGCGGAGGGCaaatggcaac
+NC_000913.3	RegulonDB	transcription_termination_site	3311372	3311398	.	both	.	name=rpsO,sraG;Type=rho-independent;Reference=3007765;Sequence=gtcagcttgaAAAAAGGGGCCACTCAGGCCCCCTTTTctgaaactcg
+NC_000913.3	RegulonDB	transcription_termination_site	3313185	3313239	.	-	.	name=infB,metY-yhbC-nusA-infB,nusA-infB,rimP-nusA-infB;Type=rho-independent;Reference=11522828 30247625;Sequence=ccataataaaTTCTCCTGACAAAAAAGGGGCTGTTAGCCCCTTTTTAAAATTAATTTCAGGTGGAagggctgttc
+NC_000913.3	RegulonDB	transcription_termination_site	3318031	3318043	.	-	.	name=metY,metY;Type=rho-independent;Reference=6364142;Sequence=cataaaaaaaGGGCCTAAAGCCCagttattctg
+NC_000913.3	RegulonDB	transcription_termination_site	3318072	3318087	.	-	.	name=metY,metY;Type=rho-independent;Reference=12824337 19706412 6364142;Sequence=taacaaaaaaCCCCGATAAATCGGGGctttatataa
+NC_000913.3	RegulonDB	transcription_termination_site	3322035	3322071	.	-	.	name=secG-leuU,secG-leuU;Type=rho-independent;Reference=12824337 18033800 19706412;Sequence=ggaccaaaacGAAAAAAGACGCTTTTCAGCGTCTCTTTTCTGGAATTtggtaccgag
+NC_000913.3	RegulonDB	transcription_termination_site	3324942	3324969	.	-	.	name=rlmE-ftsH,rlmE-ftsH;Type=rho-independent;Reference=8444796;Sequence=ttgataagaaAAAACCCCGGAGCACGCCCCGGGGTTTTcggtacaaat
+NC_000913.3	RegulonDB	transcription_termination_site	3328806	3328846	.	-	.	name=greA,greA;Type=rho-independent;Reference=20008510;Sequence=ccgggaccagAAGCAAAAAAATACCGACCCGGGTACAAGTCCCAGGTCAGCtacaattcac
+NC_000913.3	RegulonDB	transcription_termination_site	3348261	3348289	.	+	.	name=rpoN-hpf-ptsN-yhbJ-npr;Type=rho-dependent;Reference=8025669;Sequence=tgacatacaaCTCCCTTCAAACTCCCCCCGACAATAAGAaaatcacgta
+NC_000913.3	RegulonDB	transcription_termination_site	3350671	3350697	.	+	.	name=arcZ;Type=rho-independent;Reference=11448770;Sequence=gtattcgcgcACCCCGGTCTAGCCGGGGTCATTTTTTagtggctttt
+NC_000913.3	RegulonDB	transcription_termination_site	3376249	3376277	.	-	.	name=sspAB;Type=rho-independent;Reference=1721886;Sequence=cattaaaaagACAAAACAGGCCGCCTGGGCCTGTTTTGTattacttcac
+NC_000913.3	RegulonDB	transcription_termination_site	3377756	3377782	.	-	.	name=rplM-rpsI,rpsI;Type=rho-independent;Reference=15126466;Sequence=ttttagctatAAAAAAACCCGCCGAAGCGGGTTTTTTcgaaaattgt
+NC_000913.3	RegulonDB	transcription_termination_site	3382115	3382154	.	+	.	name=degQ;Type=rho-independent;Reference=8576051;Sequence=cgttaatgtcGTAAACCGGGCATCAGGCTTACGTGTGATGTCCGGTTAACtcgtggtatg
+NC_000913.3	RegulonDB	transcription_termination_site	3382157	3382178	.	+	.	name=degQ;Type=rho-independent;Reference=8576051;Sequence=cggttaactcGTGGTATGCTGCTGCCGTTCCCttttttaatg
+NC_000913.3	RegulonDB	transcription_termination_site	3383281	3383316	.	+	.	name=degS;Type=rho-independent;Reference=8576051;Sequence=gtgcgctcaaAACAAAAAACCGGAGTCTGTGCTCCGGTTTTTTATTatccgctaat
+NC_000913.3	RegulonDB	transcription_termination_site	3400005	3400036	.	-	.	name=mreB,mreB,mreB;Type=rho-independent;Reference=17090951;Sequence=cgtatcagacCAGGCAGGGTAAACAGACACTTCCCCTGCCTGcatccgatta
+NC_000913.3	RegulonDB	transcription_termination_site	3407286	3407302	.	+	.	name=accBC,accBC;Type=rho-independent;Reference=8226664;Sequence=agcgtcaaaaGGCCGGATTTTCCGGCCttttttatta
+NC_000913.3	RegulonDB	transcription_termination_site	3410029	3410042	.	+	.	name=yhdT-panF-prmA;Type=rho-independent;Reference=8226664;Sequence=ccgattatttACGCAAATTTGCGTgccaaaattt
+NC_000913.3	RegulonDB	transcription_termination_site	3411593	3411626	.	+	.	name=dusB-fis;Type=rho-independent;Reference=1459953;Sequence=tgcttgattaAAAAGGCGCTACTCGGCATGGGGAAGCGCCTTTTttataggtgt
+NC_000913.3	RegulonDB	transcription_termination_site	3418143	3418177	.	+	.	name=acrEF;Type=rho-independent;Reference=1720861;Sequence=gataaatcagAAACATAAAGGCGCTTTCGGGTGCCTTTATTATTTccagtgaaac
+NC_000913.3	RegulonDB	transcription_termination_site	3423371	3423425	.	-	.	name=rrsD-ileU-alaU-rrlD-rrfD-thrV-rrfF,rrsD-ileU-alaU-rrlD-rrfD-thrV-rrfF,rrsD-ileU-alaU-rrlD-rrfD-thrV-rrfF;Type=rho-independent;Reference=11522828 30247625;Sequence=accgacaaacAACAGATAAAACAAAAGGCCCAGTCTTCCGACTGAGCCTTTTGTTTTATTTGATGtctggcagtt
+NC_000913.3	RegulonDB	transcription_termination_site	3438444	3438504	.	-	.	name=arfA;Type=rho-independent;Reference=21435036;Sequence=acaagcgcctGAAAGCAGAAGACCAGTGGTAAAAAAGTGATTTACTTTCTTGCCACTGGCCTCCCAGTTCCcccgattgcc
+NC_000913.3	RegulonDB	transcription_termination_site	3439581	3439595	.	-	.	name=rpsMKD-rpoA-rplQ,rpsMKD-rpoA-rplQ;Type=rho-independent;Reference=2989779;Sequence=gtataaaaaaACCCGCCGGGGCGGGtttttttacg
+NC_000913.3	RegulonDB	transcription_termination_site	3448267	3448285	.	-	.	name=rpsJ-rplCDWB-rpsS-rplV-rpsC-rplP-rpmC-rpsQ;Type=rho-independent;Reference=6222285;Sequence=gaaaaaataaACGGCTCATTTCTGAGCCGtttattcgta
+NC_000913.3	RegulonDB	transcription_termination_site	3453298	3453358	.	-	.	name=rpsJ-rplCDWB-rpsS-rplV-rpsC-rplP-rpmC-rpsQ;Type=rho-independent;Reference=7844821;Sequence=tattttataaACGAAAATGATTACTCCTCAGACCCATTACGATTGATGGGAGAGTGTAACCGTTCTTACGTagctccccga
+NC_000913.3	RegulonDB	transcription_termination_site	3486760	3486792	.	+	.	name=crp,crp,crp;Type=rho-independent;Reference=6280141;Sequence=taatcccgtcGGAGTGGCGCGTTACCTGGTAGCGCGCCATTTTgtttcccccg
+NC_000913.3	RegulonDB	transcription_termination_site	3525426	3525448	.	+	.	name=mrcA;Type=rho-independent;Reference=3882429;Sequence=tgttctgattAAAAAGGCGCTTCGGCGCCTTTTcagtttgctg
+NC_000913.3	RegulonDB	transcription_termination_site	3534473	3534527	.	-	.	name=ompR-envZ,ompR-envZ,ompR-envZ,ompR-envZ;Type=rho-independent;Reference=11522828 30247625;Sequence=tatccagtatCTTATAGAAAGCAAAACGGGAGGCACCTTCGCCTCCCGTTTATTTACCCTTCTTTtgtcgtgccc
+NC_000913.3	RegulonDB	transcription_termination_site	3555795	3555820	.	+	.	name=malT;Type=rho-independent;Reference=3015733;Sequence=gtgtaagtttAGCCGGATAACGCGCCAGATCCGGCTtacatctctg
+NC_000913.3	RegulonDB	transcription_termination_site	3559754	3559831	.	-	.	name=glpEGR,glpGR,glpR,glpR;Type=rho-independent;Reference=8955387;Sequence=cagctttttgACGTTTCGCGCCAGGGCAAAGCCAGCGTCAATGACGCGGATCGGCTACGCAAATACCTGGCGCGTTTTGGTCTGACGTgggaagccgt
+NC_000913.3	RegulonDB	transcription_termination_site	3564082	3564136	.	-	.	name=glgAP,glgBXCAP,glgCAP,glgCAP,glgCAP;Type=rho-independent;Reference=11522828 30247625;Sequence=ttttccgaaaTGATGGCGGAAAAAAACGGGACCCTTTGGCCCCGTTCTATTTATTGGTGAACTTAcaatctcacc
+NC_000913.3	RegulonDB	transcription_termination_site	3575688	3575711	.	-	.	name=gntKU,gntRKU,gntU;Type=rho-independent;Reference=8655507 9135111;Sequence=tcgaaaagaaCCCGGTAGCGTCACAACTACCGGGcgaacaaact
+NC_000913.3	RegulonDB	transcription_termination_site	3577006	3577038	.	-	.	name=gntK;Type=rho-independent;Reference=9135111;Sequence=catgactaaaAACAGCAGCAGTAAAACAGACCCTACTGCTGTTaaaacaagcg
+NC_000913.3	RegulonDB	transcription_termination_site	3577622	3577652	.	-	.	name=gntR,gntR,gntR;Type=rho-independent;Reference=;Sequence=aagaattaaaAATGTTACGGGTAACTGTTATCGGTAACATTgtccagccgg
+NC_000913.3	RegulonDB	transcription_termination_site	3599887	3599907	.	-	.	name=rpoH,rpoH,rpoH,rpoH,rpoH,rpoH;Type=rho-independent;Reference=6387714;Sequence=aaaaacaaaaACCCCGGACTCTCATCCAGGGttctctgctt
+NC_000913.3	RegulonDB	transcription_termination_site	3640570	3640591	.	+	.	name=uspA,uspA,uspA;Type=rho-independent;Reference=1453957;Sequence=cgtgttcctgAACGCCCGCATATGCGGGCGTTttgctttttg
+NC_000913.3	RegulonDB	transcription_termination_site	3647652	3647689	.	-	.	name=dinQ;Type=rho-independent;Reference=23408903;Sequence=aatgcgttaaATGTTAAAGGGCTAAGAGTAGTGTGCTCTTAGCCCTTAattacgtttc
+NC_000913.3	RegulonDB	transcription_termination_site	3648117	3648144	.	+	.	name=agrA;Type=rho-independent;Reference=23408903;Sequence=gctggaaagtAAAAAACCGACGCAAAGTCGGTTTTTTTacatccggat
+NC_000913.3	RegulonDB	transcription_termination_site	3648348	3648375	.	+	.	name=agrB;Type=rho-independent;Reference=23408903;Sequence=gctggaaagtAAAAAACCGACGCAAAGTCGGTTTTTTTacgtcctgat
+NC_000913.3	RegulonDB	transcription_termination_site	3663541	3663571	.	-	.	name=gadW,gadW,gadXW;Type=rho-independent;Reference=18808381;Sequence=gtaaatgagaGTAAGGTTGAACATGAAGGTTCAGCCTTACTctttcctgct
+NC_000913.3	RegulonDB	transcription_termination_site	3664915	3664935	.	-	.	name=gadAX,gadAX,gadX;Type=rho-independent;Reference=11976288;Sequence=aacggtttatTAGTCTGGAGACGGCAGACTAtcctcttccc
+NC_000913.3	RegulonDB	transcription_termination_site	3664943	3664961	.	+	.	name=gadY;Type=rho-independent;Reference=;Sequence=ctatcctcttCCCGGTCCCCTATGCCGGGttttttttat
+NC_000913.3	RegulonDB	transcription_termination_site	3699899	3699929	.	-	.	name=ldrD;Type=rho-independent;Reference=12123448;Sequence=agtaagaacgAAAAAGGCCGCAGAGTTTCCCCCCTGCGGCCtggtccgggc
+NC_000913.3	RegulonDB	transcription_termination_site	3708409	3708447	.	-	.	name=proK;Type=rho-independent;Reference=12824337 19706412;Sequence=tgagctgcagATGCAAAAAAGCCTGCTCGTTGAGCAGGCTTTTCGAATTtggtcggtga
+NC_000913.3	RegulonDB	transcription_termination_site	3708577	3708615	.	-	.	name=proK;Type=rho-independent;Reference=12824337 19706412;Sequence=tgagctgcagATGCAAAAAAGCCTGCTCGTTGAGCAGGCTTTTCGAATTtggtcggtga
+NC_000913.3	RegulonDB	transcription_termination_site	3720286	3720313	.	+	.	name=cspA,cspA;Type=rho-independent;Reference=17416651;Sequence=cacagaatctAAGATCCCTGCCATTTGGCGGGGATTTTtttatttgtt
+NC_000913.3	RegulonDB	transcription_termination_site	3722291	3722310	.	-	.	name=glyQS;Type=rho-independent;Reference=6309809;Sequence=cgataaaaaaAGCCTGCCAGATGGCAGGCTatttaataac
+NC_000913.3	RegulonDB	transcription_termination_site	3739530	3739570	.	+	.	name=malS;Type=rho-independent;Reference=1544897;Sequence=aacagtaactTTTCCGGCTTCCCGTTCGTCAGTACCTCGGGAAGCCGCCAAccaggataaa
+NC_000913.3	RegulonDB	transcription_termination_site	3739595	3739620	.	+	.	name=malS;Type=rho-independent;Reference=1544897;Sequence=cagccctaatCAGCGTTGCAGGATAAAGCACCGCTCactcttcaac
+NC_000913.3	RegulonDB	transcription_termination_site	3754906	3754941	.	-	.	name=aldB;Type=rho-independent;Reference=7768815;Sequence=tcaggttcccGTAGGCATGATAAGACGCGTAAGCGTCGCATCAGGCaatgaatacc
+NC_000913.3	RegulonDB	transcription_termination_site	3776155	3776175	.	+	.	name=mtlADR;Type=rho-independent;Reference=8300537;Sequence=gcctttcaaaAGTAAGCAACGTCTGCTTACTgcccctctac
+NC_000913.3	RegulonDB	transcription_termination_site	3776189	3776209	.	+	.	name=mtlADR;Type=rho-independent;Reference=8300537;Sequence=cctctacctgCTTCGGCCGATAAAGCCGACGataatactcc
+NC_000913.3	RegulonDB	transcription_termination_site	3776277	3776304	.	+	.	name=mtlADR;Type=rho-independent;Reference=8300537;Sequence=aatcgcgttaCGGGGAGGAAGTTTTTTCAGATACTCCCggaacgcctg
+NC_000913.3	RegulonDB	transcription_termination_site	3776401	3776419	.	+	.	name=mtlADR;Type=rho-independent;Reference=8300537;Sequence=ccgtattaccCCGCGCCGGGAATGCGCGGccgccaattt
+NC_000913.3	RegulonDB	transcription_termination_site	3811209	3811225	.	-	.	name=rpmBG,yicR-rpmBG;Type=rho-independent;Reference=7035835;Sequence=ataacaaaaaACCCCGCCGGAGCGAGGttttttgtta
+NC_000913.3	RegulonDB	transcription_termination_site	3815096	3815119	.	-	.	name=rph-pyrE;Type=rho-independent;Reference=1375912;Sequence=agtaatatgaCGCCGGATGACTTTTCATCCGGCGagtttcttta
+NC_000913.3	RegulonDB	transcription_termination_site	3815807	3815828	.	-	.	name=rph;Type=rho-independent;Reference=1375912 6207018;Sequence=agacaaaaaaAAGGCGACTCATCAGTCGCCTTaaaaatcagt
+NC_000913.3	RegulonDB	transcription_termination_site	3817574	3817603	.	+	.	name=yicC;Type=rho-independent;Reference=2664418;Sequence=ccgccttcacAAATGCCGCCACTCAAACAGAGCGGCATTTttcttccccg
+NC_000913.3	RegulonDB	transcription_termination_site	3850746	3850779	.	-	.	name=ivbL-ilvBN;Type=rho-independent;Reference=;Sequence=ctggcgggtaAAAAAAATACGCGCTTACCTTAACGATAAGCGCGatgttgttca
+NC_000913.3	RegulonDB	transcription_termination_site	3852835	3852982	.	-	.	name=ivbL;Type=rho-independent;Reference=2578464;Sequence=cttaaacgaaAAACCCCGCCCGGTTTGCGCCGGCGGGGTTTTGGAATCGTGTGTTGTTCCAGTCCCTACGGCGCATTGCCGACGACCACCACCACACGCACGACGACCACTGCGGCGGATGGCGCAGTTGGTAGTAGTTTTGCGTTGAGCATGGAAGTagtcattggg
+NC_000913.3	RegulonDB	transcription_termination_site	3853118	3853144	.	-	.	name=istR-1,istR-2;Type=rho-independent;Reference=15620655;Sequence=tgcagataacAAAAAACCCCGCCGGAGCGAGGTTTCGtcagtcgcct
+NC_000913.3	RegulonDB	transcription_termination_site	3853662	3853689	.	+	.	name=tisB;Type=rho-independent;Reference=15620655;Sequence=aagtcgcaccAAAGGGGAGCGGGAAACCGCTCCCCTTTtatatttagc
+NC_000913.3	RegulonDB	transcription_termination_site	3877532	3877586	.	-	.	name=gyrB,gyrB;Type=rho-independent;Reference=11522828 30247625;Sequence=ataattgcggATTGCAGAAATAAAAAGGGCGGAGATGATCTCCGCCCTTTTCTTATAGCTTCTTGccggatgcgg
+NC_000913.3	RegulonDB	transcription_termination_site	3888462	3888509	.	+	.	name=tnaC,tnaCAB;Type=rho-dependent;Reference=9045840;Sequence=atgtgtgaccTCAAAATGGTTCAATATTGACAACAAAATTGTCGATCACCGCCCTTGAtttgcccttc
+NC_000913.3	RegulonDB	transcription_termination_site	3902249	3902292	.	-	.	name=bglGFB;Type=rho-independent;Reference=3034860;Sequence=aaagaaagaaTTAACGCATCGCATCCAGACTGTTCTGAATGCGACGATAATTAAggtgctttaa
+NC_000913.3	RegulonDB	transcription_termination_site	3905636	3905687	.	-	.	name=bglG,bglG;Type=rho-independent;Reference=3034860;Sequence=actccaaaaaAAAACCTGAAAAAAACGGCCTGACGTGAATCAAGCAATTTTTTTCAGGTTTTgcccgcttag
+NC_000913.3	RegulonDB	transcription_termination_site	3906593	3906634	.	-	.	name=bglGFB;Type=rho-independent;Reference=3034860;Sequence=tataaacaaaAAAACCCGACTTCACCAGTATTCTCTGGTTATGTCAGGTTTTgcctgcgaat
+NC_000913.3	RegulonDB	transcription_termination_site	3908495	3908517	.	-	.	name=pstSCA,pstSCA;Type=rho-independent;Reference=2993631;Sequence=tcggtcggtcCCCTCGCCCCTCTGGGGAGAGGGttagggtgag
+NC_000913.3	RegulonDB	transcription_termination_site	3910443	3910473	.	-	.	name=pstS,pstS;Type=rho-independent;Reference=6365894;Sequence=attttgtaatGCCGGATGCGGCGTAAAACACCGTACCCGGCctggagtttt
+NC_000913.3	RegulonDB	transcription_termination_site	3911810	3911830	.	-	.	name=glmUS,glmUS;Type=rho-independent;Reference=6206892;Sequence=aggaagaaaaATGCCCCGCTTACGCAGGGCAtccatttatt
+NC_000913.3	RegulonDB	transcription_termination_site	3915508	3915530	.	-	.	name=atpBEFHAGDC,atpBEFHAGDC,atpIBEFHAGDC;Type=rho-independent;Reference=6395859;Sequence=cgcaaaaaaaAGCCAGCCTGTTTCCAGACTGGCttttgtgctt
+NC_000913.3	RegulonDB	transcription_termination_site	3923705	3923732	.	-	.	name=asnC-mioC-mnmG;Type=rho-independent;Reference=22337945;Sequence=cttgatgcgtTGCCTGGTAAGCGGGTGCTTACCAGGCAtttttaatgc
+NC_000913.3	RegulonDB	transcription_termination_site	3947032	3947067	.	+	.	name=rrsC-gltU-rrlC-rrfC,rrsC-gltU-rrlC-rrfC,rrsC-gltU-rrlC-rrfC;Type=rho-independent;Reference=115888;Sequence=cgcccctgccAGAAATCATCCTTAGCGAAAGCTAAGGATTTTTTTTatctgaaata
+NC_000913.3	RegulonDB	transcription_termination_site	3950320	3950471	.	+	.	name=ilvL,ilvL;Type=rho-independent;Reference=6154938;Sequence=agaaaagacaAAATGACAGCCCTTCTACGAGTGATTAGCCTGGTCGTGATTAGCGTGGTGGTGATTATTATCCCACCGTGCGGGGCTGCACTTGGACGAGGAAAGGCTTAGAGATCAAGCCTTAACGAACTAAGACCCCCGCACCGAAAGGTCCGGGGGTTTtttttgacct
+NC_000913.3	RegulonDB	transcription_termination_site	3956883	3956909	.	-	.	name=ilvY,ilvY;Type=rho-independent;Reference=2642900;Sequence=tagggaaaaaTGCCTGATAGCGCTTCGCTTATCAGGCctacccgcgc
+NC_000913.3	RegulonDB	transcription_termination_site	3956967	3956985	.	+	.	name=ilvA,ilvEDA,ilvLXG_1G_2MEDA,ilvLXG_1G_2MEDA;Type=rho-independent;Reference=2642900;Sequence=tgcctcaattAGCGGCTCATGTAGCCGCTttttctgcgc
+NC_000913.3	RegulonDB	transcription_termination_site	3957062	3957123	.	+	.	name=ilvA,ilvEDA,ilvLXG_1G_2MEDA,ilvLXG_1G_2MEDA;Type=rho-dependent;Reference=2642900;Sequence=ggttacgcacCGGTTCGGGGCTGTTTTCCAGCACCACTTCCGGCAACAATGCCACGCCACAGCCGAGTGCCAccatcgatac
+NC_000913.3	RegulonDB	transcription_termination_site	3966105	3966136	.	+	.	name=trxA,trxA,trxA;Type=rho-independent;Reference=2423505;Sequence=atttcatgttCGGGTGCCCCGTCGCTAAAAACTGGACGCCCGgcgtgagtca
+NC_000913.3	RegulonDB	transcription_termination_site	3966305	3966335	.	+	.	name=rhoL;Type=rho-dependent;Reference=2423505;Sequence=ctcctgtgacCAGGCAGCGAAAAGACATGAGTCGATGACCGtaaacaggca
+NC_000913.3	RegulonDB	transcription_termination_site	3966342	3966359	.	+	.	name=rhoL;Type=rho-dependent;Reference=2423505;Sequence=accgtaaacaGGCATGGATGATCCTGCCataccattca
+NC_000913.3	RegulonDB	transcription_termination_site	3966491	3966513	.	+	.	name=rhoL;Type=rho-independent;Reference=2423505;Sequence=ggctggaaaaCCTGGCTCGTATGCGTAAGCAGGacattatttt
+NC_000913.3	RegulonDB	transcription_termination_site	3966718	3966740	.	+	.	name=rhoL;Type=rho-independent;Reference=2423505;Sequence=tctggtaagaTTCGCCCGCCGAAAGAAGGTGAAcgctattttg
+NC_000913.3	RegulonDB	transcription_termination_site	3966856	3966876	.	+	.	name=rhoL;Type=rho-independent;Reference=2423505;Sequence=cgtctgcgtaTGGAACGTGGTAACGGTTCTActgaagattt
+NC_000913.3	RegulonDB	transcription_termination_site	3967677	3967731	.	+	.	name=rhoL-rho;Type=rho-independent;Reference=11522828 30247625;Sequence=acgctcataaATTTGTCTTATGCCAAAAACGCCACGTGTTTACGTGGCGTTTTGCTTTTATATCTgtaatcttaa
+NC_000913.3	RegulonDB	transcription_termination_site	3982813	3982841	.	+	.	name=argX-hisR-leuT-proM;Type=rho-independent;Reference=12824337 19706412 6327651;Sequence=cgccgaccaaTTTTGAACCCCGCTTCGGCGGGGTTTTTTgttttctgtg
+NC_000913.3	RegulonDB	transcription_termination_site	4000150	4000177	.	+	.	name=uvrD,uvrD;Type=rho-independent;Reference=6379604;Sequence=gtgtaacgttGCCGGATGCGGTGCTGCGCACCTTATTTggcctaaaaa
+NC_000913.3	RegulonDB	transcription_termination_site	4005815	4005836	.	+	.	name=pldA;Type=rho-independent;Reference=6397464;Sequence=gtttctcgcgCAGGCGCTGAAAATAGCGCCTGtttttatttc
+NC_000913.3	RegulonDB	transcription_termination_site	4007726	4007763	.	+	.	name=recQ;Type=rho-independent;Reference=3027506;Sequence=gtatgaagacTCCGTAAACGTTTCCCCCGCGAGTCAAATGTATGTTGAtgttatttct
+NC_000913.3	RegulonDB	transcription_termination_site	4023516	4023537	.	+	.	name=tatABC;Type=rho-independent;Reference=10747959;Sequence=agaataaattCAACCGCCCGTCAGGGCGGTTGtcatatggag
+NC_000913.3	RegulonDB	transcription_termination_site	4049962	4050016	.	+	.	name=spf;Type=rho-independent;Reference=11522828 30247625;Sequence=cggatttggcTGAATATTTTAGCCGCCCCAGTCAGTAATGACTGGGGCGTTTTTTATTGGGCGAAagaaaagatc
+NC_000913.3	RegulonDB	transcription_termination_site	4051241	4051280	.	+	.	name=csrC;Type=rho-independent;Reference=12694612;Sequence=gttatgagtcAGGAAAAAAGGCGACAGAGTAATCTGTCGCCTTTTTTCTTtgcttgcttt
+NC_000913.3	RegulonDB	transcription_termination_site	4055990	4056009	.	-	.	name=glnA,glnA;Type=rho-independent;Reference=2865194;Sequence=ttcctgacttAAGCGGCGCTGGTTATCCATcggagccatc
+NC_000913.3	RegulonDB	transcription_termination_site	4056418	4056472	.	-	.	name=glnA,glnA;Type=rho-independent;Reference=11522828 30247625;Sequence=gcatcagagaATTGACGGAGAAAAAAGCCCATGCAGAGATGGGCTACAGATAGCTGACAAACTTCacgttggaga
+NC_000913.3	RegulonDB	transcription_termination_site	4079990	4080025	.	+	.	name=yiiF;Type=rho-independent;Reference=30247625;Sequence=tgatgtcaatCAGATTGCTGACAACGTGCGCGTTGTTCATGCCGGAtgcggcgtga
+NC_000913.3	RegulonDB	transcription_termination_site	4101468	4101522	.	+	.	name=sodA;Type=rho-independent;Reference=11522828 30247625;Sequence=tataggccgcATATCAGCTTAAAAAATGAACCATCGCCAACGGCGGTGGTTTTTTTGTGATCAATttcaaaataa
+NC_000913.3	RegulonDB	transcription_termination_site	4106361	4106379	.	+	.	name=cpxPQ;Type=rho-independent;Reference=9473036;Sequence=tccctgtcttCCCCCACATGCTGTGGGGGttttttttat
+NC_000913.3	RegulonDB	transcription_termination_site	4108678	4108732	.	+	.	name=pfkA,pfkA,pfkA,pfkA;Type=rho-independent;Reference=11522828 30247625;Sequence=catggacaaaGCGCACTTTGTCAGCAATATGAGGCGGATTTCTTCCGCCTTTTTAATCCCTCAACatatacccgc
+NC_000913.3	RegulonDB	transcription_termination_site	4109830	4109884	.	+	.	name=sbp;Type=rho-independent;Reference=11522828 30247625;Sequence=ctgatttcccCAGGATAATTATCAAACCCGGTGGTTTCTCGCGACCGGGTTTTTTATTTGTCACGattttgcgtt
+NC_000913.3	RegulonDB	transcription_termination_site	4110708	4110730	.	+	.	name=cdh;Type=rho-independent;Reference=2995360;Sequence=aggaaagtaaGTGCCGGATATGAAATCCGGCACctgtcagact
+NC_000913.3	RegulonDB	transcription_termination_site	4114527	4114548	.	-	.	name=glpFKX;Type=rho-independent;Reference=1400248;Sequence=aacaaaaaaaTTCCAGTCCCGAAGGACTGGAAggctcaatcg
+NC_000913.3	RegulonDB	transcription_termination_site	4120368	4120385	.	-	.	name=hslVU;Type=rho-independent;Reference=8244018;Sequence=ccaataaaaaTGGGGCCTTTCAGCCCCAtcaaacaatg
+NC_000913.3	RegulonDB	transcription_termination_site	4127241	4127262	.	+	.	name=rpmE,rpmE;Type=rho-independent;Reference=32209634;Sequence=gatttccgaaAAAAGCGCCGCACGGCGCTTTTtttgtgcctg
+NC_000913.3	RegulonDB	transcription_termination_site	4132402	4132456	.	+	.	name=metBL;Type=rho-independent;Reference=11522828 30247625;Sequence=agtacatggtTAGTTTATATTTGCAGTCCGGTTTGCTTTGCATACCGGATTTTCTTTTTCTTACCatcctgaagt
+NC_000913.3	RegulonDB	transcription_termination_site	4162137	4162164	.	-	.	name=trmA;Type=rho-independent;Reference=1999392;Sequence=gtaatcggtaTTATGCCGGATGCTGGCGCATCCGGCATgggttttact
+NC_000913.3	RegulonDB	transcription_termination_site	4171760	4171803	.	+	.	name=rrlB-rrfB,rrsB-gltT-rrlB-rrfB,rrsB-gltT-rrlB-rrfB,rrsB-gltT-rrlB-rrfB;Type=rho-independent;Reference=7028991;Sequence=caggcatcaaATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATctgttgtttg
+NC_000913.3	RegulonDB	transcription_termination_site	4171935	4171962	.	+	.	name=rrlB-rrfB,rrsB-gltT-rrlB-rrfB,rrsB-gltT-rrlB-rrfB,rrsB-gltT-rrlB-rrfB;Type=rho-independent;Reference=7028991;Sequence=caaattaagcAGAAGGCCATCCTGACGGATGGCCTTTTtgcgtttcta
+NC_000913.3	RegulonDB	transcription_termination_site	4177158	4177185	.	+	.	name=thrU-tyrU-glyT-thrT-tufB;Type=rho-independent;Reference=2419743 7312036;Sequence=caatgcgcacTAAAAGGGCATCATTTGATGCCCTTTTTgcacgctttc
+NC_000913.3	RegulonDB	transcription_termination_site	4178328	4178356	.	+	.	name=secE-nusG;Type=rho-independent;Reference=2137819;Sequence=cgttgcacaaGGCGTGAGATTGGAATACAATTTCGCGCCttttgttttt
+NC_000913.3	RegulonDB	transcription_termination_site	4189599	4189613	.	+	.	name=rplJL-rpoBC,rplKAJL-rpoBC,rpoBC;Type=rho-independent;Reference=6278450;Sequence=taacgtaaaaACCCGCTTCGGCGGGtttttttatg
+NC_000913.3	RegulonDB	transcription_termination_site	4190328	4190349	.	+	.	name=yjaZ;Type=rho-independent;Reference=6278450;Sequence=caaaataacaAAACCCACCTTAAGGTGGGTTTcgccagagaa
+NC_000913.3	RegulonDB	transcription_termination_site	4200582	4200601	.	+	.	name=hupA;Type=rho-independent;Reference=2187099;Sequence=agttttaacgAAGGGGTGGTTTCACCCCTTttgtctttct
+NC_000913.3	RegulonDB	transcription_termination_site	4213155	4213209	.	+	.	name=rrlE-rrfE,rrsE-gltV-rrlE-rrfE,rrsE-gltV-rrlE-rrfE,rrsE-gltV-rrlE-rrfE;Type=rho-independent;Reference=11522828 30247625;Sequence=ggaactgccaGGCATCAAATTAGAAAAACCCCGGTCCATAAGGCCGGGGTTTTTTGCATATCAATtatttgcatg
+NC_000913.3	RegulonDB	transcription_termination_site	4236159	4236209	.	+	.	name=yjbE;Type=rho-independent;Reference=;Sequence=taaagtatgtATCCCCAAAATAATTCGAGTCATTGCATCTGTGGCTAGAAGTATGAAGGGAttaaccataa
+NC_000913.3	RegulonDB	transcription_termination_site	4240734	4240777	.	-	.	name=xylE;Type=rho-independent;Reference=2820984;Sequence=aagcgggagtAAAAAGTCAGCACGCCGAAATGGCGCGGCGTGCTGGACAGGAAGattacagcgt
+NC_000913.3	RegulonDB	transcription_termination_site	4242539	4242555	.	-	.	name=malEFG;Type=rho-independent;Reference=2836810;Sequence=agaaaaaaagGCGCTCCGTGGAGCGCCgaataacagt
+NC_000913.3	RegulonDB	transcription_termination_site	4268317	4268340	.	+	.	name=tyrB;Type=rho-independent;Reference=3521591;Sequence=atgcaggaaaGCAGGCTGGAGCTACCCAGCCTGCagtgaaatta
+NC_000913.3	RegulonDB	transcription_termination_site	4271007	4271061	.	both	.	name=uvrA,yjbQR;Type=rho-independent;Reference=11522828 30247625;Sequence=ttgctggtgcAACTCTGAAAGGAAAAGGCCGCTCAGAAAGCGGCCTTAACGATTACAGCATCGGCttaaggaagc
+NC_000913.3	RegulonDB	transcription_termination_site	4277927	4277957	.	both	.	name=ryjA,soxR;Type=rho-independent;Reference=11448770;Sequence=aagatgaacaAAACTAAAGCGCCACAAGGGCGCTTTAGTTTgttttccggt
+NC_000913.3	RegulonDB	transcription_termination_site	4297178	4297211	.	-	.	name=fdhF;Type=rho-independent;Reference=3040739;Sequence=tcgaatggatAAAAAAACAGCCTCCGAAAGGAGGCTGTAGAAAGgacggtatta
+NC_000913.3	RegulonDB	transcription_termination_site	4313801	4313827	.	+	.	name=rpiB;Type=rho-independent;Reference=8576032;Sequence=agaaattgagATTCATCCACTACTTGCATGGATGAGTaatgattaat
+NC_000913.3	RegulonDB	transcription_termination_site	4338210	4338237	.	-	.	name=adiA;Type=rho-independent;Reference=8383109;Sequence=aaggccaggcGGCGTAATGTTATTTAAACAATTACGCCttcagcggaa
+NC_000913.3	RegulonDB	transcription_termination_site	4345631	4345650	.	-	.	name=dcuB-fumB,dcuB-fumB,fumB;Type=rho-independent;Reference=2656658;Sequence=aaaagaggtgGCCAGGGGGATCACCTGGCAgcatgctgcc
+NC_000913.3	RegulonDB	transcription_termination_site	4362509	4362548	.	-	.	name=pheU;Type=rho-independent;Reference=12824337 19706412;Sequence=tggcgtcctgAAACGAAAAACGGACCTCCGTGGAGGTCCGTTTATATGAAtttggtgccc
+NC_000913.3	RegulonDB	transcription_termination_site	4366844	4366864	.	-	.	name=aspA;Type=rho-independent;Reference=2987841;Sequence=acaagaaaaaAGGCACGTCATCTGACGTGCCttttttattt
+NC_000913.3	RegulonDB	transcription_termination_site	4376705	4376731	.	+	.	name=ecnB;Type=rho-independent;Reference=9677290;Sequence=aataagcaatAACGGTACGACAGCTGTGTCGTGCCGTttgttttttc
+NC_000913.3	RegulonDB	transcription_termination_site	4377783	4377800	.	-	.	name=ampC;Type=rho-independent;Reference=7559452;Sequence=gcggagaaaaGGTCCGAAAATTCGGACCcgatggaatt
+NC_000913.3	RegulonDB	transcription_termination_site	4378966	4378987	.	-	.	name=frdABCD,frdABCD;Type=rho-independent;Reference=6251026 7010184;Sequence=tccatacaaaACGGCCCGCCATAGGCGGGCCGgatttacatt
+NC_000913.3	RegulonDB	transcription_termination_site	4466284	4466298	.	-	.	name=treR,treR,treR,treR;Type=rho-independent;Reference=9148912;Sequence=tcacaatttaTCGTTCAGGAAACGAtcaggacagg
+NC_000913.3	RegulonDB	transcription_termination_site	4472426	4472445	.	-	.	name=pyrLBI,pyrLBI;Type=rho-independent;Reference=6300835;Sequence=ggcaaaaaaaAGCCCCTCGATTGAGGGGCTgggaatgggt
+NC_000913.3	RegulonDB	transcription_termination_site	4480932	4480957	.	-	.	name=valS,valS;Type=rho-independent;Reference=3275659;Sequence=tgtaagagatAAAAAAGGCCGGAGCATGCTCCGGCCttcgttttca
+NC_000913.3	RegulonDB	transcription_termination_site	4496494	4496529	.	+	.	name=leuX;Type=rho-independent;Reference=12824337 19706412;Sequence=gcaccaaaagTATGTAAATAGACCTCAACTGAGGTCTTTTTTTATGcctgaaatcc
+NC_000913.3	RegulonDB	transcription_termination_site	4542851	4542902	.	+	.	name=fimE;Type=rho-dependent;Reference=16321930;Sequence=tgtggctcgaCGCATCTTCCTCATTCTTCTCTCCAAAAACCACCTCATGCAATATAAACATCtataaataaa
+NC_000913.3	RegulonDB	transcription_termination_site	4549922	4549942	.	-	.	name=gntP;Type=rho-independent;Reference=8550444;Sequence=tcatcagtctGAGCCTGCCATTGGCAGGCTCtggtgtcctt
+NC_000913.3	RegulonDB	transcription_termination_site	4599620	4599635	.	-	.	name=dnaTC-yjjA,yjjB-dnaTC-yjjA;Type=rho-independent;Reference=2844800;Sequence=aggggtaaaaCCGTCCAGGAGCAGGGaaaagggcag
+NC_000913.3	RegulonDB	transcription_termination_site	4600139	4600157	.	-	.	name=dnaTC,yjjB-dnaTC;Type=rho-independent;Reference=2844800;Sequence=tggaaattaaTGCGCTGGCGGCAATGGCAcagcacagaa
+NC_000913.3	RegulonDB	transcription_termination_site	4621635	4621659	.	+	.	name=deoBD,deoCABD,deoCABD;Type=rho-independent;Reference=3299264;Sequence=tgccttgtgaAGCCGGAGCGGGAGACTGCTCCGGCtttttagtat
+NC_000913.3	RegulonDB	transcription_termination_site	4633111	4633144	.	+	.	name=trpR;Type=rho-independent;Reference=7012834;Sequence=taagacgtggCGCATCAGGCATCGTGCACCGAATGCCGGATGCGgcgtgaacgc
+NC_000913.3	RegulonDB	transcription_termination_site	4639538	4639572	.	+	.	name=creABCD,creD;Type=rho-independent;Reference=3531171;Sequence=taaggttgaaAAATAAAAACGGCGCTAAAAAGCGCCGTTTTTTTTgacggtggta
+NC_000913.3	RegulonDB	transcription_termination_site	4639539	4639572	.	-	.	name=arcA,arcA,arcA,arcA,arcA,arcA,arcA;Type=rho-independent;Reference=2984198;Sequence=aaggttgaaaAATAAAAACGGCGCTAAAAAGCGCCGTTTTTTTTgacggtggta

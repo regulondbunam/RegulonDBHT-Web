@@ -8,14 +8,23 @@ import DataSet from './HT-DataSet/dataSet';
 
 export default function HT() {
     const datasetType = useParams().datasetType;
-    const query = useParams().query;
-    const id_dataset = useParams().id_dataset;
+    const site = useParams().site;
+    const info = useParams().info;
 
-    if(id_dataset){
+    if(!datasetType){
         return(
             <div>
                 <Title />
-                <DataSet id_dataset={id_dataset} />
+                <MainPage />
+            </div>
+        )
+    }
+
+    if(site !== "query"){
+        return(
+            <div>
+                <Title />
+                <DataSet datasetType={datasetType} id_dataset={info} experimentType={site} />
             </div>
         )
     }
@@ -24,17 +33,9 @@ export default function HT() {
         <div>
             <Title />
             {
-                !datasetType?<MainPage />:setdatasetType(datasetType,query)
-            }
-        </div>
-    )
-}
-
-function setdatasetType(datasetType,query) {
-    return (
-        <div>
-            {
-                !query?<HtBuilder datasetType={datasetType}/>:<ResultPage query={query}/>
+                !info
+                ?<HtBuilder datasetType={datasetType}/>
+                :<ResultPage datasetType={datasetType} query={info}/>
             }
         </div>
     )

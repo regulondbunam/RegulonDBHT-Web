@@ -2,8 +2,19 @@ import React from 'react'
 import ExternalRef from './externalRef'
 import Note from './note'
 
-export default function TfInfo({ data }) {
-    const objTest = data?.objectTested
+export default function TfInfo({ objTest }) {
+    let synonyms = objTest?.synonyms
+    let genes = objTest?.genes
+    let externalCrossReferences = objTest?.externalCrossReferences
+    if(Array.isArray(synonyms) && !synonyms.length){
+        synonyms = undefined
+    }
+    if(Array.isArray(genes) && !genes.length){
+        genes = undefined
+    }
+    if(Array.isArray(externalCrossReferences) && !externalCrossReferences.length){
+        externalCrossReferences = undefined
+    }
     if (!objTest) {
         return null
     } 
@@ -20,7 +31,7 @@ export default function TfInfo({ data }) {
                 </thead>
             </table>
             {
-                objTest?.synonyms
+                synonyms
                     ? <p>Synonyms: {
                         objTest.synonyms.map(s => {
                             return s
@@ -29,7 +40,7 @@ export default function TfInfo({ data }) {
                     : null
             }
             {
-                objTest?.genes
+                genes
                     ? <p>Genes: {
                         objTest.genes.map((gen,i) => {
                             return <a key={gen._id} style={{marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen.name}&organism=ECK12&type=All`} target="_blank" rel="noreferrer">{gen.name}</a>          
@@ -38,7 +49,7 @@ export default function TfInfo({ data }) {
                     : null
             }
             {
-                objTest?.externalCrossReferences
+                externalCrossReferences
                 ?<div>
                     <p>External Cross References</p>
                     <ExternalRef externalRef={objTest?.externalCrossReferences} />

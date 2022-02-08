@@ -1,0 +1,28 @@
+NC_000913.3	RegulonDB	binding_site	1031966	1031981		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp;TFBSCenterPosition=-10;Sequence=-10
+NC_000913.3	RegulonDB	binding_site	1031966	1031981		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp2;TFBSCenterPosition=-10;Sequence=-10
+NC_000913.3	RegulonDB	binding_site	1031982	1031997		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp;TFBSCenterPosition=7;Sequence=7
+NC_000913.3	RegulonDB	binding_site	1031982	1031997		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp2;TFBSCenterPosition=7;Sequence=7
+NC_000913.3	RegulonDB	binding_site	1547255	1547270		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=fdnGHI;PromoterName=fdnGp;TFBSCenterPosition=-109;Sequence=-109
+NC_000913.3	RegulonDB	binding_site	1547264	1547279		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=fdnGHI;PromoterName=fdnGp;TFBSCenterPosition=-100;Sequence=-100
+NC_000913.3	RegulonDB	binding_site	1754625	1754632		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=ydhYVWXUT;PromoterName=ydhYp;TFBSCenterPosition=15;Sequence=15
+NC_000913.3	RegulonDB	binding_site	1754634	1754641		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=ydhYVWXUT;PromoterName=ydhYp;TFBSCenterPosition=6;Sequence=6
+NC_000913.3	RegulonDB	binding_site	1880025	1880040		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=yeaR-yoaG;PromoterName=yeaRp;TFBSCenterPosition=-39;Sequence=-39
+NC_000913.3	RegulonDB	binding_site	1880034	1880049		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=yeaR-yoaG;PromoterName=yeaRp;TFBSCenterPosition=-48;Sequence=-48
+NC_000913.3	RegulonDB	binding_site	2303606	2303621		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=napFDAGHBC-ccmABCDEFGH;PromoterName=napFp1;TFBSCenterPosition=-40;Sequence=-40
+NC_000913.3	RegulonDB	binding_site	2303606	2303621		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=napFDAGHBC-ccmABCDEFGH;PromoterName=napFp2;TFBSCenterPosition=-37;Sequence=-37
+NC_000913.3	RegulonDB	binding_site	2303615	2303630		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=napFDAGHBC-ccmABCDEFGH;PromoterName=napFp1;TFBSCenterPosition=-49;Sequence=-49
+NC_000913.3	RegulonDB	binding_site	2303615	2303630		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=napFDAGHBC-ccmABCDEFGH;PromoterName=napFp2;TFBSCenterPosition=-46;Sequence=-46
+NC_000913.3	RegulonDB	binding_site	2832353	2832368		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=norVW;PromoterName=norVp;TFBSCenterPosition=-78;Sequence=-78
+NC_000913.3	RegulonDB	binding_site	2832362	2832377		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=norVW;PromoterName=norVp;TFBSCenterPosition=-69;Sequence=-69
+NC_000913.3	RegulonDB	binding_site	3493905	3493920		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=nirBDC-cysG;PromoterName=nirBp;TFBSCenterPosition=-74;Sequence=-74
+NC_000913.3	RegulonDB	binding_site	3493914	3493929		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=nirBDC-cysG;PromoterName=nirBp;TFBSCenterPosition=-65;Sequence=-65
+NC_000913.3	RegulonDB	binding_site	4287584	4287599		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=nrfABCDEFG;PromoterName=nrfAp;TFBSCenterPosition=-79;Sequence=-79
+NC_000913.3	RegulonDB	binding_site	4287593	4287608		+	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=nrfABCDEFG;PromoterName=nrfAp;TFBSCenterPosition=-70;Sequence=-70
+NC_000913.3	RegulonDB	binding_site	4432042	4432057		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=ytfE;PromoterName=ytfEp;TFBSCenterPosition=-41;Sequence=-41
+NC_000913.3	RegulonDB	binding_site	4432051	4432066		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=ytfE;PromoterName=ytfEp;TFBSCenterPosition=-50;Sequence=-50
+NC_000913.3	RegulonDB	binding_site	913937	913952		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=hcp-hcr;PromoterName=hcpp;TFBSCenterPosition=-100;Sequence=-100
+NC_000913.3	RegulonDB	binding_site	913937	913952		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=hcp-hcr-poxB;PromoterName=hcpp;TFBSCenterPosition=-100;Sequence=-100
+NC_000913.3	RegulonDB	binding_site	913946	913961		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=hcp-hcr;PromoterName=hcpp;TFBSCenterPosition=-109;Sequence=-109
+NC_000913.3	RegulonDB	binding_site	913946	913961		-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=hcp-hcr-poxB;PromoterName=hcpp;TFBSCenterPosition=-109;Sequence=-109
+NC_000913.3	RegulonDB	binding_site				-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=ydeP;PromoterName=ydePp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=NarP;ActiveConformation=NarP-Phosphorylated;RegulatedTUName=fdhF;PromoterName=fdhFp;TFBSCenterPosition=;Sequence=

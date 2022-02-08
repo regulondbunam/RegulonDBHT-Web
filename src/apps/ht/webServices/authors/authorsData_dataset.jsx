@@ -14,8 +14,6 @@ function query(id_dataset) {
     {
         getAuthorsDataOfDataset(datasetId:"${id_dataset}"){
           _id
-          datasetIds
-          authorsData
         }
       }
     `

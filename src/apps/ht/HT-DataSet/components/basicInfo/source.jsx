@@ -4,26 +4,10 @@ import Style from '../basicInfo.module.css'
 export default function SourceSerie({ sourceSerie }) {
     let informations = useMemo(() => {
         let inf = []
-        //inf.push({title:"",data:""});
-        //datasetType
-        //sourceSerie
-        /*
-        {
-            "sourceID": null,
-            "sourceName": "GEO",
-            "title": "ArcA",
-            "platformID": "GPL8387",
-            "platformTitle": null,
-            "strategy": "ChIP-chip",
-            "method": null,
-            "__typename": "SourceSerie"
-        } */
-        //inf.push({ title: "Platform", data: sourceSerie?.platformTitle });
-        
 
-        inf.push({ title: "Serie id", data: sourceSerie?.sourceId });
-        // inf.push({ title: "Title", data: sourceSerie?.title });
-        // inf.push({ title: "Name", data: sourceSerie?.sourceName });
+        sourceSerie?.series.length > 0 && inf.push({ title: "Serie id", data: sourceSerie?.series.map(s => { return s.sourceId }).join(" ") });
+        sourceSerie?.title && inf.push({ title: "Title", data: sourceSerie?.title });
+        sourceSerie?.name && inf.push({ title: "Name", data: sourceSerie?.sourceName });
 
         return inf
     }, [sourceSerie])
@@ -31,7 +15,7 @@ export default function SourceSerie({ sourceSerie }) {
         <table>
             <tbody>
                 {
-                    sourceSerie?.platformTitle
+                    sourceSerie?.strategy
                         ? <tr>
                             <td>
                                 <table>
@@ -45,14 +29,18 @@ export default function SourceSerie({ sourceSerie }) {
                                                     {sourceSerie?.strategy}
                                                 </p>
                                             </td>
-                                            <td>
-                                                <p style={{ fontSize: "12px" }} className="p_accent">
-                                                    Platform
-                                                </p>
-                                                <a href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${sourceSerie?.platformId}`} >
-                                                    {sourceSerie?.platformTitle}
-                                                </a>
-                                            </td>
+                                            {
+                                                sourceSerie?.platform?._id &&
+                                                <td>
+                                                    <p style={{ fontSize: "12px" }} className="p_accent">
+                                                        Platform
+                                                    </p>
+                                                    <a href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${sourceSerie?.platform?._id}`} >
+                                                        {sourceSerie?.platform?.title}
+                                                    </a>
+                                                </td>
+                                            }
+
                                         </tr>
                                     </tbody>
                                 </table>
@@ -81,7 +69,7 @@ function BitInfo({ title, data }) {
     if (!data) {
         return null
     }
-    if(title==="Serie id"){
+    if (title === "Serie id") {
         return (
             <div className={Style.gridItem}>
                 <p style={{ fontSize: "12px" }} className="p_accent">

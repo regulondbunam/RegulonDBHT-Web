@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	1360948	1360967		+	.	name=PuuR;ActiveConformation=PuuR;RegulatedTUName=puuDRCBE;PromoterName=puuDp;TFBSCenterPosition=-94.5;Sequence=-94.5
+NC_000913.3	RegulonDB	binding_site	1360948	1360967		-	.	name=PuuR;ActiveConformation=PuuR;RegulatedTUName=puuAP;PromoterName=puuAp;TFBSCenterPosition=11.5;Sequence=11.5
+NC_000913.3	RegulonDB	binding_site	1361043	1361062		+	.	name=PuuR;ActiveConformation=PuuR;RegulatedTUName=puuDRCBE;PromoterName=puuDp;TFBSCenterPosition=1.5;Sequence=1.5
+NC_000913.3	RegulonDB	binding_site	1361043	1361062		-	.	name=PuuR;ActiveConformation=PuuR;RegulatedTUName=puuAP;PromoterName=puuAp;TFBSCenterPosition=-84.5;Sequence=-84.5
+NC_000913.3	RegulonDB	binding_site	1361085	1361104		+	.	name=PuuR;ActiveConformation=PuuR;RegulatedTUName=puuDRCBE;PromoterName=puuDp;TFBSCenterPosition=43.5;Sequence=43.5
+NC_000913.3	RegulonDB	binding_site	1361085	1361104		-	.	name=PuuR;ActiveConformation=PuuR;RegulatedTUName=puuAP;PromoterName=puuAp;TFBSCenterPosition=-126.5;Sequence=-126.5
+NC_000913.3	RegulonDB	binding_site	1361120	1361139		+	.	name=PuuR;ActiveConformation=PuuR;RegulatedTUName=puuDRCBE;PromoterName=puuDp;TFBSCenterPosition=78.5;Sequence=78.5
+NC_000913.3	RegulonDB	binding_site	1361120	1361139		-	.	name=PuuR;ActiveConformation=PuuR;RegulatedTUName=puuAP;PromoterName=puuAp;TFBSCenterPosition=-161.5;Sequence=-161.5

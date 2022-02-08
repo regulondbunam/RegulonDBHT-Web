@@ -1,4 +1,15 @@
-export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
+export function confGenome({
+  id_dataset,
+  peaksFile,
+  sitesFile,
+  tfFiles,
+  tsFile,
+  ttFile,
+  tuFile,
+  geFile,
+  promoter,
+  terminator
+}) {
   let conf = {
     "id": "Ecoli",
     "name": "Ecoli",
@@ -9,75 +20,108 @@ export function confGenome(peaksFile,sitesFile,tfFile, tsFile, ttFile, tuFile) {
       {
         "name": "Genes",
         "type": "annotation",
-        "url": "/media/raw/GeneProductSet.gff3",
+        "url": "/media/raw/ht_collections_web_v3/regulondb/GeneProductSet.gff3",
         "format": "gff3",
         "displayMode": "EXPANDED",
       }
     ]
   }
+  if (geFile) {
+    conf.tracks.push(
+      {
+        "name": `${id_dataset} dataset`,
+        "url": geFile,
+        "nameField": `${id_dataset} dataset`,
+      }
+    )    
+  }
+  if (tfFiles) {
+    tfFiles.forEach(tf => {
+      conf.tracks.push(
+        {
+          "name": `RegulonDB TFBS: ${tf.name}`,
+          "url": tf.url,
+          "displayMode": "EXPANDED",
+          "nameField": `RegulonDB TFBS: ${tf.name}`
+        }
+      )  
+    });
+      
+  }
   if (peaksFile) {
     conf.tracks.push(
       {
-        "name": "peaks",
+        "name": `${id_dataset} peaks`,
         "url": peaksFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "peaks",
+        "nameField": `${id_dataset} peaks`,
       }
     )    
   }
   if (sitesFile) {
     conf.tracks.push(
       {
-        "name": "sites",
+        "name": `${id_dataset} sites`,
         "url": sitesFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "sites",
+        "nameField": `${id_dataset} sites`,
       }
     )    
   }
-  if (tfFile) {
+  if (terminator) {
     conf.tracks.push(
       {
-        "name": "RegulonDB TFBS",
-        "url": tfFile,
-        "format": "bed",
+        "name": `TerminatorSet`,
+        "url": terminator,
+        "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "RegulonDB_TFBS",
+        "nameField": `TerminatorSet`,
       }
     )    
   }
   if (ttFile) {
     conf.tracks.push(
       {
-        "name": "ttFile",
+        "name": `${id_dataset} dataset`,
         "url": ttFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "TT",
+        "nameField": `${id_dataset} dataset`,
+      }
+    )    
+  }
+  if (promoter) {
+    conf.tracks.push(
+      {
+        "name": `PromoterSet`,
+        "url": promoter,
+        "format": "gff3",
+        "displayMode": "EXPANDED",
+        "nameField": `PromoterSet`,
       }
     )    
   }
   if (tsFile) {
     conf.tracks.push(
       {
-        "name": "tsFile",
+        "name": `${id_dataset} dataset`,
         "url": tsFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "TS",
+        "nameField": `${id_dataset} dataset`,
       }
     )    
   }
   if (tuFile) {
     conf.tracks.push(
       {
-        "name": "tuFile",
+        "name": `${id_dataset} dataset`,
         "url": tuFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
-        "nameField": "TU",
+        "nameField": `${id_dataset} dataset`,
       }
     )    
   }

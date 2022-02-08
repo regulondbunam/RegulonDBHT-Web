@@ -1,0 +1,17 @@
+NC_000913.3	RegulonDB	binding_site	1103303	1103314		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp1;TFBSCenterPosition=37;Sequence=37
+NC_000913.3	RegulonDB	binding_site	1103303	1103314		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp3;TFBSCenterPosition=37;Sequence=37
+NC_000913.3	RegulonDB	binding_site	1103364	1103375		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp1;TFBSCenterPosition=-25;Sequence=-25
+NC_000913.3	RegulonDB	binding_site	1103364	1103375		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp3;TFBSCenterPosition=-25;Sequence=-25
+NC_000913.3	RegulonDB	binding_site	1103915	1103926		+	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=csgBAC;PromoterName=csgBp;TFBSCenterPosition=62;Sequence=62
+NC_000913.3	RegulonDB	binding_site	1103915	1103926		+	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=csgBAC;PromoterName=csgBp2;TFBSCenterPosition=62;Sequence=62
+NC_000913.3	RegulonDB	binding_site	121826	121837		+	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=pdhR-aceEF-lpdA;PromoterName=pdhRp;TFBSCenterPosition=-203;Sequence=-203
+NC_000913.3	RegulonDB	binding_site	121826	121837		+	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=pdhR-aceEF-lpdA;PromoterName=pdhRp2;TFBSCenterPosition=-203;Sequence=-203
+NC_000913.3	RegulonDB	binding_site	121841	121852		+	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=pdhR-aceEF-lpdA;PromoterName=pdhRp;TFBSCenterPosition=-188;Sequence=-188
+NC_000913.3	RegulonDB	binding_site	121841	121852		+	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=pdhR-aceEF-lpdA;PromoterName=pdhRp2;TFBSCenterPosition=-188;Sequence=-188
+NC_000913.3	RegulonDB	binding_site	1907926	1907937		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=yobF-cspC;PromoterName=yobFp1;TFBSCenterPosition=-138;Sequence=-138
+NC_000913.3	RegulonDB	binding_site	1907962	1907973		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=yobF-cspC;PromoterName=yobFp1;TFBSCenterPosition=-174;Sequence=-174
+NC_000913.3	RegulonDB	binding_site	1907995	1908006		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=yobF-cspC;PromoterName=yobFp1;TFBSCenterPosition=-207;Sequence=-207
+NC_000913.3	RegulonDB	binding_site	3384357	3384368		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=mdh;PromoterName=mdhp1;TFBSCenterPosition=-49;Sequence=-49
+NC_000913.3	RegulonDB	binding_site	3384381	3384392		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=mdh;PromoterName=mdhp1;TFBSCenterPosition=-73;Sequence=-73
+NC_000913.3	RegulonDB	binding_site	3384453	3384464		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=mdh;PromoterName=mdhp1;TFBSCenterPosition=-145;Sequence=-145
+NC_000913.3	RegulonDB	binding_site	4591415	4591444		-	.	name=BtsR;ActiveConformation=BtsR-Phosphorylated;RegulatedTUName=btsT;PromoterName=yjiYp;TFBSCenterPosition=-62;Sequence=-62

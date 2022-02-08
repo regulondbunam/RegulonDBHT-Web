@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	3128245	3128259		+	.	name=GlcC;ActiveConformation=GlcC-glycolate;RegulatedTUName=glcC;PromoterName=glcCp;TFBSCenterPosition=47;Sequence=47
+NC_000913.3	RegulonDB	binding_site	3128245	3128259		-	.	name=GlcC;ActiveConformation=GlcC-glycolate;RegulatedTUName=glcDEFGBA;PromoterName=glcDp;TFBSCenterPosition=-176;Sequence=-176

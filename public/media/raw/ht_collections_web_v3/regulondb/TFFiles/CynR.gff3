@@ -1,0 +1,6 @@
+NC_000913.3	RegulonDB	binding_site	358700	358708		-	.	name=CynR;ActiveConformation=CynR;RegulatedTUName=cynR;PromoterName=cynRp;TFBSCenterPosition=6;Sequence=6
+NC_000913.3	RegulonDB	binding_site	358700	358708		+	.	name=CynR;ActiveConformation=CynR-cyanate;RegulatedTUName=cynTSX;PromoterName=cynTp;TFBSCenterPosition=-69;Sequence=-69
+NC_000913.3	RegulonDB	binding_site	358700	358708		+	.	name=CynR;ActiveConformation=CynR-cyanate;RegulatedTUName=cynTS;PromoterName=cynTp;TFBSCenterPosition=-69;Sequence=-69
+NC_000913.3	RegulonDB	binding_site	358738	358746		-	.	name=CynR;ActiveConformation=CynR;RegulatedTUName=cynR;PromoterName=cynRp;TFBSCenterPosition=-33;Sequence=-33
+NC_000913.3	RegulonDB	binding_site	358738	358746		+	.	name=CynR;ActiveConformation=CynR-cyanate;RegulatedTUName=cynTSX;PromoterName=cynTp;TFBSCenterPosition=-31;Sequence=-31
+NC_000913.3	RegulonDB	binding_site	358738	358746		+	.	name=CynR;ActiveConformation=CynR-cyanate;RegulatedTUName=cynTS;PromoterName=cynTp;TFBSCenterPosition=-31;Sequence=-31

@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	1821755	1821773		-	.	name=ChbR;ActiveConformation=ChbR;RegulatedTUName=chbBCARFG;PromoterName=chbBp;TFBSCenterPosition=-38;Sequence=-38
+NC_000913.3	RegulonDB	binding_site	1821755	1821773		-	.	name=ChbR;ActiveConformation=ChbR-<i>N</i>-monoacetylchitobiose 6'-phosphate;RegulatedTUName=chbBCARFG;PromoterName=chbBp;TFBSCenterPosition=-38;Sequence=-38
+NC_000913.3	RegulonDB	binding_site	1821778	1821796		-	.	name=ChbR;ActiveConformation=ChbR;RegulatedTUName=chbBCARFG;PromoterName=chbBp;TFBSCenterPosition=-61;Sequence=-61
+NC_000913.3	RegulonDB	binding_site	1821778	1821796		-	.	name=ChbR;ActiveConformation=ChbR-<i>N</i>-monoacetylchitobiose 6'-phosphate;RegulatedTUName=chbBCARFG;PromoterName=chbBp;TFBSCenterPosition=-61;Sequence=-61

@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	365922	365942		-	.	name=LacI;ActiveConformation=LacI;RegulatedTUName=lacZYA;PromoterName=lacZp1;TFBSCenterPosition=412;Sequence=412
+NC_000913.3	RegulonDB	binding_site	366323	366343		-	.	name=LacI;ActiveConformation=LacI;RegulatedTUName=lacZYA;PromoterName=lacZp1;TFBSCenterPosition=11;Sequence=11
+NC_000913.3	RegulonDB	binding_site	366415	366435		-	.	name=LacI;ActiveConformation=LacI;RegulatedTUName=lacZYA;PromoterName=lacZp1;TFBSCenterPosition=-82;Sequence=-82

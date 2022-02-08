@@ -1,0 +1,6 @@
+NC_000913.3	RegulonDB	binding_site	3926504	3926508		-	.	name=MraZ;ActiveConformation=MraZ;RegulatedTUName=mioC;PromoterName=mioCp;TFBSCenterPosition=-31;Sequence=-31
+NC_000913.3	RegulonDB	binding_site	3926517	3926521		-	.	name=MraZ;ActiveConformation=MraZ;RegulatedTUName=mioC;PromoterName=mioCp;TFBSCenterPosition=-44;Sequence=-44
+NC_000913.3	RegulonDB	binding_site	3926527	3926531		-	.	name=MraZ;ActiveConformation=MraZ;RegulatedTUName=mioC;PromoterName=mioCp;TFBSCenterPosition=-54;Sequence=-54
+NC_000913.3	RegulonDB	binding_site	89591	89595		+	.	name=MraZ;ActiveConformation=MraZ;RegulatedTUName=mraZW-ftsLI-murEF-mraY-murD-ftsW-murGC-ddlB-ftsQAZ-lpxC;PromoterName=mraZp;TFBSCenterPosition=-3;Sequence=-3
+NC_000913.3	RegulonDB	binding_site	89601	89605		+	.	name=MraZ;ActiveConformation=MraZ;RegulatedTUName=mraZW-ftsLI-murEF-mraY-murD-ftsW-murGC-ddlB-ftsQAZ-lpxC;PromoterName=mraZp;TFBSCenterPosition=8;Sequence=8
+NC_000913.3	RegulonDB	binding_site	89611	89615		+	.	name=MraZ;ActiveConformation=MraZ;RegulatedTUName=mraZW-ftsLI-murEF-mraY-murD-ftsW-murGC-ddlB-ftsQAZ-lpxC;PromoterName=mraZp;TFBSCenterPosition=18;Sequence=18

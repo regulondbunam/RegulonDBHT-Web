@@ -4,28 +4,42 @@ import { Link } from 'react-router-dom'
 
 export default function PanelResult({ ds, match_data }) {
     const growthCondition = ds?.growthConditions
-    const tf = ds?.objectTested
-    //console.log(tf)
+    const tf = ds?.objectsTested.map((tf)=>{
+        return tf?.name
+    }).join(" ")
+    const eS = ds?.sourceSerie?.strategy
+    console.log(tf)
     const [_display, set_display] = useState(false)
     let gc = useMemo(() => {
         let inf = []
         //inf.push({title:"",data:""});
-        inf.push({ title: "ORGANISM", data: growthCondition?.organism });
-        inf.push({ title: "GENETIC BACKGROUND", data: growthCondition?.geneticBackground });
-        inf.push({ title: "MEDIUM", data: growthCondition?.medium });
+        
+        growthCondition?.organism && inf.push({ title: "ORGANISM", data: growthCondition?.organism });
+        growthCondition?.geneticBackground && inf.push({ title: "GENETIC BACKGROUND", data: growthCondition?.geneticBackground });
+        growthCondition?.medium && inf.push({ title: "MEDIUM", data: growthCondition?.medium });
         //MEDIUM SUPPLEMENTS ?
-        inf.push({ title: "AERATIOM", data: growthCondition?.aeration });
-        inf.push({ title: "TEMPERATURE", data: growthCondition?.temperature });
-        inf.push({ title: "PH", data: growthCondition?.ph });
-        inf.push({ title: "PRESSURE", data: growthCondition?.pressure });
-        inf.push({ title: "OPTICAL DENSITY", data: growthCondition?.opticalDensity });
-        inf.push({ title: "GROWTH PHASE", data: growthCondition?.growthPhase });
-        inf.push({ title: "GROWTH RATE", data: growthCondition?.growthRate });
-        inf.push({ title: "VESSEL TYPE", data: growthCondition?.vesselType });
-        inf.push({ title: "AERATION SPEED", data: growthCondition?.aerationSpeed });
+        growthCondition?.aeration && inf.push({ title: "AERATIOM", data: growthCondition?.aeration });
+        growthCondition?.temperature && inf.push({ title: "TEMPERATURE", data: growthCondition?.temperature });
+        growthCondition?.ph && inf.push({ title: "PH", data: growthCondition?.ph });
+        growthCondition?.pressure && inf.push({ title: "PRESSURE", data: growthCondition?.pressure });
+        growthCondition?.opticalDensity && inf.push({ title: "OPTICAL DENSITY", data: growthCondition?.opticalDensity });
+        growthCondition?.growthPhase && inf.push({ title: "GROWTH PHASE", data: growthCondition?.growthPhase });
+        growthCondition?.growthRate && inf.push({ title: "GROWTH RATE", data: growthCondition?.growthRate });
+        growthCondition?.vesselType && inf.push({ title: "VESSEL TYPE", data: growthCondition?.vesselType });
+        growthCondition?.aerationSpeed && inf.push({ title: "AERATION SPEED", data: growthCondition?.aerationSpeed });
+        if(inf.length === 0 ) {return undefined;}
         return inf;
     }, [growthCondition])
-    //console.log(ds)
+
+
+    let title = ds?.sample?.title
+    if(!title ||  title === "obtener de GEO"){
+        title = tf
+        if(!title){
+            title = ds?._id
+        }
+    }
+    //console.log(gc)
     return (
 
         <div className={Style.Panel}
@@ -36,9 +50,7 @@ export default function PanelResult({ ds, match_data }) {
             <Link to={`/TFBINDING/dataset/${ds?._id}`}>
                 <h2 className={Style.title}>
                     {
-                        ds?.sample?.title
-                        ?ds?.sample?.title
-                        :ds?._id
+                        title
                     }
                 </h2>
             </Link>
@@ -58,16 +70,18 @@ export default function PanelResult({ ds, match_data }) {
                     </div>
                     : null
             }
+            <div>
             {
-                tf?._id && <div>
-                    <b>Transcrption Factor: </b><br />
-                    {tf?.name}
-                </div>
+                tf?.name && <b>{`Transcription Factor: ${tf?.name}`}<br /></b>
             }
+            {
+                eS && <b>{`Experiment Strategy: ${eS}`}</b>
+            }
+            </div>
             {
                 gc
                     ? <div>
-                        <b>Growth Conditions:</b><br />
+                        <b>Growth Condition:</b><br />
                         {
                             _display
                                 ? <div className={Style.gridContainer}>

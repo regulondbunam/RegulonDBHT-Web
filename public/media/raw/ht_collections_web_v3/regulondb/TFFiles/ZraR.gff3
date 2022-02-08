@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	4201782	4201798		-	.	name=ZraR;ActiveConformation=ZraR-Phosphorylated;RegulatedTUName=zraP;PromoterName=zraPp;TFBSCenterPosition=-78;Sequence=-78
+NC_000913.3	RegulonDB	binding_site	4201782	4201798		+	.	name=ZraR;ActiveConformation=ZraR-Phosphorylated;RegulatedTUName=zraSR;PromoterName=zraSp;TFBSCenterPosition=-115;Sequence=-115
+NC_000913.3	RegulonDB	binding_site	4201811	4201827		-	.	name=ZraR;ActiveConformation=ZraR-Phosphorylated;RegulatedTUName=zraP;PromoterName=zraPp;TFBSCenterPosition=-107;Sequence=-107
+NC_000913.3	RegulonDB	binding_site	4201811	4201827		+	.	name=ZraR;ActiveConformation=ZraR-Phosphorylated;RegulatedTUName=zraSR;PromoterName=zraSp;TFBSCenterPosition=-86;Sequence=-86

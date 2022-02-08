@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import GetInfoDataset from '../webServices/dataset/dataset_info'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import BasicInfo from './components/basicInfo'
-import TfInfo from './components/tfInfo'
+//import TfInfo from './components/tfInfo'
 import GrowthConditions from './components/growthConditions'
 import { Viewer } from './igv/viewer'
 import CONF from '../config/ht_conf_enus.json'
 import Tabs from './components/tabs'
 import Related from '../relatedTool/related'
 import NLPGC from '../HT-NLPGrowthCondition/nlpgc'
+import ObjectsTested from './components/objectsTested'
 
 const conf = CONF?.pages?.dataset_page
 
@@ -76,8 +77,7 @@ export default function DatasetInfo({ id_dataset }) {
 
 function Body({ data }) {
     const section = conf?.sections
-    console.log(data)
-    const version = data?.releaseDataControl?.version
+    //const version = data?.releaseDataControl?.version
 
     useEffect(() => {
         const RELATED = document.getElementById("related_ht")
@@ -91,14 +91,9 @@ function Body({ data }) {
             RELATED.dispatchEvent(REL_REACTION);
         }
     }, [data])
-
+    console.log(data);
     return (
         <div>
-            {
-                data?._id
-                    ? null
-                    : <h2>Error on ID</h2>
-            }
             {
                 data?._id
                     ? <div>
@@ -111,15 +106,7 @@ function Body({ data }) {
                     : null
             }
             {
-                data?.objectTested?._id
-                    ? <div>
-                        <h2 dangerouslySetInnerHTML={{ __html: section?.dataset_tf?.title }} />
-                        <p dangerouslySetInnerHTML={{ __html: section?.dataset_tf?.description }} />
-                        <div style={{ marginLeft: "5%" }}>
-                            <TfInfo data={data} />
-                        </div>
-                    </div>
-                    : null
+                data?.datasetType === "TFBINDING" && <ObjectsTested objectsTested={data?.objectsTested} />
             }
             {
                 data?.growthConditions &&
@@ -132,14 +119,15 @@ function Body({ data }) {
             }
             <NLPGC id_dataset={data?._id} />
             <Tabs id_dataset={data?._id} data={data} />
-            {
-                data?.datasetType !== "GENE_EXPRESSION" && data?.sourceSerie?.strategy !== "ChIP-exo" && version === "0.0.3"
-                ?<Viewer id_dataset={data?._id} tf={data?.objectTested?.name} datasetType={data?.datasetType} />
-                :null
-            }
-            
             <br />
-            
+            <div id="igv-view" >
+                {
+
+                    data?.sourceSerie?.strategy !== "ChIP-exo"
+                        ? <Viewer id_dataset={data?._id} tfs={data?.objectsTested} datasetType={data?.datasetType} />
+                        : null
+                }
+            </div>
             <br />
             <br />
         </div>
@@ -147,3 +135,6 @@ function Body({ data }) {
 
 }
  //<Tabs id_dataset={data?._id} data={data} />
+/**
+ * 
+ */

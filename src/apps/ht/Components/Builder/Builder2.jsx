@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Autocomplete from "../Autocomplete/autocomplete"
@@ -54,6 +55,7 @@ const META_GC = [
     { "value": "Aeration Speed", "query": "growthConditions.aerationSpeed" }
 ]
 
+// eslint-disable-next-line no-unused-vars
 const META_NLPG = [
     { "value": "NLPG ID", "query": "_id" },
     //Organism
@@ -276,13 +278,13 @@ export default function Builder2({
                 <button className="accent" disabled={((_keyword === undefined || _keyword === "") /* || query === undefined */) && (buildedQuery === undefined || buildedQuery === "")} style={{ marginRight: "1%" }} onClick={() => {
                     let queryBox = document.getElementById("query_area");
                     if (queryBox.value) {
-                        history.push(`/dataset/query/${fixQuery(queryBox.value)} AND ${datasetType}[datasetType]`)
+                        history.push(`/${datasetType}/query/${fixQuery(queryBox.value)} AND ${datasetType}[datasetType]`)
                     } else {
                         if (turnOff) {//consultar builder de GC
-                            history.push(`/dataset/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
+                            history.push(`/${datasetType}/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
                         } else {
                             //Coonsultar builder normal
-                            history.push(`/dataset/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
+                            history.push(`/${datasetType}/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
                         }
                     }
                 }}>Search</button>
@@ -301,6 +303,7 @@ function fixQuery(query) {
 
     //let especialCharacterArray = ["%", "_", "-", ";", ".", "/"];
     // String.remplace("","")
+    //Caracteres aceptados por el modulo % + , - . / : ; = _ ~| '' comillas simples  \"\" comillas dobles escapeadas
     let negativeCharacterArray = [",", "`", "~", "!", "@", "#", "$", "^", "&", "*", "+", "=", ":", ">", "<", ",", "?", "{", "}", "%"]
     for (let i = 0; i < brokeQueryArray.length; i++) {
         if (brokeQueryArray[i] !== "(") {

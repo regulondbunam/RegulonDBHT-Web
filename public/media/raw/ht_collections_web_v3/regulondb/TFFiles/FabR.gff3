@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	1016509	1016526		-	.	name=FabR;ActiveConformation=FabR;RegulatedTUName=fabA;PromoterName=fabAp;TFBSCenterPosition=-19.5;Sequence=-19.5
+NC_000913.3	RegulonDB	binding_site	2441653	2441670		-	.	name=FabR;ActiveConformation=FabR;RegulatedTUName=fabB;PromoterName=fabBp;TFBSCenterPosition=-20.5;Sequence=-20.5

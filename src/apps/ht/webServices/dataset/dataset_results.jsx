@@ -12,10 +12,10 @@ import { gql } from "@apollo/client";
 function query(ht_query) {
   try {
     return gql`
-  {
+    {
       getDatasetsFromSearch(advancedSearch: "${ht_query}") {
         _id
-          publication {
+          publications {
             pmid
             doi
             authors
@@ -24,7 +24,7 @@ function query(ht_query) {
             pmcid
           }
           fivePrimeEnrichment
-          objectTested {
+          objectsTested {
             _id
             name
             synonyms
@@ -42,11 +42,16 @@ function query(ht_query) {
             }
           }
           sourceSerie {
-            sourceId
-            sourceName
+            series{
+              sourceId
+              sourceName
+            }
+            platform{
+              _id
+              source
+              title
+            }
             title
-            platformId
-            platformTitle
             strategy
             method
           }
@@ -109,7 +114,8 @@ const GetResultsDataset = ({
     if (data) {
 
       try {
-        resoultsData(data?.getDatasetsFromSearch)
+        //console.log(data)
+        resoultsData(clean(data?.getDatasetsFromSearch))
         status('done')
       } catch (error) {
         resoultsData(undefined)
@@ -125,6 +131,15 @@ const GetResultsDataset = ({
 
   }, [loading, error, status, data, resoultsData, ht_query]);
   return (<></>);
+}
+
+function clean(arrayData){
+  arrayData.forEach((data,i) => {
+    if(data?.sample?.title === '-'){
+      arrayData[i].sample.title = undefined;
+    }
+  });
+  return arrayData
 }
 
 export default GetResultsDataset;

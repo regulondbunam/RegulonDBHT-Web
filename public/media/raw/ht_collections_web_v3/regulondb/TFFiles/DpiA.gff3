@@ -1,0 +1,14 @@
+NC_000913.3	RegulonDB	binding_site	652049	652072		+	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=dpiBA;PromoterName=dpiBp;TFBSCenterPosition=77;Sequence=77
+NC_000913.3	RegulonDB	binding_site	652049	652072		-	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=citCDEFXG;PromoterName=citCp2;TFBSCenterPosition=-21;Sequence=-21
+NC_000913.3	RegulonDB	binding_site	652049	652072		-	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=citCDEFXG;PromoterName=citCp1;TFBSCenterPosition=-108;Sequence=-108
+NC_000913.3	RegulonDB	binding_site	652076	652099		-	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=citCDEFXG;PromoterName=citCp2;TFBSCenterPosition=-48;Sequence=-48
+NC_000913.3	RegulonDB	binding_site	652076	652099		-	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=citCDEFXG;PromoterName=citCp1;TFBSCenterPosition=-135;Sequence=-135
+NC_000913.3	RegulonDB	binding_site	652076	652099		+	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=dpiBA;PromoterName=dpiBp;TFBSCenterPosition=104;Sequence=104
+NC_000913.3	RegulonDB	binding_site	652118	652141		-	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=citCDEFXG;PromoterName=citCp2;TFBSCenterPosition=-90;Sequence=-90
+NC_000913.3	RegulonDB	binding_site	652118	652141		-	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=citCDEFXG;PromoterName=citCp1;TFBSCenterPosition=-177;Sequence=-177
+NC_000913.3	RegulonDB	binding_site	652118	652141		+	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=dpiBA;PromoterName=dpiBp;TFBSCenterPosition=146;Sequence=146
+NC_000913.3	RegulonDB	binding_site				-	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=mdh;PromoterName=mdhp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=exuT;PromoterName=exuTp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=appY;PromoterName=appYp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=mdh;PromoterName=mdhp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=DpiA;ActiveConformation=DpiA-P<sup>asp</sup>;RegulatedTUName=exuT;PromoterName=exuTp1;TFBSCenterPosition=;Sequence=

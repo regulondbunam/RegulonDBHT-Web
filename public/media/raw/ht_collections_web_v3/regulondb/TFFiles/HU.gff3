@@ -1,0 +1,21 @@
+NC_000913.3	RegulonDB	binding_site	3742558	3742579		+	.	name=CRP;ActiveConformation=CRP-cAMP;RegulatedTUName=yiaKLMNO-lyx-sgbHUE;PromoterName=yiaKp;TFBSCenterPosition=-105.5;Sequence=-105.5
+NC_000913.3	RegulonDB	binding_site	3742725	3742746		+	.	name=CRP;ActiveConformation=CRP-cAMP;RegulatedTUName=yiaKLMNO-lyx-sgbHUE;PromoterName=yiaKp;TFBSCenterPosition=62.5;Sequence=62.5
+NC_000913.3	RegulonDB	binding_site	792059	792092		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galETKM;PromoterName=galEp1;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792059	792092		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galE;PromoterName=galEp1;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792059	792092		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galET;PromoterName=galEp1;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792059	792092		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galETK;PromoterName=galEp1;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792059	792092		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galETK;PromoterName=galEp;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792059	792092		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galET;PromoterName=galEp;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792059	792092		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galE;PromoterName=galEp;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792059	792092		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galETKM;PromoterName=galEp;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792064	792097		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galETKM;PromoterName=galEp2;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792064	792097		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galE;PromoterName=galEp2;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792064	792097		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galET;PromoterName=galEp2;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site	792064	792097		-	.	name=HU;ActiveConformation=HU;RegulatedTUName=galETK;PromoterName=galEp2;TFBSCenterPosition=6.5;Sequence=6.5
+NC_000913.3	RegulonDB	binding_site				+	.	name=HU;ActiveConformation=HU;RegulatedTUName=seqA-pgm;PromoterName=seqAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=HU;ActiveConformation=HU;RegulatedTUName=micF;PromoterName=micFp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=HU;ActiveConformation=HU;RegulatedTUName=mtr;PromoterName=mtrp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=HU;ActiveConformation=HU;RegulatedTUName=tyrP;PromoterName=tyrPp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=HU;ActiveConformation=HU;RegulatedTUName=micF;PromoterName=micFp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site	3742618	3742630		+	.	name=IHF;ActiveConformation=IHF;RegulatedTUName=yiaKLMNO-lyx-sgbHUE;PromoterName=yiaKp;TFBSCenterPosition=-49.5;Sequence=-49.5
+NC_000913.3	RegulonDB	binding_site	3742663	3742683		+	.	name=YiaJ;ActiveConformation=YiaJ;RegulatedTUName=yiaKLMNO-lyx-sgbHUE;PromoterName=yiaKp;TFBSCenterPosition=-1;Sequence=-1

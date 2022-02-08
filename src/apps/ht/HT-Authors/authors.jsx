@@ -1,44 +1,47 @@
-import React from 'react'
-import { CsvToHtmlTable } from 'react-csv-to-table';
+import React, { useEffect, useState } from 'react'
+import { SpinnerCircle } from '../../../components/ui-components/ui_components';
+import { AuthorTable } from './table';
 
-export default function Authors({ data }) {
-    console.log(data)
-    const authorData = data[0]?.authorsData
-    if (!authorData) {
+export default function Authors({ id_dataset }) {
+    //console.log(data)
+    const [_tableData, set_tableData] = useState();
+
+    useEffect(() => {
+        if (!_tableData) {
+            try {
+                //REACT_APP_PROSSES_SERVICE
+                fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/authorData/jsonTable`,{cache: "no-cache"})
+                    .then(response => response.json())
+                    .then(data => set_tableData(data))
+                    .catch(error => {
+                        console.error(error)
+                        set_tableData({ error: error })
+                    });
+            } catch (error) {
+                console.error(error)
+                set_tableData({ error: error })
+            }
+
+        }
+    }, [_tableData, id_dataset]);
+
+    console.log(_tableData);
+
+    if (!id_dataset) {
         return null
     }
     try {
-        let start = authorData.indexOf("#")
-        let end = authorData.indexOf("\n")
-        let coment = authorData.substring(start, end)
-        coment = coment.replace("# ","")
-        let document = authorData.substring(end, authorData.length)
-        let link = saveStaticDataToFile(authorData, data[0]?._id)
         return (
             <div>
-                <button
-                    onClick={() => { window.location = link }}
-                >Download File</button>
-                <div style={{ overflow: "auto", height: "500px" }} >
-                    <p>{coment}</p>
-                    <CsvToHtmlTable
-                        data={document}
-                        tableClassName="table_content"
-                        csvDelimiter=","
-                    />
-                </div>
+                {
+                    _tableData 
+                    ?<AuthorTable tableData={_tableData} id_dataset={id_dataset} />
+                    : <SpinnerCircle />
+                }
             </div>
         )
     } catch (error) {
         return null
     }
 
-}
-
-function saveStaticDataToFile(str, name) {
-    let blob = new Blob([str],
-        { type: "text/csv;charset=utf-8" },
-        `n_S${name}.csv`
-    );
-    return window.URL.createObjectURL(blob);
 }

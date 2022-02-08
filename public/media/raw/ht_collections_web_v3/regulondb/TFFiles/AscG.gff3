@@ -1,0 +1,10 @@
+NC_000913.3	RegulonDB	binding_site	2839350	2839364		+	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=ascFB;PromoterName=ascFp;TFBSCenterPosition=-72.5;Sequence=-72.5
+NC_000913.3	RegulonDB	binding_site	2839426	2839440		+	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=ascFB;PromoterName=ascFp;TFBSCenterPosition=4.5;Sequence=4.5
+NC_000913.3	RegulonDB	binding_site	348487	348493		-	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=prpR;PromoterName=prpRp;TFBSCenterPosition=-18.5;Sequence=-18.5
+NC_000913.3	RegulonDB	binding_site	348498	348504		-	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=prpR;PromoterName=prpRp;TFBSCenterPosition=-29.5;Sequence=-29.5
+NC_000913.3	RegulonDB	binding_site	348505	348511		-	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=prpR;PromoterName=prpRp;TFBSCenterPosition=-36.5;Sequence=-36.5
+NC_000913.3	RegulonDB	binding_site	348515	348521		-	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=prpR;PromoterName=prpRp;TFBSCenterPosition=-46.5;Sequence=-46.5
+NC_000913.3	RegulonDB	binding_site	348527	348533		-	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=prpR;PromoterName=prpRp;TFBSCenterPosition=-58.5;Sequence=-58.5
+NC_000913.3	RegulonDB	binding_site	495157	495171		+	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=htpG;PromoterName=htpGp1;TFBSCenterPosition=89.5;Sequence=89.5
+NC_000913.3	RegulonDB	binding_site	855832	855846		+	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=ybiT;PromoterName=ybiTp;TFBSCenterPosition=-108.5;Sequence=-108.5
+NC_000913.3	RegulonDB	binding_site				-	.	name=AscG;ActiveConformation=AscG;RegulatedTUName=fecABCDE;PromoterName=fecAp;TFBSCenterPosition=;Sequence=

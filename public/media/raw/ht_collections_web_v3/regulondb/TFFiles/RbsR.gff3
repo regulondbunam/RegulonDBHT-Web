@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	1702145	1702164		+	.	name=RbsR;ActiveConformation=RbsR-D-ribose;RegulatedTUName=add;PromoterName=addp6;TFBSCenterPosition=-47.5;Sequence=-47.5
+NC_000913.3	RegulonDB	binding_site	3933320	3933339		+	.	name=RbsR;ActiveConformation=RbsR;RegulatedTUName=rbsDACBKR;PromoterName=rbsDp;TFBSCenterPosition=8.5;Sequence=8.5
+NC_000913.3	RegulonDB	binding_site	4207638	4207657		-	.	name=RbsR;ActiveConformation=RbsR;RegulatedTUName=purHD;PromoterName=purHp;TFBSCenterPosition=-20.5;Sequence=-20.5

@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	2741185	2741202		-	.	name=SoxR;ActiveConformation=SoxR;RegulatedTUName=aroF-tyrA;PromoterName=aroFp;TFBSCenterPosition=8.5;Sequence=8.5
+NC_000913.3	RegulonDB	binding_site	3348447	3348464		+	.	name=SoxR;ActiveConformation=SoxR;RegulatedTUName=yrbL;PromoterName=yrbLp;TFBSCenterPosition=36;Sequence=36
+NC_000913.3	RegulonDB	binding_site	4100758	4100775		+	.	name=SoxR;ActiveConformation=SoxR;RegulatedTUName=sodA;PromoterName=sodAp;TFBSCenterPosition=9;Sequence=9
+NC_000913.3	RegulonDB	binding_site	4275159	4275176		-	.	name=SoxR;ActiveConformation=SoxR;RegulatedTUName=yjcB;PromoterName=yjcBp;TFBSCenterPosition=-4;Sequence=-4
+NC_000913.3	RegulonDB	binding_site	4277409	4277426		-	.	name=SoxR;ActiveConformation=SoxR;RegulatedTUName=soxS;PromoterName=soxSp;TFBSCenterPosition=6;Sequence=6
+NC_000913.3	RegulonDB	binding_site	4277440	4277457		+	.	name=SoxR;ActiveConformation=SoxR;RegulatedTUName=soxR;PromoterName=soxRp;TFBSCenterPosition=2.5;Sequence=2.5
+NC_000913.3	RegulonDB	binding_site	4277440	4277457		-	.	name=SoxR;ActiveConformation=SoxR;RegulatedTUName=soxS;PromoterName=soxSp;TFBSCenterPosition=-25.5;Sequence=-25.5
+NC_000913.3	RegulonDB	binding_site				-	.	name=SoxR;ActiveConformation=SoxR;RegulatedTUName=fumC;PromoterName=fumCp;TFBSCenterPosition=;Sequence=

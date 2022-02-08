@@ -1,0 +1,143 @@
+NC_000913.3	RegulonDB	binding_site					.	name=;ActiveConformation=;RegulatedTUName=;PromoterName=;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site	1122720	1122744		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=pyrC;PromoterName=pyrCp;TFBSCenterPosition=-88.5;Sequence=-88.5
+NC_000913.3	RegulonDB	binding_site	1161624	1161642		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fhuE;PromoterName=fhuEp;TFBSCenterPosition=15;Sequence=15
+NC_000913.3	RegulonDB	binding_site	1161648	1161666		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fhuE;PromoterName=fhuEp;TFBSCenterPosition=-10;Sequence=-10
+NC_000913.3	RegulonDB	binding_site	1300940	1300958		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=oppABCDF;PromoterName=oppAp;TFBSCenterPosition=-136;Sequence=-136
+NC_000913.3	RegulonDB	binding_site	1311020	1311038		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=tonB;PromoterName=tonBp;TFBSCenterPosition=-25;Sequence=-25
+NC_000913.3	RegulonDB	binding_site	1311026	1311044		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=tonB;PromoterName=tonBp;TFBSCenterPosition=-19;Sequence=-19
+NC_000913.3	RegulonDB	binding_site	1311030	1311048		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=tonB;PromoterName=tonBp;TFBSCenterPosition=-15;Sequence=-15
+NC_000913.3	RegulonDB	binding_site	1311070	1311088		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=tonB;PromoterName=tonBp;TFBSCenterPosition=26;Sequence=26
+NC_000913.3	RegulonDB	binding_site	1636591	1636609		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=nohA-stfQ-tfaQ;PromoterName=nohAp;TFBSCenterPosition=4;Sequence=4
+NC_000913.3	RegulonDB	binding_site	1636593	1636611		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=nohA-stfQ-tfaQ;PromoterName=nohAp;TFBSCenterPosition=2;Sequence=2
+NC_000913.3	RegulonDB	binding_site	167432	167446		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fhuACDB;PromoterName=fhuAp;TFBSCenterPosition=-3;Sequence=-3
+NC_000913.3	RegulonDB	binding_site	1737631	1737649		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=purR;PromoterName=purRp;TFBSCenterPosition=-49;Sequence=-49
+NC_000913.3	RegulonDB	binding_site	1764429	1764443		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=sufABCDSE;PromoterName=sufAp;TFBSCenterPosition=-18;Sequence=-18
+NC_000913.3	RegulonDB	binding_site	1905378	1905398		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=mntP;PromoterName=mntPp;TFBSCenterPosition=-71.5;Sequence=-71.5
+NC_000913.3	RegulonDB	binding_site	1978272	1978290		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=flhDC;PromoterName=flhDp;TFBSCenterPosition=115;Sequence=115
+NC_000913.3	RegulonDB	binding_site	1988584	1988602		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ftnA;PromoterName=ftnAp;TFBSCenterPosition=-89;Sequence=-89
+NC_000913.3	RegulonDB	binding_site	1988590	1988609		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ftnA;PromoterName=ftnAp;TFBSCenterPosition=-83;Sequence=-83
+NC_000913.3	RegulonDB	binding_site	1988596	1988614		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ftnA;PromoterName=ftnAp;TFBSCenterPosition=-77;Sequence=-77
+NC_000913.3	RegulonDB	binding_site	1988602	1988620		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ftnA;PromoterName=ftnAp;TFBSCenterPosition=-71;Sequence=-71
+NC_000913.3	RegulonDB	binding_site	1988608	1988626		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ftnA;PromoterName=ftnAp;TFBSCenterPosition=-65;Sequence=-65
+NC_000913.3	RegulonDB	binding_site	2185894	2185915		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=rcnAB;PromoterName=rcnAp;TFBSCenterPosition=78;Sequence=78
+NC_000913.3	RegulonDB	binding_site	2185897	2185918		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=rcnAB;PromoterName=rcnAp;TFBSCenterPosition=81;Sequence=81
+NC_000913.3	RegulonDB	binding_site	2185903	2185924		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=rcnAB;PromoterName=rcnAp;TFBSCenterPosition=87;Sequence=87
+NC_000913.3	RegulonDB	binding_site	2246937	2246955		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=cirA;PromoterName=cirAp2;TFBSCenterPosition=-4;Sequence=-4
+NC_000913.3	RegulonDB	binding_site	2246937	2246955		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=cirA;PromoterName=cirAp1;TFBSCenterPosition=-17;Sequence=-17
+NC_000913.3	RegulonDB	binding_site	2246943	2246961		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=cirA;PromoterName=cirAp1;TFBSCenterPosition=-23;Sequence=-23
+NC_000913.3	RegulonDB	binding_site	2246949	2246967		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=cirA;PromoterName=cirAp2;TFBSCenterPosition=-16;Sequence=-16
+NC_000913.3	RegulonDB	binding_site	2246949	2246967		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=cirA;PromoterName=cirAp1;TFBSCenterPosition=-29;Sequence=-29
+NC_000913.3	RegulonDB	binding_site	2246955	2246973		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=cirA;PromoterName=cirAp2;TFBSCenterPosition=-22;Sequence=-22
+NC_000913.3	RegulonDB	binding_site	2246955	2246973		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=cirA;PromoterName=cirAp1;TFBSCenterPosition=-35;Sequence=-35
+NC_000913.3	RegulonDB	binding_site	2512757	2512775		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=mntH;PromoterName=mntHp;TFBSCenterPosition=-31.5;Sequence=-31.5
+NC_000913.3	RegulonDB	binding_site	2685793	2685811		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=hmp;PromoterName=hmpp;TFBSCenterPosition=6;Sequence=6
+NC_000913.3	RegulonDB	binding_site	2800586	2800604		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ygaC;PromoterName=ygaCp;TFBSCenterPosition=-5;Sequence=-5
+NC_000913.3	RegulonDB	binding_site	2800586	2800604		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=nrdHIEF;PromoterName=nrdHp;TFBSCenterPosition=-61;Sequence=-61
+NC_000913.3	RegulonDB	binding_site	3151427	3151445		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=exbD;PromoterName=exbDp;TFBSCenterPosition=-46;Sequence=-46
+NC_000913.3	RegulonDB	binding_site	3152045	3152063		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=exbBD;PromoterName=exbBp;TFBSCenterPosition=-40;Sequence=-40
+NC_000913.3	RegulonDB	binding_site	3152051	3152069		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=exbBD;PromoterName=exbBp;TFBSCenterPosition=-46;Sequence=-46
+NC_000913.3	RegulonDB	binding_site	3216538	3216556		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=nfeF;PromoterName=yqjHp;TFBSCenterPosition=-9;Sequence=-9
+NC_000913.3	RegulonDB	binding_site	3216544	3216562		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=nfeF;PromoterName=yqjHp;TFBSCenterPosition=-15;Sequence=-15
+NC_000913.3	RegulonDB	binding_site	3216548	3216566		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=nfeF;PromoterName=yqjHp;TFBSCenterPosition=-19;Sequence=-19
+NC_000913.3	RegulonDB	binding_site	3274836	3274854		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=garPLRK-rnpB;PromoterName=garPp;TFBSCenterPosition=90;Sequence=90
+NC_000913.3	RegulonDB	binding_site	3455677	3455695		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gspCDEFGHIJKLMO;PromoterName=gspCp3;TFBSCenterPosition=156;Sequence=156
+NC_000913.3	RegulonDB	binding_site	3540033	3540047		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=feoABC;PromoterName=feoAp;TFBSCenterPosition=-17;Sequence=-17
+NC_000913.3	RegulonDB	binding_site	3581019	3581037		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ryhB;PromoterName=yhhXp5;TFBSCenterPosition=-12;Sequence=-12
+NC_000913.3	RegulonDB	binding_site	3581022	3581040		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ryhB;PromoterName=yhhXp5;TFBSCenterPosition=-15;Sequence=-15
+NC_000913.3	RegulonDB	binding_site	3581025	3581043		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=yhhY;PromoterName=yhhYp;TFBSCenterPosition=-77;Sequence=-77
+NC_000913.3	RegulonDB	binding_site	3581025	3581043		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ryhB;PromoterName=yhhXp5;TFBSCenterPosition=-18;Sequence=-18
+NC_000913.3	RegulonDB	binding_site	4100708	4100726		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=sodA;PromoterName=sodAp;TFBSCenterPosition=-42;Sequence=-42
+NC_000913.3	RegulonDB	binding_site	4100714	4100732		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=sodA;PromoterName=sodAp;TFBSCenterPosition=-36;Sequence=-36
+NC_000913.3	RegulonDB	binding_site	4100717	4100735		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=sodA;PromoterName=sodAp;TFBSCenterPosition=-33;Sequence=-33
+NC_000913.3	RegulonDB	binding_site	4100720	4100738		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=sodA;PromoterName=sodAp;TFBSCenterPosition=-30;Sequence=-30
+NC_000913.3	RegulonDB	binding_site	4128521	4128539		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=metJ;PromoterName=metJp2;TFBSCenterPosition=-1;Sequence=-1
+NC_000913.3	RegulonDB	binding_site	4223650	4223668		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=metH;PromoterName=metHp;TFBSCenterPosition=-124;Sequence=-124
+NC_000913.3	RegulonDB	binding_site	4516743	4516757		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fecABCDE;PromoterName=fecAp;TFBSCenterPosition=-23;Sequence=-23
+NC_000913.3	RegulonDB	binding_site	4516746	4516760		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fecABCDE;PromoterName=fecAp;TFBSCenterPosition=-26;Sequence=-26
+NC_000913.3	RegulonDB	binding_site	4516749	4516763		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fecABCDE;PromoterName=fecAp;TFBSCenterPosition=-29;Sequence=-29
+NC_000913.3	RegulonDB	binding_site	4518277	4518295		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fecIR;PromoterName=fecIp;TFBSCenterPosition=-4;Sequence=-4
+NC_000913.3	RegulonDB	binding_site	4518280	4518298		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fecIR;PromoterName=fecIp;TFBSCenterPosition=-7;Sequence=-7
+NC_000913.3	RegulonDB	binding_site	4518283	4518301		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fecIR;PromoterName=fecIp;TFBSCenterPosition=-10;Sequence=-10
+NC_000913.3	RegulonDB	binding_site	4518287	4518305		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fecIR;PromoterName=fecIp;TFBSCenterPosition=-14;Sequence=-14
+NC_000913.3	RegulonDB	binding_site	451857	451875		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=cyoABCDE;PromoterName=cyoAp;TFBSCenterPosition=-213;Sequence=-213
+NC_000913.3	RegulonDB	binding_site	4605743	4605757		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=yjjZ;PromoterName=yjjZp;TFBSCenterPosition=-27;Sequence=-27
+NC_000913.3	RegulonDB	binding_site	4605743	4605757		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fhuF;PromoterName=fhuFp;TFBSCenterPosition=-56;Sequence=-56
+NC_000913.3	RegulonDB	binding_site	4605749	4605763		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fhuF;PromoterName=fhuFp;TFBSCenterPosition=-62;Sequence=-62
+NC_000913.3	RegulonDB	binding_site	4605766	4605780		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fhuF;PromoterName=fhuFp;TFBSCenterPosition=-79;Sequence=-79
+NC_000913.3	RegulonDB	binding_site	4605772	4605786		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=yjjZ;PromoterName=yjjZp;TFBSCenterPosition=3;Sequence=3
+NC_000913.3	RegulonDB	binding_site	4605772	4605786		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fhuF;PromoterName=fhuFp;TFBSCenterPosition=-85;Sequence=-85
+NC_000913.3	RegulonDB	binding_site	612652	612666		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fes-ybdZ-entF-fepE;PromoterName=fesp;TFBSCenterPosition=-28;Sequence=-28
+NC_000913.3	RegulonDB	binding_site	612652	612666		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepA-entD;PromoterName=fepAp;TFBSCenterPosition=9;Sequence=9
+NC_000913.3	RegulonDB	binding_site	612659	612673		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fes-ybdZ-entF-fepE;PromoterName=fesp;TFBSCenterPosition=-21;Sequence=-21
+NC_000913.3	RegulonDB	binding_site	612659	612673		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepA-entD;PromoterName=fepAp;TFBSCenterPosition=2;Sequence=2
+NC_000913.3	RegulonDB	binding_site	612665	612679		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fes-ybdZ-entF-fepE;PromoterName=fesp;TFBSCenterPosition=-15;Sequence=-15
+NC_000913.3	RegulonDB	binding_site	612665	612679		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepA-entD;PromoterName=fepAp;TFBSCenterPosition=-5;Sequence=-5
+NC_000913.3	RegulonDB	binding_site	612671	612685		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fes-ybdZ-entF-fepE;PromoterName=fesp;TFBSCenterPosition=-9;Sequence=-9
+NC_000913.3	RegulonDB	binding_site	612671	612685		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepA-entD;PromoterName=fepAp;TFBSCenterPosition=-11;Sequence=-11
+NC_000913.3	RegulonDB	binding_site	612678	612692		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fes-ybdZ-entF-fepE;PromoterName=fesp;TFBSCenterPosition=-2;Sequence=-2
+NC_000913.3	RegulonDB	binding_site	612678	612692		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepA-entD;PromoterName=fepAp;TFBSCenterPosition=-18;Sequence=-18
+NC_000913.3	RegulonDB	binding_site	622199	622217		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepDGC;PromoterName=fepDp1;TFBSCenterPosition=27;Sequence=27
+NC_000913.3	RegulonDB	binding_site	622199	622217		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entS;PromoterName=entSp1;TFBSCenterPosition=-50;Sequence=-50
+NC_000913.3	RegulonDB	binding_site	622199	622217		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entS;PromoterName=entSp1;TFBSCenterPosition=-50;Sequence=-50
+NC_000913.3	RegulonDB	binding_site	622205	622223		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepDGC;PromoterName=fepDp1;TFBSCenterPosition=21;Sequence=21
+NC_000913.3	RegulonDB	binding_site	622205	622223		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entS;PromoterName=entSp1;TFBSCenterPosition=-44;Sequence=-44
+NC_000913.3	RegulonDB	binding_site	622205	622223		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entS;PromoterName=entSp1;TFBSCenterPosition=-44;Sequence=-44
+NC_000913.3	RegulonDB	binding_site	622211	622229		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepDGC;PromoterName=fepDp1;TFBSCenterPosition=15;Sequence=15
+NC_000913.3	RegulonDB	binding_site	622211	622229		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entS;PromoterName=entSp1;TFBSCenterPosition=-38;Sequence=-38
+NC_000913.3	RegulonDB	binding_site	622211	622229		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entS;PromoterName=entSp1;TFBSCenterPosition=-38;Sequence=-38
+NC_000913.3	RegulonDB	binding_site	622217	622235		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepDGC;PromoterName=fepDp1;TFBSCenterPosition=9;Sequence=9
+NC_000913.3	RegulonDB	binding_site	622217	622235		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entS;PromoterName=entSp1;TFBSCenterPosition=-32;Sequence=-32
+NC_000913.3	RegulonDB	binding_site	622217	622235		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entS;PromoterName=entSp1;TFBSCenterPosition=-32;Sequence=-32
+NC_000913.3	RegulonDB	binding_site	624719	624737		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepB;PromoterName=fepBp;TFBSCenterPosition=-1;Sequence=-1
+NC_000913.3	RegulonDB	binding_site	624722	624740		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entCEBA-ybdB;PromoterName=entCp;TFBSCenterPosition=-100;Sequence=-100
+NC_000913.3	RegulonDB	binding_site	624725	624743		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepB;PromoterName=fepBp;TFBSCenterPosition=-7;Sequence=-7
+NC_000913.3	RegulonDB	binding_site	624731	624749		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fepB;PromoterName=fepBp;TFBSCenterPosition=-13;Sequence=-13
+NC_000913.3	RegulonDB	binding_site	624834	624852		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entCEBA-ybdB;PromoterName=entCp;TFBSCenterPosition=13;Sequence=13
+NC_000913.3	RegulonDB	binding_site	624837	624855		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entCEBA-ybdB;PromoterName=entCp;TFBSCenterPosition=16;Sequence=16
+NC_000913.3	RegulonDB	binding_site	624840	624858		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entCEBA-ybdB;PromoterName=entCp;TFBSCenterPosition=19;Sequence=19
+NC_000913.3	RegulonDB	binding_site	624846	624864		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entCEBA-ybdB;PromoterName=entCp;TFBSCenterPosition=25;Sequence=25
+NC_000913.3	RegulonDB	binding_site	624852	624870		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entCEBA-ybdB;PromoterName=entCp;TFBSCenterPosition=31;Sequence=31
+NC_000913.3	RegulonDB	binding_site	624879	624897		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=entCEBA-ybdB;PromoterName=entCp;TFBSCenterPosition=58;Sequence=58
+NC_000913.3	RegulonDB	binding_site	710708	710726		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fur;PromoterName=furpa;TFBSCenterPosition=-1;Sequence=-1
+NC_000913.3	RegulonDB	binding_site	710708	710726		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fur;PromoterName=furpb;TFBSCenterPosition=7;Sequence=7
+NC_000913.3	RegulonDB	binding_site	710714	710732		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fur;PromoterName=furpb;TFBSCenterPosition=1;Sequence=1
+NC_000913.3	RegulonDB	binding_site	710714	710732		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fur;PromoterName=furpa;TFBSCenterPosition=-7;Sequence=-7
+NC_000913.3	RegulonDB	binding_site	754915	754933		+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=sdhCDAB-sucABCD-sdhX;PromoterName=sdhCp;TFBSCenterPosition=-34;Sequence=-34
+NC_000913.3	RegulonDB	binding_site	787618	787636		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gpmA;PromoterName=gpmAp;TFBSCenterPosition=6;Sequence=6
+NC_000913.3	RegulonDB	binding_site	787618	787636		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gpmA;PromoterName=gpmAp4;TFBSCenterPosition=6;Sequence=6
+NC_000913.3	RegulonDB	binding_site	787621	787639		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gpmA;PromoterName=gpmAp;TFBSCenterPosition=3;Sequence=3
+NC_000913.3	RegulonDB	binding_site	787621	787639		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gpmA;PromoterName=gpmAp4;TFBSCenterPosition=3;Sequence=3
+NC_000913.3	RegulonDB	binding_site	841628	841646		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fiu;PromoterName=fiup;TFBSCenterPosition=12;Sequence=12
+NC_000913.3	RegulonDB	binding_site	841637	841655		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fiu;PromoterName=fiup;TFBSCenterPosition=3;Sequence=3
+NC_000913.3	RegulonDB	binding_site	841638	841656		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fiu;PromoterName=fiup;TFBSCenterPosition=2;Sequence=2
+NC_000913.3	RegulonDB	binding_site	841645	841663		-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fiu;PromoterName=fiup;TFBSCenterPosition=-6;Sequence=-6
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=zinT;PromoterName=zinTp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=soxR;PromoterName=soxRp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=lpdA;PromoterName=lpdAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=lpdA;PromoterName=lpdAp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gnd;PromoterName=gndp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fumC;PromoterName=fumCp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=zwf;PromoterName=zwfp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gdhA;PromoterName=gdhAp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ndh;PromoterName=ndhp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=rpoS;PromoterName=rpoSp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ompF;PromoterName=ompFp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=glnK-amtB;PromoterName=glnKp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=glnD;PromoterName=glnDp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=glnK-amtB;PromoterName=glnKp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fumB;PromoterName=fumBp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=;PromoterName=crlp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=aspC;PromoterName=aspCp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=katE;PromoterName=katEp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=nac;PromoterName=nacp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gdhA;PromoterName=gdhAp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=fnr;PromoterName=fnrp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=katG;PromoterName=katGp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gltBDF;PromoterName=gltBp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=soxS;PromoterName=soxSp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=grcA;PromoterName=grcAp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ompW;PromoterName=ompWp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=gltBDF;PromoterName=gltBp2;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=;PromoterName=crlp1;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				+	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=esrE;PromoterName=esrEp;TFBSCenterPosition=;Sequence=
+NC_000913.3	RegulonDB	binding_site				-	.	name=Fur;ActiveConformation=Fur-Fe<SUP>2+</SUP>;RegulatedTUName=ompF;PromoterName=ompFp2;TFBSCenterPosition=;Sequence=

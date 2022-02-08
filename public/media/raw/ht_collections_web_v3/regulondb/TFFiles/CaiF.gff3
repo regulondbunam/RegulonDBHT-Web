@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	42181	42196		+	.	name=CaiF;ActiveConformation=CaiF-L-carnitine;RegulatedTUName=fixABCX;PromoterName=fixAp;TFBSCenterPosition=-136.5;Sequence=-136.5
+NC_000913.3	RegulonDB	binding_site	42181	42196		-	.	name=CaiF;ActiveConformation=CaiF-L-carnitine;RegulatedTUName=caiTABCDE;PromoterName=caiTp;TFBSCenterPosition=-151.5;Sequence=-151.5
+NC_000913.3	RegulonDB	binding_site	42200	42215		+	.	name=CaiF;ActiveConformation=CaiF-L-carnitine;RegulatedTUName=fixABCX;PromoterName=fixAp;TFBSCenterPosition=-117.5;Sequence=-117.5
+NC_000913.3	RegulonDB	binding_site	42200	42215		-	.	name=CaiF;ActiveConformation=CaiF-L-carnitine;RegulatedTUName=caiTABCDE;PromoterName=caiTp;TFBSCenterPosition=-170.5;Sequence=-170.5
+NC_000913.3	RegulonDB	binding_site	42238	42253		+	.	name=CaiF;ActiveConformation=CaiF-L-carnitine;RegulatedTUName=fixABCX;PromoterName=fixAp;TFBSCenterPosition=-79.5;Sequence=-79.5
+NC_000913.3	RegulonDB	binding_site	42238	42253		-	.	name=CaiF;ActiveConformation=CaiF-L-carnitine;RegulatedTUName=caiTABCDE;PromoterName=caiTp;TFBSCenterPosition=-208.5;Sequence=-208.5
+NC_000913.3	RegulonDB	binding_site	42257	42272		+	.	name=CaiF;ActiveConformation=CaiF-L-carnitine;RegulatedTUName=fixABCX;PromoterName=fixAp;TFBSCenterPosition=-60.5;Sequence=-60.5
+NC_000913.3	RegulonDB	binding_site	42257	42272		-	.	name=CaiF;ActiveConformation=CaiF-L-carnitine;RegulatedTUName=caiTABCDE;PromoterName=caiTp;TFBSCenterPosition=-227.5;Sequence=-227.5

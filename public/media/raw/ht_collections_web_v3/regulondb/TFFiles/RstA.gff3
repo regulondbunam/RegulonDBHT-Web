@@ -1,0 +1,9 @@
+NC_000913.3	RegulonDB	binding_site	1103388	1103402		-	.	name=RstA;ActiveConformation=RstA-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp2;TFBSCenterPosition=-59.5;Sequence=-59.5
+NC_000913.3	RegulonDB	binding_site	1103388	1103402		-	.	name=RstA;ActiveConformation=RstA-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp1;TFBSCenterPosition=-50.5;Sequence=-50.5
+NC_000913.3	RegulonDB	binding_site	1103388	1103402		-	.	name=RstA;ActiveConformation=RstA-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp;TFBSCenterPosition=-59.5;Sequence=-59.5
+NC_000913.3	RegulonDB	binding_site	1103388	1103402		-	.	name=RstA;ActiveConformation=RstA-Phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp3;TFBSCenterPosition=-50.5;Sequence=-50.5
+NC_000913.3	RegulonDB	binding_site	1279523	1279539		+	.	name=RstA;ActiveConformation=RstA-Phosphorylated;RegulatedTUName=narGHJI;PromoterName=narGp;TFBSCenterPosition=-276;Sequence=-276
+NC_000913.3	RegulonDB	binding_site	1671257	1671273		+	.	name=RstA;ActiveConformation=RstA-Phosphorylated;RegulatedTUName=asr;PromoterName=asrp;TFBSCenterPosition=-62;Sequence=-62
+NC_000913.3	RegulonDB	binding_site	1671257	1671273		+	.	name=RstA;ActiveConformation=RstA-Phosphorylated;RegulatedTUName=asr;PromoterName=asrp2;TFBSCenterPosition=-62;Sequence=-62
+NC_000913.3	RegulonDB	binding_site	987176	987192		-	.	name=RstA;ActiveConformation=RstA-Phosphorylated;RegulatedTUName=ompF;PromoterName=ompFp;TFBSCenterPosition=-92;Sequence=-92
+NC_000913.3	RegulonDB	binding_site	987176	987192		-	.	name=RstA;ActiveConformation=RstA-Phosphorylated;RegulatedTUName=ompF;PromoterName=ompFp2;TFBSCenterPosition=-92;Sequence=-92

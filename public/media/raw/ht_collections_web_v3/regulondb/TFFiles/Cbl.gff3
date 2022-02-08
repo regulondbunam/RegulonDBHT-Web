@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	385094	385133		+	.	name=Cbl;ActiveConformation=Cbl;RegulatedTUName=tauABCD;PromoterName=tauAp;TFBSCenterPosition=-91;Sequence=-91
+NC_000913.3	RegulonDB	binding_site	997598	997637		-	.	name=Cbl;ActiveConformation=Cbl;RegulatedTUName=ssuEADCB;PromoterName=ssuEp;TFBSCenterPosition=-54.5;Sequence=-54.5

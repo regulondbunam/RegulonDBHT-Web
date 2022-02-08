@@ -12,7 +12,7 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <Switch>
-          <Route path={["/:datasetType/dataset/:id_dataset","/:datasetType/query/:query", "/:datasetType", "/"]}>
+          <Route path={["/:datasetType/:site/:info", "/:datasetType/:site/", "/:datasetType/", "/"]}>
             <HT />
           </Route>
         </Switch>

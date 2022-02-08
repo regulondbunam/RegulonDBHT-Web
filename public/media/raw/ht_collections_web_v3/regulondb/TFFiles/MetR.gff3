@@ -1,0 +1,11 @@
+NC_000913.3	RegulonDB	binding_site	2685688	2685702		-	.	name=MetR;ActiveConformation=MetR-L-homocysteine;RegulatedTUName=glyA;PromoterName=glyAp;TFBSCenterPosition=-121;Sequence=-121
+NC_000913.3	RegulonDB	binding_site	2685710	2685724		+	.	name=MetR;ActiveConformation=MetR;RegulatedTUName=hmp;PromoterName=hmpp;TFBSCenterPosition=-80;Sequence=-80
+NC_000913.3	RegulonDB	binding_site	2685710	2685724		-	.	name=MetR;ActiveConformation=MetR-L-homocysteine;RegulatedTUName=glyA;PromoterName=glyAp;TFBSCenterPosition=-143;Sequence=-143
+NC_000913.3	RegulonDB	binding_site	2685710	2685724		-	.	name=MetR;ActiveConformation=MetR-L-homocysteine;RegulatedTUName=glyA;PromoterName=glyAp;TFBSCenterPosition=-143;Sequence=-143
+NC_000913.3	RegulonDB	binding_site	4012815	4012829		+	.	name=MetR;ActiveConformation=MetR-L-homocysteine;RegulatedTUName=metE;PromoterName=metEp;TFBSCenterPosition=-62;Sequence=-62
+NC_000913.3	RegulonDB	binding_site	4012815	4012829		-	.	name=MetR;ActiveConformation=MetR-L-homocysteine;RegulatedTUName=metR;PromoterName=metRp1;TFBSCenterPosition=34;Sequence=34
+NC_000913.3	RegulonDB	binding_site	4012815	4012829		-	.	name=MetR;ActiveConformation=MetR-L-homocysteine;RegulatedTUName=metR;PromoterName=metRp2;TFBSCenterPosition=16;Sequence=16
+NC_000913.3	RegulonDB	binding_site	4012836	4012850		+	.	name=MetR;ActiveConformation=MetR-L-homocysteine;RegulatedTUName=metE;PromoterName=metEp;TFBSCenterPosition=-41;Sequence=-41
+NC_000913.3	RegulonDB	binding_site	4012836	4012850		-	.	name=MetR;ActiveConformation=MetR-L-homocysteine;RegulatedTUName=metR;PromoterName=metRp1;TFBSCenterPosition=13;Sequence=13
+NC_000913.3	RegulonDB	binding_site	4012836	4012850		-	.	name=MetR;ActiveConformation=MetR-L-homocysteine;RegulatedTUName=metR;PromoterName=metRp2;TFBSCenterPosition=-6;Sequence=-6
+NC_000913.3	RegulonDB	binding_site	4223719	4223733		+	.	name=MetR;ActiveConformation=MetR;RegulatedTUName=metH;PromoterName=metHp;TFBSCenterPosition=-57;Sequence=-57

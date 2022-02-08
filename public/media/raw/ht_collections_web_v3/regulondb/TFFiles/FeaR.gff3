@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	1447418	1447438		+	.	name=FeaR;ActiveConformation=FeaR;RegulatedTUName=feaB;PromoterName=feaBp1;TFBSCenterPosition=-64;Sequence=-64
+NC_000913.3	RegulonDB	binding_site	1447439	1447459		+	.	name=FeaR;ActiveConformation=FeaR;RegulatedTUName=feaB;PromoterName=feaBp1;TFBSCenterPosition=-43;Sequence=-43
+NC_000913.3	RegulonDB	binding_site	1451442	1451462		-	.	name=FeaR;ActiveConformation=FeaR;RegulatedTUName=tynA;PromoterName=tynAp1;TFBSCenterPosition=-43;Sequence=-43
+NC_000913.3	RegulonDB	binding_site	1451463	1451484		-	.	name=FeaR;ActiveConformation=FeaR;RegulatedTUName=tynA;PromoterName=tynAp1;TFBSCenterPosition=-64;Sequence=-64

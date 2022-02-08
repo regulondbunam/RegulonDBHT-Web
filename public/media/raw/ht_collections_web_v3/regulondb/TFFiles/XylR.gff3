@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	3730840	3730857		-	.	name=XylR;ActiveConformation=XylR-xylose;RegulatedTUName=xylAB;PromoterName=xylAp;TFBSCenterPosition=-41.5;Sequence=-41.5
+NC_000913.3	RegulonDB	binding_site	3730861	3730878		-	.	name=XylR;ActiveConformation=XylR-xylose;RegulatedTUName=xylAB;PromoterName=xylAp;TFBSCenterPosition=-62.5;Sequence=-62.5
+NC_000913.3	RegulonDB	binding_site	3730999	3731016		+	.	name=XylR;ActiveConformation=XylR-xylose;RegulatedTUName=xylFGHR;PromoterName=xylFp;TFBSCenterPosition=-61.5;Sequence=-61.5
+NC_000913.3	RegulonDB	binding_site	3731020	3731037		+	.	name=XylR;ActiveConformation=XylR-xylose;RegulatedTUName=xylFGHR;PromoterName=xylFp;TFBSCenterPosition=-40.5;Sequence=-40.5
+NC_000913.3	RegulonDB	binding_site	4242327	4242343		-	.	name=XylR;ActiveConformation=XylR-xylose;RegulatedTUName=xylE;PromoterName=xylEp;TFBSCenterPosition=-44;Sequence=-44
+NC_000913.3	RegulonDB	binding_site	4242348	4242364		-	.	name=XylR;ActiveConformation=XylR-xylose;RegulatedTUName=xylE;PromoterName=xylEp;TFBSCenterPosition=-65;Sequence=-65
+NC_000913.3	RegulonDB	binding_site	70195	70213		+	.	name=XylR;ActiveConformation=XylR-xylose;RegulatedTUName=araC;PromoterName=araCp;TFBSCenterPosition=-19.5;Sequence=-19.5
+NC_000913.3	RegulonDB	binding_site	70216	70234		+	.	name=XylR;ActiveConformation=XylR-xylose;RegulatedTUName=araC;PromoterName=araCp;TFBSCenterPosition=2.5;Sequence=2.5

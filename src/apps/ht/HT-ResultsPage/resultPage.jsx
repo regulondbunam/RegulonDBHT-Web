@@ -4,11 +4,14 @@ import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import Mark from '../../../components/ui-components/web/components/utiles/MarkStr'
 import PanelResult from './panelResult'
 import CONF from '../config/ht_conf_enus.json'
+import Style from "./resultPage.module.css"
+import Filter from './panelFilter'
 
 const conf = CONF?.pages?.result_page
 
 export default function ResultPage({
-  query
+  query,
+  datasetType
 }) {
   const [_data, set_data] = useState()
   const [_state, set_state] = useState()
@@ -44,31 +47,42 @@ export default function ResultPage({
   }, [_state])
 
   return (
-    <article>
-      <h2 dangerouslySetInnerHTML={{ __html: conf?.title}} />
-      <p dangerouslySetInnerHTML={{__html: conf?.description}} />
+    <div>
+      <h2 dangerouslySetInnerHTML={{ __html: conf?.title }} />
+      <p dangerouslySetInnerHTML={{ __html: conf?.description }} />
       <p>{query}</p>
-      {
-        !_data
-          ? <div><GetResultsDataset
-            ht_query={query}
-            resoultsData={(data) => { set_data(data) }}
-            status={(state) => { set_state(state) }}
-          />
-            {
-              _state === "error"
-                ? <p>Query Error: Falied to read query, please check your query </p>
-                : <SpinnerCircle />
-            }
-
+      <div >
+        {
+          _data &&
+          <div className={Style.filter}>
+            <Filter data={_data} datasetType={datasetType} />
           </div>
-          : <Results data={_data} dataStr={dataStr} />
-      }
-    </article>
+        }
+        <div className={Style.result} >
+          {
+            !_data
+              ? <div><GetResultsDataset
+                ht_query={query}
+                resoultsData={(data) => { set_data(data) }}
+                status={(state) => { set_state(state) }}
+              />
+                {
+                  _state === "error"
+                    ? <p>Query Error: Falied to read query, please check your query </p>
+                    : <SpinnerCircle />
+                }
+
+              </div>
+              : <Results data={_data} dataStr={dataStr} />
+          }
+        </div>
+      </div>
+    </div>
   )
 }
 
 function Results({ data = [], dataStr = [] }) {
+
 
   const results = useMemo(() => {
     let results = []
@@ -107,37 +121,45 @@ function Results({ data = [], dataStr = [] }) {
   }
   return (
     <div>
-      <p>{data.length} Results</p>
+      <p className="p_accent" id={"n_result"} >{data.length} Results</p>
       {
         results
-          ? <div>
-            {
-              results.map(ds => {
-                  return (
-                    <div key={`ds_id_${ds?._id}`}>
-                      <PanelResult ds={ds} match_data={ds?._match} />
-                    </div>
-                  )
-              })
-            }
-          </div>
+          ? <Panels results={results} />
           : null
       }
     </div>
   )
 }
 
+function Panels({ results }) {
+
+  return (
+    <div id="resultPanel_63" >
+      {
+        results.map(ds => {
+          return (
+            <div key={`ds_id_${ds?._id}`} id={`dataset_result_${ds?._id}`} >
+              <PanelResult ds={ds} match_data={ds?._match} />
+            </div>
+          )
+        })
+      }
+    </div>
+  )
+}
+
 function FormatData(data, keyWord, location) {
-  if(!location){return "-+-"}
+  keyWord = keyWord.replaceAll("'", "")
+  if (!location) { return undefined }
   let locations = location.split(".")
   if (!keyWord || locations.length === 0 || !data) {
-    return "---"
+    return undefined
   }
-  let MachText = "---"
+  let MachText = ""
   try {
     let dataMatch = data
     for (let index = 0; index < locations.length; index++) {
-      const key = locations[index].replaceAll(" ","");
+      const key = locations[index].replaceAll(" ", "");
       dataMatch = dataMatch[key]
       if (index === locations.length - 1) {
         if (dataMatch.length) {
@@ -152,6 +174,7 @@ function FormatData(data, keyWord, location) {
       }
     }
     let rx = new RegExp(`${keyWord.toLowerCase()}`)
+    //console.log(MachText,keyWord)
     if (rx.test(MachText.toLowerCase())) {
       MachText = `
               ${Mark(keyWord, MachText)}
