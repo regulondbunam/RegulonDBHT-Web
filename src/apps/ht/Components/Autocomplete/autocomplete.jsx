@@ -16,6 +16,8 @@ const Autocomplete = ({
     const [getSuges, { loading, error, data }] = useLazyQuery(QUERY_GQL);
     const matchKeywords = filterData(data?.getDatasetsFromSearch, _keyword, query);
 
+
+
     if (error) {
         console.error(error)
     }

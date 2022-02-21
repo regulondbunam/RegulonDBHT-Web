@@ -1,45 +1,69 @@
 import React, { useState } from "react";
-import { useLazyQuery } from '@apollo/client';
-import { QUERY } from "../Autocomplete/query";
+import './Autocomplete02.css'
 
+const Autocompletev02 = ({ suggestions,id}) => {
+  const [filteredSuggestions, setFilteredSuggestions] = useState([]);
+  const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [input, setInput] = useState("");
 
-const Autocomplete2 = ({
-}) => {
+  const onChange = (e) => {
+    const userInput = e.target.value;
 
-    const [getSuges, { loading, error, data }] = useLazyQuery(QUERY);
+    // Filter our suggestions that don't contain the user's input
+    const unLinked =Array.isArray(suggestions) ? suggestions.filter(
+      (suggestion) =>
+        suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+    ) : [];
 
-    var query = "publication.pmid"
+    setInput(e.target.value);
+    setFilteredSuggestions(unLinked);
+    setActiveSuggestionIndex(0);
+    setShowSuggestions(true);
+  };
 
-    return (
-        <div>
-            <h1>Probando</h1>
-            <button onClick={() => {
-                getSuges({
-                    variables : {keyword: "RH[_id]"}
-                })
-            }}></button>
-            {
-                probando(data?.getDatasetsFromSearch, query)
-            }
-        </div>
-    )
-}
+  const onClick = (e) => {
+    setFilteredSuggestions([]);
+    setInput(e.target.innerText);
+    setActiveSuggestionIndex(0);
+    setShowSuggestions(false);
+  };
 
-function probando(data, query){
-    let location = query.split(".")
-    if (Array.isArray(data)) {
-        data.forEach(campo => {
-            let _campo = campo
-            for (let index = 0; index < location.length; index++) {
-                //Array.isArray(location)
-                const loc = location[index].replaceAll(" ","");
-                _campo = _campo[loc]
-            }
-            _campo.map(m => {
-                console.log(m)
-            })
-        })
-    }
-}
+  const SuggestionsListComponent = () => {
+    return filteredSuggestions.length ? (
+      <ul className="suggestions">
+        {filteredSuggestions.map((suggestion, index) => {
+          let className;
+          // Flag the active suggestion with a class
+          if (index === activeSuggestionIndex) {
+            className = "suggestion-active";
+          }
+          return (
+            <li className={className} key={suggestion} onClick={onClick}>
+              {suggestion}
+            </li>
+          );
+        })}
+      </ul>
+    ) : (
+      <></>
+    );
+  };
 
-export default Autocomplete2
+  return (
+    <div className="autocompleteBlock">
+      <input
+      autoComplete="off"
+        type="text"
+        id={id}
+        onChange={onChange}
+        //onKeyDown={onKeyDown}
+        value={input}
+        disabled={false}
+      />
+      {showSuggestions && input && <SuggestionsListComponent />}
+    </div>
+  );
+};
+
+export default Autocompletev02;
