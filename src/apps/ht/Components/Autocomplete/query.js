@@ -4,71 +4,75 @@ export const QUERY = gql`
   query SEARCH_KEYWORD($keyword: String!){
     getDatasetsFromSearch(advancedSearch: $keyword) {
       _id
-      fivePrimeEnrichment
-      publication {
-        pmid
-        doi
-        authors
-        title
-        date
-        pmcid
-      }
-      objectTested {
-        _id
-        name
-        synonyms
+      publications{
+        pmid,
+        doi,
+        authors,
+        title,
+        date,
+        pmcid,
+        abstract
+      },
+      objectsTested{
+        _id,
+        name,
+        synonyms,
         genes {
-          _id
+          _id,
           name
         }
-        note
-        activeConformations
+        note,
+        activeConformations,
         externalCrossReferences {
-          externalCrossReferenceId
-          externalCrossReferenceName
-          objectId
+          externalCrossReferenceId,
+          externalCrossReferenceName,
+          objectId,
           url
         }
-      }
+      },
       sourceSerie {
-        sourceId
-        sourceName
-        title
-        platformId
-        platformTitle
-        strategy
+        series{
+          sourceId,
+          sourceName
+        },
+        platform{
+          _id,
+          title
+        },
+        title,
+        strategy,
         method
-      }
+      },
       sample {
-        experimentId
-        controlId
+        experimentId,
+        controlId,
         title
-      }
+      },
       linkedDataset {
-        controlId
-        experimentId
+        controlId,
+        experimentId,
         datasetType
-      }
-      referenceGenome
-      datasetType
-      temporalId
+      },
+      referenceGenome,
+      datasetType,
+      temporalId,
       growthConditions {
-        organism
-        geneticBackground
-        medium
-        mediumSupplements
-        aeration
-        temperature
-        ph
-        pressure
-        opticalDensity
-        growthPhase
-        growthRate
-        vesselType
+        organism,
+        geneticBackground,
+        medium,
+        mediumSupplements,
+        aeration,
+        temperature,
+        ph,
+        pressure,
+        opticalDensity,
+        growthPhase,
+        growthRate,
+        vesselType,
         aerationSpeed
-      }
+      },
       releaseDataControl {
-        date
+        date,
         version
       }
     }
