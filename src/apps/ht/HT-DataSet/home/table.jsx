@@ -116,181 +116,53 @@ function Table({ columns, datasetType, data }) {
 export function DatasetTable({ datasets, datasetType }) {
     let tableFormat = useMemo(() => {
         let columns
-        let data
-        switch (datasetType) {
-            case "TFBINDING":
-                columns = [
-                    {
-                        Header: "ID",
-                        accessor: "_id"
-                    },
-                    {
-                        Header: "Sample Title | TF ",
-                        accessor: "_title"
-                    },
-                    {
-                        Header: "Strategy",
-                        accessor: "_strategy"
-                    }
-                ]
-                data = datasets.map(dataset => {
-                    let tf = dataset?.objectTested?.name
-                    let title = dataset?.sample?.title
-                    if(title){
-                        if(tf){
-                            title = `${title} | ${tf} `
+        let data = []
+        columns = [
+            {
+                Header: "ID",
+                accessor: "_id"
+            },
+            {
+                Header: "Sample Title | TF ",
+                accessor: "_title"
+            },
+            {
+                Header: "Strategy",
+                accessor: "_strategy"
+            }
+        ]
+        try {
+            datasets.forEach(dataset => {
+                let title = dataset?.sample?.title
+                if (!title) {
+                    title = []
+                    dataset.objectsTested.forEach(obj => {
+                        if(obj?.name && obj?._id){
+                            title.push(obj.name+" ")
                         }
-                    }else{
-                        if(tf){
-                            title = `| ${tf} `
-                        }else{
+                    });
+                    if (title.length === 0) {
+                        dataset.publications.forEach(obj => {
+                            if(obj?.title){
+                                title.push(obj.title+" ")
+                            }
+                        });
+                        if (title.length<1) {
                             title = dataset?._id
                         }
                     }
-                    return {
-                        _id: dataset?._id,
-                        _title: title,
-                        _strategy: dataset?.sourceSerie?.strategy
-                    }
+                }
+                data.push({
+                    _id: dataset?._id,
+                    _title: title,
+                    _strategy: dataset?.sourceSerie?.strategy
                 })
-                break;
-            case "TUS":
-                columns = [
-                    {
-                        Header: "ID",
-                        accessor: "_id"
-                    },
-                    {
-                        Header: "Dataset",
-                        accessor: "_title"
-                    },
-                    {
-                        Header: "Strategy",
-                        accessor: "_strategy"
-                    }
-                ]
-                data = datasets.map(dataset => {
-                    let title = dataset?.sample?.title
-                    if (!title) {
-                        title = dataset?.objectTested?.name
-                        if (!title) {
-                            title = dataset?._id
-                        }
-                    }
-                    return {
-                        _id: dataset?._id,
-                        _title: title,
-                        _strategy: dataset?.sourceSerie?.strategy
-                    }
-                })
-                break;
-            case "TTS":
-                columns = [
-                    {
-                        Header: "ID",
-                        accessor: "_id"
-                    },
-                    {
-                        Header: "Dataset",
-                        accessor: "_title"
-                    },
-                    {
-                        Header: "Strategy",
-                        accessor: "_strategy"
-                    }
-                ]
-                data = datasets.map(dataset => {
-                    let title = dataset?.sample?.title
-                    if (!title) {
-                        title = dataset?.objectTested?.name
-                        if (!title) {
-                            title = dataset?._id
-                        }
-                    }
-                    return {
-                        _id: dataset?._id,
-                        _title: title,
-                        _strategy: dataset?.sourceSerie?.strategy
-                    }
-                })
-                break;
-            case "TSS":
-                columns = [
-                    {
-                        Header: "ID",
-                        accessor: "_id"
-                    },
-                    {
-                        Header: "Dataset",
-                        accessor: "_title"
-                    },
-                    {
-                        Header: "Strategy",
-                        accessor: "_strategy"
-                    }
-                ]
-                data = datasets.map(dataset => {
-                    let title = dataset?.sample?.title
-                    if (!title) {
-                        title = dataset?.objectTested?.name
-                        if (!title) {
-                            title = dataset?._id
-                        }
-                    }
-                    return {
-                        _id: dataset?._id,
-                        _title: title,
-                        _strategy: dataset?.sourceSerie?.strategy
-                    }
-                })
-                break;
-            case "GENE_EXPRESSION":
-                columns = [
-                    {
-                        Header: "ID",
-                        accessor: "_id"
-                    },
-                    {
-                        Header: "Dataset",
-                        accessor: "_title"
-                    }
-                ]
-                data = datasets.map(dataset => {
-                    let title = dataset?.sample?.title
-                    if (!title) {
-                        title = dataset?.objectTested?.name
-                        if (!title) {
-                            title = dataset?._id
-                        }
-                    }
-                    return {
-                        _id: dataset?._id,
-                        _title: title,
-                        _strategy: dataset?.sourceSerie?.strategy
-                    }
-                })
-                break;
-            default:
-                columns = [
-                    {
-                        Header: "ID",
-                        accessor: "_id"
-                    },
-                    {
-                        Header: "Title",
-                        accessor: "_title",
-                    }
-                ]
-                data = datasets.map(dataset => {
-                    return {
-                        _id: dataset?._id,
-                        _title: "title"
-                    }
-                })
-                break;
+            })
+        } catch (error) {
+            console.error("data jsontable",error);
         }
         return { columns: columns, data: data }
-    }, [datasets, datasetType])
+    }, [datasets])
 
     return (
         <Table columns={tableFormat.columns} datasetType={datasetType} data={tableFormat.data} />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SummaryObj from './summary_OT';
 
 export default function ObjectsTested({

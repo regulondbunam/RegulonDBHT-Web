@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# RegulonDB High Throughput Collection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+welcome, n.n/
 
-## Available Scripts
+version 1.2.1
 
-In the project directory, you can run:
+# Description
 
-### `npm start`
+A web application developed with react. RegulonDB HT Web presents the breakdown of the information of different types of datasets, the application consumes the web services of RegulonDB-HT GraphQL API, so to install this application on your server is a mandatory requirement. The application has several tools for data visualization and filtering.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Motivation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Bioinformatics is a multidisciplinary science, full of great challenges and much to explore. The RegulonDB frontend development team seeks to present the biological information contained in our database with the best user experience, our goal is to innovate in the presentation of information.
 
-### `npm test`
+# Hardware requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Server
 
-### `npm run build`
+minimum requirements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   CPU > 2 GHz, 4 cores
+-   RAM > 8Gb
+-   Space on disk > 5 Gb
+-   A connection to the Internet if RegulonDB-HT GraphQL API is not installed on the server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Client
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This application is rendered client-side so a client with a good device should have no problems viewing the information.
 
-### `npm run eject`
+minimum requirements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   CPU > 1.5 GHz, 2 cores
+-   RAM > 2 Gb
+-   Space on disk > 5 Gb if you want to install it for offline use
+-   A connection to the Internet
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Warning** At the moment this application is only designed for desktop computers the experience on mobile devices may not be the best.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Software Requirements
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## server:
 
-## Learn More
+-   RegulonDB-HT GraphQL API
+-   RegulonDB - Web Data Process Service
+-   Node JS ^16.13.0
+-   NPM ^8.1.4
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Client
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   Chrome 60+
+-   Safari 10+ / iOS Safari 10+*
+-   Edge 12+
+-   Firefox ESR+
+-   Internet Explorer 11*
+-   Opera
 
-### Code Splitting
+*The application design may contain slight changes that do not affect functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Installation
 
-### Analyzing the Bundle Size
+**Step 1 download project**
+You need to download this repository, in its master branch,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    $ git clone https://github.com/regulondbunam/RegulonDBHT-Web.git
+    
+  You can also download the zip file from the repository and unzip it to a designated location
 
-### Making a Progressive Web App
+**Step 2 install dependencies**
+Enter the project directory and install the required libraries with the following command
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    $ npm install
 
-### Advanced Configuration
+**Step 3 configuration**
+At the root of the project, you will find the .env-sample file where you will find the information to declare the environment variables so that the application can connect to the regulonDB web services.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+duplicate the .env-sample file and rename it to .env and add the information requested in the .env-sample file.
 
-### Deployment
+``` 
+#rename this file to '.env' when the fields have been filled
+# REACT_APP_WEB_SERVICE_URL = is the url where the web service is located
+# REACT_APP_WEB_SERVICE_URL = "url of RegulonDB-HT GraphQL API"
+# REACT_APP_PROSSES_SERVICE = "url of RegulonDB - Web Data Process Service"
+# REACT_APP_IP = is the public ip address of the domain
+# REACT_APP_DOMAIN_NAME = is the name of the web domain
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+REACT_APP_WEB_SERVICE_URL = ""
+REACT_APP_PROSSES_SERVICE = ""
+REACT_APP_IP = "0.0.0.0"
+REACT_APP_DOMAIN_NAME = ""
+```
+**Step 4 start service**
+ You can find more information on how to implement this application in the following link [cra-deployment](https://create-react-app.dev/docs/deployment)
+ 
+For environments using  [Node](https://nodejs.org/), the easiest way to handle this would be to install  [serve](https://github.com/vercel/serve)  and let it handle the rest:
+```
+npm install -g serveserve -s build
+```
+Copy
+The last command shown above will serve your static site on the port  **3000**. Like many of  [serve](https://github.com/vercel/serve)’s internal settings, the port can be adjusted using the  `-l`  or  `--listen`  flags:
+```
+serve -s build -l 4000
+```
+Copy
+Run this command to get a full list of the options available:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+serve -h
+```
