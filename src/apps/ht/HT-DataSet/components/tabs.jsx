@@ -130,10 +130,14 @@ export default function Tabs({ id_dataset, data }) {
             {
                 data?.datasetType === "TUS" && 
                 <GetTUs id_dataset={id_dataset} resoultsData={(data) => {
-                    if (Array.isArray && data.length) {
-                        set_datasetData({tusData: data})
-                    } else {
+                    if(!data){
                         set_datasetData(1)
+                    }else{
+                        if (Array.isArray && data.length) {
+                            set_datasetData({tusData: data})
+                        } else {
+                            set_datasetData(1)
+                        }
                     }
                 }}
                 />
@@ -141,9 +145,14 @@ export default function Tabs({ id_dataset, data }) {
             {
                 data?.datasetType === "TSS" &&
                 <GetTSS id_dataset={id_dataset} resoultsData={(data) => {
-                    if (Array.isArray && data.length) {
-                        set_datasetData({tssData: data})
-                    } else {
+                    if(data){
+                        if (Array.isArray && data.length) {
+                            set_datasetData({tssData: data})
+                        }else{
+                            set_datasetData(1)
+                        }
+                    }
+                     else {
                         set_datasetData(1)
                     }
                 }}
@@ -152,11 +161,15 @@ export default function Tabs({ id_dataset, data }) {
             {
                 data?.datasetType === "TTS" &&
                 <GetTTS id_dataset={id_dataset} resoultsData={(data) => {
-                    if (Array.isArray && data.length) {
-                        set_datasetData({ttsData: data})
-                        //
-                    } else {
+                    if(!data){
                         set_datasetData(1)
+                    }else{
+                        if (Array.isArray && data.length) {
+                            set_datasetData({ttsData: data})
+                            //
+                        } else {
+                            set_datasetData(1)
+                        }
                     }
                 }}
                 />
@@ -164,12 +177,17 @@ export default function Tabs({ id_dataset, data }) {
             {
                 data?.datasetType === "GENE_EXPRESSION" &&
                 <GetGE id_dataset={id_dataset} resoultsData={(data) => {
-                    if (Array.isArray && data.length) {
-                        set_datasetData({geData: data})
-                        //
-                    } else {
+                    if(!data){
                         set_datasetData(1)
+                    }else{
+                        if (Array.isArray && data.length) {
+                            set_datasetData({geData: data})
+                            //
+                        } else {
+                            set_datasetData(1)
+                        }
                     }
+                    
                 }}
                 />
             }
