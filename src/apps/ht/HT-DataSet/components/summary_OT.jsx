@@ -26,10 +26,10 @@ export default function SummaryObj({
             data: []
         }
 
-        objectsTested.forEach(obj => {
-            if (obj?._id) {
+        objectsTested.forEach((obj,index) => {
+            if (obj?.name) {
                 jsonT.data.push({
-                    _id: obj._id,
+                    _id: `${obj.name}_${index}`,
                     _name: obj.name,
                     _genes: obj.genes,
                     _info: obj

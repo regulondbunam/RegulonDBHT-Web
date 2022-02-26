@@ -137,7 +137,7 @@ export function DatasetTable({ datasets, datasetType }) {
                 if (!title) {
                     title = []
                     dataset.objectsTested.forEach(obj => {
-                        if(obj?.name && obj?._id){
+                        if(obj?.name){
                             title.push(obj.name+" ")
                         }
                     });

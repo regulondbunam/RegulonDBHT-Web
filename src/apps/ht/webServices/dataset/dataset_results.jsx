@@ -25,7 +25,6 @@ function query(ht_query) {
           }
           fivePrimeEnrichment
           objectsTested {
-            _id
             name
             synonyms
             genes {

@@ -17,7 +17,6 @@ function query(id_dataset) {
                 }
                 fivePrimeEnrichment
                 objectsTested {
-                  _id
                   name
                   synonyms
                   genes {
