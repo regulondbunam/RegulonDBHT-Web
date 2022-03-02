@@ -289,13 +289,13 @@ export default function Builder2({
                 <button className="accent" disabled={((_keyword === undefined || _keyword === "") /* || query === undefined */) && (buildedQuery === undefined || buildedQuery === "")} style={{ marginRight: "1%" }} onClick={() => {
                     let queryBox = document.getElementById("query_area");
                     if (queryBox.value) {
-                        history.push(`/dataset/query/${fixQuery(queryBox.value)} AND ${datasetType}[datasetType]`)
+                        history.push(`/ht/dataset/query/${fixQuery(queryBox.value)} AND ${datasetType}[datasetType]`)
                     } else {
                         if (turnOff) {//consultar builder de GC
-                            history.push(`/dataset/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
+                            history.push(`/ht/dataset/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
                         } else {
                             //Coonsultar builder normal
-                            history.push(`/dataset/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
+                            history.push(`/ht/dataset/query/${fixQuery(`'${_keyword}'`)}[${query}] AND ${datasetType}[datasetType]`)
                         }
                     }
                 }}>Search</button>

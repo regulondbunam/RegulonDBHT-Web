@@ -31,7 +31,7 @@ export default class PanelHT extends React.Component {
                 <div>
                     <ModalHT id={panel?.id} title={panel.title} md_data={this.state._mdData} />
                 </div>
-                <Link to={`/${panel.url}/`}>
+                <Link to={`ht/${panel.url}/`}>
                 <h2 style={{fontSize: "5vh"}} >
                 {panel.title}
                 </h2>
@@ -39,21 +39,21 @@ export default class PanelHT extends React.Component {
                 {
                     panel.url==='TFBINDING'
                     &&<div style={{marginBottom: "10px"}}>
-                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChIP-seq`}>
+                    <Link style={{marginRight: "10px"}} to={`ht/${panel.url}/ChIP-seq`}>
                     ChIP-seq
                     </Link>
-                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/ChIP-exo`}>
+                    <Link style={{marginRight: "10px"}} to={`ht/${panel.url}/ChIP-exo`}>
                     ChIP-exo
                     </Link>
-                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/gSELEX-chip`}>
+                    <Link style={{marginRight: "10px"}} to={`ht/${panel.url}/gSELEX-chip`}>
                     gSELEX-chip
                     </Link>
-                    <Link style={{marginRight: "10px"}} to={`/${panel.url}/DAP`}>
+                    <Link style={{marginRight: "10px"}} to={`ht/${panel.url}/DAP`}>
                     DAP
                     </Link>
                     </div>
                 }
-                <Link style={{marginRight: "10px"}} to={`/${panel.url}/query`}>
+                <Link style={{marginRight: "10px"}} to={`ht/${panel.url}/query`}>
                     <button>Query Builder</button>
                 </Link>
                 

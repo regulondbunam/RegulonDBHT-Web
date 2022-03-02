@@ -89,7 +89,7 @@ function getDataList(data, query, cleanDataList) {
           datasets[C2campo1].map(datasetlvl2 => {
             if (Array.isArray(datasetlvl2[C2campo2])) {
               datasetlvl2[C2campo2].map(dato => {
-                console.log(dato)
+                //console.log(dato)
                 if (dato) {
                   lista.push(dato)
                 } else {

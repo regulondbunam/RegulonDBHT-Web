@@ -47,7 +47,7 @@ export default function PanelResult({ ds, match_data }) {
             onMouseLeave={() => { set_display(false) }}
         >
             On dataset with ID: {ds?._id}
-            <Link to={`/TFBINDING/dataset/${ds?._id}`}>
+            <Link to={`/ht/TFBINDING/dataset/${ds?._id}`}>
                 <h2 className={Style.title}>
                     {
                         title
