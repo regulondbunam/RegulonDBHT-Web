@@ -75,7 +75,7 @@ export default function DataSetHome({ datasetType, experimentType }) {
             <p>
                 Do you need to make a more specific search?
             </p>
-            <Link to={`/${datasetType}/query`}>
+            <Link to={`/ht/${datasetType}/query`}>
                 <button>
                     Use the Query Builder
                 </button>

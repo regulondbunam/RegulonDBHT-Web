@@ -37,7 +37,7 @@ class MainPage extends React.Component {
                 }
                 <br />
                 <br />
-                <p style={{color: "#FFFFFF"}} >0.0.1</p>
+                <p style={{color: "#FFFFFF"}} >0.8.1</p>
             </article>
         );
     }
