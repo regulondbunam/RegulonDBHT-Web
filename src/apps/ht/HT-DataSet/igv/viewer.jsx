@@ -18,8 +18,8 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
     let show = true;
     switch (datasetType) {
         case "TFBINDING":
-            _peaksFile = `${process.env.REACT_APP_PROSSES_SERVICE}/wdps/process/ht-dataset/${id_dataset}/peaks/gff3`
-            _sitesFile = `${process.env.REACT_APP_PROSSES_SERVICE}/wdps/process/ht-dataset/${id_dataset}/sites/gff3`
+            _peaksFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/peaks/gff3`
+            _sitesFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/sites/gff3`
             if(tfs.length>0){
                 _tfFiles = []
                 tfs.forEach(tf => {
@@ -31,15 +31,15 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
             }
             break;
         case "TUS":
-            _tuFile = `${process.env.REACT_APP_PROSSES_SERVICE}/wdps/process/ht-dataset/${id_dataset}/tus/gff3`
+            _tuFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/tus/gff3`
             break;
         case "TSS":
             _promoter = `/media/raw/ht_collections_web_${version}/regulondb/PromoterSet.gff3`
-            _tsFile = `${process.env.REACT_APP_PROSSES_SERVICE}/wdps/process/ht-dataset/${id_dataset}/tss/gff3`
+            _tsFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/tss/gff3`
             break;
         case "TTS":
             _terminator = `/media/raw/ht_collections_web_${version}/regulondb/TerminatorSet.gff3`
-            _ttFile = `${process.env.REACT_APP_PROSSES_SERVICE}/wdps/process/ht-dataset/${id_dataset}/tts/gff3`
+            _ttFile = `${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/tts/gff3`
             break;
         case "GENE_EXPRESSION":
             _geFile = `/media/raw/ht_collections_web_${version}/GE/${id_dataset}.bedgraph`
