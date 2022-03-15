@@ -2,7 +2,7 @@
 
 welcome, n.n/
 
-version 0.8.1
+version [0.8.1](https://github.com/regulondbunam/RegulonDBHT-Web/releases/tag/0.8.1)
 
 # Description
 
