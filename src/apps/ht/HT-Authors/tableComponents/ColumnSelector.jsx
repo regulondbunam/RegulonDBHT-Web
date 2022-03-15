@@ -28,7 +28,7 @@ export function ColumnSelector({
                     </div>
                 </div>
             </div>
-            <a style={{textAlign: "center",fontSize: "14px"}} href={`${process.env.REACT_APP_PROSSES_SERVICE}/process/ht-dataset/${id_dataset}/authorData/cvs`}>Download File</a>
+            <a style={{textAlign: "center",fontSize: "14px"}} href={`${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/authorData/cvs`}>Download File</a>
         </div>
     )
 }
