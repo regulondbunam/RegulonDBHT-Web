@@ -5,14 +5,23 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import HT from "./apps/ht/ht";
+import HT from "./apps/ht/HighThroughput";
+
+//Static Global Variable
+
+window.IN_URL = {
+  main: "/ht",
+  finder: "/ht/finder/",
+  dataset: "/ht/dataset/"
+} 
+
 
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <Switch>
-          <Route path={["/ht/:datasetType/:site/:info", "/ht/:datasetType/:site/", "/ht/:datasetType/", "/ht", "/"]}>
+          <Route path={["/ht/:site/:datasetType/:info", "/ht/:site/:datasetType", "/ht/:site/", "/ht", "/"]}>
             <HT />
           </Route>
         </Switch>
