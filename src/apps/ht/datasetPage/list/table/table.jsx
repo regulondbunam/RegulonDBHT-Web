@@ -45,7 +45,7 @@ function Table({ columns, datasetType, data }) {
             prepareRow(row)
             //console.log(row)
             return (
-                <Link to={`/ht/${datasetType}/dataset/${row.cells[0].value}`} >
+                <Link to={`/ht/dataset/${datasetType}/datasetId=${row.cells[0].value}`} >
                     <div
                         {...row.getRowProps({
                             style,
