@@ -4,14 +4,18 @@ import { SpinnerCircle } from '../../../../../components/ui-components/ui_compon
 
 export default function NLPgc({ datasetId }) {
     const [_nlpgc, set_nlpgc] = useState()
-    console.log(_nlpgc);
+    //console.log(_nlpgc);
     let informations = useMemo(() => {
         if (!_nlpgc) {
             return null
         }
         let inf = []
         //inf.push({title:"",data:""});
-        _nlpgc?.additionalProperties.length > 0 && inf.push({ title: "Additional Properties", data: _nlpgc?.additionalProperties });
+        if (_nlpgc?.additionalProperties.length > 0) {
+            _nlpgc?.additionalProperties.forEach(property => {
+                inf.push({ title: property.name, data: property.value });
+            });
+        }
         _nlpgc?.aeration.length > 0 && inf.push({ title: "Aeration", data: _nlpgc?.aeration });
         _nlpgc?.aerationSpeed.length > 0 && inf.push({ title: "Aeration Speed", data: _nlpgc?.aerationSpeed });
         _nlpgc?.geneticBackground.length > 0 && inf.push({ title: "Genetic Background", data: _nlpgc?.geneticBackground });
@@ -49,8 +53,8 @@ export default function NLPgc({ datasetId }) {
             {
                 informations.map((inf,j) => {
                     return (
-                        <div>
-                            <table key={`table_nlpgc${j}_${inf.title}`} className='table_content' >
+                        <div key={`table_nlpgc${j}_${inf.title}`} >
+                            <table className='table_content' >
                                 <thead>
                                     <tr>
                                         <th colSpan={4} >{inf.title}</th>
@@ -66,7 +70,7 @@ export default function NLPgc({ datasetId }) {
                                     {
                                         inf.data.map((gc, i) => {
                                             return (
-                                                <React.Fragment key={`table_nlpgc_${i}_${inf.title.replace(" ","_")}_${gc.value.replace(" ","_")}`} >
+                                                <React.Fragment key={`tableBody_nlpgc_${i}_${j}_${inf.title}_${gc.value}`} >
                                                     <tr >
                                                         <td>{gc.value}</td>
                                                         <td>{gc.nameField}</td>
@@ -90,7 +94,7 @@ export default function NLPgc({ datasetId }) {
                                                             </button>
                                                         </td>
                                                     </tr>
-                                                    <tr id={`phrase_${i}_${inf.title.replace(" ","_")}_${gc.value.replace(" ","_")}`} style={{display: 'none'}} >
+                                                    <tr id={`phrase_${i}_${inf.title}_${gc.value}`} style={{display: 'none'}} >
                                                         <td colSpan={4} id={`phrase_td_${i}_${inf.title}_${gc.value}`} >
                                                             {gc.associatedPhrase}
                                                         </td>
