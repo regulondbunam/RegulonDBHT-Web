@@ -2,8 +2,9 @@ import React, {useState, useEffect} from 'react'
 import GetInfoDataset from '../../webServices/dataset/dataset_info'
 import {SpinnerCircle} from '../../../../components/ui-components/ui_components'
 import Maininfo from './mainInfo/Maininfo'
-import TranscriptionFactor from './TranscriptionFactor'
-
+import TranscriptionFactor from './transcriptionFactor/TranscriptionFactor'
+import GrowthConditions from './growthConditions/growthConditions'
+import NLPgc from './nlpGrowthConditions/NLPgc'
 export default function Info({datasetId}) {
 
   const [_dataset, set_dataset] = useState()
@@ -59,11 +60,13 @@ export default function Info({datasetId}) {
       <h2>DATASET</h2>
       <Maininfo _id={_dataset?._id} sample={_dataset?.sample} datasetType={_dataset?.datasetType} sourceSerie={_dataset?.sourceSerie} publications={_dataset?.publications} />
       {
-        _dataset?.objectsTested.length > 0 && <div>
+        _dataset?.datasetType === "TFBINDING" && <div>
           <h2>TRANSCRIPTION FACTOR</h2>
           <TranscriptionFactor objectsTested={_dataset?.objectsTested} />
         </div>
       }
+      <GrowthConditions growthCondition={_dataset?.growthConditions} />
+      <NLPgc datasetId={_dataset?._id} />
     </article>
   )
 }

@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from "@apollo/client";
 
 function query(datasetId) {
-    return gql`
+  return gql`
         {
             getDatasetsFromSearch(advancedSearch: "${datasetId}[_id]") {
               _id
@@ -78,6 +78,8 @@ function query(datasetId) {
                   date
                   version
                 }
+                nlpGrowthConditionsId
+                experimentCondition
               }
         }
     `
@@ -115,8 +117,8 @@ const GetInfoDataset = ({
   return (<></>);
 }
 
-function clean(data = {}){
-  if(data?.sample?.title === '-'){
+function clean(data = {}) {
+  if (data?.sample?.title === '-') {
     data.sample.title = undefined;
   }
   return data

@@ -1,6 +1,6 @@
 import React from 'react'
-import ExternalRef from './TU/externalRef'
-import Note from './TU/note'
+import ExternalRef from './externalRef'
+import Note from './note'
 export default function TranscriptionFactor({objectsTested}) {
   return (
     <div style={{ marginLeft: "5%" }} id={`dataset_objTested`} >
@@ -40,23 +40,27 @@ export default function TranscriptionFactor({objectsTested}) {
                                 obj?.note && <Note note={obj.note} />
                             }
                         </div>
-                        <button style={{margin: 0}} className="aBase" 
-                        onClick={(e)=>{
-                            let mybutton = e.target
-                            let info = document.getElementById(`moreInfo_${obj.name}_${i}`)
-                            if(info){
-                                if(info.style.display === 'none'){
-                                    info.style.display = "block"
-                                    mybutton.innerHTML = "hide info..."
-                                }else{
-                                    info.style.display = 'none'
-                                    mybutton.innerHTML = "show info.."
+                        {
+                            obj.synonyms.length < 1 && obj.externalCrossReferences.length < 1 && !obj?.note
+                            ?null
+                            :<button style={{margin: 0}} className="aBase" 
+                            onClick={(e)=>{
+                                let mybutton = e.target
+                                let info = document.getElementById(`moreInfo_${obj.name}_${i}`)
+                                if(info){
+                                    if(info.style.display === 'none'){
+                                        info.style.display = "block"
+                                        mybutton.innerHTML = "hide info..."
+                                    }else{
+                                        info.style.display = 'none'
+                                        mybutton.innerHTML = "show info.."
+                                    }
+                                    
                                 }
-                                
-                            }
-                        }} >
-                            show info...
-                        </button>
+                            }} >
+                                show info...
+                            </button>
+                        }
                         <hr />
                     </div>
                 )

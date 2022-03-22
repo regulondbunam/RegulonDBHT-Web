@@ -1,7 +1,9 @@
 import React from 'react'
 import SourceSerie from './SourceSerie'
 import Publications from './Publications'
-export default function Maininfo({ _id, sample, datasetType, sourceSerie, publications }) {
+
+
+export default function Maininfo({ _id, sample, fivePrimeEnrichment, datasetType, sourceSerie, publications }) {
     let datasetTitle = ""
     //Condicion para filtrar comentarios de Victor (curador) saludos n.n
     if (sample?.title) {
@@ -19,6 +21,9 @@ export default function Maininfo({ _id, sample, datasetType, sourceSerie, public
             <p style={{ fontSize: "22px" }} className="p_accent">{datasetTitle}</p>
             <p style={{ fontSize: "14px" }} >Dataset Type: {datasetType}</p>
             <hr />
+            {
+                fivePrimeEnrichment && <p style={{ fontSize: "14px" }} >5' Enrichment: {fivePrimeEnrichment}</p>
+            }
             {
                 sample?.controlId.length > 0 && <p style={{ fontSize: "14px" }} >Control ID: {sample?.controlId.join(", ")}</p>
             }

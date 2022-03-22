@@ -40,12 +40,13 @@ export default function List({ datasetType, experimentType }) {
       const COVER_REACTION = new CustomEvent('coverR', {
         bubbles: true,
         detail: {
+          title: subtitle,
           state: _state,
         }
       });
       COVER.dispatchEvent(COVER_REACTION);
     }
-  }, [_state])
+  }, [_state, subtitle])
 
   if (!query) {
     return (
@@ -57,7 +58,6 @@ export default function List({ datasetType, experimentType }) {
 
   return (
     <article>
-        <h2>{subtitle}</h2>
         {
             !_data &&
             <GetResultsDataset
