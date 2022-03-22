@@ -89,7 +89,7 @@ const GetNLPGC = ({
         }else {
           status('no_results')
         }
-        
+
         resoultsData(data?.getNLPGrowthConditionById)
 
       } catch (error) {

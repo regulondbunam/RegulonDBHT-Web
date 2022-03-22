@@ -4,6 +4,7 @@ import { SpinnerCircle } from '../../../../../components/ui-components/ui_compon
 
 export default function NLPgc({ datasetId }) {
     const [_nlpgc, set_nlpgc] = useState()
+    const [_state, set_state] = useState()
     //console.log("nl",_nlpgc);
     let informations = useMemo(() => {
         if (!_nlpgc) {
@@ -32,10 +33,14 @@ export default function NLPgc({ datasetId }) {
         return inf;
     }, [_nlpgc])
     if (!_nlpgc) {
+        if (_state==='no_results') {
+            return null
+        }
         return (
             <div>
                 <GetNLPGC id_dataset={datasetId}
                     resoultsData={(data) => { set_nlpgc(data) }}
+                    status={(state)=>{set_state(state)}}
                 />
                 <SpinnerCircle />
             </div>

@@ -5,6 +5,9 @@ import Maininfo from './mainInfo/Maininfo'
 import TranscriptionFactor from './transcriptionFactor/TranscriptionFactor'
 import GrowthConditions from './growthConditions/growthConditions'
 import NLPgc from './nlpGrowthConditions/NLPgc'
+import Tabs from './data/tabs'
+import { Viewer } from './igv/viewer'
+
 export default function Info({datasetId}) {
 
   const [_dataset, set_dataset] = useState()
@@ -67,6 +70,16 @@ export default function Info({datasetId}) {
       }
       <GrowthConditions growthCondition={_dataset?.growthConditions} />
       <NLPgc datasetId={_dataset?._id} />
+      <Tabs id_dataset={_dataset?._id} data={_dataset} />
+      <br />
+            <div id="igv-view" >
+                {
+
+                    _dataset?.sourceSerie?.strategy !== "ChIP-exo"
+                        ? <Viewer id_dataset={_dataset?._id} tfs={_dataset?.objectsTested} datasetType={_dataset?.datasetType} />
+                        : null
+                }
+            </div>
     </article>
   )
 }
