@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import GetInfoDataset from '../../webServices/dataset/dataset_info'
 import {SpinnerCircle} from '../../../../components/ui-components/ui_components'
 import Maininfo from './mainInfo/Maininfo'
-
+import TranscriptionFactor from './TranscriptionFactor'
 
 export default function Info({datasetId}) {
 
@@ -58,6 +58,12 @@ export default function Info({datasetId}) {
     <article>
       <h2>DATASET</h2>
       <Maininfo _id={_dataset?._id} sample={_dataset?.sample} datasetType={_dataset?.datasetType} sourceSerie={_dataset?.sourceSerie} publications={_dataset?.publications} />
+      {
+        _dataset?.objectsTested.length > 0 && <div>
+          <h2>TRANSCRIPTION FACTOR</h2>
+          <TranscriptionFactor objectsTested={_dataset?.objectsTested} />
+        </div>
+      }
     </article>
   )
 }
