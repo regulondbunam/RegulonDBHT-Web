@@ -79,9 +79,14 @@ const GetNLPGC = ({
     }
     if (data) {
       try {
-        if (data.getNLPGrowthConditionById.length > 0) {
-          status('done')
-        } else {
+        //console.log(data.getNLPGrowthConditionById);
+        if(data.getNLPGrowthConditionById){
+          if (data.getNLPGrowthConditionById.length > 0) {
+            status('done')
+          } else {
+            status('no_results')
+          }
+        }else {
           status('no_results')
         }
         
