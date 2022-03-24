@@ -5,7 +5,7 @@ import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 //import GetFields from '../webServices/introspection/fields'
 
 export default function Finder({ datasetType }) {
-    const [_queryBox, set_queryBox] = useState(`${datasetType}[datasetType]`)
+    const [_queryBox, set_queryBox] = useState(`'${datasetType}'[datasetType]`)
     const [_state, set_state] = useState()
     const [_datasets, set_datasets] = useState()
     const [_advanced, set_advanced] = useState(true)
@@ -36,7 +36,7 @@ export default function Finder({ datasetType }) {
         )
     }
     return (
-        <article>
+        <div style={{margin: "0 2% 0 5%"}}>
 
             <h2>{_advanced ? "QUERY BOX" : "Results of"}</h2>
             <textarea name="queryBox" id="finder_queryBox" style={{ width: "100%" }} rows={_advanced ? "5" : "1"} value={_queryBox} onChange={(e) => { set_queryBox(e.target.value) }} />
@@ -46,6 +46,7 @@ export default function Finder({ datasetType }) {
                         <h2>Builder</h2>
                         <Builder 
                             datasetType={datasetType} 
+                            queryBox={_queryBox}
                             set_queryBox={(query) => { set_queryBox(query) }}
                             datasets={_datasets}
                         />
@@ -56,7 +57,7 @@ export default function Finder({ datasetType }) {
             }
 
 
-        </article>
+        </div>
     )
 }
 

@@ -17,12 +17,13 @@ export default function Builder({
     const [_nlpgc, set_nlpgc] = useState()
     const [_nlpGCFeature, set_nlpGCFeature] = useState("")
     const [_nlpCondition, set_nlpCondition] = useState("")
+    const [_logicConec, set_logicConec] = useState()
+    const [_inputActive, set_inputActive] = useState(false)
     const [suggest, setSuggest] = useState()
     const id_autocomplete = "builder_input_text"
 
-    function setAutocomplete_Input(str = ""){
+    function setAutocomplete_Input(str = "") {
         const inputText = document.getElementById(id_autocomplete)
-        console.log(inputText);
         if (inputText) {
             const input_REACTION = new CustomEvent('inputTextR', {
                 bubbles: true,
@@ -36,29 +37,40 @@ export default function Builder({
 
     return (
         <div >
-            <div className={Style.gridContainer}>
+            <div id='selectorsBuilder' className={Style.gridContainer}>
                 <div className={Style.gridItem}>
                     <label htmlFor="datasetFeatures">Dataset Property</label>
                     <br />
                     <select name="datasetFeatures" id="datasetFeatures" style={{ width: "100%" }}
                         onChange={(e) => {
                             set_datasetFeature(e.target.value)
-                            setSuggest(DataSolver(e.target.value, datasets))
+                            if (e.target.value !== 'growthConditions') {
+                                setSuggest(DataSolver(e.target.value, datasets))
+                            }
                             set_nlpCondition(undefined)
                             setAutocomplete_Input()
+                            if (e.target.value === 'growthConditions' || e.target.value === 'nlpGC') {
+                                set_inputActive(false)
+                            } else {
+                                set_inputActive(true)
+                            }
+
                         }}
                     >
                         <option value="0" selected disabled hidden>choose one</option>
                         {
                             fields.datasetsFeatures.map((data, i) => {
                                 if (datasetType === "TFBINDING") {
+                                    if (data?.value === "NLP Growth Conditions") {
+                                        return null
+                                    }
                                     return (
                                         <option value={data?.query} key={`${data}_${i}`}>{data?.value}</option>
                                     )
                                 } else {
                                     if (datasetType !== "GENE_EXPRESSION") {
                                         if (datasetType === "TSS") {
-                                            if (data?.value !== "RegulonDB TF ID" && data?.value !== "TF Name" && data?.value !== "TF Synonyms" && data?.value !== "TF Gene Name" && data?.value !== "Control Sample ID" && data?.value !== "Experiment Sample ID") {
+                                            if (data?.value !== "NLP Growth Conditions" && data?.value !== "RegulonDB TF ID" && data?.value !== "TF Name" && data?.value !== "TF Synonyms" && data?.value !== "TF Gene Name" && data?.value !== "Control Sample ID" && data?.value !== "Experiment Sample ID") {
                                                 return (
                                                     <option value={data?.query} key={`${data}_${i}`}>{data?.value}</option>
                                                 )
@@ -66,7 +78,7 @@ export default function Builder({
                                                 return null
                                             }
                                         } else {
-                                            if (data?.value !== "RegulonDB TF ID" && data?.value !== "TF Name" && data?.value !== "TF Synonyms" && data?.value !== "TF Gene Name") {
+                                            if (data?.value !== "NLP Growth Conditions" && data?.value !== "RegulonDB TF ID" && data?.value !== "TF Name" && data?.value !== "TF Synonyms" && data?.value !== "TF Gene Name") {
                                                 return (
                                                     <option value={data?.query} key={`${data}_${i}`}>{data?.value}</option>
                                                 )
@@ -98,16 +110,11 @@ export default function Builder({
                                 set_datasetFeature(e.target.value)
                                 setSuggest(DataSolver(e.target.value, datasets))
                                 setAutocomplete_Input()
+                                set_inputActive(true)
                             }}
                         >
                             <option value="0" selected disabled hidden>choose one</option>
-                            {datasetType === "GENE_EXPRESSION" ?
-                                fields.nlpGC.map((data, i) => {
-                                    return (
-                                        <option value={data?.query} key={`${data.value}_${i}`}  >{data.value}</option>
-                                    )
-                                })
-                                :
+                            {
                                 fields.growthConditions.map((data, i) => {
                                     return (
                                         <option value={data?.query} key={`${data.value}_${i}`}  >{data.value}</option>
@@ -136,6 +143,7 @@ export default function Builder({
                                             set_nlpGCFeature(`${_nlpCondition}.value`)
                                             setAutocomplete_Input()
                                             setSuggest(DataSolver(`${_nlpCondition}.value`, _nlpgc))
+                                            set_inputActive(true)
                                         }}
                                     >
                                         <option value="0" selected disabled hidden>choose one</option>
@@ -162,6 +170,7 @@ export default function Builder({
                                     console.log(q);
                                     set_nlpGCFeature(q)
                                     setSuggest(DataSolver(q, _nlpgc))
+                                    set_inputActive(true)
                                 }}
                             >
                                 {
@@ -177,11 +186,60 @@ export default function Builder({
                 }
             </div>
             <br />
-            {
-                _datasetFeature !== 'growthConditions' && <Autocompletev02 suggestions={suggest} id={id_autocomplete} ></Autocompletev02>
-            }
-            
+            <div className={Style.gridInput} >
+                <div onClick={(e) => {
+                    if (!_inputActive) {
+                        let selectors = document.getElementById('selectorsBuilder')
+                        if (selectors) {
+                            let ori = selectors.className
+                            selectors.className = ori + " " + Style.shakeShake
+                            setTimeout(() => {
+                                selectors.className = ori
+                            }, 500)
 
+                        }
+                    }
+                }}>
+                    <Autocompletev02 active={_inputActive} suggestions={suggest} id={id_autocomplete} />
+                </div>
+                <div>
+                    <div className={Style.gridLogic} width="100%">
+                        <label htmlFor="logicConect">logical connector</label>
+                        <select name="logicConect" id="logicConect" style={{ height: "30px" }}
+                            onChange={(e) => {
+                                set_logicConec(e.target.value)
+                            }}
+                        >
+                            <option value="" selected disabled hidden> choose </option>
+                            <option value="AND"  >AND</option>
+                            <option value="OR" >OR</option>
+                            <option value="NOT" >NOT</option>
+                        </select>
+                        <button disabled={!_logicConec} style={{ width: "100%", height: "30px", padding: "0" }} 
+                            onClick={(e)=>{
+                                if(_logicConec){
+                                    let inputText = document.getElementById(id_autocomplete)
+                                    if(inputText){
+                                        inputText = inputText.value
+                                        set_queryBox(`(${queryBox}) ${_logicConec} '${inputText}'[${_datasetFeature}]`)
+                                    }
+                                }
+                            }}
+                        >ADD</button>
+                    </div>
+                    <br />
+                    <br />
+                    <div>
+                        <button
+                            onClick={()=>{
+                                setAutocomplete_Input()
+                            }}
+                        > clean </button>
+                        <button style={{ width: "70%"}} className='accent' > SEARCH </button>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     )

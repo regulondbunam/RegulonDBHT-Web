@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from "react";
 import './Autocomplete02.css'
 
-const Autocompletev02 = ({ suggestions, id }) => {
+const Autocompletev02 = ({ suggestions, id, active }) => {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [input, setInput] = useState("");
 
-  console.log(input);
 
   useEffect(() => {
     const inputText = document.getElementById(id)
     if (inputText) {
         inputText.addEventListener('inputTextR', function (e) {
-            console.log( e.detail)
             if (e.detail.inputText || e.detail.inputText === '') {
                 setInput(e.detail.inputText)
+                setFilteredSuggestions([]);
             }
         }, false);
     }
@@ -76,9 +75,8 @@ const Autocompletev02 = ({ suggestions, id }) => {
         type="text"
         id={id}
         onChange={onChange}
-        //onKeyDown={onKeyDown}
         value={input}
-        disabled={false}
+        disabled={!active}
       />
       {showSuggestions && input && <SuggestionsListComponent />}
       {
@@ -108,6 +106,7 @@ const Autocompletev02 = ({ suggestions, id }) => {
                     return <tr key={`${sug}_${i}`} className="autocomleteSelection"
                     onClick={()=>{
                       setInput(sug)
+                      setFilteredSuggestions([]);
                     }}
                     >
                       <td>
