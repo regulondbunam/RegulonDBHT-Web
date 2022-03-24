@@ -95,6 +95,10 @@
         {
             "value": "Growth Conditions",
             "query": "growthConditions"
+        },
+        {
+            "value": "NLP Growth Conditions",
+            "query": "nlpGC"
         }
     ],
     "growthConditions": [
@@ -151,20 +155,26 @@
             "query": "growthConditions.aerationSpeed"
         }
     ],
-    "nlpgGC":[
+    "nlpGC":[
         { "value": "NLPG ID", "query": "_id" },
-        { "value": "Organism", "query": "organism.value" },
-        { "value": "Genetic Background", "query": "geneticBackground.value" },
-        { "value": "Medium", "query": "medium.value" },
-        { "value": "Aeration", "query": "aeration.value" },
-        { "value": "Temperature", "query": "temperature.value" },
-        { "value": "PH", "query": "ph.value" },
-        { "value": "Optical density", "query": "opticalDensity.value" },
-        { "value": "Growth phase", "query": "growthPhase.value" },
-        { "value": "Growth rate", "query": "growthRate.value" },
-        { "value": "Vessel type", "query": "vesselType.value" },
-        { "value": "Aeration Speed", "query": "aerationSpeed.value" },
-        { "value": "Medium supplements", "query": "mediumSupplements.value" },
+        { "value": "Organism", "query": "organism" },
+        { "value": "Genetic Background", "query": "geneticBackground" },
+        { "value": "Medium", "query": "medium" },
+        { "value": "Aeration", "query": "aeration" },
+        { "value": "Temperature", "query": "temperature" },
+        { "value": "PH", "query": "ph" },
+        { "value": "Optical density", "query": "opticalDensity" },
+        { "value": "Growth phase", "query": "growthPhase" },
+        { "value": "Growth rate", "query": "growthRate" },
+        { "value": "Vessel type", "query": "vesselType" },
+        { "value": "Aeration Speed", "query": "aerationSpeed" },
+        { "value": "Medium supplements", "query": "mediumSupplements" },
         { "value": "Dataset ID", "query": "datasetIds" }
+    ],
+    "nlpGCProperties":[
+        {"value":"Value", "query":"value"},
+        {"value":"score", "query":"score"},
+        {"value":"Phrase", "query":"associatedPhrase"},
+        {"value":"nameField", "query":"nameField"}
     ]
 }

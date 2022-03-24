@@ -2,7 +2,7 @@
 
 function DataSolver (query,datasets) {
 
-  let lista = ["No suggestions","",""]
+  let lista = []
 
   if (!datasets) {
     return lista

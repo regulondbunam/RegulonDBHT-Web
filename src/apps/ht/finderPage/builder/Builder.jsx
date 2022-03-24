@@ -3,18 +3,36 @@ import Style from './builder.module.css'
 import fields from "./fields.json"
 import Autocompletev02 from './Autocompletev02/Autocomplete'
 import DataSolver from './DataSolver/DataSolver'
+import { SpinnerCircle } from '../../../../components/ui-components/ui_components'
+import SearchNLPGC from '../../webServices/nlpGrowthCondition/nlpgc_search'
 
 export default function Builder({
     datasetType,
     datasets,
     queryBox,
-    set_queryBox = () => {},
-    set_search = () => {}
+    set_queryBox = () => { },
+    set_search = () => { }
 }) {
-    const [_datasetFeature, set_datasetFeature] = useState()
+    const [_datasetFeature, set_datasetFeature] = useState("")
+    const [_nlpgc, set_nlpgc] = useState()
+    const [_nlpGCFeature, set_nlpGCFeature] = useState("")
+    const [_nlpCondition, set_nlpCondition] = useState("")
     const [suggest, setSuggest] = useState()
-    
-    console.log(suggest);
+    const id_autocomplete = "builder_input_text"
+
+    function setAutocomplete_Input(str = ""){
+        const inputText = document.getElementById(id_autocomplete)
+        console.log(inputText);
+        if (inputText) {
+            const input_REACTION = new CustomEvent('inputTextR', {
+                bubbles: true,
+                detail: {
+                    inputText: str
+                }
+            });
+            inputText.dispatchEvent(input_REACTION);
+        }
+    }
 
     return (
         <div >
@@ -25,7 +43,9 @@ export default function Builder({
                     <select name="datasetFeatures" id="datasetFeatures" style={{ width: "100%" }}
                         onChange={(e) => {
                             set_datasetFeature(e.target.value)
-                            setSuggest(DataSolver(e.target.value,datasets))
+                            setSuggest(DataSolver(e.target.value, datasets))
+                            set_nlpCondition(undefined)
+                            setAutocomplete_Input()
                         }}
                     >
                         <option value="0" selected disabled hidden>choose one</option>
@@ -69,15 +89,20 @@ export default function Builder({
                     </select>
                 </div>
                 {
-                    _datasetFeature === 'growthConditions' &&
+                    _datasetFeature.match(/growthConditions/g) &&
                     <div className={Style.gridItem}>
-                        <label htmlFor="datasetFeatures">Growth Condition</label>
+                        <label htmlFor="growthConditions">Growth Condition</label>
                         <br />
-                        <select name="datasetFeatures" id="datasetFeatures" style={{ width: "100%" }}
+                        <select name="growthConditions" id="growthConditions" style={{ width: "100%" }}
+                            onChange={(e) => {
+                                set_datasetFeature(e.target.value)
+                                setSuggest(DataSolver(e.target.value, datasets))
+                                setAutocomplete_Input()
+                            }}
                         >
                             <option value="0" selected disabled hidden>choose one</option>
                             {datasetType === "GENE_EXPRESSION" ?
-                                fields.nlpgGC.map((data, i) => {
+                                fields.nlpGC.map((data, i) => {
                                     return (
                                         <option value={data?.query} key={`${data.value}_${i}`}  >{data.value}</option>
                                     )
@@ -92,10 +117,73 @@ export default function Builder({
                         </select>
                     </div>
                 }
+                {
+                    _datasetFeature.match(/nlpGC/g) &&
+                    <div className={Style.gridItem}>
+                        {
+                            !_nlpgc
+                                ? <div>
+                                    <SearchNLPGC keyword='GC[_id]' resoultsData={(data) => { set_nlpgc(data) }} />
+                                    <SpinnerCircle />
+                                </div>
+                                : <div>
+                                    <label htmlFor="nlpGConditions">NLP Growth Condition</label>
+                                    <br />
+                                    <br />
+                                    <select name="nlpGConditions" id="nlpGConditions" style={{ width: "100%" }}
+                                        onChange={(e) => {
+                                            set_nlpCondition(e.target.value)
+                                            set_nlpGCFeature(`${_nlpCondition}.value`)
+                                            setAutocomplete_Input()
+                                            setSuggest(DataSolver(`${_nlpCondition}.value`, _nlpgc))
+                                        }}
+                                    >
+                                        <option value="0" selected disabled hidden>choose one</option>
+                                        {
+                                            fields.nlpGC.map((data, i) => {
+                                                return (
+                                                    <option value={data?.query} key={`${data.value}_${i}`}  >{data.value}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
+                                </div>
+                        }
+                    </div>
+                }
+                {
+                    _nlpCondition && _datasetFeature.match(/nlpGC/g)
+                        ? <div className={Style.gridItem}>
+                            <label htmlFor="nlpGConditions">NLPGC Property</label>
+                            <br />
+                            <select name="nlpGConditions" id="nlpGConditions" style={{ width: "100%" }}
+                                onChange={(e) => {
+                                    let q = `${_nlpCondition}.${e.target.value}`
+                                    console.log(q);
+                                    set_nlpGCFeature(q)
+                                    setSuggest(DataSolver(q, _nlpgc))
+                                }}
+                            >
+                                {
+                                    fields.nlpGCProperties.map((data, i) => {
+                                        return (
+                                            <option value={data?.query} key={`${data.value}_${i}`}  >{data.value}</option>
+                                        )
+                                    })
+                                }
+                            </select>
+                        </div>
+                        : null
+                }
             </div>
             <br />
-            <Autocompletev02 suggestions={suggest} id="builder_text"></Autocompletev02>
+            {
+                _datasetFeature !== 'growthConditions' && <Autocompletev02 suggestions={suggest} id={id_autocomplete} ></Autocompletev02>
+            }
+            
+
 
         </div>
     )
 }
+

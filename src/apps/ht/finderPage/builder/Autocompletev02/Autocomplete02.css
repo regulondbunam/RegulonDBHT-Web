@@ -45,3 +45,10 @@
   width: 100%;
   display: block;
 }
+
+.autocomleteSelection{
+  cursor: pointer;
+}
+.autocomleteSelection:hover{
+  background-color: #cadce7;
+}
