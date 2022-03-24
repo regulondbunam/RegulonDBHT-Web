@@ -8,9 +8,9 @@ export function ColumnSelector({
     return (
         <div style={{ display: "grid", height: "30px", gridTemplateColumns: "auto 150px 100px", gridColumnGap: "10px" }}  >
             <h4 style={{ margin: "0", paddingLeft: "10px" }} >author's table</h4>
-            <div class="dropdown">
+            <div className="dropdown">
                 <button style={{ padding: "4px", width:"150px" }} >Display columns</button>
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                     <div>
                         <div>
                             <IndeterminateCheckbox {...getToggleHideAllColumnsProps()} /> Toggle

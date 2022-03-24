@@ -25,7 +25,7 @@ export default function Authors({ id_dataset }) {
         }
     }, [_tableData, id_dataset]);
 
-    console.log(_tableData);
+    //console.log(_tableData);
 
     if (!id_dataset) {
         return null

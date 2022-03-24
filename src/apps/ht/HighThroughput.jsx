@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Title from './components/Title';
 import Main from './mainPage/Main'
 import Dataset from './datasetPage/Dataset';
+import Finder from './finderPage/Finder'
 
 export default function HT() {
     const datasetType = useParams().datasetType;
@@ -14,9 +15,7 @@ export default function HT() {
     if(datasetType){
         switch (site) {
             case "finder":
-                Page = <div>
-                        finder
-                    </div>
+                Page = <Finder />
                     break;
             case "dataset":
                 const query = new URLSearchParams(info);

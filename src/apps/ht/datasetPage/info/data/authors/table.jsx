@@ -112,7 +112,7 @@ function Table({ columns, data, id_dataset }) {
                                                     ? column.isSortedDesc
                                                         ? <i className='bx bx-sort-a-z' />
                                                         : <i className='bx bx-sort-z-a' />
-                                                    : <i className='bx bx-sort-alt-2'/>}
+                                                    : <i className='bx bx-sort-alt-2' />}
                                             </div>
                                         </div>
 
@@ -173,13 +173,13 @@ export function AuthorTable({ tableData, id_dataset }) {
     }
     return (
         <div>
-            <div className={Style.author_row} >
-                <h3 style={{ margin: "0", paddingLeft: "10px" }}  >Author Report</h3>
-            </div>
-            <div className={Style.author_row} >
-                <h4 style={{ margin: "0", paddingLeft: "10px" }}  >author's comments:</h4>
-                <p style={{ padding: "0 10px 5px 15px" }} > {tableData?.comments}</p>
-            </div>
+            {
+                tableData?.comments.length > 0 &&
+                <div className={Style.author_row} >
+                    <h4 style={{ margin: "0", paddingLeft: "10px" }}  >author's comments:</h4>
+                    <p style={{ padding: "0 10px 5px 15px" }} > {tableData?.comments}</p>
+                </div>
+            }
             <div className={Style.author_row} >
                 <Table columns={tableData.columns} data={tableData.data} id_dataset={id_dataset} />
             </div >

@@ -17,7 +17,7 @@ Style.gridItem = {
 }
 
 export default function SourceSerie({ sourceSerie }) {
-
+    console.log(sourceSerie?.series.length);
     return (
         <div style={{ marginLeft: "3%" }}>
             {
@@ -28,14 +28,13 @@ export default function SourceSerie({ sourceSerie }) {
                 <BitInfo title={"Method"} data={sourceSerie?.metod} />
             </div>
             {
-                sourceSerie?.series.length > 0 && <div style={Style.gridContainer} >
-                    {
+                sourceSerie?.series.length > 0 && <div>
+                    <p style={{fontSize: "14px"}} >Series id:{
                         sourceSerie.series.map((serie)=>{
-                            return(
-                                <BitInfo key={serie.sourceId} data={serie?.sourceName} />
-                            )
-                        })
-                    }
+                            return serie.sourceId
+                        }).join(", ")
+                    }</p>
+                    
             </div>
             }
             {
