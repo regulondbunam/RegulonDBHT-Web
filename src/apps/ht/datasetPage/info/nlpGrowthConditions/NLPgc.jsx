@@ -68,7 +68,7 @@ export default function NLPgc({ datasetId }) {
                                         <th>Value</th>
                                         <th>Field</th>
                                         <th>Score</th>
-                                        <th>Phrase</th>
+                                        <th>Sentence</th>
                                     </tr>
                                 </thead>
                                 <tbody>

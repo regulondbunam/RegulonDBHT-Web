@@ -23,10 +23,9 @@ export default function SourceSerie({ sourceSerie }) {
             {
                 sourceSerie?.title && <p className="p_accent" >{sourceSerie?.title}</p>
             }
-            <div style={Style.gridContainer} >
-                <BitInfo title={"Strategy"} data={sourceSerie?.strategy} />
-                <BitInfo title={"Method"} data={sourceSerie?.metod} />
-            </div>
+            {
+                sourceSerie?.metod &&  <p style={{fontSize: "14px"}} >Metod: {sourceSerie?.metod}</p>
+            }
             {
                 sourceSerie?.series.length > 0 && <div>
                     <p style={{fontSize: "14px"}} >Series id:{

@@ -15,7 +15,7 @@ export default function HT() {
     if(datasetType){
         switch (site) {
             case "finder":
-                Page = <Finder />
+                Page = <Finder datasetType={datasetType} />
                     break;
             case "dataset":
                 const query = new URLSearchParams(info);

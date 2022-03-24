@@ -11,33 +11,44 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        getConfOf("main_page",(conf)=>{
-            this.setState({conf: conf});
+        getConfOf("main_page", (conf) => {
+            this.setState({ conf: conf });
         })
+        const COVER = document.getElementById("title-cover-ht")
+        if (COVER) {
+            const COVER_REACTION = new CustomEvent('coverR', {
+                bubbles: true,
+                detail: {
+                    title: "High Throughput Collection",
+                    state: "done",
+                }
+            });
+            COVER.dispatchEvent(COVER_REACTION);
+        }
     }
 
     render() {
-        const {conf} = this.state
+        const { conf } = this.state
         return (
             <article>
                 <br />
                 {
-                    conf && 
+                    conf &&
                     <div className={Style.gridContainer}>
-                    {
-                       conf?.collection.map((panel) => {
+                        {
+                            conf?.collection.map((panel) => {
                                 return (
                                     <div className={Style.gridItem} key={panel.id}>
                                         <PanelHT panel={panel} />
                                     </div>
                                 )
-                        })
-                    }
-                </div>
+                            })
+                        }
+                    </div>
                 }
                 <br />
                 <br />
-                <p style={{color: "#FFFFFF"}} >0.8.1</p>
+                <p style={{ color: "#FFFFFF" }} >0.8.1</p>
             </article>
         );
     }

@@ -75,9 +75,9 @@ export default function List({ datasetType, experimentType }) {
         <p>
             Do you need to make a more specific search?
         </p>
-        <Link to={`/ht/${datasetType}/query`}>
+        <Link to={`/ht/finder/${datasetType}`}>
             <button>
-                Use the Query Builder
+                Use the HT Finder
             </button>
         </Link>
 
