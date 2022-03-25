@@ -14,10 +14,12 @@ export default function Builder({
     set_search = () => { }
 }) {
     const [_datasetFeature, set_datasetFeature] = useState("")
-    const [_nlpgc, set_nlpgc] = useState()
     const [_nlpGCFeature, set_nlpGCFeature] = useState("")
+    const [_nlpgc, set_nlpgc] = useState()
+    const [_nlpgcBox, set_nlpgcBox] = useState("")
+    const [_datasetBox, set_datasetBox] = useState("")
     const [_nlpCondition, set_nlpCondition] = useState("")
-    const [_logicConec, set_logicConec] = useState()
+    const [_logicConec, set_logicConec] = useState("first")
     const [_inputActive, set_inputActive] = useState(false)
     const [suggest, setSuggest] = useState()
     const id_autocomplete = "builder_input_text"
@@ -204,24 +206,65 @@ export default function Builder({
                 </div>
                 <div>
                     <div className={Style.gridLogic} width="100%">
-                        <label htmlFor="logicConect">logical connector</label>
-                        <select name="logicConect" id="logicConect" style={{ height: "30px" }}
-                            onChange={(e) => {
-                                set_logicConec(e.target.value)
-                            }}
-                        >
-                            <option value="" selected disabled hidden> choose </option>
-                            <option value="AND"  >AND</option>
-                            <option value="OR" >OR</option>
-                            <option value="NOT" >NOT</option>
-                        </select>
-                        <button disabled={!_logicConec} style={{ width: "100%", height: "30px", padding: "0" }} 
+                        {
+                            _logicConec!== "first"
+                            ?<React.Fragment>
+                            <label htmlFor="logicConect">logical connector</label>
+                            <select name="logicConect" id="logicConect" style={{ height: "30px" }}
+                                onChange={(e) => {
+                                    set_logicConec(e.target.value)
+                                }}
+                            >
+                                <option value="AND" selected >AND</option>
+                                <option value="OR" >OR</option>
+                                <option value="NOT" >NOT</option>
+                            </select>
+                            </React.Fragment>
+                            :null
+                        }
+                        <button  style={{ width:"100px", height: "30px", padding: "0" }} 
                             onClick={(e)=>{
-                                if(_logicConec){
-                                    let inputText = document.getElementById(id_autocomplete)
+                                let inputText = document.getElementById(id_autocomplete)
+                                if(_logicConec !== "first"){
                                     if(inputText){
                                         inputText = inputText.value
-                                        set_queryBox(`(${queryBox}) ${_logicConec} '${inputText}'[${_datasetFeature}]`)
+                                        let box = ""
+                                        let addQuery = ""
+                                        if(_datasetFeature !== "nlpGC"){
+                                            box = _datasetBox
+                                            if(_datasetBox !== ""){
+                                                addQuery = `(${box}) ${_logicConec} '${inputText}'[${_datasetFeature}]`               
+                                            }else{
+                                                addQuery = `'${inputText}'[${_datasetFeature}]`
+                                            }
+                                            set_datasetBox(addQuery)
+                                            if(_nlpgcBox !== ""){
+                                                set_queryBox(`${addQuery} ${_nlpgcBox}`)
+                                            }else{
+                                                set_queryBox(`${addQuery}`)
+                                            }
+                                        }else{
+                                            box = _nlpgcBox
+                                            if(_nlpgcBox !== ""){
+                                                addQuery = `(${box}) ${_logicConec} '${inputText}'[${_nlpGCFeature}]`
+                                            }else{
+                                                addQuery = `#nlpgc# '${inputText}'[${_nlpGCFeature}]`
+                                            }
+                                            set_nlpgcBox(addQuery)
+                                            if(_datasetBox !== ""){
+                                                set_queryBox(`${_datasetBox} ${addQuery}`)
+                                            }else{
+                                                set_queryBox(`${addQuery}`)
+                                            }
+                                        }
+
+                                        
+                                    }
+                                }else{
+                                    if (inputText.value) {
+                                        inputText = inputText.value
+                                        set_queryBox(`'${inputText}'[${_datasetFeature}]`)
+                                        set_logicConec("AND")
                                     }
                                 }
                             }}
@@ -235,7 +278,30 @@ export default function Builder({
                                 setAutocomplete_Input()
                             }}
                         > clean </button>
-                        <button style={{ width: "70%"}} className='accent' > SEARCH </button>
+                        <button style={{ width: "70%"}} className='accent' 
+                            onClick={()=>{
+                                let inputText = document.getElementById(id_autocomplete)
+                                    if(inputText){
+                                        inputText = inputText.value
+                                        if(inputText){
+                                            if(queryBox){
+                                                alert('There is information in the Builder that you have not added, add or clean up to continue.')
+                                            }else{
+                                                console.log(`('${inputText}'[${_datasetFeature}]) AND '${datasetType}'[datasetType]`);
+                                                set_search(`('${inputText}'[${_datasetFeature}]) AND '${datasetType}'[datasetType]`)
+                                            }
+                                        }else{
+                                            if(!queryBox){
+                                                alert('No information')
+                                            }else{
+                                                console.log(`(${queryBox}) AND '${datasetType}'[datasetType]`);
+                                                set_search(`(${queryBox}) AND '${datasetType}'[datasetType]`)
+                                            }
+                                        }
+                                    }
+                                
+                            }}
+                        > SEARCH </button>
                     </div>
                 </div>
 
