@@ -207,65 +207,58 @@ export default function Builder({
                 <div>
                     <div className={Style.gridLogic} width="100%">
                         {
-                            _logicConec!== "first"
-                            ?<React.Fragment>
-                            <label htmlFor="logicConect">logical connector</label>
-                            <select name="logicConect" id="logicConect" style={{ height: "30px" }}
-                                onChange={(e) => {
-                                    set_logicConec(e.target.value)
-                                }}
-                            >
-                                <option value="AND" selected >AND</option>
-                                <option value="OR" >OR</option>
-                                <option value="NOT" >NOT</option>
-                            </select>
-                            </React.Fragment>
-                            :null
+                            _logicConec !== "first"
+                                ? <React.Fragment>
+                                    <label htmlFor="logicConect">logical connector</label>
+                                    <select name="logicConect" id="logicConect" style={{ height: "30px" }}
+                                        onChange={(e) => {
+                                            set_logicConec(e.target.value)
+                                        }}
+                                    >
+                                        <option value="AND" selected >AND</option>
+                                        <option value="OR" >OR</option>
+                                        <option value="NOT" >NOT</option>
+                                    </select>
+                                </React.Fragment>
+                                : null
                         }
-                        <button  style={{ width:"100px", height: "30px", padding: "0" }} 
-                            onClick={(e)=>{
+                        <button style={{ width: "100px", height: "30px", padding: "0" }}
+                            onClick={(e) => {
                                 let inputText = document.getElementById(id_autocomplete)
-                                if(_logicConec !== "first"){
-                                    if(inputText){
-                                        inputText = inputText.value
-                                        let box = ""
-                                        let addQuery = ""
-                                        if(_datasetFeature !== "nlpGC"){
-                                            box = _datasetBox
-                                            if(_datasetBox !== ""){
-                                                addQuery = `(${box}) ${_logicConec} '${inputText}'[${_datasetFeature}]`               
-                                            }else{
-                                                addQuery = `'${inputText}'[${_datasetFeature}]`
-                                            }
-                                            set_datasetBox(addQuery)
-                                            if(_nlpgcBox !== ""){
-                                                set_queryBox(`${addQuery} ${_nlpgcBox}`)
-                                            }else{
-                                                set_queryBox(`${addQuery}`)
-                                            }
-                                        }else{
-                                            box = _nlpgcBox
-                                            if(_nlpgcBox !== ""){
-                                                addQuery = `(${box}) ${_logicConec} '${inputText}'[${_nlpGCFeature}]`
-                                            }else{
-                                                addQuery = `#nlpgc# '${inputText}'[${_nlpGCFeature}]`
-                                            }
-                                            set_nlpgcBox(addQuery)
-                                            if(_datasetBox !== ""){
-                                                set_queryBox(`${_datasetBox} ${addQuery}`)
-                                            }else{
-                                                set_queryBox(`${addQuery}`)
-                                            }
+                                if (inputText) {
+                                    inputText = inputText.value
+                                    let box = ""
+                                    let addQuery = ""
+                                    if (_datasetFeature !== "nlpGC") {
+                                        box = _datasetBox
+                                        if (_datasetBox !== "") {
+                                            addQuery = `(${box}) ${_logicConec} '${inputText}'[${_datasetFeature}]`
+                                        } else {
+                                            addQuery = `('${datasetType}'[datasetType]) AND '${inputText}'[${_datasetFeature}]`
                                         }
-
-                                        
+                                        set_datasetBox(addQuery)
+                                        if (_nlpgcBox !== "") {
+                                            set_queryBox(`${addQuery} #nlpgc# ${_nlpgcBox}`)
+                                        } else {
+                                            set_queryBox(`${addQuery}`)
+                                        }
+                                    } else {
+                                        box = _nlpgcBox
+                                        if (_nlpgcBox !== "") {
+                                            addQuery = `(${box}) ${_logicConec} '${inputText}'[${_nlpGCFeature}]`
+                                        } else {
+                                            addQuery = `'${inputText}'[${_nlpGCFeature}]`
+                                        }
+                                        set_nlpgcBox(addQuery)
+                                        if (_datasetBox !== "") {
+                                            set_queryBox(`${_datasetBox} #nlpgc# ${addQuery}`)
+                                        } else {
+                                            set_queryBox(`#nlpgc# ${addQuery}`)
+                                        }
                                     }
-                                }else{
-                                    if (inputText.value) {
-                                        inputText = inputText.value
-                                        set_queryBox(`'${inputText}'[${_datasetFeature}]`)
-                                        set_logicConec("AND")
-                                    }
+                                }
+                                if (_logicConec === "first") {
+                                    set_logicConec("AND")
                                 }
                             }}
                         >ADD</button>
@@ -274,32 +267,32 @@ export default function Builder({
                     <br />
                     <div>
                         <button
-                            onClick={()=>{
+                            onClick={() => {
                                 setAutocomplete_Input()
                             }}
                         > clean </button>
-                        <button style={{ width: "70%"}} className='accent' 
-                            onClick={()=>{
+                        <button style={{ width: "70%" }} className='accent'
+                            onClick={() => {
                                 let inputText = document.getElementById(id_autocomplete)
-                                    if(inputText){
-                                        inputText = inputText.value
-                                        if(inputText){
-                                            if(queryBox){
-                                                alert('There is information in the Builder that you have not added, add or clean up to continue.')
-                                            }else{
-                                                console.log(`('${inputText}'[${_datasetFeature}]) AND '${datasetType}'[datasetType]`);
-                                                set_search(`('${inputText}'[${_datasetFeature}]) AND '${datasetType}'[datasetType]`)
-                                            }
-                                        }else{
-                                            if(!queryBox){
-                                                alert('No information')
-                                            }else{
-                                                console.log(`(${queryBox}) AND '${datasetType}'[datasetType]`);
-                                                set_search(`(${queryBox}) AND '${datasetType}'[datasetType]`)
-                                            }
+                                if (inputText) {
+                                    inputText = inputText.value
+                                    if (inputText) {
+                                        if (queryBox) {
+                                            alert('There is information in the Builder that you have not added, add or clean up to continue.')
+                                        } else {
+                                            console.log(`('${inputText}'[${_datasetFeature}]) AND '${datasetType}'[datasetType]`);
+                                            set_search(`('${inputText}'[${_datasetFeature}]) AND '${datasetType}'[datasetType]`)
+                                        }
+                                    } else {
+                                        if (!queryBox) {
+                                            alert('No information')
+                                        } else {
+                                            console.log(`(${queryBox}) AND '${datasetType}'[datasetType]`);
+                                            set_search(`(${queryBox}) AND '${datasetType}'[datasetType]`)
                                         }
                                     }
-                                
+                                }
+
                             }}
                         > SEARCH </button>
                     </div>

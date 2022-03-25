@@ -173,8 +173,6 @@
     ],
     "nlpGCProperties":[
         {"value":"Value", "query":"value"},
-        {"value":"score", "query":"score"},
-        {"value":"Phrase", "query":"associatedPhrase"},
-        {"value":"nameField", "query":"nameField"}
+        {"value":"score", "query":"score"}
     ]
 }
