@@ -12,6 +12,7 @@ class Main extends React.Component {
 
     componentDidMount() {
         getConfOf("main_page", (conf) => {
+            console.log(conf);
             this.setState({ conf: conf });
         })
         const COVER = document.getElementById("title-cover-ht")
@@ -48,7 +49,7 @@ class Main extends React.Component {
                 }
                 <br />
                 <br />
-                <p style={{ color: "#FFFFFF" }} >0.8.1</p>
+                <p style={{ color: "#FFFFFF" }} >0.9.0</p>
             </article>
         );
     }
