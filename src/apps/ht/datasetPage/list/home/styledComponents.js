@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const TableStyles = styled.div`
-  padding: 1rem;
+overflow: auto;
 
   .table {
-    display: inline-block;
+    float: left;
     border-spacing: 0;
 
     .tr {

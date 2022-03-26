@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { SpinnerCircle } from '../../../../components/ui-components/ui_components'
-import GetResultsDataset from '../../webServices/dataset/dataset_results'
-import {DatasetTable} from './table/table'
+import { DatasetTable } from './home/table'
 
 export default function List({ datasetType, experimentType }) {
   const [_data, set_data] = useState()
   const [_state, set_state] = useState()
-  let query = `${datasetType}[datasetType]`
+  let advancedSearch = `${datasetType}[datasetType]`
   let subtitle = ""
   switch (datasetType) {
     case "TFBINDING":
       subtitle = "All datasets TF Binding Sites"
       if (experimentType) {
         subtitle = `All datasets TF Binding Sites with strategy ${experimentType}`
-        query = `'${experimentType}'[sourceSerie.strategy] AND TFBINDING[datasetType]`
+        advancedSearch = `'${experimentType}'[sourceSerie.strategy] AND TFBINDING[datasetType]`
       }
       break;
     case "TUS":
@@ -30,7 +29,7 @@ export default function List({ datasetType, experimentType }) {
       subtitle = "All datasets Gene Expression"
       break;
     default:
-      query = undefined
+      advancedSearch = undefined
       break;
   }
 
@@ -46,9 +45,37 @@ export default function List({ datasetType, experimentType }) {
       });
       COVER.dispatchEvent(COVER_REACTION);
     }
+    if (!_data) {
+      try {
+        (async () => {
+          set_state("loading")
+          await fetch(`${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/jsontable`, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ advancedSearch: advancedSearch })
+          })
+            .then((response) => response.json())
+            .then(data => {
+              set_data(data)
+              set_state("done")
+            })
+            .catch((error) => {
+              console.error("prosses_Services_error: ", error);
+              set_state("error")
+            });
+        })();
+      } catch (error) {
+        console.error("prosses_Services_error: ", error);
+        set_state("error")
+      }
+
+    }
   }, [_state, subtitle])
 
-  if (!query) {
+  if (!advancedSearch) {
     return (
       <article>
         <h2>unknow dataset type: {datasetType}</h2>
@@ -57,30 +84,16 @@ export default function List({ datasetType, experimentType }) {
   }
 
   return (
-    <article>
-        {
-            !_data &&
-            <GetResultsDataset
-                ht_query={query}
-                resoultsData={(data) => { set_data(data) }}
-                status={(state) => { set_state(state) }}
-            />
-        }
-        {
-            _state === "loading" && <SpinnerCircle />
-        }
-        {
-            _data && <DatasetTable datasets={_data} datasetType={datasetType} />
-        }
-        <p>
-            Do you need to make a more specific search?
-        </p>
-        <Link to={`/ht/finder/${datasetType}`}>
-            <button>
-                Use the HT Finder
-            </button>
-        </Link>
+    <div>
+      <h2>Collection datasets  {subtitle}</h2>
 
-    </article>
-)
+      {
+        _state === "loading" && <SpinnerCircle />
+      }
+      {
+        _data && <DatasetTable jsonTable={_data} datasetType={datasetType} />
+      }
+
+    </div>
+  )
 }

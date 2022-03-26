@@ -13,15 +13,26 @@ export default function GlobalFilter({
 
     return (
         <span>
-            Search in {count} datasets:
-            <br />
+            <div style={{display: "grid", gridTemplateColumns: "21px auto"}} >
+            <i className='bx bx-search-alt' 
+                style={{textAlign: "center",fontSize: "21px"}}
+                onClick={()=>{
+                    let ipt = document.getElementById("input_global_search_authorTable");
+                    if(ipt)ipt.focus();
+                }}
+            />
             <input
                 value={value || ""}
+                id="input_global_search_authorTable"
+                placeholder={`Global search in ${count} elements:`}
+                style={{width: "100%", border: "0px"}}
                 onChange={e => {
                     setValue(e.target.value);
                     onChange(e.target.value);
                 }}
             />
+            </div>
+            
         </span>
     )
 }
