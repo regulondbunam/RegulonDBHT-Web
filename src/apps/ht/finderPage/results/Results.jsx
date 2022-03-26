@@ -80,7 +80,7 @@ export default function Results({ search, datasetType }) {
             )
         }
     } else {
-        console.log(_datasets);
+        //console.log(_datasets);
         return (
             <div >
                 <div className={Style.filter}>

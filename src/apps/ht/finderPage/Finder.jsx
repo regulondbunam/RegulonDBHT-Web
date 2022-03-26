@@ -3,6 +3,7 @@ import Builder from './builder/Builder'
 import GetResultsDataset from '../webServices/dataset/dataset_results'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import Results from './results/Results'
+//import DataBase from '../../../components/indexedDB/history'
 //import GetFields from '../webServices/introspection/fields'
 
 export default function Finder({ datasetType }) {
@@ -70,7 +71,7 @@ export default function Finder({ datasetType }) {
                             set_nlpgcBox={(nlpgcBox)=>{set_nlpgcBox(nlpgcBox)}}
                             set_queryBox={(query) => { set_queryBox(query) }}
                             datasets={_datasets}
-                            set_search={(search) => { set_search(search); set_advanced(false); set_queryBox(search) }}
+                            set_search={(search) => { set_search(search); set_advanced(false); set_queryBox(search); }}
                         />
                     </div>
                     : <div>
