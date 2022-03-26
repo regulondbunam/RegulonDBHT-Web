@@ -14,19 +14,37 @@ export default function Builder({
     queryBox,
     _nlpgcBox,
     _datasetBox,
-    set_nlpgcBox = () =>{},
-    set_datasetBox = () =>{},
-    set_queryBox = () => {},
-    set_search = () => {}
+    set_nlpgcBox = () => { },
+    set_datasetBox = () => { },
+    set_queryBox = () => { },
+    set_search = () => { }
 }) {
     const [_datasetFeature, set_datasetFeature] = useState("")
     const [_nlpGCFeature, set_nlpGCFeature] = useState("")
     const [_nlpgc, set_nlpgc] = useState()
     const [_nlpCondition, set_nlpCondition] = useState("")
-    const [_logicConec, set_logicConec] = useState("first")
     const [_inputActive, set_inputActive] = useState(false)
     const [suggest, setSuggest] = useState()
     const id_autocomplete = "builder_input_text"
+
+    function getLogicConnector() {
+        let connector = document.getElementById('builder_logicConect')
+        if (connector) {
+            return connector.value
+        }
+        return "AND"
+    }
+
+    function hideLogicConnector(isHide = true) {
+        let connector = document.getElementById('builder_logicConect')
+        if (connector) {
+            if (isHide) {
+                connector.style.display = 'none'
+            } else {
+                connector.style.display = 'block'
+            }
+        }
+    }
 
     function setAutocomplete_Input(str = "") {
         const inputText = document.getElementById(id_autocomplete)
@@ -209,21 +227,14 @@ export default function Builder({
                     <Autocompletev02 active={_inputActive} suggestions={suggest} id={id_autocomplete} />
                 </div>
                 <div>
-                    <div className={Style.gridLogic} style={{marginLeft: "3px"}} >
+                    <div className={Style.gridLogic} style={{ marginLeft: "3px" }} >
                         {
-                            _logicConec !== "first" || queryBox
-                                ? <React.Fragment>
-                                    <select name="logicConect" id="logicConect" style={{ height: "30px", width: "50%" }}
-                                        onChange={(e) => {
-                                            set_logicConec(e.target.value)
-                                        }}
-                                    >
-                                        <option value="AND" selected >AND</option>
-                                        <option value="OR" >OR</option>
-                                        <option value="NOT" >NOT</option>
-                                    </select>
-                                </React.Fragment>
-                                : null
+                            queryBox &&
+                            <select name="logicConect" id="builder_logicConect" style={{ height: "30px", width: "50%" }}>
+                                <option value="AND" selected >AND</option>
+                                <option value="OR" >OR</option>
+                                <option value="NOT" >NOT</option>
+                            </select>
                         }
                         <button style={{ width: "100px", height: "30px", padding: "0" }}
                             onClick={(e) => {
@@ -235,7 +246,7 @@ export default function Builder({
                                     if (_datasetFeature !== "nlpGC") {
                                         box = _datasetBox
                                         if (_datasetBox !== "") {
-                                            addQuery = `(${box}) ${_logicConec} '${inputText}'[${_datasetFeature}]`
+                                            addQuery = `(${box}) ${getLogicConnector()} '${inputText}'[${_datasetFeature}]`
                                         } else {
                                             addQuery = `('${datasetType}'[datasetType]) AND '${inputText}'[${_datasetFeature}]`
                                         }
@@ -249,9 +260,9 @@ export default function Builder({
                                         box = _nlpgcBox
                                         if (_nlpgcBox !== "") {
                                             box = box.split('#nlpgc#')
-                                            addQuery = `${box[0]}#nlpgc#(${box[1]}) ${_logicConec} '${inputText}'[${_nlpGCFeature}]`
+                                            addQuery = `${box[0]}#nlpgc#(${box[1]}) ${getLogicConnector()} '${inputText}'[${_nlpGCFeature}]`
                                         } else {
-                                            addQuery = `${_logicConec}#nlpgc#'${inputText}'[${_nlpGCFeature}]`
+                                            addQuery = `${getLogicConnector()}#nlpgc#'${inputText}'[${_nlpGCFeature}]`
                                         }
                                         set_nlpgcBox(addQuery)
                                         if (_datasetBox !== "") {
@@ -261,9 +272,7 @@ export default function Builder({
                                         }
                                     }
                                 }
-                                if (_logicConec === "first") {
-                                    set_logicConec("AND")
-                                }
+                                hideLogicConnector(false)
                                 setAutocomplete_Input()
                             }}
                         >ADD</button>

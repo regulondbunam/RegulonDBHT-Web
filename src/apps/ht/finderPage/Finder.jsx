@@ -54,6 +54,7 @@ export default function Finder({ datasetType }) {
                                 onClick={() => {
                                     set_queryBox("")
                                     set_datasets(undefined)
+                                    set_state('done')
                                 }}
                             >reset</button>
                         </div>
