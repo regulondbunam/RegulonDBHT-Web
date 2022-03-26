@@ -81,7 +81,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
                 </Link>
             )
         },
-        [prepareRow, rows, datasetType]
+        [prepareRow, rows]
     )
 
     // Render the UI for your table
