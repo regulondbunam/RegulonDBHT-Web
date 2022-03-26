@@ -27,6 +27,11 @@ export default function Results({ search, datasetType }) {
             COVER.dispatchEvent(COVER_REACTION);
         }
     }, [_state])
+    if (_state === 'error') {
+        return(
+            <p>failed on regex test, check your query</p>
+        )
+    }
 
     let ht_query = ""
 
@@ -66,6 +71,7 @@ export default function Results({ search, datasetType }) {
                     ht_query = _nlpgc_datasetId
                 }
             }
+            
             return (
                 <div>
                     <GetResultsDataset ht_query={ht_query} status={(state) => { set_state(state) }} resoultsData={(datasets) => { set_datasets(datasets) }} />

@@ -75,15 +75,15 @@ export default function Finder({ datasetType }) {
                     </div>
                     : <div>
                         <div style={{ display: "flex", alignItems: "center" }}>
-                            <textarea name="queryBox" id="finder_queryBox" style={{ width: "90%", height: "30px", marginRight: "5px" }} value={_queryBox} onChange={(e) => { set_queryBox(e.target.value) }} />
-                            <button style={{ height: "30px", marginLeft: "0" }} className='accent' >Search</button>
-                        </div>
-                        <button className='aBase'
-                            style={{ margin: "0" }}
+                            <textarea name="queryBox" id="finder_queryBox" style={{ width: "80%", height: "30px", marginRight: "5px" }} value={_queryBox} onChange={(e) => { set_queryBox(e.target.value) }} />
+                            <button 
+                            style={{ margin: "0", width: "20%" }}
                             onClick={() => {
                                 set_advanced(true)
                             }}
-                        >Advanced Search</button>
+                        >Edit Search</button>
+                        
+                        </div>
                         <Results search={_search} datasetType={datasetType} />
                     </div>
             }
