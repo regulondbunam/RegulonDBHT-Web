@@ -142,9 +142,9 @@ export default function Builder({
                                     <select name="nlpGConditions" id="nlpGConditions" style={{ width: "100%" }}
                                         onChange={(e) => {
                                             set_nlpCondition(e.target.value)
-                                            set_nlpGCFeature(`${_nlpCondition}.value`)
+                                            set_nlpGCFeature(`${e.target.value}.value`)
                                             setAutocomplete_Input()
-                                            setSuggest(DataSolver(`${_nlpCondition}.value`, _nlpgc))
+                                            setSuggest(DataSolver(`${e.target.value}.value`, _nlpgc))
                                             set_inputActive(true)
                                         }}
                                     >
@@ -169,7 +169,7 @@ export default function Builder({
                             <select name="nlpGConditions" id="nlpGConditions" style={{ width: "100%" }}
                                 onChange={(e) => {
                                     let q = `${_nlpCondition}.${e.target.value}`
-                                    console.log(q);
+                                    //console.log(q);
                                     set_nlpGCFeature(q)
                                     setSuggest(DataSolver(q, _nlpgc))
                                     set_inputActive(true)
@@ -205,12 +205,11 @@ export default function Builder({
                     <Autocompletev02 active={_inputActive} suggestions={suggest} id={id_autocomplete} />
                 </div>
                 <div>
-                    <div className={Style.gridLogic} width="100%">
+                    <div className={Style.gridLogic} style={{marginLeft: "3px"}} >
                         {
-                            _logicConec !== "first"
+                            _logicConec !== "first" || queryBox
                                 ? <React.Fragment>
-                                    <label htmlFor="logicConect">logical connector</label>
-                                    <select name="logicConect" id="logicConect" style={{ height: "30px" }}
+                                    <select name="logicConect" id="logicConect" style={{ height: "30px", width: "50%" }}
                                         onChange={(e) => {
                                             set_logicConec(e.target.value)
                                         }}
@@ -238,28 +237,30 @@ export default function Builder({
                                         }
                                         set_datasetBox(addQuery)
                                         if (_nlpgcBox !== "") {
-                                            set_queryBox(`${addQuery} #nlpgc# ${_nlpgcBox}`)
+                                            set_queryBox(`${addQuery}#nlpgc#${_nlpgcBox}`)
                                         } else {
                                             set_queryBox(`${addQuery}`)
                                         }
                                     } else {
                                         box = _nlpgcBox
                                         if (_nlpgcBox !== "") {
-                                            addQuery = `(${box}) ${_logicConec} '${inputText}'[${_nlpGCFeature}]`
+                                            box = box.split('#nlpgc#')
+                                            addQuery = `${box[0]}#nlpgc#(${box[1]}) ${_logicConec} '${inputText}'[${_nlpGCFeature}]`
                                         } else {
-                                            addQuery = `'${inputText}'[${_nlpGCFeature}]`
+                                            addQuery = `${_logicConec}#nlpgc#'${inputText}'[${_nlpGCFeature}]`
                                         }
                                         set_nlpgcBox(addQuery)
                                         if (_datasetBox !== "") {
-                                            set_queryBox(`${_datasetBox} #nlpgc# ${addQuery}`)
+                                            set_queryBox(`${_datasetBox}#nlpgc#${addQuery}`)
                                         } else {
-                                            set_queryBox(`#nlpgc# ${addQuery}`)
+                                            set_queryBox(`#nlpgc#${addQuery}`)
                                         }
                                     }
                                 }
                                 if (_logicConec === "first") {
                                     set_logicConec("AND")
                                 }
+                                setAutocomplete_Input()
                             }}
                         >ADD</button>
                     </div>
@@ -271,7 +272,7 @@ export default function Builder({
                                 setAutocomplete_Input()
                             }}
                         > clean </button>
-                        <button style={{ width: "70%" }} className='accent'
+                        <button style={{ width: "50%" }} className='accent'
                             onClick={() => {
                                 let inputText = document.getElementById(id_autocomplete)
                                 if (inputText) {
@@ -280,15 +281,15 @@ export default function Builder({
                                         if (queryBox) {
                                             alert('There is information in the Builder that you have not added, add or clean up to continue.')
                                         } else {
-                                            console.log(`('${inputText}'[${_datasetFeature}]) AND '${datasetType}'[datasetType]`);
-                                            set_search(`('${inputText}'[${_datasetFeature}]) AND '${datasetType}'[datasetType]`)
+                                            //console.log(`${queryBox}`);
+                                            set_search(`${inputText}`)
                                         }
                                     } else {
                                         if (!queryBox) {
                                             alert('No information')
                                         } else {
-                                            console.log(`(${queryBox}) AND '${datasetType}'[datasetType]`);
-                                            set_search(`(${queryBox}) AND '${datasetType}'[datasetType]`)
+                                            //console.log(`${queryBox}`);
+                                            set_search(`${queryBox}`)
                                         }
                                     }
                                 }
