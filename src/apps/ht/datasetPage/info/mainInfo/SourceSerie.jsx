@@ -48,23 +48,3 @@ export default function SourceSerie({ sourceSerie }) {
         </div>
     )
 }
-
-
-
-function BitInfo({ title, data }) {
-    if (!data) {
-        return null
-    }
-    return (
-        <div style={Style.gridItem}>
-           {
-               title && <p style={{ fontSize: "12px", textAlign: "center" }} className="p_accent">
-               {title}
-           </p>
-           }
-            <p style={{ fontSize: "14px", textAlign: "center" }}>
-                {data}
-            </p>
-        </div>
-    )
-}

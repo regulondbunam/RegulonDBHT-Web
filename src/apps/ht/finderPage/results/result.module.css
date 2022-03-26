@@ -1,0 +1,11 @@
+.filter{
+    float: left;
+    width: 25%;
+    padding: 2%;
+}
+
+.result{
+    float: left;
+    width: 75%;
+    padding: 2%;
+}

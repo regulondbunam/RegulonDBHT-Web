@@ -3,7 +3,6 @@ import Builder from './builder/Builder'
 import GetResultsDataset from '../webServices/dataset/dataset_results'
 import { SpinnerCircle } from '../../../components/ui-components/ui_components'
 import Results from './results/Results'
-import { ExtQuery } from './results/ExtracQueries'
 //import GetFields from '../webServices/introspection/fields'
 
 export default function Finder({ datasetType }) {
@@ -53,6 +52,9 @@ export default function Finder({ datasetType }) {
                             <button className='aBase'
                                 onClick={() => {
                                     set_queryBox("")
+                                    set_datasetBox("")
+                                    set_nlpgcBox("")
+                                    set_search(undefined)
                                     set_datasets(undefined)
                                     set_state('done')
                                 }}
@@ -82,7 +84,7 @@ export default function Finder({ datasetType }) {
                                 set_advanced(true)
                             }}
                         >Advanced Search</button>
-                        <Results search={_search} />
+                        <Results search={_search} datasetType={datasetType} />
                     </div>
             }
 

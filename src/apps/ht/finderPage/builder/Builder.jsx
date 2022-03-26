@@ -295,7 +295,13 @@ export default function Builder({
                                             alert('There is information in the Builder that you have not added, add or clean up to continue.')
                                         } else {
                                             //console.log(`${queryBox}`);
-                                            set_search(`${inputText}`)
+                                            let q = `('${datasetType}'[datasetType]) AND '${inputText}'[${_datasetFeature}]`
+                                            if (_datasetFeature === "nlpGC") {
+                                               q = `#nlpgc#${getLogicConnector()}#nlpgc#'${inputText}'[${_nlpGCFeature}]`
+                                            } 
+                                            set_search(q)
+                                            set_datasetBox(q)
+
                                         }
                                     } else {
                                         if (!queryBox) {
