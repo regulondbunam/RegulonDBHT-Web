@@ -5,13 +5,16 @@ export function ExtQuery(search = "") {
         nlpgc: undefined
     }
     let q = search.split('#nlpgc#')
-    console.log(q[1].toLowerCase());
+    //console.log(q);
     if (q.length > 0) {
         querys.dataset = q[0]
         querys.nlpgc = q[2]
-        if (q[1].toLowerCase() === 'or' || q[1].toLowerCase() === 'and' || q[1].toLowerCase() === 'not') {
-            querys.nlpgcLogic = q[1]
+        if(q[1]){
+            if (q[1].toLowerCase() === 'or' || q[1].toLowerCase() === 'and' || q[1].toLowerCase() === 'not') {
+                querys.nlpgcLogic = q[1]
+            }
         }
+        
         
     }else{
         querys.dataset = q[0]

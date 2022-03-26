@@ -25,9 +25,10 @@ export default function Results({ search }) {
 
 
     if (querys?.nlpgc && !_nlpgc_datasetId) {
+        //console.log(cleanQuery(querys?.nlpgc));
         return (
             <div>
-                <NLPGCgetdatasetIds keyword={querys?.nlpgc} status={(state) => { set_state(state) }} 
+                <NLPGCgetdatasetIds keyword={cleanQuery(querys?.nlpgc)} status={(state) => { set_state(state) }} 
                 resoultsData={(datasetIds) => { 
                     let ids = []
                     if (Array.isArray(datasetIds)) {
@@ -49,13 +50,15 @@ export default function Results({ search }) {
             </div>
         )
     } else {
-        if (querys.dataset) {
-            console.log(`(${querys.dataset}) ${querys.nlpgcLogic} ${_nlpgc_datasetId}`);
+        if (querys.nlpgc) {
+            if(querys.dataset){
+                console.log(`(${querys.dataset}) ${querys.nlpgcLogic} ${_nlpgc_datasetId}`);
+            }else{
+                console.log(_nlpgc_datasetId);
+            }
         }else{
-            console.log(_nlpgc_datasetId);
+            console.log(querys.dataset);
         }
-        
-
 
         return (
             <div>
@@ -67,4 +70,9 @@ export default function Results({ search }) {
             </div>
         )
     }
+}
+
+function cleanQuery(query = ""){
+    let n = query.replace(/°C/g,"")
+    return n
 }

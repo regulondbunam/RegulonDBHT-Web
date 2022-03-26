@@ -9,15 +9,19 @@ import SearchNLPGC from '../../webServices/nlpGrowthCondition/nlpgc_search'
 export default function Builder({
     datasetType,
     datasets,
+    datasetBox = "",
+    nlpgcBox = "",
     queryBox,
-    set_queryBox = () => { },
-    set_search = () => { }
+    _nlpgcBox,
+    _datasetBox,
+    set_nlpgcBox = () =>{},
+    set_datasetBox = () =>{},
+    set_queryBox = () => {},
+    set_search = () => {}
 }) {
     const [_datasetFeature, set_datasetFeature] = useState("")
     const [_nlpGCFeature, set_nlpGCFeature] = useState("")
     const [_nlpgc, set_nlpgc] = useState()
-    const [_nlpgcBox, set_nlpgcBox] = useState("")
-    const [_datasetBox, set_datasetBox] = useState("")
     const [_nlpCondition, set_nlpCondition] = useState("")
     const [_logicConec, set_logicConec] = useState("first")
     const [_inputActive, set_inputActive] = useState(false)
