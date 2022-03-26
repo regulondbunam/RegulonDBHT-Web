@@ -16,7 +16,7 @@ export default function Finder({ datasetType }) {
             const COVER_REACTION = new CustomEvent('coverR', {
                 bubbles: true,
                 detail: {
-                    title: `HT Finder in ${datasetType}`,
+                    title: `Query Builder in ${datasetType}`,
                     state: _state,
                 }
             });
