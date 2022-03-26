@@ -1,31 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import { SpinnerCircle } from '../../../../components/ui-components/ui_components'
 import { DatasetTable } from './home/table'
+import { getConfOf } from '../../doc/fetchDOC'
 
 export default function List({ datasetType, experimentType }) {
   const [_data, set_data] = useState()
   const [_state, set_state] = useState()
+  const [_conf, set_conf] = useState()
   let advancedSearch = `${datasetType}[datasetType]`
-  let subtitle = ""
+  let title = "loading..."
   switch (datasetType) {
     case "TFBINDING":
-      subtitle = "All datasets TF Binding Sites"
+      srtDatasetType = " TF Binding Sites"
       if (experimentType) {
-        subtitle = `All datasets TF Binding Sites with strategy ${experimentType}`
+        srtDatasetType = ` TF Binding Sites with strategy ${experimentType}`
         advancedSearch = `'${experimentType}'[sourceSerie.strategy] AND TFBINDING[datasetType]`
       }
       break;
     case "TUS":
-      subtitle = "All datasets Transcription Units"
+      srtDatasetType = " Transcription Units"
       break;
     case "TTS":
-      subtitle = "All datasets Transcription Termination Sites"
+      srtDatasetType = " Transcription Termination Sites"
       break;
     case "TSS":
-      subtitle = "All datasets Transcription Start Sites"
+      srtDatasetType = " Transcription Start Sites"
       break;
     case "GENE_EXPRESSION":
-      subtitle = "All datasets Gene Expression"
+      srtDatasetType = " Gene Expression"
       break;
     default:
       advancedSearch = undefined
@@ -38,13 +40,13 @@ export default function List({ datasetType, experimentType }) {
       const COVER_REACTION = new CustomEvent('coverR', {
         bubbles: true,
         detail: {
-          title: subtitle,
+          title: "dataset list: "subtitle,
           state: _state,
         }
       });
       COVER.dispatchEvent(COVER_REACTION);
     }
-    if (!_data) {
+    if (!_data && _state!=="error") {
       try {
         (async () => {
           set_state("loading")
@@ -72,8 +74,21 @@ export default function List({ datasetType, experimentType }) {
       }
 
     }
-  }, [_state, subtitle])
+    if(!_conf && _state !== "error"){
+      try {
+        getConfOf("dataset_page",(conf)=>{
+          if (conf?.error) {
+            console.error(conf.error,conf?.moreInfoError);
+          }
+          set_conf(conf?.list)
+        })
+      } catch (error) {
+        set_state("error")
+      }
+    }
+  }, [_state, subtitle, _conf, _data, advancedSearch])
 
+  console.log(_conf);
   if (!advancedSearch) {
     return (
       <article>
@@ -82,17 +97,21 @@ export default function List({ datasetType, experimentType }) {
     )
   }
 
-  return (
-    <div>
-      <h2>Collection datasets  {subtitle}</h2>
-
-      {
-        _state === "loading" && <SpinnerCircle />
-      }
-      {
-        _data && <DatasetTable jsonTable={_data} datasetType={datasetType} />
-      }
-
-    </div>
-  )
+  if(_conf){
+    return (
+      <div>
+        <h2>{_conf.title}  {subtitle}</h2>
+        <p>{_conf.description}</p>
+        {
+          _state === "loading" && <SpinnerCircle />
+        }
+        {
+          _data && <DatasetTable jsonTable={_data} datasetType={datasetType} />
+        }
+  
+      </div>
+    )
+  }
+  
+  return <>error</>
 }
