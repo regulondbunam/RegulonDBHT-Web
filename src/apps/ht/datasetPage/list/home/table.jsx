@@ -63,12 +63,12 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
             const row = rows[index]
             prepareRow(row)
             return (
-                <Link to={`/ht/dataset/TFBINDING/datasetId=${row.cells[0].value}`} >
+                <Link to={`/ht/dataset/${datasetType}/datasetId=${row.cells[0].value}`} >
                     <div
                         {...row.getRowProps({
                             style,
                         })}
-                        className={"tr "+Style.itemSel}
+                        className={"tr " + Style.itemSel}
                     >
                         {row.cells.map(cell => {
                             return (
@@ -175,7 +175,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
                     <h3>Query Bulder</h3>
                     Do you need to make a more specific search?
                     <br />
-                    <Link to={`/ht/finder/TFBINDING/${datasetType}`}>
+                    <Link to={`/ht/finder/${datasetType}`}>
                         <button>
                             Use the Query Builder
                         </button>
@@ -190,25 +190,38 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
 
 export function DatasetTable({ jsonTable, datasetType }) {
 
-    let hiddenColumns = ['temporalId', 'datasetType', 'referenceGenome', 'publications_pmid', 'publications_doi', 'publications_date', 'publications_pmcid', 'publications_abstract', 'objectsTested_note', 'objectsTested_name', 'objectsTested_synonyms', 'objectsTested_genes_name', 'objectsTested_activeConformations', 'sourceSerie_method', 'sourceSerie_readType', 'sample_experimentId', 'sample_controlId', 'sample_srrId']
-    let ignoreColumns = ['temporalId', 'datasetType', 'publications_pmid', `nlpGrowthConditionsId`, 'objectsTested_note', 'objectsTested_name', 'objectsTested_synonyms', 'objectsTested_genes_name', 'objectsTested_activeConformations', 'sourceSerie_method']
+    let hiddenColumns = []
+    let ignoreColumns = []
 
+    console.log(jsonTable);
+    if (!jsonTable) {
+        return <div>Loading...</div>
+    }
+    let show = []
 
     switch (datasetType) {
         case 'TFBINDING':
-            let show = ['objectsTested_genes_name', 'objectsTested_name']
-            show.forEach(element => {
-                let indexH = hiddenColumns.indexOf(element)
-                if (indexH) {
-                    hiddenColumns.splice(indexH, 1)
-                }
-                let indexI = ignoreColumns.indexOf(element)
-                if (indexI) {
-                    ignoreColumns.splice(indexI, 1)
-                }
-            });
-
-
+            show = []
+            break;
+        case 'TUS':
+            show = ['sample_title', 'objectsTested_name']
+            hiddenColumns = show
+            ignoreColumns = show
+            break;
+        case 'TTS':
+            show = ['sample_title', 'objectsTested_name']
+            hiddenColumns = show
+            ignoreColumns = show
+            break;
+        case 'TSS':
+            show = ['sample_title', 'objectsTested_name']
+            hiddenColumns = show
+            ignoreColumns = show
+            break;
+        case 'GENE_EXPRESSION':
+            show = ['sample_title', 'objectsTested_name', 'referenceGenome', 'sourceSerie_title', 'sourceSerie_strategy', 'sourceSerie_method', 'growthConditions_', 'growthConditions_organism', 'growthConditions_geneticBackground','growthConditions_medium','growthConditions_aeration','growthConditions_temperature','growthConditions_ph','growthConditions_pressure','growthConditions_opticalDensity','growthConditions_growthPhase','growthConditions_growthRate','growthConditions_vesselType','growthConditions_aerationSpeed','growthConditions_mediumSupplements']
+            hiddenColumns = show
+            ignoreColumns = show
             break;
         default:
             break;

@@ -7,8 +7,9 @@ export default function List({ datasetType, experimentType }) {
   const [_data, set_data] = useState()
   const [_state, set_state] = useState()
   const [_conf, set_conf] = useState()
-  let advancedSearch = `${datasetType}[datasetType]`
-  let title = "loading..."
+  const [_title, set_title] = useState("loading...")
+  let advancedSearch = `${datasetType}[datasetType]` 
+  let  srtDatasetType = "datasetType"
   switch (datasetType) {
     case "TFBINDING":
       srtDatasetType = " TF Binding Sites"
@@ -40,7 +41,7 @@ export default function List({ datasetType, experimentType }) {
       const COVER_REACTION = new CustomEvent('coverR', {
         bubbles: true,
         detail: {
-          title: "dataset list: "subtitle,
+          title: _title,
           state: _state,
         }
       });
@@ -86,9 +87,9 @@ export default function List({ datasetType, experimentType }) {
         set_state("error")
       }
     }
-  }, [_state, subtitle, _conf, _data, advancedSearch])
+  }, [_state, _conf, _data, _title, advancedSearch])
 
-  console.log(_conf);
+  console.log();
   if (!advancedSearch) {
     return (
       <article>
@@ -97,10 +98,9 @@ export default function List({ datasetType, experimentType }) {
     )
   }
 
-  if(_conf){
+  if(_conf && _data){
     return (
       <div>
-        <h2>{_conf.title}  {subtitle}</h2>
         <p>{_conf.description}</p>
         {
           _state === "loading" && <SpinnerCircle />
@@ -113,5 +113,5 @@ export default function List({ datasetType, experimentType }) {
     )
   }
   
-  return <>error</>
+  return <>...</>
 }
