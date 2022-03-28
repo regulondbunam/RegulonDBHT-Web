@@ -14,12 +14,13 @@ export default function Maininfo({ _id, sample, fivePrimeEnrichment, datasetType
         }
         //console.log(_data)
     }
-
+    //console.log(sourceSerie);
     return (
         <div style={{ marginLeft: "5%" }} id={`dataset_${_id}_main_info`} >
             <p style={{ fontSize: "12px" }}>ID: {_id}</p>
             <p style={{ fontSize: "22px" }} className="p_accent">{datasetTitle}</p>
-            <p style={{ fontSize: "14px" }} >Dataset Type: {datasetType}</p>
+            <p style={{ fontSize: "14px", float:'left', marginRight:'10px' }} >Dataset Type: {datasetType}</p>
+            <p style={{ fontSize: "14px" }} >|  Strategy: {sourceSerie.strategy}</p>
             <hr />
             {
                 fivePrimeEnrichment && <p style={{ fontSize: "14px" }} >5' Enrichment: {fivePrimeEnrichment}</p>

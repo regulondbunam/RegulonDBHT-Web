@@ -81,7 +81,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
                 </Link>
             )
         },
-        [prepareRow, rows]
+        [prepareRow, rows, datasetType]
     )
 
     // Render the UI for your table
@@ -193,7 +193,7 @@ export function DatasetTable({ jsonTable, datasetType }) {
     let hiddenColumns = []
     let ignoreColumns = []
 
-    console.log(jsonTable);
+    //console.log(jsonTable);
     if (!jsonTable) {
         return <div>Loading...</div>
     }

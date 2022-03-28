@@ -22,12 +22,13 @@ export default function Tabs({ id_dataset, data }) {
 
     useEffect(() => {
         if((_datasetData && _autorData)) {
-            if(_datasetData === 1){
-                set_openTab(1)
+            if(_datasetData !== 1){
                 let igv_view = document.getElementById("igv-view");
                 if(igv_view){
-                    igv_view.style.display = "none"
+                    igv_view.style.display = "block";
                 }
+            }else{
+                set_openTab(1)
             }
         }
     },[_datasetData, _autorData])
@@ -153,9 +154,6 @@ export default function Tabs({ id_dataset, data }) {
                             set_datasetData(1)
                         }
                     }
-                     else {
-                        set_datasetData(1)
-                    }
                 }}
                 />
             }
@@ -178,6 +176,7 @@ export default function Tabs({ id_dataset, data }) {
             {
                 data?.datasetType === "GENE_EXPRESSION" &&
                 <GetGE id_dataset={id_dataset} resoultsData={(data) => {
+                    //console.log(data);
                     if(!data){
                         set_datasetData(1)
                     }else{
@@ -228,9 +227,13 @@ function GetTFBSData({
             }}
             />
             <GetTFBS id_dataset={id_dataset} resoultsData={(data) => {
-                if (Array.isArray && data.length) {
-                    set_tfbsData(data);
-                } else {
+                if (data) {
+                    if (Array.isArray && data.length) {
+                        set_tfbsData(data);
+                    } else {
+                        set_tfbsData(1)
+                    }
+                }else{
                     set_tfbsData(1)
                 }
             }}

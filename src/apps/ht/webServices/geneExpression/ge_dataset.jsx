@@ -30,11 +30,13 @@ const GetGE = ({
 }) => {
   const { data, loading, error } = useQuery(query(id_dataset))
   //console.log(id_dataset)
+  //console.log(error);
   useEffect(() => {
     if (loading) {
       status('loading')
     }
     if (data) {
+      //console.log(data)
       try {
         if (data.getAllGeneExpressionOfDataset.length > 0) {
           status('done')

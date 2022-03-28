@@ -48,27 +48,29 @@ export default function TFBS({
                 disabled: dis
             });
         }
-        data.forEach(tfbs => {
-            let row = []
-            for (const key in tfbs) {
-                if (Object.hasOwnProperty.call(tfbs, key)) {
-                    let tfbs_prop = tfbs[key];
-                    if (key === "closestGenes") {
-                        tfbs_prop = linkGenes(tfbs_prop)
+        if (Array.isArray(data)) {
+            data.forEach(tfbs => {
+                let row = []
+                for (const key in tfbs) {
+                    if (Object.hasOwnProperty.call(tfbs, key)) {
+                        let tfbs_prop = tfbs[key];
+                        if (key === "closestGenes") {
+                            tfbs_prop = linkGenes(tfbs_prop)
+                        }
+                        if (key === "sequence") {
+                            tfbs_prop = <MKSequenceClass
+                                id_drawPlace={`${tfbs?.chrLeftPosition}_${tfbs?.chrRightPosition}_${tfbs?.sequence}_${toStrand(tfbs?.strand)}`}
+                                sequence={tfbs?.sequence} />
+                        }
+                        row.push({
+                            data: tfbs_prop,
+                            value: key
+                        })
                     }
-                    if (key === "sequence") {
-                        tfbs_prop = <MKSequenceClass
-                            id_drawPlace={`${tfbs?.chrLeftPosition}_${tfbs?.chrRightPosition}_${tfbs?.sequence}_${toStrand(tfbs?.strand)}`}
-                            sequence={tfbs?.sequence} />
-                    }
-                    row.push({
-                        data: tfbs_prop,
-                        value: key
-                    })
                 }
-            }
-            formatTable.rows.push(row)
-        });
+                formatTable.rows.push(row)
+            });
+        }
         return formatTable
     }, [data])
     //console.log(dataTable)

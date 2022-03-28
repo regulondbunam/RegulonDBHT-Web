@@ -35,6 +35,15 @@ function DataSolver (query,datasets) {
       }
   }
 
+  lista = lista.map(element=>{
+    element = ""+element
+    return element.replace(/'/g,"")
+  })
+
+  lista = lista.filter((item,index)=>{
+    return lista.indexOf(item) === index
+  })
+
   return lista
 };
 

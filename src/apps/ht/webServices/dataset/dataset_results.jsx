@@ -47,7 +47,6 @@ function query(ht_query) {
             }
             platform{
               _id
-              source
               title
             }
             title

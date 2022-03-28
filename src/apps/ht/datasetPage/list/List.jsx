@@ -57,6 +57,7 @@ export default function List({ datasetType, experimentType }) {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
             },
+            cache: 'default',
             body: JSON.stringify({ advancedSearch: advancedSearch })
           })
             .then((response) => response.json())

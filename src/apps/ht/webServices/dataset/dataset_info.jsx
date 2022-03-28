@@ -39,7 +39,6 @@ function query(datasetId) {
                   }
                   platform{
                     _id
-                    source
                     title
                   }
                   title

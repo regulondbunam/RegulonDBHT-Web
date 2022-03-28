@@ -36,7 +36,7 @@ export default function Info({datasetId}) {
       COVER.dispatchEvent(COVER_REACTION);
     }
   }, [_state,_dataset])
-  console.log(_dataset)
+  //console.log(_dataset)
   if (_state === "error") {
     return (
       <div>dataset error</div>
@@ -72,11 +72,11 @@ export default function Info({datasetId}) {
       <NLPgc datasetId={_dataset?._id} />
       <Tabs id_dataset={_dataset?._id} data={_dataset} />
       <br />
-            <div id="igv-view" >
+            <div id="igv-view" style={{display: 'none'}} >
                 {
 
                     _dataset?.sourceSerie?.strategy !== "ChIP-exo"
-                        ? <Viewer id_dataset={_dataset?._id} tfs={_dataset?.objectsTested} datasetType={_dataset?.datasetType} />
+                        ? <Viewer id_dataset={_dataset?._id} tfs={_dataset?.objectsTested} datasetType={_dataset?.datasetType}  />
                         : null
                 }
             </div>

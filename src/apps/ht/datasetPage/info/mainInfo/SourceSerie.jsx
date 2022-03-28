@@ -17,7 +17,7 @@ Style.gridItem = {
 }
 
 export default function SourceSerie({ sourceSerie }) {
-    console.log(sourceSerie?.series.length);
+    //console.log(sourceSerie?.series.length);
     return (
         <div style={{ marginLeft: "3%" }}>
             {

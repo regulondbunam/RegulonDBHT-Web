@@ -11,41 +11,33 @@ import { gql } from "@apollo/client";
 
 function query(id_dataset) {
   return gql`
-    {
-        getAllTFBindingOfDataset(datasetId: "${id_dataset}") {
-          _id
-          chromosome
-          chrLeftPosition
-          chrRightPosition
-          foundClassicRIs {
-            tfbsLeftPosition
-            tfbsRightPosition
-            relativeGeneDistance
-            relativeTSSDistance
-            strand
-            sequence
-          }
-          foundDatasetRIs {
-            tfbsLeftPosition
-            tfbsRightPosition
-            relativeGeneDistance
-            relativeTSSDistance
-            strand
-            sequence
-          }
-          nameCollection
-          score
-          strand
-          sequence
-          closestGenes {
-            _id
-            name
-            distanceTo
-          }
-          datasetIds
-          temporalId
-        }
+  {
+    getAllTFBindingOfDataset(datasetId: "${id_dataset}") {
+      _id
+      chromosome
+      chrLeftPosition
+      chrRightPosition
+      foundRIs {
+        tfbsLeftPosition
+        tfbsRightPosition
+        relativeGeneDistance
+        relativeTSSDistance
+        strand
+        sequence
       }
+      nameCollection
+      score
+      strand
+      sequence
+      closestGenes {
+        _id
+        name
+        distanceTo
+      }
+      datasetIds
+      temporalId
+    }
+  }
     `
 }
 
