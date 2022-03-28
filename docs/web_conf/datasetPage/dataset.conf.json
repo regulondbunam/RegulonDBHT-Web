@@ -19,7 +19,7 @@
         "igv":{
             "title": "GENOME VIEWER"
         }
-    }
+    },
     "list":{
         "title": "Collection datasets",
         "description": ""
