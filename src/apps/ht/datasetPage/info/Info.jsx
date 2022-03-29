@@ -7,6 +7,7 @@ import GrowthConditions from './growthConditions/growthConditions'
 import NLPgc from './nlpGrowthConditions/NLPgc'
 import Tabs from './data/tabs'
 import { Viewer } from './igv/viewer'
+import Related from './related/Related'
 
 export default function Info({datasetId}) {
 
@@ -36,7 +37,7 @@ export default function Info({datasetId}) {
       COVER.dispatchEvent(COVER_REACTION);
     }
   }, [_state,_dataset])
-  //console.log(_dataset)
+  console.log(_dataset)
   if (_state === "error") {
     return (
       <div>dataset error</div>
@@ -71,8 +72,10 @@ export default function Info({datasetId}) {
       <GrowthConditions growthCondition={_dataset?.growthConditions} />
       <NLPgc datasetId={_dataset?._id} />
       <Tabs id_dataset={_dataset?._id} data={_dataset} />
+      {
+        _dataset?.datasetType === "TFBINDING" && <Related />
+      }
       <br />
-            
     </article>
   )
 }
