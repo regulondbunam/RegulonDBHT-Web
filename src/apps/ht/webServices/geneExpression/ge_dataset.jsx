@@ -5,21 +5,23 @@ import { gql } from "@apollo/client";
 function query(id_dataset) {
   return gql`
   {
-    getAllGeneExpressionOfDataset(datasetId: "${id_dataset}" ) {
+    getGeneExpressionFromSearch(advancedSearch:"'${id_dataset}'[datasetIds]"){
       _id
-      datasetIds
-      gene {
-        _id
-        name
-        synonyms
-        bnumber
+        datasetIds
+        gene {
+          _id
+          name
+          synonyms
+          bnumber
+          leftEndPosition
+          rightEndPosition
+        }
+        count
+        tpm
+        fpkm
+        temporalId
       }
-      count
-      tpm
-      fpkm
-      temporalId
     }
-  }
     `
 }
 
@@ -38,13 +40,13 @@ const GetGE = ({
     if (data) {
       //console.log(data)
       try {
-        if (data.getAllGeneExpressionOfDataset.length > 0) {
+        if (data.getGeneExpressionFromSearch.length > 0) {
           status('done')
         } else {
           status('no_results')
         }
         
-        resoultsData(data?.getAllGeneExpressionOfDataset)
+        resoultsData(data?.getGeneExpressionFromSearch)
 
       } catch (error) {
         resoultsData(undefined)
