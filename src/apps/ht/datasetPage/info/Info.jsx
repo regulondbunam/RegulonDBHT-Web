@@ -73,7 +73,7 @@ export default function Info({datasetId}) {
       <NLPgc datasetId={_dataset?._id} />
       <Tabs id_dataset={_dataset?._id} data={_dataset} />
       {
-        _dataset?.datasetType === "TFBINDING" && <Related />
+        _dataset?.datasetType === "TFBINDING" && <Related datasetId={_dataset?._id} objectTested={_dataset?.objectsTested}/>
       }
       <br />
     </article>
