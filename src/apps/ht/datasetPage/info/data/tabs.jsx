@@ -13,25 +13,14 @@ import GetTTS from '../../../webServices/tts/tts_dataset'
 import Summary from './summary'
 import Style from './tabs.module.css'
 
-
+import { Viewer } from '../igv/viewer'
 
 export default function Tabs({ id_dataset, data }) {
     const [_openTab, set_openTab] = useState(0)
     const [_autorData, set_autorData] = useState()
     const [_datasetData, set_datasetData] = useState()
 
-    useEffect(() => {
-        if((_datasetData && _autorData)) {
-            if(_datasetData !== 1){
-                let igv_view = document.getElementById("igv-view");
-                if(igv_view){
-                    igv_view.style.display = "block";
-                }
-            }else{
-                set_openTab(1)
-            }
-        }
-    },[_datasetData, _autorData])
+
 
     let tabTitle1 = ""
     switch (data?.datasetType) {
@@ -98,13 +87,18 @@ export default function Tabs({ id_dataset, data }) {
                         ? <div className={Style.tabcontent}>
                             <Summary data={data} />
                             <NormData datasetType={data?.datasetType} datasetData={_datasetData} />
+                            <div id="igv-view" >
+                                <Viewer id_dataset={data?._id} tfs={data?.objectsTested} datasetType={data?.datasetType} />
+                                <br />
+                                <br />
+                            </div>
                         </div>
                         : null
                 }
                 {
                     _openTab === 1
                         ? <div className={Style.tabcontent}>
-                                <AuthorData id_dataset={id_dataset} data={_autorData} />
+                            <AuthorData id_dataset={id_dataset} data={_autorData} />
                         </div>
                         : null
                 }
@@ -127,18 +121,20 @@ export default function Tabs({ id_dataset, data }) {
             }}
             />
             {
-                data?.datasetType === "TFBINDING" && <GetTFBSData id_dataset={id_dataset} set_datasetData={(data) => { set_datasetData(data) }} />
+                data?.datasetType === "TFBINDING" && <GetTFBSData id_dataset={id_dataset} set_datasetData={(data) => { set_datasetData(data) }} setTab={(tab)=>{set_openTab(tab)}} />
             }
             {
-                data?.datasetType === "TUS" && 
+                data?.datasetType === "TUS" &&
                 <GetTUs id_dataset={id_dataset} resoultsData={(data) => {
-                    if(!data){
+                    if (!data) {
                         set_datasetData(1)
-                    }else{
+                        set_openTab(1)
+                    } else {
                         if (Array.isArray && data.length) {
-                            set_datasetData({tusData: data})
+                            set_datasetData({ tusData: data })
                         } else {
                             set_datasetData(1)
+                            set_openTab(1)
                         }
                     }
                 }}
@@ -147,11 +143,12 @@ export default function Tabs({ id_dataset, data }) {
             {
                 data?.datasetType === "TSS" &&
                 <GetTSS id_dataset={id_dataset} resoultsData={(data) => {
-                    if(data){
+                    if (data) {
                         if (Array.isArray && data.length) {
-                            set_datasetData({tssData: data})
-                        }else{
+                            set_datasetData({ tssData: data })
+                        } else {
                             set_datasetData(1)
+                            set_openTab(1)
                         }
                     }
                 }}
@@ -160,14 +157,16 @@ export default function Tabs({ id_dataset, data }) {
             {
                 data?.datasetType === "TTS" &&
                 <GetTTS id_dataset={id_dataset} resoultsData={(data) => {
-                    if(!data){
+                    if (!data) {
                         set_datasetData(1)
-                    }else{
+                        set_openTab(1)
+                    } else {
                         if (Array.isArray && data.length) {
-                            set_datasetData({ttsData: data})
+                            set_datasetData({ ttsData: data })
                             //
                         } else {
                             set_datasetData(1)
+                            set_openTab(1)
                         }
                     }
                 }}
@@ -177,17 +176,19 @@ export default function Tabs({ id_dataset, data }) {
                 data?.datasetType === "GENE_EXPRESSION" &&
                 <GetGE id_dataset={id_dataset} resoultsData={(data) => {
                     //console.log(data);
-                    if(!data){
+                    if (!data) {
                         set_datasetData(1)
-                    }else{
+                        set_openTab(1)
+                    } else {
                         if (Array.isArray && data.length) {
-                            set_datasetData({geData: data})
+                            set_datasetData({ geData: data })
                             //
                         } else {
                             set_datasetData(1)
+                            set_openTab(1)
                         }
                     }
-                    
+
                 }}
                 />
             }
@@ -197,7 +198,8 @@ export default function Tabs({ id_dataset, data }) {
 
 function GetTFBSData({
     id_dataset,
-    set_datasetData = () => { }
+    set_datasetData = () => { },
+    setTab = () => { }
 }) {
 
     const [_tfbsData, set_tfbsData] = useState()
@@ -207,6 +209,7 @@ function GetTFBSData({
         if (_tfbsData && _peaksData) {
             if (_tfbsData === 1 && _peaksData === 1) {
                 set_datasetData(1)
+                setTab(1)
             } else {
                 set_datasetData({
                     peaksData: _peaksData,
@@ -214,7 +217,7 @@ function GetTFBSData({
                 })
             }
         }
-    }, [_peaksData, _tfbsData, set_datasetData])
+    }, [_peaksData, _tfbsData, set_datasetData, setTab])
 
     return (
         <div>
@@ -233,7 +236,7 @@ function GetTFBSData({
                     } else {
                         set_tfbsData(1)
                     }
-                }else{
+                } else {
                     set_tfbsData(1)
                 }
             }}

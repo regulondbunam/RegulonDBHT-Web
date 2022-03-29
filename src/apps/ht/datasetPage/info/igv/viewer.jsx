@@ -42,7 +42,7 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
             _ttFile = `${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/tts/gff3`
             break;
         case "GENE_EXPRESSION":
-            _geFile = `/media/raw/ht_collections_web_${version}/GE/${id_dataset}.bedgraph`
+            _geFile = `${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/ge/bedgraph`
             break;
         default:
             show = false;
