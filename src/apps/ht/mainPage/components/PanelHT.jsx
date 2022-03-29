@@ -18,7 +18,7 @@ export default class PanelHT extends React.Component {
 
     render() {
         const { panel } = this.props
-        let datasetType = panel.datasetType
+        let datasetType = panel.url
         if (!panel.enable) {
             return (
                 <div className={Style.dPanel}>

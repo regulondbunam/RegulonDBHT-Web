@@ -63,7 +63,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
             const row = rows[index]
             prepareRow(row)
             return (
-                <Link to={`/ht/dataset/${datasetType}/datasetId=${row.cells[0].value}`} >
+                <Link to={`/ht/dataset/${datasetType}/datasetId=${row.original._id}`} >
                     <div
                         {...row.getRowProps({
                             style,
@@ -190,7 +190,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
 
 export function DatasetTable({ jsonTable, datasetType }) {
 
-    let hiddenColumns = []
+    let hiddenColumns = ['_id', 'referenceGenome', "datasetType", "objectsTested_name", "sample_title", "publications_title", "publications_authors", "sourceSerie_title", "sourceSerie_strategy", "sourceSerie_method", "growthConditions_organism", "growthConditions_geneticBackground", "growthConditions_medium", "growthConditions_aeration", "growthConditions_temperature", "growthConditions_ph", "growthConditions_pressure", "growthConditions_opticalDensity", "growthConditions_growthPhase", "growthConditions_growthRate", "growthConditions_vesselType", "growthConditions_aerationSpeed", "growthConditions_mediumSupplements"]
     let ignoreColumns = []
 
     //console.log(jsonTable);
@@ -198,30 +198,41 @@ export function DatasetTable({ jsonTable, datasetType }) {
         return <div>Loading...</div>
     }
     let show = []
-
     switch (datasetType) {
         case 'TFBINDING':
-            show = []
+            show = ['_id', "objectsTested_name", "sample_title"]
+            show.forEach(element => {
+                remove(hiddenColumns, element)
+            });
+            
             break;
         case 'TUS':
-            show = ['sample_title', 'objectsTested_name']
-            hiddenColumns = show
-            ignoreColumns = show
+            show = ['_id',"publications_title", "sourceSerie_title"]
+            show.forEach(element => {
+                remove(hiddenColumns, element)
+            });
+            ignoreColumns = ["objectsTested_name","sample_title"]
             break;
         case 'TTS':
-            show = ['sample_title', 'objectsTested_name']
-            hiddenColumns = show
-            ignoreColumns = show
+            show = ['_id',"publications_title", "sourceSerie_title"]
+            show.forEach(element => {
+                remove(hiddenColumns, element)
+            });
+            ignoreColumns = ["objectsTested_name","sample_title"]
             break;
         case 'TSS':
-            show = ['sample_title', 'objectsTested_name']
-            hiddenColumns = show
-            ignoreColumns = show
+            show = ['_id',"publications_title", "sourceSerie_title"]
+            show.forEach(element => {
+                remove(hiddenColumns, element)
+            });
+            ignoreColumns = ["objectsTested_name","sample_title"]
             break;
         case 'GENE_EXPRESSION':
-            show = ['sample_title', 'objectsTested_name', 'referenceGenome', 'sourceSerie_title', 'sourceSerie_strategy', 'sourceSerie_method', 'growthConditions_', 'growthConditions_organism', 'growthConditions_geneticBackground','growthConditions_medium','growthConditions_aeration','growthConditions_temperature','growthConditions_ph','growthConditions_pressure','growthConditions_opticalDensity','growthConditions_growthPhase','growthConditions_growthRate','growthConditions_vesselType','growthConditions_aerationSpeed','growthConditions_mediumSupplements']
-            hiddenColumns = show
-            ignoreColumns = show
+            show = ['_id',"publications_title", "sourceSerie_title"]
+            show.forEach(element => {
+                remove(hiddenColumns, element)
+            });
+            ignoreColumns = ["objectsTested_name","sample_title","growthConditions_organism", "growthConditions_geneticBackground", "growthConditions_medium", "growthConditions_aeration", "growthConditions_temperature", "growthConditions_ph", "growthConditions_pressure", "growthConditions_opticalDensity", "growthConditions_growthPhase", "growthConditions_growthRate", "growthConditions_vesselType", "growthConditions_aerationSpeed", "growthConditions_mediumSupplements"]
             break;
         default:
             break;
@@ -235,4 +246,10 @@ export function DatasetTable({ jsonTable, datasetType }) {
     return (
         <Table columns={jsonTable.columns} datasetType={datasetType} data={jsonTable.data} hiddenColumns={hiddenColumns} ignoreColumns={ignoreColumns} />
     )
+}
+
+
+function remove(array, element) {
+    const index = array.indexOf(element);
+    array.splice(index, 1);
 }

@@ -7,9 +7,9 @@ export default function List({ datasetType, experimentType }) {
   const [_data, set_data] = useState()
   const [_state, set_state] = useState()
   const [_conf, set_conf] = useState()
-  const [_title, set_title] = useState("loading...")
+  
   let advancedSearch = `${datasetType}[datasetType]` 
-  let  srtDatasetType = "datasetType"
+  let  srtDatasetType = datasetType
   switch (datasetType) {
     case "TFBINDING":
       srtDatasetType = " TF Binding Sites"
@@ -34,6 +34,8 @@ export default function List({ datasetType, experimentType }) {
       advancedSearch = undefined
       break;
   }
+
+  let _title = "Dataset list of " + srtDatasetType
 
   useEffect(() => {
     const COVER = document.getElementById("title-cover-ht")
