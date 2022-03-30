@@ -6,7 +6,6 @@ import TranscriptionFactor from './transcriptionFactor/TranscriptionFactor'
 import GrowthConditions from './growthConditions/growthConditions'
 import NLPgc from './nlpGrowthConditions/NLPgc'
 import Tabs from './data/tabs'
-import { Viewer } from './igv/viewer'
 import Related from './related/Related'
 
 export default function Info({datasetId}) {

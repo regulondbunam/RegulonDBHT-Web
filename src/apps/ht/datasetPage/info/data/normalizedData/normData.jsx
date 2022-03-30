@@ -7,9 +7,10 @@ import TTS from './tables/tts'
 import TUS from './tables/tus'
 
 
-export default function NormData({ datasetType, datasetData }) {
+export default function NormData({ datasetType, datasetData, jsonTable }) {
     const [_select, set_select] = useState("TFBS")
     //console.log(datasetData)
+    // console.log(jsonTable);
     let options = undefined
 
     switch (datasetType) {
@@ -83,8 +84,8 @@ export default function NormData({ datasetType, datasetData }) {
                 :null
             }
             {
-                (datasetType === "GENE_EXPRESSION" && datasetData?.geData)
-                ?<GE data={datasetData?.geData} />
+                (datasetType === "GENE_EXPRESSION")
+                ?<GE jsonTable={jsonTable} />
                 :null
             }
         </div>

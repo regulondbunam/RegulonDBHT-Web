@@ -4,7 +4,6 @@ import NormData from './normalizedData/normData'
 import AuthorData from './authors/authors'
 
 import GetAuthorData from '../../../webServices/authors/authorsData_dataset'
-import GetGE from '../../../webServices/geneExpression/ge_dataset'
 import GetPeaks from '../../../webServices/peaks/peaks_dataset'
 import GetTFBS from '../../../webServices/tfbs/tfbs_dataset'
 import GetTUs from '../../../webServices/transUnits/tu_dataset'
@@ -19,6 +18,30 @@ export default function Tabs({ id_dataset, data }) {
     const [_openTab, set_openTab] = useState(0)
     const [_autorData, set_autorData] = useState()
     const [_datasetData, set_datasetData] = useState()
+    const [_jsonTable, set_jsonTable] = useState()
+    
+    useEffect(() => {
+      if(data?.datasetType === "GENE_EXPRESSION"){
+          if(!_jsonTable){
+            try {
+                //REACT_APP_PROSSES_SERVICE
+                fetch(`${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/ge/jsonTable`,{cache: "default"})
+                    .then(response => response.json())
+                    .then(data => {set_jsonTable(data);set_datasetData(data)})
+                    .catch(error => {
+                        console.error(error)
+                        set_jsonTable({ error: error })
+                        set_datasetData(1)
+                    });
+            } catch (error) {
+                console.error(error)
+                set_jsonTable({ error: error })
+            }
+          }
+      }
+    
+    }, [data,_jsonTable, id_dataset, set_jsonTable, set_datasetData])
+    
 
 
 
@@ -86,7 +109,7 @@ export default function Tabs({ id_dataset, data }) {
                     (_openTab === 0)
                         ? <div className={Style.tabcontent}>
                             <Summary data={data} />
-                            <NormData datasetType={data?.datasetType} datasetData={_datasetData} />
+                            <NormData datasetType={data?.datasetType} datasetData={_datasetData} jsonTable={_jsonTable} />
                             <div id="igv-view" >
                                 <Viewer id_dataset={data?._id} tfs={data?.objectsTested} datasetType={data?.datasetType} />
                                 <br />
@@ -169,26 +192,6 @@ export default function Tabs({ id_dataset, data }) {
                             set_openTab(1)
                         }
                     }
-                }}
-                />
-            }
-            {
-                data?.datasetType === "GENE_EXPRESSION" &&
-                <GetGE id_dataset={id_dataset} resoultsData={(data) => {
-                    //console.log(data);
-                    if (!data) {
-                        set_datasetData(1)
-                        set_openTab(1)
-                    } else {
-                        if (Array.isArray && data.length) {
-                            set_datasetData({ geData: data })
-                            //
-                        } else {
-                            set_datasetData(1)
-                            set_openTab(1)
-                        }
-                    }
-
                 }}
                 />
             }

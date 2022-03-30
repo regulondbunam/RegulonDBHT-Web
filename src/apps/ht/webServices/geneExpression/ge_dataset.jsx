@@ -6,20 +6,7 @@ function query(id_dataset) {
   return gql`
   {
     getGeneExpressionFromSearch(advancedSearch:"'${id_dataset}'[datasetIds]"){
-      _id
-        datasetIds
-        gene {
-          _id
-          name
-          synonyms
-          bnumber
-          leftEndPosition
-          rightEndPosition
-        }
-        count
-        tpm
-        fpkm
-        temporalId
+        _id
       }
     }
     `

@@ -10,7 +10,7 @@ export default function Authors({ id_dataset }) {
         if (!_tableData) {
             try {
                 //REACT_APP_PROSSES_SERVICE
-                fetch(`${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/authorData/jsonTable`,{cache: "no-cache"})
+                fetch(`${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/authorData/jsonTable`,{cache: "default"})
                     .then(response => response.json())
                     .then(data => set_tableData(data))
                     .catch(error => {
