@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	1447306	1447318		-	.	name=QseB;ActiveConformation=QseB-Phosphorylated;RegulatedTUName=feaR;PromoterName=feaRp2;TFBSCenterPosition=-3;Sequence=-3;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1447392	1447404		-	.	name=QseB;ActiveConformation=QseB-Phosphorylated;RegulatedTUName=feaR;PromoterName=feaRp1;TFBSCenterPosition=-49;Sequence=-49;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3169281	3169293		+	.	name=QseB;ActiveConformation=QseB-Phosphorylated;RegulatedTUName=qseBC;PromoterName=ygiWp6;TFBSCenterPosition=-462;Sequence=-462;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3169748	3169760		+	.	name=QseB;ActiveConformation=QseB-Phosphorylated;RegulatedTUName=qseBC;PromoterName=ygiWp6;TFBSCenterPosition=6;Sequence=6;color=#12DD00	

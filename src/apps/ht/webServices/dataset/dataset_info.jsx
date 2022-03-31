@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from "@apollo/client";
 
-function query(id_dataset) {
-    return gql`
+function query(datasetId) {
+  return gql`
         {
-            getDatasetsFromSearch(advancedSearch: "${id_dataset}[_id]") {
+            getDatasetsFromSearch(advancedSearch: "${datasetId}[_id]") {
               _id
                 publications {
                   pmid
@@ -39,7 +39,6 @@ function query(id_dataset) {
                   }
                   platform{
                     _id
-                    source
                     title
                   }
                   title
@@ -78,6 +77,8 @@ function query(id_dataset) {
                   date
                   version
                 }
+                nlpGrowthConditionsId
+                experimentCondition
               }
         }
     `
@@ -86,11 +87,11 @@ function query(id_dataset) {
 
 
 const GetInfoDataset = ({
-  id_dataset = "",
+  datasetId = "",
   status = () => { },
   resoultsData = () => { },
 }) => {
-  const { data, loading, error } = useQuery(query(id_dataset))
+  const { data, loading, error } = useQuery(query(datasetId))
   useEffect(() => {
     if (loading) {
       status('loading')
@@ -111,12 +112,12 @@ const GetInfoDataset = ({
       console.error(error)
     }
 
-  }, [loading, error, status, data, resoultsData, id_dataset]);
+  }, [loading, error, status, data, resoultsData, datasetId]);
   return (<></>);
 }
 
-function clean(data = {}){
-  if(data?.sample?.title === '-'){
+function clean(data = {}) {
+  if (data?.sample?.title === '-') {
     data.sample.title = undefined;
   }
   return data

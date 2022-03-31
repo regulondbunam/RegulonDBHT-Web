@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	1031912	1031935		+	.	name=YdeO;ActiveConformation=YdeO;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp;TFBSCenterPosition=-61;Sequence=-61;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1031912	1031935		+	.	name=YdeO;ActiveConformation=YdeO;RegulatedTUName=hyaABCDEF;PromoterName=hyaAp2;TFBSCenterPosition=-61;Sequence=-61;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1037672	1037694		+	.	name=YdeO;ActiveConformation=YdeO;RegulatedTUName=appCBA-yccB;PromoterName=appCp;TFBSCenterPosition=-27.5;Sequence=-27.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1037672	1037694		+	.	name=YdeO;ActiveConformation=YdeO;RegulatedTUName=appCBA-yccB;PromoterName=appCp2;TFBSCenterPosition=-27.5;Sequence=-27.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3653884	3653909		+	.	name=YdeO;ActiveConformation=YdeO;RegulatedTUName=slp-dctR;PromoterName=slpp;TFBSCenterPosition=-40;Sequence=-40;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3657746	3657772		+	.	name=YdeO;ActiveConformation=YdeO;RegulatedTUName=gadEF;PromoterName=gadEp3;TFBSCenterPosition=-41;Sequence=-41;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3664654	3664675		-	.	name=YdeO;ActiveConformation=YdeO;RegulatedTUName=gadW;PromoterName=gadWp1;TFBSCenterPosition=-13;Sequence=-13;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4112798	4112831		+	.	name=YdeO;ActiveConformation=YdeO;RegulatedTUName=yiiS-uspD;PromoterName=yiiSp;TFBSCenterPosition=-55;Sequence=-55;color=#12DD00	

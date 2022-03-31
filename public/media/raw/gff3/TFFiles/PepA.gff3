@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	29365	29391		+	.	name=PepA;ActiveConformation=PepA;RegulatedTUName=carAB;PromoterName=carAp1;TFBSCenterPosition=-173;Sequence=-173;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	29459	29485		+	.	name=PepA;ActiveConformation=PepA;RegulatedTUName=carAB;PromoterName=carAp1;TFBSCenterPosition=-79;Sequence=-79;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4486169	4486195		-	.	name=PepA;ActiveConformation=PepA;RegulatedTUName=pepA;PromoterName=pepAp1;TFBSCenterPosition=-43;Sequence=-43;color=#FF1C01	

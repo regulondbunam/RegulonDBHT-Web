@@ -1,0 +1,7 @@
+NC_000913.3	RegulonDB	binding_site	1092556	1092572		-	.	name=NhaR;ActiveConformation=NhaR-Na<SUP>+</SUP>;RegulatedTUName=pgaABCD;PromoterName=pgaAp;TFBSCenterPosition=-41;Sequence=-41;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1092578	1092594		-	.	name=NhaR;ActiveConformation=NhaR-Na<SUP>+</SUP>;RegulatedTUName=pgaABCD;PromoterName=pgaAp;TFBSCenterPosition=-63;Sequence=-63;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1556546	1556563		+	.	name=NhaR;ActiveConformation=NhaR-Na<SUP>+</SUP>;RegulatedTUName=osmC;PromoterName=osmCp1;TFBSCenterPosition=-42;Sequence=-42;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	17384	17400		+	.	name=NhaR;ActiveConformation=NhaR-Na<SUP>+</SUP>;RegulatedTUName=nhaAR;PromoterName=nhaAp1;TFBSCenterPosition=-66;Sequence=-66;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	17406	17422		+	.	name=NhaR;ActiveConformation=NhaR-Na<SUP>+</SUP>;RegulatedTUName=nhaAR;PromoterName=nhaAp1;TFBSCenterPosition=-44;Sequence=-44;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	17416	17432		+	.	name=NhaR;ActiveConformation=NhaR-Na<SUP>+</SUP>;RegulatedTUName=nhaAR;PromoterName=nhaAp1;TFBSCenterPosition=-34;Sequence=-34;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	17447	17464		+	.	name=NhaR;ActiveConformation=NhaR-Na<SUP>+</SUP>;RegulatedTUName=nhaAR;PromoterName=nhaAp1;TFBSCenterPosition=-3;Sequence=-3;color=#12DD00	

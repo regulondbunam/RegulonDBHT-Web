@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	1978500	1978514		-	.	name=LrhA;ActiveConformation=LrhA;RegulatedTUName=flhDC;PromoterName=flhDp;TFBSCenterPosition=-112;Sequence=-112;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	84000	84091		+	.	name=LrhA;ActiveConformation=LrhA;RegulatedTUName=leuO;PromoterName=leuOp3;TFBSCenterPosition=-253;Sequence=-253;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	84000	84091		+	.	name=LrhA;ActiveConformation=LrhA;RegulatedTUName=leuO;PromoterName=leuOp1;TFBSCenterPosition=-109;Sequence=-109;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	84000	84091		+	.	name=LrhA;ActiveConformation=LrhA;RegulatedTUName=leuO;PromoterName=leuOp;TFBSCenterPosition=-143;Sequence=-143;color=#12DD00	

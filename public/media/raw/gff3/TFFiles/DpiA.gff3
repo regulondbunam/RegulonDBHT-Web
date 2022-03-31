@@ -1,0 +1,9 @@
+NC_000913.3	RegulonDB	binding_site	652049	652072		+	.	name=DpiA;ActiveConformation=DpiA-phosphorylated;RegulatedTUName=dpiBA;PromoterName=dpiBp1;TFBSCenterPosition=77;Sequence=77;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	652049	652072		-	.	name=DpiA;ActiveConformation=DpiA-phosphorylated;RegulatedTUName=citCDEFXG;PromoterName=citCp2;TFBSCenterPosition=-21;Sequence=-21;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	652049	652072		-	.	name=DpiA;ActiveConformation=DpiA-phosphorylated;RegulatedTUName=citCDEFXG;PromoterName=citCp1;TFBSCenterPosition=-108;Sequence=-108;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	652076	652099		-	.	name=DpiA;ActiveConformation=DpiA-phosphorylated;RegulatedTUName=citCDEFXG;PromoterName=citCp2;TFBSCenterPosition=-48;Sequence=-48;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	652076	652099		-	.	name=DpiA;ActiveConformation=DpiA-phosphorylated;RegulatedTUName=citCDEFXG;PromoterName=citCp1;TFBSCenterPosition=-135;Sequence=-135;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	652076	652099		+	.	name=DpiA;ActiveConformation=DpiA-phosphorylated;RegulatedTUName=dpiBA;PromoterName=dpiBp1;TFBSCenterPosition=104;Sequence=104;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	652118	652141		-	.	name=DpiA;ActiveConformation=DpiA-phosphorylated;RegulatedTUName=citCDEFXG;PromoterName=citCp2;TFBSCenterPosition=-90;Sequence=-90;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	652118	652141		-	.	name=DpiA;ActiveConformation=DpiA-phosphorylated;RegulatedTUName=citCDEFXG;PromoterName=citCp1;TFBSCenterPosition=-177;Sequence=-177;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	652118	652141		+	.	name=DpiA;ActiveConformation=DpiA-phosphorylated;RegulatedTUName=dpiBA;PromoterName=dpiBp1;TFBSCenterPosition=146;Sequence=146;color=#12DD00	

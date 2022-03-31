@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	2524943	2524955		-	.	name=XapR;ActiveConformation=XapR-xanthosine;RegulatedTUName=xapAB;PromoterName=xapAp;TFBSCenterPosition=-39;Sequence=-39;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2524943	2524955		-	.	name=XapR;ActiveConformation=XapR-xanthosine;RegulatedTUName=xapAB;PromoterName=xapAp2;TFBSCenterPosition=-39;Sequence=-39;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2525023	2525035		-	.	name=XapR;ActiveConformation=XapR-xanthosine;RegulatedTUName=xapAB;PromoterName=xapAp;TFBSCenterPosition=-119;Sequence=-119;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2525023	2525035		-	.	name=XapR;ActiveConformation=XapR-xanthosine;RegulatedTUName=xapAB;PromoterName=xapAp2;TFBSCenterPosition=-119;Sequence=-119;color=#12DD00	

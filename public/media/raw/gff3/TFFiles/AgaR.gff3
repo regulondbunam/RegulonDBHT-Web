@@ -1,0 +1,11 @@
+NC_000913.3	RegulonDB	binding_site	3278686	3278705		-	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=agaR;PromoterName=agaRp;TFBSCenterPosition=8.5;Sequence=8.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3278713	3278732		-	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=agaR;PromoterName=agaRp;TFBSCenterPosition=-19.5;Sequence=-19.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3278781	3278800		+	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=kbaZ-agaVWA;PromoterName=kbaZp;TFBSCenterPosition=-75.5;Sequence=-75.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3278825	3278844		+	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=kbaZ-agaVWA;PromoterName=kbaZp;TFBSCenterPosition=-31.5;Sequence=-31.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3278859	3278878		+	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=kbaZ-agaVWA;PromoterName=kbaZp;TFBSCenterPosition=3.5;Sequence=3.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3281605	3281624		+	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=agaSYBCDI;PromoterName=agaSp;TFBSCenterPosition=-274.5;Sequence=-274.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3281668	3281687		+	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=agaSYBCDI;PromoterName=agaSp;TFBSCenterPosition=-211.5;Sequence=-211.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3281785	3281804		+	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=agaSYBCDI;PromoterName=agaSp;TFBSCenterPosition=-94.5;Sequence=-94.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3281827	3281846		+	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=agaSYBCDI;PromoterName=agaSp;TFBSCenterPosition=-52.5;Sequence=-52.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3281858	3281877		+	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=agaSYBCDI;PromoterName=agaSp;TFBSCenterPosition=-21.5;Sequence=-21.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3281901	3281920		+	.	name=AgaR;ActiveConformation=AgaR;RegulatedTUName=agaSYBCDI;PromoterName=agaSp;TFBSCenterPosition=22.5;Sequence=22.5;color=#FF1C01	

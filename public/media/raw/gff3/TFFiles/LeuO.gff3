@@ -1,0 +1,17 @@
+NC_000913.3	RegulonDB	binding_site	2884263	2884283		-	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=casABCDE12;PromoterName=casAp;TFBSCenterPosition=47;Sequence=47;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2884289	2884309		-	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=casABCDE12;PromoterName=casAp;TFBSCenterPosition=21;Sequence=21;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2884389	2884409		-	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=casABCDE12;PromoterName=casAp;TFBSCenterPosition=-80;Sequence=-80;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2884419	2884439		-	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=casABCDE12;PromoterName=casAp;TFBSCenterPosition=-110;Sequence=-110;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3906805	3906825		-	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=bglGFB;PromoterName=bglGp1;TFBSCenterPosition=-118;Sequence=-118;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3906805	3906825		-	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=bglG;PromoterName=bglGp1;TFBSCenterPosition=-118;Sequence=-118;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3906836	3906856		-	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=bglGFB;PromoterName=bglGp1;TFBSCenterPosition=-149;Sequence=-149;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3906836	3906856		-	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=bglG;PromoterName=bglGp1;TFBSCenterPosition=-149;Sequence=-149;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	84014	84034		+	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=leuO;PromoterName=leuOp2;TFBSCenterPosition=-280;Sequence=-280;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	84014	84034		+	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=leuO;PromoterName=leuOp2;TFBSCenterPosition=-280;Sequence=-280;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	84040	84060		+	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=leuO;PromoterName=leuOp2;TFBSCenterPosition=-254;Sequence=-254;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	84040	84060		+	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=leuO;PromoterName=leuOp2;TFBSCenterPosition=-254;Sequence=-254;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	84099	84119		+	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=leuO;PromoterName=leuOp2;TFBSCenterPosition=-195;Sequence=-195;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	84099	84119		+	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=leuO;PromoterName=leuOp2;TFBSCenterPosition=-195;Sequence=-195;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	84122	84142		+	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=leuO;PromoterName=leuOp2;TFBSCenterPosition=-172;Sequence=-172;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	84122	84142		+	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=leuO;PromoterName=leuOp;TFBSCenterPosition=-56;Sequence=-56;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	84122	84142		+	.	name=LeuO;ActiveConformation=LeuO;RegulatedTUName=leuO;PromoterName=leuOp2;TFBSCenterPosition=-172;Sequence=-172;color=#FF1C01	

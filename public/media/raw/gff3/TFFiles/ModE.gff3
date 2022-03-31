@@ -1,0 +1,8 @@
+NC_000913.3	RegulonDB	binding_site	1277907	1277930		-	.	name=ModE;ActiveConformation=ModE-molybdate;RegulatedTUName=narXL;PromoterName=narXp;TFBSCenterPosition=-141.5;Sequence=-141.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2303696	2303719		-	.	name=ModE;ActiveConformation=ModE-molybdate;RegulatedTUName=napFDAGHBC-ccmABCDEFGH;PromoterName=napFp1;TFBSCenterPosition=-133.5;Sequence=-133.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2303696	2303719		-	.	name=ModE;ActiveConformation=ModE-molybdate;RegulatedTUName=napFDAGHBC-ccmABCDEFGH;PromoterName=napFp2;TFBSCenterPosition=-130.5;Sequence=-130.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2850641	2850664		-	.	name=ModE;ActiveConformation=ModE-molybdate;RegulatedTUName=hycABCDEFGHI;PromoterName=hycAp;TFBSCenterPosition=-192;Sequence=-192;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4617231	4617254		+	.	name=ModE;ActiveConformation=ModE-molybdate;RegulatedTUName=deoCABD;PromoterName=deoCp2;TFBSCenterPosition=-35;Sequence=-35;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	795046	795069		+	.	name=ModE;ActiveConformation=ModE-molybdate;RegulatedTUName=modABC;PromoterName=modAp2;TFBSCenterPosition=-4.5;Sequence=-4.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	816845	816868		+	.	name=ModE;ActiveConformation=ModE-molybdate;RegulatedTUName=moaABCDE;PromoterName=moaAp2;TFBSCenterPosition=-57.5;Sequence=-57.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	940861	940884		+	.	name=ModE;ActiveConformation=ModE-molybdate;RegulatedTUName=dmsABC;PromoterName=dmsAp2;TFBSCenterPosition=-5;Sequence=-5;color=#FF1C01	

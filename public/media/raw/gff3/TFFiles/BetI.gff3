@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	329381	329400		-	.	name=BetI;ActiveConformation=BetI;RegulatedTUName=betIBA;PromoterName=betIp;TFBSCenterPosition=-30;Sequence=-30;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	329381	329400		+	.	name=BetI;ActiveConformation=BetI;RegulatedTUName=betT;PromoterName=betTp;TFBSCenterPosition=-30;Sequence=-30;color=#FF1C01	

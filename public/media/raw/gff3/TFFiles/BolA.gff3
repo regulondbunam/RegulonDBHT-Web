@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	3401317	3401324		-	.	name=BolA;ActiveConformation=BolA-phosphorylated;RegulatedTUName=mreBCD;PromoterName=mreBp1;TFBSCenterPosition=-191.5;Sequence=-191.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3401317	3401324		-	.	name=BolA;ActiveConformation=BolA-phosphorylated;RegulatedTUName=mreB;PromoterName=mreBp1;TFBSCenterPosition=-191.5;Sequence=-191.5;color=#FF1C01	

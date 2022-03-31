@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	1619064	1619085		+	.	name=MarR;ActiveConformation=MarR;RegulatedTUName=marRAB;PromoterName=marRp;TFBSCenterPosition=-18;Sequence=-18;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1619098	1619119		+	.	name=MarR;ActiveConformation=MarR;RegulatedTUName=marRAB;PromoterName=marRp;TFBSCenterPosition=17;Sequence=17;color=#FF1C01	

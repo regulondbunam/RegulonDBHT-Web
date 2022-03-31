@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	1942613	1942636		+	.	name=Zur;ActiveConformation=Zur-Zn<SUP>2+</SUP>;RegulatedTUName=znuCB;PromoterName=znuCp;TFBSCenterPosition=-10;Sequence=-10;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1942613	1942636		-	.	name=Zur;ActiveConformation=Zur-Zn<SUP>2+</SUP>;RegulatedTUName=znuA;PromoterName=znuAp;TFBSCenterPosition=38;Sequence=38;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2041319	2041341		+	.	name=Zur;ActiveConformation=Zur-Zn<SUP>2+</SUP>;RegulatedTUName=zinT;PromoterName=zinTp;TFBSCenterPosition=-16;Sequence=-16;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	312784	312807		-	.	name=Zur;ActiveConformation=Zur-Zn<SUP>2+</SUP>;RegulatedTUName=ykgMO;PromoterName=ykgMp;TFBSCenterPosition=11;Sequence=11;color=#FF1C01	

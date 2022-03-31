@@ -1,0 +1,7 @@
+NC_000913.3	RegulonDB	binding_site	432245	432260		-	.	name=DeoR;ActiveConformation=DeoR;RegulatedTUName=tsx;PromoterName=tsxp1;TFBSCenterPosition=-7.5;Sequence=-7.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4616063	4616078		+	.	name=DeoR;ActiveConformation=DeoR;RegulatedTUName=deoCABD;PromoterName=deoCp1;TFBSCenterPosition=-608;Sequence=-608;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4616383	4616398		+	.	name=DeoR;ActiveConformation=DeoR;RegulatedTUName=deoCABD;PromoterName=deoCp2;TFBSCenterPosition=-887;Sequence=-887;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4616663	4616678		+	.	name=DeoR;ActiveConformation=DeoR;RegulatedTUName=deoCABD;PromoterName=deoCp1;TFBSCenterPosition=-8;Sequence=-8;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4616939	4616954		+	.	name=DeoR;ActiveConformation=DeoR;RegulatedTUName=deoCABD;PromoterName=deoCp1;TFBSCenterPosition=269;Sequence=269;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4616962	4616977		+	.	name=DeoR;ActiveConformation=DeoR;RegulatedTUName=deoCABD;PromoterName=deoCp2;TFBSCenterPosition=-308;Sequence=-308;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4617262	4617277		+	.	name=DeoR;ActiveConformation=DeoR;RegulatedTUName=deoCABD;PromoterName=deoCp2;TFBSCenterPosition=-8;Sequence=-8;color=#FF1C01	

@@ -1,0 +1,16 @@
+NC_000913.3	RegulonDB	binding_site	1335720	1335740		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=acnA;PromoterName=acnAp2;TFBSCenterPosition=-51.5;Sequence=-51.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1488019	1488038		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=aldA;PromoterName=aldAp;TFBSCenterPosition=-161;Sequence=-161;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1619022	1619041		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=marRAB;PromoterName=marRp;TFBSCenterPosition=-61.5;Sequence=-61.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1686680	1686699		-	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=fumC;PromoterName=fumCp1;TFBSCenterPosition=-35.5;Sequence=-35.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1936420	1936439		-	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=zwf;PromoterName=zwfp;TFBSCenterPosition=-54;Sequence=-54;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2250758	2250777		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=nfo;PromoterName=nfop;TFBSCenterPosition=-38.5;Sequence=-38.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2313034	2313053		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=micF;PromoterName=micFp1;TFBSCenterPosition=-40;Sequence=-40;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2313034	2313053		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=micF;PromoterName=micFp2;TFBSCenterPosition=-40;Sequence=-40;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2349531	2349550		-	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=inaA;PromoterName=inaAp;TFBSCenterPosition=-41.5;Sequence=-41.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3178012	3178031		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=tolC-ygiBC;PromoterName=tolCp3;TFBSCenterPosition=-40.5;Sequence=-40.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3178012	3178031		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=tolC-ygiBC;PromoterName=tolCp4;TFBSCenterPosition=-52.5;Sequence=-52.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4100709	4100728		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=sodA;PromoterName=sodAp;TFBSCenterPosition=-40.5;Sequence=-40.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4635363	4635382		-	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=rob;PromoterName=robp;TFBSCenterPosition=-19.5;Sequence=-19.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	605487	605506		-	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=nfsB;PromoterName=nfsBp;TFBSCenterPosition=-43.5;Sequence=-43.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	794701	794720		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=acrZ;PromoterName=acrZp;TFBSCenterPosition=-40.5;Sequence=-40.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	890842	890861		+	.	name=Rob;ActiveConformation=Rob;RegulatedTUName=ybjC-nfsA-rimK-ybjN;PromoterName=ybjCp;TFBSCenterPosition=-40.5;Sequence=-40.5;color=#12DD00	

@@ -1,0 +1,6 @@
+NC_000913.3	RegulonDB	binding_site	1875574	1875595		+	.	name=NimR;ActiveConformation=NimR;RegulatedTUName=nimT;PromoterName=nimTp;TFBSCenterPosition=-73;Sequence=-73;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1875574	1875595		-	.	name=NimR;ActiveConformation=NimR;RegulatedTUName=yeaM;PromoterName=nimRp;TFBSCenterPosition=17;Sequence=17;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1875623	1875637		-	.	name=NimR;ActiveConformation=NimR;RegulatedTUName=yeaM;PromoterName=nimRp;TFBSCenterPosition=-29.5;Sequence=-29.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1875623	1875637		+	.	name=NimR;ActiveConformation=NimR;RegulatedTUName=nimT;PromoterName=nimTp;TFBSCenterPosition=-27.5;Sequence=-27.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1875649	1875667		+	.	name=NimR;ActiveConformation=NimR;RegulatedTUName=nimT;PromoterName=nimTp;TFBSCenterPosition=1.5;Sequence=1.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1875649	1875667		-	.	name=NimR;ActiveConformation=NimR;RegulatedTUName=yeaM;PromoterName=nimRp;TFBSCenterPosition=-57.5;Sequence=-57.5;color=#FF1C01	

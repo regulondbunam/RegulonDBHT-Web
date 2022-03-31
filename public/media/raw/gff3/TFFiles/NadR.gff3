@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	2710396	2710413		+	.	name=NadR;ActiveConformation=NadR;RegulatedTUName=nadB;PromoterName=nadBp;TFBSCenterPosition=48.5;Sequence=48.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	781995	782012		+	.	name=NadR;ActiveConformation=NadR;RegulatedTUName=;PromoterName=nadAp;TFBSCenterPosition=-57.5;Sequence=-57.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	990386	990403		-	.	name=NadR;ActiveConformation=NadR;RegulatedTUName=pncB;PromoterName=pncBp;TFBSCenterPosition=20.5;Sequence=20.5;color=#FF1C01	

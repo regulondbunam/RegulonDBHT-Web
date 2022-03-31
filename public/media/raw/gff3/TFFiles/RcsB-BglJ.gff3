@@ -1,0 +1,13 @@
+NC_000913.3	RegulonDB	binding_site	1477522	1477542		+	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=ynbABCD;PromoterName=ynbAp;TFBSCenterPosition=-65.5;Sequence=-65.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1844956	1844976		-	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=ynjI;PromoterName=ynjIp;TFBSCenterPosition=-65.5;Sequence=-65.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1961857	1961877		+	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=yecT;PromoterName=yecTp;TFBSCenterPosition=-68.5;Sequence=-68.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2196369	2196389		+	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=yehF;PromoterName=yehFp;TFBSCenterPosition=-66.5;Sequence=-66.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3157491	3157511		+	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=yqhG;PromoterName=yqhGp;TFBSCenterPosition=-44.5;Sequence=-44.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3172379	3172399		-	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=ygiZ;PromoterName=ygiZp;TFBSCenterPosition=-65.5;Sequence=-65.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3334781	3334801		+	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=sfsB;PromoterName=sfsBp;TFBSCenterPosition=-67.5;Sequence=-67.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3860192	3860212		+	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=yidL;PromoterName=yidLp;TFBSCenterPosition=-51.5;Sequence=-51.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3906783	3906802		-	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=bglGFB;PromoterName=bglGp1;TFBSCenterPosition=-95.5;Sequence=-95.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3906783	3906802		-	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=bglG;PromoterName=bglGp1;TFBSCenterPosition=-95.5;Sequence=-95.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3906783	3906802		-	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=bglG;PromoterName=bglGp2;TFBSCenterPosition=-75.5;Sequence=-75.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	408486	408506		+	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=ykiA;PromoterName=ykiAp;TFBSCenterPosition=-78.5;Sequence=-78.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	84236	84255		+	.	name=RcsB-BglJ;ActiveConformation=RcsB-BglJ;RegulatedTUName=leuO;PromoterName=leuOp2;TFBSCenterPosition=-58.5;Sequence=-58.5;color=#12DD00	

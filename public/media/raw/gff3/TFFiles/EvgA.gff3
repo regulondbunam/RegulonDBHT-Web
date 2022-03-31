@@ -1,0 +1,10 @@
+NC_000913.3	RegulonDB	binding_site	1584071	1584088		-	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=safA-ydeO;PromoterName=safAp;TFBSCenterPosition=-51.5;Sequence=-51.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1586730	1586747		-	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=ydeP;PromoterName=ydePp;TFBSCenterPosition=-74.5;Sequence=-74.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2168413	2168430		-	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=yegRZ;PromoterName=yegRp;TFBSCenterPosition=-72.5;Sequence=-72.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2483513	2483530		+	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=evgAS;PromoterName=evgAp2;TFBSCenterPosition=-109.5;Sequence=-109.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2483513	2483530		+	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=evgAS;PromoterName=evgAp1;TFBSCenterPosition=-119.5;Sequence=-119.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2483513	2483530		-	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=emrKY;PromoterName=emrKp;TFBSCenterPosition=-73.5;Sequence=-73.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2493506	2493523		-	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=frc;PromoterName=frcp;TFBSCenterPosition=-75.5;Sequence=-75.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2494500	2494517		-	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=yfdX;PromoterName=yfdXp;TFBSCenterPosition=-75.5;Sequence=-75.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2494538	2494555		-	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=yfdX;PromoterName=yfdXp;TFBSCenterPosition=-113.5;Sequence=-113.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2587435	2587453		+	.	name=EvgA;ActiveConformation=EvgA-phosphorylated;RegulatedTUName=acrD;PromoterName=acrDp;TFBSCenterPosition=-31.5;Sequence=-31.5;color=#12DD00	

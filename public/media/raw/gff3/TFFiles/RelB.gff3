@@ -1,0 +1,6 @@
+NC_000913.3	RegulonDB	binding_site	1645885	1645897		-	.	name=RelB;ActiveConformation=RelB;RegulatedTUName=relBE-hokD;PromoterName=relBp;TFBSCenterPosition=13.5;Sequence=13.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1645897	1645908		-	.	name=RelB;ActiveConformation=RelB;RegulatedTUName=relBE-hokD;PromoterName=relBp;TFBSCenterPosition=1.5;Sequence=1.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1645871	1645882		-	.	name=RelB-RelE;ActiveConformation=RelB-RelE;RegulatedTUName=relBE-hokD;PromoterName=relBp;TFBSCenterPosition=28;Sequence=28;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1645885	1645897		-	.	name=RelB-RelE;ActiveConformation=RelB-RelE;RegulatedTUName=relBE-hokD;PromoterName=relBp;TFBSCenterPosition=13.5;Sequence=13.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1645897	1645908		-	.	name=RelB-RelE;ActiveConformation=RelB-RelE;RegulatedTUName=relBE-hokD;PromoterName=relBp;TFBSCenterPosition=1.5;Sequence=1.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1645911	1645922		-	.	name=RelB-RelE;ActiveConformation=RelB-RelE;RegulatedTUName=relBE-hokD;PromoterName=relBp;TFBSCenterPosition=-13.5;Sequence=-13.5;color=#FF1C01	

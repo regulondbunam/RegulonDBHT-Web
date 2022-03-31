@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	2924698	2924716		-	.	name=UvrY;ActiveConformation=UvrY-phosphorylated;RegulatedTUName=csrB;PromoterName=csrBp;TFBSCenterPosition=-183;Sequence=-183;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4050868	4050886		+	.	name=UvrY;ActiveConformation=UvrY-phosphorylated;RegulatedTUName=csrC;PromoterName=csrCp;TFBSCenterPosition=-159;Sequence=-159;color=#12DD00	

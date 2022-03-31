@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	3777181	3777203		+	.	name=LldR;ActiveConformation=LldR;RegulatedTUName=lldPRD;PromoterName=lldPp;TFBSCenterPosition=-97;Sequence=-97;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3777181	3777203		+	.	name=LldR;ActiveConformation=LldR-(<i>S</i>)-lactate;RegulatedTUName=lldPRD;PromoterName=lldPp;TFBSCenterPosition=-97;Sequence=-97;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3777307	3777329		+	.	name=LldR;ActiveConformation=LldR;RegulatedTUName=lldPRD;PromoterName=lldPp;TFBSCenterPosition=30;Sequence=30;color=#FF1C01	

@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	4097629	4097645		+	.	name=RhaR;ActiveConformation=RhaR-L-rhamnose;RegulatedTUName=rhaSR;PromoterName=rhaSp;TFBSCenterPosition=-74;Sequence=-74;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4097629	4097645		+	.	name=RhaR;ActiveConformation=RhaR-L-rhamnose;RegulatedTUName=rhaSR;PromoterName=rhaSp2;TFBSCenterPosition=-74;Sequence=-74;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4097663	4097679		+	.	name=RhaR;ActiveConformation=RhaR-L-rhamnose;RegulatedTUName=rhaSR;PromoterName=rhaSp;TFBSCenterPosition=-40;Sequence=-40;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4097663	4097679		+	.	name=RhaR;ActiveConformation=RhaR-L-rhamnose;RegulatedTUName=rhaSR;PromoterName=rhaSp2;TFBSCenterPosition=-40;Sequence=-40;color=#12DD00	

@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	1821763	1821764		-	.	name=ChbR;ActiveConformation=ChbR;RegulatedTUName=chbBCARFG;PromoterName=chbBp;TFBSCenterPosition=-38;Sequence=-38;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1821763	1821764		-	.	name=ChbR;ActiveConformation=ChbR-6-phospho-&beta;-D-glucosaminyl-(1->4)-<i>N</i>-acetyl-D-glucosamine;RegulatedTUName=chbBCARFG;PromoterName=chbBp;TFBSCenterPosition=-38;Sequence=-38;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1821786	1821787		-	.	name=ChbR;ActiveConformation=ChbR;RegulatedTUName=chbBCARFG;PromoterName=chbBp;TFBSCenterPosition=-61;Sequence=-61;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1821786	1821787		-	.	name=ChbR;ActiveConformation=ChbR-6-phospho-&beta;-D-glucosaminyl-(1->4)-<i>N</i>-acetyl-D-glucosamine;RegulatedTUName=chbBCARFG;PromoterName=chbBp;TFBSCenterPosition=-61;Sequence=-61;color=#12DD00	

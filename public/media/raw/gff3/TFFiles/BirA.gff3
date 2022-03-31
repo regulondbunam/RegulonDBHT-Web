@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	809262	809302		+	.	name=BirA;ActiveConformation=BirA-biotinyl-5'-adenylate;RegulatedTUName=bioBFCD;PromoterName=bioBp;TFBSCenterPosition=-20.5;Sequence=-20.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	809262	809302		-	.	name=BirA;ActiveConformation=BirA-biotinyl-5'-adenylate;RegulatedTUName=bioA;PromoterName=bioAp;TFBSCenterPosition=11.5;Sequence=11.5;color=#FF1C01	

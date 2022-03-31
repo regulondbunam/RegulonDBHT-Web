@@ -1,0 +1,7 @@
+NC_000913.3	RegulonDB	binding_site	1978378	1978392		-	.	name=RcsAB;ActiveConformation=RcsAB;RegulatedTUName=flhDC;PromoterName=flhDp;TFBSCenterPosition=11;Sequence=11;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2023657	2023671		+	.	name=RcsAB;ActiveConformation=RcsAB;RegulatedTUName=rcsA;PromoterName=rcsAp;TFBSCenterPosition=-172;Sequence=-172;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2023704	2023718		+	.	name=RcsAB;ActiveConformation=RcsAB;RegulatedTUName=rcsA;PromoterName=rcsAp;TFBSCenterPosition=-125;Sequence=-125;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2137659	2137673		-	.	name=RcsAB;ActiveConformation=RcsAB;RegulatedTUName=wza-wzb-wzc-wcaAB;PromoterName=wzap1;TFBSCenterPosition=-83;Sequence=-83;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2137681	2137695		-	.	name=RcsAB;ActiveConformation=RcsAB;RegulatedTUName=wza-wzb-wzc-wcaAB;PromoterName=wzap1;TFBSCenterPosition=-105;Sequence=-105;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4235642	4235656		+	.	name=RcsAB;ActiveConformation=RcsAB;RegulatedTUName=yjbE;PromoterName=yjbEp1;TFBSCenterPosition=-209;Sequence=-209;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4235642	4235656		+	.	name=RcsAB;ActiveConformation=RcsAB;RegulatedTUName=yjbEFGH;PromoterName=yjbEp1;TFBSCenterPosition=-209;Sequence=-209;color=#12DD00	

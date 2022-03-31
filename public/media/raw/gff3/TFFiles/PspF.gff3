@@ -1,0 +1,5 @@
+NC_000913.3	RegulonDB	binding_site	1367911	1367927		+	.	name=PspF;ActiveConformation=PspF;RegulatedTUName=pspABCDE;PromoterName=pspAp;TFBSCenterPosition=-119;Sequence=-119;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1367911	1367927		-	.	name=PspF;ActiveConformation=PspF;RegulatedTUName=pspF;PromoterName=pspFp1;TFBSCenterPosition=27;Sequence=27;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1367931	1367947		-	.	name=PspF;ActiveConformation=PspF;RegulatedTUName=pspF;PromoterName=pspFp1;TFBSCenterPosition=7;Sequence=7;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1367931	1367947		+	.	name=PspF;ActiveConformation=PspF;RegulatedTUName=pspABCDE;PromoterName=pspAp;TFBSCenterPosition=-99;Sequence=-99;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4262721	4262737		+	.	name=PspF;ActiveConformation=PspF;RegulatedTUName=pspG;PromoterName=pspGp;TFBSCenterPosition=-87;Sequence=-87;color=#12DD00	
