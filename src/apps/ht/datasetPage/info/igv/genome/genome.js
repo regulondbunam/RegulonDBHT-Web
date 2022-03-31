@@ -22,6 +22,7 @@ export function confGenome({
         "type": "annotation",
         "url": "/media/raw/ht_collections_web_v3/regulondb/GeneProductSet.gff3",
         "format": "gff3",
+        "color": "#000000",
         "displayMode": "EXPANDED",
       }
     ]
@@ -39,7 +40,7 @@ export function confGenome({
     tfFiles.forEach(tf => {
       conf.tracks.push(
         {
-          "name": `RegulonDB TFBS: ${tf.name}`,
+          "name": `RegulonDB TF: ${tf.name}`,
           "url": tf.url,
           "displayMode": "EXPANDED",
           "nameField": `RegulonDB TFBS: ${tf.name}`
@@ -55,6 +56,7 @@ export function confGenome({
         "url": peaksFile,
         "format": "gff3",
         "displayMode": "EXPANDED",
+        "color": "#0EC2C3",
         "nameField": `${id_dataset} peaks`,
       }
     )    
@@ -65,6 +67,7 @@ export function confGenome({
         "name": `${id_dataset} sites`,
         "url": sitesFile,
         "format": "gff3",
+        "color": "#A466F6",
         "displayMode": "EXPANDED",
         "nameField": `${id_dataset} sites`,
       }
@@ -73,9 +76,10 @@ export function confGenome({
   if (terminator) {
     conf.tracks.push(
       {
-        "name": `TerminatorSet`,
+        "name": `RegulonDB TerminatorSet`,
         "url": terminator,
         "format": "gff3",
+        "color": "#E39238",
         "displayMode": "EXPANDED",
         "nameField": `TerminatorSet`,
       }
@@ -95,9 +99,10 @@ export function confGenome({
   if (promoter) {
     conf.tracks.push(
       {
-        "name": `PromoterSet`,
+        "name": `RegulonDB PromoterSet`,
         "url": promoter,
         "format": "gff3",
+        "color": "#E39238",
         "displayMode": "EXPANDED",
         "nameField": `PromoterSet`,
       }
