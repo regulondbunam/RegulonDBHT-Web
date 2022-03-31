@@ -8,7 +8,8 @@ export function confGenome({
   tuFile,
   geFile,
   promoter,
-  terminator
+  terminator,
+  tuSet
 }) {
   let conf = {
     "id": "Ecoli",
@@ -20,7 +21,7 @@ export function confGenome({
       {
         "name": "Genes",
         "type": "annotation",
-        "url": "/media/raw/ht_collections_web_v3/regulondb/GeneProductSet.gff3",
+        "url": "/media/raw/gff3/GeneProductSet.gff3",
         "format": "gff3",
         "color": "#000000",
         "displayMode": "EXPANDED",
@@ -116,6 +117,17 @@ export function confGenome({
         "format": "gff3",
         "displayMode": "EXPANDED",
         "nameField": `${id_dataset} dataset`,
+      }
+    )    
+  }
+  if (tuSet) {
+    conf.tracks.push(
+      {
+        "name": `RegulonDB TUSet`,
+        "url": tuSet,
+        "format": "gff3",
+        "displayMode": "EXPANDED",
+        "nameField": `RegulonDB TUSet`,
       }
     )    
   }

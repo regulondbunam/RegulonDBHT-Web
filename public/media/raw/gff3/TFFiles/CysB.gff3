@@ -1,0 +1,15 @@
+NC_000913.3	RegulonDB	binding_site	1333751	1333797		+	.	name=CysB;ActiveConformation=CysB;RegulatedTUName=cysB;PromoterName=cysBp;TFBSCenterPosition=-14;Sequence=-14;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1350162	1350204		-	.	name=CysB;ActiveConformation=CysB;RegulatedTUName=yciW;PromoterName=yciWp;TFBSCenterPosition=-50.5;Sequence=-50.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1441775	1441816		-	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=hslJ;PromoterName=hslJp;TFBSCenterPosition=-16;Sequence=-16;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1624023	1624065		-	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=dgcZ;PromoterName=dgcZp;TFBSCenterPosition=-164.5;Sequence=-164.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1893800	1893842		+	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=yoaC;PromoterName=yoaCp1;TFBSCenterPosition=-145.5;Sequence=-145.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2532297	2532298		+	.	name=CysB;ActiveConformation=CysB;RegulatedTUName=cysK;PromoterName=cysKp1;TFBSCenterPosition=-79;Sequence=-79;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2543621	2543622		-	.	name=CysB;ActiveConformation=CysB;RegulatedTUName=cysPUWAM;PromoterName=cysPp;TFBSCenterPosition=-65;Sequence=-65;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2876432	2876473		-	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=cysDNC;PromoterName=cysDp;TFBSCenterPosition=-85;Sequence=-85;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2891998	2892039		-	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=cysJIH;PromoterName=cysJp;TFBSCenterPosition=-55;Sequence=-55;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2991285	2991327		+	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=ygeH;PromoterName=ygeHp10;TFBSCenterPosition=-573.5;Sequence=-573.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	384982	385023		+	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=tauABCD;PromoterName=tauAp;TFBSCenterPosition=-202;Sequence=-202;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	385091	385132		+	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=tauABCD;PromoterName=tauAp;TFBSCenterPosition=-93;Sequence=-93;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	385146	385187		+	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=tauABCD;PromoterName=tauAp;TFBSCenterPosition=-38;Sequence=-38;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	636843	636885		-	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=ybdN;PromoterName=ybdNp;TFBSCenterPosition=-177.5;Sequence=-177.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	997560	997601		-	.	name=CysB;ActiveConformation=CysB-<i>O</i>-acetyl-L-serine;RegulatedTUName=ssuEADCB;PromoterName=ssuEp;TFBSCenterPosition=-18;Sequence=-18;color=#FF1C01	

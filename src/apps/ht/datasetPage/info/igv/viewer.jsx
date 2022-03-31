@@ -5,7 +5,6 @@ import { confGenome } from "./genome/genome"
 //const FILE_SERVER = process.env.REACT_APP_FILE_SERVICE
 
 export function Viewer({ id_dataset, tfs, datasetType }) {
-    const version = "v3"
     let _peaksFile = undefined;
     let _sitesFile = undefined;
     let _promoter = undefined;
@@ -14,6 +13,7 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
     let _tsFile = undefined;
     let _ttFile = undefined;
     let _tuFile = undefined;
+    let _tuSet = undefined;
     let _geFile = undefined;
     let show = true;
     switch (datasetType) {
@@ -25,20 +25,21 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
                 tfs.forEach(tf => {
                     _tfFiles.push({
                         "name": tf.name,
-                        "url": `/media/raw/ht_collections_web_v3/regulondb/TFFiles/${tf.name}.gff3`
+                        "url": `/media/raw/gff3/TFFiles/${tf.name}.gff3`
                     })
                 });
             }
             break;
         case "TUS":
             _tuFile = `${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/tus/gff3`
+            _tuSet = `/media/raw/gff3/TUSet.gff3`
             break;
         case "TSS":
-            _promoter = `/media/raw/ht_collections_web_${version}/regulondb/PromoterSet.gff3`
+            _promoter = `/media/raw/gff3/PromoterSet.gff3`
             _tsFile = `${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/tss/gff3`
             break;
         case "TTS":
-            _terminator = `/media/raw/ht_collections_web_${version}/regulondb/TerminatorSet.gff3`
+            _terminator = `/media/raw/gff3/TerminatorSet.gff3`
             _ttFile = `${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/tts/gff3`
             break;
         case "GENE_EXPRESSION":
@@ -67,7 +68,8 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
                     tuFile: _tuFile,
                     geFile: _geFile,
                     promoter: _promoter,
-                    terminator: _terminator
+                    terminator: _terminator,
+                    tuSet: _tuSet
                 })
             })
                 .then(function (browser) {

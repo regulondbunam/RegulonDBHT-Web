@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	1506085	1506107		+	.	name=SutR;ActiveConformation=SutR;RegulatedTUName=sutR;PromoterName=sutRp;TFBSCenterPosition=-54.5;Sequence=-54.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1506125	1506143		+	.	name=SutR;ActiveConformation=SutR;RegulatedTUName=sutR;PromoterName=sutRp;TFBSCenterPosition=-16.5;Sequence=-16.5;color=#FF1C01	

@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	3742663	3742683		+	.	name=PlaR;ActiveConformation=PlaR;RegulatedTUName=yiaKLMNO-lyx-sgbHUE;PromoterName=yiaKp;TFBSCenterPosition=-1;Sequence=-1;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3742663	3742683		-	.	name=PlaR;ActiveConformation=PlaR;RegulatedTUName=plaR;PromoterName=plaRp;TFBSCenterPosition=-55;Sequence=-55;color=#FF1C01	

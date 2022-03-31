@@ -1,0 +1,9 @@
+NC_000913.3	RegulonDB	binding_site	2601034	2601047		+	.	name=FhlA;ActiveConformation=FhlA-formate;RegulatedTUName=hyfABCDEFGHIJR-focB;PromoterName=hyfAp;TFBSCenterPosition=-130;Sequence=-130;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2849869	2849882		+	.	name=FhlA;ActiveConformation=FhlA-formate;RegulatedTUName=hypABCDE;PromoterName=hypAp;TFBSCenterPosition=-751.5;Sequence=-751.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2849869	2849882		+	.	name=FhlA;ActiveConformation=FhlA-formate;RegulatedTUName=hypABCDE-fhlA;PromoterName=hypAp;TFBSCenterPosition=-751.5;Sequence=-751.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2849900	2849913		+	.	name=FhlA;ActiveConformation=FhlA-formate;RegulatedTUName=hypABCDE;PromoterName=hypAp;TFBSCenterPosition=-720.5;Sequence=-720.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2849900	2849913		+	.	name=FhlA;ActiveConformation=FhlA-formate;RegulatedTUName=hypABCDE-fhlA;PromoterName=hypAp;TFBSCenterPosition=-720.5;Sequence=-720.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2850539	2850552		-	.	name=FhlA;ActiveConformation=FhlA-formate;RegulatedTUName=hycABCDEFGHI;PromoterName=hycAp;TFBSCenterPosition=-84.5;Sequence=-84.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2850553	2850566		-	.	name=FhlA;ActiveConformation=FhlA-formate;RegulatedTUName=hycABCDEFGHI;PromoterName=hycAp;TFBSCenterPosition=-98;Sequence=-98;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4299505	4299518		-	.	name=FhlA;ActiveConformation=FhlA-formate;RegulatedTUName=fdhF;PromoterName=fdhFp;TFBSCenterPosition=-104.5;Sequence=-104.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4299530	4299543		-	.	name=FhlA;ActiveConformation=FhlA-formate;RegulatedTUName=fdhF;PromoterName=fdhFp;TFBSCenterPosition=-129.5;Sequence=-129.5;color=#12DD00	

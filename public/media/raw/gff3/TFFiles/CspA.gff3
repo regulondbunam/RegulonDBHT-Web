@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	2339514	2339520		-	.	name=CspA;ActiveConformation=CspA;RegulatedTUName=gyrA;PromoterName=gyrAp;TFBSCenterPosition=-60;Sequence=-60;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2339542	2339548		-	.	name=CspA;ActiveConformation=CspA;RegulatedTUName=gyrA;PromoterName=gyrAp;TFBSCenterPosition=-88;Sequence=-88;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2339562	2339568		-	.	name=CspA;ActiveConformation=CspA;RegulatedTUName=gyrA;PromoterName=gyrAp;TFBSCenterPosition=-108;Sequence=-108;color=#12DD00	

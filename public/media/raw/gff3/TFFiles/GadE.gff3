@@ -1,0 +1,17 @@
+NC_000913.3	RegulonDB	binding_site	1572125	1572144		-	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=gadBC;PromoterName=gadBp;TFBSCenterPosition=-62.5;Sequence=-62.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1572125	1572144		-	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=gadBC;PromoterName=gadBp2;TFBSCenterPosition=-62.5;Sequence=-62.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3354215	3354234		+	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=gltBDF;PromoterName=gltBp;TFBSCenterPosition=-284;Sequence=-284;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3354215	3354234		+	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=gltBDF;PromoterName=gltBp2;TFBSCenterPosition=-284;Sequence=-284;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3634655	3634674		+	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=yhiM;PromoterName=yhiMp;TFBSCenterPosition=-78.5;Sequence=-78.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3656773	3656792		-	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp;TFBSCenterPosition=9.5;Sequence=9.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3656773	3656792		-	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp2;TFBSCenterPosition=9.5;Sequence=9.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3656899	3656918		-	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp;TFBSCenterPosition=-117.5;Sequence=-117.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3656899	3656918		+	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=hdeD;PromoterName=hdeDp;TFBSCenterPosition=-51.5;Sequence=-51.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3656899	3656918		-	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=hdeAB-yhiD;PromoterName=hdeAp2;TFBSCenterPosition=-117.5;Sequence=-117.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3656899	3656918		+	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=hdeD;PromoterName=hdeDp2;TFBSCenterPosition=-51.5;Sequence=-51.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3658137	3658156		+	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=gadEF-mdtEF;PromoterName=gadEp2;TFBSCenterPosition=-198.5;Sequence=-198.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3658272	3658291		+	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=gadEF-mdtEF;PromoterName=gadEp2;TFBSCenterPosition=-63.5;Sequence=-63.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3658305	3658324		+	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=gadEF-mdtEF;PromoterName=gadEp2;TFBSCenterPosition=-30.5;Sequence=-30.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4270164	4270183		+	.	name=GadE;ActiveConformation=GadE;RegulatedTUName=yjbQR;PromoterName=yjbQp;TFBSCenterPosition=-40;Sequence=-40;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3667660	3667680		-	.	name=GadE-RcsB;ActiveConformation=GadE-RcsB;RegulatedTUName=gadAX;PromoterName=gadAp;TFBSCenterPosition=-62.5;Sequence=-62.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3667660	3667680		-	.	name=GadE-RcsB;ActiveConformation=GadE-RcsB;RegulatedTUName=gadAX;PromoterName=gadAp2;TFBSCenterPosition=-62.5;Sequence=-62.5;color=#12DD00	

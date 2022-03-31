@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	1825765	1825784		-	.	name=BaeR;ActiveConformation=BaeR-phosphorylated;RegulatedTUName=spy;PromoterName=spyp;TFBSCenterPosition=-86.5;Sequence=-86.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1825836	1825855		-	.	name=BaeR;ActiveConformation=BaeR-phosphorylated;RegulatedTUName=spy;PromoterName=spyp;TFBSCenterPosition=-157.5;Sequence=-157.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2153942	2153961		+	.	name=BaeR;ActiveConformation=BaeR-phosphorylated;RegulatedTUName=mdtABCD-baeSR;PromoterName=mdtAp;TFBSCenterPosition=-27.5;Sequence=-27.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2587504	2587523		+	.	name=BaeR;ActiveConformation=BaeR-phosphorylated;RegulatedTUName=acrD;PromoterName=acrDp2;TFBSCenterPosition=-36.5;Sequence=-36.5;color=#12DD00	

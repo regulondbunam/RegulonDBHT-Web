@@ -1,0 +1,13 @@
+NC_000913.3	RegulonDB	binding_site	1323103	1323120		-	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=trpLEDCBA;PromoterName=trpLp;TFBSCenterPosition=-3.5;Sequence=-3.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1323103	1323120		-	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=trpL;PromoterName=trpLp;TFBSCenterPosition=-3.5;Sequence=-3.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1323111	1323128		-	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=trpLEDCBA;PromoterName=trpLp;TFBSCenterPosition=-11.5;Sequence=-11.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1323111	1323128		-	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=trpL;PromoterName=trpLp;TFBSCenterPosition=-11.5;Sequence=-11.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1323119	1323136		-	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=trpLEDCBA;PromoterName=trpLp;TFBSCenterPosition=-19.5;Sequence=-19.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1323119	1323136		-	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=trpL;PromoterName=trpLp;TFBSCenterPosition=-19.5;Sequence=-19.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1788272	1788289		+	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=aroH;PromoterName=aroHp1;TFBSCenterPosition=-37.5;Sequence=-37.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1788280	1788297		+	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=aroH;PromoterName=aroHp1;TFBSCenterPosition=-29.5;Sequence=-29.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3305863	3305880		-	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=mtr;PromoterName=mtrp2;TFBSCenterPosition=-11.5;Sequence=-11.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3305871	3305888		-	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=mtr;PromoterName=mtrp2;TFBSCenterPosition=-19.5;Sequence=-19.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	406319	406336		+	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=aroL-yaiA-aroM;PromoterName=aroLp1;TFBSCenterPosition=48.5;Sequence=48.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	406327	406344		+	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=aroL-yaiA-aroM;PromoterName=aroLp1;TFBSCenterPosition=56.5;Sequence=56.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4632695	4632712		+	.	name=TrpR;ActiveConformation=TrpR-L-tryptophan;RegulatedTUName=trpR;PromoterName=trpRp;TFBSCenterPosition=-.5;Sequence=-.5;color=#FF1C01	

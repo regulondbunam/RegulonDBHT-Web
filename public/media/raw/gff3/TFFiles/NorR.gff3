@@ -1,0 +1,6 @@
+NC_000913.3	RegulonDB	binding_site	2832301	2832313		+	.	name=NorR;ActiveConformation=NorR;RegulatedTUName=norVW;PromoterName=norVp;TFBSCenterPosition=-132;Sequence=-132;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2832301	2832313		-	.	name=NorR;ActiveConformation=NorR;RegulatedTUName=norR;PromoterName=norRp;TFBSCenterPosition=1;Sequence=1;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2832322	2832334		+	.	name=NorR;ActiveConformation=NorR;RegulatedTUName=norVW;PromoterName=norVp;TFBSCenterPosition=-111;Sequence=-111;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2832322	2832334		-	.	name=NorR;ActiveConformation=NorR;RegulatedTUName=norR;PromoterName=norRp;TFBSCenterPosition=-21;Sequence=-21;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2832346	2832358		+	.	name=NorR;ActiveConformation=NorR;RegulatedTUName=norVW;PromoterName=norVp;TFBSCenterPosition=-87;Sequence=-87;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2832346	2832358		-	.	name=NorR;ActiveConformation=NorR;RegulatedTUName=norR;PromoterName=norRp;TFBSCenterPosition=-45;Sequence=-45;color=#FF1C01	

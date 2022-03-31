@@ -1,0 +1,6 @@
+NC_000913.3	RegulonDB	binding_site	3577623	3577638		-	.	name=IdnR;ActiveConformation=IdnR-5-dehydro-D-gluconate;RegulatedTUName=gntKU;PromoterName=gntKp;TFBSCenterPosition=15.5;Sequence=15.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3577623	3577638		-	.	name=IdnR;ActiveConformation=IdnR-5-dehydro-D-gluconate;RegulatedTUName=gntK;PromoterName=gntKp;TFBSCenterPosition=15.5;Sequence=15.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3577636	3577651		-	.	name=IdnR;ActiveConformation=IdnR-5-dehydro-D-gluconate;RegulatedTUName=gntKU;PromoterName=gntKp;TFBSCenterPosition=2.5;Sequence=2.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3577636	3577651		-	.	name=IdnR;ActiveConformation=IdnR-5-dehydro-D-gluconate;RegulatedTUName=gntK;PromoterName=gntKp;TFBSCenterPosition=2.5;Sequence=2.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4494506	4494521		+	.	name=IdnR;ActiveConformation=IdnR;RegulatedTUName=idnK;PromoterName=idnKp;TFBSCenterPosition=-83.5;Sequence=-83.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4494506	4494521		-	.	name=IdnR;ActiveConformation=IdnR-5-dehydro-D-gluconate;RegulatedTUName=idnDOTR;PromoterName=idnDp;TFBSCenterPosition=-78.5;Sequence=-78.5;color=#12DD00	

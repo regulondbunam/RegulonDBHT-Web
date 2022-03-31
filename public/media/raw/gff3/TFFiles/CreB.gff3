@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	2578388	2578406		+	.	name=CreB;ActiveConformation=CreB-phosphorylated;RegulatedTUName=talA;PromoterName=talAp;TFBSCenterPosition=-211.5;Sequence=-211.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	4246438	4246456		-	.	name=CreB;ActiveConformation=CreB-phosphorylated;RegulatedTUName=malEFGH;PromoterName=malEp;TFBSCenterPosition=18.5;Sequence=18.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4638099	4638117		+	.	name=CreB;ActiveConformation=CreB-phosphorylated;RegulatedTUName=creD;PromoterName=creDp;TFBSCenterPosition=-52.5;Sequence=-52.5;color=#12DD00	

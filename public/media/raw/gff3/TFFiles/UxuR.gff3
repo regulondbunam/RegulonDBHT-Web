@@ -1,0 +1,10 @@
+NC_000913.3	RegulonDB	binding_site	1696116	1696133		-	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=uidABC;PromoterName=uidAp;TFBSCenterPosition=28.5;Sequence=28.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3246416	3246433		+	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=exuR;PromoterName=exuRp2;TFBSCenterPosition=-193.5;Sequence=-193.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4551350	4551367		-	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=gntP;PromoterName=gntPp;TFBSCenterPosition=-24.5;Sequence=-24.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4551350	4551367		+	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=uxuAB;PromoterName=uxuAp;TFBSCenterPosition=-159.5;Sequence=-159.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4551456	4551473		+	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=uxuAB;PromoterName=uxuAp;TFBSCenterPosition=-53.5;Sequence=-53.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4551456	4551473		-	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=gntP;PromoterName=gntPp;TFBSCenterPosition=-130.5;Sequence=-130.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4554383	4554400		+	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=uxuR;PromoterName=uxuRp;TFBSCenterPosition=-66.5;Sequence=-66.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4554403	4554420		+	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=uxuR;PromoterName=uxuRp;TFBSCenterPosition=-46.5;Sequence=-46.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4554542	4554559		+	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=uxuR;PromoterName=uxuRp;TFBSCenterPosition=93.5;Sequence=93.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4595807	4595824		-	.	name=UxuR;ActiveConformation=UxuR;RegulatedTUName=lgoR;PromoterName=lgoRp4;TFBSCenterPosition=132.5;Sequence=132.5;color=#FF1C01	

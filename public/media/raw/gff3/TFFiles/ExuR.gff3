@@ -1,0 +1,13 @@
+NC_000913.3	RegulonDB	binding_site	1610858	1610875		-	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=uxaB;PromoterName=uxaBp;TFBSCenterPosition=-146.5;Sequence=-146.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3244795	3244812		-	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=uxaCA;PromoterName=uxaCp2;TFBSCenterPosition=54.5;Sequence=54.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3244850	3244867		+	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=exuT;PromoterName=exuTp2;TFBSCenterPosition=-143.5;Sequence=-143.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3244850	3244867		-	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=uxaCA;PromoterName=uxaCp2;TFBSCenterPosition=-1.5;Sequence=-1.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3244874	3244891		-	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=uxaCA;PromoterName=uxaCp2;TFBSCenterPosition=-25.5;Sequence=-25.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3244976	3244993		+	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=exuT;PromoterName=exuTp2;TFBSCenterPosition=-17.5;Sequence=-17.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3244976	3244993		-	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=uxaCA;PromoterName=uxaCp2;TFBSCenterPosition=-127.5;Sequence=-127.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3246416	3246433		+	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=exuR;PromoterName=exuRp2;TFBSCenterPosition=-193.5;Sequence=-193.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3246605	3246622		+	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=exuR;PromoterName=exuRp2;TFBSCenterPosition=-4.5;Sequence=-4.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4551350	4551367		+	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=uxuAB;PromoterName=uxuAp;TFBSCenterPosition=-159.5;Sequence=-159.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4551456	4551473		+	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=uxuAB;PromoterName=uxuAp;TFBSCenterPosition=-53.5;Sequence=-53.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4554403	4554420		+	.	name=ExuR;ActiveConformation=ExuR;RegulatedTUName=uxuR;PromoterName=uxuRp;TFBSCenterPosition=-46.5;Sequence=-46.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4595807	4595824		-	.	name=ExuR;ActiveConformation=ExuR-&alpha;-D-galacturonate, &alpha;-D-glucuronate;RegulatedTUName=lgoR;PromoterName=lgoRp4;TFBSCenterPosition=132.5;Sequence=132.5;color=#FF1C01	

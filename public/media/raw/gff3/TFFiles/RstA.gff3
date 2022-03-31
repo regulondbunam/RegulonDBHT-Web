@@ -1,0 +1,9 @@
+NC_000913.3	RegulonDB	binding_site	1103388	1103402		-	.	name=RstA;ActiveConformation=RstA-phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp2;TFBSCenterPosition=-59.5;Sequence=-59.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1103388	1103402		-	.	name=RstA;ActiveConformation=RstA-phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp1;TFBSCenterPosition=-50.5;Sequence=-50.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1103388	1103402		-	.	name=RstA;ActiveConformation=RstA-phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp;TFBSCenterPosition=-59.5;Sequence=-59.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1103388	1103402		-	.	name=RstA;ActiveConformation=RstA-phosphorylated;RegulatedTUName=csgDEFG;PromoterName=csgDp3;TFBSCenterPosition=-50.5;Sequence=-50.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1279523	1279539		+	.	name=RstA;ActiveConformation=RstA-phosphorylated;RegulatedTUName=narGHJI;PromoterName=narGp;TFBSCenterPosition=-276;Sequence=-276;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1671257	1671273		+	.	name=RstA;ActiveConformation=RstA-phosphorylated;RegulatedTUName=asr;PromoterName=asrp;TFBSCenterPosition=-62;Sequence=-62;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1671257	1671273		+	.	name=RstA;ActiveConformation=RstA-phosphorylated;RegulatedTUName=asr;PromoterName=asrp2;TFBSCenterPosition=-62;Sequence=-62;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	987176	987192		-	.	name=RstA;ActiveConformation=RstA-phosphorylated;RegulatedTUName=ompF;PromoterName=ompFp;TFBSCenterPosition=-92;Sequence=-92;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	987176	987192		-	.	name=RstA;ActiveConformation=RstA-phosphorylated;RegulatedTUName=ompF;PromoterName=ompFp2;TFBSCenterPosition=-92;Sequence=-92;color=#FF1C01	

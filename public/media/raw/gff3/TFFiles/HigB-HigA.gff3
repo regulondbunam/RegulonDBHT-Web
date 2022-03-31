@@ -1,0 +1,2 @@
+NC_000913.3	RegulonDB	binding_site	3234467	3234486		-	.	name=HigB-HigA;ActiveConformation=HigB-HigA;RegulatedTUName=higBA;PromoterName=higBp;TFBSCenterPosition=5;Sequence=5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3234494	3234521		-	.	name=HigB-HigA;ActiveConformation=HigB-HigA;RegulatedTUName=higBA;PromoterName=higBp;TFBSCenterPosition=-27;Sequence=-27;color=#FF1C01	

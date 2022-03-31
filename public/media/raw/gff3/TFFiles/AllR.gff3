@@ -1,0 +1,3 @@
+NC_000913.3	RegulonDB	binding_site	532329	532345		+	.	name=AllR;ActiveConformation=AllR-allantoin;RegulatedTUName=allA;PromoterName=allAp;TFBSCenterPosition=-53;Sequence=-53;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	532329	532345		-	.	name=AllR;ActiveConformation=AllR-allantoin;RegulatedTUName=allS;PromoterName=allSp;TFBSCenterPosition=-37;Sequence=-37;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	533879	533895		+	.	name=AllR;ActiveConformation=AllR-allantoin;RegulatedTUName=gcl-hyi-glxR-ybbVW-allB-ybbY-glxK;PromoterName=gclp;TFBSCenterPosition=-20;Sequence=-20;color=#FF1C01	

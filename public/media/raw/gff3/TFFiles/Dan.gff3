@@ -1,0 +1,5 @@
+NC_000913.3	RegulonDB	binding_site	3206258	3206264		+	.	name=Dan;ActiveConformation=Dan-L-tartrate;RegulatedTUName=ttdABT;PromoterName=ttdAp;TFBSCenterPosition=-163;Sequence=-163;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3206287	3206293		+	.	name=Dan;ActiveConformation=Dan-L-tartrate;RegulatedTUName=ttdABT;PromoterName=ttdAp;TFBSCenterPosition=-134;Sequence=-134;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3206329	3206335		+	.	name=Dan;ActiveConformation=Dan-L-tartrate;RegulatedTUName=ttdABT;PromoterName=ttdAp;TFBSCenterPosition=-92;Sequence=-92;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3206347	3206353		+	.	name=Dan;ActiveConformation=Dan-L-tartrate;RegulatedTUName=ttdABT;PromoterName=ttdAp;TFBSCenterPosition=-74;Sequence=-74;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	3206362	3206369		+	.	name=Dan;ActiveConformation=Dan-L-tartrate;RegulatedTUName=ttdABT;PromoterName=ttdAp;TFBSCenterPosition=-59;Sequence=-59;color=#12DD00	

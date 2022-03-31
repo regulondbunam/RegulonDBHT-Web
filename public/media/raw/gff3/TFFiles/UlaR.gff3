@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	4419641	4419660		-	.	name=UlaR;ActiveConformation=UlaR;RegulatedTUName=ulaG;PromoterName=ulaGp;TFBSCenterPosition=25.5;Sequence=25.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4419666	4419685		-	.	name=UlaR;ActiveConformation=UlaR;RegulatedTUName=ulaG;PromoterName=ulaGp;TFBSCenterPosition=-.5;Sequence=-.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4419873	4419892		+	.	name=UlaR;ActiveConformation=UlaR;RegulatedTUName=ulaABCDEF;PromoterName=ulaAp;TFBSCenterPosition=-44.5;Sequence=-44.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4419898	4419917		+	.	name=UlaR;ActiveConformation=UlaR;RegulatedTUName=ulaABCDEF;PromoterName=ulaAp;TFBSCenterPosition=-19.5;Sequence=-19.5;color=#FF1C01	

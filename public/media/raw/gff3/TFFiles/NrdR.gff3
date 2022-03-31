@@ -1,0 +1,6 @@
+NC_000913.3	RegulonDB	binding_site	2344740	2344755		+	.	name=NrdR;ActiveConformation=NrdR-Zn<SUP>2+</SUP>;RegulatedTUName=nrdAB-yfaE;PromoterName=nrdAp;TFBSCenterPosition=-7.5;Sequence=-7.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2344772	2344787		+	.	name=NrdR;ActiveConformation=NrdR-Zn<SUP>2+</SUP>;RegulatedTUName=nrdAB-yfaE;PromoterName=nrdAp;TFBSCenterPosition=25.5;Sequence=25.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2800603	2800618		+	.	name=NrdR;ActiveConformation=NrdR-Zn<SUP>2+</SUP>;RegulatedTUName=nrdHIEF;PromoterName=nrdHp;TFBSCenterPosition=-45.5;Sequence=-45.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2800634	2800649		+	.	name=NrdR;ActiveConformation=NrdR-Zn<SUP>2+</SUP>;RegulatedTUName=nrdHIEF;PromoterName=nrdHp;TFBSCenterPosition=-14.5;Sequence=-14.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4462822	4462837		-	.	name=NrdR;ActiveConformation=NrdR-Zn<SUP>2+</SUP>;RegulatedTUName=nrdDG;PromoterName=nrdDp;TFBSCenterPosition=9.5;Sequence=9.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	4462853	4462868		-	.	name=NrdR;ActiveConformation=NrdR-Zn<SUP>2+</SUP>;RegulatedTUName=nrdDG;PromoterName=nrdDp;TFBSCenterPosition=-22.5;Sequence=-22.5;color=#FF1C01	

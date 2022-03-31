@@ -1,0 +1,7 @@
+NC_000913.3	RegulonDB	binding_site	1103421	1103434		-	.	name=MqsA;ActiveConformation=MqsA;RegulatedTUName=csgDEFG;PromoterName=csgDp1;TFBSCenterPosition=-83.5;Sequence=-83.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	1103421	1103434		-	.	name=MqsA;ActiveConformation=MqsA;RegulatedTUName=csgDEFG;PromoterName=csgDp3;TFBSCenterPosition=-83.5;Sequence=-83.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2868258	2868273		-	.	name=MqsA;ActiveConformation=MqsA;RegulatedTUName=rpoS;PromoterName=rpoSp;TFBSCenterPosition=-147;Sequence=-147;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3168573	3168587		-	.	name=MqsA;ActiveConformation=MqsA;RegulatedTUName=mqsRA;PromoterName=mqsRp1;TFBSCenterPosition=74;Sequence=74;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	3168605	3168619		-	.	name=MqsA;ActiveConformation=MqsA;RegulatedTUName=mqsRA;PromoterName=mqsRp1;TFBSCenterPosition=42;Sequence=42;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	922567	922585		-	.	name=MqsA;ActiveConformation=MqsA;RegulatedTUName=cspD;PromoterName=cspDp;TFBSCenterPosition=101.5;Sequence=101.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	922800	922818		-	.	name=MqsA;ActiveConformation=MqsA;RegulatedTUName=cspD;PromoterName=cspDp;TFBSCenterPosition=-132.5;Sequence=-132.5;color=#FF1C01	

@@ -1,0 +1,4 @@
+NC_000913.3	RegulonDB	binding_site	2185845	2185859		-	.	name=RcnR;ActiveConformation=RcnR;RegulatedTUName=rcnR;PromoterName=rcnRp;TFBSCenterPosition=51.5;Sequence=51.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2185845	2185859		+	.	name=RcnR;ActiveConformation=RcnR;RegulatedTUName=rcnAB;PromoterName=rcnAp;TFBSCenterPosition=26.5;Sequence=26.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2185865	2185879		-	.	name=RcnR;ActiveConformation=RcnR;RegulatedTUName=rcnR;PromoterName=rcnRp;TFBSCenterPosition=31.5;Sequence=31.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	2185865	2185879		+	.	name=RcnR;ActiveConformation=RcnR;RegulatedTUName=rcnAB;PromoterName=rcnAp;TFBSCenterPosition=46.5;Sequence=46.5;color=#FF1C01	

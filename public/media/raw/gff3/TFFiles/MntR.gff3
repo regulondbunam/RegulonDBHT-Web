@@ -1,0 +1,7 @@
+NC_000913.3	RegulonDB	binding_site	1905265	1905286		+	.	name=MntR;ActiveConformation=MntR-Mn<SUP>2+</SUP>;RegulatedTUName=mntP;PromoterName=mntPp;TFBSCenterPosition=-183.5;Sequence=-183.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	1905305	1905326		+	.	name=MntR;ActiveConformation=MntR-Mn<SUP>2+</SUP>;RegulatedTUName=mntP;PromoterName=mntPp;TFBSCenterPosition=-143.5;Sequence=-143.5;color=#12DD00	
+NC_000913.3	RegulonDB	binding_site	2512719	2512740		-	.	name=MntR;ActiveConformation=MntR-Mn<SUP>2+</SUP>;RegulatedTUName=mntH;PromoterName=mntHp;TFBSCenterPosition=5.5;Sequence=5.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	848957	848978		-	.	name=MntR;ActiveConformation=MntR-Mn<SUP>2+</SUP>;RegulatedTUName=dps;PromoterName=dpsp;TFBSCenterPosition=-17.5;Sequence=-17.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	848957	848978		-	.	name=MntR;ActiveConformation=MntR-Mn<SUP>2+</SUP>;RegulatedTUName=dps;PromoterName=dpsp2;TFBSCenterPosition=-17.5;Sequence=-17.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	853054	853075		-	.	name=MntR;ActiveConformation=MntR-Mn<SUP>2+</SUP>;RegulatedTUName=rybA-mntS;PromoterName=rybAp;TFBSCenterPosition=-.5;Sequence=-.5;color=#FF1C01	
+NC_000913.3	RegulonDB	binding_site	853073	853094		-	.	name=MntR;ActiveConformation=MntR-Mn<SUP>2+</SUP>;RegulatedTUName=rybA-mntS;PromoterName=rybAp;TFBSCenterPosition=-19.5;Sequence=-19.5;color=#FF1C01	
