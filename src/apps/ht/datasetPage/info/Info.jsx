@@ -10,6 +10,7 @@ import Related from './related/Related'
 
 export default function Info({datasetId}) {
 
+  const [_datasetId, set_datasetId] = useState(datasetId)
   const [_dataset, set_dataset] = useState()
   const [_state, set_state] = useState('done')
 
@@ -45,7 +46,7 @@ export default function Info({datasetId}) {
   if(!_dataset){
     return(
       <div>
-        <GetInfoDataset datasetId={datasetId} resoultsData={(dataset)=>{set_dataset(dataset)}} status={(state)=>{set_state(state)}} />
+        <GetInfoDataset datasetId={_datasetId} resoultsData={(dataset)=>{set_dataset(dataset)}} status={(state)=>{set_state(state)}} />
         <SpinnerCircle />
       </div>
     )
@@ -72,7 +73,13 @@ export default function Info({datasetId}) {
       <NLPgc datasetId={_dataset?._id} />
       <Tabs id_dataset={_dataset?._id} data={_dataset} />
       {
-        _dataset?.datasetType === "TFBINDING" && <Related datasetId={_dataset?._id} objectTested={_dataset?.objectsTested}/>
+        _dataset?.datasetType === "TFBINDING" && <Related datasetId={_dataset?._id} objectTested={_dataset?.objectsTested} 
+              onSelectDatasetId={(DatasetId)=>{
+                set_datasetId(DatasetId)
+                set_dataset(undefined)
+                //window.history.pushState(null, null, `/ht/dataset/TFBINDING/datasetId=${DatasetId}`)
+              }}
+              />
       }
       <br />
     </article>

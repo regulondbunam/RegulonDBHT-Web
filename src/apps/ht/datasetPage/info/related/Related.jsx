@@ -2,12 +2,14 @@ import React, {useState, useMemo} from 'react'
 import GetRelatedDataset from '../../../webServices/dataset/dataset_related'
 import { SpinnerCircle } from '../../../../../components/ui-components/ui_components'
 import Style from './related.module.css'
+import { Link } from 'react-router-dom'
 
 //const relatedOptions = ["datasetType","objectsTested","publications"]
 
 export default function Related({
     datasetId,
-    objectTested
+    objectTested,
+    onSelectDatasetId = () => {},
 }) {
     const [_datasets, set_datasets] = useState()
     const [_state, set_state] = useState()
@@ -63,8 +65,10 @@ export default function Related({
                                 }
                             }
                             return(
-                               <div key={idx} className={Style.relatedCard} >
-                                    <a href={`/ht/dataset/TFBINDING/datasetId=${dataset._id}/`}>{title}</a>
+                               <div key={idx} className={Style.relatedCard}
+                                    onClick={()=>{onSelectDatasetId(dataset?._id)}}
+                                >
+                                   {title}
                                     </div>
                             )
                         })
