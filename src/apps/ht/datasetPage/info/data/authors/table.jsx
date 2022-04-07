@@ -15,9 +15,7 @@ function Table({ columns, data, id_dataset }) {
 
     const defaultColumn = React.useMemo(
         () => ({
-            minWidth: 10,
             width: 150,
-            maxWidth: 1000,
         }),
         []
     )
@@ -167,7 +165,7 @@ function Table({ columns, data, id_dataset }) {
 }
 
 export function AuthorTable({ tableData, id_dataset }) {
-    //console.log(tableData?.comments)
+    console.log(tableData)
     if (!tableData?.data) {
         return <p>Error process author data</p>
     }

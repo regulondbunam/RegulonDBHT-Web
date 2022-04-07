@@ -125,6 +125,8 @@ export function Table({ columns, data }) {
     )
 }
 
+/*
 function linkGene(gen) {
     return <a key={gen?._id} style={{ marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen?.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gen?.name}</a>
 }
+*/

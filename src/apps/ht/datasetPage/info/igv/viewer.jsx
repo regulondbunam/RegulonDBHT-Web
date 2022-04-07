@@ -76,7 +76,7 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
                     //console.log("hola");
                 })
         }
-    }, [id_dataset, _peaksFile, _sitesFile, _tfFiles, _ttFile, _tsFile, _tuFile, notTracks, _geFile, _promoter, _terminator])
+    }, [id_dataset, _peaksFile, _sitesFile, _tfFiles, _tuSet,_ttFile, _tsFile, _tuFile, notTracks, _geFile, _promoter, _terminator])
 
     if (!show) {
         return null

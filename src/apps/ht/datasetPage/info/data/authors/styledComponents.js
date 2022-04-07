@@ -19,6 +19,7 @@ export const TableStyles = styled.div`
       :last-child {
         .td {
           border-bottom: 0;
+          
         }
       }
     }
@@ -53,6 +54,7 @@ export const TableStyles = styled.div`
       border-bottom: 1px solid #3d779b;
       border-right: 1px solid #3d779b;
       color: #666666;
+      overflow: hidden;
       :last-child {
         border-right: 1px solid #3d779b;
       }

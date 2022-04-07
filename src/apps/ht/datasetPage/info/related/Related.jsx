@@ -2,8 +2,6 @@ import React, {useState, useMemo} from 'react'
 import GetRelatedDataset from '../../../webServices/dataset/dataset_related'
 import { SpinnerCircle } from '../../../../../components/ui-components/ui_components'
 import Style from './related.module.css'
-import { Link } from 'react-router-dom'
-
 //const relatedOptions = ["datasetType","objectsTested","publications"]
 
 export default function Related({
