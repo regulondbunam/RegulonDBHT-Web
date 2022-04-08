@@ -172,7 +172,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
                      */
                 }
                 <div className={Style.divBorder} style={{ padding: "2px" }} >
-                    <h3>Query Bulder</h3>
+                    <h3>Query Builder</h3>
                     Do you need to make a more specific search?
                     <br />
                     <Link to={`/ht/finder/${datasetType}`}>
