@@ -2,9 +2,8 @@
 
 welcome, n.n/
 
-version [0.9.0](https://github.com/regulondbunam/RegulonDBHT-Web/releases/tag/0.9.0)
+version [0.9.3](https://github.com/regulondbunam/RegulonDBHT-Web/releases/tag/0.9.3)
 
-version [0.8.1](https://github.com/regulondbunam/RegulonDBHT-Web/releases/tag/0.8.1)
 
 # Description
 
