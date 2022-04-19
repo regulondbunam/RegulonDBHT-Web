@@ -204,35 +204,35 @@ export function DatasetTable({ jsonTable, datasetType }) {
             show.forEach(element => {
                 remove(hiddenColumns, element)
             });
-            
+
             break;
         case 'TUS':
-            show = ['_id',"publications_title", "sourceSerie_title"]
+            show = ['_id', "publications_title", "sourceSerie_title"]
             show.forEach(element => {
                 remove(hiddenColumns, element)
             });
-            ignoreColumns = ["objectsTested_name","sample_title"]
+            ignoreColumns = ["objectsTested_name", "sample_title"]
             break;
         case 'TTS':
-            show = ['_id',"publications_title", "sourceSerie_title"]
+            show = ['_id', "publications_title", "sourceSerie_title"]
             show.forEach(element => {
                 remove(hiddenColumns, element)
             });
-            ignoreColumns = ["objectsTested_name","sample_title"]
+            ignoreColumns = ["objectsTested_name", "sample_title"]
             break;
         case 'TSS':
-            show = ['_id',"publications_title", "sourceSerie_title"]
+            show = ['_id', "publications_title", "sourceSerie_title"]
             show.forEach(element => {
                 remove(hiddenColumns, element)
             });
-            ignoreColumns = ["objectsTested_name","sample_title"]
+            ignoreColumns = ["objectsTested_name", "sample_title"]
             break;
         case 'GENE_EXPRESSION':
-            show = ['_id',"publications_title", "sourceSerie_title"]
+            show = ['_id', "publications_title", "sourceSerie_title"]
             show.forEach(element => {
                 remove(hiddenColumns, element)
             });
-            ignoreColumns = ["objectsTested_name","sample_title","growthConditions_organism", "growthConditions_geneticBackground", "growthConditions_medium", "growthConditions_aeration", "growthConditions_temperature", "growthConditions_ph", "growthConditions_pressure", "growthConditions_opticalDensity", "growthConditions_growthPhase", "growthConditions_growthRate", "growthConditions_vesselType", "growthConditions_aerationSpeed", "growthConditions_mediumSupplements"]
+            ignoreColumns = ["objectsTested_name", "sample_title", "growthConditions_organism", "growthConditions_geneticBackground", "growthConditions_medium", "growthConditions_aeration", "growthConditions_temperature", "growthConditions_ph", "growthConditions_pressure", "growthConditions_opticalDensity", "growthConditions_growthPhase", "growthConditions_growthRate", "growthConditions_vesselType", "growthConditions_aerationSpeed", "growthConditions_mediumSupplements"]
             break;
         default:
             break;
@@ -242,7 +242,23 @@ export function DatasetTable({ jsonTable, datasetType }) {
         console.error(jsonTable?.error);
         return <></>
     }
-    //console.log(jsonTable.data);
+    if (jsonTable?.columns) {
+        jsonTable.columns.forEach((col, i) => {
+            switch (col.accessor) {
+                case "_id":
+                    col.width = "155"
+                    jsonTable.columns[i] = col
+                    break;
+                case "objectsTested_name":
+                    col.width = "100"
+                    jsonTable.columns[i] = col
+                    break;
+                default:
+                    break;
+            }
+        });
+    }
+    console.log(jsonTable);
     return (
         <Table columns={jsonTable.columns} datasetType={datasetType} data={jsonTable.data} hiddenColumns={hiddenColumns} ignoreColumns={ignoreColumns} />
     )

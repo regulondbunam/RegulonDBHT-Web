@@ -12,11 +12,6 @@ overflow: auto;
             color: white;
             background-color: #72a7c7;
         }
-      :last-child {
-        .td {
-          border-bottom: 0;
-        }
-      }
     }
 
     .th{
@@ -50,6 +45,7 @@ overflow: auto;
       border-bottom: 1px solid #3d779b;
       border-right: 1px solid #3d779b;
       color: #666666;
+      overflow: hidden;
       :last-child {
         border-right: 1px solid #3d779b;
       }
