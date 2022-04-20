@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { SpinnerCircle } from '../../../../components/ui-components/ui_components'
 import { DatasetTable } from './home/table'
 import { getConfOf } from '../../doc/fetchDOC'
+import { Link } from 'react-router-dom'
 
 export default function List({ datasetType, experimentType }) {
   const [_data, set_data] = useState()
   const [_state, set_state] = useState()
   const [_conf, set_conf] = useState()
-  
-  let advancedSearch = `${datasetType}[datasetType]` 
-  let  srtDatasetType = datasetType
+
+  let advancedSearch = `${datasetType}[datasetType]`
+  let srtDatasetType = datasetType
   switch (datasetType) {
     case "TFBINDING":
       srtDatasetType = " TF Binding Sites"
@@ -49,7 +50,7 @@ export default function List({ datasetType, experimentType }) {
       });
       COVER.dispatchEvent(COVER_REACTION);
     }
-    if (!_data && _state!=="error") {
+    if (!_data && _state !== "error") {
       try {
         (async () => {
           set_state("loading")
@@ -78,11 +79,11 @@ export default function List({ datasetType, experimentType }) {
       }
 
     }
-    if(!_conf && _state !== "error"){
+    if (!_conf && _state !== "error") {
       try {
-        getConfOf("dataset_page",(conf)=>{
+        getConfOf("dataset_page", (conf) => {
           if (conf?.error) {
-            console.error(conf.error,conf?.moreInfoError);
+            console.error(conf.error, conf?.moreInfoError);
           }
           set_conf(conf?.list)
         })
@@ -101,20 +102,42 @@ export default function List({ datasetType, experimentType }) {
     )
   }
 
-  if(_conf && _data){
+  if (_conf && _data) {
     return (
       <div>
-        <p>{_conf.description}</p>
-        {
-          _state === "loading" && <SpinnerCircle />
-        }
-        {
-          _data && <DatasetTable jsonTable={_data} datasetType={datasetType} />
-        }
-  
+        <article>
+          <p>{_conf.description}</p>
+          {
+            _state === "loading" && <SpinnerCircle />
+          }
+          {
+            _data && <DatasetTable jsonTable={_data} datasetType={datasetType} />
+          }
+        </article>
+        <aside>
+          <p className='p_accent'>Related Tools</p>
+          <table className='table_content' >
+            <thead>
+              <tr><th>Query Builder</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+              <td>
+                <p>Do you need to make a more specific search?</p>
+                <Link to={`/ht/finder/${datasetType}`} >
+                  <button>Query Bulder</button>
+                </Link>
+              </td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+          
+          </div>
+        </aside>
       </div>
     )
   }
-  
+
   return <>...</>
 }

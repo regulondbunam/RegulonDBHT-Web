@@ -12,7 +12,7 @@ export default function GlobalFilter({
     }, 200)
 
     return (
-        <span>
+        <div >
             <div style={{display: "grid", gridTemplateColumns: "21px auto"}} >
             <i className='bx bx-search-alt' 
                 style={{textAlign: "center",fontSize: "21px"}}
@@ -33,6 +33,6 @@ export default function GlobalFilter({
             />
             </div>
             
-        </span>
+        </div>
     )
 }

@@ -86,10 +86,10 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
 
     // Render the UI for your table
     return (
-        <article >
+        <div >
             <section className={Style.row} >
                 <br />
-                <div className={Style.globalSearch}>
+                <div className={Style.globalSearch} style={{marginLeft: "5%"}}>
                     <GlobalFilter
                         preGlobalFilteredRows={preGlobalFilteredRows}
                         globalFilter={state.globalFilter}
@@ -150,7 +150,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
                     </div>
                 </div>
             </section>
-        </article>
+        </div>
 
     )
 }
@@ -221,12 +221,20 @@ export function DatasetTable({ jsonTable, datasetType }) {
                     col.width = "100"
                     jsonTable.columns[i] = col
                     break;
+                case "datasetType":
+                    col.width = "50"
+                    jsonTable.columns[i] = col
+                    break;
+                case "referenceGenome":
+                    col.width = "50"
+                    jsonTable.columns[i] = col
+                    break;
                 default:
                     break;
             }
         });
     }
-    console.log(jsonTable);
+    //console.log(jsonTable);
     return (
         <Table columns={jsonTable.columns} datasetType={datasetType} data={jsonTable.data} hiddenColumns={hiddenColumns} ignoreColumns={ignoreColumns} />
     )
