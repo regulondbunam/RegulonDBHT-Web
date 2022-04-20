@@ -89,7 +89,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
         <div >
             <section className={Style.row} >
                 <br />
-                <div className={Style.globalSearch} style={{marginLeft: "5%"}}>
+                <div className={Style.globalSearch} style={{marginLeft: "15%"}}>
                     <GlobalFilter
                         preGlobalFilteredRows={preGlobalFilteredRows}
                         globalFilter={state.globalFilter}

@@ -1,11 +1,23 @@
 .item{
     margin-top: 2px;
+    color: white;
+    background-color: #32617d;
+    padding: 3px;
 }
 
 .item:hover{
     background-color: #72a7c7;
 }
 
-.itemC:hover{
+.itemSel{
+    font-size: 14px;
+    margin-top: 2px;
+    color: white;
+    background-color: #32617d;
+    padding: 3px;
+}
+
+.itemSel:hover{
+    background-color: #72a7c7;
     cursor: pointer;
 }

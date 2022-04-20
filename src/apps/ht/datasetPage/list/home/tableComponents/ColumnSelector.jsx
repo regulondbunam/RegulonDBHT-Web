@@ -31,7 +31,7 @@ export function ColumnSelector({
     return (
         <div>
             <div  >
-                <p style={{fontSize: "14px"}} className="p_accent">Column Selector</p>
+                <p style={{fontSize: "14px"}} className="p_accent">Columns</p>
             </div>
             <div >
                 {
@@ -39,7 +39,7 @@ export function ColumnSelector({
                         let fields = Columns[key]
                         if (fields.length > 1) {
                             return (
-                                <div key={key+"_"+index} className={Style.item+" "+Style.itemC}>
+                                <div key={key+"_"+index}>
                                     <div className={Style.itemSel}
                                         onClick={(event)=>{
                                             event.preventDefault()
