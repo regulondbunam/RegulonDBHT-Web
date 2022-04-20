@@ -123,7 +123,7 @@ export default function List({ datasetType, experimentType }) {
             <tbody>
               <tr>
               <td>
-                <p>Do you need to make a more specific search?</p>
+                <p>Would you like to make more specific queries?</p>
                 <Link to={`/ht/finder/${datasetType}`} >
                   <button>Query Bulder</button>
                 </Link>

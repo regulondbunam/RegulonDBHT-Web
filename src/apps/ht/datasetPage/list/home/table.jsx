@@ -89,7 +89,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
         <div >
             <section className={Style.row} >
                 <br />
-                <div className={Style.globalSearch} style={{marginLeft: "15%"}}>
+                <div className={Style.globalSearch} style={{ marginLeft: "15%" }}>
                     <GlobalFilter
                         preGlobalFilteredRows={preGlobalFilteredRows}
                         globalFilter={state.globalFilter}
@@ -159,7 +159,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
 export function DatasetTable({ jsonTable, datasetType }) {
 
     let hiddenColumns = ['_id', 'referenceGenome', "datasetType", "objectsTested_name", "sample_title", "publications_title", "publications_authors", "sourceSerie_title", "sourceSerie_strategy", "sourceSerie_method", "growthConditions_organism", "growthConditions_geneticBackground", "growthConditions_medium", "growthConditions_aeration", "growthConditions_temperature", "growthConditions_ph", "growthConditions_pressure", "growthConditions_opticalDensity", "growthConditions_growthPhase", "growthConditions_growthRate", "growthConditions_vesselType", "growthConditions_aerationSpeed", "growthConditions_mediumSupplements"]
-    let ignoreColumns = []
+    let ignoreColumns = ['datasetType']
 
     //console.log(jsonTable);
     if (!jsonTable) {
@@ -214,7 +214,7 @@ export function DatasetTable({ jsonTable, datasetType }) {
         jsonTable.columns.forEach((col, i) => {
             switch (col.accessor) {
                 case "_id":
-                    col.width = "155"
+                    col.width = "150"
                     jsonTable.columns[i] = col
                     break;
                 case "objectsTested_name":
@@ -232,9 +232,27 @@ export function DatasetTable({ jsonTable, datasetType }) {
                 default:
                     break;
             }
+            if (col.Header === "sourceSerie") {
+                let column = col
+                column.columns.forEach((col2, j) => {
+                    switch (col2.accessor) {
+                        case "sourceSerie_strategy":
+                            col2.width = 50
+                            column.columns[j] = col2
+                            break;
+                        case "sourceSerie_method":
+                            col2.width = 50
+                            column.columns[j] = col2
+                            break;
+                        default:
+                            break;
+                    }
+                });
+                jsonTable.columns[i] = column
+            }
         });
     }
-    //console.log(jsonTable);
+    console.log(jsonTable);
     return (
         <Table columns={jsonTable.columns} datasetType={datasetType} data={jsonTable.data} hiddenColumns={hiddenColumns} ignoreColumns={ignoreColumns} />
     )
