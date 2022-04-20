@@ -7,19 +7,14 @@ overflow: auto;
     float: left;
     border-spacing: 0;
 
-    .tr {
-        :hover{
-            color: white;
-            background-color: #72a7c7;
-        }
-    }
+
 
     .th{
       font-size: 14px;
       text-align: center;
-      color: #666666;
+      color: #ffffff;
+      background: #32617d;
       font-weight: bold;
-      border-bottom: 2px solid #3d779b;
       padding: 2px;
         .resizer {
             display: inline-block;

@@ -15,7 +15,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
         () => ({
             minWidth: 100,
             width: 350,
-            maxWidth: 400,
+            maxWidth: 1000,
         }),
         []
     )
@@ -51,7 +51,7 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
     )
 
     const itemSize = 40
-    const heightTable = 20 * itemSize
+    const heightTable = 12 * itemSize
     const itemScroll = heightTable / rows.length
     const itemsView = heightTable / itemSize
     let thumbHeight = itemsView * itemScroll
@@ -86,103 +86,71 @@ function Table({ columns, datasetType, data, ignoreColumns, hiddenColumns }) {
 
     // Render the UI for your table
     return (
-        <section className={Style.row} >
-            <div className={`${Style.columnL} ${Style.divBorder}`} >
-                <ColumnSelector ignoreColumns={ignoreColumns} allColumns={allColumns} />
-            </div>
-            <div className={`${Style.columnC} ${Style.divBorder}`} >
-                <div className={Style.divBorder} >
-                    <h3>Datasets Table</h3>
-                </div>
-                <div className={Style.divBorder} >
+        <article >
+            <section className={Style.row} >
+                <br />
+                <div className={Style.globalSearch}>
                     <GlobalFilter
                         preGlobalFilteredRows={preGlobalFilteredRows}
                         globalFilter={state.globalFilter}
                         setGlobalFilter={setGlobalFilter}
                     />
                 </div>
-                <div className={Style.tableConteiner} >
-                    <TableStyles className={Style.divBorder} >
-                        <div {...getTableProps()} className="table">
-                            <div>
-                                {headerGroups.map(headerGroup => (
-                                    <div {...headerGroup.getHeaderGroupProps()} className="tr">
-                                        {headerGroup.headers.map(column => (
-                                            <div {...column.getHeaderProps()} className="th">
-                                                {column.render('Header')}
-                                                <div
-                                                    {...column.getResizerProps()}
-                                                    className={`resizer ${column.isResizing ? 'isResizing' : ''
-                                                        }`}
-                                                />
-                                            </div>
+                <br />
+                <div className={`${Style.columnL}`} >
+                    <ColumnSelector ignoreColumns={ignoreColumns} allColumns={allColumns} />
+                </div>
+                <div className={`${Style.columnC}`} >
+                    <div className={Style.tableConteiner} >
+                        <TableStyles className={Style.divBorder} >
+                            <div {...getTableProps()} className="table">
+                                <div>
+                                    {headerGroups.map(headerGroup => (
+                                        <div {...headerGroup.getHeaderGroupProps()} className="tr">
+                                            {headerGroup.headers.map(column => (
+                                                <div {...column.getHeaderProps()} className="th">
+                                                    {column.render('Header')}
+                                                    <div
+                                                        {...column.getResizerProps()}
+                                                        className={`resizer ${column.isResizing ? 'isResizing' : ''
+                                                            }`}
+                                                    />
+                                                </div>
 
-                                        ))}
-                                    </div>
-                                ))}
-                            </div>
-                            <div {...getTableBodyProps()}>
-                                <FixedSizeList
-                                    height={heightTable}
-                                    itemCount={rows.length}
-                                    itemSize={itemSize}
-                                    width={totalColumnsWidth + scrollBarSize}
-                                    ref={listRef}
-                                    onItemsRendered={({
-                                        visibleStartIndex,
-                                    }) => {
-                                        let thumb = document.getElementById("scrollThumb")
-                                        if (thumb) {
-                                            if ((itemScroll * visibleStartIndex) > heightTable) {
-                                                thumb.style.top = `${heightTable}px`
-                                            } else {
-                                                thumb.style.top = `${itemScroll * visibleStartIndex}px`
+                                            ))}
+                                        </div>
+                                    ))}
+                                </div>
+                                <div {...getTableBodyProps()}>
+                                    <FixedSizeList
+                                        height={heightTable}
+                                        itemCount={rows.length}
+                                        itemSize={itemSize}
+                                        width={totalColumnsWidth + scrollBarSize}
+                                        ref={listRef}
+                                        onItemsRendered={({
+                                            visibleStartIndex,
+                                        }) => {
+                                            let thumb = document.getElementById("scrollThumb")
+                                            if (thumb) {
+                                                if ((itemScroll * visibleStartIndex) > heightTable) {
+                                                    thumb.style.top = `${heightTable}px`
+                                                } else {
+                                                    thumb.style.top = `${itemScroll * visibleStartIndex}px`
+                                                }
+
                                             }
-
-                                        }
-                                    }}
-                                >
-                                    {RenderRow}
-                                </FixedSizeList>
+                                        }}
+                                    >
+                                        {RenderRow}
+                                    </FixedSizeList>
+                                </div>
                             </div>
-                        </div>
-                    </TableStyles>
-                    <div className={Style.scrollIndicator} id="scrollIndicator_dataset"
-                        style={{ height: `${heightTable}px` }}
-                        onClick={e => {
-                            let ind = e.target
-                            ind = ind.getBoundingClientRect()
-                            let sel = (e.clientY - ind.top) * (rows.length / heightTable)
-                            console.log(sel);
-                            listRef.current.scrollToItem(sel)
-                        }} >
-                        <div className={Style.scrollThumb} id='scrollThumb' style={{ height: `${thumbHeight}px` }} ></div>
+                        </TableStyles>
                     </div>
                 </div>
-            </div>
-            <div className={Style.columnR + " " + Style.divBorder} >
-                <div className={Style.divBorder} >
-                    <h3>Related Tools</h3>
-                </div>
-                {
-                    /**
-                     *  <div className={Style.divBorder} style={{padding: "2px"}} >
-                     <button style={{width: "98%"}} >Download Table</button>
-                 </div>
-                     */
-                }
-                <div className={Style.divBorder} style={{ padding: "2px" }} >
-                    <h3>Query Builder</h3>
-                    Do you need to make a more specific search?
-                    <br />
-                    <Link to={`/ht/finder/${datasetType}`}>
-                        <button>
-                            Use the Query Builder
-                        </button>
-                    </Link>
-                </div>
-            </div>
-        </section>
+            </section>
+        </article>
 
     )
 }
@@ -228,7 +196,7 @@ export function DatasetTable({ jsonTable, datasetType }) {
             ignoreColumns = ["objectsTested_name", "sample_title"]
             break;
         case 'GENE_EXPRESSION':
-            show = ['_id', "publications_title", "sourceSerie_title"]
+            show = ['_id', "publications_title"]
             show.forEach(element => {
                 remove(hiddenColumns, element)
             });

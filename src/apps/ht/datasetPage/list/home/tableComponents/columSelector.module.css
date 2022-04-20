@@ -1,0 +1,11 @@
+.item{
+    margin-top: 2px;
+}
+
+.item:hover{
+    background-color: #72a7c7;
+}
+
+.itemC:hover{
+    cursor: pointer;
+}

@@ -1,62 +1,70 @@
-
-  .columnL {
-    float: left;
-    width: 15%;
-    padding: 15px;
-  }
-  .columnC {
-    float: left;
-    width: 70%;
-    padding: 15px;
-  }
-  .columnR {
-    float: left;
-    width: 15%;
-    padding: 15px;
-  }
-  .itemCol{
-    display: list-item;
-    padding: 2px !important;
-  }
-
-  .itemSel{
-    padding: 0px;
-  }
-
-  .itemSel:hover{
-    color: white !important;
-    background-color: #cadce7 !important;
-    cursor: pointer;
-  }
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-.divBorder{
-    padding: 0;
-    border: 1px solid #1C6EA4;
+.columnL {
+  float: left;
+  padding: 15px;
 }
 
-.scrollIndicator{
+.columnC {
+  float: inherit;
+  padding: 15px;
+}
+
+.cont {
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.globalSearch {
+  border: 1px solid #999999;
+  border-radius: 40px;
+  width: 80%;
+}
+
+.itemCol {
+  display: list-item;
+  padding: 2px !important;
+}
+
+.itemSel {
+  padding: 0px;
+}
+
+.itemSel:hover {
+  color: white !important;
+  background-color: #cadce7 !important;
+  cursor: pointer;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.divBorder {
+  padding: 0;
+  border: 1px solid #1C6EA4;
+}
+
+.scrollIndicator {
   float: left;
 }
 
-.bodyTableAuthor{
+.bodyTableAuthor {
   background-color: rgb(255, 243, 218);
 }
-.tableConteiner{
+
+.tableConteiner {
   display: flex;
 }
-.scrollIndicator{
+
+.scrollIndicator {
   position: relative;
   background-color: rgb(235, 235, 235);
   border-radius: 50px 50px 50px 50px;
   width: 10px;
 }
-.scrollThumb{
+
+.scrollThumb {
   position: relative;
   background-color: #3d779b;
   border-radius: 50px 50px 50px 50px;
@@ -65,12 +73,14 @@
 
 .window_table::-webkit-scrollbar {
   height: 10px;
-  width: 12px;               /* width of the entire scrollbar */
+  width: 12px;
+  /* width of the entire scrollbar */
 }
 
 .window_table::-webkit-scrollbar-track {
   background-color: rgb(235, 235, 235);
-  border-radius: 50px 50px 50px 50px;        /* color of the tracking area */
+  border-radius: 50px 50px 50px 50px;
+  /* color of the tracking area */
 }
 
 .window_table::-webkit-scrollbar-thumb {

@@ -25,7 +25,7 @@ export default function GlobalFilter({
                 value={value || ""}
                 id="input_global_search_authorTable"
                 placeholder={`Global search in ${count} elements:`}
-                style={{width: "100%", border: "0px"}}
+                style={{width: "100%", border: "0px", borderRadius: "40px"}}
                 onChange={e => {
                     setValue(e.target.value);
                     onChange(e.target.value);

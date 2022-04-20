@@ -1,5 +1,5 @@
 import React, { useMemo } from "react"
-import Style from "../table.module.css"
+import Style from "./columSelector.module.css"
 
 export function ColumnSelector({
     allColumns,
@@ -30,16 +30,16 @@ export function ColumnSelector({
     }, [allColumns, ignoreColumns])
     return (
         <div>
-            <div className={Style.divBorder} >
-                <h3>Column Selector</h3>
+            <div  >
+                <p style={{fontSize: "14px"}} className="p_accent">Column Selector</p>
             </div>
-            <div className={Style.divBorder}>
+            <div >
                 {
                     Object.keys(Columns).map((key, index) => {
                         let fields = Columns[key]
                         if (fields.length > 1) {
                             return (
-                                <div key={key+"_"+index} className={Style.itemCol + " " + Style.divBorder}>
+                                <div key={key+"_"+index} className={Style.item+" "+Style.itemC}>
                                     <div className={Style.itemSel}
                                         onClick={(event)=>{
                                             event.preventDefault()
@@ -77,7 +77,7 @@ export function ColumnSelector({
                         } else {
                             let column = fields[0]
                             return (
-                                <div key={column.id+"_B_"+index} className={Style.divBorder + " " + Style.itemSel} >
+                                <div key={column.id+"_B_"+index} className={Style.item} >
                                     <label>
                                         <input type="checkbox" {...column.getToggleHiddenProps()} />{' '}
                                         {column.Header}
