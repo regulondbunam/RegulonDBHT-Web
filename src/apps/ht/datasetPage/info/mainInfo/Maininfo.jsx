@@ -20,7 +20,10 @@ export default function Maininfo({ _id, sample, fivePrimeEnrichment, datasetType
             <p style={{ fontSize: "12px" }}>ID: {_id}</p>
             <p style={{ fontSize: "22px" }} className="p_accent">{datasetTitle}</p>
             <p style={{ fontSize: "14px", float:'left', marginRight:'10px' }} >Dataset Type: {datasetType}</p>
-            <p style={{ fontSize: "14px" }} >|  Strategy: {sourceSerie.strategy}</p>
+            {
+                sourceSerie?.strategy && <p style={{ fontSize: "14px" }} >|  Strategy: {sourceSerie.strategy}</p>
+            }
+            
             <hr />
             {
                 fivePrimeEnrichment && <p style={{ fontSize: "14px" }} >5' Enrichment: {fivePrimeEnrichment}</p>
@@ -31,7 +34,6 @@ export default function Maininfo({ _id, sample, fivePrimeEnrichment, datasetType
             {
                 sample?.experimentId.length > 0 && <p style={{ fontSize: "14px" }} >Experiment ID: {sample?.experimentId.join(", ")}</p>
             }
-            <p style={{ fontSize: "12px" }} className="p_accent" >Source serie:</p>
             <SourceSerie sourceSerie={sourceSerie} />
             {
                 publications.length > 0 && <div>
