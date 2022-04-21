@@ -69,7 +69,8 @@ export default function List({ datasetType, experimentType }) {
               set_state("done")
             })
             .catch((error) => {
-              console.error("prosses_Services_error: ", error);
+              console.error("fetch_prosses_Services_error: ", error);
+              console.warn("advanced search",advancedSearch)
               set_state("error")
             });
         })();
