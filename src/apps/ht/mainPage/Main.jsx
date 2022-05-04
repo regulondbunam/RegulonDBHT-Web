@@ -49,7 +49,7 @@ class Main extends React.Component {
                 }
                 <br />
                 <br />
-                <p style={{ color: "#FFFFFF" }} >0.9.5</p>
+                <p style={{ color: "#FFFFFF" }} >0.9.6</p>
             </article>
         );
     }
