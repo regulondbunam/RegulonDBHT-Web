@@ -1,12 +1,12 @@
 {
-    "_version": "0.2",
+    "_version": "0.1",
     "_descripcion": "Json para la configuracion del texto estatico de la pagina principal de HT",
     "title": "High Thoughput Collection",
     "description": "",
     "collection": [
         {
             "id": "DS-TFBS-001",
-            "url": "tfbinding",
+            "url": "TFBINDING",
             "title": "TF Binding Sites",
             "url_rawDescription" : "https://raw.githubusercontent.com/regulondbunam/RegulonDBHT-Web/master/docs/web_conf/mainPage/TFBS_description.md",
             "tooltip": "",
@@ -14,7 +14,7 @@
         },
         {
             "id": "DS-TUS-002",
-            "url": "tus",
+            "url": "TUS",
             "title": "Transcription Units",
             "url_rawDescription" : "https://raw.githubusercontent.com/regulondbunam/RegulonDBHT-Web/master/docs/web_conf/mainPage/TU_description.md",
             "tooltip": "",
@@ -22,7 +22,7 @@
         },
         {
             "id": "DS-TTS-003",
-            "url": "tts",
+            "url": "TTS",
             "title": "Transcription Termination Sites",
             "url_rawDescription" : "https://raw.githubusercontent.com/regulondbunam/RegulonDBHT-Web/master/docs/web_conf/mainPage/TTS_description.md",
             "tooltip": "",
@@ -30,7 +30,7 @@
         },
         {
             "id": "DS-TSS-004",
-            "url": "tss",
+            "url": "TSS",
             "title": "Transcription Start Sites",
             "url_rawDescription" : "https://raw.githubusercontent.com/regulondbunam/RegulonDBHT-Web/master/docs/web_conf/mainPage/TSS_description.md",
             "tooltip": "",
@@ -38,7 +38,7 @@
         },
         {
             "id": "DS-GE-005",
-            "url": "gene_expression",
+            "url": "GENE_EXPRESSION",
             "title": "Gene Expression",
             "url_rawDescription" : "https://raw.githubusercontent.com/regulondbunam/RegulonDBHT-Web/master/docs/web_conf/mainPage/GE_description.md",
             "tooltip": "",
