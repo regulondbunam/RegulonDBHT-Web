@@ -10,7 +10,7 @@ import Style from './tabs.module.css'
 import { Viewer } from '../igv/viewer'
 
 export default function Tabs({ id_dataset, data }) {
-    const [_openTab, set_openTab] = useState()
+    const [_openTab, set_openTab] = useState(-1)
     const [_autorData, set_autorData] = useState()
     const [_jsonTable, set_jsonTable] = useState()
     const [_sitesJT, set_sitesJT] = useState()
@@ -26,7 +26,7 @@ export default function Tabs({ id_dataset, data }) {
                     try {
                         fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/sites/jsonTable`, { cache: "default" })
                             .then(response => response.json())
-                            .then(data => { console.log(data);; set_sitesJT(data); set_isData(1); set_openTab(1) })
+                            .then(data => { console.log(data);; set_sitesJT(data); set_isData(1); set_openTab(0) })
                             .catch(error => {
                                 console.error(error)
                                 set_sitesJT({ error: error })
@@ -40,7 +40,7 @@ export default function Tabs({ id_dataset, data }) {
                     try {
                         fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/peaks/jsonTable`, { cache: "default" })
                             .then(response => response.json())
-                            .then(data => { set_peaksJT(data); set_isData(1); set_openTab(1) })
+                            .then(data => { set_peaksJT(data); set_isData(1); set_openTab(0) })
                             .catch(error => {
                                 console.error(error)
                                 set_peaksJT({ error: error })
@@ -73,7 +73,7 @@ export default function Tabs({ id_dataset, data }) {
                 //REACT_APP_PROSSES_SERVICE
                 fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/${file_format}/jsonTable`, { cache: "default" })
                     .then(response => response.json())
-                    .then(data => { set_jsonTable(data); set_isData(1); set_openTab(1) })
+                    .then(data => { set_jsonTable(data); set_isData(1); set_openTab(0) })
                     .catch(error => {
                         console.error(error)
                         set_jsonTable({ error: error })
@@ -133,7 +133,7 @@ export default function Tabs({ id_dataset, data }) {
         return null
     }
 
-    if (_isData >= 0) {
+    if (_isData >= 0 && ((data?.datasetType==="TFBINDING" && _sitesJT && _peaksJT) || (data?.datasetType!=="TFBINDING" && _jsonTable))) {
         return (
             <div>
                 <h2>DATA FROM DATASET</h2>
@@ -193,7 +193,9 @@ export default function Tabs({ id_dataset, data }) {
             <GetAuthorData id_dataset={id_dataset} resoultsData={(data) => {
                 if (Array.isArray && data.length) {
                     set_autorData(data)
-                    set_openTab(0)
+                    if (_openTab === -1) {
+                        set_openTab(1)
+                    }
                 } else {
                     set_autorData(1)
                 }

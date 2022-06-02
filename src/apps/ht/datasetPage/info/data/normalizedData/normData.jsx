@@ -66,10 +66,10 @@ export default function NormData({datasetId, datasetType, dataType, fileFormat, 
             {
                 _select === "TFBS and PEAKS"
                 ? <div>
-                    <Table datasetId={datasetId} dataType={"sites"} fileFormat={"GFF3"} data={sitesJT.data} columns={sitesJT.columns} error={peaksJT.error} conf={{title: "Sites", search: true}} />
-                    <Table datasetId={datasetId} dataType={"peaks"} fileFormat={"GFF3"} data={peaksJT.data} columns={peaksJT.columns} error={peaksJT.error} conf={{title: "Peaks", search: true}} />
+                    <Table datasetId={datasetId} dataType={"sites"} fileFormat={"GFF3"} data={sitesJT.data} columns={sitesJT.columns} error={peaksJT?.error} conf={{title: "Sites", search: true}} />
+                    <Table datasetId={datasetId} dataType={"peaks"} fileFormat={"GFF3"} data={peaksJT.data} columns={peaksJT.columns} error={peaksJT?.error} conf={{title: "Peaks", search: true}} />
                 </div>
-                :<Table datasetId={datasetId} dataType={dataType} fileFormat={fileFormat} data={jsonTableData.data} columns={jsonTableData.columns} error={jsonTableData.error} conf={{title: dataType, search: true}} />
+                :<Table datasetId={datasetId} dataType={dataType} fileFormat={fileFormat} data={jsonTableData.data} columns={jsonTableData.columns} error={jsonTableData?.error} conf={{title: dataType, search: true}} />
             }
             
         </div>
