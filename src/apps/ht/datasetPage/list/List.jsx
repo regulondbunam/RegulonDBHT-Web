@@ -4,39 +4,15 @@ import { DatasetTable } from './home/table'
 import { getConfOf } from '../../doc/fetchDOC'
 import { Link } from 'react-router-dom'
 
-export default function List({ datasetType, experimentType }) {
+export default function List({datasetType, title, advancedSearch }) {
   const [_data, set_data] = useState()
   const [_state, set_state] = useState()
   const [_conf, set_conf] = useState()
+  
 
-  let advancedSearch = `${datasetType}[datasetType]`
-  let srtDatasetType = datasetType
-  switch (datasetType) {
-    case "TFBINDING":
-      srtDatasetType = " TF Binding Sites"
-      if (experimentType) {
-        srtDatasetType = ` TF Binding Sites with strategy ${experimentType}`
-        advancedSearch = `'${experimentType}'[sourceSerie.strategy] AND TFBINDING[datasetType]`
-      }
-      break;
-    case "TUS":
-      srtDatasetType = " Transcription Units"
-      break;
-    case "TTS":
-      srtDatasetType = " Transcription Termination Sites"
-      break;
-    case "TSS":
-      srtDatasetType = " Transcription Start Sites"
-      break;
-    case "GENE_EXPRESSION":
-      srtDatasetType = " Gene Expression"
-      break;
-    default:
-      advancedSearch = undefined
-      break;
-  }
+  //console.log(advancedSearch);
 
-  let _title = "Dataset list of " + srtDatasetType
+  let _title = "Dataset list of " + title
 
   useEffect(() => {
     const COVER = document.getElementById("title-cover-ht")
@@ -54,7 +30,7 @@ export default function List({ datasetType, experimentType }) {
       try {
         (async () => {
           set_state("loading")
-          await fetch(`${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/jsontable`, {
+          await fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/jsontable`, {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
@@ -94,7 +70,7 @@ export default function List({ datasetType, experimentType }) {
     }
   }, [_state, _conf, _data, _title, advancedSearch])
 
-  console.log();
+  //console.log();
   if (!advancedSearch) {
     return (
       <article>
@@ -125,7 +101,7 @@ export default function List({ datasetType, experimentType }) {
               <tr>
               <td>
                 <p>Would you like to make more specific queries?</p>
-                <Link to={`/ht/finder/${datasetType}`} >
+                <Link to={`${window.IN_URL.finder}${datasetType}`} >
                   <button>Query Bulder</button>
                 </Link>
               </td>

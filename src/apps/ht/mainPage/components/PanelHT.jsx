@@ -32,13 +32,13 @@ export default class PanelHT extends React.Component {
                 <div>
                     <ModalHT id={panel?.id} title={panel.title} md_data={this.state._mdData} />
                 </div>
-                <Link to={`/ht/dataset/${datasetType}/`}>
+                <Link to={`${window.IN_URL.dataset}${datasetType}/`}>
                 <h2 style={{fontSize: "5vh"}} >
                 {panel.title}
                 </h2>
                 </Link>
                 {
-                    datasetType==='TFBINDING'
+                    datasetType==='tfbinding'
                     &&<div style={{marginBottom: "10px"}}>
                     <Link style={{marginRight: "10px"}} to={`${window.IN_URL.dataset}${datasetType}/experimentType=ChIP-seq`}>
                     ChIP-seq

@@ -9,11 +9,7 @@ import HT from "./apps/ht/HighThroughput";
 
 //Static Global Variable
 
-window.IN_URL = {
-  main: "/ht",
-  finder: "/ht/finder/",
-  dataset: "/ht/dataset/"
-} 
+
 
 
 function App() {
@@ -21,7 +17,7 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <Switch>
-          <Route path={["/ht/:site/:datasetType/:info", "/ht/:site/:datasetType", "/ht/:site/", "/ht", "/"]}>
+          <Route path={["/ht/:site/:info", "/ht/:site", "/ht", "/"]}>
             <HT />
           </Route>
         </Switch>

@@ -5,32 +5,38 @@ import Main from './mainPage/Main'
 import Dataset from './datasetPage/Dataset';
 import Finder from './finderPage/Finder'
 
+window.IN_URL = {
+    main: "/ht",
+    finder: "/ht/finder/",
+    dataset: "/ht/"
+}
+
 export default function HT() {
-    const datasetType = useParams().datasetType;
     const site = useParams().site;
     const info = useParams().info;
 
-    let Page = <Main />
+    console.log(site, info);
 
-    if(datasetType){
-        switch (site) {
-            case "finder":
-                Page = <Finder datasetType={datasetType} />
-                    break;
-            case "dataset":
-                const query = new URLSearchParams(info);
-                Page = <Dataset datasetId={query.get('datasetId')} datasetType={datasetType} experimentType={query.get('experimentType')} />
-                    break;
-            default:
-                Page = <Main />
+    
+
+    let Page = <Main />
+    if (site) {
+        if (site === "finder" ) {
+            if (info) {
+                Page = <Finder datasetType={info.toLocaleUpperCase()} />
+            }
+            
+        } else {
+            const query = new URLSearchParams(info);
+            Page = <Dataset datasetType={site.toLocaleUpperCase()} tfName={query.get('tf')} datasetId={query.get('datasetId')} experimentType={query.get('experimentType')} />
         }
     }
 
-    return(
+    return (
         <div>
             <Title />
             {Page}
         </div>
     )
-    
+
 }

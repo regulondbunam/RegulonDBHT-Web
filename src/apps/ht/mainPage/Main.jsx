@@ -12,7 +12,7 @@ class Main extends React.Component {
 
     componentDidMount() {
         getConfOf("main_page", (conf) => {
-            console.log(conf);
+            //console.log(conf);
             this.setState({ conf: conf });
         })
         const COVER = document.getElementById("title-cover-ht")

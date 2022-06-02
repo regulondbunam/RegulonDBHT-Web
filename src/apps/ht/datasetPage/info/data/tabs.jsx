@@ -25,7 +25,7 @@ export default function Tabs({ id_dataset, data }) {
           if(!_jsonTable){
             try {
                 //REACT_APP_PROSSES_SERVICE
-                fetch(`${process.env.REACT_APP_PROSSES_SERVICE}ht/wdps/${id_dataset}/ge/jsonTable`,{cache: "default"})
+                fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/ge/jsonTable`,{cache: "default"})
                     .then(response => response.json())
                     .then(data => {set_jsonTable(data);set_datasetData(data)})
                     .catch(error => {
