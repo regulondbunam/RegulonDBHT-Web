@@ -100,8 +100,13 @@ export function Table({ datasetId, dataType, fileFormat, columns, data, error,
                                                                         <ReactTooltip id={`Link_${gene._id}`} aria-haspopup='true' >
                                                                             <p style={{ color: "white" }} >Gene: {gene.name}</p>
                                                                             <p style={{ color: "white" }} >Distance to: {gene.distanceTo}</p>
-                                                                            <p style={{ color: "white" }} >TranscriptionUnits:</p>
-                                                                            <p style={{ color: "white" }} >{gene.transcriptionUnits}</p>
+                                                                            {
+                                                                                gene?.transcriptionUnits && <div>
+                                                                                    <p style={{ color: "white" }} >TranscriptionUnits:</p>
+                                                                                    <p style={{ color: "white" }} >{gene.transcriptionUnits}</p>
+                                                                                </div>
+                                                                            }
+
                                                                         </ReactTooltip>
                                                                         <a data-tip data-for={`Link_${gene._id}`} href={`http://regulondb.ccg.unam.mx/search?term=${gene.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gene.name}</a>
                                                                     </div>

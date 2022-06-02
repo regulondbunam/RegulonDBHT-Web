@@ -54,28 +54,31 @@ export function Viewer({ id_dataset, tfs, datasetType }) {
 
     useEffect(() => {
 
-        var igvDiv = document.getElementById("igv-divK");
+        let igvDiv = document.getElementById("igv-divK");
 
-        if (igvDiv && id_dataset) {
-            igv.createBrowser(igvDiv, {
-                genome: confGenome({
-                    id_dataset: id_dataset,
-                    peaksFile: _peaksFile,
-                    sitesFile: _sitesFile,
-                    tfFiles: _tfFiles,
-                    tsFile: _tsFile,
-                    ttFile: _ttFile,
-                    tuFile: _tuFile,
-                    geFile: _geFile,
-                    promoter: _promoter,
-                    terminator: _terminator,
-                    tuSet: _tuSet
+        
+        return function cleanup() {
+            if (igvDiv && id_dataset) {
+                igv.createBrowser(igvDiv, {
+                    genome: confGenome({
+                        id_dataset: id_dataset,
+                        peaksFile: _peaksFile,
+                        sitesFile: _sitesFile,
+                        tfFiles: _tfFiles,
+                        tsFile: _tsFile,
+                        ttFile: _ttFile,
+                        tuFile: _tuFile,
+                        geFile: _geFile,
+                        promoter: _promoter,
+                        terminator: _terminator,
+                        tuSet: _tuSet
+                    })
                 })
-            })
-                .then(function (browser) {
-                    //console.log("hola");
-                })
-        }
+                    .then(function (browser) {
+                        //console.log("hola");
+                    })
+            }
+          };
     }, [id_dataset, _peaksFile, _sitesFile, _tfFiles, _tuSet,_ttFile, _tsFile, _tuFile, notTracks, _geFile, _promoter, _terminator])
 
     if (!show) {
