@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import GE from './tables/ge'
 import { Table } from './Table'
 
 
-export default function NormData({ datasetType, jsonTable, peaksJT, sitesJT }) {
-    const [_select, set_select] = useState("TFBS")
+export default function NormData({datasetId, datasetType, dataType, fileFormat, jsonTable, peaksJT, sitesJT }) {
+    const [_select, set_select] = useState(undefined)
     //console.log(datasetData)
     // console.log(jsonTable);
     let options = undefined
@@ -24,6 +23,7 @@ export default function NormData({ datasetType, jsonTable, peaksJT, sitesJT }) {
                     break;
                 case "PEAKS":
                     jsonTableData = peaksJT
+                    dataType = "peaks"
                     break;
                 default:
                     jsonTableData = sitesJT
@@ -38,7 +38,7 @@ export default function NormData({ datasetType, jsonTable, peaksJT, sitesJT }) {
         return <div></div>
     }
 
-    if (!jsonTableData) {
+    if (!jsonTableData && !dataType) {
         return null
     }
 
@@ -50,6 +50,7 @@ export default function NormData({ datasetType, jsonTable, peaksJT, sitesJT }) {
                 options
                     ? <label>
                         Select data view:
+                        <br />
                         <select onChange={(e) => {
                             set_select(e.target.value)
                         }}>
@@ -63,13 +64,14 @@ export default function NormData({ datasetType, jsonTable, peaksJT, sitesJT }) {
                     : null
             }
             {
-                _select !== "TFBS and PEAKS"
-                ?<Table data={jsonTableData.data} columns={jsonTableData.columns} conf={{title: datasetType, search: true}} />
-                :<div>
-                    <Table data={sitesJT.data} columns={sitesJT.columns} error={sitesJT.error} conf={{title: "Sites", search: true}} />
-                    <Table data={peaksJT.data} columns={peaksJT.columns} error={peaksJT.error} conf={{title: "Peaks", search: true}}/>
+                _select === "TFBS and PEAKS"
+                ? <div>
+                    <Table datasetId={datasetId} dataType={"sites"} fileFormat={"GFF3"} data={sitesJT.data} columns={sitesJT.columns} error={peaksJT.error} conf={{title: "Sites", search: true}} />
+                    <Table datasetId={datasetId} dataType={"peaks"} fileFormat={"GFF3"} data={peaksJT.data} columns={peaksJT.columns} error={peaksJT.error} conf={{title: "Peaks", search: true}} />
                 </div>
+                :<Table datasetId={datasetId} dataType={dataType} fileFormat={fileFormat} data={jsonTableData.data} columns={jsonTableData.columns} error={jsonTableData.error} conf={{title: dataType, search: true}} />
             }
+            
         </div>
     )
 }

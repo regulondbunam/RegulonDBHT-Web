@@ -1,9 +1,10 @@
 import React from 'react'
 import { useTable, usePagination } from 'react-table'
 import ReactTooltip from 'react-tooltip';
+import { MKSequenceClass } from './mkSequence'
 
 
-export function Table({ columns, data, error,
+export function Table({ datasetId, dataType, fileFormat, columns, data, error,
     conf = {
         title: "Table",
         search: true,
@@ -53,7 +54,7 @@ export function Table({ columns, data, error,
     // Render the UI for your table
     return (
         <div style={{ overflow: "auto" }}>
-            <h3>{conf.title}</h3>
+            <Header title={conf.title} datasetId={datasetId} dataType={dataType} fileFormat={fileFormat} />
             <table className={"table_content"} {...getTableProps()}>
                 <thead>
                     {headerGroups.map(headerGroup => (
@@ -70,23 +71,37 @@ export function Table({ columns, data, error,
                         return (
                             <tr {...row.getRowProps()}>
                                 {row.cells.map(cell => {
-                                    // console.log(cell);
+                                    //console.log(cell);
+                                    if (cell.column.id === "_sequence") {
+                                        try {
+                                            return (
+                                                <td>
+                                                    <MKSequenceClass
+                                                        id_drawPlace={`${cell.row.id}`}
+                                                        sequence={cell.value} />
+                                                </td>
+
+                                            )
+                                        } catch (error) {
+                                            console.error(error);
+                                        }
+                                    }
                                     if (cell.column.id === "_gene") {
                                         try {
                                             if (cell.value) {
-                                                //console.log(cell.value);
+                                                console.log(cell.value);
                                                 return (
                                                     <td {...cell.getCellProps()}>
 
                                                         {
                                                             cell.value.map((gene, i) => {
                                                                 return (
-                                                                    <div key={`genecell_${i}`} style={{ marginLeft: "5px", float:"left" }} >
+                                                                    <div key={`genecell_${i}`} style={{ marginLeft: "5px", float: "left" }} >
                                                                         <ReactTooltip id={`Link_${gene._id}`} aria-haspopup='true' >
-                                                                            <p style={{color: "white"}} >Gene: {gene.name}</p>
-                                                                            <p style={{color: "white"}} >Distance to: {gene.distanceTo}</p>
-                                                                            <p style={{color: "white"}} >TranscriptionUnits:</p>
-                                                                            <p style={{color: "white"}} >{gene.transcriptionUnits}</p>
+                                                                            <p style={{ color: "white" }} >Gene: {gene.name}</p>
+                                                                            <p style={{ color: "white" }} >Distance to: {gene.distanceTo}</p>
+                                                                            <p style={{ color: "white" }} >TranscriptionUnits:</p>
+                                                                            <p style={{ color: "white" }} >{gene.transcriptionUnits}</p>
                                                                         </ReactTooltip>
                                                                         <a data-tip data-for={`Link_${gene._id}`} href={`http://regulondb.ccg.unam.mx/search?term=${gene.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gene.name}</a>
                                                                     </div>
@@ -97,7 +112,7 @@ export function Table({ columns, data, error,
                                                 )
                                             }
                                         } catch (error) {
-
+                                            console.log(error);
                                         }
                                         return <td></td>
                                     }
@@ -160,8 +175,34 @@ export function Table({ columns, data, error,
     )
 }
 
-/*
-function linkGene(gen) {
-    return <a key={gen?._id} style={{ marginLeft: "5px" }} href={`http://regulondb.ccg.unam.mx/search?term=${gen?.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gen?.name}</a>
+export function Header({
+    title,
+    datasetId,
+    dataType,
+    fileFormat
+}) {
+    return (
+        <div style={{ display: "grid", height: "30px", gridTemplateColumns: "auto 150px", gridColumnGap: "10px" }}  >
+            <h4 style={{ paddingLeft: "10px" }} >{title}</h4>
+            <div className="dropdown">
+                <button style={{ padding: "4px", width: "150px" }} >Download Options</button>
+                <div className="dropdown-content">
+                    <div>
+                        <a style={{ textAlign: "center", fontSize: "14px", color: "black" }} target="_blank" rel="noreferrer" href={`${process.env.REACT_APP_PROSSES_SERVICE}/${datasetId}/${dataType}/jsonGQL`}>JSON GQL</a>
+                    </div>
+                    <div>
+                        <a style={{ textAlign: "center", fontSize: "14px", color: "black" }} target="_blank" rel="noreferrer" href={`${process.env.REACT_APP_PROSSES_SERVICE}/${datasetId}/${dataType}/jsonTable`}>JSON TABLE</a>
+                    </div>
+                    <div>
+                        <a style={{ textAlign: "center", fontSize: "14px", color: "black" }} target="_blank" rel="noreferrer" href={`${process.env.REACT_APP_PROSSES_SERVICE}/${datasetId}/${dataType}/${fileFormat}`}>{fileFormat} file</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
 }
+
+/*
+ <a style={{textAlign: "center",fontSize: "14px"}} href={`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/authorData/cvs`}>Download File</a>
 */
