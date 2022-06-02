@@ -37,7 +37,7 @@ export default function Info({datasetId}) {
       COVER.dispatchEvent(COVER_REACTION);
     }
   }, [_state,_dataset])
-  console.log(_dataset)
+  //console.log(_dataset)
   if (_state === "error") {
     return (
       <div>dataset error</div>

@@ -15,7 +15,7 @@ export default function HT() {
     const site = useParams().site;
     const info = useParams().info;
 
-    console.log(site, info);
+    //console.log(site, info);
 
     
 

@@ -1,29 +1,45 @@
 import React, { useState } from 'react'
 import GE from './tables/ge'
-import PEAKS from './tables/peaks'
-import TFBS from './tables/tfbs'
-import TSS from './tables/tss'
-import TTS from './tables/tts'
-import TUS from './tables/tus'
+import { Table } from './Table'
 
 
-export default function NormData({ datasetType, datasetData, jsonTable }) {
+export default function NormData({ datasetType, jsonTable, peaksJT, sitesJT }) {
     const [_select, set_select] = useState("TFBS")
     //console.log(datasetData)
     // console.log(jsonTable);
     let options = undefined
-
+    let jsonTableData = undefined
     switch (datasetType) {
         case "TTS":
         case "TSS":
         case "TUS":
             options = undefined
+            jsonTableData = jsonTable
             break;
         case "TFBINDING":
             options = ["TFBS", "PEAKS", "TFBS and PEAKS"]
+            switch (_select) {
+                case "TFBS":
+                    jsonTableData = sitesJT
+                    break;
+                case "PEAKS":
+                    jsonTableData = peaksJT
+                    break;
+                default:
+                    jsonTableData = sitesJT
+                    break;
+            }
             break;
         default:
             break;
+    }
+
+    if (jsonTable?.error) {
+        return <div></div>
+    }
+
+    if (!jsonTableData) {
+        return null
     }
 
     return (
@@ -47,46 +63,12 @@ export default function NormData({ datasetType, datasetData, jsonTable }) {
                     : null
             }
             {
-                (_select === "TFBS" && datasetData?.tfbsData)
-                ? <TFBS data={datasetData?.tfbsData} />
-                : null
-            }
-            {
-                (_select === "PEAKS" && datasetData?.peaksData)
-                    ? <PEAKS data={datasetData?.peaksData} />
-                    : null
-            }
-            {
-               ( _select === "TFBS and PEAKS")
-                    ? <div>
-                        {
-                            datasetData?.tfbsData && <TFBS data={datasetData?.tfbsData} />
-                        }
-                        {
-                            datasetData?.peaksData && <PEAKS data={datasetData?.peaksData} />
-                        }
-                    </div>
-                    : null
-            }
-            {
-                (datasetType === "TUS" && datasetData?.tusData)
-                ?<TUS data={datasetData?.tusData} />
-                :null
-            }
-            {
-                (datasetType === "TSS" && datasetData?.tssData)
-                ?<TSS data={datasetData?.tssData} />
-                :null
-            }
-            {
-                (datasetType === "TTS" && datasetData?.ttsData)
-                ?<TTS data={datasetData?.ttsData} />
-                :null
-            }
-            {
-                (datasetType === "GENE_EXPRESSION")
-                ?<GE jsonTable={jsonTable} />
-                :null
+                _select !== "TFBS and PEAKS"
+                ?<Table data={jsonTableData.data} columns={jsonTableData.columns} conf={{title: datasetType, search: true}} />
+                :<div>
+                    <Table data={sitesJT.data} columns={sitesJT.columns} error={sitesJT.error} conf={{title: "Sites", search: true}} />
+                    <Table data={peaksJT.data} columns={peaksJT.columns} error={peaksJT.error} conf={{title: "Peaks", search: true}}/>
+                </div>
             }
         </div>
     )

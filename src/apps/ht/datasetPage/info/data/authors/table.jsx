@@ -165,7 +165,7 @@ function Table({ columns, data, id_dataset }) {
 }
 
 export function AuthorTable({ tableData, id_dataset }) {
-    console.log(tableData)
+    //console.log(tableData)
     if (!tableData?.data) {
         return <p>Error process author data</p>
     }

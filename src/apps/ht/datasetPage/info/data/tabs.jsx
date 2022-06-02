@@ -4,44 +4,87 @@ import NormData from './normalizedData/normData'
 import AuthorData from './authors/authors'
 
 import GetAuthorData from '../../../webServices/authors/authorsData_dataset'
-import GetPeaks from '../../../webServices/peaks/peaks_dataset'
-import GetTFBS from '../../../webServices/tfbs/tfbs_dataset'
-import GetTUs from '../../../webServices/transUnits/tu_dataset'
-import GetTSS from '../../../webServices/tss/tss_dataset'
-import GetTTS from '../../../webServices/tts/tts_dataset'
 import Summary from './summary'
 import Style from './tabs.module.css'
 
 import { Viewer } from '../igv/viewer'
 
 export default function Tabs({ id_dataset, data }) {
-    const [_openTab, set_openTab] = useState(0)
+    const [_openTab, set_openTab] = useState()
     const [_autorData, set_autorData] = useState()
-    const [_datasetData, set_datasetData] = useState()
     const [_jsonTable, set_jsonTable] = useState()
-    
+    const [_sitesJT, set_sitesJT] = useState()
+    const [_peaksJT, set_peaksJT] = useState()
+    const [_isData, set_isData] = useState()// -1 -> nada, 0 -> autordata, 1 -> normdata
+
     useEffect(() => {
-      if(data?.datasetType === "GENE_EXPRESSION"){
-          if(!_jsonTable){
+        let file_format = undefined
+        switch (data?.datasetType) {
+            case "TFBINDING":
+                if (!_sitesJT) {
+                    try {
+                        fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/sites/jsonTable`, { cache: "default" })
+                            .then(response => response.json())
+                            .then(data => { console.log(data);;set_sitesJT(data);set_isData(1);set_openTab(1)})
+                            .catch(error => {
+                                console.error(error)
+                                set_sitesJT({ error: error })
+                            });
+                    } catch (error) {
+                        console.error(error)
+                        set_sitesJT({ error: error })
+                    }
+                }
+                if (!_peaksJT) {
+                    try {
+                        fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/peaks/jsonTable`, { cache: "default" })
+                            .then(response => response.json())
+                            .then(data => { set_peaksJT(data);set_isData(1);set_openTab(1)})
+                            .catch(error => {
+                                console.error(error)
+                                set_peaksJT({ error: error })
+                            });
+                    } catch (error) {
+                        console.error(error)
+                        set_peaksJT({ error: error })
+                    }
+                }
+                break;
+            case "TSS":
+                file_format = "tss"
+                break;
+            case "TTS":
+                file_format = "tts"
+                break;
+            case "TUS":
+                file_format = "tus"
+                break;
+            case "GENE_EXPRESSION":
+                file_format = "ge"
+                break;
+            default:
+                file_format = undefined
+                break;
+        }
+
+        if (!_jsonTable && file_format) {
             try {
                 //REACT_APP_PROSSES_SERVICE
-                fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/ge/jsonTable`,{cache: "default"})
+                fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/${file_format}/jsonTable`, { cache: "default" })
                     .then(response => response.json())
-                    .then(data => {set_jsonTable(data);set_datasetData(data)})
+                    .then(data => { set_jsonTable(data);set_isData(1);set_openTab(1)})
                     .catch(error => {
                         console.error(error)
                         set_jsonTable({ error: error })
-                        set_datasetData(1)
                     });
             } catch (error) {
                 console.error(error)
                 set_jsonTable({ error: error })
             }
-          }
-      }
-    
-    }, [data,_jsonTable, id_dataset, set_jsonTable, set_datasetData])
-    
+        }
+
+    }, [data, _jsonTable, id_dataset, set_jsonTable, _sitesJT, _peaksJT])
+
 
 
 
@@ -74,17 +117,17 @@ export default function Tabs({ id_dataset, data }) {
         return ""
     }
 
-    if ((_datasetData === 1 && _autorData === 1) || !tabTitle1) {
+    if (_isData === -1) {
         return null
     }
 
-    if ((_datasetData || _datasetData === 1) && (_autorData || _autorData === 1)) {
+    if (_isData >= 0) {
         return (
             <div>
                 <h2>DATA FROM DATASET</h2>
                 <div className={Style.tab}>
                     {
-                        _datasetData !== 1
+                        _isData === 1
                             ? <button className={"" + isActive(0)}
                                 id={`TAB_${id_dataset}_0`}
                                 onClick={(event) => { open(0) }}
@@ -109,7 +152,7 @@ export default function Tabs({ id_dataset, data }) {
                     (_openTab === 0)
                         ? <div className={Style.tabcontent}>
                             <Summary data={data} />
-                            <NormData datasetType={data?.datasetType} datasetData={_datasetData} jsonTable={_jsonTable} />
+                            <NormData datasetType={data?.datasetType} jsonTable={_jsonTable} peaksJT={_peaksJT} sitesJT={_sitesJT} />
                             <div id="igv-view" >
                                 <Viewer id_dataset={data?._id} tfs={data?.objectsTested} datasetType={data?.datasetType} />
                                 <br />
@@ -138,109 +181,9 @@ export default function Tabs({ id_dataset, data }) {
             <GetAuthorData id_dataset={id_dataset} resoultsData={(data) => {
                 if (Array.isArray && data.length) {
                     set_autorData(data)
+                    set_openTab(0)
                 } else {
                     set_autorData(1)
-                }
-            }}
-            />
-            {
-                data?.datasetType === "TFBINDING" && <GetTFBSData id_dataset={id_dataset} set_datasetData={(data) => { set_datasetData(data) }} setTab={(tab)=>{set_openTab(tab)}} />
-            }
-            {
-                data?.datasetType === "TUS" &&
-                <GetTUs id_dataset={id_dataset} resoultsData={(data) => {
-                    if (!data) {
-                        set_datasetData(1)
-                        set_openTab(1)
-                    } else {
-                        if (Array.isArray && data.length) {
-                            set_datasetData({ tusData: data })
-                        } else {
-                            set_datasetData(1)
-                            set_openTab(1)
-                        }
-                    }
-                }}
-                />
-            }
-            {
-                data?.datasetType === "TSS" &&
-                <GetTSS id_dataset={id_dataset} resoultsData={(data) => {
-                    if (data) {
-                        if (Array.isArray && data.length) {
-                            set_datasetData({ tssData: data })
-                        } else {
-                            set_datasetData(1)
-                            set_openTab(1)
-                        }
-                    }
-                }}
-                />
-            }
-            {
-                data?.datasetType === "TTS" &&
-                <GetTTS id_dataset={id_dataset} resoultsData={(data) => {
-                    if (!data) {
-                        set_datasetData(1)
-                        set_openTab(1)
-                    } else {
-                        if (Array.isArray && data.length) {
-                            set_datasetData({ ttsData: data })
-                            //
-                        } else {
-                            set_datasetData(1)
-                            set_openTab(1)
-                        }
-                    }
-                }}
-                />
-            }
-        </div>
-    )
-}
-
-function GetTFBSData({
-    id_dataset,
-    set_datasetData = () => { },
-    setTab = () => { }
-}) {
-
-    const [_tfbsData, set_tfbsData] = useState()
-    const [_peaksData, set_peaksData] = useState()
-
-    useEffect(() => {
-        if (_tfbsData && _peaksData) {
-            if (_tfbsData === 1 && _peaksData === 1) {
-                set_datasetData(1)
-                setTab(1)
-            } else {
-                set_datasetData({
-                    peaksData: _peaksData,
-                    tfbsData: _tfbsData
-                })
-            }
-        }
-    }, [_peaksData, _tfbsData, set_datasetData, setTab])
-
-    return (
-        <div>
-            <GetPeaks id_dataset={id_dataset} resoultsData={(data) => {
-                if (Array.isArray && data.length) {
-                    set_peaksData(data);
-                } else {
-                    set_peaksData(1)
-                }
-            }}
-            />
-            <GetTFBS id_dataset={id_dataset} resoultsData={(data) => {
-                if (data) {
-                    if (Array.isArray && data.length) {
-                        set_tfbsData(data);
-                    } else {
-                        set_tfbsData(1)
-                    }
-                } else {
-                    set_tfbsData(1)
                 }
             }}
             />
