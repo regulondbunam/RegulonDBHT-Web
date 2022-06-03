@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { Component } from 'react'
 import { SpinnerCircle } from '../../../../../components/ui-components/ui_components'
 import NormData from './normalizedData/normData'
 import AuthorData from './authors/authors'
@@ -8,46 +8,48 @@ import Summary from './summary'
 import Style from './tabs.module.css'
 
 import { Viewer } from '../igv/viewer'
+export default class Tabs extends Component {
 
-export default function Tabs({ id_dataset, data }) {
-    const [_openTab, set_openTab] = useState(-1)
-    const [_autorData, set_autorData] = useState()
-    const [_jsonTable, set_jsonTable] = useState()
-    const [_sitesJT, set_sitesJT] = useState()
-    const [_peaksJT, set_peaksJT] = useState()
-    const [_isData, set_isData] = useState()// -1 -> nada, 0 -> autordata, 1 -> normdata
+    state = {
+        _openTab: -1,
+        _autorData: undefined,
+        _jsonTable: undefined,
+        _sitesJT: undefined,
+        _peaksJT: undefined,
+    }
 
+    componentDidMount() {
 
-    useEffect(() => {
         let file_format = undefined
-        switch (data?.datasetType) {
+        let id_dataset = this.props.id_dataset
+        switch (this.props.data.datasetType) {
             case "TFBINDING":
-                if (!_sitesJT) {
+                if (!this.state._sitesJT) {
                     try {
                         fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/sites/jsonTable`, { cache: "default" })
                             .then(response => response.json())
-                            .then(data => { console.log(data);; set_sitesJT(data); set_isData(1); set_openTab(0) })
+                            .then(data => { this.setState({_sitesJT: data, _openTab: 0}); })
                             .catch(error => {
                                 console.error(error)
-                                set_sitesJT({ error: error })
+                                this.setState({_sitesJT: { error: error }})
                             });
                     } catch (error) {
                         console.error(error)
-                        set_sitesJT({ error: error })
+                        this.setState({_sitesJT: { error: error }})
                     }
                 }
-                if (!_peaksJT) {
+                if (!this.state._peaksJT) {
                     try {
                         fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/peaks/jsonTable`, { cache: "default" })
                             .then(response => response.json())
-                            .then(data => { set_peaksJT(data); set_isData(1); set_openTab(0) })
+                            .then(data => { this.setState({_peaksJT: data, _openTab: 0}); })
                             .catch(error => {
                                 console.error(error)
-                                set_peaksJT({ error: error })
+                                this.setState({_peaksJT: { error: error }})
                             });
                     } catch (error) {
                         console.error(error)
-                        set_peaksJT({ error: error })
+                        this.setState({_peaksJT: { error: error }})
                     }
                 }
                 break;
@@ -68,26 +70,38 @@ export default function Tabs({ id_dataset, data }) {
                 break;
         }
 
-        if (!_jsonTable && file_format) {
+        if (!this.state._jsonTable && file_format) {
             try {
-                //REACT_APP_PROSSES_SERVICE
+                //FLASK_PROSSES_SERVICE
                 fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/${file_format}/jsonTable`, { cache: "default" })
                     .then(response => response.json())
-                    .then(data => { set_jsonTable(data); set_isData(1); set_openTab(0) })
+                    .then(data => { this.setState({_jsonTable: data, _openTab: 0}); })
                     .catch(error => {
                         console.error(error)
-                        set_jsonTable({ error: error })
+                        this.setState({_jsonTable: { error: error }})
                     });
             } catch (error) {
                 console.error(error)
-                set_jsonTable({ error: error })
+                this.setState({_jsonTable: { error: error }})
             }
         }
+    }
 
-    }, [data, _jsonTable, id_dataset, set_jsonTable, _sitesJT, _peaksJT])
+    _open = (id) => {
+        this.setState({ _openTab: id})
+    }
 
+    _isActive = (id) => {
+        if (this.state._openTab=== id) {
+            return Style.selected
+        }
+        return ""
+    }
 
+  render() {
 
+    const { data, id_dataset } = this.props
+    const { _openTab, _jsonTable, _sitesJT, _peaksJT, _autorData } = this.state
 
     let tabTitle1 = ""
     let dataType = ""
@@ -116,33 +130,16 @@ export default function Tabs({ id_dataset, data }) {
             break;
     }
 
-
-
-    const open = (id) => {
-        set_openTab(id)
-    }
-
-    const isActive = (id) => {
-        if (_openTab === id) {
-            return Style.selected
-        }
-        return ""
-    }
-
-    if (_isData === -1) {
-        return null
-    }
-
-    if (_isData >= 0 && ((data?.datasetType==="TFBINDING" && _sitesJT && _peaksJT) || (data?.datasetType!=="TFBINDING" && _jsonTable))) {
+    if (((data?.datasetType==="TFBINDING" && _sitesJT && _peaksJT) || (data?.datasetType!=="TFBINDING" && _jsonTable)) && _autorData  ) {
         return (
             <div>
                 <h2>DATA FROM DATASET</h2>
                 <div className={Style.tab}>
                     {
-                        _isData === 1
-                            ? <button className={"" + isActive(0)}
+                        ((data?.datasetType==="TFBINDING" && _sitesJT && _peaksJT) || (data?.datasetType!=="TFBINDING" && _jsonTable))
+                            ? <button className={"" + this._isActive(0)}
                                 id={`TAB_${id_dataset}_0`}
-                                onClick={(event) => { open(0) }}
+                                onClick={(event) => { this._open(0) }}
                             >{tabTitle1}
                             </button>
                             : null
@@ -150,9 +147,9 @@ export default function Tabs({ id_dataset, data }) {
                     {
                         (Array.isArray(_autorData) && _autorData.length)
                             ?
-                            <button className={"" + isActive(1)}
+                            <button className={"" + this._isActive(1)}
                                 id={`TAB_${id_dataset}_1`}
-                                onClick={() => { open(1) }}
+                                onClick={() => { this._open(1) }}
                             >
                                 Author data
                             </button>
@@ -192,15 +189,18 @@ export default function Tabs({ id_dataset, data }) {
             <SpinnerCircle />
             <GetAuthorData id_dataset={id_dataset} resoultsData={(data) => {
                 if (Array.isArray && data.length) {
-                    set_autorData(data)
+                    this.setState({ _autorData: data })
                     if (_openTab === -1) {
-                        set_openTab(1)
+                        this._open(1)
                     }
                 } else {
-                    set_autorData(1)
+                    this.setState({ _autorData: { error: "No data found" } })
                 }
             }}
             />
         </div>
     )
+  }
 }
+
+
