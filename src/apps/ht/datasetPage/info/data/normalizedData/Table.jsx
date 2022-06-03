@@ -41,7 +41,7 @@ export function Table({ datasetId, dataType, fileFormat, columns, data, error,
         {
             columns,
             data,
-            initialState: { pageIndex: 2 },
+            initialState: { pageIndex: 0 },
             defaultColumn
         },
         usePagination
@@ -50,11 +50,11 @@ export function Table({ datasetId, dataType, fileFormat, columns, data, error,
     if (error || !data) {
         return null
     }
-    //console.log(data);
+    //console.log(data[0]);
     // Render the UI for your table
     return (
         <div style={{ overflow: "auto" }}>
-            <Header title={conf.title} datasetId={datasetId} dataType={dataType} fileFormat={fileFormat} />
+            <Header title={conf.title.toUpperCase()} datasetId={datasetId} dataType={dataType} fileFormat={fileFormat} />
             <table className={"table_content"} {...getTableProps()}>
                 <thead>
                     {headerGroups.map(headerGroup => (
@@ -86,7 +86,7 @@ export function Table({ datasetId, dataType, fileFormat, columns, data, error,
                                             console.error(error);
                                         }
                                     }
-                                    if (cell.column.id === "_gene") {
+                                    if (cell.column.id === "_prom") {
                                         try {
                                             if (cell.value) {
                                                 console.log(cell.value);
@@ -94,20 +94,57 @@ export function Table({ datasetId, dataType, fileFormat, columns, data, error,
                                                     <td {...cell.getCellProps()}>
 
                                                         {
+                                                            cell.value.map((prom, i) => {
+                                                                return (
+                                                                    <div key={`genecell_${i}`} style={{ marginLeft: "5px", float: "left" }} >
+                                                                        {prom.name}
+                                                                    </div>
+                                                                )
+                                                            })
+                                                        }
+                                                    </td>
+                                                )
+                                            }
+                                        } catch (error) {
+                                            console.log(error);
+                                        }
+                                        return <td></td>
+                                    }
+                                    if (cell.column.id === "_gene") {
+                                        try {
+                                            if (cell.value) {
+                                                //console.log(cell.value);
+                                                return (
+                                                    <td {...cell.getCellProps()}>
+
+                                                        {
                                                             cell.value.map((gene, i) => {
                                                                 return (
                                                                     <div key={`genecell_${i}`} style={{ marginLeft: "5px", float: "left" }} >
-                                                                        <ReactTooltip id={`Link_${gene._id}`} aria-haspopup='true' >
-                                                                            <p style={{ color: "white" }} >Gene: {gene.name}</p>
-                                                                            <p style={{ color: "white" }} >Distance to: {gene.distanceTo}</p>
-                                                                            {
-                                                                                gene?.transcriptionUnits && <div>
-                                                                                    <p style={{ color: "white" }} >TranscriptionUnits:</p>
-                                                                                    <p style={{ color: "white" }} >{gene.transcriptionUnits}</p>
-                                                                                </div>
-                                                                            }
+                                                                        {dataType !== "tus"
+                                                                            && <ReactTooltip id={`Link_${gene._id}`} aria-haspopup='true' >
+                                                                                <p style={{ color: "white" }} >Gene: {gene.name}</p>
+                                                                                {
+                                                                                    gene?.bnumber && <div>
+                                                                                        <p style={{ color: "white" }} >Bnumber: {gene.bnumber}</p>
+                                                                                    </div>
+                                                                                }
+                                                                                {
+                                                                                    gene?.distanceTo && <div>
 
-                                                                        </ReactTooltip>
+                                                                                        <p style={{ color: "white" }} >Distance to: {gene.distanceTo}</p>
+                                                                                    </div>
+                                                                                }
+                                                                                {
+                                                                                    gene?.transcriptionUnits && <div>
+                                                                                        <p style={{ color: "white" }} >TranscriptionUnits:</p>
+                                                                                        <p style={{ color: "white" }} >{gene.transcriptionUnits}</p>
+                                                                                    </div>
+                                                                                }
+
+                                                                            </ReactTooltip>
+                                                                        }
+
                                                                         <a data-tip data-for={`Link_${gene._id}`} href={`http://regulondb.ccg.unam.mx/search?term=${gene.name}&organism=ECK12&type=gene`} target="_blank" rel="noreferrer">{gene.name}</a>
                                                                     </div>
                                                                 )
@@ -155,6 +192,7 @@ export function Table({ datasetId, dataType, fileFormat, columns, data, error,
                     | Go to page:{' '}
                     <input
                         type="number"
+                        value={pageIndex + 1}
                         defaultValue={pageIndex + 1}
                         onChange={e => {
                             const page = e.target.value ? Number(e.target.value) - 1 : 0

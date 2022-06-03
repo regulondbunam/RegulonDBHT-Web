@@ -22,13 +22,18 @@ export default class Tabs extends Component {
 
         let file_format = undefined
         let id_dataset = this.props.id_dataset
+        //console.log("holi");
         switch (this.props.data.datasetType) {
             case "TFBINDING":
                 if (!this.state._sitesJT) {
                     try {
                         fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/sites/jsonTable`, { cache: "default" })
                             .then(response => response.json())
-                            .then(data => { this.setState({_sitesJT: data, _openTab: 0}); })
+                            .then(data => { 
+                                if (data.data.length > 0) {
+                                    this.setState({_sitesJT: data, _openTab: 0});
+                                }
+                             })
                             .catch(error => {
                                 console.error(error)
                                 this.setState({_sitesJT: { error: error }})
@@ -42,14 +47,18 @@ export default class Tabs extends Component {
                     try {
                         fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/peaks/jsonTable`, { cache: "default" })
                             .then(response => response.json())
-                            .then(data => { this.setState({_peaksJT: data, _openTab: 0}); })
+                            .then(data => { 
+                                if (data.data.length > 0) {
+                                    this.setState({_peaksJT: data, _openTab: 0});
+                                }
+                             })
                             .catch(error => {
                                 console.error(error)
-                                this.setState({_peaksJT: { error: error }})
+                               // this.setState({_peaksJT: { error: error }})
                             });
                     } catch (error) {
                         console.error(error)
-                        this.setState({_peaksJT: { error: error }})
+                        //this.setState({_peaksJT: { error: error }})
                     }
                 }
                 break;
@@ -75,7 +84,11 @@ export default class Tabs extends Component {
                 //FLASK_PROSSES_SERVICE
                 fetch(`${process.env.REACT_APP_PROSSES_SERVICE}/${id_dataset}/${file_format}/jsonTable`, { cache: "default" })
                     .then(response => response.json())
-                    .then(data => { this.setState({_jsonTable: data, _openTab: 0}); })
+                    .then(data => { 
+                        if (data.data.length > 0) {
+                            this.setState({_jsonTable: data, _openTab: 0});
+                        }
+                     })
                     .catch(error => {
                         console.error(error)
                         this.setState({_jsonTable: { error: error }})
@@ -113,24 +126,32 @@ export default class Tabs extends Component {
             fileFormat = "GFF3"
             break;
         case "TSS":
+            tabTitle1 = "Uniformized"
             dataType = "tss"
+            fileFormat = "GFF3"
             break;
         case "TTS":
+            tabTitle1 = "Uniformized"
             dataType = "tts"
+            fileFormat = "GFF3"
             break;
         case "TUS":
+            tabTitle1 = "Uniformized"
             dataType = "tus"
+            fileFormat = "GFF3"
             break;
         case "GENE_EXPRESSION":
-            dataType = "ge"
             tabTitle1 = "Uniformized"
+            dataType = "ge"
+            fileFormat = "bedgraph"
             break;
         default:
             tabTitle1 = undefined
             break;
     }
+    //console.log(_jsonTable);
 
-    if (((data?.datasetType==="TFBINDING" && _sitesJT && _peaksJT) || (data?.datasetType!=="TFBINDING" && _jsonTable)) && _autorData  ) {
+    if ( _autorData  ) {
         return (
             <div>
                 <h2>DATA FROM DATASET</h2>
@@ -157,8 +178,9 @@ export default class Tabs extends Component {
                     }
 
                 </div>
+               
                 {
-                    (_openTab === 0)
+                    (((data?.datasetType==="TFBINDING" && _sitesJT && _peaksJT) || (data?.datasetType!=="TFBINDING" && _jsonTable)) && _openTab === 0)
                         ? <div className={Style.tabcontent}>
                             <Summary data={data} />
                             <NormData dataType={dataType} datasetId={id_dataset} fileFormat={fileFormat} datasetType={data?.datasetType} jsonTable={_jsonTable} peaksJT={_peaksJT} sitesJT={_sitesJT} />

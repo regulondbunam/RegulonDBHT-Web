@@ -12,6 +12,7 @@ export default function NormData({datasetId, datasetType, dataType, fileFormat, 
         case "TTS":
         case "TSS":
         case "TUS":
+        case "GENE_EXPRESSION":
             options = undefined
             jsonTableData = jsonTable
             break;
@@ -34,12 +35,19 @@ export default function NormData({datasetId, datasetType, dataType, fileFormat, 
             break;
     }
 
+    
+
     if (jsonTable?.error) {
         return <div></div>
     }
 
+
     if (!jsonTableData && !dataType) {
         return null
+    }
+
+    if (jsonTableData?.data.length === 0) {
+        return <div></div>
     }
 
     return (
