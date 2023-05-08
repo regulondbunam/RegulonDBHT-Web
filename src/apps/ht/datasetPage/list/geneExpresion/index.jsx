@@ -5,6 +5,9 @@ const query_GET_GENEEXPRESSION = gql`
 {
     getDatasetsFromSearch(advancedSearch: "'GENE_EXPRESSION'[datasetType]", ){
       _id
+      sample{
+        title
+      }
       publications{
         authors
         title
@@ -23,6 +26,7 @@ function FormatJsonTable (data = []){
     let jsonTable = {
         columns: [
             {Header: 'id', accessor: '_id', width: '150'},
+            {Header: 'Title', accessor: '_titleGE'},
             {Header: 'Publication', accessor: '_publicationGE'},
             {Header: 'Platform', accessor: '_platform'},
         ],
@@ -31,6 +35,10 @@ function FormatJsonTable (data = []){
     if (Array.isArray(data)) {
         data.forEach((ge)=>{
             let id = ge._id.split("_")
+            let title = "";
+            if (ge?.sample) {
+              title = ge.sample.title
+            }
             let publication = "";
             if (ge.publications.length > 0) {
                 publication = ge.publications[0].title
@@ -42,6 +50,7 @@ function FormatJsonTable (data = []){
             
             jsonTable.data.push({
                 _id: id[2],
+                _titleGE: title,
                 _publicationGE: publication,
                 _platform: platform
             })
@@ -58,7 +67,7 @@ function FormatJsonTable (data = []){
             return 0;
           });
     }
-    console.log(data);
+    //console.log(data);
     return jsonTable
 }
 
