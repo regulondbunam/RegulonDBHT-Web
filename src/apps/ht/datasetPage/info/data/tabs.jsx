@@ -163,7 +163,7 @@ export default class Tabs extends Component {
                                 onClick={(event) => { this._open(0) }}
                             >{tabTitle1}
                             </button>
-                            : null
+                            : <SpinnerCircle />
                     }
                     {
                         (Array.isArray(_autorData) && _autorData.length)
