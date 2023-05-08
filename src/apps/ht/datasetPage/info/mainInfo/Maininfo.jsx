@@ -19,12 +19,9 @@ export default function Maininfo({ _id, sample, fivePrimeEnrichment, datasetType
         <div style={{ marginLeft: "5%" }} id={`dataset_${_id}_main_info`} >
             <p style={{ fontSize: "12px" }}>ID: {_id}</p>
             <p style={{ fontSize: "22px" }} className="p_accent">{datasetTitle}</p>
-            <p style={{ fontSize: "14px", float:'left', marginRight:'10px' }} >Dataset Type: {datasetType}</p>
             {
                 sourceSerie?.strategy && <p style={{ fontSize: "14px" }} >|  Strategy: {sourceSerie.strategy}</p>
             }
-            
-            <hr />
             {
                 fivePrimeEnrichment && <p style={{ fontSize: "14px" }} >5' Enrichment: {fivePrimeEnrichment}</p>
             }
@@ -34,6 +31,12 @@ export default function Maininfo({ _id, sample, fivePrimeEnrichment, datasetType
             {
                 sample?.experimentId.length > 0 && <p style={{ fontSize: "14px" }} >Experiment ID: {sample?.experimentId.join(", ")}</p>
             }
+            {datasetType === "GENE_EXPRESSION" && (
+                <div>
+                    <a href={"https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=" + _id.split("_")[2] + "&display=metadata"}>Sequence Read Archive Link</a>
+                </div>
+            )}
+
             <SourceSerie sourceSerie={sourceSerie} />
             {
                 publications.length > 0 && <div>
