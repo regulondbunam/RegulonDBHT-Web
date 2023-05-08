@@ -155,6 +155,9 @@ export default class Tabs extends Component {
         return (
             <div>
                 <h2>DATA FROM DATASET</h2>
+                {this.state._openTab === -1 &&(
+                    <SpinnerCircle />
+                )}
                 <div className={Style.tab}>
                     {
                         ((data?.datasetType==="TFBINDING" && _sitesJT && _peaksJT) || (data?.datasetType!=="TFBINDING" && _jsonTable))
@@ -163,7 +166,7 @@ export default class Tabs extends Component {
                                 onClick={(event) => { this._open(0) }}
                             >{tabTitle1}
                             </button>
-                            : <SpinnerCircle />
+                            : null
                     }
                     {
                         (Array.isArray(_autorData) && _autorData.length)
