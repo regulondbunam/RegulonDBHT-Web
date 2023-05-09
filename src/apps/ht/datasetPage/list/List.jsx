@@ -110,7 +110,7 @@ export default function List({datasetType, title, advancedSearch }) {
               <td>
                 <p>Would you like to make more specific queries?</p>
                 <Link to={`${window.IN_URL.finder}${datasetType}`} >
-                  <button>Query Bulder</button>
+                  <button>Query Builder</button>
                 </Link>
               </td>
               </tr>
