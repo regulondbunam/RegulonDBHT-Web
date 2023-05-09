@@ -33,7 +33,7 @@ export default function Maininfo({ _id, sample, fivePrimeEnrichment, datasetType
             }
             {datasetType === "GENE_EXPRESSION" && (
                 <div>
-                    <a href={"https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=" + _id.split("_")[2] + "&display=metadata"}>Sequence Read Archive Link</a>
+                    <a href={"https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=" + _id.split("_")[2] + "&display=metadata"}>{"SRA: "+_id.split("_")[2]}</a>
                 </div>
             )}
 

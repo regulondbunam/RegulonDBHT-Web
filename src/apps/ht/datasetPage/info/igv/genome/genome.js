@@ -21,6 +21,7 @@ export function confGenome({
       {
         "name": "Genes",
         "type": "annotation",
+        "autoHeight": true,
         "url": "/media/raw/gff3/GeneProductSet.gff3",
         "format": "gff3",
         "color": "#000000",
