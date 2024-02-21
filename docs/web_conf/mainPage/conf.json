@@ -43,6 +43,14 @@
             "url_rawDescription" : "https://raw.githubusercontent.com/regulondbunam/RegulonDBHT-Web/master/docs/web_conf/mainPage/GE_description.md",
             "tooltip": "",
             "enable": true
+        },
+        {
+            "id": "DS-GE-006",
+            "url": "RNAP_BINDING_SITES",
+            "title": "RNAP_BINDING_SITES",
+            "url_rawDescription" : "",
+            "tooltip": "",
+            "enable": true
         }
     ]
 }
